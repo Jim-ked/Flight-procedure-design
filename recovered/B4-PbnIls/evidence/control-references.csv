@@ -1,0 +1,1222 @@
+﻿control,field,method,line,source
+label19,_0089_0098_0096,declaration,60627,private Label _0089_0098_0096;
+label19,_0089_0098_0096,0x0600057F,62717,_0089_0098_0096.AutoSize = true;
+label19,_0089_0098_0096,0x0600057F,62718,"_0089_0098_0096.Location = new Point(14, 28);"
+label19,_0089_0098_0096,0x0600057F,62721,"_0089_0098_0096.Name = ""label19"" /* string-offset:2352 */;"
+label19,_0089_0098_0096,0x0600057F,62725,"_0089_0098_0096.Size = new Size(67, 15);"
+label19,_0089_0098_0096,0x0600057F,62726,_0089_0098_0096.TabIndex = 9;
+label19,_0089_0098_0096,0x0600057F,62730,"_0089_0098_0096.Text = ""机型分类"" /* string-offset:5716 */;"
+label19,_0089_0098_0096,0x0600057F,63758,_0089_0098_0096 = new Label();
+label19,_0089_0098_0096,0x0600057F,65252,_0089_0098_0094.Controls.Add(_0089_0098_0096);
+tabControl1,_0089_0098_008E,declaration,60611,private TabControl _0089_0098_008E;
+tabControl1,_0089_0098_008E,0x0600057F,62687,_0089_0098_008E.SuspendLayout();
+tabControl1,_0089_0098_008E,0x0600057F,62764,_0089_0098_008E = new TabControl();
+tabControl1,_0089_0098_008E,0x0600057F,63000,"_0089_0098_008E.Location = new Point(0, 0);"
+tabControl1,_0089_0098_008E,0x0600057F,63001,"_0089_0098_008E.Name = ""tabControl1"" /* string-offset:1756 */;"
+tabControl1,_0089_0098_008E,0x0600057F,63005,_0089_0098_008E.SelectedIndex = 0;
+tabControl1,_0089_0098_008E,0x0600057F,63009,"_0089_0098_008E.Size = new Size(728, 214);"
+tabControl1,_0089_0098_008E,0x0600057F,63012,_0089_0098_008E.TabIndex = 64;
+tabControl1,_0089_0098_008E,0x0600057F,63964,base.Controls.Add(_0089_0098_008E);
+tabControl1,_0089_0098_008E,0x0600057F,64335,"_0089_0098_008E.ItemSize = new Size(68, 30);"
+tabControl1,_0089_0098_008E,0x0600057F,64606,_0089_0098_008E.ResumeLayout(performLayout: false);
+tabControl1,_0089_0098_008E,0x0600057F,64690,_0089_0098_008E.Controls.Add(_0089_0098_008F);
+tabControl1,_0089_0098_008E,0x0600057F,64691,_0089_0098_008E.Controls.Add(_0089_0098_0090);
+tabControl1,_0089_0098_008E,0x0600057F,64695,_0089_0098_008E.Controls.Add(_0089_0098_0091);
+tabControl1,_0089_0098_008E,0x0600057F,64699,_0089_0098_008E.Dock = DockStyle.Top;
+tabPage1,_0089_0098_008F,declaration,60613,private TabPage _0089_0098_008F;
+tabPage1,_0089_0098_008F,0x0600057F,62690,_0089_0098_008F.SuspendLayout();
+tabPage1,_0089_0098_008F,0x0600057F,62767,_0089_0098_008F = new TabPage();
+tabPage1,_0089_0098_008F,0x0600057F,63013,_0089_0098_008F.Controls.Add(_0089_009A_0088);
+tabPage1,_0089_0098_008F,0x0600057F,63017,_0089_0098_008F.Controls.Add(_0089_0097_0097);
+tabPage1,_0089_0098_008F,0x0600057F,63018,_0089_0098_008F.Controls.Add(_0089_0098_0086);
+tabPage1,_0089_0098_008F,0x0600057F,63021,"_0089_0098_008F.Location = new Point(4, 34);"
+tabPage1,_0089_0098_008F,0x0600057F,63022,"_0089_0098_008F.Name = ""tabPage1"" /* string-offset:1760 */;"
+tabPage1,_0089_0098_008F,0x0600057F,63347,_0089_0098_008F.Padding = new Padding(3);
+tabPage1,_0089_0098_008F,0x0600057F,63351,"_0089_0098_008F.Size = new Size(720, 176);"
+tabPage1,_0089_0098_008F,0x0600057F,63352,_0089_0098_008F.TabIndex = 0;
+tabPage1,_0089_0098_008F,0x0600057F,63360,"_0089_0098_008F.Text = ""跑道数据"" /* string-offset:3280 */;"
+tabPage1,_0089_0098_008F,0x0600057F,63364,_0089_0098_008F.UseVisualStyleBackColor = true;
+tabPage1,_0089_0098_008F,0x0600057F,64607,_0089_0098_008F.ResumeLayout(performLayout: false);
+tabPage1,_0089_0098_008F,0x0600057F,64690,_0089_0098_008E.Controls.Add(_0089_0098_008F);
+label24,_0089_009A_0098,declaration,60731,private Label _0089_009A_0098;
+label24,_0089_009A_0098,0x0600057F,62801,_0089_009A_0098 = new Label();
+label24,_0089_009A_0098,0x0600057F,63035,_0089_009A_0098.AutoSize = true;
+label24,_0089_009A_0098,0x0600057F,63036,"_0089_009A_0098.Location = new Point(88, 64);"
+label24,_0089_009A_0098,0x0600057F,63037,"_0089_009A_0098.Margin = new Padding(4, 0, 4, 0);"
+label24,_0089_009A_0098,0x0600057F,63038,"_0089_009A_0098.Name = ""label24"" /* string-offset:2120 */;"
+label24,_0089_009A_0098,0x0600057F,63039,"_0089_009A_0098.Size = new Size(55, 15);"
+label24,_0089_009A_0098,0x0600057F,63040,_0089_009A_0098.TabIndex = 41;
+label24,_0089_009A_0098,0x0600057F,63044,"_0089_009A_0098.Text = ""RDH(m)"" /* string-offset:2148 */;"
+label24,_0089_009A_0098,0x0600057F,65558,_0089_0098_0090.Controls.Add(_0089_009A_0098);
+textBoxWing,_0089_009A_009C,declaration,60739,private TextBox _0089_009A_009C;
+textBoxWing,_0089_009A_009C,0x06000573,62219,"double num2 = _008F_008A._008B_0087_009E(_0089_009A_009C, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxWing,_0089_009A_009C,0x06000577,62512,_0089_009A_009C.Text = num2.ToString();
+textBoxWing,_0089_009A_009C,0x0600057F,62805,_0089_009A_009C = new TextBox();
+textBoxWing,_0089_009A_009C,0x0600057F,63047,"_0089_009A_009C.Location = new Point(89, 142);"
+textBoxWing,_0089_009A_009C,0x0600057F,63048,"_0089_009A_009C.Name = ""textBoxWing"" /* string-offset:4204 */;"
+textBoxWing,_0089_009A_009C,0x0600057F,63049,"_0089_009A_009C.Size = new Size(60, 23);"
+textBoxWing,_0089_009A_009C,0x0600057F,63050,_0089_009A_009C.TabIndex = 40;
+textBoxWing,_0089_009A_009C,0x0600057F,63051,"_0089_009A_009C.Text = ""30"" /* string-offset:4208 */;"
+textBoxWing,_0089_009A_009C,0x0600057F,63055,_0089_009A_009C.KeyPress += _0089_0097_0086;
+textBoxWing,_0089_009A_009C,0x0600057F,63059,_0089_009A_009C.Validated += _0089_0097_0087;
+textBoxWing,_0089_009A_009C,0x0600057F,65080,_0089_0098_0090.Controls.Add(_0089_009A_009C);
+textBoxRDH,_0089_009A_0099,declaration,60733,private TextBox _0089_009A_0099;
+textBoxRDH,_0089_009A_0099,0x06000574,62286,"double num = _008F_008A._008B_0087_009E(_0089_009A_0099, ""输入数据有误，请检查。"" /* string-offset:1984 */) - 15.0;"
+textBoxRDH,_0089_009A_0099,0x0600057F,62806,_0089_009A_0099 = new TextBox();
+textBoxRDH,_0089_009A_0099,0x0600057F,63063,"_0089_009A_0099.Location = new Point(89, 86);"
+textBoxRDH,_0089_009A_0099,0x0600057F,63067,"_0089_009A_0099.Name = ""textBoxRDH"" /* string-offset:2192 */;"
+textBoxRDH,_0089_009A_0099,0x0600057F,63070,"_0089_009A_0099.Size = new Size(60, 23);"
+textBoxRDH,_0089_009A_0099,0x0600057F,63074,_0089_009A_0099.TabIndex = 40;
+textBoxRDH,_0089_009A_0099,0x0600057F,63075,"_0089_009A_0099.Text = ""15"" /* string-offset:1964 */;"
+textBoxRDH,_0089_009A_0099,0x0600057F,63079,_0089_009A_0099.KeyPress += _0089_0097_0086;
+textBoxRDH,_0089_009A_0099,0x0600057F,63083,_0089_009A_0099.Validated += _0089_0097_0087;
+textBoxRDH,_0089_009A_0099,0x0600057F,65083,_0089_0098_0090.Controls.Add(_0089_009A_0099);
+comboBoxCat,_0089_009A_008F,declaration,60713,private ComboBox _0089_009A_008F;
+comboBoxCat,_0089_009A_008F,0x06000553,60779,_0089_009A_008F.SelectedIndex = 3;
+comboBoxCat,_0089_009A_008F,0x0600055F,61133,"double num = _0089_0097_008D[_0089_009A_008F.SelectedIndex, 0];"
+comboBoxCat,_0089_009A_008F,0x0600055F,61138,"num2 = _0089_0097_008D[_0089_009A_008F.SelectedIndex, 1];"
+comboBoxCat,_0089_009A_008F,0x06000561,61414,_0089_009A_008F.Text = array[1].Trim();
+comboBoxCat,_0089_009A_008F,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+comboBoxCat,_0089_009A_008F,0x06000567,61506,"double num3 = _0089_0097_008D[_0089_009A_008F.SelectedIndex, 0];"
+comboBoxCat,_0089_009A_008F,0x06000567,61507,"double num4 = _0089_0097_008D[_0089_009A_008F.SelectedIndex, 1];"
+comboBoxCat,_0089_009A_008F,0x06000567,61510,"double num7 = ((_0089_009A_008F.Text == ""H"" /* string-offset:2320 */) ? 700 : 900);"
+comboBoxCat,_0089_009A_008F,0x06000570,61953,if (_0089_009A_0096.SelectedIndex == -1 || _0089_009A_008F.SelectedIndex == -1 || _0089_009A_0095.SelectedIndex == -1)
+comboBoxCat,_0089_009A_008F,0x06000577,62396,text = _0089_009A_008F.Text;
+comboBoxCat,_0089_009A_008F,0x0600057F,62807,_0089_009A_008F = new ComboBox();
+comboBoxCat,_0089_009A_008F,0x0600057F,63086,_0089_009A_008F.DropDownStyle = ComboBoxStyle.DropDownList;
+comboBoxCat,_0089_009A_008F,0x0600057F,63087,_0089_009A_008F.FormattingEnabled = true;
+comboBoxCat,_0089_009A_008F,0x0600057F,63088,_0089_009A_008F.Items.AddRange(new object[5]
+comboBoxCat,_0089_009A_008F,0x0600057F,63096,"_0089_009A_008F.Location = new Point(155, 30);"
+comboBoxCat,_0089_009A_008F,0x0600057F,63097,"_0089_009A_008F.Name = ""comboBoxCat"" /* string-offset:4212 */;"
+comboBoxCat,_0089_009A_008F,0x0600057F,63098,"_0089_009A_008F.Size = new Size(60, 22);"
+comboBoxCat,_0089_009A_008F,0x0600057F,63101,_0089_009A_008F.TabIndex = 32;
+comboBoxCat,_0089_009A_008F,0x0600057F,63105,_0089_009A_008F.SelectedIndexChanged += _0089_0096_009C;
+comboBoxCat,_0089_009A_008F,0x0600057F,65084,_0089_0098_0090.Controls.Add(_0089_009A_008F);
+label11,_0089_009A_0090,declaration,60715,private Label _0089_009A_0090;
+label11,_0089_009A_0090,0x0600057F,62811,_0089_009A_0090 = new Label();
+label11,_0089_009A_0090,0x0600057F,63109,_0089_009A_0090.AutoSize = true;
+label11,_0089_009A_0090,0x0600057F,63113,"_0089_009A_0090.Location = new Point(155, 9);"
+label11,_0089_009A_0090,0x0600057F,63117,"_0089_009A_0090.Name = ""label11"" /* string-offset:2912 */;"
+label11,_0089_009A_0090,0x0600057F,63118,"_0089_009A_0090.Size = new Size(37, 15);"
+label11,_0089_009A_0090,0x0600057F,63119,_0089_009A_0090.TabIndex = 38;
+label11,_0089_009A_0090,0x0600057F,63123,"_0089_009A_0090.Text = ""机型"" /* string-offset:2356 */;"
+label11,_0089_009A_0090,0x0600057F,65085,_0089_0098_0090.Controls.Add(_0089_009A_0090);
+textBoxWheel,_0089_009A_009D,declaration,60741,private TextBox _0089_009A_009D;
+textBoxWheel,_0089_009A_009D,0x06000573,62257,"num6 = _008F_008A._008B_0087_009E(_0089_009A_009D, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxWheel,_0089_009A_009D,0x06000577,62516,_0089_009A_009D.Text = num3.ToString();
+textBoxWheel,_0089_009A_009D,0x0600057F,63127,"_0089_009A_009D.Location = new Point(155, 142);"
+textBoxWheel,_0089_009A_009D,0x0600057F,63131,"_0089_009A_009D.Name = ""textBoxWheel"" /* string-offset:4216 */;"
+textBoxWheel,_0089_009A_009D,0x0600057F,63132,"_0089_009A_009D.Size = new Size(60, 23);"
+textBoxWheel,_0089_009A_009D,0x0600057F,63136,_0089_009A_009D.TabIndex = 33;
+textBoxWheel,_0089_009A_009D,0x0600057F,63137,"_0089_009A_009D.Text = ""6"" /* string-offset:2708 */;"
+textBoxWheel,_0089_009A_009D,0x0600057F,63138,_0089_009A_009D.KeyPress += _0089_0097_0086;
+textBoxWheel,_0089_009A_009D,0x0600057F,63142,_0089_009A_009D.Validated += _0089_0097_0087;
+textBoxWheel,_0089_009A_009D,0x0600057F,64246,_0089_009A_009D = new TextBox();
+textBoxWheel,_0089_009A_009D,0x0600057F,65089,_0089_0098_0090.Controls.Add(_0089_009A_009D);
+LocDistance,_0089_009A_0091,declaration,60717,private TextBox _0089_009A_0091;
+LocDistance,_0089_009A_0091,0x06000570,61937,"double value = _008F_008A._008B_0087_009D(_0089_009A_0091.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+LocDistance,_0089_009A_0091,0x06000570,61941,"_0089_009A_0091.Text = ""2000"" /* string-offset:3836 */;"
+LocDistance,_0089_009A_0091,0x06000570,61951,"_0089_009A_0091.Text = ""4500"" /* string-offset:3844 */;"
+LocDistance,_0089_009A_0091,0x06000570,61973,string text3 = _0089_009A_0091.Text;
+LocDistance,_0089_009A_0091,0x0600057F,63146,"_0089_009A_0091.Location = new Point(155, 86);"
+LocDistance,_0089_009A_0091,0x0600057F,63147,"_0089_009A_0091.Name = ""LocDistance"" /* string-offset:3936 */;"
+LocDistance,_0089_009A_0091,0x0600057F,63151,"_0089_009A_0091.Size = new Size(60, 23);"
+LocDistance,_0089_009A_0091,0x0600057F,63152,_0089_009A_0091.TabIndex = 33;
+LocDistance,_0089_009A_0091,0x0600057F,63156,"_0089_009A_0091.Text = ""3280"" /* string-offset:4220 */;"
+LocDistance,_0089_009A_0091,0x0600057F,63160,_0089_009A_0091.KeyPress += _0089_0097_0086;
+LocDistance,_0089_009A_0091,0x0600057F,64134,_0089_009A_0091 = new TextBox();
+LocDistance,_0089_009A_0091,0x0600057F,64474,_0089_009A_0091.Validated += _0089_0097_0087;
+LocDistance,_0089_009A_0091,0x0600057F,65092,_0089_0098_0090.Controls.Add(_0089_009A_0091);
+button5,_0089_0097_009C,declaration,60589,private Button _0089_0097_009C;
+button5,_0089_0097_009C,0x0600057F,62653,_0089_0097_009C = new Button();
+button5,_0089_0097_009C,0x0600057F,63168,"_0089_0097_009C.BackgroundImage = (Image)componentResourceManager.GetObject(""button5.BackgroundImage"" /* string-offset:2852 */);"
+button5,_0089_0097_009C,0x0600057F,63172,_0089_0097_009C.BackgroundImageLayout = ImageLayout.Zoom;
+button5,_0089_0097_009C,0x0600057F,63176,"_0089_0097_009C.Location = new Point(169, 122);"
+button5,_0089_0097_009C,0x0600057F,63177,"_0089_0097_009C.Name = ""button5"" /* string-offset:1912 */;"
+button5,_0089_0097_009C,0x0600057F,63178,"_0089_0097_009C.Size = new Size(24, 24);"
+button5,_0089_0097_009C,0x0600057F,63181,_0089_0097_009C.TabIndex = 3;
+button5,_0089_0097_009C,0x0600057F,64678,_0089_0097_009C.UseVisualStyleBackColor = true;
+button5,_0089_0097_009C,0x0600057F,64681,_0089_0097_009C.Click += _0089_0095_0097;
+button5,_0089_0097_009C,0x0600057F,65549,_0089_0097_0097.Controls.Add(_0089_0097_009C);
+textBoxYB,_0089_0099_0090,declaration,60665,private TextBox _0089_0099_0090;
+textBoxYB,_0089_0099_0090,0x0600055D,61111,"P_0._008A_008B_0092._008B_008B_0093 = _008F_008A._008B_0087_009D(_0089_0099_0090.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxYB,_0089_0099_0090,0x06000561,61427,"_0089_0096_0087(array, _0089_0099_0092, _0089_0099_0090, _0089_0099_008E);"
+textBoxYB,_0089_0099_0090,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxYB,_0089_0099_0090,0x06000575,62333,"_0089_0099_0090.Text = P_0._0088_0091_0099._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */);"
+textBoxYB,_0089_0099_0090,0x0600057F,63416,"_0089_0099_0090.Margin = new Padding(4, 3, 4, 3);"
+textBoxYB,_0089_0099_0090,0x0600057F,63419,"_0089_0099_0090.Name = ""textBoxYB"" /* string-offset:4300 */;"
+textBoxYB,_0089_0099_0090,0x0600057F,63420,"_0089_0099_0090.Size = new Size(78, 23);"
+textBoxYB,_0089_0099_0090,0x0600057F,63424,_0089_0099_0090.TabIndex = 10;
+textBoxYB,_0089_0099_0090,0x0600057F,63427,"_0089_0099_0090.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxYB,_0089_0099_0090,0x0600057F,63549,"_0089_0099_0090.Location = new Point(371, 113);"
+textBoxYB,_0089_0099_0090,0x0600057F,64213,_0089_0099_0090 = new TextBox();
+textBoxYB,_0089_0099_0090,0x0600057F,64319,_0089_0098_0090.Controls.Add(_0089_0099_0090);
+textBoxWsA,_0089_0099_0091,declaration,60667,private TextBox _0089_0099_0091;
+textBoxWsA,_0089_0099_0091,0x06000561,61189,"_0089_0096_0087(array, _0089_0099_0091, _0089_0099_0095, _0089_0099_009A);"
+textBoxWsA,_0089_0099_0091,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxWsA,_0089_0099_0091,0x0600056C,61882,_0089_0099_0091.Visible = true;
+textBoxWsA,_0089_0099_0091,0x0600056C,61888,_0089_0099_0091.Visible = false;
+textBoxWsA,_0089_0099_0091,0x06000575,62349,"_0089_0099_0091.Text = P_0._0088_0091_0097._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */);"
+textBoxWsA,_0089_0099_0091,0x06000576,62360,_0089_0099_0091.Visible = true;
+textBoxWsA,_0089_0099_0091,0x06000576,62367,_0089_0099_0091.Visible = false;
+textBoxWsA,_0089_0099_0091,0x0600057F,62740,_0089_0099_0091.Visible = false;
+textBoxWsA,_0089_0099_0091,0x0600057F,63430,"_0089_0099_0091.Location = new Point(287, 55);"
+textBoxWsA,_0089_0099_0091,0x0600057F,63434,"_0089_0099_0091.Margin = new Padding(4, 3, 4, 3);"
+textBoxWsA,_0089_0099_0091,0x0600057F,63435,"_0089_0099_0091.Name = ""textBoxWsA"" /* string-offset:4304 */;"
+textBoxWsA,_0089_0099_0091,0x0600057F,63436,"_0089_0099_0091.Size = new Size(78, 23);"
+textBoxWsA,_0089_0099_0091,0x0600057F,63440,_0089_0099_0091.TabIndex = 3;
+textBoxWsA,_0089_0099_0091,0x0600057F,63441,"_0089_0099_0091.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxWsA,_0089_0099_0091,0x0600057F,63981,_0089_0099_0091 = new TextBox();
+textBoxWsA,_0089_0099_0091,0x0600057F,64393,_0089_0098_0090.Controls.Add(_0089_0099_0091);
+checkBoxShowOas,_0089_009A_0086,declaration,60695,private CheckBox _0089_009A_0086;
+checkBoxShowOas,_0089_009A_0086,0x0600055D,61118,"P_0._008A_008A_0088(num2 - num - 150.0, _0089_009A_0086.Checked);"
+checkBoxShowOas,_0089_009A_0086,0x0600056C,61892,"_0089_009A_0086.Visible = _0089_009A_0096.Text == ""CAT I"" /* string-offset:4236 */;"
+checkBoxShowOas,_0089_009A_0086,0x0600057F,63458,_0089_009A_0086.AutoSize = true;
+checkBoxShowOas,_0089_009A_0086,0x0600057F,63461,"_0089_009A_0086.Location = new Point(443, 235);"
+checkBoxShowOas,_0089_009A_0086,0x0600057F,63465,"_0089_009A_0086.Name = ""checkBoxShowOas"" /* string-offset:6504 */;"
+checkBoxShowOas,_0089_009A_0086,0x0600057F,63960,base.Controls.Add(_0089_009A_0086);
+checkBoxShowOas,_0089_009A_0086,0x0600057F,64825,"_0089_009A_0086.Size = new Size(50, 19);"
+checkBoxShowOas,_0089_009A_0086,0x0600057F,64829,_0089_009A_0086.TabIndex = 65;
+checkBoxShowOas,_0089_009A_0086,0x0600057F,64830,"_0089_009A_0086.Text = ""OAS"" /* string-offset:4032 */;"
+checkBoxShowOas,_0089_009A_0086,0x0600057F,64834,"_0089_009A_0087.SetToolTip(_0089_009A_0086, ""延伸至中间航段"" /* string-offset:6508 */);"
+checkBoxShowOas,_0089_009A_0086,0x0600057F,64835,_0089_009A_0086.UseVisualStyleBackColor = true;
+checkBoxShowOas,_0089_009A_0086,0x0600057F,64839,_0089_009A_0086.CheckedChanged += _0089_0096_0094;
+checkBoxShowOas,_0089_009A_0086,0x0600057F,65570,_0089_009A_0086 = new CheckBox();
+label10,_0089_0099_0094,declaration,60673,private Label _0089_0099_0094;
+label10,_0089_0099_0094,0x0600057F,63471,_0089_0099_0094.AutoSize = true;
+label10,_0089_0099_0094,0x0600057F,63487,"_0089_0099_0094.Location = new Point(259, 116);"
+label10,_0089_0099_0094,0x0600057F,63491,"_0089_0099_0094.Margin = new Padding(4, 0, 4, 0);"
+label10,_0089_0099_0094,0x0600057F,63495,"_0089_0099_0094.Name = ""label10"" /* string-offset:2952 */;"
+label10,_0089_0099_0094,0x0600057F,63496,"_0089_0099_0094.Size = new Size(15, 15);"
+label10,_0089_0099_0094,0x0600057F,63497,_0089_0099_0094.TabIndex = 12;
+label10,_0089_0099_0094,0x0600057F,63501,"_0089_0099_0094.Text = ""Y"" /* string-offset:3908 */;"
+label10,_0089_0099_0094,0x0600057F,64009,_0089_0098_0090.Controls.Add(_0089_0099_0094);
+label10,_0089_0099_0094,0x0600057F,64083,_0089_0099_0094 = new Label();
+textBoxYC,_0089_0099_008E,declaration,60661,private TextBox _0089_0099_008E;
+textBoxYC,_0089_0099_008E,0x0600055D,61112,"P_0._008A_008B_0092._008B_008B_0094 = _008F_008A._008B_0087_009D(_0089_0099_008E.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxYC,_0089_0099_008E,0x06000561,61427,"_0089_0096_0087(array, _0089_0099_0092, _0089_0099_0090, _0089_0099_008E);"
+textBoxYC,_0089_0099_008E,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxYC,_0089_0099_008E,0x06000575,62336,"_0089_0099_008E.Text = P_0._0088_0091_0099._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */);"
+textBoxYC,_0089_0099_008E,0x0600057F,63516,"_0089_0099_008E.Location = new Point(456, 113);"
+textBoxYC,_0089_0099_008E,0x0600057F,63520,"_0089_0099_008E.Margin = new Padding(4, 3, 4, 3);"
+textBoxYC,_0089_0099_008E,0x0600057F,63523,"_0089_0099_008E.Name = ""textBoxYC"" /* string-offset:4292 */;"
+textBoxYC,_0089_0099_008E,0x0600057F,63524,"_0089_0099_008E.Size = new Size(78, 23);"
+textBoxYC,_0089_0099_008E,0x0600057F,63527,_0089_0099_008E.TabIndex = 11;
+textBoxYC,_0089_0099_008E,0x0600057F,63528,"_0089_0099_008E.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxYC,_0089_0099_008E,0x0600057F,64207,_0089_0099_008E = new TextBox();
+textBoxYC,_0089_0099_008E,0x0600057F,64421,_0089_0098_0090.Controls.Add(_0089_0099_008E);
+label26,_0089_0099_008F,declaration,60663,private Label _0089_0099_008F;
+label26,_0089_0099_008F,0x0600056C,61881,_0089_0099_008F.Visible = true;
+label26,_0089_0099_008F,0x0600056C,61887,_0089_0099_008F.Visible = false;
+label26,_0089_0099_008F,0x0600057F,63532,_0089_0099_008F.AutoSize = true;
+label26,_0089_0099_008F,0x0600057F,63533,"_0089_0099_008F.Location = new Point(259, 59);"
+label26,_0089_0099_008F,0x0600057F,63534,"_0089_0099_008F.Margin = new Padding(4, 0, 4, 0);"
+label26,_0089_0099_008F,0x0600057F,63535,"_0089_0099_008F.Name = ""label26"" /* string-offset:2144 */;"
+label26,_0089_0099_008F,0x0600057F,63539,"_0089_0099_008F.Size = new Size(23, 15);"
+label26,_0089_0099_008F,0x0600057F,63540,_0089_0099_008F.TabIndex = 4;
+label26,_0089_0099_008F,0x0600057F,63541,"_0089_0099_008F.Text = ""W*"" /* string-offset:4296 */;"
+label26,_0089_0099_008F,0x0600057F,64210,_0089_0099_008F = new Label();
+label26,_0089_0099_008F,0x0600057F,64422,_0089_0098_0090.Controls.Add(_0089_0099_008F);
+textBoxWC,_0089_0099_0098,declaration,60681,private TextBox _0089_0099_0098;
+textBoxWC,_0089_0099_0098,0x0600055D,61105,"P_0._008A_008B_0090._008B_008B_0094 = _008F_008A._008B_0087_009D(_0089_0099_0098.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxWC,_0089_0099_0098,0x06000561,61435,"_0089_0096_0087(array, _0089_0099_008D, _0089_0099_0093, _0089_0099_0098);"
+textBoxWC,_0089_0099_0098,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxWC,_0089_0099_0098,0x06000575,62348,"_0089_0099_0098.Text = P_0._0088_0091_0096._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */);"
+textBoxWC,_0089_0099_0098,0x0600057F,63388,_0089_0098_0090.Controls.Add(_0089_0099_0098);
+textBoxWC,_0089_0099_0098,0x0600057F,63553,"_0089_0099_0098.Margin = new Padding(4, 3, 4, 3);"
+textBoxWC,_0089_0099_0098,0x0600057F,63557,"_0089_0099_0098.Name = ""textBoxWC"" /* string-offset:4328 */;"
+textBoxWC,_0089_0099_0098,0x0600057F,63558,"_0089_0099_0098.Size = new Size(78, 23);"
+textBoxWC,_0089_0099_0098,0x0600057F,63559,_0089_0099_0098.TabIndex = 2;
+textBoxWC,_0089_0099_0098,0x0600057F,63562,"_0089_0099_0098.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxWC,_0089_0099_0098,0x0600057F,63623,"_0089_0099_0098.Location = new Point(456, 26);"
+textBoxWC,_0089_0099_0098,0x0600057F,63734,_0089_0099_0098 = new TextBox();
+textBoxXA,_0089_0099_0099,declaration,60683,private TextBox _0089_0099_0099;
+textBoxXA,_0089_0099_0099,0x0600055D,61106,"P_0._008A_008B_0091._008B_008B_0092 = _008F_008A._008B_0087_009D(_0089_0099_0099.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxXA,_0089_0099_0099,0x06000561,61424,"_0089_0096_0087(array, _0089_0099_0099, _0089_0099_0097, _0089_0099_0096);"
+textBoxXA,_0089_0099_0099,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxXA,_0089_0099_0099,0x06000575,62329,"_0089_0099_0099.Text = P_0._0088_0091_0098._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */);"
+textBoxXA,_0089_0099_0099,0x0600057F,63389,_0089_0098_0090.Controls.Add(_0089_0099_0099);
+textBoxXA,_0089_0099_0099,0x0600057F,63563,"_0089_0099_0099.Location = new Point(287, 84);"
+textBoxXA,_0089_0099_0099,0x0600057F,63567,"_0089_0099_0099.Margin = new Padding(4, 3, 4, 3);"
+textBoxXA,_0089_0099_0099,0x0600057F,63568,"_0089_0099_0099.Name = ""textBoxXA"" /* string-offset:4332 */;"
+textBoxXA,_0089_0099_0099,0x0600057F,63569,"_0089_0099_0099.Size = new Size(78, 23);"
+textBoxXA,_0089_0099_0099,0x0600057F,63573,_0089_0099_0099.TabIndex = 6;
+textBoxXA,_0089_0099_0099,0x0600057F,63574,"_0089_0099_0099.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxXA,_0089_0099_0099,0x0600057F,63742,_0089_0099_0099 = new TextBox();
+textBoxZA,_0089_0099_008A,declaration,60653,private TextBox _0089_0099_008A;
+textBoxZA,_0089_0099_008A,0x0600055D,61113,"P_0._008A_008B_0093._008B_008B_0092 = _008F_008A._008B_0087_009D(_0089_0099_008A.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxZA,_0089_0099_008A,0x06000561,61430,"_0089_0096_0087(array, _0089_0099_008A, _0089_0099_0089, _0089_0099_0088);"
+textBoxZA,_0089_0099_008A,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxZA,_0089_0099_008A,0x06000575,62337,"_0089_0099_008A.Text = P_0._0088_0091_009A._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */);"
+textBoxZA,_0089_0099_008A,0x0600057F,63582,"_0089_0099_008A.Name = ""textBoxZA"" /* string-offset:4284 */;"
+textBoxZA,_0089_0099_008A,0x0600057F,63583,"_0089_0099_008A.Size = new Size(78, 23);"
+textBoxZA,_0089_0099_008A,0x0600057F,63584,_0089_0099_008A.TabIndex = 12;
+textBoxZA,_0089_0099_008A,0x0600057F,63588,"_0089_0099_008A.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxZA,_0089_0099_008A,0x0600057F,63949,_0089_0098_0090.Controls.Add(_0089_0099_008A);
+textBoxZA,_0089_0099_008A,0x0600057F,64363,_0089_0099_008A = new TextBox();
+textBoxZA,_0089_0099_008A,0x0600057F,64805,"_0089_0099_008A.Location = new Point(287, 142);"
+textBoxZA,_0089_0099_008A,0x0600057F,64809,"_0089_0099_008A.Margin = new Padding(4, 3, 4, 3);"
+label27,_0089_0099_008B,declaration,60655,private Label _0089_0099_008B;
+label27,_0089_0099_008B,0x0600057F,63596,_0089_0099_008B.AutoSize = true;
+label27,_0089_0099_008B,0x0600057F,63600,"_0089_0099_008B.Location = new Point(259, 30);"
+label27,_0089_0099_008B,0x0600057F,63601,"_0089_0099_008B.Margin = new Padding(4, 0, 4, 0);"
+label27,_0089_0099_008B,0x0600057F,63604,"_0089_0099_008B.Name = ""label27"" /* string-offset:2160 */;"
+label27,_0089_0099_008B,0x0600057F,63605,"_0089_0099_008B.Size = new Size(15, 15);"
+label27,_0089_0099_008B,0x0600057F,63631,_0089_0099_008B.TabIndex = 4;
+label27,_0089_0099_008B,0x0600057F,63634,"_0089_0099_008B.Text = ""W"" /* string-offset:3984 */;"
+label27,_0089_0099_008B,0x0600057F,63952,_0089_0098_0090.Controls.Add(_0089_0099_008B);
+label27,_0089_0099_008B,0x0600057F,64364,_0089_0099_008B = new Label();
+textBoxXB,_0089_0099_0097,declaration,60679,private TextBox _0089_0099_0097;
+textBoxXB,_0089_0099_0097,0x0600055D,61107,"P_0._008A_008B_0091._008B_008B_0093 = _008F_008A._008B_0087_009D(_0089_0099_0097.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxXB,_0089_0099_0097,0x06000561,61424,"_0089_0096_0087(array, _0089_0099_0099, _0089_0099_0097, _0089_0099_0096);"
+textBoxXB,_0089_0099_0097,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxXB,_0089_0099_0097,0x06000575,62330,"_0089_0099_0097.Text = P_0._0088_0091_0098._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */);"
+textBoxXB,_0089_0099_0097,0x0600057F,63387,_0089_0098_0090.Controls.Add(_0089_0099_0097);
+textBoxXB,_0089_0099_0097,0x0600057F,63613,"_0089_0099_0097.Name = ""textBoxXB"" /* string-offset:4324 */;"
+textBoxXB,_0089_0099_0097,0x0600057F,63614,"_0089_0099_0097.Size = new Size(78, 23);"
+textBoxXB,_0089_0099_0097,0x0600057F,63618,_0089_0099_0097.TabIndex = 7;
+textBoxXB,_0089_0099_0097,0x0600057F,63619,"_0089_0099_0097.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxXB,_0089_0099_0097,0x0600057F,63733,_0089_0099_0097 = new TextBox();
+textBoxXB,_0089_0099_0097,0x0600057F,64105,"_0089_0099_0097.Margin = new Padding(4, 3, 4, 3);"
+textBoxXB,_0089_0099_0097,0x0600057F,64187,"_0089_0099_0097.Location = new Point(371, 84);"
+label8,_0089_0099_008C,declaration,60657,private Label _0089_0099_008C;
+label8,_0089_0099_008C,0x0600057F,63637,_0089_0099_008C.AutoSize = true;
+label8,_0089_0099_008C,0x0600057F,63641,"_0089_0099_008C.Location = new Point(259, 145);"
+label8,_0089_0099_008C,0x0600057F,63642,"_0089_0099_008C.Margin = new Padding(4, 0, 4, 0);"
+label8,_0089_0099_008C,0x0600057F,63646,"_0089_0099_008C.Name = ""label8"" /* string-offset:2960 */;"
+label8,_0089_0099_008C,0x0600057F,63647,"_0089_0099_008C.Size = new Size(15, 15);"
+label8,_0089_0099_008C,0x0600057F,63648,_0089_0099_008C.TabIndex = 16;
+label8,_0089_0099_008C,0x0600057F,63651,"_0089_0099_008C.Text = ""Z"" /* string-offset:3912 */;"
+label8,_0089_0099_008C,0x0600057F,64198,_0089_0099_008C = new Label();
+label8,_0089_0099_008C,0x0600057F,64419,_0089_0098_0090.Controls.Add(_0089_0099_008C);
+textBoxWA,_0089_0099_008D,declaration,60659,private TextBox _0089_0099_008D;
+textBoxWA,_0089_0099_008D,0x0600055D,61103,"P_0._008A_008B_0090._008B_008B_0092 = _008F_008A._008B_0087_009D(_0089_0099_008D.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxWA,_0089_0099_008D,0x06000561,61435,"_0089_0096_0087(array, _0089_0099_008D, _0089_0099_0093, _0089_0099_0098);"
+textBoxWA,_0089_0099_008D,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxWA,_0089_0099_008D,0x06000575,62318,"_0089_0099_008D.Text = P_0._0088_0091_0096._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */);"
+textBoxWA,_0089_0099_008D,0x0600057F,63509,"_0089_0099_008D.Size = new Size(78, 23);"
+textBoxWA,_0089_0099_008D,0x0600057F,63510,_0089_0099_008D.TabIndex = 0;
+textBoxWA,_0089_0099_008D,0x0600057F,63513,"_0089_0099_008D.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxWA,_0089_0099_008D,0x0600057F,63654,"_0089_0099_008D.Location = new Point(287, 26);"
+textBoxWA,_0089_0099_008D,0x0600057F,63662,"_0089_0099_008D.Margin = new Padding(4, 3, 4, 3);"
+textBoxWA,_0089_0099_008D,0x0600057F,63666,"_0089_0099_008D.Name = ""textBoxWA"" /* string-offset:4288 */;"
+textBoxWA,_0089_0099_008D,0x0600057F,64199,_0089_0099_008D = new TextBox();
+textBoxWA,_0089_0099_008D,0x0600057F,64420,_0089_0098_0090.Controls.Add(_0089_0099_008D);
+textBoxLGT,_0089_009A_008C,declaration,60707,private TextBox _0089_009A_008C;
+textBoxLGT,_0089_009A_008C,0x06000561,61208,_0089_009A_008C.Text = array[1].Trim();
+textBoxLGT,_0089_009A_008C,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxLGT,_0089_009A_008C,0x06000567,61656,"num13 = _008F_008A._008B_0087_009E(_0089_009A_008C, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxLGT,_0089_009A_008C,0x0600057F,62784,_0089_009A_008C = new TextBox();
+textBoxLGT,_0089_009A_008C,0x0600057F,63674,"_0089_009A_008C.Location = new Point(120, 87);"
+textBoxLGT,_0089_009A_008C,0x0600057F,63678,"_0089_009A_008C.Name = ""textBoxLGT"" /* string-offset:5720 */;"
+textBoxLGT,_0089_009A_008C,0x0600057F,63679,"_0089_009A_008C.Size = new Size(60, 23);"
+textBoxLGT,_0089_009A_008C,0x0600057F,63683,_0089_009A_008C.TabIndex = 64;
+textBoxLGT,_0089_009A_008C,0x0600057F,64193,_0089_009A_0088.Controls.Add(_0089_009A_008C);
+textBoxLGT,_0089_009A_008C,0x0600057F,64438,"_0089_009A_008C.Text = ""900"" /* string-offset:2156 */;"
+button10,_0089_009B_0086,declaration,60745,private Button _0089_009B_0086;
+button10,_0089_009B_0086,0x0600057F,62666,_0089_009B_0086 = new Button();
+button10,_0089_009B_0086,0x0600057F,63693,"_0089_009B_0086.BackgroundImage = (Image)componentResourceManager.GetObject(""button10.BackgroundImage"" /* string-offset:6488 */);"
+button10,_0089_009B_0086,0x0600057F,63694,_0089_009B_0086.BackgroundImageLayout = ImageLayout.Center;
+button10,_0089_009B_0086,0x0600057F,63695,"_0089_009B_0086.Location = new Point(78, 122);"
+button10,_0089_009B_0086,0x0600057F,63696,"_0089_009B_0086.Name = ""button10"" /* string-offset:3476 */;"
+button10,_0089_009B_0086,0x0600057F,63699,"_0089_009B_0086.Size = new Size(24, 24);"
+button10,_0089_009B_0086,0x0600057F,63700,_0089_009B_0086.TabIndex = 66;
+button10,_0089_009B_0086,0x0600057F,63701,"_0089_009A_0087.SetToolTip(_0089_009B_0086, ""交换跑道方向"" /* string-offset:3080 */);"
+button10,_0089_009B_0086,0x0600057F,63702,_0089_009B_0086.UseVisualStyleBackColor = true;
+button10,_0089_009B_0086,0x0600057F,63703,_0089_009B_0086.Click += _0089_0097_0088;
+button10,_0089_009B_0086,0x0600057F,64747,_0089_0098_0086.Controls.Add(_0089_009B_0086);
+button4,_0089_0098_0087,declaration,60597,private Button _0089_0098_0087;
+button4,_0089_0098_0087,0x0600057F,63406,_0089_0098_0087.TabIndex = 3;
+button4,_0089_0098_0087,0x0600057F,63407,_0089_0098_0087.UseVisualStyleBackColor = true;
+button4,_0089_0098_0087,0x0600057F,63707,"_0089_0098_0087.BackgroundImage = (Image)componentResourceManager.GetObject(""button4.BackgroundImage"" /* string-offset:2888 */);"
+button4,_0089_0098_0087,0x0600057F,63711,_0089_0098_0087.BackgroundImageLayout = ImageLayout.Center;
+button4,_0089_0098_0087,0x0600057F,63715,"_0089_0098_0087.Location = new Point(170, 122);"
+button4,_0089_0098_0087,0x0600057F,63716,"_0089_0098_0087.Name = ""button4"" /* string-offset:1928 */;"
+button4,_0089_0098_0087,0x0600057F,63717,"_0089_0098_0087.Size = new Size(24, 24);"
+button4,_0089_0098_0087,0x0600057F,64384,_0089_0098_0086.Controls.Add(_0089_0098_0087);
+button4,_0089_0098_0087,0x0600057F,64456,_0089_0098_0087 = new Button();
+button4,_0089_0098_0087,0x0600057F,64649,_0089_0098_0087.Click += _0089_0095_0098;
+textBoxLat1,_0089_0097_0099,declaration,60583,private TextBox _0089_0097_0099;
+textBoxLat1,_0089_0097_0099,0x06000559,60982,"_0089_0097_0099.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();"
+textBoxLat1,_0089_0097_0099,0x0600055B,61024,"obj.Y = _008F_008A._008B_0087_009D(_0089_0097_0099.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxLat1,_0089_0097_0099,0x0600055C,61066,"obj.Y = _008F_008A._008B_0087_009D(_0089_0097_0099.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxLat1,_0089_0097_0099,0x0600057C,62551,text = _0089_0097_0099.Text;
+textBoxLat1,_0089_0097_0099,0x0600057C,62552,_0089_0097_0099.Text = _0089_0098_0089.Text;
+textBoxLat1,_0089_0097_0099,0x0600057F,62650,_0089_0097_0099 = new TextBox();
+textBoxLat1,_0089_0097_0099,0x0600057F,63762,"_0089_0097_0099.Name = ""textBoxLat1"" /* string-offset:2848 */;"
+textBoxLat1,_0089_0097_0099,0x0600057F,63763,"_0089_0097_0099.Size = new Size(116, 23);"
+textBoxLat1,_0089_0097_0099,0x0600057F,63767,_0089_0097_0099.TabIndex = 1;
+textBoxLat1,_0089_0097_0099,0x0600057F,63771,"_0089_0097_0099.Text = "" 0"" /* string-offset:4364 */;"
+textBoxLat1,_0089_0097_0099,0x0600057F,65199,"_0089_0097_0099.Location = new Point(77, 57);"
+textBoxLat1,_0089_0097_0099,0x0600057F,65200,"_0089_0097_0099.Margin = new Padding(4, 3, 4, 3);"
+textBoxLat1,_0089_0097_0099,0x0600057F,65546,_0089_0097_0097.Controls.Add(_0089_0097_0099);
+textBoxLon1,_0089_0097_009A,declaration,60585,private TextBox _0089_0097_009A;
+textBoxLon1,_0089_0097_009A,0x06000559,60981,"_0089_0097_009A.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();"
+textBoxLon1,_0089_0097_009A,0x0600055B,61023,"obj.X = _008F_008A._008B_0087_009D(_0089_0097_009A.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxLon1,_0089_0097_009A,0x0600055C,61065,"obj.X = _008F_008A._008B_0087_009D(_0089_0097_009A.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxLon1,_0089_0097_009A,0x0600057C,62548,string text = _0089_0097_009A.Text;
+textBoxLon1,_0089_0097_009A,0x0600057C,62549,_0089_0097_009A.Text = _0089_0098_008B.Text;
+textBoxLon1,_0089_0097_009A,0x0600057F,62651,_0089_0097_009A = new TextBox();
+textBoxLon1,_0089_0097_009A,0x0600057F,63772,"_0089_0097_009A.Location = new Point(77, 24);"
+textBoxLon1,_0089_0097_009A,0x0600057F,63775,"_0089_0097_009A.Margin = new Padding(4, 3, 4, 3);"
+textBoxLon1,_0089_0097_009A,0x0600057F,63779,"_0089_0097_009A.Name = ""textBoxLon1"" /* string-offset:2856 */;"
+textBoxLon1,_0089_0097_009A,0x0600057F,63780,"_0089_0097_009A.Size = new Size(116, 23);"
+textBoxLon1,_0089_0097_009A,0x0600057F,63784,_0089_0097_009A.TabIndex = 0;
+textBoxLon1,_0089_0097_009A,0x0600057F,64372,"_0089_0097_009A.Text = "" 0"" /* string-offset:4364 */;"
+textBoxLon1,_0089_0097_009A,0x0600057F,65547,_0089_0097_0097.Controls.Add(_0089_0097_009A);
+textBoxHLm,_0089_0098_009C,declaration,60639,private TextBox _0089_0098_009C;
+textBoxHLm,_0089_0098_009C,0x06000568,61783,"_0089_0098_009C.Text = _0089_0097_008D[_0089_0098_0095.SelectedIndex, 0].ToString();"
+textBoxHLm,_0089_0098_009C,0x0600056A,61809,"double num2 = _008F_008A._008B_0087_009E(_0089_0098_009C, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxHLm,_0089_0098_009C,0x0600056A,61814,_0089_0098_009A.Text = _0089_0098_009C.Text;
+textBoxHLm,_0089_0098_009C,0x0600057F,63452,"_0089_0098_009C.Size = new Size(69, 23);"
+textBoxHLm,_0089_0098_009C,0x0600057F,63456,_0089_0098_009C.TabIndex = 4;
+textBoxHLm,_0089_0098_009C,0x0600057F,63457,"_0089_0098_009C.Text = ""49"" /* string-offset:2340 */;"
+textBoxHLm,_0089_0098_009C,0x0600057F,63803,"_0089_0098_009C.Name = ""textBoxHLm"" /* string-offset:2336 */;"
+textBoxHLm,_0089_0098_009C,0x0600057F,64067,_0089_0098_009C.Enabled = false;
+textBoxHLm,_0089_0098_009C,0x0600057F,64071,"_0089_0098_009C.Location = new Point(108, 55);"
+textBoxHLm,_0089_0098_009C,0x0600057F,64216,"_0089_0098_009C.Margin = new Padding(3, 2, 3, 2);"
+textBoxHLm,_0089_0098_009C,0x0600057F,64560,_0089_0098_009C = new TextBox();
+textBoxHLm,_0089_0098_009C,0x0600057F,65266,_0089_0098_0094.Controls.Add(_0089_0098_009C);
+label14,_0089_009A_008B,declaration,60705,private Label _0089_009A_008B;
+label14,_0089_009A_008B,0x0600057F,62779,_0089_009A_008B = new Label();
+label14,_0089_009A_008B,0x0600057F,63809,"_0089_009A_008B.Location = new Point(20, 58);"
+label14,_0089_009A_008B,0x0600057F,63810,"_0089_009A_008B.Name = ""label14"" /* string-offset:2260 */;"
+label14,_0089_009A_008B,0x0600057F,63814,"_0089_009A_008B.Size = new Size(91, 15);"
+label14,_0089_009A_008B,0x0600057F,63815,_0089_009A_008B.TabIndex = 63;
+label14,_0089_009A_008B,0x0600057F,63819,"_0089_009A_008B.Text = ""机场标高(m)"" /* string-offset:5740 */;"
+label14,_0089_009A_008B,0x0600057F,64182,_0089_009A_008B.AutoSize = true;
+label14,_0089_009A_008B,0x0600057F,64190,_0089_009A_0088.Controls.Add(_0089_009A_008B);
+textBox1,_0089_009B_0088,declaration,60749,private TextBox _0089_009B_0088;
+textBox1,_0089_009B_0088,0x0600055E,61126,"double num3 = _008F_008A._008B_0087_009E(_0089_009B_0088, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBox1,_0089_009B_0088,0x0600057F,62782,_0089_009B_0088 = new TextBox();
+textBox1,_0089_009B_0088,0x0600057F,63823,"_0089_009B_0088.Location = new Point(120, 120);"
+textBox1,_0089_009B_0088,0x0600057F,63827,"_0089_009B_0088.Name = ""textBox1"" /* string-offset:1784 */;"
+textBox1,_0089_009B_0088,0x0600057F,63830,"_0089_009B_0088.Size = new Size(60, 23);"
+textBox1,_0089_009B_0088,0x0600057F,63833,_0089_009B_0088.TabIndex = 64;
+textBox1,_0089_009B_0088,0x0600057F,63836,"_0089_009B_0088.Text = ""60"" /* string-offset:2452 */;"
+textBox1,_0089_009B_0088,0x0600057F,64191,_0089_009A_0088.Controls.Add(_0089_009B_0088);
+label28,_0089_009B_0089,declaration,60751,private Label _0089_009B_0089;
+label28,_0089_009B_0089,0x0600057F,62783,_0089_009B_0089 = new Label();
+label28,_0089_009B_0089,0x0600057F,63670,"_0089_009B_0089.Text = ""DH(m)"" /* string-offset:2460 */;"
+label28,_0089_009B_0089,0x0600057F,63837,_0089_009B_0089.AutoSize = true;
+label28,_0089_009B_0089,0x0600057F,63841,"_0089_009B_0089.Location = new Point(42, 124);"
+label28,_0089_009B_0089,0x0600057F,63849,"_0089_009B_0089.Name = ""label28"" /* string-offset:2612 */;"
+label28,_0089_009B_0089,0x0600057F,63852,"_0089_009B_0089.Size = new Size(47, 15);"
+label28,_0089_009B_0089,0x0600057F,63853,_0089_009B_0089.TabIndex = 61;
+label28,_0089_009B_0089,0x0600057F,64192,_0089_009A_0088.Controls.Add(_0089_009B_0089);
+buttonLoad,_0089_0099_0087,declaration,60647,private Button _0089_0099_0087;
+buttonLoad,_0089_0099_0087,0x0600057F,63858,"_0089_0099_0087.Location = new Point(577, 28);"
+buttonLoad,_0089_0099_0087,0x0600057F,63862,"_0089_0099_0087.Name = ""buttonLoad"" /* string-offset:5380 */;"
+buttonLoad,_0089_0099_0087,0x0600057F,63863,"_0089_0099_0087.Size = new Size(75, 40);"
+buttonLoad,_0089_0099_0087,0x0600057F,63864,_0089_0099_0087.TabIndex = 22;
+buttonLoad,_0089_0099_0087,0x0600057F,63865,"_0089_0099_0087.Text = ""加载"" /* string-offset:5808 */;"
+buttonLoad,_0089_0099_0087,0x0600057F,63866,_0089_0099_0087.UseVisualStyleBackColor = true;
+buttonLoad,_0089_0099_0087,0x0600057F,64170,_0089_0099_0087.Click += _0089_0095_009E;
+buttonLoad,_0089_0099_0087,0x0600057F,64315,_0089_0098_0090.Controls.Add(_0089_0099_0087);
+buttonLoad,_0089_0099_0087,0x0600057F,65228,_0089_0099_0087 = new Button();
+textBoxLon2,_0089_0098_008B,declaration,60605,private TextBox _0089_0098_008B;
+textBoxLon2,_0089_0098_008B,0x0600055A,61004,"_0089_0098_008B.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();"
+textBoxLon2,_0089_0098_008B,0x0600055B,61025,"obj2.X = _008F_008A._008B_0087_009D(_0089_0098_008B.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxLon2,_0089_0098_008B,0x0600055C,61068,"obj2.X = _008F_008A._008B_0087_009D(_0089_0098_008B.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxLon2,_0089_0098_008B,0x0600057C,62549,_0089_0097_009A.Text = _0089_0098_008B.Text;
+textBoxLon2,_0089_0098_008B,0x0600057C,62550,_0089_0098_008B.Text = text;
+textBoxLon2,_0089_0098_008B,0x0600057F,62753,_0089_0098_008B = new TextBox();
+textBoxLon2,_0089_0098_008B,0x0600057F,63886,"_0089_0098_008B.Location = new Point(78, 24);"
+textBoxLon2,_0089_0098_008B,0x0600057F,63890,"_0089_0098_008B.Margin = new Padding(4, 3, 4, 3);"
+textBoxLon2,_0089_0098_008B,0x0600057F,63893,"_0089_0098_008B.Name = ""textBoxLon2"" /* string-offset:2896 */;"
+textBoxLon2,_0089_0098_008B,0x0600057F,63894,"_0089_0098_008B.Size = new Size(116, 23);"
+textBoxLon2,_0089_0098_008B,0x0600057F,63913,_0089_0098_008B.TabIndex = 0;
+textBoxLon2,_0089_0098_008B,0x0600057F,63914,"_0089_0098_008B.Text = "" -3000"" /* string-offset:4376 */;"
+textBoxLon2,_0089_0098_008B,0x0600057F,65472,_0089_0098_0086.Controls.Add(_0089_0098_008B);
+label18,_0089_009A_009B,declaration,60737,private Label _0089_009A_009B;
+label18,_0089_009A_009B,0x0600057F,62800,_0089_009A_009B = new Label();
+label18,_0089_009A_009B,0x0600057F,63030,_0089_009A_009B.TabIndex = 41;
+label18,_0089_009A_009B,0x0600057F,63034,"_0089_009A_009B.Text = ""半翼展(m)"" /* string-offset:4200 */;"
+label18,_0089_009A_009B,0x0600057F,63902,"_0089_009A_009B.Name = ""label18"" /* string-offset:2568 */;"
+label18,_0089_009A_009B,0x0600057F,63905,"_0089_009A_009B.Size = new Size(76, 15);"
+label18,_0089_009A_009B,0x0600057F,64089,"_0089_009A_009B.Margin = new Padding(4, 0, 4, 0);"
+label18,_0089_009A_009B,0x0600057F,64139,_0089_009A_009B.AutoSize = true;
+label18,_0089_009A_009B,0x0600057F,64140,"_0089_009A_009B.Location = new Point(82, 119);"
+label18,_0089_009A_009B,0x0600057F,65555,_0089_0098_0090.Controls.Add(_0089_009A_009B);
+label4,_0089_0098_008C,declaration,60607,private Label _0089_0098_008C;
+label4,_0089_0098_008C,0x0600057F,62757,_0089_0098_008C = new Label();
+label4,_0089_0098_008C,0x0600057F,63874,"_0089_0098_008C.Size = new Size(53, 15);"
+label4,_0089_0098_008C,0x0600057F,63875,_0089_0098_008C.TabIndex = 2;
+label4,_0089_0098_008C,0x0600057F,63915,_0089_0098_008C.AutoSize = true;
+label4,_0089_0098_008C,0x0600057F,63919,"_0089_0098_008C.Location = new Point(17, 61);"
+label4,_0089_0098_008C,0x0600057F,63923,"_0089_0098_008C.Margin = new Padding(4, 0, 4, 0);"
+label4,_0089_0098_008C,0x0600057F,63924,"_0089_0098_008C.Name = ""label4"" /* string-offset:2904 */;"
+label4,_0089_0098_008C,0x0600057F,63928,"_0089_0098_008C.Text = ""Y（m）"" /* string-offset:2868 */;"
+label4,_0089_0098_008C,0x0600057F,65476,_0089_0098_0086.Controls.Add(_0089_0098_008C);
+label7,_0089_0098_008D,declaration,60609,private Label _0089_0098_008D;
+label7,_0089_0098_008D,0x0600057F,62760,_0089_0098_008D = new Label();
+label7,_0089_0098_008D,0x0600057F,63806,"_0089_0098_008D.Text = ""X（m）"" /* string-offset:2876 */;"
+label7,_0089_0098_008D,0x0600057F,63929,_0089_0098_008D.AutoSize = true;
+label7,_0089_0098_008D,0x0600057F,63930,"_0089_0098_008D.Location = new Point(17, 28);"
+label7,_0089_0098_008D,0x0600057F,63931,"_0089_0098_008D.Margin = new Padding(4, 0, 4, 0);"
+label7,_0089_0098_008D,0x0600057F,63932,"_0089_0098_008D.Name = ""label7"" /* string-offset:2236 */;"
+label7,_0089_0098_008D,0x0600057F,63936,"_0089_0098_008D.Size = new Size(53, 15);"
+label7,_0089_0098_008D,0x0600057F,63937,_0089_0098_008D.TabIndex = 2;
+label7,_0089_0098_008D,0x0600057F,65208,_0089_0098_0086.Controls.Add(_0089_0098_008D);
+textBoxWB,_0089_0099_0093,declaration,60671,private TextBox _0089_0099_0093;
+textBoxWB,_0089_0099_0093,0x0600055D,61104,"P_0._008A_008B_0090._008B_008B_0093 = _008F_008A._008B_0087_009D(_0089_0099_0093.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxWB,_0089_0099_0093,0x06000561,61435,"_0089_0096_0087(array, _0089_0099_008D, _0089_0099_0093, _0089_0099_0098);"
+textBoxWB,_0089_0099_0093,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxWB,_0089_0099_0093,0x06000575,62347,"_0089_0099_0093.Text = P_0._0088_0091_0096._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */);"
+textBoxWB,_0089_0099_0093,0x0600057F,63468,"_0089_0099_0093.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxWB,_0089_0099_0093,0x0600057F,64008,_0089_0098_0090.Controls.Add(_0089_0099_0093);
+textBoxWB,_0089_0099_0093,0x0600057F,64018,"_0089_0099_0093.Location = new Point(371, 26);"
+textBoxWB,_0089_0099_0093,0x0600057F,64019,"_0089_0099_0093.Margin = new Padding(4, 3, 4, 3);"
+textBoxWB,_0089_0099_0093,0x0600057F,64022,"_0089_0099_0093.Name = ""textBoxWB"" /* string-offset:4312 */;"
+textBoxWB,_0089_0099_0093,0x0600057F,64026,"_0089_0099_0093.Size = new Size(78, 23);"
+textBoxWB,_0089_0099_0093,0x0600057F,64029,_0089_0099_0093.TabIndex = 1;
+textBoxWB,_0089_0099_0093,0x0600057F,64079,_0089_0099_0093 = new TextBox();
+textBoxHLr,_0089_0098_009B,declaration,60637,private TextBox _0089_0098_009B;
+textBoxHLr,_0089_0098_009B,0x06000568,61785,"_0089_0098_009B.Text = _0089_0097_008D[_0089_0098_0095.SelectedIndex, 1].ToString();"
+textBoxHLr,_0089_0098_009B,0x0600056A,61810,"double num3 = _008F_008A._008B_0087_009E(_0089_0098_009B, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxHLr,_0089_0098_009B,0x0600057F,64053,"_0089_0098_009B.Margin = new Padding(3, 2, 3, 2);"
+textBoxHLr,_0089_0098_009B,0x0600057F,64054,"_0089_0098_009B.Name = ""textBoxHLr"" /* string-offset:2312 */;"
+textBoxHLr,_0089_0098_009B,0x0600057F,64058,"_0089_0098_009B.Size = new Size(69, 23);"
+textBoxHLr,_0089_0098_009B,0x0600057F,64062,_0089_0098_009B.TabIndex = 4;
+textBoxHLr,_0089_0098_009B,0x0600057F,64066,"_0089_0098_009B.Text = ""26"" /* string-offset:2316 */;"
+textBoxHLr,_0089_0098_009B,0x0600057F,64126,_0089_0098_009B.Enabled = false;
+textBoxHLr,_0089_0098_009B,0x0600057F,64130,"_0089_0098_009B.Location = new Point(108, 87);"
+textBoxHLr,_0089_0098_009B,0x0600057F,64559,_0089_0098_009B = new TextBox();
+textBoxHLr,_0089_0098_009B,0x0600057F,65265,_0089_0098_0094.Controls.Add(_0089_0098_009B);
+buttonAix,_0089_0097_0094,declaration,60573,private Button _0089_0097_0094;
+buttonAix,_0089_0097_0094,0x0600057F,62641,_0089_0097_0094 = new Button();
+buttonAix,_0089_0097_0094,0x0600057F,63975,base.Controls.Add(_0089_0097_0094);
+buttonAix,_0089_0097_0094,0x0600057F,64109,"_0089_0097_0094.Name = ""buttonAix"" /* string-offset:3284 */;"
+buttonAix,_0089_0097_0094,0x0600057F,64113,"_0089_0097_0094.Size = new Size(99, 40);"
+buttonAix,_0089_0097_0094,0x0600057F,64117,_0089_0097_0094.TabIndex = 1;
+buttonAix,_0089_0097_0094,0x0600057F,64118,"_0089_0097_0094.Text = ""入口坐标系"" /* string-offset:3288 */;"
+buttonAix,_0089_0097_0094,0x0600057F,64121,_0089_0097_0094.UseVisualStyleBackColor = true;
+buttonAix,_0089_0097_0094,0x0600057F,65504,_0089_0097_0094.Click += _0089_0095_0099;
+buttonAix,_0089_0097_0094,0x0600057F,65561,"_0089_0097_0094.Location = new Point(123, 224);"
+buttonAix,_0089_0097_0094,0x0600057F,65562,"_0089_0097_0094.Margin = new Padding(4, 3, 4, 3);"
+comboBoxMissCG,_0089_009A_009A,declaration,60735,private ComboBox _0089_009A_009A;
+comboBoxMissCG,_0089_009A_009A,0x06000553,60782,_0089_009A_009A.SelectedIndex = 3;
+comboBoxMissCG,_0089_009A_009A,0x06000567,61516,"double num10 = 100.0 / _008F_008A._008B_0087_009D(_0089_009A_009A.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+comboBoxMissCG,_0089_009A_009A,0x06000570,61960,if (_0089_009A_009A.SelectedIndex == -1)
+comboBoxMissCG,_0089_009A_009A,0x06000570,61971,text2 = _0089_009A_009A.Text;
+comboBoxMissCG,_0089_009A_009A,0x0600057F,62799,_0089_009A_009A = new ComboBox();
+comboBoxMissCG,_0089_009A_009A,0x0600057F,64150,"_0089_009A_009A.Name = ""comboBoxMissCG"" /* string-offset:4264 */;"
+comboBoxMissCG,_0089_009A_009A,0x0600057F,64151,"_0089_009A_009A.Size = new Size(59, 22);"
+comboBoxMissCG,_0089_009A_009A,0x0600057F,64152,_0089_009A_009A.TabIndex = 43;
+comboBoxMissCG,_0089_009A_009A,0x0600057F,64153,_0089_009A_009A.SelectedIndexChanged += _0089_0096_009E;
+comboBoxMissCG,_0089_009A_009A,0x0600057F,64275,"_0089_009A_009A.Location = new Point(24, 142);"
+comboBoxMissCG,_0089_009A_009A,0x0600057F,64342,_0089_009A_009A.Items.AddRange(new object[5]
+comboBoxMissCG,_0089_009A_009A,0x0600057F,64408,_0089_009A_009A.FormattingEnabled = true;
+comboBoxMissCG,_0089_009A_009A,0x0600057F,64957,_0089_009A_009A.DropDownStyle = ComboBoxStyle.DropDownList;
+comboBoxMissCG,_0089_009A_009A,0x0600057F,65552,_0089_0098_0090.Controls.Add(_0089_009A_009A);
+textBoxHLcor,_0089_0098_009A,declaration,60635,private TextBox _0089_0098_009A;
+textBoxHLcor,_0089_0098_009A,0x0600056A,61814,_0089_0098_009A.Text = _0089_0098_009C.Text;
+textBoxHLcor,_0089_0098_009A,0x0600056A,61817,_0089_0098_009A.Text = num4.ToString();
+textBoxHLcor,_0089_0098_009A,0x0600057F,64125,"_0089_0098_009A.Text = ""52.12"" /* string-offset:2364 */;"
+textBoxHLcor,_0089_0098_009A,0x0600057F,64160,"_0089_0098_009A.Margin = new Padding(3, 2, 3, 2);"
+textBoxHLcor,_0089_0098_009A,0x0600057F,64161,"_0089_0098_009A.Name = ""textBoxHLcor"" /* string-offset:2360 */;"
+textBoxHLcor,_0089_0098_009A,0x0600057F,64162,"_0089_0098_009A.Size = new Size(69, 23);"
+textBoxHLcor,_0089_0098_009A,0x0600057F,64166,_0089_0098_009A.TabIndex = 4;
+textBoxHLcor,_0089_0098_009A,0x0600057F,64339,"_0089_0098_009A.Location = new Point(108, 119);"
+textBoxHLcor,_0089_0098_009A,0x0600057F,64411,_0089_0098_009A.Enabled = false;
+textBoxHLcor,_0089_0098_009A,0x0600057F,64555,_0089_0098_009A = new TextBox();
+textBoxHLcor,_0089_0098_009A,0x0600057F,65264,_0089_0098_0094.Controls.Add(_0089_0098_009A);
+textBoxWsB,_0089_0099_0095,declaration,60675,private TextBox _0089_0099_0095;
+textBoxWsB,_0089_0099_0095,0x06000561,61189,"_0089_0096_0087(array, _0089_0099_0091, _0089_0099_0095, _0089_0099_009A);"
+textBoxWsB,_0089_0099_0095,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxWsB,_0089_0099_0095,0x0600056C,61883,_0089_0099_0095.Visible = true;
+textBoxWsB,_0089_0099_0095,0x0600056C,61899,_0089_0099_0095.Visible = false;
+textBoxWsB,_0089_0099_0095,0x06000575,62323,"_0089_0099_0095.Text = P_0._0088_0091_0097._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */);"
+textBoxWsB,_0089_0099_0095,0x06000576,62361,_0089_0099_0095.Visible = true;
+textBoxWsB,_0089_0099_0095,0x06000576,62370,_0089_0099_0095.Visible = false;
+textBoxWsB,_0089_0099_0095,0x0600057F,64010,_0089_0098_0090.Controls.Add(_0089_0099_0095);
+textBoxWsB,_0089_0099_0095,0x0600057F,64084,_0089_0099_0095 = new TextBox();
+textBoxWsB,_0089_0099_0095,0x0600057F,64229,"_0089_0099_0095.Location = new Point(371, 55);"
+textBoxWsB,_0089_0099_0095,0x0600057F,64230,"_0089_0099_0095.Margin = new Padding(4, 3, 4, 3);"
+textBoxWsB,_0089_0099_0095,0x0600057F,64231,"_0089_0099_0095.Name = ""textBoxWsB"" /* string-offset:4316 */;"
+textBoxWsB,_0089_0099_0095,0x0600057F,64232,"_0089_0099_0095.Size = new Size(78, 23);"
+textBoxWsB,_0089_0099_0095,0x0600057F,64236,_0089_0099_0095.TabIndex = 4;
+textBoxWsB,_0089_0099_0095,0x0600057F,64237,"_0089_0099_0095.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxWsB,_0089_0099_0095,0x0600057F,64238,_0089_0099_0095.Visible = false;
+textBoxXC,_0089_0099_0096,declaration,60677,private TextBox _0089_0099_0096;
+textBoxXC,_0089_0099_0096,0x0600055D,61109,"P_0._008A_008B_0091._008B_008B_0094 = _008F_008A._008B_0087_009D(_0089_0099_0096.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxXC,_0089_0099_0096,0x06000561,61424,"_0089_0096_0087(array, _0089_0099_0099, _0089_0099_0097, _0089_0099_0096);"
+textBoxXC,_0089_0099_0096,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxXC,_0089_0099_0096,0x06000575,62331,"_0089_0099_0096.Text = P_0._0088_0091_0098._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */);"
+textBoxXC,_0089_0099_0096,0x0600057F,64011,_0089_0098_0090.Controls.Add(_0089_0099_0096);
+textBoxXC,_0089_0099_0096,0x0600057F,64085,_0089_0099_0096 = new TextBox();
+textBoxXC,_0089_0099_0096,0x0600057F,64250,"_0089_0099_0096.Location = new Point(456, 84);"
+textBoxXC,_0089_0099_0096,0x0600057F,64253,"_0089_0099_0096.Margin = new Padding(4, 3, 4, 3);"
+textBoxXC,_0089_0099_0096,0x0600057F,64254,"_0089_0099_0096.Name = ""textBoxXC"" /* string-offset:4320 */;"
+textBoxXC,_0089_0099_0096,0x0600057F,64258,"_0089_0099_0096.Size = new Size(78, 23);"
+textBoxXC,_0089_0099_0096,0x0600057F,64259,_0089_0099_0096.TabIndex = 8;
+textBoxXC,_0089_0099_0096,0x0600057F,64260,"_0089_0099_0096.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxFAF,_0089_009A_008A,declaration,60703,private TextBox _0089_009A_008A;
+textBoxFAF,_0089_009A_008A,0x0600055D,61117,"double num2 = _008F_008A._008B_0087_009D(_0089_009A_008A.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxFAF,_0089_009A_008A,0x06000561,61312,_0089_009A_008A.Text = array[1].Trim();
+textBoxFAF,_0089_009A_008A,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxFAF,_0089_009A_008A,0x0600057F,62778,_0089_009A_008A = new TextBox();
+textBoxFAF,_0089_009A_008A,0x0600057F,64265,"_0089_009A_008A.Location = new Point(120, 21);"
+textBoxFAF,_0089_009A_008A,0x0600057F,64266,"_0089_009A_008A.Name = ""textBoxFAF"" /* string-offset:2152 */;"
+textBoxFAF,_0089_009A_008A,0x0600057F,64270,"_0089_009A_008A.Size = new Size(60, 23);"
+textBoxFAF,_0089_009A_008A,0x0600057F,64271,_0089_009A_008A.TabIndex = 60;
+textBoxFAF,_0089_009A_008A,0x0600057F,64272,"_0089_009A_008A.Text = ""900"" /* string-offset:2156 */;"
+textBoxFAF,_0089_009A_008A,0x0600057F,64327,_0089_009A_0088.Controls.Add(_0089_009A_008A);
+label13,_0089_009A_008D,declaration,60709,private Label _0089_009A_008D;
+label13,_0089_009A_008D,0x0600057F,62788,_0089_009A_008D = new Label();
+label13,_0089_009A_008D,0x0600057F,64194,_0089_009A_0088.Controls.Add(_0089_009A_008D);
+label13,_0089_009A_008D,0x0600057F,64279,"_0089_009A_008D.Location = new Point(20, 91);"
+label13,_0089_009A_008D,0x0600057F,64280,"_0089_009A_008D.Name = ""label13"" /* string-offset:3460 */;"
+label13,_0089_009A_008D,0x0600057F,64284,"_0089_009A_008D.Size = new Size(91, 15);"
+label13,_0089_009A_008D,0x0600057F,64292,_0089_009A_008D.TabIndex = 61;
+label13,_0089_009A_008D,0x0600057F,64293,"_0089_009A_008D.Text = ""灯光长度(m)"" /* string-offset:5732 */;"
+label13,_0089_009A_008D,0x0600057F,64439,_0089_009A_008D.AutoSize = true;
+textBoxAdElev,_0089_009A_008E,declaration,60711,private TextBox _0089_009A_008E;
+textBoxAdElev,_0089_009A_008E,0x0600055F,61140,"double num3 = _008F_008A._008B_0087_009E(_0089_009A_008E, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxAdElev,_0089_009A_008E,0x06000561,61234,_0089_009A_008E.Text = array[1].Trim();
+textBoxAdElev,_0089_009A_008E,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxAdElev,_0089_009A_008E,0x06000567,61505,"double num2 = _008F_008A._008B_0087_009E(_0089_009A_008E, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxAdElev,_0089_009A_008E,0x0600057F,62791,_0089_009A_008E = new TextBox();
+textBoxAdElev,_0089_009A_008E,0x0600057F,63998,_0089_009A_0088.Controls.Add(_0089_009A_008E);
+textBoxAdElev,_0089_009A_008E,0x0600057F,64297,"_0089_009A_008E.Location = new Point(120, 54);"
+textBoxAdElev,_0089_009A_008E,0x0600057F,64298,"_0089_009A_008E.Name = ""textBoxAdElev"" /* string-offset:5728 */;"
+textBoxAdElev,_0089_009A_008E,0x0600057F,65458,"_0089_009A_008E.Size = new Size(60, 23);"
+textBoxAdElev,_0089_009A_008E,0x0600057F,65461,_0089_009A_008E.TabIndex = 62;
+textBoxAdElev,_0089_009A_008E,0x0600057F,65480,"_0089_009A_008E.Text = ""0"" /* string-offset:560 */;"
+button6,_0089_0097_0092,declaration,60569,private Button _0089_0097_0092;
+button6,_0089_0097_0092,0x0600057F,62635,_0089_0097_0092 = new Button();
+button6,_0089_0097_0092,0x0600057F,63973,base.Controls.Add(_0089_0097_0092);
+button6,_0089_0097_0092,0x0600057F,64303,"_0089_0097_0092.Text = ""CAD"" /* string-offset:1696 */;"
+button6,_0089_0097_0092,0x0600057F,64353,"_0089_0097_0092.Name = ""button6"" /* string-offset:1920 */;"
+button6,_0089_0097_0092,0x0600057F,64354,"_0089_0097_0092.Size = new Size(49, 40);"
+button6,_0089_0097_0092,0x0600057F,64355,_0089_0097_0092.TabIndex = 2;
+button6,_0089_0097_0092,0x0600057F,65072,"_0089_0097_0092.Location = new Point(314, 224);"
+button6,_0089_0097_0092,0x0600057F,65140,_0089_0097_0092.UseVisualStyleBackColor = true;
+button6,_0089_0097_0092,0x0600057F,65141,_0089_0097_0092.Click += _0089_0095_009A;
+label2,_0089_0097_009B,declaration,60587,private Label _0089_0097_009B;
+label2,_0089_0097_009B,0x0600057F,62652,_0089_0097_009B = new Label();
+label2,_0089_0097_009B,0x0600057F,64224,_0089_0097_009B.TabIndex = 2;
+label2,_0089_0097_009B,0x0600057F,64225,"_0089_0097_009B.Text = ""入口标高(m)"" /* string-offset:2124 */;"
+label2,_0089_0097_009B,0x0600057F,64373,_0089_0097_009B.AutoSize = true;
+label2,_0089_0097_009B,0x0600057F,64377,"_0089_0097_009B.Location = new Point(16, 94);"
+label2,_0089_0097_009B,0x0600057F,64378,"_0089_0097_009B.Margin = new Padding(4, 0, 4, 0);"
+label2,_0089_0097_009B,0x0600057F,64379,"_0089_0097_009B.Name = ""label2"" /* string-offset:1860 */;"
+label2,_0089_0097_009B,0x0600057F,64380,"_0089_0097_009B.Size = new Size(91, 15);"
+label2,_0089_0097_009B,0x0600057F,65548,_0089_0097_0097.Controls.Add(_0089_0097_009B);
+label9,_0089_0098_008A,declaration,60603,private Label _0089_0098_008A;
+label9,_0089_0098_008A,0x0600057F,63883,"_0089_0098_008A.Size = new Size(53, 15);"
+label9,_0089_0098_008A,0x0600057F,63884,_0089_0098_008A.TabIndex = 2;
+label9,_0089_0098_008A,0x0600057F,63885,"_0089_0098_008A.Text = ""Z（m）"" /* string-offset:2872 */;"
+label9,_0089_0098_008A,0x0600057F,64387,_0089_0098_008A.AutoSize = true;
+label9,_0089_0098_008A,0x0600057F,64388,"_0089_0098_008A.Location = new Point(17, 94);"
+label9,_0089_0098_008A,0x0600057F,64389,"_0089_0098_008A.Margin = new Padding(4, 0, 4, 0);"
+label9,_0089_0098_008A,0x0600057F,64390,"_0089_0098_008A.Name = ""label9"" /* string-offset:2940 */;"
+label9,_0089_0098_008A,0x0600057F,64459,_0089_0098_008A = new Label();
+label9,_0089_0098_008A,0x0600057F,65471,_0089_0098_0086.Controls.Add(_0089_0098_008A);
+label6,_0089_0099_0086,declaration,60645,private Label _0089_0099_0086;
+label6,_0089_0099_0086,0x0600057F,63732,_0089_0099_0086 = new Label();
+label6,_0089_0099_0086,0x0600057F,63990,"_0089_0099_0086.Location = new Point(309, 5);"
+label6,_0089_0099_0086,0x0600057F,64015,_0089_0098_0090.Controls.Add(_0089_0099_0086);
+label6,_0089_0099_0086,0x0600057F,64186,"_0089_0099_0086.Text = ""a"" /* string-offset:3968 */;"
+label6,_0089_0099_0086,0x0600057F,64261,_0089_0099_0086.AutoSize = true;
+label6,_0089_0099_0086,0x0600057F,64400,"_0089_0099_0086.Margin = new Padding(4, 0, 4, 0);"
+label6,_0089_0099_0086,0x0600057F,64401,"_0089_0099_0086.Name = ""label6"" /* string-offset:2696 */;"
+label6,_0089_0099_0086,0x0600057F,64402,"_0089_0099_0086.Size = new Size(15, 15);"
+label6,_0089_0099_0086,0x0600057F,64403,_0089_0099_0086.TabIndex = 16;
+label12,_0089_009A_0089,declaration,60701,private Label _0089_009A_0089;
+label12,_0089_009A_0089,0x0600057F,62774,_0089_009A_0089 = new Label();
+label12,_0089_009A_0089,0x0600057F,63368,_0089_009A_0088.Controls.Add(_0089_009A_0089);
+label12,_0089_009A_0089,0x0600057F,64307,"_0089_009A_0089.Text = ""FAF高度(m)"" /* string-offset:2116 */;"
+label12,_0089_009A_0089,0x0600057F,64426,"_0089_009A_0089.Size = new Size(85, 15);"
+label12,_0089_009A_0089,0x0600057F,64427,_0089_009A_0089.TabIndex = 59;
+label12,_0089_009A_0089,0x0600057F,64433,_0089_009A_0089.AutoSize = true;
+label12,_0089_009A_0089,0x0600057F,64434,"_0089_009A_0089.Location = new Point(23, 25);"
+label12,_0089_009A_0089,0x0600057F,64435,"_0089_009A_0089.Name = ""label12"" /* string-offset:3428 */;"
+label16,_0089_009A_0092,declaration,60719,private Label _0089_009A_0092;
+label16,_0089_009A_0092,0x0600057F,64135,_0089_009A_0092 = new Label();
+label16,_0089_009A_0092,0x0600057F,64475,_0089_009A_0092.AutoSize = true;
+label16,_0089_009A_0092,0x0600057F,64476,"_0089_009A_0092.Location = new Point(155, 64);"
+label16,_0089_009A_0092,0x0600057F,64477,"_0089_009A_0092.Name = ""label16"" /* string-offset:2540 */;"
+label16,_0089_009A_0092,0x0600057F,65093,_0089_0098_0090.Controls.Add(_0089_009A_0092);
+label16,_0089_009A_0092,0x0600057F,65320,"_0089_009A_0092.Size = new Size(63, 15);"
+label16,_0089_009A_0092,0x0600057F,65321,_0089_009A_0092.TabIndex = 35;
+label16,_0089_009A_0092,0x0600057F,65322,"_0089_009A_0092.Text = ""Dist(m)"" /* string-offset:4224 */;"
+textBoxWsC,_0089_0099_009A,declaration,60685,private TextBox _0089_0099_009A;
+textBoxWsC,_0089_0099_009A,0x06000561,61189,"_0089_0096_0087(array, _0089_0099_0091, _0089_0099_0095, _0089_0099_009A);"
+textBoxWsC,_0089_0099_009A,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxWsC,_0089_0099_009A,0x0600056C,61884,_0089_0099_009A.Visible = true;
+textBoxWsC,_0089_0099_009A,0x0600056C,61900,_0089_0099_009A.Visible = false;
+textBoxWsC,_0089_0099_009A,0x06000575,62327,"_0089_0099_009A.Text = P_0._0088_0091_0097._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */);"
+textBoxWsC,_0089_0099_009A,0x06000576,62362,_0089_0099_009A.Visible = true;
+textBoxWsC,_0089_0099_009A,0x06000576,62380,_0089_0099_009A.Visible = false;
+textBoxWsC,_0089_0099_009A,0x0600057F,63393,_0089_0098_0090.Controls.Add(_0089_0099_009A);
+textBoxWsC,_0089_0099_009A,0x0600057F,63746,_0089_0099_009A = new TextBox();
+textBoxWsC,_0089_0099_009A,0x0600057F,64481,"_0089_0099_009A.Location = new Point(456, 55);"
+textBoxWsC,_0089_0099_009A,0x0600057F,64484,"_0089_0099_009A.Margin = new Padding(4, 3, 4, 3);"
+textBoxWsC,_0089_0099_009A,0x0600057F,64485,"_0089_0099_009A.Name = ""textBoxWsC"" /* string-offset:4336 */;"
+textBoxWsC,_0089_0099_009A,0x0600057F,64489,"_0089_0099_009A.Size = new Size(78, 23);"
+textBoxWsC,_0089_0099_009A,0x0600057F,64493,_0089_0099_009A.TabIndex = 5;
+textBoxWsC,_0089_0099_009A,0x0600057F,64497,"_0089_0099_009A.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxWsC,_0089_0099_009A,0x0600057F,64501,_0089_0099_009A.Visible = false;
+tabPage2,_0089_0098_0090,declaration,60615,private TabPage _0089_0098_0090;
+tabPage2,_0089_0098_0090,0x0600057F,62696,_0089_0098_0090.SuspendLayout();
+tabPage2,_0089_0098_0090,0x0600057F,62795,_0089_0098_0090 = new TabPage();
+tabPage2,_0089_0098_0090,0x0600057F,63387,_0089_0098_0090.Controls.Add(_0089_0099_0097);
+tabPage2,_0089_0098_0090,0x0600057F,63388,_0089_0098_0090.Controls.Add(_0089_0099_0098);
+tabPage2,_0089_0098_0090,0x0600057F,63389,_0089_0098_0090.Controls.Add(_0089_0099_0099);
+tabPage2,_0089_0098_0090,0x0600057F,63393,_0089_0098_0090.Controls.Add(_0089_0099_009A);
+tabPage2,_0089_0098_0090,0x0600057F,63394,_0089_0098_0090.Controls.Add(_0089_0098_009D);
+tabPage2,_0089_0098_0090,0x0600057F,63398,_0089_0098_0090.Controls.Add(_0089_0098_009E);
+tabPage2,_0089_0098_0090,0x0600057F,63720,_0089_0098_0090.Controls.Add(_0089_009A_0096);
+tabPage2,_0089_0098_0090,0x0600057F,63723,_0089_0098_0090.Controls.Add(_0089_009A_0097);
+tabPage2,_0089_0098_0090,0x0600057F,63724,_0089_0098_0090.Controls.Add(_0089_0099_009C);
+tabPage2,_0089_0098_0090,0x0600057F,63949,_0089_0098_0090.Controls.Add(_0089_0099_008A);
+tabPage2,_0089_0098_0090,0x0600057F,63952,_0089_0098_0090.Controls.Add(_0089_0099_008B);
+tabPage2,_0089_0098_0090,0x0600057F,64008,_0089_0098_0090.Controls.Add(_0089_0099_0093);
+tabPage2,_0089_0098_0090,0x0600057F,64009,_0089_0098_0090.Controls.Add(_0089_0099_0094);
+tabPage2,_0089_0098_0090,0x0600057F,64010,_0089_0098_0090.Controls.Add(_0089_0099_0095);
+tabPage2,_0089_0098_0090,0x0600057F,64011,_0089_0098_0090.Controls.Add(_0089_0099_0096);
+tabPage2,_0089_0098_0090,0x0600057F,64015,_0089_0098_0090.Controls.Add(_0089_0099_0086);
+tabPage2,_0089_0098_0090,0x0600057F,64178,_0089_0098_0090.Controls.Add(_0089_0099_0092);
+tabPage2,_0089_0098_0090,0x0600057F,64220,_0089_0098_0090.Controls.Add(_0089_0099_0088);
+tabPage2,_0089_0098_0090,0x0600057F,64221,_0089_0098_0090.Controls.Add(_0089_0099_0089);
+tabPage2,_0089_0098_0090,0x0600057F,64315,_0089_0098_0090.Controls.Add(_0089_0099_0087);
+tabPage2,_0089_0098_0090,0x0600057F,64319,_0089_0098_0090.Controls.Add(_0089_0099_0090);
+tabPage2,_0089_0098_0090,0x0600057F,64331,_0089_0098_0090.Controls.Add(_0089_0099_009D);
+tabPage2,_0089_0098_0090,0x0600057F,64393,_0089_0098_0090.Controls.Add(_0089_0099_0091);
+tabPage2,_0089_0098_0090,0x0600057F,64396,_0089_0098_0090.Controls.Add(_0089_009A_0095);
+tabPage2,_0089_0098_0090,0x0600057F,64419,_0089_0098_0090.Controls.Add(_0089_0099_008C);
+tabPage2,_0089_0098_0090,0x0600057F,64420,_0089_0098_0090.Controls.Add(_0089_0099_008D);
+tabPage2,_0089_0098_0090,0x0600057F,64421,_0089_0098_0090.Controls.Add(_0089_0099_008E);
+tabPage2,_0089_0098_0090,0x0600057F,64422,_0089_0098_0090.Controls.Add(_0089_0099_008F);
+tabPage2,_0089_0098_0090,0x0600057F,64508,_0089_0098_0090.Controls.Add(_0089_0099_009B);
+tabPage2,_0089_0098_0090,0x0600057F,64509,"_0089_0098_0090.Location = new Point(4, 34);"
+tabPage2,_0089_0098_0090,0x0600057F,64510,"_0089_0098_0090.Name = ""tabPage2"" /* string-offset:1788 */;"
+tabPage2,_0089_0098_0090,0x0600057F,64511,_0089_0098_0090.Padding = new Padding(3);
+tabPage2,_0089_0098_0090,0x0600057F,64512,"_0089_0098_0090.Size = new Size(720, 176);"
+tabPage2,_0089_0098_0090,0x0600057F,64516,_0089_0098_0090.TabIndex = 1;
+tabPage2,_0089_0098_0090,0x0600057F,64519,"_0089_0098_0090.Text = ""OAS面参数"" /* string-offset:6496 */;"
+tabPage2,_0089_0098_0090,0x0600057F,64616,_0089_0098_0090.ResumeLayout(performLayout: false);
+tabPage2,_0089_0098_0090,0x0600057F,64619,_0089_0098_0090.PerformLayout();
+tabPage2,_0089_0098_0090,0x0600057F,64691,_0089_0098_008E.Controls.Add(_0089_0098_0090);
+tabPage2,_0089_0098_0090,0x0600057F,64931,_0089_0098_0090.UseVisualStyleBackColor = true;
+tabPage2,_0089_0098_0090,0x0600057F,65080,_0089_0098_0090.Controls.Add(_0089_009A_009C);
+tabPage2,_0089_0098_0090,0x0600057F,65083,_0089_0098_0090.Controls.Add(_0089_009A_0099);
+tabPage2,_0089_0098_0090,0x0600057F,65084,_0089_0098_0090.Controls.Add(_0089_009A_008F);
+tabPage2,_0089_0098_0090,0x0600057F,65085,_0089_0098_0090.Controls.Add(_0089_009A_0090);
+tabPage2,_0089_0098_0090,0x0600057F,65089,_0089_0098_0090.Controls.Add(_0089_009A_009D);
+tabPage2,_0089_0098_0090,0x0600057F,65092,_0089_0098_0090.Controls.Add(_0089_009A_0091);
+tabPage2,_0089_0098_0090,0x0600057F,65093,_0089_0098_0090.Controls.Add(_0089_009A_0092);
+tabPage2,_0089_0098_0090,0x0600057F,65097,_0089_0098_0090.Controls.Add(_0089_009A_0093);
+tabPage2,_0089_0098_0090,0x0600057F,65098,_0089_0098_0090.Controls.Add(_0089_009A_0094);
+tabPage2,_0089_0098_0090,0x0600057F,65484,_0089_0098_0090.Controls.Add(_0089_009A_009E);
+tabPage2,_0089_0098_0090,0x0600057F,65552,_0089_0098_0090.Controls.Add(_0089_009A_009A);
+tabPage2,_0089_0098_0090,0x0600057F,65555,_0089_0098_0090.Controls.Add(_0089_009A_009B);
+tabPage2,_0089_0098_0090,0x0600057F,65558,_0089_0098_0090.Controls.Add(_0089_009A_0098);
+comboCat,_0089_0098_0095,declaration,60625,private ComboBox _0089_0098_0095;
+comboCat,_0089_0098_0095,0x06000553,60783,_0089_0098_0095.SelectedIndex = 3;
+comboCat,_0089_0098_0095,0x06000568,61783,"_0089_0098_009C.Text = _0089_0097_008D[_0089_0098_0095.SelectedIndex, 0].ToString();"
+comboCat,_0089_0098_0095,0x06000568,61785,"_0089_0098_009B.Text = _0089_0097_008D[_0089_0098_0095.SelectedIndex, 1].ToString();"
+comboCat,_0089_0098_0095,0x0600057F,62712,"_0089_0098_0095.Size = new Size(69, 22);"
+comboCat,_0089_0098_0095,0x0600057F,62715,_0089_0098_0095.TabIndex = 10;
+comboCat,_0089_0098_0095,0x0600057F,62716,_0089_0098_0095.SelectedIndexChanged += _0089_0096_008D;
+comboCat,_0089_0098_0095,0x0600057F,63757,_0089_0098_0095 = new ComboBox();
+comboCat,_0089_0098_0095,0x0600057F,63795,_0089_0098_0095.DropDownStyle = ComboBoxStyle.DropDownList;
+comboCat,_0089_0098_0095,0x0600057F,64522,_0089_0098_0095.FormattingEnabled = true;
+comboCat,_0089_0098_0095,0x0600057F,64523,_0089_0098_0095.Items.AddRange(new object[4]
+comboCat,_0089_0098_0095,0x0600057F,64530,"_0089_0098_0095.Location = new Point(108, 24);"
+comboCat,_0089_0098_0095,0x0600057F,64533,"_0089_0098_0095.Name = ""comboCat"" /* string-offset:2332 */;"
+comboCat,_0089_0098_0095,0x0600057F,65251,_0089_0098_0094.Controls.Add(_0089_0098_0095);
+textBoxYA,_0089_0099_0092,declaration,60669,private TextBox _0089_0099_0092;
+textBoxYA,_0089_0099_0092,0x0600055D,61110,"P_0._008A_008B_0092._008B_008B_0092 = _008F_008A._008B_0087_009D(_0089_0099_0092.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxYA,_0089_0099_0092,0x06000561,61427,"_0089_0096_0087(array, _0089_0099_0092, _0089_0099_0090, _0089_0099_008E);"
+textBoxYA,_0089_0099_0092,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxYA,_0089_0099_0092,0x06000575,62332,"_0089_0099_0092.Text = P_0._0088_0091_0099._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */);"
+textBoxYA,_0089_0099_0092,0x0600057F,62741,"_0089_0099_0092.Location = new Point(287, 113);"
+textBoxYA,_0089_0099_0092,0x0600057F,62745,"_0089_0099_0092.Margin = new Padding(4, 3, 4, 3);"
+textBoxYA,_0089_0099_0092,0x0600057F,63982,_0089_0099_0092 = new TextBox();
+textBoxYA,_0089_0099_0092,0x0600057F,64178,_0089_0098_0090.Controls.Add(_0089_0099_0092);
+textBoxYA,_0089_0099_0092,0x0600057F,64636,"_0089_0099_0092.Name = ""textBoxYA"" /* string-offset:4308 */;"
+textBoxYA,_0089_0099_0092,0x0600057F,64637,"_0089_0099_0092.Size = new Size(78, 23);"
+textBoxYA,_0089_0099_0092,0x0600057F,64638,_0089_0099_0092.TabIndex = 9;
+textBoxYA,_0089_0099_0092,0x0600057F,64641,"_0089_0099_0092.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxZ2,_0089_0098_0088,declaration,60599,private TextBox _0089_0098_0088;
+textBoxZ2,_0089_0098_0088,0x0600055A,61007,_0089_0098_0088.Text = ((Point3d)(ref val)).Z.ToString();
+textBoxZ2,_0089_0098_0088,0x0600055C,61070,"obj2.Z = _008F_008A._008B_0087_009D(_0089_0098_0088.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxZ2,_0089_0098_0088,0x0600057C,62558,_0089_0097_0098.Text = _0089_0098_0088.Text;
+textBoxZ2,_0089_0098_0088,0x0600057C,62560,_0089_0098_0088.Text = text;
+textBoxZ2,_0089_0098_0088,0x0600057F,64457,_0089_0098_0088 = new TextBox();
+textBoxZ2,_0089_0098_0088,0x0600057F,64653,"_0089_0098_0088.Location = new Point(78, 90);"
+textBoxZ2,_0089_0098_0088,0x0600057F,64654,"_0089_0098_0088.Margin = new Padding(4, 3, 4, 3);"
+textBoxZ2,_0089_0098_0088,0x0600057F,64658,"_0089_0098_0088.Name = ""textBoxZ2"" /* string-offset:4372 */;"
+textBoxZ2,_0089_0098_0088,0x0600057F,64659,"_0089_0098_0088.Size = new Size(116, 23);"
+textBoxZ2,_0089_0098_0088,0x0600057F,64660,_0089_0098_0088.TabIndex = 2;
+textBoxZ2,_0089_0098_0088,0x0600057F,64668,"_0089_0098_0088.Text = "" 0"" /* string-offset:4364 */;"
+textBoxZ2,_0089_0098_0088,0x0600057F,65469,_0089_0098_0086.Controls.Add(_0089_0098_0088);
+Start,_0089_0097_009D,declaration,60591,private Label _0089_0097_009D;
+Start,_0089_0097_009D,0x0600057F,62657,_0089_0097_009D = new Label();
+Start,_0089_0097_009D,0x0600057F,64682,_0089_0097_009D.AutoSize = true;
+Start,_0089_0097_009D,0x0600057F,64707,"_0089_0097_009D.Location = new Point(16, 61);"
+Start,_0089_0097_009D,0x0600057F,64708,"_0089_0097_009D.Margin = new Padding(4, 0, 4, 0);"
+Start,_0089_0097_009D,0x0600057F,64709,"_0089_0097_009D.Name = ""Start"" /* string-offset:2864 */;"
+Start,_0089_0097_009D,0x0600057F,64710,"_0089_0097_009D.Size = new Size(53, 15);"
+Start,_0089_0097_009D,0x0600057F,64713,_0089_0097_009D.TabIndex = 2;
+Start,_0089_0097_009D,0x0600057F,64716,"_0089_0097_009D.Text = ""Y（m）"" /* string-offset:2868 */;"
+Start,_0089_0097_009D,0x0600057F,65132,_0089_0097_0097.Controls.Add(_0089_0097_009D);
+label1,_0089_0097_009E,declaration,60593,private Label _0089_0097_009E;
+label1,_0089_0097_009E,0x0600057F,62658,_0089_0097_009E = new Label();
+label1,_0089_0097_009E,0x0600057F,64717,_0089_0097_009E.AutoSize = true;
+label1,_0089_0097_009E,0x0600057F,64718,"_0089_0097_009E.Location = new Point(16, 28);"
+label1,_0089_0097_009E,0x0600057F,64732,"_0089_0097_009E.Margin = new Padding(4, 0, 4, 0);"
+label1,_0089_0097_009E,0x0600057F,64733,"_0089_0097_009E.Name = ""label1"" /* string-offset:1832 */;"
+label1,_0089_0097_009E,0x0600057F,64736,"_0089_0097_009E.Size = new Size(53, 15);"
+label1,_0089_0097_009E,0x0600057F,64740,_0089_0097_009E.TabIndex = 2;
+label1,_0089_0097_009E,0x0600057F,64743,"_0089_0097_009E.Text = ""X（m）"" /* string-offset:2876 */;"
+label1,_0089_0097_009E,0x0600057F,65162,_0089_0097_0097.Controls.Add(_0089_0097_009E);
+textBoxZC,_0089_0099_0088,declaration,60649,private TextBox _0089_0099_0088;
+textBoxZC,_0089_0099_0088,0x0600055D,61115,"P_0._008A_008B_0093._008B_008B_0094 = _008F_008A._008B_0087_009D(_0089_0099_0088.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxZC,_0089_0099_0088,0x06000561,61430,"_0089_0096_0087(array, _0089_0099_008A, _0089_0099_0089, _0089_0099_0088);"
+textBoxZC,_0089_0099_0088,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxZC,_0089_0099_0088,0x06000575,62340,"_0089_0099_0088.Text = P_0._0088_0091_009A._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */);"
+textBoxZC,_0089_0099_0088,0x0600057F,64156,"_0089_0099_0088.Location = new Point(456, 142);"
+textBoxZC,_0089_0099_0088,0x0600057F,64220,_0089_0098_0090.Controls.Add(_0089_0099_0088);
+textBoxZC,_0089_0099_0088,0x0600057F,64755,"_0089_0099_0088.Margin = new Padding(4, 3, 4, 3);"
+textBoxZC,_0089_0099_0088,0x0600057F,64759,"_0089_0099_0088.Name = ""textBoxZC"" /* string-offset:4272 */;"
+textBoxZC,_0089_0099_0088,0x0600057F,64762,"_0089_0099_0088.Size = new Size(78, 23);"
+textBoxZC,_0089_0099_0088,0x0600057F,64766,_0089_0099_0088.TabIndex = 14;
+textBoxZC,_0089_0099_0088,0x0600057F,64767,"_0089_0099_0088.Text = ""0.001"" /* string-offset:4276 */;"
+textBoxZC,_0089_0099_0088,0x0600057F,65229,_0089_0099_0088 = new TextBox();
+textBoxZB,_0089_0099_0089,declaration,60651,private TextBox _0089_0099_0089;
+textBoxZB,_0089_0099_0089,0x0600055D,61114,"P_0._008A_008B_0093._008B_008B_0093 = _008F_008A._008B_0087_009D(_0089_0099_0089.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxZB,_0089_0099_0089,0x06000561,61430,"_0089_0096_0087(array, _0089_0099_008A, _0089_0099_0089, _0089_0099_0088);"
+textBoxZB,_0089_0099_0089,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+textBoxZB,_0089_0099_0089,0x06000575,62338,"_0089_0099_0089.Text = P_0._0088_0091_009A._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */);"
+textBoxZB,_0089_0099_0089,0x0600057F,64221,_0089_0098_0090.Controls.Add(_0089_0099_0089);
+textBoxZB,_0089_0099_0089,0x0600057F,64359,_0089_0099_0089 = new TextBox();
+textBoxZB,_0089_0099_0089,0x0600057F,64786,"_0089_0099_0089.Location = new Point(371, 142);"
+textBoxZB,_0089_0099_0089,0x0600057F,64790,"_0089_0099_0089.Margin = new Padding(4, 3, 4, 3);"
+textBoxZB,_0089_0099_0089,0x0600057F,64793,"_0089_0099_0089.Name = ""textBoxZB"" /* string-offset:4280 */;"
+textBoxZB,_0089_0099_0089,0x0600057F,64797,"_0089_0099_0089.Size = new Size(78, 23);"
+textBoxZB,_0089_0099_0089,0x0600057F,64798,_0089_0099_0089.TabIndex = 13;
+textBoxZB,_0089_0099_0089,0x0600057F,64802,"_0089_0099_0089.Text = ""0.001"" /* string-offset:4276 */;"
+button18,_0089_009B_0087,declaration,60747,private Button _0089_009B_0087;
+button18,_0089_009B_0087,0x0600057F,62675,_0089_009B_0087 = new Button();
+button18,_0089_009B_0087,0x0600057F,63479,_0089_009B_0087.Click += _0089_0097_0089;
+button18,_0089_009B_0087,0x0600057F,64046,"_0089_009B_0087.Text = ""标记"" /* string-offset:2972 */;"
+button18,_0089_009B_0087,0x0600057F,64049,_0089_009B_0087.UseVisualStyleBackColor = true;
+button18,_0089_009B_0087,0x0600057F,64146,base.Controls.Add(_0089_009B_0087);
+button18,_0089_009B_0087,0x0600057F,64843,"_0089_009B_0087.Location = new Point(663, 224);"
+button18,_0089_009B_0087,0x0600057F,64846,"_0089_009B_0087.Name = ""button18"" /* string-offset:3312 */;"
+button18,_0089_009B_0087,0x0600057F,64850,"_0089_009B_0087.Size = new Size(49, 40);"
+button18,_0089_009B_0087,0x0600057F,65106,_0089_009B_0087.TabIndex = 79;
+label20,_0089_0098_0097,declaration,60629,private Label _0089_0098_0097;
+label20,_0089_0098_0097,0x0600057F,62731,_0089_0098_0097.AutoSize = true;
+label20,_0089_0098_0097,0x0600057F,62732,"_0089_0098_0097.Location = new Point(14, 123);"
+label20,_0089_0098_0097,0x0600057F,63759,_0089_0098_0097 = new Label();
+label20,_0089_0098_0097,0x0600057F,64854,"_0089_0098_0097.Name = ""label20"" /* string-offset:2296 */;"
+label20,_0089_0098_0097,0x0600057F,64857,"_0089_0098_0097.Size = new Size(77, 15);"
+label20,_0089_0098_0097,0x0600057F,64860,_0089_0098_0097.TabIndex = 9;
+label20,_0089_0098_0097,0x0600057F,64864,"_0089_0098_0097.Text = ""HL修正(m)"" /* string-offset:2300 */;"
+label20,_0089_0098_0097,0x0600057F,65256,_0089_0098_0094.Controls.Add(_0089_0098_0097);
+textBoxElev,_0089_0098_0092,declaration,60619,private TextBox _0089_0098_0092;
+textBoxElev,_0089_0098_0092,0x0600056A,61800,"num = _008F_008A._008B_0087_009E(_0089_0098_0092, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxElev,_0089_0098_0092,0x0600057F,64775,_0089_0098_0092 = new TextBox();
+textBoxElev,_0089_0098_0092,0x0600057F,64867,"_0089_0098_0092.Location = new Point(295, 28);"
+textBoxElev,_0089_0098_0092,0x0600057F,64870,"_0089_0098_0092.Name = ""textBoxElev"" /* string-offset:2404 */;"
+textBoxElev,_0089_0098_0092,0x0600057F,64873,"_0089_0098_0092.Size = new Size(69, 23);"
+textBoxElev,_0089_0098_0092,0x0600057F,64874,_0089_0098_0092.TabIndex = 2;
+textBoxElev,_0089_0098_0092,0x0600057F,64875,"_0089_0098_0092.Text = ""0"" /* string-offset:560 */;"
+textBoxElev,_0089_0098_0092,0x0600057F,65257,_0089_0098_0094.Controls.Add(_0089_0098_0092);
+label29,_0089_0098_0098,declaration,60631,private Label _0089_0098_0098;
+label29,_0089_0098_0098,0x0600057F,64778,_0089_0098_0098 = new Label();
+label29,_0089_0098_0098,0x0600057F,64879,_0089_0098_0098.AutoSize = true;
+label29,_0089_0098_0098,0x0600057F,64882,"_0089_0098_0098.Location = new Point(14, 91);"
+label29,_0089_0098_0098,0x0600057F,64886,"_0089_0098_0098.Name = ""label29"" /* string-offset:2288 */;"
+label29,_0089_0098_0098,0x0600057F,64887,"_0089_0098_0098.Size = new Size(55, 15);"
+label29,_0089_0098_0098,0x0600057F,64888,_0089_0098_0098.TabIndex = 9;
+label29,_0089_0098_0098,0x0600057F,64892,"_0089_0098_0098.Text = ""HLr(m)"" /* string-offset:2292 */;"
+label29,_0089_0098_0098,0x0600057F,65258,_0089_0098_0094.Controls.Add(_0089_0098_0098);
+label30,_0089_0098_0099,declaration,60633,private Label _0089_0098_0099;
+label30,_0089_0098_0099,0x0600057F,64550,_0089_0098_0099 = new Label();
+label30,_0089_0098_0099,0x0600057F,64893,_0089_0098_0099.AutoSize = true;
+label30,_0089_0098_0099,0x0600057F,64894,"_0089_0098_0099.Location = new Point(14, 59);"
+label30,_0089_0098_0099,0x0600057F,64895,"_0089_0098_0099.Name = ""label30"" /* string-offset:2304 */;"
+label30,_0089_0098_0099,0x0600057F,64896,"_0089_0098_0099.Size = new Size(55, 15);"
+label30,_0089_0098_0099,0x0600057F,64897,_0089_0098_0099.TabIndex = 9;
+label30,_0089_0098_0099,0x0600057F,64898,"_0089_0098_0099.Text = ""HLm(m)"" /* string-offset:2308 */;"
+label30,_0089_0098_0099,0x0600057F,65262,_0089_0098_0094.Controls.Add(_0089_0098_0099);
+label15,_0089_0098_0093,declaration,60621,private Label _0089_0098_0093;
+label15,_0089_0098_0093,0x0600057F,64554,_0089_0098_0093 = new Label();
+label15,_0089_0098_0093,0x0600057F,64906,_0089_0098_0093.AutoSize = true;
+label15,_0089_0098_0093,0x0600057F,64910,"_0089_0098_0093.Location = new Point(198, 31);"
+label15,_0089_0098_0093,0x0600057F,64914,"_0089_0098_0093.Name = ""label15"" /* string-offset:2532 */;"
+label15,_0089_0098_0093,0x0600057F,64918,"_0089_0098_0093.Size = new Size(91, 15);"
+label15,_0089_0098_0093,0x0600057F,64919,_0089_0098_0093.TabIndex = 0;
+label15,_0089_0098_0093,0x0600057F,64923,"_0089_0098_0093.Text = ""机场标高(m)"" /* string-offset:5740 */;"
+label15,_0089_0098_0093,0x0600057F,65263,_0089_0098_0094.Controls.Add(_0089_0098_0093);
+label17,_0089_009A_009E,declaration,60743,private Label _0089_009A_009E;
+label17,_0089_009A_009E,0x0600057F,62798,_0089_009A_009E = new Label();
+label17,_0089_009A_009E,0x0600057F,64935,_0089_009A_009E.AutoSize = true;
+label17,_0089_009A_009E,0x0600057F,64943,"_0089_009A_009E.Location = new Point(159, 119);"
+label17,_0089_009A_009E,0x0600057F,64947,"_0089_009A_009E.Name = ""label17"" /* string-offset:2548 */;"
+label17,_0089_009A_009E,0x0600057F,64948,"_0089_009A_009E.Size = new Size(61, 15);"
+label17,_0089_009A_009E,0x0600057F,64952,_0089_009A_009E.TabIndex = 35;
+label17,_0089_009A_009E,0x0600057F,64956,"_0089_009A_009E.Text = ""轮高(m)"" /* string-offset:4196 */;"
+label17,_0089_009A_009E,0x0600057F,65484,_0089_0098_0090.Controls.Add(_0089_009A_009E);
+label3,_0089_0098_009D,declaration,60641,private Label _0089_0098_009D;
+label3,_0089_0098_009D,0x0600057F,63394,_0089_0098_0090.Controls.Add(_0089_0098_009D);
+label3,_0089_0098_009D,0x0600057F,63747,_0089_0098_009D = new Label();
+label3,_0089_0098_009D,0x0600057F,64505,_0089_0098_009D.AutoSize = true;
+label3,_0089_0098_009D,0x0600057F,64965,"_0089_0098_009D.Location = new Point(486, 5);"
+label3,_0089_0098_009D,0x0600057F,64969,"_0089_0098_009D.Margin = new Padding(4, 0, 4, 0);"
+label3,_0089_0098_009D,0x0600057F,64970,"_0089_0098_009D.Name = ""label3"" /* string-offset:1876 */;"
+label3,_0089_0098_009D,0x0600057F,64973,"_0089_0098_009D.Size = new Size(15, 15);"
+label3,_0089_0098_009D,0x0600057F,64974,_0089_0098_009D.TabIndex = 16;
+label3,_0089_0098_009D,0x0600057F,64975,"_0089_0098_009D.Text = ""c"" /* string-offset:3976 */;"
+label5,_0089_0098_009E,declaration,60643,private Label _0089_0098_009E;
+label5,_0089_0098_009E,0x0600057F,63398,_0089_0098_0090.Controls.Add(_0089_0098_009E);
+label5,_0089_0098_009E,0x0600057F,63748,_0089_0098_009E = new Label();
+label5,_0089_0098_009E,0x0600057F,64979,_0089_0098_009E.AutoSize = true;
+label5,_0089_0098_009E,0x0600057F,64983,"_0089_0098_009E.Location = new Point(397, 5);"
+label5,_0089_0098_009E,0x0600057F,64987,"_0089_0098_009E.Margin = new Padding(4, 0, 4, 0);"
+label5,_0089_0098_009E,0x0600057F,64991,"_0089_0098_009E.Name = ""label5"" /* string-offset:2712 */;"
+label5,_0089_0098_009E,0x0600057F,64992,"_0089_0098_009E.Size = new Size(15, 15);"
+label5,_0089_0098_009E,0x0600057F,64993,_0089_0098_009E.TabIndex = 16;
+label5,_0089_0098_009E,0x0600057F,64997,"_0089_0098_009E.Text = ""b"" /* string-offset:3972 */;"
+label25,_0089_0099_009B,declaration,60687,private Label _0089_0099_009B;
+label25,_0089_0099_009B,0x0600057F,63749,_0089_0099_009B = new Label();
+label25,_0089_0099_009B,0x0600057F,64508,_0089_0098_0090.Controls.Add(_0089_0099_009B);
+label25,_0089_0099_009B,0x0600057F,65001,_0089_0099_009B.AutoSize = true;
+label25,_0089_0099_009B,0x0600057F,65005,"_0089_0099_009B.Location = new Point(259, 88);"
+label25,_0089_0099_009B,0x0600057F,65009,"_0089_0099_009B.Margin = new Padding(4, 0, 4, 0);"
+label25,_0089_0099_009B,0x0600057F,65017,"_0089_0099_009B.Name = ""label25"" /* string-offset:2136 */;"
+label25,_0089_0099_009B,0x0600057F,65021,"_0089_0099_009B.Size = new Size(15, 15);"
+label25,_0089_0099_009B,0x0600057F,65022,_0089_0099_009B.TabIndex = 8;
+label25,_0089_0099_009B,0x0600057F,65237,"_0089_0099_009B.Text = ""X"" /* string-offset:3904 */;"
+statusStrip1,_0089_0097_008F,declaration,60563,private StatusStrip _0089_0097_008F;
+statusStrip1,_0089_0097_008F,0x0600057F,62627,_0089_0097_008F = new StatusStrip();
+statusStrip1,_0089_0097_008F,0x0600057F,62676,_0089_0097_008F.SuspendLayout();
+statusStrip1,_0089_0097_008F,0x0600057F,63977,base.Controls.Add(_0089_0097_008F);
+statusStrip1,_0089_0097_008F,0x0600057F,64097,"_0089_0097_008F.ImageScalingSize = new Size(19, 19);"
+statusStrip1,_0089_0097_008F,0x0600057F,64591,_0089_0097_008F.ResumeLayout(performLayout: false);
+statusStrip1,_0089_0097_008F,0x0600057F,64595,_0089_0097_008F.PerformLayout();
+statusStrip1,_0089_0097_008F,0x0600057F,65026,_0089_0097_008F.Items.AddRange(new ToolStripItem[1] { _0089_0097_0090 });
+statusStrip1,_0089_0097_008F,0x0600057F,65030,"_0089_0097_008F.Location = new Point(0, 539);"
+statusStrip1,_0089_0097_008F,0x0600057F,65033,"_0089_0097_008F.Name = ""statusStrip1"" /* string-offset:2836 */;"
+statusStrip1,_0089_0097_008F,0x0600057F,65034,"_0089_0097_008F.Size = new Size(728, 26);"
+statusStrip1,_0089_0097_008F,0x0600057F,65038,_0089_0097_008F.TabIndex = 0;
+statusStrip1,_0089_0097_008F,0x0600057F,65042,"_0089_0097_008F.Text = ""statusStrip1"" /* string-offset:2836 */;"
+toolStripStatusLabel1,_0089_0097_0090,declaration,60565,private ToolStripStatusLabel _0089_0097_0090;
+toolStripStatusLabel1,_0089_0097_0090,0x06000555,60831,"_0089_0097_0090.Text = ""已检测到 "" /* string-offset:2720 */ + _0089_0097_008B.Count + "" 个障碍物。"" /* string-offset:936 */;"
+toolStripStatusLabel1,_0089_0097_0090,0x0600055B,61053,"_0089_0097_0090.Text = ""已转换"" /* string-offset:3032 */ + list.Count + ""个障碍物。"" /* string-offset:2816 */;"
+toolStripStatusLabel1,_0089_0097_0090,0x0600057F,62630,_0089_0097_0090 = new ToolStripStatusLabel();
+toolStripStatusLabel1,_0089_0097_0090,0x0600057F,65026,_0089_0097_008F.Items.AddRange(new ToolStripItem[1] { _0089_0097_0090 });
+toolStripStatusLabel1,_0089_0097_0090,0x0600057F,65046,"_0089_0097_0090.Name = ""toolStripStatusLabel1"" /* string-offset:2840 */;"
+toolStripStatusLabel1,_0089_0097_0090,0x0600057F,65047,"_0089_0097_0090.Size = new Size(84, 20);"
+toolStripStatusLabel1,_0089_0097_0090,0x0600057F,65048,"_0089_0097_0090.Text = ""软件已就绪"" /* string-offset:3612 */;"
+button8,_0089_0097_0091,declaration,60567,private Button _0089_0097_0091;
+button8,_0089_0097_0091,0x0600057F,62631,_0089_0097_0091 = new Button();
+button8,_0089_0097_0091,0x0600057F,63968,base.Controls.Add(_0089_0097_0091);
+button8,_0089_0097_0091,0x0600057F,65049,"_0089_0097_0091.Location = new Point(369, 224);"
+button8,_0089_0097_0091,0x0600057F,65052,"_0089_0097_0091.Name = ""button8"" /* string-offset:3468 */;"
+button8,_0089_0097_0091,0x0600057F,65056,"_0089_0097_0091.Size = new Size(49, 40);"
+button8,_0089_0097_0091,0x0600057F,65060,_0089_0097_0091.TabIndex = 3;
+button8,_0089_0097_0091,0x0600057F,65063,"_0089_0097_0091.Text = ""KML"" /* string-offset:3272 */;"
+button8,_0089_0097_0091,0x0600057F,65064,_0089_0097_0091.UseVisualStyleBackColor = true;
+button8,_0089_0097_0091,0x0600057F,65065,_0089_0097_0091.Visible = false;
+button8,_0089_0097_0091,0x0600057F,65068,_0089_0097_0091.Click += _0089_0096_0092;
+dataGridView1,_0089_0097_0093,declaration,60571,private DataGridView _0089_0097_0093;
+dataGridView1,_0089_0097_0093,0x06000556,60863,_0089_0097_0093.DataSource = dataTable;
+dataGridView1,_0089_0097_0093,0x06000556,60864,_0089_0097_0093.Columns[1].Frozen = true;
+dataGridView1,_0089_0097_0093,0x06000558,60963,_0089_0097_0093.DataSource = dataTable;
+dataGridView1,_0089_0097_0093,0x06000558,60964,_0089_0097_0093.Columns[1].Frozen = true;
+dataGridView1,_0089_0097_0093,0x0600056E,61918,DBPoint obj = _0089_0097_008C[_0089_0097_0093.Rows[P_1.RowIndex].Cells[0].Value.ToString()];
+dataGridView1,_0089_0097_0093,0x0600057D,62575,foreach (DataGridViewRow selectedRow in _0089_0097_0093.SelectedRows)
+dataGridView1,_0089_0097_0093,0x0600057D,62580,val = _0089_0097_008C[_0089_0097_0093.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+dataGridView1,_0089_0097_0093,0x0600057F,62640,_0089_0097_0093 = new DataGridView();
+dataGridView1,_0089_0097_0093,0x0600057F,62677,((ISupportInitialize)_0089_0097_0093).BeginInit();
+dataGridView1,_0089_0097_0093,0x0600057F,63974,base.Controls.Add(_0089_0097_0093);
+dataGridView1,_0089_0097_0093,0x0600057F,64598,((ISupportInitialize)_0089_0097_0093).EndInit();
+dataGridView1,_0089_0097_0093,0x0600057F,65114,_0089_0097_0093.RowHeadersWidth = 49;
+dataGridView1,_0089_0097_0093,0x0600057F,65115,_0089_0097_0093.RowTemplate.Height = 27;
+dataGridView1,_0089_0097_0093,0x0600057F,65116,_0089_0097_0093.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+dataGridView1,_0089_0097_0093,0x0600057F,65117,"_0089_0097_0093.Size = new Size(728, 265);"
+dataGridView1,_0089_0097_0093,0x0600057F,65120,_0089_0097_0093.TabIndex = 61;
+dataGridView1,_0089_0097_0093,0x0600057F,65124,_0089_0097_0093.CellClick += _0089_0096_0093;
+dataGridView1,_0089_0097_0093,0x0600057F,65145,_0089_0097_0093.AllowUserToAddRows = false;
+dataGridView1,_0089_0097_0093,0x0600057F,65146,_0089_0097_0093.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+dataGridView1,_0089_0097_0093,0x0600057F,65150,_0089_0097_0093.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+dataGridView1,_0089_0097_0093,0x0600057F,65154,"_0089_0097_0093.Location = new Point(0, 271);"
+dataGridView1,_0089_0097_0093,0x0600057F,65155,"_0089_0097_0093.Name = ""dataGridView1"" /* string-offset:2832 */;"
+dataGridView1,_0089_0097_0093,0x0600057F,65158,_0089_0097_0093.ReadOnly = true;
+groupBox1,_0089_0097_0097,declaration,60579,private GroupBox _0089_0097_0097;
+groupBox1,_0089_0097_0097,0x0600057F,62644,_0089_0097_0097 = new GroupBox();
+groupBox1,_0089_0097_0097,0x0600057F,62680,_0089_0097_0097.SuspendLayout();
+groupBox1,_0089_0097_0097,0x0600057F,63017,_0089_0098_008F.Controls.Add(_0089_0097_0097);
+groupBox1,_0089_0097_0097,0x0600057F,64599,_0089_0097_0097.ResumeLayout(performLayout: false);
+groupBox1,_0089_0097_0097,0x0600057F,64603,_0089_0097_0097.PerformLayout();
+groupBox1,_0089_0097_0097,0x0600057F,65132,_0089_0097_0097.Controls.Add(_0089_0097_009D);
+groupBox1,_0089_0097_0097,0x0600057F,65162,_0089_0097_0097.Controls.Add(_0089_0097_009E);
+groupBox1,_0089_0097_0097,0x0600057F,65165,"_0089_0097_0097.Location = new Point(13, 13);"
+groupBox1,_0089_0097_0097,0x0600057F,65166,"_0089_0097_0097.Margin = new Padding(4, 3, 4, 3);"
+groupBox1,_0089_0097_0097,0x0600057F,65170,"_0089_0097_0097.Name = ""groupBox1"" /* string-offset:1664 */;"
+groupBox1,_0089_0097_0097,0x0600057F,65173,"_0089_0097_0097.Padding = new Padding(4, 3, 4, 3);"
+groupBox1,_0089_0097_0097,0x0600057F,65174,"_0089_0097_0097.Size = new Size(210, 157);"
+groupBox1,_0089_0097_0097,0x0600057F,65175,_0089_0097_0097.TabIndex = 57;
+groupBox1,_0089_0097_0097,0x0600057F,65178,_0089_0097_0097.TabStop = false;
+groupBox1,_0089_0097_0097,0x0600057F,65182,"_0089_0097_0097.Text = ""入口坐标"" /* string-offset:4356 */;"
+groupBox1,_0089_0097_0097,0x0600057F,65545,_0089_0097_0097.Controls.Add(_0089_0097_0098);
+groupBox1,_0089_0097_0097,0x0600057F,65546,_0089_0097_0097.Controls.Add(_0089_0097_0099);
+groupBox1,_0089_0097_0097,0x0600057F,65547,_0089_0097_0097.Controls.Add(_0089_0097_009A);
+groupBox1,_0089_0097_0097,0x0600057F,65548,_0089_0097_0097.Controls.Add(_0089_0097_009B);
+groupBox1,_0089_0097_0097,0x0600057F,65549,_0089_0097_0097.Controls.Add(_0089_0097_009C);
+textBoxZ1,_0089_0097_0098,declaration,60581,private TextBox _0089_0097_0098;
+textBoxZ1,_0089_0097_0098,0x06000559,60985,_0089_0097_0098.Text = ((Point3d)(ref val)).Z.ToString();
+textBoxZ1,_0089_0097_0098,0x0600055C,61067,"obj.Z = _008F_008A._008B_0087_009D(_0089_0097_0098.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxZ1,_0089_0097_0098,0x0600055D,61116,"double num = _008F_008A._008B_0087_009D(_0089_0097_0098.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxZ1,_0089_0097_0098,0x0600057C,62557,text = _0089_0097_0098.Text;
+textBoxZ1,_0089_0097_0098,0x0600057C,62558,_0089_0097_0098.Text = _0089_0098_0088.Text;
+textBoxZ1,_0089_0097_0098,0x0600057F,62649,_0089_0097_0098 = new TextBox();
+textBoxZ1,_0089_0097_0098,0x0600057F,65185,"_0089_0097_0098.Location = new Point(115, 90);"
+textBoxZ1,_0089_0097_0098,0x0600057F,65186,"_0089_0097_0098.Margin = new Padding(4, 3, 4, 3);"
+textBoxZ1,_0089_0097_0098,0x0600057F,65189,"_0089_0097_0098.Name = ""textBoxZ1"" /* string-offset:4360 */;"
+textBoxZ1,_0089_0097_0098,0x0600057F,65190,"_0089_0097_0098.Size = new Size(78, 23);"
+textBoxZ1,_0089_0097_0098,0x0600057F,65191,_0089_0097_0098.TabIndex = 2;
+textBoxZ1,_0089_0097_0098,0x0600057F,65195,"_0089_0097_0098.Text = "" 0"" /* string-offset:4364 */;"
+textBoxZ1,_0089_0097_0098,0x0600057F,65545,_0089_0097_0097.Controls.Add(_0089_0097_0098);
+groupBox2,_0089_0098_0086,declaration,60595,private GroupBox _0089_0098_0086;
+groupBox2,_0089_0098_0086,0x0600057F,62662,_0089_0098_0086 = new GroupBox();
+groupBox2,_0089_0098_0086,0x0600057F,62683,_0089_0098_0086.SuspendLayout();
+groupBox2,_0089_0098_0086,0x0600057F,63018,_0089_0098_008F.Controls.Add(_0089_0098_0086);
+groupBox2,_0089_0098_0086,0x0600057F,63691,_0089_0098_0086.TabStop = false;
+groupBox2,_0089_0098_0086,0x0600057F,63692,"_0089_0098_0086.Text = ""末端坐标"" /* string-offset:4368 */;"
+groupBox2,_0089_0098_0086,0x0600057F,64384,_0089_0098_0086.Controls.Add(_0089_0098_0087);
+groupBox2,_0089_0098_0086,0x0600057F,64604,_0089_0098_0086.ResumeLayout(performLayout: false);
+groupBox2,_0089_0098_0086,0x0600057F,64605,_0089_0098_0086.PerformLayout();
+groupBox2,_0089_0098_0086,0x0600057F,64747,_0089_0098_0086.Controls.Add(_0089_009B_0086);
+groupBox2,_0089_0098_0086,0x0600057F,65208,_0089_0098_0086.Controls.Add(_0089_0098_008D);
+groupBox2,_0089_0098_0086,0x0600057F,65209,"_0089_0098_0086.Location = new Point(240, 13);"
+groupBox2,_0089_0098_0086,0x0600057F,65213,"_0089_0098_0086.Margin = new Padding(4, 3, 4, 3);"
+groupBox2,_0089_0098_0086,0x0600057F,65214,"_0089_0098_0086.Name = ""groupBox2"" /* string-offset:1740 */;"
+groupBox2,_0089_0098_0086,0x0600057F,65215,"_0089_0098_0086.Padding = new Padding(4, 3, 4, 3);"
+groupBox2,_0089_0098_0086,0x0600057F,65216,"_0089_0098_0086.Size = new Size(210, 157);"
+groupBox2,_0089_0098_0086,0x0600057F,65217,_0089_0098_0086.TabIndex = 58;
+groupBox2,_0089_0098_0086,0x0600057F,65469,_0089_0098_0086.Controls.Add(_0089_0098_0088);
+groupBox2,_0089_0098_0086,0x0600057F,65470,_0089_0098_0086.Controls.Add(_0089_0098_0089);
+groupBox2,_0089_0098_0086,0x0600057F,65471,_0089_0098_0086.Controls.Add(_0089_0098_008A);
+groupBox2,_0089_0098_0086,0x0600057F,65472,_0089_0098_0086.Controls.Add(_0089_0098_008B);
+groupBox2,_0089_0098_0086,0x0600057F,65476,_0089_0098_0086.Controls.Add(_0089_0098_008C);
+tabPage3,_0089_0098_0091,declaration,60617,private TabPage _0089_0098_0091;
+tabPage3,_0089_0098_0091,0x0600057F,62704,_0089_0098_0091.SuspendLayout();
+tabPage3,_0089_0098_0091,0x0600057F,63750,_0089_0098_0091 = new TabPage();
+tabPage3,_0089_0098_0091,0x0600057F,64620,_0089_0098_0091.ResumeLayout(performLayout: false);
+tabPage3,_0089_0098_0091,0x0600057F,64695,_0089_0098_008E.Controls.Add(_0089_0098_0091);
+tabPage3,_0089_0098_0091,0x0600057F,65240,_0089_0098_0091.Controls.Add(_0089_0098_0094);
+tabPage3,_0089_0098_0091,0x0600057F,65241,"_0089_0098_0091.Location = new Point(4, 34);"
+tabPage3,_0089_0098_0091,0x0600057F,65242,"_0089_0098_0091.Name = ""tabPage3"" /* string-offset:2268 */;"
+tabPage3,_0089_0098_0091,0x0600057F,65243,"_0089_0098_0091.Size = new Size(720, 176);"
+tabPage3,_0089_0098_0091,0x0600057F,65244,_0089_0098_0091.TabIndex = 2;
+tabPage3,_0089_0098_0091,0x0600057F,65245,"_0089_0098_0091.Text = ""HL检查"" /* string-offset:6500 */;"
+tabPage3,_0089_0098_0091,0x0600057F,65249,_0089_0098_0091.UseVisualStyleBackColor = true;
+groupBox11,_0089_0098_0094,declaration,60623,private GroupBox _0089_0098_0094;
+groupBox11,_0089_0098_0094,0x0600057F,63753,_0089_0098_0094 = new GroupBox();
+groupBox11,_0089_0098_0094,0x0600057F,64092,_0089_0098_0094.SuspendLayout();
+groupBox11,_0089_0098_0094,0x0600057F,64621,_0089_0098_0094.ResumeLayout(performLayout: false);
+groupBox11,_0089_0098_0094,0x0600057F,64624,_0089_0098_0094.PerformLayout();
+groupBox11,_0089_0098_0094,0x0600057F,65240,_0089_0098_0091.Controls.Add(_0089_0098_0094);
+groupBox11,_0089_0098_0094,0x0600057F,65250,_0089_0098_0094.Controls.Add(_0089_0099_009E);
+groupBox11,_0089_0098_0094,0x0600057F,65251,_0089_0098_0094.Controls.Add(_0089_0098_0095);
+groupBox11,_0089_0098_0094,0x0600057F,65252,_0089_0098_0094.Controls.Add(_0089_0098_0096);
+groupBox11,_0089_0098_0094,0x0600057F,65256,_0089_0098_0094.Controls.Add(_0089_0098_0097);
+groupBox11,_0089_0098_0094,0x0600057F,65257,_0089_0098_0094.Controls.Add(_0089_0098_0092);
+groupBox11,_0089_0098_0094,0x0600057F,65258,_0089_0098_0094.Controls.Add(_0089_0098_0098);
+groupBox11,_0089_0098_0094,0x0600057F,65262,_0089_0098_0094.Controls.Add(_0089_0098_0099);
+groupBox11,_0089_0098_0094,0x0600057F,65263,_0089_0098_0094.Controls.Add(_0089_0098_0093);
+groupBox11,_0089_0098_0094,0x0600057F,65264,_0089_0098_0094.Controls.Add(_0089_0098_009A);
+groupBox11,_0089_0098_0094,0x0600057F,65265,_0089_0098_0094.Controls.Add(_0089_0098_009B);
+groupBox11,_0089_0098_0094,0x0600057F,65266,_0089_0098_0094.Controls.Add(_0089_0098_009C);
+groupBox11,_0089_0098_0094,0x0600057F,65267,"_0089_0098_0094.Location = new Point(13, 12);"
+groupBox11,_0089_0098_0094,0x0600057F,65270,"_0089_0098_0094.Margin = new Padding(3, 2, 3, 2);"
+groupBox11,_0089_0098_0094,0x0600057F,65271,"_0089_0098_0094.Name = ""groupBox11"" /* string-offset:2284 */;"
+groupBox11,_0089_0098_0094,0x0600057F,65274,"_0089_0098_0094.Padding = new Padding(3, 2, 3, 2);"
+groupBox11,_0089_0098_0094,0x0600057F,65275,"_0089_0098_0094.Size = new Size(382, 157);"
+groupBox11,_0089_0098_0094,0x0600057F,65278,_0089_0098_0094.TabIndex = 67;
+groupBox11,_0089_0098_0094,0x0600057F,65282,_0089_0098_0094.TabStop = false;
+groupBox11,_0089_0098_0094,0x0600057F,65283,"_0089_0098_0094.Text = ""HL修正检查"" /* string-offset:5932 */;"
+button7,_0089_0099_009E,declaration,60693,private Button _0089_0099_009E;
+button7,_0089_0099_009E,0x0600057F,63754,_0089_0099_009E = new Button();
+button7,_0089_0099_009E,0x0600057F,63792,"_0089_0099_009E.Text = ""计算"" /* string-offset:4792 */;"
+button7,_0089_0099_009E,0x0600057F,63793,_0089_0099_009E.UseVisualStyleBackColor = true;
+button7,_0089_0099_009E,0x0600057F,63794,_0089_0099_009E.Click += _0089_0096_008E;
+button7,_0089_0099_009E,0x0600057F,64415,_0089_0099_009E.TabIndex = 11;
+button7,_0089_0099_009E,0x0600057F,65250,_0089_0098_0094.Controls.Add(_0089_0099_009E);
+button7,_0089_0099_009E,0x0600057F,65291,"_0089_0099_009E.Location = new Point(295, 113);"
+button7,_0089_0099_009E,0x0600057F,65292,"_0089_0099_009E.Name = ""button7"" /* string-offset:1948 */;"
+button7,_0089_0099_009E,0x0600057F,65295,"_0089_0099_009E.Size = new Size(69, 34);"
+textBoxLat2,_0089_0098_0089,declaration,60601,private TextBox _0089_0098_0089;
+textBoxLat2,_0089_0098_0089,0x0600055A,61006,"_0089_0098_0089.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();"
+textBoxLat2,_0089_0098_0089,0x0600055B,61026,"obj2.Y = _008F_008A._008B_0087_009D(_0089_0098_0089.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxLat2,_0089_0098_0089,0x0600055C,61069,"obj2.Y = _008F_008A._008B_0087_009D(_0089_0098_0089.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+textBoxLat2,_0089_0098_0089,0x0600057C,62552,_0089_0097_0099.Text = _0089_0098_0089.Text;
+textBoxLat2,_0089_0098_0089,0x0600057C,62553,_0089_0098_0089.Text = text;
+textBoxLat2,_0089_0098_0089,0x0600057F,64458,_0089_0098_0089 = new TextBox();
+textBoxLat2,_0089_0098_0089,0x0600057F,64669,"_0089_0098_0089.Location = new Point(78, 57);"
+textBoxLat2,_0089_0098_0089,0x0600057F,64670,"_0089_0098_0089.Margin = new Padding(4, 3, 4, 3);"
+textBoxLat2,_0089_0098_0089,0x0600057F,65303,"_0089_0098_0089.Name = ""textBoxLat2"" /* string-offset:2892 */;"
+textBoxLat2,_0089_0098_0089,0x0600057F,65304,"_0089_0098_0089.Size = new Size(116, 23);"
+textBoxLat2,_0089_0098_0089,0x0600057F,65308,_0089_0098_0089.TabIndex = 1;
+textBoxLat2,_0089_0098_0089,0x0600057F,65312,"_0089_0098_0089.Text = "" 0"" /* string-offset:4364 */;"
+textBoxLat2,_0089_0098_0089,0x0600057F,65470,_0089_0098_0086.Controls.Add(_0089_0098_0089);
+label21,_0089_009A_0093,declaration,60721,private Label _0089_009A_0093;
+label21,_0089_009A_0093,0x0600057F,63376,_0089_009A_0093 = new Label();
+label21,_0089_009A_0093,0x0600057F,65097,_0089_0098_0090.Controls.Add(_0089_009A_0093);
+label21,_0089_009A_0093,0x0600057F,65326,_0089_009A_0093.AutoSize = true;
+label21,_0089_009A_0093,0x0600057F,65334,"_0089_009A_0093.Location = new Point(21, 119);"
+label21,_0089_009A_0093,0x0600057F,65338,"_0089_009A_0093.Name = ""label21"" /* string-offset:2344 */;"
+label21,_0089_009A_0093,0x0600057F,65339,"_0089_009A_0093.Size = new Size(55, 15);"
+label21,_0089_009A_0093,0x0600057F,65343,_0089_009A_0093.TabIndex = 36;
+label21,_0089_009A_0093,0x0600057F,65344,"_0089_009A_0093.Text = ""MCG(%)"" /* string-offset:2768 */;"
+label22,_0089_009A_0094,declaration,60723,private Label _0089_009A_0094;
+label22,_0089_009A_0094,0x0600057F,63380,_0089_009A_0094 = new Label();
+label22,_0089_009A_0094,0x0600057F,65098,_0089_0098_0090.Controls.Add(_0089_009A_0094);
+label22,_0089_009A_0094,0x0600057F,65345,_0089_009A_0094.AutoSize = true;
+label22,_0089_009A_0094,0x0600057F,65346,"_0089_009A_0094.Location = new Point(20, 64);"
+label22,_0089_009A_0094,0x0600057F,65347,"_0089_009A_0094.Name = ""label22"" /* string-offset:2104 */;"
+label22,_0089_009A_0094,0x0600057F,65348,"_0089_009A_0094.Size = new Size(54, 15);"
+label22,_0089_009A_0094,0x0600057F,65349,_0089_009A_0094.TabIndex = 37;
+label22,_0089_009A_0094,0x0600057F,65352,"_0089_009A_0094.Text = ""GP(°)"" /* string-offset:2476 */;"
+comboBoxGP,_0089_009A_0095,declaration,60725,private ComboBox _0089_009A_0095;
+comboBoxGP,_0089_009A_0095,0x06000553,60781,_0089_009A_0095.SelectedIndex = 5;
+comboBoxGP,_0089_009A_0095,0x0600055E,61124,"double num = _008F_008A._008B_0087_009D(_0089_009A_0095.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);"
+comboBoxGP,_0089_009A_0095,0x06000561,61265,_0089_009A_0095.Text = array[1].Trim();
+comboBoxGP,_0089_009A_0095,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+comboBoxGP,_0089_009A_0095,0x06000567,61509,"double num6 = Math.Tan(_008F_008A._008B_0087_009D(_0089_009A_0095.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */) * Math.PI / 180.0);"
+comboBoxGP,_0089_009A_0095,0x06000570,61953,if (_0089_009A_0096.SelectedIndex == -1 || _0089_009A_008F.SelectedIndex == -1 || _0089_009A_0095.SelectedIndex == -1)
+comboBoxGP,_0089_009A_0095,0x06000570,61970,text = _0089_009A_0095.Text;
+comboBoxGP,_0089_009A_0095,0x0600057F,63384,_0089_009A_0095 = new ComboBox();
+comboBoxGP,_0089_009A_0095,0x0600057F,64396,_0089_0098_0090.Controls.Add(_0089_009A_0095);
+comboBoxGP,_0089_009A_0095,0x0600057F,65353,_0089_009A_0095.DropDownStyle = ComboBoxStyle.DropDownList;
+comboBoxGP,_0089_009A_0095,0x0600057F,65354,_0089_009A_0095.FormattingEnabled = true;
+comboBoxGP,_0089_009A_0095,0x0600057F,65358,_0089_009A_0095.Items.AddRange(new object[11]
+comboBoxGP,_0089_009A_0095,0x0600057F,65375,"_0089_009A_0095.Location = new Point(23, 86);"
+comboBoxGP,_0089_009A_0095,0x0600057F,65376,"_0089_009A_0095.Name = ""comboBoxGP"" /* string-offset:2400 */;"
+comboBoxGP,_0089_009A_0095,0x0600057F,65380,"_0089_009A_0095.Size = new Size(60, 22);"
+comboBoxGP,_0089_009A_0095,0x0600057F,65384,_0089_009A_0095.TabIndex = 31;
+comboBoxGP,_0089_009A_0095,0x0600057F,65385,_0089_009A_0095.SelectedIndexChanged += _0089_0096_009D;
+comboBoxAppType,_0089_009A_0096,declaration,60727,private ComboBox _0089_009A_0096;
+comboBoxAppType,_0089_009A_0096,0x06000553,60778,_0089_009A_0096.SelectedIndex = 0;
+comboBoxAppType,_0089_009A_0096,0x06000561,61404,_0089_009A_0096.Text = array[1].Trim();
+comboBoxAppType,_0089_009A_0096,0x06000565,61489,"return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(""AppType,"" /* string-offset:6432 */ + _0089_009A_0096.Text + ""\n"" /* string-offset:328 */, ""CAT,"" /* string-offset:6436 */, _0089_009A_008F.Text, ""\n"" /* string-offset:328 */), ""GP,"" /* string-offset:6440 */, _0089_009A_0095.Text, ""\n"" /* string-offset:328 */), ""FAF，"" /* string-offset:6444 */, _0089_009A_008A.Text, ""\n"" /* string-offset:328 */), ""ELEV，"" /* string-offset:6448 */, _0089_009A_008E.Text, ""\n"" /* string-offset:328 */), ""LIGHT,"" /* string-offset:6452 */, _0089_009A_008C.Text, ""\n"" /* string-offset:328 */), ""W,"" /* string-offset:6456 */, _0089_0096_0088(_0089_0099_008D, _0089_0099_0093, _0089_0099_0098), ""\n"" /* string-offset:328 */), ""WS,"" /* string-offset:6460 */, _0089_0096_0088(_0089_0099_0091, _0089_0099_0095, _0089_0099_009A), ""\n"" /* string-offset:328 */), ""X,"" /* string-offset:6464 */, _0089_0096_0088(_0089_0099_0099, _0089_0099_0097, _0089_0099_0096), ""\n"" /* string-offset:328 */), ""Y,"" /* string-offset:6468 */, _0089_0096_0088(_0089_0099_0092, _0089_0099_0090, _0089_0099_008E), ""\n"" /* string-offset:328 */), ""Z,"" /* string-offset:6472 */, _0089_0096_0088(_0089_0099_008A, _0089_0099_0089, _0089_0099_0088), ""\n"" /* string-offset:328 */);"
+comboBoxAppType,_0089_009A_0096,0x06000567,61574,"if (_0089_009A_0096.Text == ""CAT I"" /* string-offset:4236 */)"
+comboBoxAppType,_0089_009A_0096,0x06000567,61596,"if (_0089_009A_0096.Text == ""CAT I"" /* string-offset:4236 */)"
+comboBoxAppType,_0089_009A_0096,0x0600056C,61879,"if (_0089_009A_0096.Text == ""CAT II AUTO"" /* string-offset:4244 */)"
+comboBoxAppType,_0089_009A_0096,0x0600056C,61892,"_0089_009A_0086.Visible = _0089_009A_0096.Text == ""CAT I"" /* string-offset:4236 */;"
+comboBoxAppType,_0089_009A_0096,0x06000570,61953,if (_0089_009A_0096.SelectedIndex == -1 || _0089_009A_008F.SelectedIndex == -1 || _0089_009A_0095.SelectedIndex == -1)
+comboBoxAppType,_0089_009A_0096,0x06000570,61969,selectedIndex = (_008A_008F)_0089_009A_0096.SelectedIndex;
+comboBoxAppType,_0089_009A_0096,0x06000576,62355,if (_0089_009A_0096.SelectedIndex == 2)
+comboBoxAppType,_0089_009A_0096,0x0600057F,62994,_0089_009A_0096 = new ComboBox();
+comboBoxAppType,_0089_009A_0096,0x0600057F,63720,_0089_0098_0090.Controls.Add(_0089_009A_0096);
+comboBoxAppType,_0089_009A_0096,0x0600057F,65386,_0089_009A_0096.DropDownStyle = ComboBoxStyle.DropDownList;
+comboBoxAppType,_0089_009A_0096,0x0600057F,65389,_0089_009A_0096.Enabled = false;
+comboBoxAppType,_0089_009A_0096,0x0600057F,65390,_0089_009A_0096.FormattingEnabled = true;
+comboBoxAppType,_0089_009A_0096,0x0600057F,65391,_0089_009A_0096.Items.AddRange(new object[3]
+comboBoxAppType,_0089_009A_0096,0x0600057F,65397,"_0089_009A_0096.Location = new Point(23, 30);"
+comboBoxAppType,_0089_009A_0096,0x0600057F,65401,"_0089_009A_0096.Name = ""comboBoxAppType"" /* string-offset:4248 */;"
+comboBoxAppType,_0089_009A_0096,0x0600057F,65405,"_0089_009A_0096.Size = new Size(126, 22);"
+comboBoxAppType,_0089_009A_0096,0x0600057F,65406,_0089_009A_0096.TabIndex = 30;
+comboBoxAppType,_0089_009A_0096,0x0600057F,65407,_0089_009A_0096.SelectedIndexChanged += _0089_0096_009B;
+label23,_0089_009A_0097,declaration,60729,private Label _0089_009A_0097;
+label23,_0089_009A_0097,0x0600057F,63723,_0089_0098_0090.Controls.Add(_0089_009A_0097);
+label23,_0089_009A_0097,0x0600057F,65225,_0089_009A_0097 = new Label();
+label23,_0089_009A_0097,0x0600057F,65408,_0089_009A_0097.AutoSize = true;
+label23,_0089_009A_0097,0x0600057F,65409,"_0089_009A_0097.Location = new Point(21, 9);"
+label23,_0089_009A_0097,0x0600057F,65412,"_0089_009A_0097.Margin = new Padding(4, 0, 4, 0);"
+label23,_0089_009A_0097,0x0600057F,65413,"_0089_009A_0097.Name = ""label23"" /* string-offset:2112 */;"
+label23,_0089_009A_0097,0x0600057F,65414,"_0089_009A_0097.Size = new Size(67, 15);"
+label23,_0089_009A_0097,0x0600057F,65415,_0089_009A_0097.TabIndex = 29;
+label23,_0089_009A_0097,0x0600057F,65416,"_0089_009A_0097.Text = ""进近类型"" /* string-offset:4268 */;"
+button1,_0089_0099_009C,declaration,60689,private Button _0089_0099_009C;
+button1,_0089_0099_009C,0x0600057F,63724,_0089_0098_0090.Controls.Add(_0089_0099_009C);
+button1,_0089_0099_009C,0x0600057F,65226,_0089_0099_009C = new Button();
+button1,_0089_0099_009C,0x0600057F,65417,"_0089_0099_009C.Location = new Point(577, 124);"
+button1,_0089_0099_009C,0x0600057F,65418,"_0089_0099_009C.Name = ""button1"" /* string-offset:1692 */;"
+button1,_0089_0099_009C,0x0600057F,65419,"_0089_0099_009C.Size = new Size(75, 40);"
+button1,_0089_0099_009C,0x0600057F,65423,_0089_0099_009C.TabIndex = 24;
+button1,_0089_0099_009C,0x0600057F,65426,"_0089_0099_009C.Text = ""保存"" /* string-offset:5800 */;"
+button1,_0089_0099_009C,0x0600057F,65430,_0089_0099_009C.UseVisualStyleBackColor = true;
+button1,_0089_0099_009C,0x0600057F,65431,_0089_0099_009C.Click += _0089_0096_0089;
+button2,_0089_0099_009D,declaration,60691,private Button _0089_0099_009D;
+button2,_0089_0099_009D,0x0600057F,63857,_0089_0099_009D.Click += _0089_0096_0090;
+button2,_0089_0099_009D,0x0600057F,64331,_0089_0098_0090.Controls.Add(_0089_0099_009D);
+button2,_0089_0099_009D,0x0600057F,65227,_0089_0099_009D = new Button();
+button2,_0089_0099_009D,0x0600057F,65435,"_0089_0099_009D.Location = new Point(577, 76);"
+button2,_0089_0099_009D,0x0600057F,65439,"_0089_0099_009D.Name = ""button2"" /* string-offset:1816 */;"
+button2,_0089_0099_009D,0x0600057F,65442,"_0089_0099_009D.Size = new Size(75, 40);"
+button2,_0089_0099_009D,0x0600057F,65446,_0089_0099_009D.TabIndex = 23;
+button2,_0089_0099_009D,0x0600057F,65447,"_0089_0099_009D.Text = ""拾取"" /* string-offset:5804 */;"
+button2,_0089_0099_009D,0x0600057F,65450,_0089_0099_009D.UseVisualStyleBackColor = true;
+FormPbnIlsEvl,base,declaration,60766,base._002Ector();
+FormPbnIlsEvl,base,0x06000559,60976,base.Visible = false;
+FormPbnIlsEvl,base,0x06000559,60980,base.Visible = true;
+FormPbnIlsEvl,base,0x0600055A,60999,base.Visible = false;
+FormPbnIlsEvl,base,0x0600055A,61003,base.Visible = true;
+FormPbnIlsEvl,base,0x0600057E,62605,base.Dispose(P_0);
+FormPbnIlsEvl,base,0x0600057F,63960,base.Controls.Add(_0089_009A_0086);
+FormPbnIlsEvl,base,0x0600057F,63964,base.Controls.Add(_0089_0098_008E);
+FormPbnIlsEvl,base,0x0600057F,63968,base.Controls.Add(_0089_0097_0091);
+FormPbnIlsEvl,base,0x0600057F,63972,base.Controls.Add(_0089_0097_0096);
+FormPbnIlsEvl,base,0x0600057F,63973,base.Controls.Add(_0089_0097_0092);
+FormPbnIlsEvl,base,0x0600057F,63974,base.Controls.Add(_0089_0097_0093);
+FormPbnIlsEvl,base,0x0600057F,63975,base.Controls.Add(_0089_0097_0094);
+FormPbnIlsEvl,base,0x0600057F,63976,base.Controls.Add(_0089_0097_0095);
+FormPbnIlsEvl,base,0x0600057F,63977,base.Controls.Add(_0089_0097_008F);
+FormPbnIlsEvl,base,0x0600057F,64143,"base.AutoScaleDimensions = new SizeF(7f, 14f);"
+FormPbnIlsEvl,base,0x0600057F,64144,base.AutoScaleMode = AutoScaleMode.Font;
+FormPbnIlsEvl,base,0x0600057F,64145,"base.ClientSize = new Size(728, 565);"
+FormPbnIlsEvl,base,0x0600057F,64146,base.Controls.Add(_0089_009B_0087);
+FormPbnIlsEvl,base,0x0600057F,64590,base.Load += _0089_0095_0091;
+FormPbnIlsEvl,base,0x0600057F,65492,"base.Name = ""FormPbnIlsEvl"" /* string-offset:412 */;"
+FormPbnIlsEvl,base,0x0600057F,65496,base.FormClosed += _0089_0095_0092;
+button3,_0089_0097_0095,declaration,60575,private Button _0089_0097_0095;
+button3,_0089_0097_0095,0x0600057F,62642,_0089_0097_0095 = new Button();
+button3,_0089_0097_0095,0x0600057F,63976,base.Controls.Add(_0089_0097_0095);
+button3,_0089_0097_0095,0x0600057F,65508,"_0089_0097_0095.Location = new Point(16, 224);"
+button3,_0089_0097_0095,0x0600057F,65509,"_0089_0097_0095.Margin = new Padding(4, 3, 4, 3);"
+button3,_0089_0097_0095,0x0600057F,65510,"_0089_0097_0095.Name = ""button3"" /* string-offset:1936 */;"
+button3,_0089_0097_0095,0x0600057F,65511,"_0089_0097_0095.Size = new Size(99, 40);"
+button3,_0089_0097_0095,0x0600057F,65515,_0089_0097_0095.TabIndex = 0;
+button3,_0089_0097_0095,0x0600057F,65516,"_0089_0097_0095.Text = ""屏幕数据"" /* string-offset:2988 */;"
+button3,_0089_0097_0095,0x0600057F,65520,_0089_0097_0095.UseVisualStyleBackColor = true;
+button3,_0089_0097_0095,0x0600057F,65521,_0089_0097_0095.Click += _0089_0095_0093;
+buttonEvl,_0089_0097_0096,declaration,60577,private Button _0089_0097_0096;
+buttonEvl,_0089_0097_0096,0x0600057F,62643,_0089_0097_0096 = new Button();
+buttonEvl,_0089_0097_0096,0x0600057F,63972,base.Controls.Add(_0089_0097_0096);
+buttonEvl,_0089_0097_0096,0x0600057F,65522,"_0089_0097_0096.Location = new Point(546, 224);"
+buttonEvl,_0089_0097_0096,0x0600057F,65523,"_0089_0097_0096.Margin = new Padding(4, 3, 4, 3);"
+buttonEvl,_0089_0097_0096,0x0600057F,65527,"_0089_0097_0096.Name = ""buttonEvl"" /* string-offset:3260 */;"
+buttonEvl,_0089_0097_0096,0x0600057F,65528,"_0089_0097_0096.Size = new Size(110, 40);"
+buttonEvl,_0089_0097_0096,0x0600057F,65529,_0089_0097_0096.TabIndex = 4;
+buttonEvl,_0089_0097_0096,0x0600057F,65530,"_0089_0097_0096.Text = ""一键评估"" /* string-offset:2980 */;"
+buttonEvl,_0089_0097_0096,0x0600057F,65534,_0089_0097_0096.UseVisualStyleBackColor = true;
+buttonEvl,_0089_0097_0096,0x0600057F,65538,_0089_0097_0096.Visible = false;
+buttonEvl,_0089_0097_0096,0x0600057F,65542,_0089_0097_0096.Click += _0089_0096_008B;
+groupBox3,_0089_009A_0088,declaration,60699,private GroupBox _0089_009A_0088;
+groupBox3,_0089_009A_0088,0x0600057F,62693,_0089_009A_0088.SuspendLayout();
+groupBox3,_0089_009A_0088,0x0600057F,62771,_0089_009A_0088 = new GroupBox();
+groupBox3,_0089_009A_0088,0x0600057F,63013,_0089_0098_008F.Controls.Add(_0089_009A_0088);
+groupBox3,_0089_009A_0088,0x0600057F,63368,_0089_009A_0088.Controls.Add(_0089_009A_0089);
+groupBox3,_0089_009A_0088,0x0600057F,63998,_0089_009A_0088.Controls.Add(_0089_009A_008E);
+groupBox3,_0089_009A_0088,0x0600057F,64190,_0089_009A_0088.Controls.Add(_0089_009A_008B);
+groupBox3,_0089_009A_0088,0x0600057F,64191,_0089_009A_0088.Controls.Add(_0089_009B_0088);
+groupBox3,_0089_009A_0088,0x0600057F,64192,_0089_009A_0088.Controls.Add(_0089_009B_0089);
+groupBox3,_0089_009A_0088,0x0600057F,64193,_0089_009A_0088.Controls.Add(_0089_009A_008C);
+groupBox3,_0089_009A_0088,0x0600057F,64194,_0089_009A_0088.Controls.Add(_0089_009A_008D);
+groupBox3,_0089_009A_0088,0x0600057F,64327,_0089_009A_0088.Controls.Add(_0089_009A_008A);
+groupBox3,_0089_009A_0088,0x0600057F,64431,_0089_009A_0088.TabStop = false;
+groupBox3,_0089_009A_0088,0x0600057F,64432,"_0089_009A_0088.Text = ""附加参数"" /* string-offset:6492 */;"
+groupBox3,_0089_009A_0088,0x0600057F,64611,_0089_009A_0088.ResumeLayout(performLayout: false);
+groupBox3,_0089_009A_0088,0x0600057F,64612,_0089_009A_0088.PerformLayout();
+groupBox3,_0089_009A_0088,0x0600057F,64728,"_0089_009A_0088.Size = new Size(200, 157);"
+groupBox3,_0089_009A_0088,0x0600057F,64817,_0089_009A_0088.TabIndex = 65;
+groupBox3,_0089_009A_0088,0x0600057F,65574,"_0089_009A_0088.Location = new Point(467, 13);"
+groupBox3,_0089_009A_0088,0x0600057F,65575,"_0089_009A_0088.Name = ""groupBox3"" /* string-offset:1708 */;"

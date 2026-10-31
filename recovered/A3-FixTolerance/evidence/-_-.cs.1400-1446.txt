@@ -1,0 +1,47 @@
+1400: 			//IL_0082: Unknown result type (might be due to invalid IL or missing references)
+1401: 			if (!true /* original-file-bool-offset:40 */)
+1402: 			{
+1403: 				return;
+1404: 			}
+1405: 			DocumentLock val = Application.DocumentManager.MdiActiveDocument.LockDocument();
+1406: 			try
+1407: 			{
+1408: 				Transaction val2 = P_0.TransactionManager.StartTransaction();
+1409: 				try
+1410: 				{
+1411: 					Group val3 = new Group();
+1412: 					foreach (List<_008F_008E> item in P_1)
+1413: 					{
+1414: 						Polyline val4 = new Polyline();
+1415: 						_0087_0088._008C_008E(val4, item._008C_008B());
+1416: 						ObjectId val5 = _0088_008D((Entity)val4, P_0, P_2);
+1417: 						val3.Append(val5);
+1418: 					}
+1419: 					P_0.AddDBObject((DBObject)(object)val3);
+1420: 					val2.AddNewlyCreatedDBObject((DBObject)(object)val3, true);
+1421: 					val2.Commit();
+1422: 					Application.UpdateScreen();
+1423: 				}
+1424: 				finally
+1425: 				{
+1426: 					((IDisposable)val2)?.Dispose();
+1427: 				}
+1428: 			}
+1429: 			finally
+1430: 			{
+1431: 				((IDisposable)val)?.Dispose();
+1432: 			}
+1433: 		}
+1434: 
+1435: 		public static void _0088_008A(Database P_0, List<_008F_008E> P_1, string P_2 = "")
+1436: 		{
+1437: 			//IL_0017: Unknown result type (might be due to invalid IL or missing references)
+1438: 			//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+1439: 			//IL_0028: Expected O, but got Unknown
+1440: 			//IL_002f: Expected O, but got Unknown
+1441: 			//IL_002a: Unknown result type (might be due to invalid IL or missing references)
+1442: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+1443: 			Editor editor = mdiActiveDocument.Editor;
+1444: 			DocumentLock val = mdiActiveDocument.LockDocument();
+1445: 			try
+1446: 			{

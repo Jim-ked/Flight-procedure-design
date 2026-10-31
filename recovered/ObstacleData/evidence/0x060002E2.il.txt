@@ -1,0 +1,72 @@
+METHOD 060002E2 \x89\x89.\x89\x88::\x87\x8e\x91 RVA=31468 file=2F668
+IL_0000: ldc.i4.0 
+IL_0001: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_0006: brfalse 242
+IL_000B: pop 
+IL_000C: ldc.i4 444
+IL_0011: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0016: brtrue 243
+IL_001B: ldarg.0 
+IL_001C: ldfld 0x040001D4 \x89\x89.\x89\x88::\x87\x90\x88
+IL_0021: callvirt 0x0A0002CA System.Windows.Forms.DataGridView::get_SelectedRows
+IL_0026: callvirt 0x0A00014B System.Windows.Forms.BaseCollection::GetEnumerator
+IL_002B: stloc.0 
+IL_002C: nop 
+IL_002D: br 209
+IL_0032: ldloc.0 
+IL_0033: callvirt 0x0A0000E4 System.Collections.IEnumerator::get_Current
+IL_0038: castclass 0x01000114 System.Windows.Forms.DataGridViewRow
+IL_003D: stloc.1 
+IL_003E: ldc.i4.0 
+IL_003F: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_0044: brfalse.s 140
+IL_0046: pop 
+IL_0047: ldarg.0 
+IL_0048: ldfld 0x040001B6 \x89\x89.\x89\x88::\x87\x8e\x9c
+IL_004D: ldarg.0 
+IL_004E: ldfld 0x040001D4 \x89\x89.\x89\x88::\x87\x90\x88
+IL_0053: callvirt 0x0A00016F System.Windows.Forms.DataGridView::get_Rows
+IL_0058: ldloc.1 
+IL_0059: callvirt 0x0A0002CB System.Windows.Forms.DataGridViewBand::get_Index
+IL_005E: callvirt 0x0A0002C7 System.Windows.Forms.DataGridViewRowCollection::get_Item
+IL_0063: callvirt 0x0A000173 System.Windows.Forms.DataGridViewRow::get_Cells
+IL_0068: ldc.i4.0 
+IL_0069: callvirt 0x0A0002C8 System.Windows.Forms.DataGridViewCellCollection::get_Item
+IL_006E: callvirt 0x0A000175 System.Windows.Forms.DataGridViewCell::get_Value
+IL_0073: callvirt 0x0A000086 System.Object::ToString
+IL_0078: callvirt 0x0A0002C9 0x1B00000C::get_Item
+IL_007D: stloc.2 
+IL_007E: br.s 141
+IL_0080: pop 
+IL_0081: ldc.i4 3604
+IL_0086: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_008B: ldloc.2 
+IL_008C: callvirt 0x0A000113 Autodesk.AutoCAD.DatabaseServices.DBPoint::get_Position
+IL_0091: ldc.r8 1.0
+IL_009A: call 0x0600009C \x8c.\x8b::\x89\x87
+IL_009F: ldc.i4 536
+IL_00A4: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00A9: ldloc.2 
+IL_00AA: callvirt 0x0A000113 Autodesk.AutoCAD.DatabaseServices.DBPoint::get_Position
+IL_00AF: stloc.3 
+IL_00B0: ldloca.s local(0x0003)
+IL_00B2: call 0x0A000077 Autodesk.AutoCAD.Geometry.Point3d::get_Z
+IL_00B7: stloc.s local(0x0004)
+IL_00B9: ldloca.s local(0x0004)
+IL_00BB: call 0x0A0001B7 System.Double::ToString
+IL_00C0: call 0x0600009E \x8c.\x8b::\x89\x89
+IL_00C5: ldloc.0 
+IL_00C6: callvirt 0x0A0000E6 System.Collections.IEnumerator::MoveNext
+IL_00CB: brtrue 62
+IL_00D0: leave.s 243
+IL_00D2: ldloc.0 
+IL_00D3: isinst 0x010000DB System.IDisposable
+IL_00D8: stloc.s local(0x0005)
+IL_00DA: ldloc.s local(0x0005)
+IL_00DC: brfalse.s 241
+IL_00DE: ldloc.s local(0x0005)
+IL_00E0: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00E5: endfinally 
+IL_00E6: pop 
+IL_00E7: ret 
+

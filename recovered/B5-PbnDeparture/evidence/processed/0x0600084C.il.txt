@@ -1,0 +1,14 @@
+METHOD 0600084C \x8f\x97.\x8f\x96::\x8b\x8b\x97 RVA=64A5 file=46A5
+IL_0000: ldarg.0 
+IL_0001: call 0x06000845 \x8f\x97.\x8f\x96::\x8b\x8b\x99
+IL_0006: ldarga.s argument(0x0001)
+IL_0008: call 0x06000845 \x8f\x97.\x8f\x96::\x8b\x8b\x99
+IL_000D: mul 
+IL_000E: ldarg.0 
+IL_000F: call 0x06000847 \x8f\x97.\x8f\x96::\x8b\x8b\x9b
+IL_0014: ldarga.s argument(0x0001)
+IL_0016: call 0x06000847 \x8f\x97.\x8f\x96::\x8b\x8b\x9b
+IL_001B: mul 
+IL_001C: add 
+IL_001D: ret 
+

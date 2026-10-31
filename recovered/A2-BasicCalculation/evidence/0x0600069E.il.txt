@@ -1,0 +1,38 @@
+METHOD 0600069E \x8d\x91.\x8d\x90::\x8a\x96\x9e RVA=88F88 file=87188
+IL_0000: newobj 0x06000656 \x8d\x8d.\x8d\x8c::.ctor
+IL_0005: dup 
+IL_0006: ldc.i4.7 
+IL_0007: callvirt 0x0600063B \x8d\x8d.\x8d\x8c::\x8a\x90\x97
+IL_000C: dup 
+IL_000D: ldarg.0 
+IL_000E: callvirt 0x0600063E \x8d\x8d.\x8d\x8c::\x8a\x90\x9c
+IL_0013: dup 
+IL_0014: ldarg.1 
+IL_0015: callvirt 0x06000640 \x8d\x8d.\x8d\x8c::\x8a\x91\x86
+IL_001A: dup 
+IL_001B: ldc.r8 0.0
+IL_0024: callvirt 0x06000642 \x8d\x8d.\x8d\x8c::\x8a\x91\x89
+IL_0029: dup 
+IL_002A: ldarg.2 
+IL_002B: callvirt 0x06000644 \x8d\x8d.\x8d\x8c::\x8a\x91\x8c
+IL_0030: dup 
+IL_0031: ldc.r8 10000.0
+IL_003A: callvirt 0x06000646 \x8d\x8d.\x8d\x8c::\x8a\x91\x8f
+IL_003F: dup 
+IL_0040: ldc.i4 6816
+IL_0045: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_004A: ldarg.3 
+IL_004B: box 0x010000D2 System.Double
+IL_0050: call 0x0A0001A4 System.String::Format
+IL_0055: callvirt 0x06000648 \x8d\x8d.\x8d\x8c::\x8a\x91\x92
+IL_005A: dup 
+IL_005B: newobj 0x06000695 \x8d\x8f.\x8d\x8e::.ctor
+IL_0060: dup 
+IL_0061: ldarg.3 
+IL_0062: callvirt 0x06000692 \x8d\x8f.\x8d\x8e::\x8a\x95\x90
+IL_0067: dup 
+IL_0068: ldarg.s argument(0x0004)
+IL_006A: callvirt 0x06000694 \x8d\x8f.\x8d\x8e::\x8a\x95\x93
+IL_006F: callvirt 0x0600064A \x8d\x8d.\x8d\x8c::\x8a\x91\x95
+IL_0074: ret 
+

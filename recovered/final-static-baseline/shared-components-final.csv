@@ -1,0 +1,17 @@
+﻿Component,Classification,Consumers,Role,Boundary,Evidence
+P793 / P854,SAME_METHODDEF,A1/A2/A6/A7/B1/B2/B3/B5,turn输入与派生TAS/Rate/Radius/WindRadius/Drift,各调用者只消费部分字段；B3为TAS，A7不消费spiral半径；B4核心不调用,recovered/shared-turn-methods.md;recovered/A7-Departure/final-static-closure.md;recovered/B4-PbnIls/pbn-turn.md
+Spiral86,SAME_METHODDEF,A1/B1/B2/A6部分/B5,点/采样/半径与候选迭代,A6 XE/YE/45/80使用；非全部模板；不是全程序模型,recovered/A6-Template/shared-geometry.md;recovered/round13/shared-final.csv
+Spiral88,SAME_METHODDEF,A6 Holding/Base,普通Holding/Base spiral与P7BE/P7C2,与Spiral86不同MethodDef，不能统一替代,recovered/A6-Template/shared-geometry.md
+point-to-spiral P7AD / P7BE; angle P7AF / P7C2,SAME_METHODDEF,A1/B1/B2/B5及A6相应成员,点到spiral迭代；A6两spiral角度成员,A6业务P7AD直接caller=0；不等于通用稳健公切线solver,recovered/A6-Template/shared-geometry.md;recovered/A1-WindSpiral/final-static-closure.md
+P0AC/P0AD runway frame,SAME_METHODDEF,A7/B3/B4/B5,跑道数值局部坐标变换,不是WsEntityFrame；A8 KK框架和A9自己的数值输入需分列,recovered/A7-Departure/runway-coordinate.md;recovered/B3-RnpApch/runway-frame.md;recovered/B4-PbnIls/runway-frame.md
+point / line primitives,SAME_METHODDEF,多数几何模块,距离、角度、无限直线交点/侧方判断,共享原语不能推出共享业务构造器,recovered/GeometryPrimitives/shared-geometry-map.md;recovered/A4-NavAidProtection/boundary-geometry.md
+P086 / P087 / P089 CAD writer,SAME_METHODDEF,A3/A4/A5/A6/B1/B2/B3/B4/B5等,P086单Polyline；P087列表+Group；P089追加ModelSpace及可选WsObject,旧Round3 token表错配按Round4补证；Group不自动有metadata,recovered/A6-Template/cad-output-map.md;recovered/A5-PrecisionApproach/cad-output-map.md
+SelectAll DBPoint P10D,SAME_METHODDEF,A7/A8/A9/A10/B3/B4/B5,DXF POINT + Model筛选,不是用户逐个选择障碍物；B4/B5在之后Take5,recovered/ObstacleData/WsEntityFrame-schema.md;recovered/B4-PbnIls/obstacle-evaluation.md
+Obstacle parser P12F,SAME_METHODDEF,障碍物公共链,XYZ原点；caller ordinal ID；可选名称解析/回退,无树高相加、无从MText读名,recovered/ObstacleData/WsEntityFrame-schema.md
+Mark,SAME_METHODDEF,A7/A8/A9/A10/B3/B4/B5,row ID→原DBPoint→块/Altitude属性,A10块名Obst；A8多Name；不以OCA代替Z,recovered/ObstacleData/marker.md;recovered/A9-PriSec/final-static-closure.md
+Highlight,SAME_METHODDEF,障碍物表窗口,ID映射原点/视图helper,B4/B5字典前5点限制同样影响高亮,recovered/B4-PbnIls/obstacle-evaluation.md;recovered/ObstacleData/screen-data.md
+WsObject,SAME_METHODDEF,A1 helper/A5/A6/A7/B1/B2/B3/B4等,可选字符串XData载荷,B5主writer传空跳过；不同调用者payload不同；无全局区语义schema,recovered/GeometryPrimitives/WsObjectCad.Recovered.cs;recovered/B4-PbnIls/xdata-schema.md;recovered/B5-PbnDeparture/xdata-schema.md
+WsCalcuLine,SAME_METHODDEF,A2写；孤立reader/wrapper,Kind+JSON计算线快照,无已索引A7等业务消费者,recovered/A2-BasicCalculation/WsCalcuLine-schema.md;recovered/A2-BasicCalculation/final-static-closure.md
+WsEntityFrame,SAME_METHODDEF,属性工具/障碍物可选名称解析,EntityType/Name/Properties通用实体属性,非跑道frame；RandomPoint不自动写该记录,recovered/ObstacleData/WsEntityFrame-schema.md
+OasModel / Plane,SAME_METHODDEF,A5/B4；相关APV数值面底层,共享OAS系数与面/域/交点,loader/模式封装/最低标准不可据此合并,recovered/A5-PrecisionApproach/class-map.md;recovered/B4-PbnIls/oas-parameter-model.md
+config / state serializer P0FB/P0FC/P0FD等,SAME_METHODDEF,多数窗体,按dotted路径保存控件Text/Index/bool等状态,XML config与.rnp文本、OAS参数文件协议分别记录,recovered/B3-RnpApch/persistence.md;recovered/A5-PrecisionApproach/persistence.md

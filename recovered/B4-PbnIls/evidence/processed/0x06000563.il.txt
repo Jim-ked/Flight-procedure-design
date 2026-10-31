@@ -1,0 +1,31 @@
+METHOD 06000563 \x8b\x97.\x8b\x96::\x89\x96\x88 RVA=71AD8 file=6FCD8
+IL_0000: ldc.i4.5 
+IL_0001: newarr 0x010000B8 System.String
+IL_0006: dup 
+IL_0007: ldc.i4.0 
+IL_0008: ldarg.1 
+IL_0009: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_000E: stelem.ref 
+IL_000F: dup 
+IL_0010: ldc.i4.1 
+IL_0011: ldc.i4 704
+IL_0016: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_001B: stelem.ref 
+IL_001C: dup 
+IL_001D: ldc.i4.2 
+IL_001E: ldarg.2 
+IL_001F: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0024: stelem.ref 
+IL_0025: dup 
+IL_0026: ldc.i4.3 
+IL_0027: ldc.i4 704
+IL_002C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0031: stelem.ref 
+IL_0032: dup 
+IL_0033: ldc.i4.4 
+IL_0034: ldarg.3 
+IL_0035: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_003A: stelem.ref 
+IL_003B: call 0x0A00008F System.String::Concat
+IL_0040: ret 
+

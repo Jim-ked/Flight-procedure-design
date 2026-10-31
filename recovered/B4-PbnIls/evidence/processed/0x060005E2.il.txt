@@ -1,0 +1,24 @@
+METHOD 060005E2 \x8c\x96.\x8c\x95::\x8a\x8a\x8c RVA=85580 file=83780
+IL_0000: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0005: dup 
+IL_0006: ldarg.0 
+IL_0007: ldfld 0x040006AD \x8c\x96.\x8c\x95::\x8a\x8b\x88
+IL_000C: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0011: dup 
+IL_0012: ldarg.0 
+IL_0013: ldfld 0x040006AC \x8c\x96.\x8c\x95::\x8a\x8b\x87
+IL_0018: callvirt 0x0A00012A 0x1B00000F::Add
+IL_001D: dup 
+IL_001E: ldarg.0 
+IL_001F: ldfld 0x040006A8 \x8c\x96.\x8c\x95::\x8a\x8a\x9c
+IL_0024: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0029: dup 
+IL_002A: ldarg.0 
+IL_002B: ldfld 0x040006AA \x8c\x96.\x8c\x95::\x8a\x8a\x9e
+IL_0030: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0035: dup 
+IL_0036: ldarg.0 
+IL_0037: ldfld 0x040006AD \x8c\x96.\x8c\x95::\x8a\x8b\x88
+IL_003C: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0041: ret 
+

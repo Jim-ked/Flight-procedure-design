@@ -1,0 +1,74 @@
+METHOD 06000712 \x8e\x8e.\x8e\x8d::\x8a\x99\x92 RVA=8B3B4 file=895B4
+IL_0000: ldc.i4 1324
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse.s 41
+IL_000C: ldc.i4.1 
+IL_000D: call 0x06000723 \x8e\x8e.\x8e\x8d::\x894
+IL_0012: brtrue.s 38
+IL_0014: pop 
+IL_0015: br 166
+IL_001A: pop 
+IL_001B: br.s 48
+IL_001D: ldarg.0 
+IL_001E: call 0x06000710 \x8e\x8e.\x8e\x8d::\x8a\x99\x90
+IL_0023: stloc.0 
+IL_0024: newobj 0x0A0000A6 Autodesk.AutoCAD.DatabaseServices.ResultBuffer::.ctor
+IL_0029: dup 
+IL_002A: ldc.i4 1001
+IL_002F: ldc.i4 940
+IL_0034: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0039: newobj 0x0A0000AC Autodesk.AutoCAD.DatabaseServices.TypedValue::.ctor
+IL_003E: callvirt 0x0A0000AD Autodesk.AutoCAD.DatabaseServices.ResultBuffer::Add
+IL_0043: dup 
+IL_0044: ldc.i4 1000
+IL_0049: ldarg.0 
+IL_004A: call 0x06000709 \x8e\x8e.\x8e\x8d::\x8a\x9a\x89
+IL_004F: stloc.s local(0x0004)
+IL_0051: ldloca.s local(0x0004)
+IL_0053: call 0x0A0001C4 System.Int32::ToString
+IL_0058: newobj 0x0A0000AC Autodesk.AutoCAD.DatabaseServices.TypedValue::.ctor
+IL_005D: callvirt 0x0A0000AD Autodesk.AutoCAD.DatabaseServices.ResultBuffer::Add
+IL_0062: dup 
+IL_0063: ldc.i4 1000
+IL_0068: ldarg.0 
+IL_0069: call 0x06000707 \x8e\x8e.\x8e\x8d::\x8a\x9a\x87
+IL_006E: dup 
+IL_006F: brfalse.s 212
+IL_0071: newobj 0x0A0000AC Autodesk.AutoCAD.DatabaseServices.TypedValue::.ctor
+IL_0076: callvirt 0x0A0000AD Autodesk.AutoCAD.DatabaseServices.ResultBuffer::Add
+IL_007B: stloc.3 
+IL_007C: ldc.i4.0 
+IL_007D: stloc.1 
+IL_007E: br.s 201
+IL_0080: ldloc.0 
+IL_0081: ldloc.1 
+IL_0082: ldc.i4 250
+IL_0087: ldloc.0 
+IL_0088: callvirt 0x0A00008C System.String::get_Length
+IL_008D: ldloc.1 
+IL_008E: sub 
+IL_008F: call 0x0A0003C9 System.Math::Min
+IL_0094: callvirt 0x0A000093 System.String::Substring
+IL_0099: stloc.2 
+IL_009A: ldloc.3 
+IL_009B: ldc.i4 1000
+IL_00A0: ldloc.2 
+IL_00A1: newobj 0x0A0000AC Autodesk.AutoCAD.DatabaseServices.TypedValue::.ctor
+IL_00A6: callvirt 0x0A0000AD Autodesk.AutoCAD.DatabaseServices.ResultBuffer::Add
+IL_00AB: call 0x06000723 \x8e\x8e.\x8e\x8d::\x894
+IL_00B0: brtrue 48
+IL_00B5: ldloc.1 
+IL_00B6: ldc.i4 250
+IL_00BB: add 
+IL_00BC: stloc.1 
+IL_00BD: ldloc.1 
+IL_00BE: ldloc.0 
+IL_00BF: callvirt 0x0A00008C System.String::get_Length
+IL_00C4: blt.s 140
+IL_00C6: br.s 220
+IL_00C8: pop 
+IL_00C9: ldstr ''
+IL_00CE: br.s 125
+IL_00D0: ldloc.3 
+IL_00D1: ret 
+

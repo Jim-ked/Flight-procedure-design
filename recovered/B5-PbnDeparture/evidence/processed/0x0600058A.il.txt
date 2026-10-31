@@ -1,0 +1,9 @@
+METHOD 0600058A \x8b\x99.\x8b\x98::.cctor RVA=5023 file=3223
+IL_0000: nop 
+IL_0001: ldtoken 0x0200005E \x8b\x99.\x8b\x98
+IL_0006: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_000B: call 0x0A000032 System.ComponentModel.LicenseManager::Validate
+IL_0010: ldc.r8 0.2617993877991494
+IL_0019: stsfld 0x04000602 \x8b\x99.\x8b\x98::\x89\x9b\x90
+IL_001E: ret 
+

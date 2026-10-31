@@ -1,0 +1,41 @@
+METHOD 060005D0 \x8c\x92.\x8c\x91::.cctor RVA=AF5E8 file=AD7E8
+IL_0000: call 0x0600088E \x90\x9c.\x90\x9b::\x8b\x90\x88
+IL_0005: ldc.i4.0 
+IL_0006: call 0x060005D1 \x8c\x92.\x8c\x91::\x88j
+IL_000B: brfalse 184
+IL_0010: pop 
+IL_0011: ldc.i4 3
+IL_0016: stloc local(0x0000)
+IL_001A: ldc.i4.1 
+IL_001B: brtrue 146
+IL_0020: ldc.r8 1.5707963267948966
+IL_0029: stsfld 0x04000672 \x8c\x92.\x8c\x91::\x8a\x88\x87
+IL_002E: ldc.i4 5
+IL_0033: stloc local(0x0000)
+IL_0037: ldc.i4.1 
+IL_0038: brtrue 146
+IL_003D: ldc.i4 33554535
+IL_0042: call 0x060008B8 \x91\x8a.\x91\x89::e53w34m968awCm9P85taUZe
+IL_0047: call 0x0A000019 System.Type::GetTypeFromHandle
+IL_004C: call 0x0A00001A System.ComponentModel.LicenseManager::Validate
+IL_0051: ldc.i4 4
+IL_0056: stloc local(0x0000)
+IL_005A: call 0x060005D2 \x8c\x92.\x8c\x91::\x88k
+IL_005F: brtrue 117
+IL_0064: br 146
+IL_0069: nop 
+IL_006A: ldc.r8 0.2617993877991494
+IL_0073: stsfld 0x04000671 \x8c\x92.\x8c\x91::\x8a\x88\x86
+IL_0078: br 179
+IL_007D: ldc.i4 3
+IL_0082: stloc local(0x0000)
+IL_0086: ldloc local(0x0000)
+IL_008A: switch [73, 44, 179, 73, 117, 204]
+IL_00A7: br 44
+IL_00AC: pop 
+IL_00AD: ldc.i4 1
+IL_00B2: stloc local(0x0000)
+IL_00B6: call 0x060005D2 \x8c\x92.\x8c\x91::\x88k
+IL_00BB: brfalse 146
+IL_00C0: ret 
+

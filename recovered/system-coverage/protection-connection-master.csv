@@ -1,0 +1,15 @@
+﻿Module,FromArea,ToArea,ConnectionMethod,Automatic,ManualInput,MethodDef,Evidence
+A1,spiral lists,output/evaluator,Polyline list concatenation,YES,No,module-specific/shared primitives,A1 overview.md
+A3,facility→KK,output/evaluator,point/line construction,YES,No,module-specific/shared primitives,A3 geometry-chain.md
+A4,outer/inner→15deg,output/evaluator,line intersection,YES,No,module-specific/shared primitives,A4 15-degree-line.md
+A5,OAS→PA boundary,output/evaluator,plane/line intersections,YES,No,module-specific/shared primitives,A5 oas-surfaces.md
+A6,template→envelope,output/evaluator,Polyline/list envelope,YES,No,module-specific/shared primitives,A6 envelope.md
+A7,runway→departure,output/evaluator,local frame construction,YES,No,module-specific/shared primitives,A7 geometry-altitude-turn.md
+A8,KK→obstacle area,output/evaluator,local classifier,YES,No,module-specific/shared primitives,A8 kk-frame.md
+A9,input→MOC,output/evaluator,PriSec evaluator,YES,No,module-specific/shared primitives,ObstacleData/pri-sec-evaluation.md
+A10,O/IF/IAF→arcs,output/evaluator,Arc/Polyline,YES,No,module-specific/shared primitives,A10 geometry.md
+B1,earliest/latest,output/evaluator,candidate lists,YES,No,module-specific/shared primitives,B1 geometry.md
+B2,DF candidates,output/evaluator,spiral/line selection,YES,No,module-specific/shared primitives,B2 geometry.md
+B3,LNAV/APV,output/evaluator,Polyline/surfaces,YES,No,module-specific/shared primitives,B3 overview.md
+B4,OAS→transition,output/evaluator,shared vertex/Polyline,YES,No,module-specific/shared primitives,B4 oas-pbn-connection.md
+B5,departure→post area,output/evaluator,Polyline/frame,YES,No,module-specific/shared primitives,B5 protection-connections.md

@@ -1,0 +1,3685 @@
+18951: 	public class _0089_0088 : Form
+18952: 	{
+18953: 		[Serializable]
+18954: 		[LicenseProvider(typeof(_0091_008B))]
+18955: 		[CompilerGenerated]
+18956: 		private sealed class _0090_008E
+18957: 		{
+18958: 			public static readonly _0090_008E _003C_003E9;
+18959: 
+18960: 			public static Func<_008A_008B, double> _003C_003E9__16_0;
+18961: 
+18962: 			static _0090_008E()
+18963: 			{
+18964: 				LicenseManager.Validate(typeof(_0090_008E));
+18965: 				_003C_003E9 = new _0090_008E();
+18966: 			}
+18967: 
+18968: 			internal double _008B_008E_008C(_008A_008B o)
+18969: 			{
+18970: 				return o._0088_008F_009E;
+18971: 			}
+18972: 
+18973: 			internal static bool _008A7()
+18974: 			{
+18975: 				return true;
+18976: 			}
+18977: 
+18978: 			internal static bool _008A8()
+18979: 			{
+18980: 				return false;
+18981: 			}
+18982: 		}
+18983: 
+18984: 		private List<DBPoint> _0087_008E_009B;
+18985: 
+18986: 		private Dictionary<string, DBPoint> _0087_008E_009C;
+18987: 
+18988: 		private IContainer _0087_008E_009D;
+18989: 
+18990: 		private Button _0087_008E_009E;
+18991: 
+18992: 		private Button _0087_008F_0086;
+18993: 
+18994: 		private Button _0087_008F_0087;
+18995: 
+18996: 		private StatusStrip _0087_008F_0088;
+18997: 
+18998: 		private ToolStripStatusLabel _0087_008F_0089;
+18999: 
+19000: 		private ToolTip _0087_008F_008A;
+19001: 
+19002: 		private GroupBox _0087_008F_008B;
+19003: 
+19004: 		private TextBox _0087_008F_008C;
+19005: 
+19006: 		private TextBox _0087_008F_008D;
+19007: 
+19008: 		private Button _0087_008F_008E;
+19009: 
+19010: 		private Label _0087_008F_008F;
+19011: 
+19012: 		private Label _0087_008F_0090;
+19013: 
+19014: 		private Label _0087_008F_0091;
+19015: 
+19016: 		private Label _0087_008F_0092;
+19017: 
+19018: 		private TextBox _0087_008F_0093;
+19019: 
+19020: 		private TextBox _0087_008F_0094;
+19021: 
+19022: 		private Button _0087_008F_0095;
+19023: 
+19024: 		private GroupBox _0087_008F_0096;
+19025: 
+19026: 		private Label _0087_008F_0097;
+19027: 
+19028: 		private Label _0087_008F_0098;
+19029: 
+19030: 		private Button _0087_008F_0099;
+19031: 
+19032: 		private TextBox _0087_008F_009A;
+19033: 
+19034: 		private TextBox _0087_008F_009B;
+19035: 
+19036: 		private GroupBox _0087_008F_009C;
+19037: 
+19038: 		private ToolStripStatusLabel _0087_008F_009D;
+19039: 
+19040: 		private TextBox _0087_008F_009E;
+19041: 
+19042: 		private Label _0087_0090_0086;
+19043: 
+19044: 		private Button _0087_0090_0087;
+19045: 
+19046: 		private DataGridView _0087_0090_0088;
+19047: 
+19048: 		private CheckBox _0087_0090_0089;
+19049: 
+19050: 		private TextBox _0087_0090_008A;
+19051: 
+19052: 		private Label _0087_0090_008B;
+19053: 
+19054: 		public _0089_0088()
+19055: 		{
+19056: 			_ = 0;
+19057: 			if (_0087_009B())
+19058: 			{
+19059: 				base._002Ector();
+19060: 			}
+19061: 			else if (!_0087_009C())
+19062: 			{
+19063: 			}
+19064: 			_0087_008E_009A();
+19065: 			_0087_008D_0099(_0087_0090_0088);
+19066: 		}
+19067: 
+19068: 		private static void _0087_008D_0099(DataGridView P_0)
+19069: 		{
+19070: 			typeof(Control).InvokeMember("DoubleBuffered" /* string-offset:2716 */, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.SetProperty, null, P_0, new object[1] { true });
+19071: 		}
+19072: 
+19073: 		[DllImport("user32.dll", EntryPoint = "SetFocus")]
+19074: 		public static extern int _0087_008D_009A(IntPtr P_0);
+19075: 
+19076: 		private void _0087_008D_009B(object P_0, EventArgs P_1)
+19077: 		{
+19078: 			_0097._008A_0093(this, "config.xml" /* string-offset:676 */, "FormDmeEvl" /* string-offset:396 */);
+19079: 		}
+19080: 
+19081: 		private void _0087_008D_009C(object P_0, FormClosedEventArgs P_1)
+19082: 		{
+19083: 			_ = 0;
+19084: 			if (_0087_009B())
+19085: 			{
+19086: 				_0097._008A_0091(this, "config.xml" /* string-offset:676 */, "FormDmeEvl" /* string-offset:396 */);
+19087: 				if (_0087_008E_009B == null)
+19088: 				{
+19089: 					return;
+19090: 				}
+19091: 			}
+19092: 			_008D._0089_0093(_0087_008E_009B);
+19093: 		}
+19094: 
+19095: 		private void _0087_008D_009D(object P_0, EventArgs P_1)
+19096: 		{
+19097: 			_0087_009C();
+19098: 			Database database = default(Database);
+19099: 			Transaction val = default(Transaction);
+19100: 			if (_0087_009B())
+19101: 			{
+19102: 				_0087_008E_009B = new List<DBPoint>();
+19103: 				database = Application.DocumentManager.MdiActiveDocument.Database;
+19104: 				if (!_0087_009C())
+19105: 				{
+19106: 				}
+19107: 				val = database.TransactionManager.StartTransaction();
+19108: 			}
+19109: 			try
+19110: 			{
+19111: 				_0087_008E_009B = database._008B_008A<DBPoint>((OpenMode)0, _0020: false);
+19112: 			}
+19113: 			finally
+19114: 			{
+19115: 				((IDisposable)val)?.Dispose();
+19116: 			}
+19117: 			_0087_008F_0089.Text = "已检测到 " /* string-offset:2720 */ + _0087_008E_009B.Count + " 个障碍物。" /* string-offset:936 */;
+19118: 			_0087_008D_009E(_0087_008E_009B);
+19119: 		}
+19120: 
+19121: 		private void _0087_008D_009E(List<DBPoint> P_0)
+19122: 		{
+19123: 			if (false /* original-file-bool-offset:416 */)
+19124: 			{
+19125: 				return;
+19126: 			}
+19127: 			_0087_008E_009C = new Dictionary<string, DBPoint>();
+19128: 			DataTable dataTable = new DataTable();
+19129: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+19130: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+19131: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+19132: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+19133: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+19134: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+19135: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+19136: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+19137: 			int num = 1;
+19138: 			foreach (DBPoint item in P_0)
+19139: 			{
+19140: 				_008F_008E obj = item._008C_008D(num.ToString());
+19141: 				num++;
+19142: 				dataTable.Rows.Add(obj.ID, obj.Name, Math.Round(obj.X, 2), Math.Round(obj.Y, 2), Math.Round(obj.Z, 2));
+19143: 				_0087_008E_009C.Add(obj.ID, item);
+19144: 			}
+19145: 			_0087_0090_0088.DataSource = dataTable;
+19146: 			_0087_0090_0088.Columns[1].Frozen = true;
+19147: 		}
+19148: 
+19149: 		private void _0087_008E_0086(List<_008A_008B> P_0)
+19150: 		{
+19151: 			if (false /* original-file-bool-offset:420 */)
+19152: 			{
+19153: 				return;
+19154: 			}
+19155: 			DataTable dataTable = new DataTable();
+19156: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+19157: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+19158: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+19159: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+19160: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+19161: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+19162: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+19163: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+19164: 			foreach (_008A_008B item in P_0)
+19165: 			{
+19166: 				dataTable.Rows.Add(item.ID, item.Name, Math.Round(0.0 - item.X, 2), Math.Round(0.0 - item.Y, 2), Math.Round(item.Z, 2), item._0088_008F_009C, Math.Round(item._0088_008F_009D, 2), Math.Round(item._0088_008F_009E, 2));
+19167: 			}
+19168: 			_0087_0090_0088.DataSource = dataTable;
+19169: 			_0087_0090_0088.Columns[1].Frozen = true;
+19170: 		}
+19171: 
+19172: 		private void _0087_008E_0087(object P_0, EventArgs P_1)
+19173: 		{
+19174: 			//IL_0034: Unknown result type (might be due to invalid IL or missing references)
+19175: 			//IL_0039: Unknown result type (might be due to invalid IL or missing references)
+19176: 			_ = 1;
+19177: 			Point3d val = default(Point3d);
+19178: 			if (!_0087_009C())
+19179: 			{
+19180: 				_0087_008D_009A(Application.DocumentManager.MdiActiveDocument.Window.Handle);
+19181: 				base.Visible = false;
+19182: 				val = _009D._008B_008D("\n请选择导航台的位置" /* string-offset:3540 */);
+19183: 			}
+19184: 			base.Visible = true;
+19185: 			_0087_008F_009A.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();
+19186: 			_0087_008F_009B.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();
+19187: 		}
+19188: 
+19189: 		private void _0087_008E_0088(object P_0, EventArgs P_1)
+19190: 		{
+19191: 			//IL_003b: Unknown result type (might be due to invalid IL or missing references)
+19192: 			//IL_0040: Unknown result type (might be due to invalid IL or missing references)
+19193: 			_0087_009C();
+19194: 			if (_0087_009B())
+19195: 			{
+19196: 				_0087_008D_009A(Application.DocumentManager.MdiActiveDocument.Window.Handle);
+19197: 			}
+19198: 			base.Visible = false;
+19199: 			Point3d val = _009D._008B_008D("\n请选择IF点的方向" /* string-offset:3544 */);
+19200: 			base.Visible = true;
+19201: 			_0087_008F_0093.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();
+19202: 			_0087_008F_0094.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();
+19203: 		}
+19204: 
+19205: 		private void _0087_008E_0089(object P_0, EventArgs P_1)
+19206: 		{
+19207: 			//IL_0037: Unknown result type (might be due to invalid IL or missing references)
+19208: 			//IL_003c: Unknown result type (might be due to invalid IL or missing references)
+19209: 			_0087_008D_009A(Application.DocumentManager.MdiActiveDocument.Window.Handle);
+19210: 			_ = 1;
+19211: 			if (!_0087_009C())
+19212: 			{
+19213: 				base.Visible = false;
+19214: 			}
+19215: 			Point3d val = _009D._008B_008D("\n请选择IAF点" /* string-offset:3548 */);
+19216: 			base.Visible = true;
+19217: 			_0087_008F_008D.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();
+19218: 			_0087_008F_008C.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();
+19219: 		}
+19220: 
+19221: 		private void _0087_008E_008A(object P_0, EventArgs P_1)
+19222: 		{
+19223: 			//IL_1142: Unknown result type (might be due to invalid IL or missing references)
+19224: 			//IL_1147: Unknown result type (might be due to invalid IL or missing references)
+19225: 			//IL_1152: Unknown result type (might be due to invalid IL or missing references)
+19226: 			//IL_1157: Unknown result type (might be due to invalid IL or missing references)
+19227: 			//IL_1160: Unknown result type (might be due to invalid IL or missing references)
+19228: 			//IL_118a: Unknown result type (might be due to invalid IL or missing references)
+19229: 			//IL_118f: Unknown result type (might be due to invalid IL or missing references)
+19230: 			//IL_119a: Unknown result type (might be due to invalid IL or missing references)
+19231: 			//IL_119f: Unknown result type (might be due to invalid IL or missing references)
+19232: 			//IL_11a8: Unknown result type (might be due to invalid IL or missing references)
+19233: 			//IL_10d9: Unknown result type (might be due to invalid IL or missing references)
+19234: 			//IL_10de: Unknown result type (might be due to invalid IL or missing references)
+19235: 			//IL_10e9: Unknown result type (might be due to invalid IL or missing references)
+19236: 			//IL_10ee: Unknown result type (might be due to invalid IL or missing references)
+19237: 			//IL_10f7: Unknown result type (might be due to invalid IL or missing references)
+19238: 			//IL_10c0: Unknown result type (might be due to invalid IL or missing references)
+19239: 			//IL_03d9: Unknown result type (might be due to invalid IL or missing references)
+19240: 			//IL_03ee: Unknown result type (might be due to invalid IL or missing references)
+19241: 			//IL_03f5: Expected O, but got Unknown
+19242: 			//IL_03f5: Unknown result type (might be due to invalid IL or missing references)
+19243: 			//IL_040b: Unknown result type (might be due to invalid IL or missing references)
+19244: 			//IL_0412: Expected O, but got Unknown
+19245: 			//IL_0d3c: Unknown result type (might be due to invalid IL or missing references)
+19246: 			//IL_0d50: Unknown result type (might be due to invalid IL or missing references)
+19247: 			//IL_0d57: Expected O, but got Unknown
+19248: 			//IL_0d57: Unknown result type (might be due to invalid IL or missing references)
+19249: 			//IL_0d5e: Expected O, but got Unknown
+19250: 			//IL_0e19: Unknown result type (might be due to invalid IL or missing references)
+19251: 			//IL_0e1e: Unknown result type (might be due to invalid IL or missing references)
+19252: 			//IL_0e29: Unknown result type (might be due to invalid IL or missing references)
+19253: 			//IL_0e2e: Unknown result type (might be due to invalid IL or missing references)
+19254: 			//IL_0e37: Unknown result type (might be due to invalid IL or missing references)
+19255: 			//IL_183e: Unknown result type (might be due to invalid IL or missing references)
+19256: 			//IL_11fd: Unknown result type (might be due to invalid IL or missing references)
+19257: 			//IL_1202: Unknown result type (might be due to invalid IL or missing references)
+19258: 			//IL_120d: Unknown result type (might be due to invalid IL or missing references)
+19259: 			//IL_1212: Unknown result type (might be due to invalid IL or missing references)
+19260: 			//IL_121b: Unknown result type (might be due to invalid IL or missing references)
+19261: 			//IL_1250: Unknown result type (might be due to invalid IL or missing references)
+19262: 			//IL_1255: Unknown result type (might be due to invalid IL or missing references)
+19263: 			//IL_1260: Unknown result type (might be due to invalid IL or missing references)
+19264: 			//IL_1265: Unknown result type (might be due to invalid IL or missing references)
+19265: 			//IL_126e: Unknown result type (might be due to invalid IL or missing references)
+19266: 			//IL_0e75: Unknown result type (might be due to invalid IL or missing references)
+19267: 			//IL_0e7a: Unknown result type (might be due to invalid IL or missing references)
+19268: 			//IL_0e85: Unknown result type (might be due to invalid IL or missing references)
+19269: 			//IL_0e8a: Unknown result type (might be due to invalid IL or missing references)
+19270: 			//IL_0e93: Unknown result type (might be due to invalid IL or missing references)
+19271: 			//IL_036e: Unknown result type (might be due to invalid IL or missing references)
+19272: 			//IL_0373: Unknown result type (might be due to invalid IL or missing references)
+19273: 			//IL_037e: Unknown result type (might be due to invalid IL or missing references)
+19274: 			//IL_0383: Unknown result type (might be due to invalid IL or missing references)
+19275: 			//IL_038c: Unknown result type (might be due to invalid IL or missing references)
+19276: 			//IL_0f65: Unknown result type (might be due to invalid IL or missing references)
+19277: 			//IL_0f6a: Unknown result type (might be due to invalid IL or missing references)
+19278: 			//IL_0f75: Unknown result type (might be due to invalid IL or missing references)
+19279: 			//IL_0f7a: Unknown result type (might be due to invalid IL or missing references)
+19280: 			//IL_0f83: Unknown result type (might be due to invalid IL or missing references)
+19281: 			//IL_0ebd: Unknown result type (might be due to invalid IL or missing references)
+19282: 			//IL_0ec2: Unknown result type (might be due to invalid IL or missing references)
+19283: 			//IL_0ecd: Unknown result type (might be due to invalid IL or missing references)
+19284: 			//IL_0ed2: Unknown result type (might be due to invalid IL or missing references)
+19285: 			//IL_0edb: Unknown result type (might be due to invalid IL or missing references)
+19286: 			//IL_0f0f: Unknown result type (might be due to invalid IL or missing references)
+19287: 			//IL_0f14: Unknown result type (might be due to invalid IL or missing references)
+19288: 			//IL_0f1f: Unknown result type (might be due to invalid IL or missing references)
+19289: 			//IL_0f24: Unknown result type (might be due to invalid IL or missing references)
+19290: 			//IL_0f2d: Unknown result type (might be due to invalid IL or missing references)
+19291: 			//IL_0103: Unknown result type (might be due to invalid IL or missing references)
+19292: 			//IL_0118: Unknown result type (might be due to invalid IL or missing references)
+19293: 			//IL_011f: Expected O, but got Unknown
+19294: 			//IL_17ed: Unknown result type (might be due to invalid IL or missing references)
+19295: 			//IL_17f2: Unknown result type (might be due to invalid IL or missing references)
+19296: 			//IL_17fd: Unknown result type (might be due to invalid IL or missing references)
+19297: 			//IL_1802: Unknown result type (might be due to invalid IL or missing references)
+19298: 			//IL_180b: Unknown result type (might be due to invalid IL or missing references)
+19299: 			//IL_0fc0: Unknown result type (might be due to invalid IL or missing references)
+19300: 			//IL_0fc5: Unknown result type (might be due to invalid IL or missing references)
+19301: 			//IL_0fd0: Unknown result type (might be due to invalid IL or missing references)
+19302: 			//IL_0fd5: Unknown result type (might be due to invalid IL or missing references)
+19303: 			//IL_0fde: Unknown result type (might be due to invalid IL or missing references)
+19304: 			//IL_0c4d: Unknown result type (might be due to invalid IL or missing references)
+19305: 			//IL_0c52: Unknown result type (might be due to invalid IL or missing references)
+19306: 			//IL_0c5d: Unknown result type (might be due to invalid IL or missing references)
+19307: 			//IL_0c62: Unknown result type (might be due to invalid IL or missing references)
+19308: 			//IL_0c6b: Unknown result type (might be due to invalid IL or missing references)
+19309: 			//IL_0ca0: Unknown result type (might be due to invalid IL or missing references)
+19310: 			//IL_0ca5: Unknown result type (might be due to invalid IL or missing references)
+19311: 			//IL_0cb0: Unknown result type (might be due to invalid IL or missing references)
+19312: 			//IL_0cb5: Unknown result type (might be due to invalid IL or missing references)
+19313: 			//IL_0cbe: Unknown result type (might be due to invalid IL or missing references)
+19314: 			//IL_0ce8: Unknown result type (might be due to invalid IL or missing references)
+19315: 			//IL_0ced: Unknown result type (might be due to invalid IL or missing references)
+19316: 			//IL_0cf8: Unknown result type (might be due to invalid IL or missing references)
+19317: 			//IL_0cfd: Unknown result type (might be due to invalid IL or missing references)
+19318: 			//IL_0d06: Unknown result type (might be due to invalid IL or missing references)
+19319: 			//IL_21fd: Unknown result type (might be due to invalid IL or missing references)
+19320: 			//IL_2202: Unknown result type (might be due to invalid IL or missing references)
+19321: 			//IL_220a: Unknown result type (might be due to invalid IL or missing references)
+19322: 			//IL_223b: Unknown result type (might be due to invalid IL or missing references)
+19323: 			//IL_2242: Unknown result type (might be due to invalid IL or missing references)
+19324: 			//IL_2249: Unknown result type (might be due to invalid IL or missing references)
+19325: 			//IL_224c: Unknown result type (might be due to invalid IL or missing references)
+19326: 			//IL_2256: Unknown result type (might be due to invalid IL or missing references)
+19327: 			//IL_2274: Expected O, but got Unknown
+19328: 			//IL_226f: Unknown result type (might be due to invalid IL or missing references)
+19329: 			//IL_1bf1: Unknown result type (might be due to invalid IL or missing references)
+19330: 			//IL_1c07: Unknown result type (might be due to invalid IL or missing references)
+19331: 			//IL_1c0e: Expected O, but got Unknown
+19332: 			//IL_1011: Unknown result type (might be due to invalid IL or missing references)
+19333: 			//IL_1016: Unknown result type (might be due to invalid IL or missing references)
+19334: 			//IL_1021: Unknown result type (might be due to invalid IL or missing references)
+19335: 			//IL_1026: Unknown result type (might be due to invalid IL or missing references)
+19336: 			//IL_102f: Unknown result type (might be due to invalid IL or missing references)
+19337: 			//IL_1063: Unknown result type (might be due to invalid IL or missing references)
+19338: 			//IL_1068: Unknown result type (might be due to invalid IL or missing references)
+19339: 			//IL_1073: Unknown result type (might be due to invalid IL or missing references)
+19340: 			//IL_1078: Unknown result type (might be due to invalid IL or missing references)
+19341: 			//IL_1081: Unknown result type (might be due to invalid IL or missing references)
+19342: 			//IL_0bfa: Unknown result type (might be due to invalid IL or missing references)
+19343: 			//IL_0bff: Unknown result type (might be due to invalid IL or missing references)
+19344: 			//IL_0c0a: Unknown result type (might be due to invalid IL or missing references)
+19345: 			//IL_0c0f: Unknown result type (might be due to invalid IL or missing references)
+19346: 			//IL_0c18: Unknown result type (might be due to invalid IL or missing references)
+19347: 			//IL_1bc5: Unknown result type (might be due to invalid IL or missing references)
+19348: 			//IL_1bd9: Unknown result type (might be due to invalid IL or missing references)
+19349: 			//IL_1be0: Expected O, but got Unknown
+19350: 			//IL_1be0: Unknown result type (might be due to invalid IL or missing references)
+19351: 			//IL_1be7: Expected O, but got Unknown
+19352: 			//IL_142b: Unknown result type (might be due to invalid IL or missing references)
+19353: 			//IL_236e: Unknown result type (might be due to invalid IL or missing references)
+19354: 			//IL_2373: Unknown result type (might be due to invalid IL or missing references)
+19355: 			//IL_237b: Unknown result type (might be due to invalid IL or missing references)
+19356: 			//IL_23ac: Unknown result type (might be due to invalid IL or missing references)
+19357: 			//IL_23b3: Unknown result type (might be due to invalid IL or missing references)
+19358: 			//IL_23ba: Unknown result type (might be due to invalid IL or missing references)
+19359: 			//IL_23bd: Unknown result type (might be due to invalid IL or missing references)
+19360: 			//IL_23c7: Unknown result type (might be due to invalid IL or missing references)
+19361: 			//IL_23e5: Expected O, but got Unknown
+19362: 			//IL_23e0: Unknown result type (might be due to invalid IL or missing references)
+19363: 			//IL_0862: Unknown result type (might be due to invalid IL or missing references)
+19364: 			//IL_0139: Unknown result type (might be due to invalid IL or missing references)
+19365: 			//IL_013e: Unknown result type (might be due to invalid IL or missing references)
+19366: 			//IL_0149: Unknown result type (might be due to invalid IL or missing references)
+19367: 			//IL_014e: Unknown result type (might be due to invalid IL or missing references)
+19368: 			//IL_0157: Unknown result type (might be due to invalid IL or missing references)
+19369: 			//IL_018c: Unknown result type (might be due to invalid IL or missing references)
+19370: 			//IL_0191: Unknown result type (might be due to invalid IL or missing references)
+19371: 			//IL_019c: Unknown result type (might be due to invalid IL or missing references)
+19372: 			//IL_01a1: Unknown result type (might be due to invalid IL or missing references)
+19373: 			//IL_01aa: Unknown result type (might be due to invalid IL or missing references)
+19374: 			//IL_01d4: Unknown result type (might be due to invalid IL or missing references)
+19375: 			//IL_01d9: Unknown result type (might be due to invalid IL or missing references)
+19376: 			//IL_01e4: Unknown result type (might be due to invalid IL or missing references)
+19377: 			//IL_01e9: Unknown result type (might be due to invalid IL or missing references)
+19378: 			//IL_01f2: Unknown result type (might be due to invalid IL or missing references)
+19379: 			//IL_0226: Unknown result type (might be due to invalid IL or missing references)
+19380: 			//IL_022b: Unknown result type (might be due to invalid IL or missing references)
+19381: 			//IL_0236: Unknown result type (might be due to invalid IL or missing references)
+19382: 			//IL_023b: Unknown result type (might be due to invalid IL or missing references)
+19383: 			//IL_0244: Unknown result type (might be due to invalid IL or missing references)
+19384: 			//IL_028d: Unknown result type (might be due to invalid IL or missing references)
+19385: 			//IL_02a2: Unknown result type (might be due to invalid IL or missing references)
+19386: 			//IL_02a9: Expected O, but got Unknown
+19387: 			//IL_1af3: Unknown result type (might be due to invalid IL or missing references)
+19388: 			//IL_1af8: Unknown result type (might be due to invalid IL or missing references)
+19389: 			//IL_1b03: Unknown result type (might be due to invalid IL or missing references)
+19390: 			//IL_1b08: Unknown result type (might be due to invalid IL or missing references)
+19391: 			//IL_1b11: Unknown result type (might be due to invalid IL or missing references)
+19392: 			//IL_18c0: Unknown result type (might be due to invalid IL or missing references)
+19393: 			//IL_18c5: Unknown result type (might be due to invalid IL or missing references)
+19394: 			//IL_18d0: Unknown result type (might be due to invalid IL or missing references)
+19395: 			//IL_18d5: Unknown result type (might be due to invalid IL or missing references)
+19396: 			//IL_18de: Unknown result type (might be due to invalid IL or missing references)
+19397: 			//IL_1868: Unknown result type (might be due to invalid IL or missing references)
+19398: 			//IL_186d: Unknown result type (might be due to invalid IL or missing references)
+19399: 			//IL_1878: Unknown result type (might be due to invalid IL or missing references)
+19400: 			//IL_187d: Unknown result type (might be due to invalid IL or missing references)
+19401: 			//IL_1886: Unknown result type (might be due to invalid IL or missing references)
+19402: 			//IL_212b: Unknown result type (might be due to invalid IL or missing references)
+19403: 			//IL_2130: Unknown result type (might be due to invalid IL or missing references)
+19404: 			//IL_2138: Unknown result type (might be due to invalid IL or missing references)
+19405: 			//IL_2169: Unknown result type (might be due to invalid IL or missing references)
+19406: 			//IL_2170: Unknown result type (might be due to invalid IL or missing references)
+19407: 			//IL_2177: Unknown result type (might be due to invalid IL or missing references)
+19408: 			//IL_217a: Unknown result type (might be due to invalid IL or missing references)
+19409: 			//IL_2184: Unknown result type (might be due to invalid IL or missing references)
+19410: 			//IL_21a2: Expected O, but got Unknown
+19411: 			//IL_219d: Unknown result type (might be due to invalid IL or missing references)
+19412: 			//IL_12dc: Unknown result type (might be due to invalid IL or missing references)
+19413: 			//IL_12f2: Unknown result type (might be due to invalid IL or missing references)
+19414: 			//IL_12f9: Expected O, but got Unknown
+19415: 			//IL_0451: Unknown result type (might be due to invalid IL or missing references)
+19416: 			//IL_0466: Unknown result type (might be due to invalid IL or missing references)
+19417: 			//IL_046d: Expected O, but got Unknown
+19418: 			//IL_046d: Unknown result type (might be due to invalid IL or missing references)
+19419: 			//IL_0483: Unknown result type (might be due to invalid IL or missing references)
+19420: 			//IL_048a: Expected O, but got Unknown
+19421: 			//IL_1917: Unknown result type (might be due to invalid IL or missing references)
+19422: 			//IL_191c: Unknown result type (might be due to invalid IL or missing references)
+19423: 			//IL_1927: Unknown result type (might be due to invalid IL or missing references)
+19424: 			//IL_192c: Unknown result type (might be due to invalid IL or missing references)
+19425: 			//IL_1935: Unknown result type (might be due to invalid IL or missing references)
+19426: 			//IL_1969: Unknown result type (might be due to invalid IL or missing references)
+19427: 			//IL_196e: Unknown result type (might be due to invalid IL or missing references)
+19428: 			//IL_1979: Unknown result type (might be due to invalid IL or missing references)
+19429: 			//IL_197e: Unknown result type (might be due to invalid IL or missing references)
+19430: 			//IL_1987: Unknown result type (might be due to invalid IL or missing references)
+19431: 			//IL_1b46: Unknown result type (might be due to invalid IL or missing references)
+19432: 			//IL_1b4b: Unknown result type (might be due to invalid IL or missing references)
+19433: 			//IL_1b56: Unknown result type (might be due to invalid IL or missing references)
+19434: 			//IL_1b5b: Unknown result type (might be due to invalid IL or missing references)
+19435: 			//IL_1b64: Unknown result type (might be due to invalid IL or missing references)
+19436: 			//IL_1a59: Unknown result type (might be due to invalid IL or missing references)
+19437: 			//IL_1a5e: Unknown result type (might be due to invalid IL or missing references)
+19438: 			//IL_1a69: Unknown result type (might be due to invalid IL or missing references)
+19439: 			//IL_1a6e: Unknown result type (might be due to invalid IL or missing references)
+19440: 			//IL_1a77: Unknown result type (might be due to invalid IL or missing references)
+19441: 			//IL_12af: Unknown result type (might be due to invalid IL or missing references)
+19442: 			//IL_12c3: Unknown result type (might be due to invalid IL or missing references)
+19443: 			//IL_12ca: Expected O, but got Unknown
+19444: 			//IL_12ca: Unknown result type (might be due to invalid IL or missing references)
+19445: 			//IL_12d1: Expected O, but got Unknown
+19446: 			//IL_071f: Unknown result type (might be due to invalid IL or missing references)
+19447: 			//IL_0733: Unknown result type (might be due to invalid IL or missing references)
+19448: 			//IL_073a: Expected O, but got Unknown
+19449: 			//IL_073a: Unknown result type (might be due to invalid IL or missing references)
+19450: 			//IL_0741: Expected O, but got Unknown
+19451: 			//IL_19b1: Unknown result type (might be due to invalid IL or missing references)
+19452: 			//IL_19b6: Unknown result type (might be due to invalid IL or missing references)
+19453: 			//IL_19c1: Unknown result type (might be due to invalid IL or missing references)
+19454: 			//IL_19c6: Unknown result type (might be due to invalid IL or missing references)
+19455: 			//IL_19cf: Unknown result type (might be due to invalid IL or missing references)
+19456: 			//IL_1a03: Unknown result type (might be due to invalid IL or missing references)
+19457: 			//IL_1a08: Unknown result type (might be due to invalid IL or missing references)
+19458: 			//IL_1a13: Unknown result type (might be due to invalid IL or missing references)
+19459: 			//IL_1a18: Unknown result type (might be due to invalid IL or missing references)
+19460: 			//IL_1a21: Unknown result type (might be due to invalid IL or missing references)
+19461: 			//IL_1aa1: Unknown result type (might be due to invalid IL or missing references)
+19462: 			//IL_1aa6: Unknown result type (might be due to invalid IL or missing references)
+19463: 			//IL_1ab1: Unknown result type (might be due to invalid IL or missing references)
+19464: 			//IL_1ab6: Unknown result type (might be due to invalid IL or missing references)
+19465: 			//IL_1abf: Unknown result type (might be due to invalid IL or missing references)
+19466: 			//IL_02bc: Unknown result type (might be due to invalid IL or missing references)
+19467: 			//IL_02c1: Unknown result type (might be due to invalid IL or missing references)
+19468: 			//IL_02cc: Unknown result type (might be due to invalid IL or missing references)
+19469: 			//IL_02d1: Unknown result type (might be due to invalid IL or missing references)
+19470: 			//IL_02da: Unknown result type (might be due to invalid IL or missing references)
+19471: 			//IL_030e: Unknown result type (might be due to invalid IL or missing references)
+19472: 			//IL_0313: Unknown result type (might be due to invalid IL or missing references)
+19473: 			//IL_031e: Unknown result type (might be due to invalid IL or missing references)
+19474: 			//IL_0323: Unknown result type (might be due to invalid IL or missing references)
+19475: 			//IL_032c: Unknown result type (might be due to invalid IL or missing references)
+19476: 			//IL_09d5: Unknown result type (might be due to invalid IL or missing references)
+19477: 			//IL_09da: Unknown result type (might be due to invalid IL or missing references)
+19478: 			//IL_09e5: Unknown result type (might be due to invalid IL or missing references)
+19479: 			//IL_09ea: Unknown result type (might be due to invalid IL or missing references)
+19480: 			//IL_09f3: Unknown result type (might be due to invalid IL or missing references)
+19481: 			//IL_2276: Unknown result type (might be due to invalid IL or missing references)
+19482: 			//IL_227b: Unknown result type (might be due to invalid IL or missing references)
+19483: 			//IL_2283: Unknown result type (might be due to invalid IL or missing references)
+19484: 			//IL_22b4: Unknown result type (might be due to invalid IL or missing references)
+19485: 			//IL_22bb: Unknown result type (might be due to invalid IL or missing references)
+19486: 			//IL_22c2: Unknown result type (might be due to invalid IL or missing references)
+19487: 			//IL_22c5: Unknown result type (might be due to invalid IL or missing references)
+19488: 			//IL_22cf: Unknown result type (might be due to invalid IL or missing references)
+19489: 			//IL_22ed: Expected O, but got Unknown
+19490: 			//IL_22e8: Unknown result type (might be due to invalid IL or missing references)
+19491: 			//IL_16f6: Unknown result type (might be due to invalid IL or missing references)
+19492: 			//IL_16fb: Unknown result type (might be due to invalid IL or missing references)
+19493: 			//IL_1706: Unknown result type (might be due to invalid IL or missing references)
+19494: 			//IL_170b: Unknown result type (might be due to invalid IL or missing references)
+19495: 			//IL_1714: Unknown result type (might be due to invalid IL or missing references)
+19496: 			//IL_1749: Unknown result type (might be due to invalid IL or missing references)
+19497: 			//IL_174e: Unknown result type (might be due to invalid IL or missing references)
+19498: 			//IL_1759: Unknown result type (might be due to invalid IL or missing references)
+19499: 			//IL_175e: Unknown result type (might be due to invalid IL or missing references)
+19500: 			//IL_1767: Unknown result type (might be due to invalid IL or missing references)
+19501: 			//IL_1500: Unknown result type (might be due to invalid IL or missing references)
+19502: 			//IL_1505: Unknown result type (might be due to invalid IL or missing references)
+19503: 			//IL_1510: Unknown result type (might be due to invalid IL or missing references)
+19504: 			//IL_1515: Unknown result type (might be due to invalid IL or missing references)
+19505: 			//IL_151e: Unknown result type (might be due to invalid IL or missing references)
+19506: 			//IL_0a30: Unknown result type (might be due to invalid IL or missing references)
+19507: 			//IL_0a35: Unknown result type (might be due to invalid IL or missing references)
+19508: 			//IL_0a40: Unknown result type (might be due to invalid IL or missing references)
+19509: 			//IL_0a45: Unknown result type (might be due to invalid IL or missing references)
+19510: 			//IL_0a4e: Unknown result type (might be due to invalid IL or missing references)
+19511: 			//IL_179a: Unknown result type (might be due to invalid IL or missing references)
+19512: 			//IL_179f: Unknown result type (might be due to invalid IL or missing references)
+19513: 			//IL_17aa: Unknown result type (might be due to invalid IL or missing references)
+19514: 			//IL_17af: Unknown result type (might be due to invalid IL or missing references)
+19515: 			//IL_17b8: Unknown result type (might be due to invalid IL or missing references)
+19516: 			//IL_1552: Unknown result type (might be due to invalid IL or missing references)
+19517: 			//IL_1557: Unknown result type (might be due to invalid IL or missing references)
+19518: 			//IL_1562: Unknown result type (might be due to invalid IL or missing references)
+19519: 			//IL_1567: Unknown result type (might be due to invalid IL or missing references)
+19520: 			//IL_1570: Unknown result type (might be due to invalid IL or missing references)
+19521: 			//IL_0a81: Unknown result type (might be due to invalid IL or missing references)
+19522: 			//IL_0a86: Unknown result type (might be due to invalid IL or missing references)
+19523: 			//IL_0a91: Unknown result type (might be due to invalid IL or missing references)
+19524: 			//IL_0a96: Unknown result type (might be due to invalid IL or missing references)
+19525: 			//IL_0a9f: Unknown result type (might be due to invalid IL or missing references)
+19526: 			//IL_0ad4: Unknown result type (might be due to invalid IL or missing references)
+19527: 			//IL_0ad9: Unknown result type (might be due to invalid IL or missing references)
+19528: 			//IL_0ae4: Unknown result type (might be due to invalid IL or missing references)
+19529: 			//IL_0ae9: Unknown result type (might be due to invalid IL or missing references)
+19530: 			//IL_0af2: Unknown result type (might be due to invalid IL or missing references)
+19531: 			//IL_0978: Unknown result type (might be due to invalid IL or missing references)
+19532: 			//IL_097d: Unknown result type (might be due to invalid IL or missing references)
+19533: 			//IL_0988: Unknown result type (might be due to invalid IL or missing references)
+19534: 			//IL_098d: Unknown result type (might be due to invalid IL or missing references)
+19535: 			//IL_0996: Unknown result type (might be due to invalid IL or missing references)
+19536: 			//IL_1450: Unknown result type (might be due to invalid IL or missing references)
+19537: 			//IL_1455: Unknown result type (might be due to invalid IL or missing references)
+19538: 			//IL_1460: Unknown result type (might be due to invalid IL or missing references)
+19539: 			//IL_1465: Unknown result type (might be due to invalid IL or missing references)
+19540: 			//IL_146e: Unknown result type (might be due to invalid IL or missing references)
+19541: 			//IL_14a3: Unknown result type (might be due to invalid IL or missing references)
+19542: 			//IL_14a8: Unknown result type (might be due to invalid IL or missing references)
+19543: 			//IL_14b3: Unknown result type (might be due to invalid IL or missing references)
+19544: 			//IL_14b8: Unknown result type (might be due to invalid IL or missing references)
+19545: 			//IL_14c1: Unknown result type (might be due to invalid IL or missing references)
+19546: 			//IL_0b2f: Unknown result type (might be due to invalid IL or missing references)
+19547: 			//IL_0b34: Unknown result type (might be due to invalid IL or missing references)
+19548: 			//IL_0b3f: Unknown result type (might be due to invalid IL or missing references)
+19549: 			//IL_0b44: Unknown result type (might be due to invalid IL or missing references)
+19550: 			//IL_0b4d: Unknown result type (might be due to invalid IL or missing references)
+19551: 			//IL_0b8b: Unknown result type (might be due to invalid IL or missing references)
+19552: 			//IL_0b90: Unknown result type (might be due to invalid IL or missing references)
+19553: 			//IL_0b9b: Unknown result type (might be due to invalid IL or missing references)
+19554: 			//IL_0ba0: Unknown result type (might be due to invalid IL or missing references)
+19555: 			//IL_0ba9: Unknown result type (might be due to invalid IL or missing references)
+19556: 			//IL_1691: Unknown result type (might be due to invalid IL or missing references)
+19557: 			//IL_1696: Unknown result type (might be due to invalid IL or missing references)
+19558: 			//IL_16a1: Unknown result type (might be due to invalid IL or missing references)
+19559: 			//IL_16a6: Unknown result type (might be due to invalid IL or missing references)
+19560: 			//IL_16af: Unknown result type (might be due to invalid IL or missing references)
+19561: 			//IL_159a: Unknown result type (might be due to invalid IL or missing references)
+19562: 			//IL_159f: Unknown result type (might be due to invalid IL or missing references)
+19563: 			//IL_15aa: Unknown result type (might be due to invalid IL or missing references)
+19564: 			//IL_15af: Unknown result type (might be due to invalid IL or missing references)
+19565: 			//IL_15b8: Unknown result type (might be due to invalid IL or missing references)
+19566: 			//IL_15ed: Unknown result type (might be due to invalid IL or missing references)
+19567: 			//IL_15f2: Unknown result type (might be due to invalid IL or missing references)
+19568: 			//IL_15fd: Unknown result type (might be due to invalid IL or missing references)
+19569: 			//IL_1602: Unknown result type (might be due to invalid IL or missing references)
+19570: 			//IL_160b: Unknown result type (might be due to invalid IL or missing references)
+19571: 			//IL_1635: Unknown result type (might be due to invalid IL or missing references)
+19572: 			//IL_163a: Unknown result type (might be due to invalid IL or missing references)
+19573: 			//IL_1645: Unknown result type (might be due to invalid IL or missing references)
+19574: 			//IL_164a: Unknown result type (might be due to invalid IL or missing references)
+19575: 			//IL_1653: Unknown result type (might be due to invalid IL or missing references)
+19576: 			//IL_0879: Unknown result type (might be due to invalid IL or missing references)
+19577: 			//IL_087e: Unknown result type (might be due to invalid IL or missing references)
+19578: 			//IL_0889: Unknown result type (might be due to invalid IL or missing references)
+19579: 			//IL_088e: Unknown result type (might be due to invalid IL or missing references)
+19580: 			//IL_0897: Unknown result type (might be due to invalid IL or missing references)
+19581: 			//IL_08d4: Unknown result type (might be due to invalid IL or missing references)
+19582: 			//IL_08d9: Unknown result type (might be due to invalid IL or missing references)
+19583: 			//IL_08e4: Unknown result type (might be due to invalid IL or missing references)
+19584: 			//IL_08e9: Unknown result type (might be due to invalid IL or missing references)
+19585: 			//IL_08f2: Unknown result type (might be due to invalid IL or missing references)
+19586: 			//IL_091c: Unknown result type (might be due to invalid IL or missing references)
+19587: 			//IL_0921: Unknown result type (might be due to invalid IL or missing references)
+19588: 			//IL_092c: Unknown result type (might be due to invalid IL or missing references)
+19589: 			//IL_0931: Unknown result type (might be due to invalid IL or missing references)
+19590: 			//IL_093a: Unknown result type (might be due to invalid IL or missing references)
+19591: 			int num = 96;
+19592: 			_008F_008A._0090_009A obj = default(_008F_008A._0090_009A);
+19593: 			Point3d val = default(Point3d);
+19594: 			_008F_008E obj2 = default(_008F_008E);
+19595: 			double num3 = default(double);
+19596: 			double num4 = default(double);
+19597: 			double num5 = default(double);
+19598: 			double num6 = default(double);
+19599: 			double num7 = default(double);
+19600: 			double num8 = default(double);
+19601: 			int num9 = default(int);
+19602: 			double num10 = default(double);
+19603: 			double num11 = default(double);
+19604: 			double num12 = default(double);
+19605: 			_008F_008E obj3 = default(_008F_008E);
+19606: 			_008F_008E obj4 = default(_008F_008E);
+19607: 			double num13 = default(double);
+19608: 			double num15 = default(double);
+19609: 			Point3d val2 = default(Point3d);
+19610: 			double num16 = default(double);
+19611: 			int num17 = default(int);
+19612: 			Point3d val3 = default(Point3d);
+19613: 			double num18 = default(double);
+19614: 			double num19 = default(double);
+19615: 			Polyline val4 = default(Polyline);
+19616: 			Arc val6 = default(Arc);
+19617: 			Database database = default(Database);
+19618: 			Polyline val7 = default(Polyline);
+19619: 			Arc val8 = default(Arc);
+19620: 			Point3d val9 = default(Point3d);
+19621: 			double num24 = default(double);
+19622: 			double num25 = default(double);
+19623: 			double num26 = default(double);
+19624: 			double num27 = default(double);
+19625: 			Point3d val10 = default(Point3d);
+19626: 			Point3d val11 = default(Point3d);
+19627: 			double num28 = default(double);
+19628: 			int num29 = default(int);
+19629: 			double num30 = default(double);
+19630: 			_008F_008E obj9 = default(_008F_008E);
+19631: 			double num32 = default(double);
+19632: 			double num33 = default(double);
+19633: 			Point3d val12 = default(Point3d);
+19634: 			double num34 = default(double);
+19635: 			int num35 = default(int);
+19636: 			Arc val13 = default(Arc);
+19637: 			double num36 = default(double);
+19638: 			Point3d val14 = default(Point3d);
+19639: 			double num37 = default(double);
+19640: 			Arc val15 = default(Arc);
+19641: 			Arc val16 = default(Arc);
+19642: 			Polyline val17 = default(Polyline);
+19643: 			double num42 = default(double);
+19644: 			_008F_008E obj14 = default(_008F_008E);
+19645: 			double num44 = default(double);
+19646: 			_008F_008E obj15 = default(_008F_008E);
+19647: 			double num45 = default(double);
+19648: 			Arc val18 = default(Arc);
+19649: 			Arc val19 = default(Arc);
+19650: 			Polyline val20 = default(Polyline);
+19651: 			Arc val21 = default(Arc);
+19652: 			Arc val22 = default(Arc);
+19653: 			Arc val23 = default(Arc);
+19654: 			Arc val24 = default(Arc);
+19655: 			Arc val25 = default(Arc);
+19656: 			while (true /* original-file-bool-offset:424 */)
+19657: 			{
+19658: 				while (true)
+19659: 				{
+19660: 					_008F_008A._0090_009A[] array = new _008F_008A._0090_009A[6]
+19661: 					{
+19662: 						new _008F_008A._0090_009A(_0087_008F_009A, "导航台 X坐标不能为空。" /* string-offset:3552 */),
+19663: 						new _008F_008A._0090_009A(_0087_008F_009B, "导航台 Y坐标不能为空。" /* string-offset:3556 */),
+19664: 						new _008F_008A._0090_009A(_0087_008F_0093, "IF点 X坐标不能为空。" /* string-offset:3560 */),
+19665: 						new _008F_008A._0090_009A(_0087_008F_0094, "IF点 Y坐标不能为空。" /* string-offset:3564 */),
+19666: 						new _008F_008A._0090_009A(_0087_008F_008D, "IAF点 X坐标不能为空}。" /* string-offset:3568 */),
+19667: 						new _008F_008A._0090_009A(_0087_008F_008C, "IAF点 Y坐标不能为空。" /* string-offset:3572 */)
+19668: 					};
+19669: 					while (true)
+19670: 					{
+19671: 						int num2 = 0;
+19672: 						num = 31;
+19673: 						while (true)
+19674: 						{
+19675: 							if (num2 < array.Length)
+19676: 							{
+19677: 								obj = array[num2];
+19678: 								goto IL_1ec2;
+19679: 							}
+19680: 							goto IL_111e;
+19681: 							IL_0d80:
+19682: 							((Point3d)(ref val))._002Ector(obj2.X + (num3 + num4 - num5) * Math.Cos(num6 - num7), obj2.Y + (num3 + num4 - num5) * Math.Sin(num6 - num7), 0.0);
+19683: 							num8 = Math.Atan2(((Point3d)(ref val)).Y - obj2.Y, ((Point3d)(ref val)).X - obj2.X);
+19684: 							num = 82;
+19685: 							goto IL_0df0;
+19686: 							IL_1ec2:
+19687: 							if (!_008F_008A._008B_0088_0086(obj._008B_008F_008E, obj._008B_008F_008F))
+19688: 							{
+19689: 								num = 105;
+19690: 								if (_0087_009C())
+19691: 								{
+19692: 									goto IL_1e9e;
+19693: 								}
+19694: 								return;
+19695: 							}
+19696: 							num2++;
+19697: 							continue;
+19698: 							IL_0df0:
+19699: 							num9 = -9260;
+19700: 							goto IL_0df7;
+19701: 							IL_074e:
+19702: 							num10 = Math.Asin(num11 / (num12 + num11));
+19703: 							goto IL_075d;
+19704: 							IL_1e9e:
+19705: 							obj3.X = Convert.ToDouble(_0087_008F_0093.Text);
+19706: 							num = 88;
+19707: 							goto IL_1e2c;
+19708: 							IL_1e2c:
+19709: 							obj3.Y = Convert.ToDouble(_0087_008F_0094.Text);
+19710: 							obj4.X = Convert.ToDouble(_0087_008F_008D.Text);
+19711: 							num = 29;
+19712: 							goto IL_1e0b;
+19713: 							IL_1e0b:
+19714: 							obj4.Y = Convert.ToDouble(_0087_008F_008C.Text);
+19715: 							num = 93;
+19716: 							goto IL_1de0;
+19717: 							IL_1de0:
+19718: 							num13 = Math.Atan2(obj4.Y - obj2.Y, obj4.X - obj2.X);
+19719: 							num = 86;
+19720: 							goto IL_1dae;
+19721: 							IL_1dae:
+19722: 							num6 = Math.Atan2(obj3.Y - obj2.Y, obj3.X - obj2.X);
+19723: 							num13 = ((!(num13 < 0.0)) ? num13 : (num13 + Math.PI * 2.0));
+19724: 							if (!(num6 < 0.0))
+19725: 							{
+19726: 								num = 66;
+19727: 								goto IL_1d97;
+19728: 							}
+19729: 							double num14 = num6 + Math.PI * 2.0;
+19730: 							goto IL_1d99;
+19731: 							IL_07c5:
+19732: 							num15 = Math.Atan(num5 / num3);
+19733: 							num = 17;
+19734: 							goto IL_07da;
+19735: 							IL_07da:
+19736: 							((Point3d)(ref val2))._002Ector(obj2.X + (num3 + num4 - num5) * Math.Cos(num6 + num15), obj2.Y + (num3 + num4 - num5) * Math.Sin(num6 + num15), 0.0);
+19737: 							num16 = Math.Atan2(((Point3d)(ref val2)).Y - obj2.Y, ((Point3d)(ref val2)).X - obj2.X);
+19738: 							num17 = -9260;
+19739: 							goto IL_0848;
+19740: 							IL_075d:
+19741: 							((Point3d)(ref val3))._002Ector(obj2.X + (num12 + num11) * Math.Cos(num13 - num10), obj2.Y + (num12 + num11) * Math.Sin(num13 - num10), 0.0);
+19742: 							num18 = Math.Atan2(obj2.Y - ((Point3d)(ref val3)).Y, obj2.X - ((Point3d)(ref val3)).X);
+19743: 							num = 16;
+19744: 							goto IL_07c5;
+19745: 							IL_053c:
+19746: 							if (num6 - num13 <= Math.PI)
+19747: 							{
+19748: 								num = 45;
+19749: 								goto IL_04b0;
+19750: 							}
+19751: 							num19 = Math.Asin(num11 / (num12 + num11));
+19752: 							num = 54;
+19753: 							if (_0087_009B())
+19754: 							{
+19755: 								goto IL_1326;
+19756: 							}
+19757: 							goto IL_20bc;
+19758: 							IL_0a7c:
+19759: 							Polyline obj5 = val4;
+19760: 							Point3d val5 = ((Curve)val6).EndPoint;
+19761: 							double num20 = ((Point3d)(ref val5)).X;
+19762: 							val5 = ((Curve)val6).EndPoint;
+19763: 							obj5.AddVertexAt(2, new Point2d(num20, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val6.StartAngle, val6.EndAngle), 0.0, 0.0);
+19764: 							Polyline obj6 = val4;
+19765: 							val5 = ((Curve)val6).StartPoint;
+19766: 							double num21 = ((Point3d)(ref val5)).X;
+19767: 							val5 = ((Curve)val6).StartPoint;
+19768: 							obj6.AddVertexAt(3, new Point2d(num21, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+19769: 							num = 27;
+19770: 							if (!_0087_009C())
+19771: 							{
+19772: 								goto IL_0b2a;
+19773: 							}
+19774: 							goto IL_1b41;
+19775: 							IL_1d99:
+19776: 							num6 = num14;
+19777: 							if (num13 != num6)
+19778: 							{
+19779: 								database = Application.DocumentManager.MdiActiveDocument.Database;
+19780: 								num = 50;
+19781: 								goto IL_1d78;
+19782: 							}
+19783: 							num = 72;
+19784: 							return;
+19785: 							IL_16f1:
+19786: 							Polyline obj7 = val7;
+19787: 							val5 = ((Curve)val8).EndPoint;
+19788: 							double num22 = ((Point3d)(ref val5)).X;
+19789: 							val5 = ((Curve)val8).EndPoint;
+19790: 							obj7.AddVertexAt(0, new Point2d(num22, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val8.StartAngle, val8.EndAngle), 0.0, 0.0);
+19791: 							Polyline obj8 = val7;
+19792: 							val5 = ((Curve)val8).StartPoint;
+19793: 							double num23 = ((Point3d)(ref val5)).X;
+19794: 							val5 = ((Curve)val8).StartPoint;
+19795: 							obj8.AddVertexAt(1, new Point2d(num23, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+19796: 							num = 7;
+19797: 							goto IL_1795;
+19798: 							IL_1326:
+19799: 							((Point3d)(ref val9))._002Ector(obj2.X + (num12 + num11) * Math.Cos(num13 - num19), obj2.Y + (num12 + num11) * Math.Sin(num13 - num19), 0.0);
+19800: 							num24 = Math.Atan2(obj2.Y - ((Point3d)(ref val9)).Y, obj2.X - ((Point3d)(ref val9)).X);
+19801: 							num25 = Math.Atan(num5 / num3);
+19802: 							goto IL_1391;
+19803: 							IL_1d78:
+19804: 							num3 = _008F_008E._008B_0088_009E(obj3, obj2);
+19805: 							num4 = 3704.0;
+19806: 							num = 85;
+19807: 							goto IL_1d6f;
+19808: 							IL_1d6f:
+19809: 							num12 = num3 + num4;
+19810: 							goto IL_1cfe;
+19811: 							IL_1cfe:
+19812: 							num5 = (2.0 * num3 * num4 + num4 * num4) / (2.0 * num3 + 2.0 * num4);
+19813: 							num11 = (2.0 * num3 * num4 + 3.0 * num4 * num4) / (2.0 * num3 + 2.0 * num4);
+19814: 							goto IL_1ce9;
+19815: 							IL_1ce9:
+19816: 							num26 = 1000.0;
+19817: 							if (!(num13 < num6))
+19818: 							{
+19819: 								if (num13 - num6 <= Math.PI)
+19820: 								{
+19821: 									num = 78;
+19822: 									goto IL_074e;
+19823: 								}
+19824: 								num27 = Math.Asin(num11 / (num12 + num11));
+19825: 								((Point3d)(ref val10))._002Ector(obj2.X + (num12 + num11) * Math.Cos(num13 + num27), obj2.Y + (num12 + num11) * Math.Sin(num13 + num27), 0.0);
+19826: 								num = 49;
+19827: 								goto IL_1ca0;
+19828: 							}
+19829: 							num = 35;
+19830: 							if (!_0087_009C())
+19831: 							{
+19832: 								goto IL_053c;
+19833: 							}
+19834: 							goto IL_0eb8;
+19835: 							IL_1391:
+19836: 							((Point3d)(ref val11))._002Ector(obj2.X + (num3 + num4 - num5) * Math.Cos(num6 + num25), obj2.Y + (num3 + num4 - num5) * Math.Sin(num6 + num25), 0.0);
+19837: 							num28 = Math.Atan2(((Point3d)(ref val11)).Y - obj2.Y, ((Point3d)(ref val11)).X - obj2.X);
+19838: 							num = 70;
+19839: 							goto IL_1401;
+19840: 							IL_1401:
+19841: 							num29 = -9260;
+19842: 							num = 79;
+19843: 							goto IL_1411;
+19844: 							IL_20bc:
+19845: 							num30 = (num6 + num13) / 2.0 + Math.PI;
+19846: 							obj9 = new _008F_008E();
+19847: 							num = 20;
+19848: 							goto IL_20e6;
+19849: 							IL_20e6:
+19850: 							obj9.X = obj2.X + num12 * Math.Cos(num30);
+19851: 							obj9.Y = obj2.Y + num12 * Math.Sin(num30);
+19852: 							double num31 = Math.Round(num12 / 1852.0, 1, MidpointRounding.AwayFromZero);
+19853: 							_008B._0088_008D((Entity)new DBText
+19854: 							{
+19855: 								Height = num26,
+19856: 								TextString = "D" /* string-offset:1644 */ + num31.ToString("0.0" /* string-offset:1636 */) + _0087_0090_008A.Text,
+19857: 								HorizontalMode = (TextHorizontalMode)1,
+19858: 								VerticalMode = (TextVerticalMode)1,
+19859: 								AlignmentPoint = obj9._008C_0089(),
+19860: 								Rotation = num30 - Math.PI / 2.0
+19861: 							}, database);
+19862: 							num = 108;
+19863: 							return;
+19864: 							IL_1ca0:
+19865: 							num32 = Math.Atan2(obj2.Y - ((Point3d)(ref val10)).Y, obj2.X - ((Point3d)(ref val10)).X);
+19866: 							num = 26;
+19867: 							goto IL_1c21;
+19868: 							IL_1c21:
+19869: 							num33 = Math.Atan(num5 / num3);
+19870: 							((Point3d)(ref val12))._002Ector(obj2.X + (num3 + num4 - num5) * Math.Cos(num6 - num33), obj2.Y + (num3 + num4 - num5) * Math.Sin(num6 - num33), 0.0);
+19871: 							num34 = Math.Atan2(((Point3d)(ref val12)).Y - obj2.Y, ((Point3d)(ref val12)).X - obj2.X);
+19872: 							num35 = -9260;
+19873: 							goto IL_1c10;
+19874: 							IL_1c10:
+19875: 							if (num35 <= 9260)
+19876: 							{
+19877: 								val13 = new Arc(val10, num11 - (double)num35, num32, num13 - Math.PI / 2.0);
+19878: 								num = 59;
+19879: 								goto IL_1bf1;
+19880: 							}
+19881: 							num = 90;
+19882: 							goto IL_20a3;
+19883: 							IL_04b0:
+19884: 							num36 = Math.Asin(num11 / (num12 + num11));
+19885: 							num = 11;
+19886: 							goto IL_04c8;
+19887: 							IL_04c8:
+19888: 							((Point3d)(ref val14))._002Ector(obj2.X + (num12 + num11) * Math.Cos(num13 + num36), obj2.Y + (num12 + num11) * Math.Sin(num13 + num36), 0.0);
+19889: 							num37 = Math.Atan2(obj2.Y - ((Point3d)(ref val14)).Y, obj2.X - ((Point3d)(ref val14)).X);
+19890: 							num = 22;
+19891: 							if (_0087_009B())
+19892: 							{
+19893: 								goto IL_055c;
+19894: 							}
+19895: 							goto IL_208e;
+19896: 							IL_1bf1:
+19897: 							val15 = new Arc(val12, num5 + (double)num35, num34, num6 + Math.PI / 2.0);
+19898: 							goto IL_1bc4;
+19899: 							IL_1bc4:
+19900: 							val16 = new Arc(obj2._008C_0089(), num12 + (double)num35, num13 + num27, num6 - num33);
+19901: 							val17 = new Polyline();
+19902: 							if (num35 >= 0)
+19903: 							{
+19904: 								if (num35 == 0)
+19905: 								{
+19906: 									Polyline obj10 = val17;
+19907: 									val5 = ((Curve)val13).EndPoint;
+19908: 									double num38 = ((Point3d)(ref val5)).X;
+19909: 									val5 = ((Curve)val13).EndPoint;
+19910: 									obj10.AddVertexAt(0, new Point2d(num38, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val13.StartAngle, val13.EndAngle), 0.0, 0.0);
+19911: 									Polyline obj11 = val17;
+19912: 									val5 = ((Curve)val13).StartPoint;
+19913: 									double num39 = ((Point3d)(ref val5)).X;
+19914: 									val5 = ((Curve)val13).StartPoint;
+19915: 									obj11.AddVertexAt(1, new Point2d(num39, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+19916: 									Polyline obj12 = val17;
+19917: 									val5 = ((Curve)val16).StartPoint;
+19918: 									double num40 = ((Point3d)(ref val5)).X;
+19919: 									val5 = ((Curve)val16).StartPoint;
+19920: 									obj12.AddVertexAt(2, new Point2d(num40, ((Point3d)(ref val5)).Y), _0087_008E_008B(val16.StartAngle, val16.EndAngle), 0.0, 0.0);
+19921: 									Polyline obj13 = val17;
+19922: 									val5 = ((Curve)val16).EndPoint;
+19923: 									double num41 = ((Point3d)(ref val5)).X;
+19924: 									val5 = ((Curve)val16).EndPoint;
+19925: 									obj13.AddVertexAt(3, new Point2d(num41, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+19926: 									num = 1;
+19927: 									goto IL_18bb;
+19928: 								}
+19929: 								if (num35 > 0)
+19930: 								{
+19931: 									num = 12;
+19932: 									goto IL_1912;
+19933: 								}
+19934: 								goto IL_1b9f;
+19935: 							}
+19936: 							num = 0;
+19937: 							if (_0087_009C())
+19938: 							{
+19939: 								goto IL_0d6b;
+19940: 							}
+19941: 							goto IL_1863;
+19942: 							IL_208e:
+19943: 							num42 = (num6 + num13) / 2.0;
+19944: 							goto IL_21b1;
+19945: 							IL_21b1:
+19946: 							obj14 = new _008F_008E();
+19947: 							goto IL_21b8;
+19948: 							IL_21b8:
+19949: 							obj14.X = obj2.X + num12 * Math.Cos(num42);
+19950: 							obj14.Y = obj2.Y + num12 * Math.Sin(num42);
+19951: 							goto IL_21e8;
+19952: 							IL_21e8:
+19953: 							double num43 = Math.Round(num12 / 1852.0, 1, MidpointRounding.AwayFromZero);
+19954: 							_008B._0088_008D((Entity)new DBText
+19955: 							{
+19956: 								Height = num26,
+19957: 								TextString = "D" /* string-offset:1644 */ + num43.ToString("0.0" /* string-offset:1636 */) + _0087_0090_008A.Text,
+19958: 								HorizontalMode = (TextHorizontalMode)1,
+19959: 								VerticalMode = (TextVerticalMode)1,
+19960: 								AlignmentPoint = obj14._008C_0089(),
+19961: 								Rotation = num42 - Math.PI / 2.0
+19962: 							}, database);
+19963: 							return;
+19964: 							IL_2276:
+19965: 							_008B._0088_008D((Entity)new DBText
+19966: 							{
+19967: 								Height = num26,
+19968: 								TextString = "D" /* string-offset:1644 */ + num44.ToString("0.0" /* string-offset:1636 */) + _0087_0090_008A.Text,
+19969: 								HorizontalMode = (TextHorizontalMode)1,
+19970: 								VerticalMode = (TextVerticalMode)1,
+19971: 								AlignmentPoint = obj15._008C_0089(),
+19972: 								Rotation = num45 - Math.PI / 2.0
+19973: 							}, database);
+19974: 							return;
+19975: 							IL_1b9f:
+19976: 							val17.Closed = false;
+19977: 							goto IL_1835;
+19978: 							IL_1835:
+19979: 							_008B._0088_008D((Entity)(object)val17, database);
+19980: 							num35 += 4630;
+19981: 							num = 91;
+19982: 							if (_0087_009C())
+19983: 							{
+19984: 								goto IL_17e8;
+19985: 							}
+19986: 							goto IL_1c10;
+19987: 							IL_17e8:
+19988: 							Polyline obj16 = val7;
+19989: 							val5 = ((Curve)val18).StartPoint;
+19990: 							double num46 = ((Point3d)(ref val5)).X;
+19991: 							val5 = ((Curve)val18).StartPoint;
+19992: 							obj16.AddVertexAt(3, new Point2d(num46, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+19993: 							goto IL_16db;
+19994: 							IL_16db:
+19995: 							val7.Closed = false;
+19996: 							num = 100;
+19997: 							goto IL_1422;
+19998: 							IL_1422:
+19999: 							_008B._0088_008D((Entity)(object)val7, database);
+20000: 							num29 += 4630;
+20001: 							goto IL_1411;
+20002: 							IL_1411:
+20003: 							if (num29 <= 9260)
+20004: 							{
+20005: 								val19 = new Arc(val9, num11 - (double)num29, num13 + Math.PI / 2.0, num24);
+20006: 								num = 94;
+20007: 								goto IL_12dc;
+20008: 							}
+20009: 							goto IL_22ef;
+20010: 							IL_14fb:
+20011: 							Polyline obj17 = val7;
+20012: 							val5 = ((Curve)val19).StartPoint;
+20013: 							double num47 = ((Point3d)(ref val5)).X;
+20014: 							val5 = ((Curve)val19).StartPoint;
+20015: 							obj17.AddVertexAt(0, new Point2d(num47, ((Point3d)(ref val5)).Y), _0087_008E_008B(val19.StartAngle, val19.EndAngle), 0.0, 0.0);
+20016: 							goto IL_154d;
+20017: 							IL_12dc:
+20018: 							val18 = new Arc(val11, num5 + (double)num29, num6 - Math.PI / 2.0, num28);
+20019: 							num = 67;
+20020: 							goto IL_12ae;
+20021: 							IL_12ae:
+20022: 							val8 = new Arc(obj2._008C_0089(), num12 + (double)num29, num6 + num25, num13 - num19);
+20023: 							val7 = new Polyline();
+20024: 							num = 103;
+20025: 							goto IL_12a1;
+20026: 							IL_12a1:
+20027: 							if (num29 < 0)
+20028: 							{
+20029: 								Polyline obj18 = val7;
+20030: 								val5 = ((Curve)val19).StartPoint;
+20031: 								double num48 = ((Point3d)(ref val5)).X;
+20032: 								val5 = ((Curve)val19).StartPoint;
+20033: 								obj18.AddVertexAt(0, new Point2d(num48, ((Point3d)(ref val5)).Y), _0087_008E_008B(val19.StartAngle, val19.EndAngle), 0.0, 0.0);
+20034: 								Polyline obj19 = val7;
+20035: 								val5 = ((Curve)val19).EndPoint;
+20036: 								double num49 = ((Point3d)(ref val5)).X;
+20037: 								val5 = ((Curve)val19).EndPoint;
+20038: 								obj19.AddVertexAt(1, new Point2d(num49, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20039: 								num = 25;
+20040: 								if (!_0087_009C())
+20041: 								{
+20042: 									goto IL_055c;
+20043: 								}
+20044: 								goto IL_11f8;
+20045: 							}
+20046: 							if (num29 == 0)
+20047: 							{
+20048: 								num = 76;
+20049: 								goto IL_14fb;
+20050: 							}
+20051: 							if (num29 <= 0)
+20052: 							{
+20053: 								goto IL_16db;
+20054: 							}
+20055: 							goto IL_16f1;
+20056: 							IL_154d:
+20057: 							Polyline obj20 = val7;
+20058: 							val5 = ((Curve)val19).EndPoint;
+20059: 							double num50 = ((Point3d)(ref val5)).X;
+20060: 							val5 = ((Curve)val19).EndPoint;
+20061: 							obj20.AddVertexAt(1, new Point2d(num50, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20062: 							goto IL_1595;
+20063: 							IL_11f8:
+20064: 							Polyline obj21 = val20;
+20065: 							val5 = ((Curve)val21).EndPoint;
+20066: 							double num51 = ((Point3d)(ref val5)).X;
+20067: 							val5 = ((Curve)val21).EndPoint;
+20068: 							obj21.AddVertexAt(0, new Point2d(num51, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val21.StartAngle, val21.EndAngle), 0.0, 0.0);
+20069: 							Polyline obj22 = val20;
+20070: 							val5 = ((Curve)val21).StartPoint;
+20071: 							double num52 = ((Point3d)(ref val5)).X;
+20072: 							val5 = ((Curve)val21).StartPoint;
+20073: 							obj22.AddVertexAt(1, new Point2d(num52, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20074: 							num = 48;
+20075: 							goto IL_0369;
+20076: 							IL_0369:
+20077: 							Polyline obj23 = val20;
+20078: 							val5 = ((Curve)val22).StartPoint;
+20079: 							double num53 = ((Point3d)(ref val5)).X;
+20080: 							val5 = ((Curve)val22).StartPoint;
+20081: 							obj23.AddVertexAt(2, new Point2d(num53, ((Point3d)(ref val5)).Y), _0087_008E_008B(val22.StartAngle, val22.EndAngle), 0.0, 0.0);
+20082: 							_0087_009B();
+20083: 							if (!_0087_009C())
+20084: 							{
+20085: 								num = 38;
+20086: 								goto IL_113d;
+20087: 							}
+20088: 							num = 14;
+20089: 							if (!_0087_009B())
+20090: 							{
+20091: 								goto IL_1b9f;
+20092: 							}
+20093: 							goto IL_22ef;
+20094: 							IL_0b2a:
+20095: 							Polyline obj24 = val4;
+20096: 							val5 = ((Curve)val23).EndPoint;
+20097: 							double num54 = ((Point3d)(ref val5)).X;
+20098: 							val5 = ((Curve)val23).EndPoint;
+20099: 							obj24.AddVertexAt(4, new Point2d(num54, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val23.StartAngle, val23.EndAngle), 0.0, 0.0);
+20100: 							num = 34;
+20101: 							goto IL_0b86;
+20102: 							IL_113d:
+20103: 							Polyline obj25 = val20;
+20104: 							val5 = ((Curve)val22).EndPoint;
+20105: 							double num55 = ((Point3d)(ref val5)).X;
+20106: 							val5 = ((Curve)val22).EndPoint;
+20107: 							obj25.AddVertexAt(3, new Point2d(num55, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20108: 							Polyline obj26 = val20;
+20109: 							val5 = ((Curve)val24).StartPoint;
+20110: 							double num56 = ((Point3d)(ref val5)).X;
+20111: 							val5 = ((Curve)val24).StartPoint;
+20112: 							obj26.AddVertexAt(4, new Point2d(num56, ((Point3d)(ref val5)).Y), _0087_008E_008B(val24.StartAngle, val24.EndAngle), 0.0, 0.0);
+20113: 							num = 53;
+20114: 							goto IL_10d4;
+20115: 							IL_10d4:
+20116: 							Polyline obj27 = val20;
+20117: 							val5 = ((Curve)val24).EndPoint;
+20118: 							double num57 = ((Point3d)(ref val5)).X;
+20119: 							val5 = ((Curve)val24).EndPoint;
+20120: 							obj27.AddVertexAt(5, new Point2d(num57, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20121: 							goto IL_10af;
+20122: 							IL_10af:
+20123: 							val20.Closed = false;
+20124: 							_008B._0088_008D((Entity)(object)val20, database);
+20125: 							num = 43;
+20126: 							goto IL_0e08;
+20127: 							IL_0e08:
+20128: 							num9 += 4630;
+20129: 							goto IL_0df7;
+20130: 							IL_0df7:
+20131: 							if (num9 <= 9260)
+20132: 							{
+20133: 								val21 = new Arc(val14, num11 - (double)num9, num37, num13 - Math.PI / 2.0);
+20134: 								val24 = new Arc(val, num5 + (double)num9, num8, num6 + Math.PI / 2.0);
+20135: 								num = 51;
+20136: 								if (_0087_009C())
+20137: 								{
+20138: 									break;
+20139: 								}
+20140: 								goto IL_0d3b;
+20141: 							}
+20142: 							if (_0087_0090_0089.Checked)
+20143: 							{
+20144: 								num = 74;
+20145: 								goto IL_208e;
+20146: 							}
+20147: 							return;
+20148: 							IL_1b41:
+20149: 							Polyline obj28 = val17;
+20150: 							val5 = ((Curve)val15).EndPoint;
+20151: 							double num58 = ((Point3d)(ref val5)).X;
+20152: 							val5 = ((Curve)val15).EndPoint;
+20153: 							obj28.AddVertexAt(5, new Point2d(num58, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20154: 							goto IL_1b9f;
+20155: 							IL_0f60:
+20156: 							Polyline obj29 = val20;
+20157: 							val5 = ((Curve)val22).StartPoint;
+20158: 							double num59 = ((Point3d)(ref val5)).X;
+20159: 							val5 = ((Curve)val22).StartPoint;
+20160: 							obj29.AddVertexAt(0, new Point2d(num59, ((Point3d)(ref val5)).Y), _0087_008E_008B(val22.StartAngle, val22.EndAngle), 0.0, 0.0);
+20161: 							num = 89;
+20162: 							goto IL_0fbb;
+20163: 							IL_1595:
+20164: 							Polyline obj30 = val7;
+20165: 							val5 = ((Curve)val8).EndPoint;
+20166: 							double num60 = ((Point3d)(ref val5)).X;
+20167: 							val5 = ((Curve)val8).EndPoint;
+20168: 							obj30.AddVertexAt(2, new Point2d(num60, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val8.StartAngle, val8.EndAngle), 0.0, 0.0);
+20169: 							Polyline obj31 = val7;
+20170: 							val5 = ((Curve)val8).StartPoint;
+20171: 							double num61 = ((Point3d)(ref val5)).X;
+20172: 							val5 = ((Curve)val8).StartPoint;
+20173: 							obj31.AddVertexAt(3, new Point2d(num61, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20174: 							Polyline obj32 = val7;
+20175: 							val5 = ((Curve)val18).EndPoint;
+20176: 							double num62 = ((Point3d)(ref val5)).X;
+20177: 							val5 = ((Curve)val18).EndPoint;
+20178: 							obj32.AddVertexAt(4, new Point2d(num62, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val18.StartAngle, val18.EndAngle), 0.0, 0.0);
+20179: 							num = 42;
+20180: 							goto IL_168c;
+20181: 							IL_0d3b:
+20182: 							val22 = new Arc(obj2._008C_0089(), num12 + (double)num9, num13 + num36, num6 - num7);
+20183: 							val20 = new Polyline();
+20184: 							if (num9 >= 0)
+20185: 							{
+20186: 								if (num9 != 0)
+20187: 								{
+20188: 									if (num9 > 0)
+20189: 									{
+20190: 										num = 2;
+20191: 										if (_0087_009C())
+20192: 										{
+20193: 											goto IL_0c48;
+20194: 										}
+20195: 										goto IL_0f60;
+20196: 									}
+20197: 									goto IL_10af;
+20198: 								}
+20199: 								num = 30;
+20200: 								if (!_0087_009C())
+20201: 								{
+20202: 									goto IL_11f8;
+20203: 								}
+20204: 								goto IL_1835;
+20205: 							}
+20206: 							Polyline obj33 = val20;
+20207: 							val5 = ((Curve)val21).EndPoint;
+20208: 							double num63 = ((Point3d)(ref val5)).X;
+20209: 							val5 = ((Curve)val21).EndPoint;
+20210: 							obj33.AddVertexAt(0, new Point2d(num63, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val21.StartAngle, val21.EndAngle), 0.0, 0.0);
+20211: 							num = 33;
+20212: 							goto IL_0e70;
+20213: 							IL_0fbb:
+20214: 							Polyline obj34 = val20;
+20215: 							val5 = ((Curve)val22).EndPoint;
+20216: 							double num64 = ((Point3d)(ref val5)).X;
+20217: 							val5 = ((Curve)val22).EndPoint;
+20218: 							obj34.AddVertexAt(1, new Point2d(num64, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20219: 							num = 101;
+20220: 							goto IL_100c;
+20221: 							IL_100c:
+20222: 							Polyline obj35 = val20;
+20223: 							val5 = ((Curve)val24).StartPoint;
+20224: 							double num65 = ((Point3d)(ref val5)).X;
+20225: 							val5 = ((Curve)val24).StartPoint;
+20226: 							obj35.AddVertexAt(2, new Point2d(num65, ((Point3d)(ref val5)).Y), _0087_008E_008B(val24.StartAngle, val24.EndAngle), 0.0, 0.0);
+20227: 							Polyline obj36 = val20;
+20228: 							val5 = ((Curve)val24).EndPoint;
+20229: 							double num66 = ((Point3d)(ref val5)).X;
+20230: 							val5 = ((Curve)val24).EndPoint;
+20231: 							obj36.AddVertexAt(3, new Point2d(num66, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20232: 							num = 97;
+20233: 							goto IL_10af;
+20234: 							IL_0b86:
+20235: 							Polyline obj37 = val4;
+20236: 							val5 = ((Curve)val23).StartPoint;
+20237: 							double num67 = ((Point3d)(ref val5)).X;
+20238: 							val5 = ((Curve)val23).StartPoint;
+20239: 							obj37.AddVertexAt(5, new Point2d(num67, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20240: 							goto IL_0bd5;
+20241: 							IL_22ef:
+20242: 							if (_0087_0090_0089.Checked)
+20243: 							{
+20244: 								num = 83;
+20245: 								goto IL_2308;
+20246: 							}
+20247: 							return;
+20248: 							IL_0c48:
+20249: 							Polyline obj38 = val4;
+20250: 							val5 = ((Curve)val6).EndPoint;
+20251: 							double num68 = ((Point3d)(ref val5)).X;
+20252: 							val5 = ((Curve)val6).EndPoint;
+20253: 							obj38.AddVertexAt(0, new Point2d(num68, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val6.StartAngle, val6.EndAngle), 0.0, 0.0);
+20254: 							Polyline obj39 = val4;
+20255: 							val5 = ((Curve)val6).StartPoint;
+20256: 							double num69 = ((Point3d)(ref val5)).X;
+20257: 							val5 = ((Curve)val6).StartPoint;
+20258: 							obj39.AddVertexAt(1, new Point2d(num69, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20259: 							Polyline obj40 = val4;
+20260: 							val5 = ((Curve)val23).EndPoint;
+20261: 							double num70 = ((Point3d)(ref val5)).X;
+20262: 							val5 = ((Curve)val23).EndPoint;
+20263: 							obj40.AddVertexAt(2, new Point2d(num70, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val23.StartAngle, val23.EndAngle), 0.0, 0.0);
+20264: 							goto IL_0bf5;
+20265: 							IL_0bf5:
+20266: 							Polyline obj41 = val4;
+20267: 							val5 = ((Curve)val23).StartPoint;
+20268: 							double num71 = ((Point3d)(ref val5)).X;
+20269: 							val5 = ((Curve)val23).StartPoint;
+20270: 							obj41.AddVertexAt(3, new Point2d(num71, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20271: 							num = 3;
+20272: 							goto IL_0bd5;
+20273: 							IL_0bd5:
+20274: 							val4.Closed = false;
+20275: 							num = 8;
+20276: 							if (!_0087_009C())
+20277: 							{
+20278: 								goto IL_0859;
+20279: 							}
+20280: 							goto IL_1aee;
+20281: 							IL_0859:
+20282: 							_008B._0088_008D((Entity)(object)val4, database);
+20283: 							num17 += 4630;
+20284: 							goto IL_0848;
+20285: 							IL_0848:
+20286: 							if (num17 <= 9260)
+20287: 							{
+20288: 								val25 = new Arc(val3, num11 - (double)num17, num13 + Math.PI / 2.0, num18);
+20289: 								val23 = new Arc(val2, num5 + (double)num17, num6 - Math.PI / 2.0, num16);
+20290: 								num = 95;
+20291: 								goto IL_071e;
+20292: 							}
+20293: 							if (_0087_0090_0089.Checked)
+20294: 							{
+20295: 								num45 = (num6 + num13) / 2.0;
+20296: 								num = 71;
+20297: 								goto IL_202a;
+20298: 							}
+20299: 							return;
+20300: 							IL_1795:
+20301: 							Polyline obj42 = val7;
+20302: 							val5 = ((Curve)val18).EndPoint;
+20303: 							double num72 = ((Point3d)(ref val5)).X;
+20304: 							val5 = ((Curve)val18).EndPoint;
+20305: 							obj42.AddVertexAt(2, new Point2d(num72, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val18.StartAngle, val18.EndAngle), 0.0, 0.0);
+20306: 							goto IL_17e8;
+20307: 							IL_09d0:
+20308: 							Polyline obj43 = val4;
+20309: 							val5 = ((Curve)val25).StartPoint;
+20310: 							double num73 = ((Point3d)(ref val5)).X;
+20311: 							val5 = ((Curve)val25).StartPoint;
+20312: 							obj43.AddVertexAt(0, new Point2d(num73, ((Point3d)(ref val5)).Y), _0087_008E_008B(val25.StartAngle, val25.EndAngle), 0.0, 0.0);
+20313: 							num = 81;
+20314: 							goto IL_0a2b;
+20315: 							IL_2308:
+20316: 							double num74 = (num6 + num13) / 2.0 + Math.PI;
+20317: 							_008F_008E obj44 = new _008F_008E();
+20318: 							obj44.X = obj2.X + num12 * Math.Cos(num74);
+20319: 							obj44.Y = obj2.Y + num12 * Math.Sin(num74);
+20320: 							double num75 = Math.Round(num12 / 1852.0, 1, MidpointRounding.AwayFromZero);
+20321: 							_008B._0088_008D((Entity)new DBText
+20322: 							{
+20323: 								Height = num26,
+20324: 								TextString = "D" /* string-offset:1644 */ + num75.ToString("0.0" /* string-offset:1636 */) + _0087_0090_008A.Text,
+20325: 								HorizontalMode = (TextHorizontalMode)1,
+20326: 								VerticalMode = (TextVerticalMode)1,
+20327: 								AlignmentPoint = obj44._008C_0089(),
+20328: 								Rotation = num74 - Math.PI / 2.0
+20329: 							}, database);
+20330: 							return;
+20331: 							IL_071e:
+20332: 							val6 = new Arc(obj2._008C_0089(), num12 + (double)num17, num6 + num15, num13 - num10);
+20333: 							val4 = new Polyline();
+20334: 							if (num17 < 0)
+20335: 							{
+20336: 								num = 52;
+20337: 								if (!_0087_009C())
+20338: 								{
+20339: 									goto IL_055c;
+20340: 								}
+20341: 								goto IL_2276;
+20342: 							}
+20343: 							if (num17 == 0)
+20344: 							{
+20345: 								num = 58;
+20346: 								goto IL_09d0;
+20347: 							}
+20348: 							if (num17 <= 0)
+20349: 							{
+20350: 								goto IL_0bd5;
+20351: 							}
+20352: 							goto IL_0c48;
+20353: 							IL_0a2b:
+20354: 							Polyline obj45 = val4;
+20355: 							val5 = ((Curve)val25).EndPoint;
+20356: 							double num76 = ((Point3d)(ref val5)).X;
+20357: 							val5 = ((Curve)val25).EndPoint;
+20358: 							obj45.AddVertexAt(1, new Point2d(num76, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20359: 							num = 15;
+20360: 							goto IL_0a7c;
+20361: 							IL_055c:
+20362: 							switch (num)
+20363: 							{
+20364: 							case 48:
+20365: 								break;
+20366: 							case 45:
+20367: 								goto IL_04b0;
+20368: 							case 11:
+20369: 								goto IL_04c8;
+20370: 							case 35:
+20371: 								goto IL_053c;
+20372: 							case 95:
+20373: 								goto IL_071e;
+20374: 							case 78:
+20375: 								goto IL_074e;
+20376: 							case 39:
+20377: 								goto IL_075d;
+20378: 							case 16:
+20379: 								goto IL_07c5;
+20380: 							case 17:
+20381: 								goto IL_07da;
+20382: 							case 75:
+20383: 								goto IL_0848;
+20384: 							case 8:
+20385: 								goto IL_0859;
+20386: 							case 52:
+20387: 							{
+20388: 								Polyline obj48 = val4;
+20389: 								val5 = ((Curve)val25).StartPoint;
+20390: 								double num79 = ((Point3d)(ref val5)).X;
+20391: 								val5 = ((Curve)val25).StartPoint;
+20392: 								obj48.AddVertexAt(0, new Point2d(num79, ((Point3d)(ref val5)).Y), _0087_008E_008B(val25.StartAngle, val25.EndAngle), 0.0, 0.0);
+20393: 								num = 55;
+20394: 								goto case 55;
+20395: 							}
+20396: 							case 55:
+20397: 							{
+20398: 								Polyline obj49 = val4;
+20399: 								val5 = ((Curve)val25).EndPoint;
+20400: 								double num80 = ((Point3d)(ref val5)).X;
+20401: 								val5 = ((Curve)val25).EndPoint;
+20402: 								obj49.AddVertexAt(1, new Point2d(num80, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20403: 								Polyline obj50 = val4;
+20404: 								val5 = ((Curve)val6).EndPoint;
+20405: 								double num81 = ((Point3d)(ref val5)).X;
+20406: 								val5 = ((Curve)val6).EndPoint;
+20407: 								obj50.AddVertexAt(2, new Point2d(num81, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val6.StartAngle, val6.EndAngle), 0.0, 0.0);
+20408: 								num = 6;
+20409: 								goto case 6;
+20410: 							}
+20411: 							case 6:
+20412: 							{
+20413: 								Polyline obj51 = val4;
+20414: 								val5 = ((Curve)val6).StartPoint;
+20415: 								double num82 = ((Point3d)(ref val5)).X;
+20416: 								val5 = ((Curve)val6).StartPoint;
+20417: 								obj51.AddVertexAt(3, new Point2d(num82, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20418: 								goto IL_0bd5;
+20419: 							}
+20420: 							case 58:
+20421: 								goto IL_09d0;
+20422: 							case 81:
+20423: 								goto IL_0a2b;
+20424: 							case 15:
+20425: 								goto IL_0a7c;
+20426: 							case 27:
+20427: 								goto IL_0b2a;
+20428: 							case 34:
+20429: 								goto IL_0b86;
+20430: 							case 3:
+20431: 							case 98:
+20432: 							case 102:
+20433: 								goto IL_0bd5;
+20434: 							case 65:
+20435: 								goto IL_0bf5;
+20436: 							case 23:
+20437: 								goto IL_0c48;
+20438: 							case 51:
+20439: 								goto IL_0d3b;
+20440: 							case 22:
+20441: 								goto IL_0d6b;
+20442: 							case 60:
+20443: 								goto IL_0d80;
+20444: 							case 82:
+20445: 								goto IL_0df0;
+20446: 							case 18:
+20447: 								goto IL_0df7;
+20448: 							case 43:
+20449: 								goto IL_0e08;
+20450: 							case 33:
+20451: 								goto IL_0e70;
+20452: 							case 24:
+20453: 								goto IL_0eb8;
+20454: 							case 2:
+20455: 								goto IL_0f60;
+20456: 							case 89:
+20457: 								goto IL_0fbb;
+20458: 							case 101:
+20459: 								goto IL_100c;
+20460: 							case 68:
+20461: 							case 97:
+20462: 								goto IL_10af;
+20463: 							case 53:
+20464: 								goto IL_10d4;
+20465: 							case 41:
+20466: 								goto IL_111e;
+20467: 							case 32:
+20468: 							case 38:
+20469: 								goto IL_113d;
+20470: 							case 30:
+20471: 								goto IL_11f8;
+20472: 							case 103:
+20473: 								goto IL_12a1;
+20474: 							case 67:
+20475: 								goto IL_12ae;
+20476: 							case 94:
+20477: 								goto IL_12dc;
+20478: 							case 54:
+20479: 								goto IL_1326;
+20480: 							case 10:
+20481: 								goto IL_1391;
+20482: 							case 70:
+20483: 								goto IL_1401;
+20484: 							case 79:
+20485: 								goto IL_1411;
+20486: 							case 100:
+20487: 								goto IL_1422;
+20488: 							default:
+20489: 								num = 4;
+20490: 								goto IL_154d;
+20491: 							case 25:
+20492: 							{
+20493: 								Polyline obj46 = val7;
+20494: 								val5 = ((Curve)val8).EndPoint;
+20495: 								double num77 = ((Point3d)(ref val5)).X;
+20496: 								val5 = ((Curve)val8).EndPoint;
+20497: 								obj46.AddVertexAt(2, new Point2d(num77, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val8.StartAngle, val8.EndAngle), 0.0, 0.0);
+20498: 								Polyline obj47 = val7;
+20499: 								val5 = ((Curve)val8).StartPoint;
+20500: 								double num78 = ((Point3d)(ref val5)).X;
+20501: 								val5 = ((Curve)val8).StartPoint;
+20502: 								obj47.AddVertexAt(3, new Point2d(num78, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20503: 								goto IL_16db;
+20504: 							}
+20505: 							case 76:
+20506: 								goto IL_14fb;
+20507: 							case 4:
+20508: 								goto IL_154d;
+20509: 							case 47:
+20510: 								goto IL_1595;
+20511: 							case 42:
+20512: 								goto IL_168c;
+20513: 							case 77:
+20514: 								goto IL_16db;
+20515: 							case 57:
+20516: 								goto IL_16f1;
+20517: 							case 7:
+20518: 								goto IL_1795;
+20519: 							case 13:
+20520: 								goto IL_17e8;
+20521: 							case 37:
+20522: 								goto IL_1835;
+20523: 							case 0:
+20524: 								goto IL_1863;
+20525: 							case 1:
+20526: 								goto IL_18bb;
+20527: 							case 12:
+20528: 								goto IL_1912;
+20529: 							case 63:
+20530: 								goto IL_19ac;
+20531: 							case 104:
+20532: 								goto IL_1a54;
+20533: 							case 36:
+20534: 								goto IL_1a9c;
+20535: 							case 9:
+20536: 								goto IL_1aee;
+20537: 							case 73:
+20538: 								goto IL_1b41;
+20539: 							case 62:
+20540: 							case 87:
+20541: 							case 92:
+20542: 								goto IL_1b9f;
+20543: 							case 84:
+20544: 								goto IL_1bc4;
+20545: 							case 59:
+20546: 								goto IL_1bf1;
+20547: 							case 91:
+20548: 								goto IL_1c10;
+20549: 							case 26:
+20550: 								goto IL_1c21;
+20551: 							case 49:
+20552: 								goto IL_1ca0;
+20553: 							case 107:
+20554: 								goto IL_1ce9;
+20555: 							case 80:
+20556: 								goto IL_1cfe;
+20557: 							case 85:
+20558: 								goto IL_1d6f;
+20559: 							case 50:
+20560: 								goto IL_1d78;
+20561: 							case 66:
+20562: 								goto IL_1d97;
+20563: 							case 86:
+20564: 								goto IL_1dae;
+20565: 							case 93:
+20566: 								goto IL_1de0;
+20567: 							case 29:
+20568: 								goto IL_1e0b;
+20569: 							case 88:
+20570: 								goto IL_1e2c;
+20571: 							case 106:
+20572: 								goto IL_1e63;
+20573: 							case 56:
+20574: 								goto IL_1e72;
+20575: 							case 40:
+20576: 								goto IL_1e9e;
+20577: 							case 44:
+20578: 								goto IL_1ec2;
+20579: 							case 31:
+20580: 								continue;
+20581: 							case 46:
+20582: 								goto end_IL_1ee0;
+20583: 							case 19:
+20584: 								goto end_IL_1ef0;
+20585: 							case 96:
+20586: 								goto end_IL_1efe;
+20587: 							case 71:
+20588: 								goto IL_202a;
+20589: 							case 64:
+20590: 								goto IL_2052;
+20591: 							case 72:
+20592: 								return;
+20593: 							case 74:
+20594: 								goto IL_208e;
+20595: 							case 90:
+20596: 								goto IL_20a3;
+20597: 							case 5:
+20598: 								goto IL_20bc;
+20599: 							case 20:
+20600: 								goto IL_20e6;
+20601: 							case 99:
+20602: 								goto IL_21b1;
+20603: 							case 69:
+20604: 								goto IL_21b8;
+20605: 							case 21:
+20606: 								goto IL_21e8;
+20607: 							case 28:
+20608: 								goto IL_2276;
+20609: 							case 14:
+20610: 							case 61:
+20611: 								goto IL_22ef;
+20612: 							case 83:
+20613: 								goto IL_2308;
+20614: 							case 105:
+20615: 								return;
+20616: 							case 108:
+20617: 								return;
+20618: 							}
+20619: 							goto IL_0369;
+20620: 							IL_20a3:
+20621: 							if (_0087_0090_0089.Checked)
+20622: 							{
+20623: 								num = 5;
+20624: 								goto IL_20bc;
+20625: 							}
+20626: 							return;
+20627: 							IL_168c:
+20628: 							Polyline obj52 = val7;
+20629: 							val5 = ((Curve)val18).StartPoint;
+20630: 							double num83 = ((Point3d)(ref val5)).X;
+20631: 							val5 = ((Curve)val18).StartPoint;
+20632: 							obj52.AddVertexAt(5, new Point2d(num83, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20633: 							goto IL_16db;
+20634: 							IL_202a:
+20635: 							obj15 = new _008F_008E();
+20636: 							obj15.X = obj2.X + num12 * Math.Cos(num45);
+20637: 							num = 64;
+20638: 							goto IL_2052;
+20639: 							IL_2052:
+20640: 							obj15.Y = obj2.Y + num12 * Math.Sin(num45);
+20641: 							num44 = Math.Round(num12 / 1852.0, 1, MidpointRounding.AwayFromZero);
+20642: 							num = 28;
+20643: 							goto IL_2276;
+20644: 							IL_1d97:
+20645: 							num14 = num6;
+20646: 							goto IL_1d99;
+20647: 							IL_1912:
+20648: 							Polyline obj53 = val17;
+20649: 							val5 = ((Curve)val16).StartPoint;
+20650: 							double num84 = ((Point3d)(ref val5)).X;
+20651: 							val5 = ((Curve)val16).StartPoint;
+20652: 							obj53.AddVertexAt(0, new Point2d(num84, ((Point3d)(ref val5)).Y), _0087_008E_008B(val16.StartAngle, val16.EndAngle), 0.0, 0.0);
+20653: 							Polyline obj54 = val17;
+20654: 							val5 = ((Curve)val16).EndPoint;
+20655: 							double num85 = ((Point3d)(ref val5)).X;
+20656: 							val5 = ((Curve)val16).EndPoint;
+20657: 							obj54.AddVertexAt(1, new Point2d(num85, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20658: 							goto IL_19ac;
+20659: 							IL_19ac:
+20660: 							Polyline obj55 = val17;
+20661: 							val5 = ((Curve)val15).StartPoint;
+20662: 							double num86 = ((Point3d)(ref val5)).X;
+20663: 							val5 = ((Curve)val15).StartPoint;
+20664: 							obj55.AddVertexAt(2, new Point2d(num86, ((Point3d)(ref val5)).Y), _0087_008E_008B(val15.StartAngle, val15.EndAngle), 0.0, 0.0);
+20665: 							Polyline obj56 = val17;
+20666: 							val5 = ((Curve)val15).EndPoint;
+20667: 							double num87 = ((Point3d)(ref val5)).X;
+20668: 							val5 = ((Curve)val15).EndPoint;
+20669: 							obj56.AddVertexAt(3, new Point2d(num87, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20670: 							num = 87;
+20671: 							goto IL_1b9f;
+20672: 							IL_18bb:
+20673: 							Polyline obj57 = val17;
+20674: 							val5 = ((Curve)val15).StartPoint;
+20675: 							double num88 = ((Point3d)(ref val5)).X;
+20676: 							val5 = ((Curve)val15).StartPoint;
+20677: 							obj57.AddVertexAt(4, new Point2d(num88, ((Point3d)(ref val5)).Y), _0087_008E_008B(val15.StartAngle, val15.EndAngle), 0.0, 0.0);
+20678: 							goto IL_1b41;
+20679: 							IL_1863:
+20680: 							Polyline obj58 = val17;
+20681: 							val5 = ((Curve)val13).EndPoint;
+20682: 							double num89 = ((Point3d)(ref val5)).X;
+20683: 							val5 = ((Curve)val13).EndPoint;
+20684: 							obj58.AddVertexAt(0, new Point2d(num89, ((Point3d)(ref val5)).Y), 0.0 - _0087_008E_008B(val13.StartAngle, val13.EndAngle), 0.0, 0.0);
+20685: 							goto IL_1a54;
+20686: 							IL_1a54:
+20687: 							Polyline obj59 = val17;
+20688: 							val5 = ((Curve)val13).StartPoint;
+20689: 							double num90 = ((Point3d)(ref val5)).X;
+20690: 							val5 = ((Curve)val13).StartPoint;
+20691: 							obj59.AddVertexAt(1, new Point2d(num90, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20692: 							goto IL_1a9c;
+20693: 							IL_1a9c:
+20694: 							Polyline obj60 = val17;
+20695: 							val5 = ((Curve)val16).StartPoint;
+20696: 							double num91 = ((Point3d)(ref val5)).X;
+20697: 							val5 = ((Curve)val16).StartPoint;
+20698: 							obj60.AddVertexAt(2, new Point2d(num91, ((Point3d)(ref val5)).Y), _0087_008E_008B(val16.StartAngle, val16.EndAngle), 0.0, 0.0);
+20699: 							goto IL_1aee;
+20700: 							IL_1aee:
+20701: 							Polyline obj61 = val17;
+20702: 							val5 = ((Curve)val16).EndPoint;
+20703: 							double num92 = ((Point3d)(ref val5)).X;
+20704: 							val5 = ((Curve)val16).EndPoint;
+20705: 							obj61.AddVertexAt(3, new Point2d(num92, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20706: 							num = 92;
+20707: 							goto IL_1b9f;
+20708: 							IL_111e:
+20709: 							obj2 = new _008F_008E();
+20710: 							obj3 = new _008F_008E();
+20711: 							num = 106;
+20712: 							if (!_0087_009B())
+20713: 							{
+20714: 								goto IL_113d;
+20715: 							}
+20716: 							goto IL_1e63;
+20717: 							IL_1e63:
+20718: 							obj4 = new _008F_008E();
+20719: 							num = 56;
+20720: 							goto IL_1e72;
+20721: 							IL_1e72:
+20722: 							obj2.X = Convert.ToDouble(_0087_008F_009A.Text);
+20723: 							obj2.Y = Convert.ToDouble(_0087_008F_009B.Text);
+20724: 							goto IL_1e9e;
+20725: 							IL_0e70:
+20726: 							Polyline obj62 = val20;
+20727: 							val5 = ((Curve)val21).StartPoint;
+20728: 							double num93 = ((Point3d)(ref val5)).X;
+20729: 							val5 = ((Curve)val21).StartPoint;
+20730: 							obj62.AddVertexAt(1, new Point2d(num93, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20731: 							goto IL_0eb8;
+20732: 							IL_0eb8:
+20733: 							Polyline obj63 = val20;
+20734: 							val5 = ((Curve)val22).StartPoint;
+20735: 							double num94 = ((Point3d)(ref val5)).X;
+20736: 							val5 = ((Curve)val22).StartPoint;
+20737: 							obj63.AddVertexAt(2, new Point2d(num94, ((Point3d)(ref val5)).Y), _0087_008E_008B(val22.StartAngle, val22.EndAngle), 0.0, 0.0);
+20738: 							Polyline obj64 = val20;
+20739: 							val5 = ((Curve)val22).EndPoint;
+20740: 							double num95 = ((Point3d)(ref val5)).X;
+20741: 							val5 = ((Curve)val22).EndPoint;
+20742: 							obj64.AddVertexAt(3, new Point2d(num95, ((Point3d)(ref val5)).Y), 0.0, 0.0, 0.0);
+20743: 							num = 68;
+20744: 							goto IL_10af;
+20745: 							IL_0d6b:
+20746: 							num7 = Math.Atan(num5 / num3);
+20747: 							num = 60;
+20748: 							goto IL_0d80;
+20749: 							continue;
+20750: 							end_IL_1ee0:
+20751: 							break;
+20752: 						}
+20753: 						continue;
+20754: 						end_IL_1ef0:
+20755: 						break;
+20756: 					}
+20757: 					continue;
+20758: 					end_IL_1efe:
+20759: 					break;
+20760: 				}
+20761: 			}
+20762: 		}
+20763: 
+20764: 		private static double _0087_008E_008B(double P_0, double P_1)
+20765: 		{
+20766: 			_0087_009B();
+20767: 			double num = default(double);
+20768: 			if (!_0087_009C() && !false /* original-file-bool-offset:428 */)
+20769: 			{
+20770: 				P_0 = ((P_0 < 0.0) ? (P_0 + Math.PI * 2.0) : P_0);
+20771: 				P_1 = ((P_1 < 0.0) ? (P_1 + Math.PI * 2.0) : P_1);
+20772: 				num = 0.0;
+20773: 				num = ((P_0 < P_1) ? ((!(P_1 - P_0 <= Math.PI)) ? (Math.PI * 2.0 + P_0 - P_1) : (P_1 - P_0)) : ((!(P_0 - P_1 <= Math.PI)) ? (Math.PI * 2.0 + P_1 - P_0) : (P_0 - P_1)));
+20774: 			}
+20775: 			return (1.0 - Math.Cos(num / 2.0)) / Math.Sin(num / 2.0);
+20776: 		}
+20777: 
+20778: 		private void _0087_008E_008C(object P_0, DataGridViewCellEventArgs P_1)
+20779: 		{
+20780: 			_0087_009C();
+20781: 			if (_0087_009B())
+20782: 			{
+20783: 				while (true)
+20784: 				{
+20785: 					_ = Application.DocumentManager.MdiActiveDocument.Editor;
+20786: 					int num = 6;
+20787: 					if (!_0087_009B())
+20788: 					{
+20789: 						break;
+20790: 					}
+20791: 					while (true)
+20792: 					{
+20793: 						switch (num)
+20794: 						{
+20795: 						case 6:
+20796: 							if (_0087_008E_009B != null && _0087_008E_009B.Count != 0 && P_1.ColumnIndex >= 0)
+20797: 							{
+20798: 								goto case 5;
+20799: 							}
+20800: 							return;
+20801: 						case 5:
+20802: 							do
+20803: 							{
+20804: 								if (P_1.RowIndex < 0)
+20805: 								{
+20806: 									num = 7;
+20807: 									continue;
+20808: 								}
+20809: 								DBPoint obj = _0087_008E_009C[_0087_0090_0088.Rows[P_1.RowIndex].Cells[0].Value.ToString()];
+20810: 								_008D._0089_0093(_0087_008E_009B);
+20811: 								_008D._0089_0092(obj);
+20812: 								return;
+20813: 							}
+20814: 							while (_0087_009C());
+20815: 							continue;
+20816: 						default:
+20817: 							num = 5;
+20818: 							goto case 5;
+20819: 						case 0:
+20820: 						case 1:
+20821: 							break;
+20822: 						case 7:
+20823: 							return;
+20824: 						case 8:
+20825: 							return;
+20826: 						case 3:
+20827: 							return;
+20828: 						case 2:
+20829: 						case 4:
+20830: 							return;
+20831: 						}
+20832: 						break;
+20833: 					}
+20834: 				}
+20835: 			}
+20836: 			else
+20837: 			{
+20838: 				int num = 4;
+20839: 			}
+20840: 		}
+20841: 
+20842: 		private void _0087_008E_008D(object P_0, EventArgs P_1)
+20843: 		{
+20844: 			int num = 7;
+20845: 			List<_008A_008B> list = default(List<_008A_008B>);
+20846: 			if (!_0087_009C())
+20847: 			{
+20848: 				int num11 = default(int);
+20849: 				_008F_008A._0090_009A obj2 = default(_008F_008A._0090_009A);
+20850: 				_008F_008E obj8 = default(_008F_008E);
+20851: 				_008F_008E obj9 = default(_008F_008E);
+20852: 				_008F_008E obj = default(_008F_008E);
+20853: 				double num8 = default(double);
+20854: 				double num9 = default(double);
+20855: 				_008F_008A._0090_009A[] array = default(_008F_008A._0090_009A[]);
+20856: 				double num3 = default(double);
+20857: 				double num4 = default(double);
+20858: 				double num5 = default(double);
+20859: 				double num6 = default(double);
+20860: 				double num7 = default(double);
+20861: 				int num2 = default(int);
+20862: 				List<DBPoint>.Enumerator enumerator = default(List<DBPoint>.Enumerator);
+20863: 				_008F_008E obj4 = default(_008F_008E);
+20864: 				_008F_008E obj5 = default(_008F_008E);
+20865: 				double num13 = default(double);
+20866: 				double num14 = default(double);
+20867: 				double num15 = default(double);
+20868: 				double num16 = default(double);
+20869: 				_008F_008E obj6 = default(_008F_008E);
+20870: 				_008A_008B obj7 = default(_008A_008B);
+20871: 				bool flag = default(bool);
+20872: 				while (true)
+20873: 				{
+20874: 					double num17;
+20875: 					int num10;
+20876: 					switch (num)
+20877: 					{
+20878: 					case 3:
+20879: 					case 25:
+20880: 						num11 = 0;
+20881: 						goto IL_004f;
+20882: 					case 4:
+20883: 						if (_008F_008A._008B_0088_0086(obj2._008B_008F_008E, obj2._008B_008F_008F))
+20884: 						{
+20885: 							num11++;
+20886: 							goto IL_004f;
+20887: 						}
+20888: 						return;
+20889: 					case 20:
+20890: 						obj8.X = Convert.ToDouble(_0087_008F_0093.Text);
+20891: 						num = 5;
+20892: 						if (!_0087_009B())
+20893: 						{
+20894: 							return;
+20895: 						}
+20896: 						goto case 5;
+20897: 					case 5:
+20898: 						obj8.Y = Convert.ToDouble(_0087_008F_0094.Text);
+20899: 						obj9.X = Convert.ToDouble(_0087_008F_008D.Text);
+20900: 						obj9.Y = Convert.ToDouble(_0087_008F_008C.Text);
+20901: 						num = 12;
+20902: 						goto case 12;
+20903: 					case 16:
+20904: 						obj = new _008F_008E();
+20905: 						obj8 = new _008F_008E();
+20906: 						num = 0;
+20907: 						goto case 0;
+20908: 					case 0:
+20909: 						obj9 = new _008F_008E();
+20910: 						num = 15;
+20911: 						if (_0087_009B())
+20912: 						{
+20913: 							continue;
+20914: 						}
+20915: 						goto case 12;
+20916: 					case 12:
+20917: 						num8 = Math.Atan2(obj9.Y - obj.Y, obj9.X - obj.X);
+20918: 						goto case 6;
+20919: 					case 6:
+20920: 						num9 = Math.Atan2(obj8.Y - obj.Y, obj8.X - obj.X);
+20921: 						goto case 9;
+20922: 					case 9:
+20923: 						num8 = ((num8 < 0.0) ? (num8 + Math.PI * 2.0) : num8);
+20924: 						if (!(num9 < 0.0))
+20925: 						{
+20926: 							goto case 21;
+20927: 						}
+20928: 						num17 = num9 + Math.PI * 2.0;
+20929: 						goto IL_0184;
+20930: 					case 21:
+20931: 						num17 = num9;
+20932: 						goto IL_0184;
+20933: 					case 15:
+20934: 						obj.X = Convert.ToDouble(_0087_008F_009A.Text);
+20935: 						obj.Y = Convert.ToDouble(_0087_008F_009B.Text);
+20936: 						num = 20;
+20937: 						goto case 20;
+20938: 					case 7:
+20939: 						if (true /* original-file-bool-offset:432 */)
+20940: 						{
+20941: 							num = 11;
+20942: 							goto case 11;
+20943: 						}
+20944: 						return;
+20945: 					case 11:
+20946: 						if (_0087_008E_009B != null)
+20947: 						{
+20948: 							if (_0087_008E_009B.Count == 0)
+20949: 							{
+20950: 								return;
+20951: 							}
+20952: 							array = new _008F_008A._0090_009A[7]
+20953: 							{
+20954: 								new _008F_008A._0090_009A(_0087_008F_009A, "导航台 X坐标不能为空。" /* string-offset:3552 */),
+20955: 								new _008F_008A._0090_009A(_0087_008F_009B, "导航台 Y坐标不能为空。" /* string-offset:3556 */),
+20956: 								new _008F_008A._0090_009A(_0087_008F_0093, "IF点 X坐标不能为空。" /* string-offset:3560 */),
+20957: 								new _008F_008A._0090_009A(_0087_008F_0094, "IF点 Y坐标不能为空。" /* string-offset:3564 */),
+20958: 								new _008F_008A._0090_009A(_0087_008F_008D, "IAF点 X坐标不能为空}。" /* string-offset:3568 */),
+20959: 								new _008F_008A._0090_009A(_0087_008F_008C, "IAF点 Y坐标不能为空。" /* string-offset:3572 */),
+20960: 								new _008F_008A._0090_009A(_0087_008F_009E, "超障余度不能为空。" /* string-offset:3576 */)
+20961: 							};
+20962: 							_ = 1;
+20963: 							if (!_0087_009C())
+20964: 							{
+20965: 								num = 25;
+20966: 								if (!_0087_009C())
+20967: 								{
+20968: 									goto case 3;
+20969: 								}
+20970: 								goto case 7;
+20971: 							}
+20972: 							num = 8;
+20973: 							if (_0087_009B())
+20974: 							{
+20975: 								continue;
+20976: 							}
+20977: 							goto case 9;
+20978: 						}
+20979: 						num = 24;
+20980: 						return;
+20981: 					default:
+20982: 						num = 21;
+20983: 						goto case 21;
+20984: 					case 24:
+20985: 						return;
+20986: 					case 19:
+20987: 						return;
+20988: 					case 26:
+20989: 						num3 = 3704.0;
+20990: 						num4 = num5 + num3;
+20991: 						num6 = (2.0 * num5 * num3 + 13719616.0) / (2.0 * num5 + 7408.0);
+20992: 						num = 14;
+20993: 						goto case 14;
+20994: 					case 14:
+20995: 						num7 = (2.0 * num5 * num3 + 3.0 * num3 * num3) / (2.0 * num5 + 2.0 * num3);
+20996: 						goto case 10;
+20997: 					case 10:
+20998: 						Convert.ToDouble(_0087_008F_009E.Text);
+20999: 						num = 13;
+21000: 						goto case 13;
+21001: 					case 13:
+21002: 						if (num8 < num9)
+21003: 						{
+21004: 							goto case 1;
+21005: 						}
+21006: 						goto IL_046d;
+21007: 					case 1:
+21008: 						if (num9 - num8 > Math.PI)
+21009: 						{
+21010: 							goto IL_046d;
+21011: 						}
+21012: 						num10 = 1;
+21013: 						goto IL_048d;
+21014: 					case 2:
+21015: 						num10 = ((num8 - num9 > Math.PI) ? 1 : 0);
+21016: 						goto IL_048d;
+21017: 					case 23:
+21018: 						list = new List<_008A_008B>();
+21019: 						goto case 8;
+21020: 					case 8:
+21021: 					case 22:
+21022: 						num2 = 1;
+21023: 						enumerator = _0087_008E_009B.GetEnumerator();
+21024: 						num = 18;
+21025: 						goto case 18;
+21026: 					case 18:
+21027: 						try
+21028: 						{
+21029: 							while (enumerator.MoveNext())
+21030: 							{
+21031: 								_008F_008E obj3 = enumerator.Current._008C_008D(num2.ToString());
+21032: 								int num12 = 11;
+21033: 								if (!_0087_009C())
+21034: 								{
+21035: 									goto IL_05b6;
+21036: 								}
+21037: 								goto IL_0a9b;
+21038: 								IL_08b6:
+21039: 								obj4 = _0087_008E_0090(new _008F_008E(obj3.X, obj3.Y), obj5, num6, num13, _0087_008E_008E(num9 + Math.PI / 2.0), 9260.0, _0020: false);
+21040: 								if (obj4.Name == "out" /* string-offset:1556 */)
+21041: 								{
+21042: 									obj4 = _0087_008E_0090(new _008F_008E(obj3.X, obj3.Y), obj, num4, num14, num13, 9260.0, _0020: true);
+21043: 								}
+21044: 								goto IL_0949;
+21045: 								IL_0a9b:
+21046: 								obj5 = new _008F_008E(obj.X + (num5 + num3 - num6) * Math.Cos(num9 + num15), obj.Y + (num5 + num3 - num6) * Math.Sin(num9 + num15));
+21047: 								goto IL_0a4f;
+21048: 								IL_0a4f:
+21049: 								num13 = Math.Atan2(obj5.Y - obj.Y, obj5.X - obj.X);
+21050: 								num14 = _0087_008E_008E(num14);
+21051: 								num12 = 18;
+21052: 								if (_0087_009C())
+21053: 								{
+21054: 									goto IL_09b4;
+21055: 								}
+21056: 								goto IL_0a29;
+21057: 								IL_0a29:
+21058: 								num13 = _0087_008E_008E(num13);
+21059: 								_0087_008E_008F(num14, num13, num16, num15);
+21060: 								goto IL_09b4;
+21061: 								IL_09b4:
+21062: 								obj4 = _0087_008E_0090(new _008F_008E(obj3.X, obj3.Y), obj6, num7, _0087_008E_008E(num8 + Math.PI / 2.0), _0087_008E_008E(num14 + Math.PI), 9260.0, _0020: false);
+21063: 								if (obj4.Name == "out" /* string-offset:1556 */)
+21064: 								{
+21065: 									obj4 = _0087_008E_0090(new _008F_008E(obj3.X, obj3.Y), obj5, num6, _0087_008E_008E(num9 - Math.PI / 2.0), num13, 9260.0, _0020: false);
+21066: 									goto IL_06c4;
+21067: 								}
+21068: 								goto IL_0949;
+21069: 								IL_06f2:
+21070: 								obj4 = _0087_008E_0090(new _008F_008E(obj3.X, obj3.Y), obj, num4, num13, num14, 9260.0, _0020: true);
+21071: 								num12 = 15;
+21072: 								if (!_0087_009C())
+21073: 								{
+21074: 									goto IL_0949;
+21075: 								}
+21076: 								goto IL_0a9b;
+21077: 								IL_0949:
+21078: 								if (!(obj4.Name != "out" /* string-offset:1556 */))
+21079: 								{
+21080: 									continue;
+21081: 								}
+21082: 								num12 = 2;
+21083: 								goto IL_06a2;
+21084: 								IL_089b:
+21085: 								if (obj4.Name == "out" /* string-offset:1556 */)
+21086: 								{
+21087: 									goto IL_08b6;
+21088: 								}
+21089: 								goto IL_0949;
+21090: 								IL_06a2:
+21091: 								obj7 = new _008A_008B(obj3);
+21092: 								obj7._0088_008F_009C = obj4.Name;
+21093: 								num12 = 10;
+21094: 								goto IL_065f;
+21095: 								IL_065f:
+21096: 								obj7._0088_008F_009D = obj4.Z * 300.0;
+21097: 								obj7._0088_008F_009E = obj7.Z + obj7._0088_008F_009D;
+21098: 								num12 = 0;
+21099: 								if (_0087_009B())
+21100: 								{
+21101: 									goto IL_0620;
+21102: 								}
+21103: 								goto IL_0ae4;
+21104: 								IL_0620:
+21105: 								obj7._0088_0090_0087 = Math.Ceiling(obj7._0088_008F_009E / 5.0) * 5.0;
+21106: 								num12 = 3;
+21107: 								if (_0087_009B())
+21108: 								{
+21109: 									goto IL_05b6;
+21110: 								}
+21111: 								goto IL_0a4f;
+21112: 								IL_05b6:
+21113: 								while (true)
+21114: 								{
+21115: 									switch (num12)
+21116: 									{
+21117: 									case 17:
+21118: 										obj4 = new _008F_008E();
+21119: 										if (!flag)
+21120: 										{
+21121: 											obj6 = new _008F_008E(obj.X + (num4 + num7) * Math.Cos(num8 - num16), obj.Y + (num4 + num7) * Math.Sin(num8 - num16));
+21122: 											goto case 5;
+21123: 										}
+21124: 										obj6 = new _008F_008E(obj.X + (num4 + num7) * Math.Cos(num8 + num16), obj.Y + (num4 + num7) * Math.Sin(num8 + num16));
+21125: 										num12 = 1;
+21126: 										goto case 1;
+21127: 									case 5:
+21128: 										num14 = Math.Atan2(obj6.Y - obj.Y, obj6.X - obj.X);
+21129: 										_ = 1;
+21130: 										if (_0087_009C())
+21131: 										{
+21132: 											num12 = 12;
+21133: 											if (!_0087_009C())
+21134: 											{
+21135: 												continue;
+21136: 											}
+21137: 											goto IL_09b4;
+21138: 										}
+21139: 										num12 = 8;
+21140: 										goto IL_0a9b;
+21141: 									case 11:
+21142: 										num2++;
+21143: 										num12 = 17;
+21144: 										goto case 17;
+21145: 									case 0:
+21146: 										break;
+21147: 									case 10:
+21148: 										goto IL_065f;
+21149: 									case 2:
+21150: 										goto IL_06a2;
+21151: 									case 12:
+21152: 									case 13:
+21153: 										goto IL_06c4;
+21154: 									case 4:
+21155: 										goto IL_06f2;
+21156: 									case 1:
+21157: 										num14 = Math.Atan2(obj6.Y - obj.Y, obj6.X - obj.X);
+21158: 										num12 = 20;
+21159: 										goto case 20;
+21160: 									case 20:
+21161: 										obj5 = new _008F_008E(obj.X + (num5 + num3 - num6) * Math.Cos(num9 - num15), obj.Y + (num5 + num3 - num6) * Math.Sin(num9 - num15));
+21162: 										num13 = Math.Atan2(obj5.Y - obj.Y, obj5.X - obj.X);
+21163: 										num14 = _0087_008E_008E(num14);
+21164: 										num12 = 14;
+21165: 										goto case 14;
+21166: 									case 14:
+21167: 										num13 = _0087_008E_008E(num13);
+21168: 										num12 = 16;
+21169: 										goto case 16;
+21170: 									case 16:
+21171: 										obj4 = _0087_008E_0090(new _008F_008E(obj3.X, obj3.Y), obj6, num7, _0087_008E_008E(num14 - Math.PI), _0087_008E_008E(num8 - Math.PI / 2.0), 9260.0, _0020: false);
+21172: 										num12 = 19;
+21173: 										goto IL_089b;
+21174: 									case 19:
+21175: 										goto IL_089b;
+21176: 									case 6:
+21177: 										goto IL_08b6;
+21178: 									case 15:
+21179: 										goto IL_0949;
+21180: 									case 21:
+21181: 										goto IL_09b4;
+21182: 									case 18:
+21183: 										goto IL_0a29;
+21184: 									default:
+21185: 										num12 = 7;
+21186: 										goto IL_0a4f;
+21187: 									case 7:
+21188: 										goto IL_0a4f;
+21189: 									case 8:
+21190: 									case 9:
+21191: 										goto IL_0a9b;
+21192: 									case 3:
+21193: 										goto IL_0ae4;
+21194: 									case 22:
+21195: 										goto IL_0af6;
+21196: 									}
+21197: 									break;
+21198: 								}
+21199: 								goto IL_0620;
+21200: 								IL_0ae4:
+21201: 								list.Add(obj7);
+21202: 								num12 = 22;
+21203: 								continue;
+21204: 								IL_06c4:
+21205: 								if (obj4.Name == "out" /* string-offset:1556 */)
+21206: 								{
+21207: 									num12 = 4;
+21208: 									if (_0087_009B())
+21209: 									{
+21210: 										goto IL_06f2;
+21211: 									}
+21212: 									goto IL_089b;
+21213: 								}
+21214: 								goto IL_0949;
+21215: 								IL_0af6:;
+21216: 							}
+21217: 						}
+21218: 						finally
+21219: 						{
+21220: 							((IDisposable)enumerator/*cast due to .constrained prefix*/).Dispose();
+21221: 						}
+21222: 						_0087_008F_0089.Text = "已评估" /* string-offset:2812 */ + _0087_008E_009B.Count + "个障碍物。" /* string-offset:2816 */;
+21223: 						_0087_008F_009D.Text = list.Count + "个障碍物在范围内" /* string-offset:2820 */;
+21224: 						break;
+21225: 					case 17:
+21226: 						break;
+21227: 					case 27:
+21228: 						return;
+21229: 						IL_004f:
+21230: 						if (num11 < array.Length)
+21231: 						{
+21232: 							obj2 = array[num11];
+21233: 							num = 4;
+21234: 							goto case 4;
+21235: 						}
+21236: 						num = 16;
+21237: 						if (_0087_009C())
+21238: 						{
+21239: 							goto case 20;
+21240: 						}
+21241: 						goto case 16;
+21242: 						IL_046d:
+21243: 						if (num8 > num9)
+21244: 						{
+21245: 							num = 2;
+21246: 							goto case 2;
+21247: 						}
+21248: 						num10 = 0;
+21249: 						goto IL_048d;
+21250: 						IL_048d:
+21251: 						flag = (byte)num10 != 0;
+21252: 						num16 = Math.Asin(num7 / (num4 + num7));
+21253: 						num15 = Math.Atan(num6 / num5);
+21254: 						num = 23;
+21255: 						goto case 23;
+21256: 						IL_0184:
+21257: 						num9 = num17;
+21258: 						if (num8 == num9)
+21259: 						{
+21260: 							num = 19;
+21261: 							if (_0087_009B())
+21262: 							{
+21263: 								continue;
+21264: 							}
+21265: 							goto case 13;
+21266: 						}
+21267: 						num5 = _008F_008E._008B_0088_009E(obj8, obj);
+21268: 						goto case 26;
+21269: 					}
+21270: 					break;
+21271: 				}
+21272: 			}
+21273: 			list = list.OrderByDescending((_008A_008B o) => o._0088_008F_009E).ToList();
+21274: 			_0087_008E_0086(list);
+21275: 		}
+21276: 
+21277: 		private double _0087_008E_008E(double P_0)
+21278: 		{
+21279: 			if (_0087_009B())
+21280: 			{
+21281: 				if (P_0 < 0.0)
+21282: 				{
+21283: 					_0087_009C();
+21284: 					if (_0087_009B())
+21285: 					{
+21286: 						P_0 += Math.PI * 2.0;
+21287: 					}
+21288: 				}
+21289: 				else if (P_0 > Math.PI * 2.0)
+21290: 				{
+21291: 					P_0 -= Math.PI * 2.0;
+21292: 				}
+21293: 			}
+21294: 			return P_0;
+21295: 		}
+21296: 
+21297: 		private void _0087_008E_008F(double P_0, double P_1, double P_2, double P_3)
+21298: 		{
+21299: 			if (!false /* original-file-bool-offset:436 */)
+21300: 			{
+21301: 				double num = 180.0 / Math.PI;
+21302: 				_0087_009B();
+21303: 				string text = default(string);
+21304: 				if (!_0087_009C())
+21305: 				{
+21306: 					text = "angA  " /* string-offset:3580 */ + Math.Round(P_0 * num, 0);
+21307: 					text = text + "\n angB  " /* string-offset:3584 */ + Math.Round(P_1 * num, 0);
+21308: 					text = text + "\n alpha  " /* string-offset:3588 */ + Math.Round(P_2 * num, 0);
+21309: 				}
+21310: 				else if (_0087_009C())
+21311: 				{
+21312: 				}
+21313: 				text = text + "\n beta  " /* string-offset:3592 */ + Math.Round(P_3 * num, 0);
+21314: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(text);
+21315: 			}
+21316: 		}
+21317: 
+21318: 		private _008F_008E _0087_008E_0090(_008F_008E P_0, _008F_008E P_1, double P_2, double P_3, double P_4, double P_5, bool P_6)
+21319: 		{
+21320: 			_0087_009C();
+21321: 			double num = default(double);
+21322: 			if (_0087_009B())
+21323: 			{
+21324: 				if (false /* original-file-bool-offset:440 */)
+21325: 				{
+21326: 					goto IL_0125;
+21327: 				}
+21328: 				num = _0087_008E_008E(Math.Atan2(P_0.Y - P_1.Y, P_0.X - P_1.X));
+21329: 			}
+21330: 			else if (!_0087_009B())
+21331: 			{
+21332: 				goto IL_01d0;
+21333: 			}
+21334: 			bool flag;
+21335: 			if (P_3 < P_4)
+21336: 			{
+21337: 				flag = num >= P_3 && num <= P_4;
+21338: 				goto IL_0076;
+21339: 			}
+21340: 			if (num < P_3)
+21341: 			{
+21342: 				goto IL_00ff;
+21343: 			}
+21344: 			int num2 = 1;
+21345: 			goto IL_0107;
+21346: 			IL_0125:
+21347: 			P_0.Name = "主区" /* string-offset:3596 */;
+21348: 			P_0.Z = 1.0;
+21349: 			goto IL_01d0;
+21350: 			IL_00ff:
+21351: 			num2 = ((num <= P_4) ? 1 : 0);
+21352: 			goto IL_0107;
+21353: 			IL_01d0:
+21354: 			return P_0;
+21355: 			IL_0107:
+21356: 			flag = (byte)num2 != 0;
+21357: 			goto IL_0076;
+21358: 			IL_0076:
+21359: 			if (flag)
+21360: 			{
+21361: 				double num3 = Math.Sqrt(Math.Pow(P_0.X - P_1.X, 2.0) + Math.Pow(P_0.Y - P_1.Y, 2.0));
+21362: 				if (!(num3 > P_2 + P_5) && num3 >= P_2 - P_5)
+21363: 				{
+21364: 					if (!P_6)
+21365: 					{
+21366: 						if (num3 >= P_2 + P_5 / 2.0)
+21367: 						{
+21368: 							P_0.Name = "副区" /* string-offset:3600 */;
+21369: 							if (!_0087_009B())
+21370: 							{
+21371: 								goto IL_00ff;
+21372: 							}
+21373: 							P_0.Z = 2.0 * (P_5 - num3 + P_2) / P_5;
+21374: 						}
+21375: 						else
+21376: 						{
+21377: 							P_0.Name = "主区" /* string-offset:3596 */;
+21378: 							P_0.Z = 1.0;
+21379: 						}
+21380: 					}
+21381: 					else
+21382: 					{
+21383: 						double num4 = Math.Abs(num3 - P_2);
+21384: 						if (num4 <= P_5 / 2.0)
+21385: 						{
+21386: 							goto IL_0125;
+21387: 						}
+21388: 						P_0.Name = "副区" /* string-offset:3600 */;
+21389: 						P_0.Z = 2.0 * (P_5 - num4) / P_5;
+21390: 					}
+21391: 				}
+21392: 				else
+21393: 				{
+21394: 					P_0.Name = "out" /* string-offset:1556 */;
+21395: 				}
+21396: 			}
+21397: 			else
+21398: 			{
+21399: 				P_0.Name = "out" /* string-offset:1556 */;
+21400: 			}
+21401: 			goto IL_01d0;
+21402: 		}
+21403: 
+21404: 		private void _0087_008E_0091(object P_0, EventArgs P_1)
+21405: 		{
+21406: 			//IL_008c: Unknown result type (might be due to invalid IL or missing references)
+21407: 			//IL_009a: Unknown result type (might be due to invalid IL or missing references)
+21408: 			//IL_00aa: Unknown result type (might be due to invalid IL or missing references)
+21409: 			//IL_00af: Unknown result type (might be due to invalid IL or missing references)
+21410: 			_ = 0;
+21411: 			if (!_0087_009B() || false /* original-file-bool-offset:444 */)
+21412: 			{
+21413: 				return;
+21414: 			}
+21415: 			DBPoint val = default(DBPoint);
+21416: 			foreach (DataGridViewRow selectedRow in _0087_0090_0088.SelectedRows)
+21417: 			{
+21418: 				_ = 0;
+21419: 				if (_0087_009B())
+21420: 				{
+21421: 					val = _0087_008E_009C[_0087_0090_0088.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+21422: 				}
+21423: 				ObjectId val2 = _008B._0089_0087("Obst" /* string-offset:3604 */, val.Position);
+21424: 				string obj = "Altitude" /* string-offset:536 */;
+21425: 				Point3d position = val.Position;
+21426: 				_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+21427: 			}
+21428: 		}
+21429: 
+21430: 		private void _0087_008E_0092(object P_0, DataGridViewCellEventArgs P_1)
+21431: 		{
+21432: 			_ = Application.DocumentManager.MdiActiveDocument.Editor;
+21433: 			while (_0087_008E_009B != null)
+21434: 			{
+21435: 				if (_0087_008E_009B.Count == 0)
+21436: 				{
+21437: 					_0087_009B();
+21438: 					if (!_0087_009C())
+21439: 					{
+21440: 						if (_0087_009B())
+21441: 						{
+21442: 							break;
+21443: 						}
+21444: 						continue;
+21445: 					}
+21446: 				}
+21447: 				else if (P_1.ColumnIndex < 0)
+21448: 				{
+21449: 					break;
+21450: 				}
+21451: 				if (P_1.RowIndex < 0)
+21452: 				{
+21453: 					if (!_0087_009C())
+21454: 					{
+21455: 					}
+21456: 				}
+21457: 				else
+21458: 				{
+21459: 					DBPoint obj = _0087_008E_009C[_0087_0090_0088.Rows[P_1.RowIndex].Cells[0].Value.ToString()];
+21460: 					_008D._0089_0093(_0087_008E_009B);
+21461: 					_008D._0089_0092(obj);
+21462: 				}
+21463: 				break;
+21464: 			}
+21465: 		}
+21466: 
+21467: 		private void _0087_008E_0093(object P_0, EventArgs P_1)
+21468: 		{
+21469: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21470: 		}
+21471: 
+21472: 		private void _0087_008E_0094(object P_0, EventArgs P_1)
+21473: 		{
+21474: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21475: 		}
+21476: 
+21477: 		private void _0087_008E_0095(object P_0, EventArgs P_1)
+21478: 		{
+21479: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21480: 		}
+21481: 
+21482: 		private void _0087_008E_0096(object P_0, EventArgs P_1)
+21483: 		{
+21484: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21485: 		}
+21486: 
+21487: 		private void _0087_008E_0097(object P_0, EventArgs P_1)
+21488: 		{
+21489: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21490: 		}
+21491: 
+21492: 		private void _0087_008E_0098(object P_0, EventArgs P_1)
+21493: 		{
+21494: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21495: 		}
+21496: 
+21497: 		private void _0087_008E_0099(object P_0, EventArgs P_1)
+21498: 		{
+21499: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21500: 		}
+21501: 
+21502: 		protected override void Dispose(bool P_0)
+21503: 		{
+21504: 			_0087_009C();
+21505: 			if ((!_0087_009B() || P_0) && _0087_008E_009D != null)
+21506: 			{
+21507: 				goto IL_001b;
+21508: 			}
+21509: 			goto IL_0026;
+21510: 			IL_0026:
+21511: 			base.Dispose(P_0);
+21512: 			if (!_0087_009C())
+21513: 			{
+21514: 				return;
+21515: 			}
+21516: 			goto IL_001b;
+21517: 			IL_001b:
+21518: 			_0087_008E_009D.Dispose();
+21519: 			goto IL_0026;
+21520: 		}
+21521: 
+21522: 		private void _0087_008E_009A()
+21523: 		{
+21524: 			int num = 101;
+21525: 			ComponentResourceManager componentResourceManager = default(ComponentResourceManager);
+21526: 			while (true /* original-file-bool-offset:448 */)
+21527: 			{
+21528: 				num = 153;
+21529: 				if (!_0087_009B())
+21530: 				{
+21531: 					goto IL_0dc1;
+21532: 				}
+21533: 				goto IL_1e2e;
+21534: 				IL_1cd3:
+21535: 				_0087_008F_009A.TabIndex = 0;
+21536: 				_0087_008F_009A.Text = " " /* string-offset:584 */;
+21537: 				num = 44;
+21538: 				goto IL_1cfd;
+21539: 				IL_1e2e:
+21540: 				_0087_008E_009D = new Container();
+21541: 				num = 175;
+21542: 				goto IL_1e1b;
+21543: 				IL_1e1b:
+21544: 				componentResourceManager = new ComponentResourceManager(typeof(_0089_0088));
+21545: 				goto IL_1def;
+21546: 				IL_1def:
+21547: 				_0087_008E_009E = new Button();
+21548: 				_0087_008F_0086 = new Button();
+21549: 				_0087_008F_0087 = new Button();
+21550: 				num = 94;
+21551: 				goto IL_1dd9;
+21552: 				IL_1dd9:
+21553: 				_0087_008F_0088 = new StatusStrip();
+21554: 				num = 141;
+21555: 				goto IL_1dc3;
+21556: 				IL_1dc3:
+21557: 				_0087_008F_0089 = new ToolStripStatusLabel();
+21558: 				num = 3;
+21559: 				goto IL_1dad;
+21560: 				IL_1dad:
+21561: 				_0087_008F_009D = new ToolStripStatusLabel();
+21562: 				num = 59;
+21563: 				goto IL_1d91;
+21564: 				IL_1d91:
+21565: 				_0087_008F_008A = new ToolTip(_0087_008E_009D);
+21566: 				num = 13;
+21567: 				goto IL_1d65;
+21568: 				IL_1d65:
+21569: 				_0087_008F_008B = new GroupBox();
+21570: 				_0087_008F_008C = new TextBox();
+21571: 				_0087_008F_008D = new TextBox();
+21572: 				num = 132;
+21573: 				goto IL_1d19;
+21574: 				IL_1d19:
+21575: 				_0087_008F_008E = new Button();
+21576: 				_0087_008F_008F = new Label();
+21577: 				_0087_008F_0090 = new Label();
+21578: 				_0087_008F_0091 = new Label();
+21579: 				_0087_008F_0092 = new Label();
+21580: 				num = 135;
+21581: 				if (!_0087_009C())
+21582: 				{
+21583: 					goto IL_10f9;
+21584: 				}
+21585: 				goto IL_1cfd;
+21586: 				IL_1cfd:
+21587: 				_0087_008F_009A.TextChanged += _0087_008E_0093;
+21588: 				goto IL_175c;
+21589: 				IL_175c:
+21590: 				_0087_008F_009B.Location = new Point(77, 57);
+21591: 				num = 107;
+21592: 				goto IL_173d;
+21593: 				IL_173d:
+21594: 				_0087_008F_009B.Margin = new Padding(4, 3, 4, 3);
+21595: 				num = 126;
+21596: 				goto IL_170f;
+21597: 				IL_170f:
+21598: 				_0087_008F_009B.Name = "textBoxLat1" /* string-offset:2848 */;
+21599: 				_0087_008F_009B.Size = new Size(116, 23);
+21600: 				goto IL_16b6;
+21601: 				IL_16b6:
+21602: 				_0087_008F_009B.TabIndex = 1;
+21603: 				_0087_008F_009B.Text = " " /* string-offset:584 */;
+21604: 				_0087_008F_009B.TextChanged += _0087_008E_0094;
+21605: 				_0087_008F_009C.Controls.Add(_0087_0090_008A);
+21606: 				num = 30;
+21607: 				goto IL_169e;
+21608: 				IL_169e:
+21609: 				_0087_008F_009C.Controls.Add(_0087_008F_009B);
+21610: 				goto IL_167d;
+21611: 				IL_167d:
+21612: 				_0087_008F_009C.Controls.Add(_0087_008F_009A);
+21613: 				num = 51;
+21614: 				goto IL_1646;
+21615: 				IL_1646:
+21616: 				_0087_008F_009C.Controls.Add(_0087_0090_008B);
+21617: 				_0087_008F_009C.Controls.Add(_0087_008F_0099);
+21618: 				num = 36;
+21619: 				goto IL_1604;
+21620: 				IL_1604:
+21621: 				_0087_008F_009C.Controls.Add(_0087_008F_0098);
+21622: 				_0087_008F_009C.Controls.Add(_0087_008F_0097);
+21623: 				_0087_008F_009C.Location = new Point(16, 12);
+21624: 				goto IL_15d9;
+21625: 				IL_15d9:
+21626: 				_0087_008F_009C.Margin = new Padding(4, 3, 4, 3);
+21627: 				_0087_008F_009C.Name = "groupBox1" /* string-offset:1664 */;
+21628: 				goto IL_15ba;
+21629: 				IL_15ba:
+21630: 				_0087_008F_009C.Padding = new Padding(4, 3, 4, 3);
+21631: 				num = 12;
+21632: 				goto IL_1598;
+21633: 				IL_1598:
+21634: 				_0087_008F_009C.Size = new Size(210, 123);
+21635: 				num = 1;
+21636: 				goto IL_1589;
+21637: 				IL_1589:
+21638: 				_0087_008F_009C.TabIndex = 59;
+21639: 				goto IL_1553;
+21640: 				IL_1553:
+21641: 				_0087_008F_009C.TabStop = false;
+21642: 				_0087_008F_009C.Text = "导航台位置" /* string-offset:3652 */;
+21643: 				num = 112;
+21644: 				if (_0087_009B())
+21645: 				{
+21646: 					goto IL_1520;
+21647: 				}
+21648: 				goto IL_1a1d;
+21649: 				IL_1520:
+21650: 				_0087_0090_008A.Location = new Point(77, 90);
+21651: 				_0087_0090_008A.Margin = new Padding(4, 3, 4, 3);
+21652: 				num = 169;
+21653: 				goto IL_1500;
+21654: 				IL_1500:
+21655: 				_0087_0090_008A.Name = "textBoxNavName" /* string-offset:3656 */;
+21656: 				num = 43;
+21657: 				goto IL_14e1;
+21658: 				IL_14e1:
+21659: 				_0087_0090_008A.Size = new Size(66, 23);
+21660: 				num = 75;
+21661: 				goto IL_14ca;
+21662: 				IL_14ca:
+21663: 				_0087_0090_008A.TabIndex = 1;
+21664: 				num = 15;
+21665: 				goto IL_14b3;
+21666: 				IL_14b3:
+21667: 				_0087_0090_008A.Text = "LCJ" /* string-offset:3660 */;
+21668: 				goto IL_1485;
+21669: 				IL_1485:
+21670: 				_0087_0090_008B.AutoSize = true;
+21671: 				_0087_0090_008B.Location = new Point(16, 94);
+21672: 				num = 124;
+21673: 				goto IL_13ff;
+21674: 				IL_13ff:
+21675: 				_0087_0090_008B.Margin = new Padding(4, 0, 4, 0);
+21676: 				_0087_0090_008B.Name = "label3" /* string-offset:1876 */;
+21677: 				_0087_0090_008B.Size = new Size(37, 15);
+21678: 				_0087_0090_008B.TabIndex = 2;
+21679: 				_0087_0090_008B.Text = "呼号" /* string-offset:3664 */;
+21680: 				_0087_008F_009E.Location = new Point(404, 157);
+21681: 				num = 16;
+21682: 				goto IL_13d3;
+21683: 				IL_13d3:
+21684: 				_0087_008F_009E.Margin = new Padding(4, 3, 4, 3);
+21685: 				num = 97;
+21686: 				if (!_0087_009C())
+21687: 				{
+21688: 					goto IL_10f9;
+21689: 				}
+21690: 				goto IL_14ca;
+21691: 				IL_10f9:
+21692: 				while (true)
+21693: 				{
+21694: 					switch (num)
+21695: 					{
+21696: 					case 176:
+21697: 						break;
+21698: 					case 121:
+21699: 						goto IL_0043;
+21700: 					case 39:
+21701: 						goto IL_0060;
+21702: 					case 139:
+21703: 						goto IL_0075;
+21704: 					case 55:
+21705: 						goto IL_00f2;
+21706: 					case 76:
+21707: 						goto IL_0124;
+21708: 					case 100:
+21709: 						goto IL_0130;
+21710: 					case 47:
+21711: 						goto IL_014e;
+21712: 					case 2:
+21713: 						goto IL_016e;
+21714: 					case 68:
+21715: 						goto IL_01a3;
+21716: 					case 38:
+21717: 						goto IL_01c3;
+21718: 					case 5:
+21719: 						goto IL_01e1;
+21720: 					case 22:
+21721: 						goto IL_01f5;
+21722: 					case 84:
+21723: 						goto IL_020a;
+21724: 					case 102:
+21725: 						goto IL_021f;
+21726: 					case 58:
+21727: 						goto IL_023f;
+21728: 					case 118:
+21729: 						goto IL_0254;
+21730: 					case 143:
+21731: 						goto IL_029a;
+21732: 					case 9:
+21733: 						goto IL_02c3;
+21734: 					case 109:
+21735: 						goto IL_02e1;
+21736: 					case 174:
+21737: 						_0087_008F_0096.SuspendLayout();
+21738: 						_0087_008F_009C.SuspendLayout();
+21739: 						num = 96;
+21740: 						if (!_0087_009C())
+21741: 						{
+21742: 							continue;
+21743: 						}
+21744: 						goto IL_1c84;
+21745: 					case 173:
+21746: 						goto IL_0347;
+21747: 					case 106:
+21748: 						goto IL_035d;
+21749: 					case 91:
+21750: 						goto IL_0387;
+21751: 					case 165:
+21752: 						_0087_0090_0087.Location = new Point(577, 148);
+21753: 						_0087_0090_0087.Name = "button18" /* string-offset:3312 */;
+21754: 						_0087_0090_0087.Size = new Size(70, 40);
+21755: 						goto case 27;
+21756: 					case 27:
+21757: 						_0087_0090_0087.TabIndex = 79;
+21758: 						goto case 83;
+21759: 					case 83:
+21760: 						_0087_0090_0087.Text = "标记" /* string-offset:2972 */;
+21761: 						_0087_0090_0087.UseVisualStyleBackColor = true;
+21762: 						_0087_0090_0087.Click += _0087_008E_0091;
+21763: 						goto case 140;
+21764: 					case 140:
+21765: 						_0087_0090_0088.AllowUserToAddRows = false;
+21766: 						_0087_0090_0088.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+21767: 						num = 131;
+21768: 						goto case 131;
+21769: 					case 131:
+21770: 						_0087_0090_0088.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None;
+21771: 						num = 11;
+21772: 						if (!_0087_009C())
+21773: 						{
+21774: 							continue;
+21775: 						}
+21776: 						goto case 18;
+21777: 					case 162:
+21778: 						_0087_008F_0091.Location = new Point(17, 28);
+21779: 						_0087_008F_0091.Margin = new Padding(4, 0, 4, 0);
+21780: 						_0087_008F_0091.Name = "label7" /* string-offset:2236 */;
+21781: 						_0087_008F_0091.Size = new Size(53, 15);
+21782: 						num = 40;
+21783: 						if (_0087_009C())
+21784: 						{
+21785: 							goto case 149;
+21786: 						}
+21787: 						goto case 40;
+21788: 					case 149:
+21789: 						_0087_008F_0086.Size = new Size(70, 40);
+21790: 						num = 116;
+21791: 						goto case 116;
+21792: 					case 116:
+21793: 						_0087_008F_0086.TabIndex = 68;
+21794: 						num = 99;
+21795: 						goto case 99;
+21796: 					case 99:
+21797: 						_0087_008F_0086.Text = "CAD" /* string-offset:1696 */;
+21798: 						goto case 63;
+21799: 					case 63:
+21800: 						_0087_008F_0086.UseVisualStyleBackColor = true;
+21801: 						num = 104;
+21802: 						if (_0087_009B())
+21803: 						{
+21804: 							continue;
+21805: 						}
+21806: 						goto IL_193d;
+21807: 					case 40:
+21808: 						_0087_008F_0091.TabIndex = 2;
+21809: 						_0087_008F_0091.Text = "X（m）" /* string-offset:2876 */;
+21810: 						_0087_008F_0092.AutoSize = true;
+21811: 						_0087_008F_0092.Location = new Point(17, 61);
+21812: 						num = 29;
+21813: 						goto case 29;
+21814: 					case 29:
+21815: 						_0087_008F_0092.Margin = new Padding(4, 0, 4, 0);
+21816: 						_0087_008F_0092.Name = "label4" /* string-offset:2904 */;
+21817: 						_0087_008F_0092.Size = new Size(53, 15);
+21818: 						num = 54;
+21819: 						goto case 54;
+21820: 					case 54:
+21821: 						_0087_008F_0092.TabIndex = 2;
+21822: 						num = 88;
+21823: 						goto case 88;
+21824: 					case 88:
+21825: 						_0087_008F_0092.Text = "Y（m）" /* string-offset:2868 */;
+21826: 						num = 17;
+21827: 						goto case 17;
+21828: 					case 17:
+21829: 						_0087_008F_0093.Location = new Point(78, 24);
+21830: 						goto case 159;
+21831: 					case 159:
+21832: 						_0087_008F_0093.Margin = new Padding(4, 3, 4, 3);
+21833: 						goto case 14;
+21834: 					case 14:
+21835: 						_0087_008F_0093.Name = "textBoxLon2" /* string-offset:2896 */;
+21836: 						_0087_009B();
+21837: 						if (_0087_009C())
+21838: 						{
+21839: 							num = 64;
+21840: 							if (_0087_009B())
+21841: 							{
+21842: 								continue;
+21843: 							}
+21844: 							goto IL_035d;
+21845: 						}
+21846: 						num = 93;
+21847: 						goto case 77;
+21848: 					case 161:
+21849: 						_0087_008F_0094 = new TextBox();
+21850: 						_0087_008F_0095 = new Button();
+21851: 						_0087_008F_0096 = new GroupBox();
+21852: 						_0087_008F_0097 = new Label();
+21853: 						_0087_008F_0098 = new Label();
+21854: 						num = 86;
+21855: 						goto case 86;
+21856: 					case 86:
+21857: 						_0087_008F_0099 = new Button();
+21858: 						num = 158;
+21859: 						goto case 158;
+21860: 					case 158:
+21861: 						_0087_008F_009A = new TextBox();
+21862: 						_0087_008F_009B = new TextBox();
+21863: 						goto case 35;
+21864: 					case 35:
+21865: 						_0087_008F_009C = new GroupBox();
+21866: 						_0087_0090_008A = new TextBox();
+21867: 						_0087_0090_008B = new Label();
+21868: 						num = 78;
+21869: 						goto case 78;
+21870: 					case 78:
+21871: 						_0087_008F_009E = new TextBox();
+21872: 						goto case 34;
+21873: 					case 34:
+21874: 						_0087_0090_0086 = new Label();
+21875: 						num = 111;
+21876: 						goto case 111;
+21877: 					case 111:
+21878: 						_0087_0090_0087 = new Button();
+21879: 						_0087_0090_0088 = new DataGridView();
+21880: 						_0087_0090_0089 = new CheckBox();
+21881: 						_0087_008F_0088.SuspendLayout();
+21882: 						num = 79;
+21883: 						goto case 79;
+21884: 					case 79:
+21885: 						_0087_008F_008B.SuspendLayout();
+21886: 						goto case 174;
+21887: 					case 160:
+21888: 						base.AutoScaleMode = AutoScaleMode.Font;
+21889: 						base.ClientSize = new Size(679, 474);
+21890: 						base.Controls.Add(_0087_0090_0089);
+21891: 						base.Controls.Add(_0087_0090_0088);
+21892: 						num = 125;
+21893: 						if (!_0087_009C())
+21894: 						{
+21895: 							continue;
+21896: 						}
+21897: 						goto IL_01f5;
+21898: 					case 157:
+21899: 						_0087_008F_008B.Controls.Add(_0087_008F_008E);
+21900: 						_0087_008F_008B.Controls.Add(_0087_008F_008F);
+21901: 						_0087_008F_008B.Controls.Add(_0087_008F_0090);
+21902: 						goto case 145;
+21903: 					case 145:
+21904: 						_0087_008F_008B.Location = new Point(452, 12);
+21905: 						num = 147;
+21906: 						if (_0087_009B())
+21907: 						{
+21908: 							goto case 147;
+21909: 						}
+21910: 						goto IL_1bef;
+21911: 					case 147:
+21912: 						_0087_008F_008B.Margin = new Padding(4, 3, 4, 3);
+21913: 						num = 26;
+21914: 						goto case 26;
+21915: 					case 26:
+21916: 						_0087_008F_008B.Name = "groupBox3" /* string-offset:1708 */;
+21917: 						_0087_008F_008B.Padding = new Padding(4, 3, 4, 3);
+21918: 						_0087_008F_008B.Size = new Size(210, 123);
+21919: 						_0087_008F_008B.TabIndex = 59;
+21920: 						num = 91;
+21921: 						goto IL_0387;
+21922: 					case 156:
+21923: 						_0087_008E_009E.Margin = new Padding(4, 3, 4, 3);
+21924: 						_0087_008E_009E.Name = "buttonEvl" /* string-offset:3260 */;
+21925: 						goto case 117;
+21926: 					case 117:
+21927: 						_0087_008E_009E.Size = new Size(99, 40);
+21928: 						_0087_008E_009E.TabIndex = 70;
+21929: 						num = 82;
+21930: 						if (!_0087_009C())
+21931: 						{
+21932: 							goto case 82;
+21933: 						}
+21934: 						goto IL_1b2a;
+21935: 					case 82:
+21936: 						_0087_008E_009E.Text = "一键评估" /* string-offset:2980 */;
+21937: 						num = 123;
+21938: 						goto case 123;
+21939: 					case 123:
+21940: 						_0087_008E_009E.UseVisualStyleBackColor = true;
+21941: 						num = 89;
+21942: 						goto case 89;
+21943: 					case 89:
+21944: 						_0087_008E_009E.Click += _0087_008E_008D;
+21945: 						num = 21;
+21946: 						if (!_0087_009B())
+21947: 						{
+21948: 							goto IL_01e1;
+21949: 						}
+21950: 						goto case 21;
+21951: 					case 21:
+21952: 						_0087_008F_0086.Location = new Point(254, 148);
+21953: 						num = 103;
+21954: 						if (!_0087_009B())
+21955: 						{
+21956: 							goto case 119;
+21957: 						}
+21958: 						goto case 103;
+21959: 					case 119:
+21960: 						_0087_0090_0089.UseVisualStyleBackColor = true;
+21961: 						base.AutoScaleDimensions = new SizeF(7f, 14f);
+21962: 						num = 160;
+21963: 						goto case 160;
+21964: 					case 103:
+21965: 						_0087_008F_0086.Name = "buttonCAD" /* string-offset:3608 */;
+21966: 						num = 149;
+21967: 						if (!_0087_009B())
+21968: 						{
+21969: 							goto IL_029a;
+21970: 						}
+21971: 						goto case 149;
+21972: 					case 154:
+21973: 						Text = "进场DME弧评估" /* string-offset:3676 */;
+21974: 						num = 114;
+21975: 						goto case 114;
+21976: 					case 114:
+21977: 						base.FormClosed += _0087_008D_009C;
+21978: 						goto case 105;
+21979: 					case 105:
+21980: 						base.Load += _0087_008D_009B;
+21981: 						num = 129;
+21982: 						goto case 129;
+21983: 					case 129:
+21984: 						_0087_008F_0088.ResumeLayout(performLayout: false);
+21985: 						num = 45;
+21986: 						goto case 45;
+21987: 					case 45:
+21988: 						_0087_008F_0088.PerformLayout();
+21989: 						num = 31;
+21990: 						if (!_0087_009C())
+21991: 						{
+21992: 							continue;
+21993: 						}
+21994: 						goto IL_02c3;
+21995: 					case 152:
+21996: 						SuspendLayout();
+21997: 						_0087_008E_009E.Location = new Point(471, 148);
+21998: 						goto case 156;
+21999: 					case 138:
+22000: 						_0087_0090_0089.AutoSize = true;
+22001: 						num = 28;
+22002: 						goto case 28;
+22003: 					case 28:
+22004: 						_0087_0090_0089.Checked = true;
+22005: 						_0087_0090_0089.CheckState = CheckState.Checked;
+22006: 						_0087_0090_0089.Location = new Point(152, 159);
+22007: 						_0087_0090_0089.Name = "checkBox1" /* string-offset:1820 */;
+22008: 						goto case 56;
+22009: 					case 56:
+22010: 						_0087_0090_0089.Size = new Size(86, 19);
+22011: 						_0087_0090_0089.TabIndex = 81;
+22012: 						num = 134;
+22013: 						goto case 134;
+22014: 					case 134:
+22015: 						_0087_0090_0089.Text = "标注距离" /* string-offset:3672 */;
+22016: 						goto case 119;
+22017: 					case 64:
+22018: 					case 137:
+22019: 						_0087_008F_009E.TabIndex = 74;
+22020: 						goto case 65;
+22021: 					case 65:
+22022: 						_0087_008F_009E.Text = " 300" /* string-offset:3668 */;
+22023: 						_0087_008F_009E.TextChanged += _0087_008E_0097;
+22024: 						_0087_0090_0086.AutoSize = true;
+22025: 						_0087_0090_0086.Location = new Point(343, 161);
+22026: 						_0087_0090_0086.Margin = new Padding(4, 0, 4, 0);
+22027: 						_0087_0090_0086.Name = "label2" /* string-offset:1860 */;
+22028: 						num = 37;
+22029: 						goto case 37;
+22030: 					case 37:
+22031: 						_0087_0090_0086.Size = new Size(55, 15);
+22032: 						_0087_0090_0086.TabIndex = 75;
+22033: 						_0087_0090_0086.Text = "MOC(m)" /* string-offset:2756 */;
+22034: 						num = 165;
+22035: 						if (_0087_009B())
+22036: 						{
+22037: 							goto case 165;
+22038: 						}
+22039: 						goto IL_1520;
+22040: 					case 136:
+22041: 						_0087_008F_0087.Click += _0087_008D_009D;
+22042: 						_0087_008F_0088.ImageScalingSize = new Size(19, 19);
+22043: 						num = 7;
+22044: 						goto case 7;
+22045: 					case 7:
+22046: 						_0087_008F_0088.Items.AddRange(new ToolStripItem[2] { _0087_008F_0089, _0087_008F_009D });
+22047: 						_0087_008F_0088.Location = new Point(0, 448);
+22048: 						num = 0;
+22049: 						goto case 0;
+22050: 					case 0:
+22051: 						_0087_008F_0088.Name = "statusStrip1" /* string-offset:2836 */;
+22052: 						_0087_008F_0088.Size = new Size(679, 26);
+22053: 						goto case 32;
+22054: 					case 32:
+22055: 						_0087_008F_0088.TabIndex = 73;
+22056: 						num = 52;
+22057: 						if (_0087_009B())
+22058: 						{
+22059: 							continue;
+22060: 						}
+22061: 						goto case 34;
+22062: 					case 135:
+22063: 						_0087_008F_0093 = new TextBox();
+22064: 						num = 161;
+22065: 						goto case 161;
+22066: 					case 128:
+22067: 						_0087_008F_0089.Size = new Size(84, 20);
+22068: 						_0087_008F_0089.Text = "软件已就绪" /* string-offset:3612 */;
+22069: 						_0087_008F_009D.Name = "toolStripStatusLabel2" /* string-offset:3616 */;
+22070: 						_0087_008F_009D.Size = new Size(13, 20);
+22071: 						num = 8;
+22072: 						goto case 8;
+22073: 					case 8:
+22074: 						_0087_008F_009D.Text = " " /* string-offset:584 */;
+22075: 						_0087_008F_008B.Controls.Add(_0087_008F_008C);
+22076: 						_0087_008F_008B.Controls.Add(_0087_008F_008D);
+22077: 						num = 157;
+22078: 						goto case 157;
+22079: 					case 127:
+22080: 						_0087_0090_0088.RowTemplate.Height = 27;
+22081: 						num = 33;
+22082: 						if (_0087_009B())
+22083: 						{
+22084: 							goto IL_0dc1;
+22085: 						}
+22086: 						goto IL_1aa6;
+22087: 					case 33:
+22088: 						goto IL_0dc1;
+22089: 					case 6:
+22090: 						goto IL_0dcd;
+22091: 					case 125:
+22092: 						base.Controls.Add(_0087_0090_0087);
+22093: 						base.Controls.Add(_0087_008F_009E);
+22094: 						goto case 113;
+22095: 					case 113:
+22096: 						base.Controls.Add(_0087_0090_0086);
+22097: 						goto case 98;
+22098: 					case 98:
+22099: 						base.Controls.Add(_0087_008F_008B);
+22100: 						base.Controls.Add(_0087_008F_009C);
+22101: 						base.Controls.Add(_0087_008F_0096);
+22102: 						num = 80;
+22103: 						goto case 80;
+22104: 					case 80:
+22105: 						base.Controls.Add(_0087_008F_0088);
+22106: 						base.Controls.Add(_0087_008E_009E);
+22107: 						num = 122;
+22108: 						if (_0087_009C())
+22109: 						{
+22110: 							goto IL_01a3;
+22111: 						}
+22112: 						goto case 122;
+22113: 					case 122:
+22114: 						base.Controls.Add(_0087_008F_0086);
+22115: 						base.Controls.Add(_0087_008F_0087);
+22116: 						base.Name = "FormDmeEvl" /* string-offset:396 */;
+22117: 						num = 154;
+22118: 						goto case 154;
+22119: 					case 104:
+22120: 						_0087_008F_0086.Click += _0087_008E_008A;
+22121: 						_0087_008F_0087.Location = new Point(20, 148);
+22122: 						_0087_008F_0087.Margin = new Padding(4, 3, 4, 3);
+22123: 						_0087_008F_0087.Name = "buttonScreen" /* string-offset:2984 */;
+22124: 						num = 49;
+22125: 						goto case 49;
+22126: 					case 49:
+22127: 						_0087_008F_0087.Size = new Size(99, 40);
+22128: 						_0087_008F_0087.TabIndex = 66;
+22129: 						_0087_008F_0087.Text = "屏幕数据" /* string-offset:2988 */;
+22130: 						_0087_008F_0087.UseVisualStyleBackColor = true;
+22131: 						goto case 136;
+22132: 					case 97:
+22133: 						_0087_008F_009E.Name = "textBox1" /* string-offset:1784 */;
+22134: 						num = 4;
+22135: 						goto case 4;
+22136: 					case 4:
+22137: 						_0087_008F_009E.Size = new Size(52, 23);
+22138: 						goto case 64;
+22139: 					case 96:
+22140: 						((ISupportInitialize)_0087_0090_0088).BeginInit();
+22141: 						goto case 152;
+22142: 					case 85:
+22143: 						_0087_0090_0088.ReadOnly = true;
+22144: 						num = 42;
+22145: 						if (_0087_009B())
+22146: 						{
+22147: 							continue;
+22148: 						}
+22149: 						goto case 18;
+22150: 					case 66:
+22151: 						_0087_008F_0090.Margin = new Padding(4, 0, 4, 0);
+22152: 						_0087_008F_0090.Name = "label17" /* string-offset:2548 */;
+22153: 						_0087_008F_0090.Size = new Size(53, 15);
+22154: 						_0087_008F_0090.TabIndex = 2;
+22155: 						num = 20;
+22156: 						goto case 20;
+22157: 					case 20:
+22158: 						_0087_008F_0090.Text = "X（m）" /* string-offset:2876 */;
+22159: 						_0087_008F_0091.AutoSize = true;
+22160: 						num = 162;
+22161: 						goto case 162;
+22162: 					case 52:
+22163: 						_0087_008F_0088.Text = "statusStrip1" /* string-offset:2836 */;
+22164: 						_0087_008F_0089.Name = "toolStripStatusLabel1" /* string-offset:2840 */;
+22165: 						goto case 128;
+22166: 					case 42:
+22167: 						_0087_0090_0088.RowHeadersWidth = 49;
+22168: 						num = 127;
+22169: 						if (_0087_009B())
+22170: 						{
+22171: 							continue;
+22172: 						}
+22173: 						goto case 63;
+22174: 					case 11:
+22175: 						_0087_0090_0088.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+22176: 						_0087_0090_0088.Location = new Point(0, 207);
+22177: 						_0087_0090_0088.Name = "dataGridView1" /* string-offset:2832 */;
+22178: 						goto case 85;
+22179: 					case 16:
+22180: 						goto IL_13d3;
+22181: 					case 124:
+22182: 						goto IL_13ff;
+22183: 					case 24:
+22184: 						goto IL_1485;
+22185: 					case 15:
+22186: 						goto IL_14b3;
+22187: 					case 75:
+22188: 						goto IL_14ca;
+22189: 					case 43:
+22190: 						goto IL_14e1;
+22191: 					case 169:
+22192: 						goto IL_1500;
+22193: 					case 112:
+22194: 						goto IL_1520;
+22195: 					case 41:
+22196: 						goto IL_1553;
+22197: 					case 1:
+22198: 						goto IL_1589;
+22199: 					case 12:
+22200: 						goto IL_1598;
+22201: 					case 177:
+22202: 						goto IL_15ba;
+22203: 					case 163:
+22204: 						goto IL_15d9;
+22205: 					case 36:
+22206: 						goto IL_1604;
+22207: 					case 51:
+22208: 						goto IL_1646;
+22209: 					case 87:
+22210: 						goto IL_167d;
+22211: 					case 30:
+22212: 						goto IL_169e;
+22213: 					case 130:
+22214: 						goto IL_16b6;
+22215: 					case 126:
+22216: 						goto IL_170f;
+22217: 					case 107:
+22218: 						goto IL_173d;
+22219: 					case 62:
+22220: 						goto IL_175c;
+22221: 					default:
+22222: 						num = 166;
+22223: 						goto IL_1973;
+22224: 					case 77:
+22225: 					case 93:
+22226: 						_0087_008F_0093.Size = new Size(116, 23);
+22227: 						num = 48;
+22228: 						goto case 48;
+22229: 					case 48:
+22230: 						_0087_008F_0093.TabIndex = 0;
+22231: 						_0087_008F_0093.Text = " " /* string-offset:584 */;
+22232: 						_0087_008F_0093.TextChanged += _0087_008E_0095;
+22233: 						_0087_008F_0094.Location = new Point(78, 57);
+22234: 						_0087_008F_0094.Margin = new Padding(4, 3, 4, 3);
+22235: 						num = 110;
+22236: 						goto case 110;
+22237: 					case 110:
+22238: 						_0087_008F_0094.Name = "textBoxLat2" /* string-offset:2892 */;
+22239: 						num = 60;
+22240: 						goto IL_1837;
+22241: 					case 60:
+22242: 						goto IL_1837;
+22243: 					case 46:
+22244: 						goto IL_1854;
+22245: 					case 69:
+22246: 						goto IL_187e;
+22247: 					case 81:
+22248: 						goto IL_189e;
+22249: 					case 167:
+22250: 						goto IL_18c7;
+22251: 					case 133:
+22252: 						goto IL_18d3;
+22253: 					case 57:
+22254: 						goto IL_1908;
+22255: 					case 120:
+22256: 						goto IL_193d;
+22257: 					case 67:
+22258: 						goto IL_195d;
+22259: 					case 166:
+22260: 						goto IL_1973;
+22261: 					case 155:
+22262: 						goto IL_19b5;
+22263: 					case 73:
+22264: 						goto IL_19d4;
+22265: 					case 142:
+22266: 						goto IL_1a1d;
+22267: 					case 19:
+22268: 						goto IL_1a51;
+22269: 					case 170:
+22270: 						goto IL_1a67;
+22271: 					case 150:
+22272: 						goto IL_1a73;
+22273: 					case 164:
+22274: 						goto IL_1a91;
+22275: 					case 95:
+22276: 						goto IL_1aa6;
+22277: 					case 92:
+22278: 						goto IL_1ad7;
+22279: 					case 144:
+22280: 						goto IL_1b15;
+22281: 					case 23:
+22282: 						goto IL_1b2a;
+22283: 					case 171:
+22284: 						goto IL_1b36;
+22285: 					case 148:
+22286: 						goto IL_1b53;
+22287: 					case 146:
+22288: 						goto IL_1b7c;
+22289: 					case 90:
+22290: 						goto IL_1b99;
+22291: 					case 108:
+22292: 						goto IL_1bc3;
+22293: 					case 61:
+22294: 						goto IL_1bef;
+22295: 					case 115:
+22296: 						goto IL_1c38;
+22297: 					case 72:
+22298: 						goto IL_1c50;
+22299: 					case 71:
+22300: 						goto IL_1c84;
+22301: 					case 50:
+22302: 						goto IL_1c98;
+22303: 					case 70:
+22304: 						goto IL_1cb6;
+22305: 					case 53:
+22306: 						goto IL_1cd3;
+22307: 					case 44:
+22308: 						goto IL_1cfd;
+22309: 					case 132:
+22310: 						goto IL_1d19;
+22311: 					case 13:
+22312: 						goto IL_1d65;
+22313: 					case 59:
+22314: 						goto IL_1d91;
+22315: 					case 3:
+22316: 						goto IL_1dad;
+22317: 					case 141:
+22318: 						goto IL_1dc3;
+22319: 					case 94:
+22320: 						goto IL_1dd9;
+22321: 					case 168:
+22322: 						goto IL_1def;
+22323: 					case 175:
+22324: 						goto IL_1e1b;
+22325: 					case 153:
+22326: 						goto IL_1e2e;
+22327: 					case 101:
+22328: 						goto IL_1e44;
+22329: 					case 31:
+22330: 						_0087_008F_008B.ResumeLayout(performLayout: false);
+22331: 						num = 25;
+22332: 						goto case 25;
+22333: 					case 25:
+22334: 						_0087_008F_008B.PerformLayout();
+22335: 						num = 10;
+22336: 						goto case 10;
+22337: 					case 10:
+22338: 						_0087_008F_0096.ResumeLayout(performLayout: false);
+22339: 						num = 172;
+22340: 						goto case 172;
+22341: 					case 172:
+22342: 						_0087_008F_0096.PerformLayout();
+22343: 						_0087_008F_009C.ResumeLayout(performLayout: false);
+22344: 						goto case 151;
+22345: 					case 151:
+22346: 						_0087_008F_009C.PerformLayout();
+22347: 						((ISupportInitialize)_0087_0090_0088).EndInit();
+22348: 						num = 74;
+22349: 						goto case 74;
+22350: 					case 74:
+22351: 						ResumeLayout(performLayout: false);
+22352: 						num = 18;
+22353: 						goto case 18;
+22354: 					case 18:
+22355: 						PerformLayout();
+22356: 						num = 178;
+22357: 						return;
+22358: 					case 178:
+22359: 						return;
+22360: 					}
+22361: 					break;
+22362: 				}
+22363: 				goto IL_0026;
+22364: 				IL_0dc1:
+22365: 				_0087_0090_0088.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+22366: 				goto IL_0dcd;
+22367: 				IL_0dcd:
+22368: 				_0087_0090_0088.Size = new Size(679, 238);
+22369: 				num = 173;
+22370: 				goto IL_0347;
+22371: 				IL_0347:
+22372: 				_0087_0090_0088.TabIndex = 80;
+22373: 				num = 106;
+22374: 				goto IL_035d;
+22375: 				IL_035d:
+22376: 				_0087_0090_0088.CellClick += _0087_008E_0092;
+22377: 				num = 138;
+22378: 				if (_0087_009C())
+22379: 				{
+22380: 					goto IL_0387;
+22381: 				}
+22382: 				goto IL_10f9;
+22383: 				IL_0387:
+22384: 				_0087_008F_008B.TabStop = false;
+22385: 				_0087_008F_008B.Text = "IAF方向" /* string-offset:3620 */;
+22386: 				num = 176;
+22387: 				goto IL_0026;
+22388: 				IL_0026:
+22389: 				_0087_008F_008C.Location = new Point(77, 57);
+22390: 				num = 121;
+22391: 				goto IL_0043;
+22392: 				IL_0043:
+22393: 				_0087_008F_008C.Margin = new Padding(4, 3, 4, 3);
+22394: 				num = 39;
+22395: 				goto IL_0060;
+22396: 				IL_0060:
+22397: 				_0087_008F_008C.Name = "textBoxLat3" /* string-offset:3624 */;
+22398: 				goto IL_0075;
+22399: 				IL_0075:
+22400: 				_0087_008F_008C.Size = new Size(116, 23);
+22401: 				_0087_008F_008C.TabIndex = 1;
+22402: 				_0087_008F_008C.Text = " " /* string-offset:584 */;
+22403: 				_0087_008F_008C.TextChanged += _0087_008E_0099;
+22404: 				_0087_008F_008D.Location = new Point(77, 24);
+22405: 				_0087_008F_008D.Margin = new Padding(4, 3, 4, 3);
+22406: 				num = 55;
+22407: 				goto IL_00f2;
+22408: 				IL_00f2:
+22409: 				_0087_008F_008D.Name = "textBoxLon3" /* string-offset:3628 */;
+22410: 				_0087_008F_008D.Size = new Size(116, 23);
+22411: 				num = 76;
+22412: 				goto IL_0124;
+22413: 				IL_0124:
+22414: 				_0087_008F_008D.TabIndex = 0;
+22415: 				goto IL_0130;
+22416: 				IL_0130:
+22417: 				_0087_008F_008D.Text = " " /* string-offset:584 */;
+22418: 				num = 47;
+22419: 				goto IL_014e;
+22420: 				IL_014e:
+22421: 				_0087_008F_008D.TextChanged += _0087_008E_0098;
+22422: 				num = 2;
+22423: 				goto IL_016e;
+22424: 				IL_016e:
+22425: 				_0087_008F_008E.BackgroundImage = (Image)componentResourceManager.GetObject("button2.BackgroundImage" /* string-offset:52 */);
+22426: 				_0087_008F_008E.BackgroundImageLayout = ImageLayout.Zoom;
+22427: 				num = 68;
+22428: 				goto IL_01a3;
+22429: 				IL_01a3:
+22430: 				_0087_008F_008E.Location = new Point(169, 90);
+22431: 				num = 38;
+22432: 				goto IL_01c3;
+22433: 				IL_01c3:
+22434: 				_0087_008F_008E.Name = "button2" /* string-offset:1816 */;
+22435: 				num = 5;
+22436: 				goto IL_01e1;
+22437: 				IL_01e1:
+22438: 				_0087_008F_008E.Size = new Size(24, 24);
+22439: 				goto IL_01f5;
+22440: 				IL_01f5:
+22441: 				_0087_008F_008E.TabIndex = 3;
+22442: 				num = 84;
+22443: 				goto IL_020a;
+22444: 				IL_020a:
+22445: 				_0087_008F_008E.UseVisualStyleBackColor = true;
+22446: 				num = 102;
+22447: 				goto IL_021f;
+22448: 				IL_021f:
+22449: 				_0087_008F_008E.Click += _0087_008E_0089;
+22450: 				num = 58;
+22451: 				goto IL_023f;
+22452: 				IL_023f:
+22453: 				_0087_008F_008F.AutoSize = true;
+22454: 				num = 118;
+22455: 				goto IL_0254;
+22456: 				IL_0254:
+22457: 				_0087_008F_008F.Location = new Point(16, 61);
+22458: 				_0087_008F_008F.Margin = new Padding(4, 0, 4, 0);
+22459: 				_0087_008F_008F.Name = "label16" /* string-offset:2540 */;
+22460: 				num = 143;
+22461: 				goto IL_029a;
+22462: 				IL_029a:
+22463: 				_0087_008F_008F.Size = new Size(53, 15);
+22464: 				_0087_008F_008F.TabIndex = 2;
+22465: 				num = 9;
+22466: 				goto IL_02c3;
+22467: 				IL_02c3:
+22468: 				_0087_008F_008F.Text = "Y（m）" /* string-offset:2868 */;
+22469: 				num = 109;
+22470: 				goto IL_02e1;
+22471: 				IL_02e1:
+22472: 				_0087_008F_0090.AutoSize = true;
+22473: 				_0087_008F_0090.Location = new Point(16, 28);
+22474: 				num = 66;
+22475: 				if (!_0087_009C())
+22476: 				{
+22477: 					goto IL_10f9;
+22478: 				}
+22479: 				goto IL_1837;
+22480: 				IL_1837:
+22481: 				_0087_008F_0094.Size = new Size(116, 23);
+22482: 				num = 46;
+22483: 				goto IL_1854;
+22484: 				IL_1854:
+22485: 				_0087_008F_0094.TabIndex = 1;
+22486: 				_0087_008F_0094.Text = " " /* string-offset:584 */;
+22487: 				num = 69;
+22488: 				goto IL_187e;
+22489: 				IL_187e:
+22490: 				_0087_008F_0094.TextChanged += _0087_008E_0096;
+22491: 				num = 81;
+22492: 				goto IL_189e;
+22493: 				IL_189e:
+22494: 				_0087_008F_0095.BackgroundImage = (Image)componentResourceManager.GetObject("buttonChooseEnd.BackgroundImage" /* string-offset:3632 */);
+22495: 				num = 167;
+22496: 				goto IL_18c7;
+22497: 				IL_18c7:
+22498: 				_0087_008F_0095.BackgroundImageLayout = ImageLayout.Center;
+22499: 				goto IL_18d3;
+22500: 				IL_18d3:
+22501: 				_0087_008F_0095.Location = new Point(170, 90);
+22502: 				_0087_008F_0095.Name = "buttonChooseEnd" /* string-offset:3636 */;
+22503: 				num = 57;
+22504: 				goto IL_1908;
+22505: 				IL_1908:
+22506: 				_0087_008F_0095.Size = new Size(24, 24);
+22507: 				_0087_008F_0095.TabIndex = 3;
+22508: 				_0087_008F_0095.UseVisualStyleBackColor = true;
+22509: 				num = 120;
+22510: 				goto IL_193d;
+22511: 				IL_193d:
+22512: 				_0087_008F_0095.Click += _0087_008E_0088;
+22513: 				num = 67;
+22514: 				goto IL_195d;
+22515: 				IL_195d:
+22516: 				_0087_008F_0096.Controls.Add(_0087_008F_0095);
+22517: 				goto IL_1973;
+22518: 				IL_1973:
+22519: 				_0087_008F_0096.Controls.Add(_0087_008F_0094);
+22520: 				_0087_008F_0096.Controls.Add(_0087_008F_0093);
+22521: 				_0087_008F_0096.Controls.Add(_0087_008F_0092);
+22522: 				goto IL_19b5;
+22523: 				IL_19b5:
+22524: 				_0087_008F_0096.Controls.Add(_0087_008F_0091);
+22525: 				num = 73;
+22526: 				goto IL_19d4;
+22527: 				IL_19d4:
+22528: 				_0087_008F_0096.Location = new Point(234, 12);
+22529: 				_0087_008F_0096.Margin = new Padding(4, 3, 4, 3);
+22530: 				_0087_008F_0096.Name = "groupBox2" /* string-offset:1740 */;
+22531: 				num = 142;
+22532: 				goto IL_1a1d;
+22533: 				IL_1a1d:
+22534: 				_0087_008F_0096.Padding = new Padding(4, 3, 4, 3);
+22535: 				_0087_008F_0096.Size = new Size(210, 123);
+22536: 				num = 19;
+22537: 				goto IL_1a51;
+22538: 				IL_1a51:
+22539: 				_0087_008F_0096.TabIndex = 60;
+22540: 				num = 170;
+22541: 				goto IL_1a67;
+22542: 				IL_1a67:
+22543: 				_0087_008F_0096.TabStop = false;
+22544: 				goto IL_1a73;
+22545: 				IL_1a73:
+22546: 				_0087_008F_0096.Text = "IF位置" /* string-offset:3640 */;
+22547: 				num = 164;
+22548: 				goto IL_1a91;
+22549: 				IL_1a91:
+22550: 				_0087_008F_0097.AutoSize = true;
+22551: 				num = 95;
+22552: 				goto IL_1aa6;
+22553: 				IL_1aa6:
+22554: 				_0087_008F_0097.Location = new Point(16, 28);
+22555: 				_0087_008F_0097.Margin = new Padding(4, 0, 4, 0);
+22556: 				num = 92;
+22557: 				goto IL_1ad7;
+22558: 				IL_1ad7:
+22559: 				_0087_008F_0097.Name = "label1" /* string-offset:1832 */;
+22560: 				_0087_008F_0097.Size = new Size(53, 15);
+22561: 				_0087_008F_0097.TabIndex = 2;
+22562: 				num = 144;
+22563: 				goto IL_1b15;
+22564: 				IL_1b15:
+22565: 				_0087_008F_0097.Text = "X（m）" /* string-offset:2876 */;
+22566: 				goto IL_1b2a;
+22567: 				IL_1b2a:
+22568: 				_0087_008F_0098.AutoSize = true;
+22569: 				goto IL_1b36;
+22570: 				IL_1b36:
+22571: 				_0087_008F_0098.Location = new Point(16, 61);
+22572: 				num = 148;
+22573: 				goto IL_1b53;
+22574: 				IL_1b53:
+22575: 				_0087_008F_0098.Margin = new Padding(4, 0, 4, 0);
+22576: 				_0087_008F_0098.Name = "Start" /* string-offset:2864 */;
+22577: 				goto IL_1b7c;
+22578: 				IL_1b7c:
+22579: 				_0087_008F_0098.Size = new Size(53, 15);
+22580: 				num = 90;
+22581: 				goto IL_1b99;
+22582: 				IL_1b99:
+22583: 				_0087_008F_0098.TabIndex = 2;
+22584: 				_0087_008F_0098.Text = "Y（m）" /* string-offset:2868 */;
+22585: 				num = 108;
+22586: 				goto IL_1bc3;
+22587: 				IL_1bc3:
+22588: 				_0087_008F_0099.BackgroundImage = (Image)componentResourceManager.GetObject("buttonChooseStart.BackgroundImage" /* string-offset:3644 */);
+22589: 				_0087_008F_0099.BackgroundImageLayout = ImageLayout.Zoom;
+22590: 				goto IL_1bef;
+22591: 				IL_1bef:
+22592: 				_0087_008F_0099.Location = new Point(169, 90);
+22593: 				_0087_008F_0099.Name = "buttonChooseStart" /* string-offset:3648 */;
+22594: 				_0087_008F_0099.Size = new Size(24, 24);
+22595: 				num = 115;
+22596: 				goto IL_1c38;
+22597: 				IL_1c38:
+22598: 				_0087_008F_0099.TabIndex = 3;
+22599: 				_0087_008F_0099.UseVisualStyleBackColor = true;
+22600: 				goto IL_1c50;
+22601: 				IL_1c50:
+22602: 				_0087_008F_0099.Click += _0087_008E_0087;
+22603: 				_0087_008F_009A.Location = new Point(77, 24);
+22604: 				num = 71;
+22605: 				goto IL_1c84;
+22606: 				IL_1c84:
+22607: 				_0087_008F_009A.Margin = new Padding(4, 3, 4, 3);
+22608: 				goto IL_1c98;
+22609: 				IL_1c98:
+22610: 				_0087_008F_009A.Name = "textBoxLon1" /* string-offset:2856 */;
+22611: 				num = 70;
+22612: 				goto IL_1cb6;
+22613: 				IL_1cb6:
+22614: 				_0087_008F_009A.Size = new Size(116, 23);
+22615: 				num = 53;
+22616: 				goto IL_1cd3;
+22617: 				IL_1e44:;
+22618: 			}
+22619: 		}
+22620: 
+22621: 		static _0089_0088()
+22622: 		{
+22623: 			LicenseManager.Validate(typeof(_0089_0088));
+22624: 		}
+22625: 
+22626: 		internal static bool _0087_009B()
+22627: 		{
+22628: 			return true;
+22629: 		}
+22630: 
+22631: 		internal static bool _0087_009C()
+22632: 		{
+22633: 			return false;
+22634: 		}
+22635: 	}

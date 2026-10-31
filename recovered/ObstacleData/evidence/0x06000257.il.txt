@@ -1,0 +1,7 @@
+METHOD 06000257 \x88\x9e.\x88\x9d::\x9d\x8c RVA=3CBF file=1EBF
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400012B \x88\x9e.\x88\x9d::\x9e\x8b
+IL_0006: ldstr ''
+IL_000B: callvirt 0x0A0002BD System.Windows.Forms.ToolStripItem::set_Text
+IL_0010: ret 
+

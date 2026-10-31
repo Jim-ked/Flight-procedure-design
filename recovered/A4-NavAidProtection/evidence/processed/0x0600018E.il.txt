@@ -1,0 +1,6 @@
+METHOD 0600018E \x87\x9d.\x87\x9c::GetValue RVA=3634 file=1834
+IL_0000: ldarg.1 
+IL_0001: castclass 0x01000037 System.Windows.Forms.TextBox
+IL_0006: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_000B: ret 
+

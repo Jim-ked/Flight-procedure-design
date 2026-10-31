@@ -1,0 +1,4 @@
+1184: 		public void SetValue(Control P_0, string P_1)
+1185: 		{
+1186: 			((RadioButton)P_0).Checked = P_1 == "True" /* string-offset:1040 */;
+1187: 		}

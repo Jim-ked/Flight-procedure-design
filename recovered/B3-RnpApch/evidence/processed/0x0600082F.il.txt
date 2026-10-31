@@ -1,0 +1,29 @@
+METHOD 0600082F \x8f\x91.\x8f\x90::\x8b\x8b\x89 RVA=9316C file=9136C
+IL_0000: ldstr ''
+IL_0005: stloc.0 
+IL_0006: ldarg.0 
+IL_0007: callvirt 0x0A000127 0x1B00000F::GetEnumerator
+IL_000C: stloc.1 
+IL_000D: nop 
+IL_000E: br.s 59
+IL_0010: ldloca.s local(0x0001)
+IL_0012: call 0x0A000128 0x1B000010::get_Current
+IL_0017: stloc.2 
+IL_0018: ldloc.0 
+IL_0019: ldloc.2 
+IL_001A: callvirt 0x0A000086 System.Object::ToString
+IL_001F: ldc.i4 328
+IL_0024: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0029: call 0x0A00003C System.String::Concat
+IL_002E: stloc.0 
+IL_002F: ldloca.s local(0x0001)
+IL_0031: call 0x0A000129 0x1B000010::MoveNext
+IL_0036: brtrue.s 28
+IL_0038: leave.s 84
+IL_003A: ldloca.s local(0x0001)
+IL_003C: constrained. 0x1B000010 
+IL_0042: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0047: endfinally 
+IL_0048: ldloc.0 
+IL_0049: ret 
+

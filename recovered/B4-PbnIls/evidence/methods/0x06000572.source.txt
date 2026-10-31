@@ -1,0 +1,122 @@
+62084: 		private static string _0089_0096_0097(string P_0)
+62085: 		{
+62086: 			char[] array = default(char[]);
+62087: 			int num2 = default(int);
+62088: 			int num3 = default(int);
+62089: 			char c = default(char);
+62090: 			int num4 = default(int);
+62091: 			int length = default(int);
+62092: 			while (true)
+62093: 			{
+62094: 				IL_014a:
+62095: 				int num;
+62096: 				if (!false /* original-file-bool-offset:1080 */)
+62097: 				{
+62098: 					array = P_0.ToCharArray();
+62099: 					_0088_009D();
+62100: 					if (!_0088_009E())
+62101: 					{
+62102: 						num = 7;
+62103: 						goto IL_00a4;
+62104: 					}
+62105: 					goto IL_0133;
+62106: 				}
+62107: 				num = 3;
+62108: 				goto IL_0115;
+62109: 				IL_0108:
+62110: 				num2++;
+62111: 				num = 11;
+62112: 				goto IL_0115;
+62113: 				IL_00da:
+62114: 				num3 = int.Parse(c.ToString());
+62115: 				num = 13;
+62116: 				goto IL_00f0;
+62117: 				IL_00f0:
+62118: 				if (num3 != 0)
+62119: 				{
+62120: 					goto IL_00f3;
+62121: 				}
+62122: 				goto IL_0108;
+62123: 				IL_0133:
+62124: 				while (true)
+62125: 				{
+62126: 					if (num4 < length / 2)
+62127: 					{
+62128: 						char c2 = array[num4];
+62129: 						array[num4] = array[length - 1 - num4];
+62130: 						array[length - 1 - num4] = c2;
+62131: 						num4++;
+62132: 						num = 4;
+62133: 						if (!_0088_009D())
+62134: 						{
+62135: 							goto IL_00a4;
+62136: 						}
+62137: 					}
+62138: 					else
+62139: 					{
+62140: 						num = 14;
+62141: 						if (_0088_009E())
+62142: 						{
+62143: 							break;
+62144: 						}
+62145: 					}
+62146: 					switch (num)
+62147: 					{
+62148: 					case 2:
+62149: 					case 7:
+62150: 						break;
+62151: 					case 5:
+62152: 						goto IL_00b4;
+62153: 					case 0:
+62154: 						goto IL_00da;
+62155: 					case 13:
+62156: 						goto IL_00f0;
+62157: 					default:
+62158: 						goto IL_00f3;
+62159: 					case 9:
+62160: 						goto IL_0108;
+62161: 					case 1:
+62162: 					case 3:
+62163: 					case 11:
+62164: 						goto end_IL_0133;
+62165: 					case 4:
+62166: 					case 8:
+62167: 					case 10:
+62168: 						continue;
+62169: 					case 12:
+62170: 						goto IL_014a;
+62171: 					case 14:
+62172: 						return new string(array);
+62173: 					}
+62174: 					goto IL_00a4;
+62175: 					continue;
+62176: 					end_IL_0133:
+62177: 					break;
+62178: 				}
+62179: 				goto IL_0115;
+62180: 				IL_00a4:
+62181: 				length = P_0.Length;
+62182: 				num = 5;
+62183: 				goto IL_00b4;
+62184: 				IL_00b4:
+62185: 				num2 = 0;
+62186: 				num = 1;
+62187: 				if (_0088_009E())
+62188: 				{
+62189: 					goto IL_00f3;
+62190: 				}
+62191: 				goto IL_0115;
+62192: 				IL_0115:
+62193: 				if (num2 < length)
+62194: 				{
+62195: 					c = P_0[num2];
+62196: 					num = 0;
+62197: 					goto IL_00da;
+62198: 				}
+62199: 				num4 = 0;
+62200: 				goto IL_0133;
+62201: 				IL_00f3:
+62202: 				array[num2] = char.Parse((10 - num3).ToString());
+62203: 				goto IL_0108;
+62204: 			}
+62205: 		}

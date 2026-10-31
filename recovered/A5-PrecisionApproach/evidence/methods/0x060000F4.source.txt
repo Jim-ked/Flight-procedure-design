@@ -1,0 +1,62 @@
+4166: 		public static void _008A_0091(Form P_0, string P_1, string P_2)
+4167: 		{
+4168: 			if (false /* original-file-bool-offset:120 */)
+4169: 			{
+4170: 				_ = 1;
+4171: 				if (!_009C())
+4172: 				{
+4173: 					return;
+4174: 				}
+4175: 				goto IL_00d0;
+4176: 			}
+4177: 			string text = Path.Combine(Path.GetDirectoryName(P_0.GetType().Assembly.Location), P_1);
+4178: 			if (!File.Exists(text))
+4179: 			{
+4180: 				do
+4181: 				{
+4182: 					_0087_008A._008C_0097(text, "Document" /* string-offset:644 */, "1.0" /* string-offset:680 */, "UTF-8" /* string-offset:684 */, "no" /* string-offset:688 */);
+4183: 				}
+4184: 				while (!_009B());
+4185: 				_0087_008A._008C_0099(text, "/Document" /* string-offset:692 */, P_2, "", "", "");
+4186: 			}
+4187: 			else if (_0087_008A._008C_0098(text, "/Document/" /* string-offset:696 */ + P_2) == null)
+4188: 			{
+4189: 				goto IL_00d0;
+4190: 			}
+4191: 			goto IL_00f1;
+4192: 			IL_00f1:
+4193: 			Dictionary<string, string> dictionary = new Dictionary<string, string>();
+4194: 			Dictionary<string, string>.Enumerator enumerator = default(Dictionary<string, string>.Enumerator);
+4195: 			if (!_009C())
+4196: 			{
+4197: 				_008A_0092(ref dictionary, P_0.Controls, "");
+4198: 				if (_009C())
+4199: 				{
+4200: 					goto IL_00d0;
+4201: 				}
+4202: 				enumerator = dictionary.GetEnumerator();
+4203: 			}
+4204: 			try
+4205: 			{
+4206: 				while (enumerator.MoveNext())
+4207: 				{
+4208: 					KeyValuePair<string, string> current = enumerator.Current;
+4209: 					_ = 0;
+4210: 					if (_009B())
+4211: 					{
+4212: 						_0087_008A._008C_009A(text, "/Document/" /* string-offset:696 */ + P_2, current.Key, current.Value);
+4213: 					}
+4214: 					else if (!_009B())
+4215: 					{
+4216: 					}
+4217: 				}
+4218: 				return;
+4219: 			}
+4220: 			finally
+4221: 			{
+4222: 				((IDisposable)enumerator/*cast due to .constrained prefix*/).Dispose();
+4223: 			}
+4224: 			IL_00d0:
+4225: 			_0087_008A._008C_0099(text, "/Document" /* string-offset:692 */, P_2, "", "", "");
+4226: 			goto IL_00f1;
+4227: 		}

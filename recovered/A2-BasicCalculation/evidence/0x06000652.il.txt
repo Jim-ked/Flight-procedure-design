@@ -1,0 +1,69 @@
+METHOD 06000652 \x8d\x8d.\x8d\x8c::\x8a\x90\x92 RVA=886DC file=868DC
+IL_0000: ldarg.0 
+IL_0001: ldnull 
+IL_0002: call 0x0A0001C7 Autodesk.AutoCAD.DatabaseServices.ResultBuffer::op_Equality
+IL_0007: brfalse.s 23
+IL_0009: ldnull 
+IL_000A: ret 
+IL_000B: nop 
+IL_000C: ldarg.0 
+IL_000D: callvirt 0x0A000083 Autodesk.AutoCAD.DatabaseServices.ResultBuffer::AsArray
+IL_0012: stloc.0 
+IL_0013: ldloc.0 
+IL_0014: ldlen 
+IL_0015: conv.i4 
+IL_0016: ldc.i4.3 
+IL_0017: blt.s 134
+IL_0019: ldloc.0 
+IL_001A: ldc.i4.1 
+IL_001B: ldelema 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_0020: call 0x0A000085 Autodesk.AutoCAD.DatabaseServices.TypedValue::get_Value
+IL_0025: dup 
+IL_0026: brtrue.s 72
+IL_0028: pop 
+IL_0029: call 0x06000659 \x8d\x8d.\x8d\x8c::\x89\x8a
+IL_002E: call 0x06000658 \x8d\x8d.\x8d\x8c::\x89\x89
+IL_0033: brfalse.s 69
+IL_0035: pop 
+IL_0036: ldnull 
+IL_0037: br.s 77
+IL_0039: pop 
+IL_003A: br.s 114
+IL_003C: callvirt 0x0A000086 System.Object::ToString
+IL_0041: ldloca.s local(0x0001)
+IL_0043: call 0x0A000350 System.Int32::TryParse
+IL_0048: brfalse.s 134
+IL_004A: ldloc.0 
+IL_004B: ldc.i4.2 
+IL_004C: ldelema 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_0051: call 0x0A000085 Autodesk.AutoCAD.DatabaseServices.TypedValue::get_Value
+IL_0056: dup 
+IL_0057: brtrue.s 105
+IL_0059: pop 
+IL_005A: ldnull 
+IL_005B: br.s 113
+IL_005D: callvirt 0x0A000086 System.Object::ToString
+IL_0062: dup 
+IL_0063: brtrue.s 119
+IL_0065: pop 
+IL_0066: ldstr ''
+IL_006B: call 0x06000650 \x8d\x8d.\x8d\x8c::\x8a\x90\x90
+IL_0070: dup 
+IL_0071: ldloc.1 
+IL_0072: callvirt 0x0600063B \x8d\x8d.\x8d\x8c::\x8a\x90\x97
+IL_0077: stloc.2 
+IL_0078: leave.s 171
+IL_007A: leave.s 165
+IL_007C: stloc.3 
+IL_007D: ldc.i4 6784
+IL_0082: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0087: ldloc.3 
+IL_0088: callvirt 0x0A000055 System.Exception::get_Message
+IL_008D: call 0x0A00008B System.String::Concat
+IL_0092: call 0x0A0000B6 Autodesk.AutoCAD.ApplicationServices.Core.Application::ShowAlertDialog
+IL_0097: leave.s 165
+IL_0099: newobj 0x06000656 \x8d\x8d.\x8d\x8c::.ctor
+IL_009E: ret 
+IL_009F: ldloc.2 
+IL_00A0: ret 
+

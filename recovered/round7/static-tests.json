@@ -1,0 +1,78 @@
+{
+  "layer": "event/reachability",
+  "checks": [
+    {
+      "name": "0x06000567 has no global direct or MethodSpec caller",
+      "passed": true
+    },
+    {
+      "name": "0x06000567 not event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x060005E0 has no global direct or MethodSpec caller",
+      "passed": true
+    },
+    {
+      "name": "0x060005E0 not event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000557 has no global direct or MethodSpec caller",
+      "passed": true
+    },
+    {
+      "name": "0x06000557 not event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x0600041B has no global direct or MethodSpec caller",
+      "passed": true
+    },
+    {
+      "name": "0x0600041B not event reachable",
+      "passed": true
+    },
+    {
+      "name": "KML processed IL consists of ret",
+      "passed": true
+    },
+    {
+      "name": "KML bound button8",
+      "passed": true
+    },
+    {
+      "name": "Evaluate prompt bound",
+      "passed": true
+    },
+    {
+      "name": "B4 parameter database loader reachable",
+      "passed": true
+    },
+    {
+      "name": "B4 drawing extended model reachable",
+      "passed": true
+    },
+    {
+      "name": "Shared OAS evaluator not B4 event reachable",
+      "passed": true
+    },
+    {
+      "name": "No direct core P793 call",
+      "passed": true
+    },
+    {
+      "name": "No direct core Spiral constructor",
+      "passed": true
+    },
+    {
+      "name": "No event path to P793",
+      "passed": true
+    },
+    {
+      "name": "No event path to Spiral constructors",
+      "passed": true
+    }
+  ],
+  "scope": "whole-assembly calls and metadata; no target runtime"
+}

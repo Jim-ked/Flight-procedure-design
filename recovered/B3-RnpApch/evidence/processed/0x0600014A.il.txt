@@ -1,0 +1,22 @@
+METHOD 0600014A \x87\x8d.\x87\x8c::\x8d\x88 RVA=330B file=150B
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400001B \x87\x8d.\x87\x8c::\x8d\x8a
+IL_0006: ldarg.1 
+IL_0007: beq.s 48
+IL_0009: ldc.i4.1 
+IL_000A: call 0x06000154 \x87\x8d.\x87\x8c::a
+IL_000F: brtrue.s 35
+IL_0011: pop 
+IL_0012: call 0x06000153 \x87\x8d.\x87\x8c::9
+IL_0017: brfalse.s 36
+IL_0019: ldarg.0 
+IL_001A: ldarg.1 
+IL_001B: stfld 0x0400001B \x87\x8d.\x87\x8c::\x8d\x8a
+IL_0020: br.s 36
+IL_0022: pop 
+IL_0023: ldarg.0 
+IL_0024: call 0x0600014C \x87\x8d.\x87\x8c::\x8c\x9e
+IL_0029: ldarg.0 
+IL_002A: call 0x0600014D \x87\x8d.\x87\x8c::\x8d\x86
+IL_002F: ret 
+

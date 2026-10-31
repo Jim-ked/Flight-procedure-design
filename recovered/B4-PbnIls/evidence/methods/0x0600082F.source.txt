@@ -1,0 +1,9 @@
+84763: 		public static string _008B_008B_0089(List<_008F_008E> P_0)
+84764: 		{
+84765: 			string text = "";
+84766: 			foreach (_008F_008E item in P_0)
+84767: 			{
+84768: 				text = text + item.ToString() + "\n" /* string-offset:328 */;
+84769: 			}
+84770: 			return text;
+84771: 		}

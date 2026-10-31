@@ -1,0 +1,40 @@
+METHOD 06000892 \x90\x9c.\x90\x9b::\x8b\x90\x8f RVA=9D0A8 file=9B2A8
+IL_0000: newobj 0x0A0003A1 System.IO.MemoryStream::.ctor
+IL_0005: stloc.0 
+IL_0006: call 0x06000884 \x90\x9c.\x90\x9b::\x8b\x8f\x98
+IL_000B: stloc.1 
+IL_000C: ldloc.1 
+IL_000D: ldc.i4.s 32
+IL_000F: newarr 0x0100019B System.Byte
+IL_0014: dup 
+IL_0015: ldtoken 0x0400091C .<PrivateImplementationDetails>{F2903B91-5F7F-4AD3-93A6-051D4DB9A58A}::$$method0x600001c-1
+IL_001A: call 0x0A0002B2 System.Runtime.CompilerServices.RuntimeHelpers::InitializeArray
+IL_001F: callvirt 0x0A000449 System.Security.Cryptography.SymmetricAlgorithm::set_Key
+IL_0024: ldloc.1 
+IL_0025: ldc.i4.s 16
+IL_0027: newarr 0x0100019B System.Byte
+IL_002C: dup 
+IL_002D: ldtoken 0x0400091D .<PrivateImplementationDetails>{F2903B91-5F7F-4AD3-93A6-051D4DB9A58A}::$$method0x600001c-2
+IL_0032: call 0x0A0002B2 System.Runtime.CompilerServices.RuntimeHelpers::InitializeArray
+IL_0037: callvirt 0x0A00044A System.Security.Cryptography.SymmetricAlgorithm::set_IV
+IL_003C: ldloc.0 
+IL_003D: ldloc.1 
+IL_003E: callvirt 0x0A00044B System.Security.Cryptography.SymmetricAlgorithm::CreateDecryptor
+IL_0043: ldc.i4.1 
+IL_0044: newobj 0x0A00042B System.Security.Cryptography.CryptoStream::.ctor
+IL_0049: stloc.2 
+IL_004A: ldloc.2 
+IL_004B: ldarg.0 
+IL_004C: ldc.i4.0 
+IL_004D: ldarg.0 
+IL_004E: ldlen 
+IL_004F: conv.i4 
+IL_0050: callvirt 0x0A00042C System.IO.Stream::Write
+IL_0055: ldloc.2 
+IL_0056: callvirt 0x0A00042E System.IO.Stream::Close
+IL_005B: ldloc.0 
+IL_005C: callvirt 0x0A0003A3 System.IO.MemoryStream::ToArray
+IL_0061: stloc.3 
+IL_0062: ldloc.3 
+IL_0063: ret 
+

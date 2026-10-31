@@ -1,0 +1,24 @@
+﻿method,original,offset,opcode,operand
+0x06000087,0x06000088,IL_002B,newobj,0x0A00009D Autodesk.AutoCAD.DatabaseServices.Group::.ctor
+0x06000087,0x06000088,IL_0044,newobj,0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+0x06000087,0x06000088,IL_0062,callvirt,0x0A0000A0 Autodesk.AutoCAD.DatabaseServices.Group::Append
+0x06000089,0x0600008A,IL_00C8,callvirt,0x0A0000B4 Autodesk.AutoCAD.DatabaseServices.DBObject::set_XData
+0x06000089,0x0600008A,IL_00FA,callvirt,0x0A0000B3 Autodesk.AutoCAD.DatabaseServices.BlockTableRecord::AppendEntity
+0x060000F5,0x060000F6,IL_008A,isinst,0x01000044 System.Windows.Forms.GroupBox
+0x06000113,0x06000114,IL_007C,callvirt,0x0A0001B5 Autodesk.AutoCAD.EditorInput.Editor::GetPoint
+0x06000134,0x06000135,IL_002F,callvirt,0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+0x060002FE,0x060002FF,IL_0078,callvirt,0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+0x060002FE,0x060002FF,IL_00F8,callvirt,0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+0x060002FE,0x060002FF,IL_01A2,callvirt,0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+0x060002FE,0x060002FF,IL_027C,callvirt,0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060002FE,0x060002FF,IL_0318,newobj,0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060002FE,0x060002FF,IL_039D,callvirt,0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+0x060002FE,0x060002FF,IL_046D,callvirt,0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+0x060002FE,0x060002FF,IL_04D8,newobj,0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060002FE,0x060002FF,IL_077A,callvirt,0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+0x060002FE,0x060002FF,IL_09EB,callvirt,0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+0x060002FE,0x060002FF,IL_0AC1,callvirt,0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+0x060002FE,0x060002FF,IL_0B92,callvirt,0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060002FE,0x060002FF,IL_0C23,newobj,0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060002FE,0x060002FF,IL_0CEA,callvirt,0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+0x060002FE,0x060002FF,IL_0DFF,callvirt,0x0A000284 System.Windows.Forms.GroupBox::set_TabStop

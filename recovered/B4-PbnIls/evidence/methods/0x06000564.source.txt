@@ -1,0 +1,26 @@
+61460: 		private void _0089_0096_0089(object P_0, EventArgs P_1)
+61461: 		{
+61462: 			string contents = _0089_0096_008A();
+61463: 			_0088_009E();
+61464: 			SaveFileDialog saveFileDialog = default(SaveFileDialog);
+61465: 			if (_0088_009D())
+61466: 			{
+61467: 				saveFileDialog = new SaveFileDialog();
+61468: 			}
+61469: 			saveFileDialog.Filter = "数据文件 (*.txt)|*.txt" /* string-offset:6424 */;
+61470: 			saveFileDialog.FilterIndex = 1;
+61471: 			saveFileDialog.RestoreDirectory = true;
+61472: 			if (Text.Length > 6)
+61473: 			{
+61474: 				saveFileDialog.FileName = Text.Substring(6);
+61475: 			}
+61476: 			else
+61477: 			{
+61478: 				saveFileDialog.FileName = "oas参数.txt" /* string-offset:6428 */;
+61479: 			}
+61480: 			if (saveFileDialog.ShowDialog() == DialogResult.OK)
+61481: 			{
+61482: 				Text = "OAS面评估 " /* string-offset:6396 */ + saveFileDialog.FileName;
+61483: 				File.WriteAllText(saveFileDialog.FileName, contents);
+61484: 			}
+61485: 		}

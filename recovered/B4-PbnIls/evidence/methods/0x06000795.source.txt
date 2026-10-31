@@ -1,0 +1,24 @@
+81789: 		public List<string> _008A_009D_0094()
+81790: 		{
+81791: 			return new List<string>
+81792: 			{
+81793: 				"转弯参数" /* string-offset:4960 */,
+81794: 				" 名称,数值,单位" /* string-offset:7360 */,
+81795: 				"IAS , " /* string-offset:7364 */ + Math.Round(_008A_009D_0095 * 100.0) / 100.0 + ", km/h" /* string-offset:7368 */,
+81796: 				"Altitude , " /* string-offset:7372 */ + Math.Round(_008A_009D_0096 * 100.0) / 100.0 + ", m" /* string-offset:7376 */,
+81797: 				"k , " /* string-offset:7380 */ + Math.Round(_008A_009D_009B * 10000.0) / 10000.0 + "," /* string-offset:704 */,
+81798: 				"TAS , " /* string-offset:7384 */ + Math.Round(_008A_009D_009A * 100.0) / 100.0 + ", km/h" /* string-offset:7368 */,
+81799: 				"WindSpeed , " /* string-offset:7388 */ + Math.Round(_008A_009D_0098 * 100.0) / 100.0 + ", km/h" /* string-offset:7368 */,
+81800: 				"BankAngle , " /* string-offset:7392 */ + _008A_009D_0097 + ",°" /* string-offset:7396 */,
+81801: 				"DraftAngle , " /* string-offset:7400 */ + Math.Round(_008A_009E_0086 * 180.0 / Math.PI * 100.0) / 100.0 + ",°" /* string-offset:7396 */,
+81802: 				"R , " /* string-offset:7404 */ + Math.Round(_008A_009D_009C * 100.0) / 100.0 + ", °/s" /* string-offset:7408 */,
+81803: 				"Radius , " /* string-offset:7412 */ + Math.Round(_008A_009D_009D) + ", m" /* string-offset:7376 */,
+81804: 				"Esita , " /* string-offset:7416 */ + Math.Round(10.0 * _008A_009D_009E * Math.PI / 180.0) / 10.0 + ", m /°" /* string-offset:7420 */,
+81805: 				"E45 , " /* string-offset:7424 */ + Math.Round(Math.PI / 4.0 * _008A_009D_009E) + ", m " /* string-offset:7428 */,
+81806: 				"E90 , " /* string-offset:7432 */ + Math.Round(Math.PI / 2.0 * _008A_009D_009E) + ", m " /* string-offset:7428 */,
+81807: 				"E135 , " /* string-offset:7436 */ + Math.Round(Math.PI * 3.0 / 4.0 * _008A_009D_009E) + ", m " /* string-offset:7428 */,
+81808: 				"E180 , " /* string-offset:7440 */ + Math.Round(Math.PI * _008A_009D_009E) + ", m " /* string-offset:7428 */,
+81809: 				"E235 , " /* string-offset:7444 */ + Math.Round(4.101523742186674 * _008A_009D_009E) + ", m " /* string-offset:7428 */,
+81810: 				"C6 = (v+w)*6 , " /* string-offset:7448 */ + Math.Round((_008A_009D_009A + _008A_009D_0098) / 0.6) + ", m " /* string-offset:7428 */
+81811: 			};
+81812: 		}

@@ -1,0 +1,6 @@
+﻿Function,Help/UI identity,Code behavior,Consistency,Finding,Evidence
+Single / double / triple,separate wind-spiral buttons,"one, two, or three _008F_0086 objects and sampled lists",CONSISTENT,public modes are reachable; picks remain manual,A1-WindSpiral/event-map.md; overview.md
+Common tangent checkbox,带公切线 / tangent,adds start/base-circle/spiral points and concatenates lists; no two-spiral solver,HELP_OVRSTATES_BUILD,The UI label “common tangent” does not correspond to a standalone two-spiral tangent solver in this build.,GeometryPrimitives/common-tangent.md; A1 source 35736-35804
+Nominal track,long/nominal path,sampled point lists concatenated by _008F_0090::_008B_008A_008E,CONSISTENT,"point sequence, not Autodesk Arc or evaluator",A1 overview.md; cad-output-map.md
+Polyline / Spline,drawing type controls,"Polyline helper or Spline(fitPoints,4,0.0), open by recovered branch",CONSISTENT,writer choice is statically closed,A1 cad-output-map.md; source 35791-35804
+Obstacle evaluation,none in A1 chain,no obstacle input/evaluator call,CONSISTENT,A1 is a wind-spiral geometry/drawing tool,A1 event-map.md; Round 10 residual extract

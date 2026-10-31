@@ -1,0 +1,16 @@
+﻿Module,Constant/Behavior,CodeEvidence,CurrentStandardMapping,HistoricalSourceCandidate,Status
+A1,turn rate cap3；WindRadius/Drift；角度线性风累积,recovered/round13/standard-basis-note.md;recovered/A1-WindSpiral/final-static-closure.md,已有局部映射；非风时域模型等价证明,ICAO Doc8168其他版/旧国内规范/作者简化，均未确证,实现依据待确认；未据规范改写恢复代码
+A2,单时间18；C风56与时间6；离场5；HLcor=0哨兵,recovered/round14/standard-basis-note.md;recovered/A2-BasicCalculation/final-static-closure.md,18未分3+15；6未分3+3；哨兵异常保留,历史时间/风假设或简化待查,实现依据待确认；未据规范改写恢复代码
+A3,精度5.2/4.5/6.9/6.2/2.4/1.4；50/40；.0125r+460；9260,recovered/round12/standard-basis-note.md;recovered/A3-FixTolerance/final-static-closure.md,设施/容差/顶空/距离角色已证；历史来源未唯一确认,ICAO版本/旧国内规范待查,实现依据待确认；未据规范改写恢复代码
+A4,7.8/10.3；1/2NM与1.25/2.5NM；15°；半宽分界,recovered/A4-NavAidProtection/standard-mapping.md,已有2020局部匹配；大档/阶段适用限制/未自动校验分别保留,原作者适用阶段或其他版本待查,实现依据待确认；未据规范改写恢复代码
+A5,W/W*；CATII AUTO150；GPINOP H−150/75；FAF700,recovered/A5-PrecisionApproach/standard-mapping.md;recovered/A5-PrecisionApproach/hl-correction.md,六模式实际几何已有映射；无自有HL可对照,OAS程序/数据库历史版本与课件为候选，来源未确证,实现依据待确认；未据规范改写恢复代码
+A6,模板设施角/风参数/spiral；Hull/Envelope退化,recovered/A6-Template/standard-differences.md,模板常数局部对照；gift-wrap是计算实现，不能当规范规定,旧国内/Doc8168模板版本及作者近似待查,实现依据待确认；未据规范改写恢复代码
+A7,15°/150/.008/75/600/120/.1；无guided分支或风螺旋,recovered/round11/standard-basis-note.md;recovered/A7-Departure/final-static-closure.md,三实际分支已映射；不可用规范补出未实现分支,其他版本/简化离场方法待查,实现依据待确认；未据规范改写恢复代码
+A8,KK反向框架；固定MOC/梯度；Ds三维距,recovered/A8-TurnArea/overview.md;recovered/round2-closure.md,按既有KK评价链解释；框架方向不是规范适用性证明,旧计算方法/作者简化待查,实现依据待确认；未据规范改写恢复代码
+A9,Normal/IF纵向开闭边界；末端主宽W1/2与W1；严格粗筛,recovered/round14/standard-basis-note.md;recovered/A9-PriSec/final-static-closure.md,2020映射保留差异；无容差/夹限补丁,作者分支实现或历史规则待查,实现依据待确认；未据规范改写恢复代码
+A10,factor*300；已解析MOC不驱动该式,recovered/A10-DmeArc/overview.md;recovered/round2-closure.md,真实固定式与UI差异保留,历史DME弧评价方法或简化待查,实现依据待确认；未据规范改写恢复代码
+B1,NN/KK语义；15/30候选；ATT；B2载体12000/13000,recovered/round13/standard-basis-note.md;recovered/B1-FlyBy/final-static-closure.md,UI字段/输出已闭合；NN/KK不得强贴主副区；载体非保护宽,Doc8168不同版/作者几何选择待查,实现依据待确认；未据规范改写恢复代码
+B2,NN/KK语义；15/30候选；ATT；B2载体12000/13000,recovered/round13/standard-basis-note.md;recovered/B2-FlyOverDF/final-static-closure.md,UI字段/输出已闭合；NN/KK不得强贴主副区；载体非保护宽,Doc8168不同版/作者几何选择待查,实现依据待确认；未据规范改写恢复代码
+B3,LNAV/APV副区/HL；GP>3.2项；直线复飞,recovered/B3-RnpApch/standard-mapping.md;recovered/B3-RnpApch/hl-correction.md,计算已恢复；评价调度缺失不等同符合规范,APV历史表/版本或简化待查,实现依据待确认；未据规范改写恢复代码
+B4,1852/3704固定带；15°同轴衔接；HL无GP项,recovered/B4-PbnIls/standard-mapping.md;recovered/B4-PbnIls/hl-correction.md,不能据数值称任意RNP转弯；B3/B4 HL不同,旧RNAV-ILS/OAS方法与版本待查,实现依据待确认；未据规范改写恢复代码
+B5,1482；TurnEnd；选定子集Hull；评价异常赋值,recovered/B5-PbnDeparture/standard-mapping.md,真实构造/孤立评价已对照；不补导航规范/调度,旧PBN离场模型/作者简化待查,实现依据待确认；未据规范改写恢复代码

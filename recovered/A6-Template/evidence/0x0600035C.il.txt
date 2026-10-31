@@ -1,0 +1,16 @@
+METHOD 0600035C \x89\x93.\x89\x92::\x87\x9a\x8a RVA=42C90 file=40E90
+IL_0000: ldarg.0 
+IL_0001: call 0x06000356 \x89\x93.\x89\x92::\x87\x99\x9d
+IL_0006: newobj 0x0600045E \x8b\x89.\x8b\x88::.ctor
+IL_000B: stloc.0 
+IL_000C: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0011: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0016: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_001B: ldloc.0 
+IL_001C: callvirt 0x0A000086 System.Object::ToString
+IL_0021: ldc.i4 328
+IL_0026: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_002B: call 0x0A00008B System.String::Concat
+IL_0030: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_0035: ret 
+

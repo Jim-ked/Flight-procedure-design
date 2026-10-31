@@ -1,0 +1,91 @@
+23916: 		private void _0087_0091_008B(object P_0, EventArgs P_1)
+23917: 		{
+23918: 			int num = 8;
+23919: 			while (true)
+23920: 			{
+23921: 				if (!false /* original-file-bool-offset:460 */)
+23922: 				{
+23923: 					_0087_0093_0091.SelectedIndex = 0;
+23924: 					while (true)
+23925: 					{
+23926: 						_0087_0093_0089.SelectedIndex = 3;
+23927: 						num = 0;
+23928: 						while (true)
+23929: 						{
+23930: 							_0087_0093_0090.SelectedIndex = 5;
+23931: 							_0087_0092_009D.SelectedIndex = 3;
+23932: 							num = 9;
+23933: 							if (_0087_009F())
+23934: 							{
+23935: 								goto IL_0039;
+23936: 							}
+23937: 							goto IL_00e4;
+23938: 							IL_00e4:
+23939: 							_0097._008A_0093(this, "config.xml" /* string-offset:676 */, "FormPA" /* string-offset:376 */);
+23940: 							goto IL_001f;
+23941: 							IL_001f:
+23942: 							_ = 1;
+23943: 							if (_00870())
+23944: 							{
+23945: 								num = 7;
+23946: 								goto IL_00bf;
+23947: 							}
+23948: 							num = 3;
+23949: 							goto IL_00b7;
+23950: 							IL_0074:
+23951: 							_0087_0093_0089.SelectedIndexChanged += _0087_0091_0094;
+23952: 							_0087_0093_0090.SelectedIndexChanged += _0087_0091_0095;
+23953: 							num = 2;
+23954: 							if (!_00870())
+23955: 							{
+23956: 								goto IL_0039;
+23957: 							}
+23958: 							return;
+23959: 							IL_0039:
+23960: 							switch (num)
+23961: 							{
+23962: 							case 1:
+23963: 								goto IL_0074;
+23964: 							case 3:
+23965: 							case 5:
+23966: 								goto IL_00b7;
+23967: 							case 6:
+23968: 							case 7:
+23969: 								goto IL_00bf;
+23970: 							case 9:
+23971: 								goto IL_00e4;
+23972: 							case 0:
+23973: 								continue;
+23974: 							case 10:
+23975: 								goto end_IL_0103;
+23976: 							case 8:
+23977: 								goto end_IL_0130;
+23978: 							case 2:
+23979: 								_0087_0092_009D.SelectedIndexChanged += _0087_0091_0096;
+23980: 								num = 11;
+23981: 								return;
+23982: 							case 4:
+23983: 							case 11:
+23984: 								return;
+23985: 							}
+23986: 							goto IL_001f;
+23987: 							IL_00b7:
+23988: 							_0087_0091_0091(null, null);
+23989: 							goto IL_00bf;
+23990: 							IL_00bf:
+23991: 							_0087_0093_0091.SelectedIndexChanged += _0087_0091_0091;
+23992: 							goto IL_0074;
+23993: 							continue;
+23994: 							end_IL_0103:
+23995: 							break;
+23996: 						}
+23997: 						continue;
+23998: 						end_IL_0130:
+23999: 						break;
+24000: 					}
+24001: 					continue;
+24002: 				}
+24003: 				num = 4;
+24004: 				break;
+24005: 			}
+24006: 		}

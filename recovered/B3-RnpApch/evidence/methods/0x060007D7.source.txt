@@ -1,0 +1,11 @@
+83738: 		public static bool _008B_0088_0087(TextBox P_0)
+83739: 		{
+83740: 			_ = 0;
+83741: 			if (_0089p() && double.TryParse(P_0.Text, out var _))
+83742: 			{
+83743: 				P_0.BackColor = Color.White;
+83744: 				return true;
+83745: 			}
+83746: 			P_0.BackColor = Color.LightCoral;
+83747: 			return false;
+83748: 		}

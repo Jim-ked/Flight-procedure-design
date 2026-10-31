@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>风螺旋 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 传统程序 / 风螺旋</div>
+        <h1>A1.风螺旋</h1>
+        <div class="cmd">命令：Y01_风螺旋</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>传统程序</h2>
+                <ul>
+                    <li><a href="FormWindSpiral.html" class="active">A1.风螺旋</a></li>
+                    <li><a href="FormCalcu.html">A2.飞行程序基础计算</a></li>
+                    <li><a href="FixTolerance.html">A3.定位容差</a></li>
+                    <li><a href="FormNavAids.html">A4.非精密进近保护区</a></li>
+                    <li><a href="FormPA.html">A5.精密进近保护区</a></li>
+                    <li><a href="FormTemplate.html">A6.传统保护区模板</a></li>
+                    <li><a href="FormDepartureEvl.html">A7.离场越障评估</a></li>
+                    <li><a href="FormTurnAreaEvl.html">A8.复飞转弯区评估</a></li>
+                    <li><a href="FormPriSecEvl.html">A9.主副区评估</a></li>
+                    <li><a href="FormDmeEvl.html">A10.起始进近DME弧</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">PBN 程序 / 辅助功能</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【风螺旋】用于绘制<strong>风螺旋（Wind Spiral）</strong>——航空器在转弯过程中受到风的影响形成的转弯区最大外边界曲线。软件中支持单螺旋、双螺旋、三螺旋（带公切线）以及标称航迹，可设置转弯方向与多种附加显示选项。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormWindSpiral.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormWindSpiral.png" alt="FormWindSpiral 界面截图" width="470"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>分区 / 控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>转弯参数</td><td>指示空速（IAS）、高度、坡度角、风速、ISA 温度偏差。</td></tr>
+                        <tr><td>风螺旋方向与范围</td><td>左转 / 右转选择，及偏流角（DA）等范围选项。</td></tr>
+                        <tr><td>单螺旋 / 双螺旋 / 三螺旋（按钮）</td><td>绘制对应数量的风螺旋线（双螺旋、三螺旋自带公切线）。</td></tr>
+                        <tr><td>标称航迹（按钮）</td><td>指定起点、转弯点、转弯终点，绘制转弯标称航迹。</td></tr>
+                        <tr><td>计算（按钮）</td><td>计算转弯率、转弯半径等参数，输出到命令行窗口。</td></tr>
+                        <tr><td>附加选项</td><td>绘制基圆、起点线、终点线等辅助线，指定切线、指定螺旋线线条类型等功能。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y01_风螺旋</code> 打开窗口。</li>
+                    <li>填写转弯参数（IAS / 高度 / 坡度 / 风速 / 温度偏差）。</li>
+                    <li>选择转弯方向（左转 / 右转），勾选需要的附加选项。</li>
+                    <li>点击【单螺旋】/【双螺旋】/【三螺旋】或【标称航迹】，按提示在图面指定位置点进行绘制。</li>
+                </ul>
+                <div class="warn"><strong>参数校验：</strong>转弯参数输入有误时会提示“参数输入有误，请检查”，此时不会绘制。</div>
+            </div>
+            <div class="card">
+                <h2>应用案例</h2>
+                <!-- 应用案例图：将 images/FormWindSpiralSample.png 替换为实际案例截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormWindSpiralSample.png" alt="FormWindSpiral 应用案例" width="543"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="pager">
+                <a href="index.html">← 返回帮助首页</a>
+                <a href="FormCalcu.html">下一篇：A2.飞行程序基础计算 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

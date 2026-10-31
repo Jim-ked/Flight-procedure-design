@@ -1,0 +1,94 @@
+METHOD 060007AC \x8f\x87.\x8f\x86::\x8a\x9e\x9a RVA=90010 file=8E210
+IL_0000: call 0x060007B4 \x8f\x87.\x8f\x86::\x89l
+IL_0005: call 0x060007B5 \x8f\x87.\x8f\x86::\x89m
+IL_000A: brtrue.s 86
+IL_000C: pop 
+IL_000D: ldc.i4 1380
+IL_0012: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0017: brtrue 168
+IL_001C: ldc.i4 7452
+IL_0021: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0026: ldarg.3 
+IL_0027: ldarg.0 
+IL_0028: ldfld 0x04000765 \x8f\x87.\x8f\x86::\x8b\x86\x91
+IL_002D: div 
+IL_002E: box 0x010000D2 System.Double
+IL_0033: ldarg.s argument(0x0004)
+IL_0035: ldarg.0 
+IL_0036: ldfld 0x04000765 \x8f\x87.\x8f\x86::\x8b\x86\x91
+IL_003B: div 
+IL_003C: box 0x010000D2 System.Double
+IL_0041: call 0x0A000364 System.Console::WriteLine
+IL_0046: ldc.i4.0 
+IL_0047: stloc.3 
+IL_0048: br.s 120
+IL_004A: pop 
+IL_004B: call 0x060007B5 \x8f\x87.\x8f\x86::\x89m
+IL_0050: brtrue.s 215
+IL_0052: br.s 152
+IL_0054: ldloc.2 
+IL_0055: starg.s argument(0x0004)
+IL_0057: br.s 185
+IL_0059: ldloc.1 
+IL_005A: ldarg.2 
+IL_005B: sub 
+IL_005C: call 0x0A00002E System.Math::Abs
+IL_0061: ldc.r8 0.01
+IL_006A: ble.s 220
+IL_006C: ldarg.3 
+IL_006D: ldarg.s argument(0x0004)
+IL_006F: add 
+IL_0070: ldc.r8 2.0
+IL_0079: div 
+IL_007A: stloc.2 
+IL_007B: call 0x060007B4 \x8f\x87.\x8f\x86::\x89l
+IL_0080: brfalse.s 168
+IL_0082: ldarg.0 
+IL_0083: ldloc.2 
+IL_0084: ldarg.s argument(0x0005)
+IL_0086: call 0x060007A5 \x8f\x87.\x8f\x86::\x8a\x9e\x93
+IL_008B: stloc.0 
+IL_008C: ldarg.1 
+IL_008D: ldloc.0 
+IL_008E: callvirt 0x060007EC \x8f\x8d.\x8f\x8c::\x8b\x88\x92
+IL_0093: stloc.1 
+IL_0094: ldloc.1 
+IL_0095: ldarg.2 
+IL_0096: ble.un.s 196
+IL_0098: ldarg.s argument(0x0006)
+IL_009A: brtrue.s 171
+IL_009C: ldarg.3 
+IL_009D: br.s 172
+IL_009F: ldloc.2 
+IL_00A0: starg.s argument(0x0003)
+IL_00A2: ldarg.s argument(0x0006)
+IL_00A4: brtrue.s 181
+IL_00A6: ldloc.2 
+IL_00A7: br.s 183
+IL_00A9: ldarg.s argument(0x0004)
+IL_00AB: starg.s argument(0x0004)
+IL_00AD: ldloc.3 
+IL_00AE: dup 
+IL_00AF: ldc.i4.1 
+IL_00B0: add 
+IL_00B1: stloc.3 
+IL_00B2: ldc.i4.s 20
+IL_00B4: ble.s 101
+IL_00B6: br.s 218
+IL_00B8: ldarg.s argument(0x0006)
+IL_00BA: brfalse.s 215
+IL_00BC: ldarg.3 
+IL_00BD: br.s 207
+IL_00BF: ldarg.s argument(0x0004)
+IL_00C1: br.s 97
+IL_00C3: starg.s argument(0x0003)
+IL_00C5: ldarg.s argument(0x0006)
+IL_00C7: brtrue.s 96
+IL_00C9: br.s 203
+IL_00CB: ldloc.2 
+IL_00CC: br.s 207
+IL_00CE: ldloc.2 
+IL_00CF: ret 
+IL_00D0: ldloc.2 
+IL_00D1: ret 
+

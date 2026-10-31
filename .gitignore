@@ -1,0 +1,35 @@
+# Visual Studio / IDE state
+.vs/
+.idea/
+*.user
+*.suo
+*.userprefs
+
+# Build and test output
+bin/
+obj/
+TestResults/
+artifacts/
+tmp/
+
+# AutoCAD/editor lock and scratch files
+*.dwl
+*.dwl2
+*.bak
+*.sv$
+*.ac$
+*.cache
+
+# Local credentials and machine-only secrets
+.env
+.env.*
+*.pem
+*.key
+*.pfx
+*.p12
+*.jks
+*.snk
+
+# Keep recovered evidence, historical logs, fixtures, sample DWG/CSV, and
+# project-local research DLLs under version control unless a file matches one
+# of the explicit machine-only patterns above.

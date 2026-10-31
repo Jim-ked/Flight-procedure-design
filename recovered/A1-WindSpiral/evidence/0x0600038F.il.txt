@@ -1,0 +1,17 @@
+METHOD 0600038F \x89\x95.\x89\x94::\x87\x9e\x8c RVA=4A3E8 file=485E8
+IL_0000: ldarga.s argument(0x0001)
+IL_0002: ldarg.2 
+IL_0003: call 0x0A00033C Autodesk.AutoCAD.Geometry.Vector2d::DotProduct
+IL_0008: ldarga.s argument(0x0001)
+IL_000A: call 0x0A00033B Autodesk.AutoCAD.Geometry.Vector2d::get_Length
+IL_000F: stloc.0 
+IL_0010: ldarga.s argument(0x0002)
+IL_0012: call 0x0A00033B Autodesk.AutoCAD.Geometry.Vector2d::get_Length
+IL_0017: stloc.1 
+IL_0018: ldloc.0 
+IL_0019: ldloc.1 
+IL_001A: mul 
+IL_001B: div 
+IL_001C: call 0x0A000345 System.Math::Acos
+IL_0021: ret 
+

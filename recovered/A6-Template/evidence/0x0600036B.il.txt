@@ -1,0 +1,81 @@
+METHOD 0600036B \x89\x93.\x89\x92::\x87\x9a\x99 RVA=445F0 file=427F0
+IL_0000: ldc.i4 592
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue.s 54
+IL_000C: ldarg.1 
+IL_000D: callvirt 0x0A000322 Autodesk.AutoCAD.DatabaseServices.Polyline::get_NumberOfVertices
+IL_0012: stloc.2 
+IL_0013: ldc.i4.0 
+IL_0014: stloc.3 
+IL_0015: ldc.i4.0 
+IL_0016: stloc.0 
+IL_0017: ldc.i4.1 
+IL_0018: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_001D: brtrue.s 51
+IL_001F: pop 
+IL_0020: ldloc.2 
+IL_0021: ldc.i4.1 
+IL_0022: sub 
+IL_0023: stloc.s local(0x0004)
+IL_0025: br.s 160
+IL_0027: pop 
+IL_0028: br.s 172
+IL_002A: ldloca.s local(0x0001)
+IL_002C: call 0x0A0001CA Autodesk.AutoCAD.Geometry.Point2d::get_Y
+IL_0031: ldarg.2 
+IL_0032: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0037: cgt 
+IL_0039: ldloca.s local(0x0005)
+IL_003B: call 0x0A0001CA Autodesk.AutoCAD.Geometry.Point2d::get_Y
+IL_0040: ldarg.2 
+IL_0041: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0046: cgt 
+IL_0048: beq.s 153
+IL_004A: ldarg.2 
+IL_004B: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0050: ldloca.s local(0x0005)
+IL_0052: call 0x0A0001C9 Autodesk.AutoCAD.Geometry.Point2d::get_X
+IL_0057: ldloca.s local(0x0001)
+IL_0059: call 0x0A0001C9 Autodesk.AutoCAD.Geometry.Point2d::get_X
+IL_005E: sub 
+IL_005F: ldarg.2 
+IL_0060: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0065: ldloca.s local(0x0001)
+IL_0067: call 0x0A0001CA Autodesk.AutoCAD.Geometry.Point2d::get_Y
+IL_006C: sub 
+IL_006D: mul 
+IL_006E: ldloca.s local(0x0005)
+IL_0070: call 0x0A0001CA Autodesk.AutoCAD.Geometry.Point2d::get_Y
+IL_0075: ldloca.s local(0x0001)
+IL_0077: call 0x0A0001CA Autodesk.AutoCAD.Geometry.Point2d::get_Y
+IL_007C: sub 
+IL_007D: div 
+IL_007E: ldloca.s local(0x0001)
+IL_0080: call 0x0A0001C9 Autodesk.AutoCAD.Geometry.Point2d::get_X
+IL_0085: add 
+IL_0086: bge.un.s 153
+IL_0088: ldloc.3 
+IL_0089: ldc.i4.0 
+IL_008A: ceq 
+IL_008C: stloc.3 
+IL_008D: ldloc.0 
+IL_008E: dup 
+IL_008F: ldc.i4.1 
+IL_0090: add 
+IL_0091: stloc.0 
+IL_0092: stloc.s local(0x0004)
+IL_0094: ldloc.0 
+IL_0095: ldloc.2 
+IL_0096: bge.s 187
+IL_0098: ldarg.1 
+IL_0099: ldloc.0 
+IL_009A: callvirt 0x0A000337 Autodesk.AutoCAD.DatabaseServices.Polyline::GetPoint2dAt
+IL_009F: stloc.1 
+IL_00A0: ldarg.1 
+IL_00A1: ldloc.s local(0x0004)
+IL_00A3: callvirt 0x0A000337 Autodesk.AutoCAD.DatabaseServices.Polyline::GetPoint2dAt
+IL_00A8: stloc.s local(0x0005)
+IL_00AA: br 54
+IL_00AF: ldloc.3 
+IL_00B0: ret 
+

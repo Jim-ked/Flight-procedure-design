@@ -1,0 +1,20 @@
+METHOD 060004EF \x8b\x95.\x8b\x94::\x89\x8e\x92 RVA=21C04 file=1FE04
+IL_0000: nop 
+IL_0001: ldtoken 0x01000028 System.Windows.Forms.Control
+IL_0006: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_000B: ldc.i4 2716
+IL_0010: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0015: ldc.i4 8228
+IL_001A: ldnull 
+IL_001B: ldarg.0 
+IL_001C: ldc.i4.1 
+IL_001D: newarr 0x01000001 System.Object
+IL_0022: dup 
+IL_0023: ldc.i4.0 
+IL_0024: ldc.i4.1 
+IL_0025: box 0x01000110 System.Boolean
+IL_002A: stelem.ref 
+IL_002B: call 0x0A0002BB System.Type::InvokeMember
+IL_0030: pop 
+IL_0031: ret 
+

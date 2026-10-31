@@ -1,0 +1,10 @@
+﻿PriorStatementOrRisk,FinalReconciliation,Evidence
+Round10 WsEntityFrame=local transform,WsEntityFrame是属性schema；P0AC/P0AD才是数值跑道frame,recovered/system-coverage/data-model-master.csv;recovered/ObstacleData/WsEntityFrame-schema.md;recovered/A7-Departure/runway-coordinate.md
+Round10 .rnp none evidenced,B3 P47F/P47E已有UTF8控件path:value协议；与config XML分开,recovered/system-coverage/data-model-master.csv;recovered/B3-RnpApch/persistence.md
+Round3 writer token/name mismatch,P086单Polyline；P087列表+Group；P089 append/optional metadata,recovered/round3/shared-cad-writers.csv;recovered/A6-Template/cad-output-map.md
+全局无two-spiral angle的过度推论,A1/B1/B2无独立通用solver；A6 P7AF/P7C2存在；A6 P7AD直接caller=0,recovered/A1-WindSpiral/final-static-closure.md;recovered/A6-Template/shared-geometry.md
+Round10 CAD实体概括失真,A2无Polyline；A3有3 Arc；A6无独立Arc/Circle；B1/B2非Spline；A7无独立Line；A10有Arc,recovered/system-coverage/cad-output-master.csv;recovered/A2-BasicCalculation/cad-output-final.csv;recovered/A3-FixTolerance/cad-output-final.csv;recovered/A6-Template/cad-output-map.md;recovered/B1-FlyBy/final-static-closure.md;recovered/B2-FlyOverDF/final-static-closure.md;recovered/A7-Departure/cad-output-map.md;recovered/A10-DmeArc/cad-output-map.md
+B5 evaluator identity / metadata泛化,评价体P5CD/P5D8；主writer description为空，不写WsObject；Mark Altitude是Attribute,recovered/system-coverage/orphan-implementations.csv;recovered/B5-PbnDeparture/obstacle-evaluation.md;recovered/B5-PbnDeparture/xdata-schema.md
+A5 HL泛化为DIFFERENT,A5无自有HL表/公式/消费者；B3/B4 HL独立不同,recovered/round14/a2-hl-cross-module.csv;recovered/A5-PrecisionApproach/hl-correction.md;recovered/B3-RnpApch/hl-correction.md;recovered/B4-PbnIls/hl-correction.md
+Round13/14 static-tests PASS的证据边界,是生成式静态检查清单，不作为本轮或当轮新执行的数值断言；E3引用早轮日志,recovered/round13/static-tests.json;recovered/round14/static-tests.json;recovered/round3/tests.log;recovered/round2/tests.log
+静态COMPLETE与可运行源码混淆,B1/B2 C#是DTO/scalar+writer记录；完整算法审计依赖source/IL；C#编译曾受阻,recovered/B1-FlyBy/final-static-closure.md;recovered/B2-FlyOverDF/final-static-closure.md;recovered/round3/compile-tests.log;recovered/B1-FlyBy/FlyBy.Boundaries.Recovered.cs

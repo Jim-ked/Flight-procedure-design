@@ -1,0 +1,39 @@
+METHOD 060007A6 \x8f\x87.\x8f\x86::\x8a\x9e\x94 RVA=8FCC0 file=8DEC0
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000760 \x8f\x87.\x8f\x86::\x8b\x86\x8c
+IL_0006: ldarg.0 
+IL_0007: ldfld 0x04000764 \x8f\x87.\x8f\x86::\x8b\x86\x90
+IL_000C: conv.r8 
+IL_000D: ldarg.1 
+IL_000E: mul 
+IL_000F: ldarg.0 
+IL_0010: ldfld 0x0400075C \x8f\x87.\x8f\x86::\x8b\x86\x88
+IL_0015: add 
+IL_0016: call 0x0A000064 System.Math::Cos
+IL_001B: mul 
+IL_001C: ldarg.0 
+IL_001D: ldfld 0x0400075E \x8f\x87.\x8f\x86::\x8b\x86\x8a
+IL_0022: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0027: add 
+IL_0028: ldarg.0 
+IL_0029: ldfld 0x04000760 \x8f\x87.\x8f\x86::\x8b\x86\x8c
+IL_002E: ldarg.0 
+IL_002F: ldfld 0x04000764 \x8f\x87.\x8f\x86::\x8b\x86\x90
+IL_0034: conv.r8 
+IL_0035: ldarg.1 
+IL_0036: mul 
+IL_0037: ldarg.0 
+IL_0038: ldfld 0x0400075C \x8f\x87.\x8f\x86::\x8b\x86\x88
+IL_003D: add 
+IL_003E: call 0x0A000065 System.Math::Sin
+IL_0043: mul 
+IL_0044: ldarg.0 
+IL_0045: ldfld 0x0400075E \x8f\x87.\x8f\x86::\x8b\x86\x8a
+IL_004A: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_004F: add 
+IL_0050: stloc.0 
+IL_0051: ldloc.0 
+IL_0052: ldc.r8 0.0
+IL_005B: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_0060: ret 
+

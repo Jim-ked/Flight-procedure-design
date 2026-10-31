@@ -1,0 +1,201 @@
+METHOD 06000232 \x88\x9c.\x88\x9b::\x97\x9e RVA=1AAB4 file=18CB4
+IL_0000: ldc.i4 308
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 649
+IL_000F: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0014: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0019: stloc.s local(0x0006)
+IL_001B: ldloc.s local(0x0006)
+IL_001D: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0022: pop 
+IL_0023: ldloc.s local(0x0006)
+IL_0025: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_002A: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_002F: call 0x0600022A \x88\x9c.\x88\x9b::\x97\x96
+IL_0034: pop 
+IL_0035: br 203
+IL_003A: ldarg.0 
+IL_003B: ldfld 0x0400011E \x88\x9c.\x88\x9b::\x9c\x92
+IL_0040: callvirt 0x06000854 \x8f\x99.\x8f\x98::\x8b\x8c\x8a
+IL_0045: stloc.s local(0x000B)
+IL_0047: ldarg.0 
+IL_0048: ldfld 0x040000CB \x88\x9c.\x88\x9b::\x99\x8a
+IL_004D: ldc.i4 1984
+IL_0052: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0057: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_005C: stloc.s local(0x000C)
+IL_005E: ldarg.0 
+IL_005F: call 0x06000233 \x88\x9c.\x88\x9b::\x98\x86
+IL_0064: stloc.s local(0x0007)
+IL_0066: ldloca.s local(0x0008)
+IL_0068: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_006D: ldloca.s local(0x0001)
+IL_006F: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0074: sub 
+IL_0075: ldloca.s local(0x0008)
+IL_0077: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_007C: ldloca.s local(0x0001)
+IL_007E: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0083: sub 
+IL_0084: call 0x0A000063 System.Math::Atan2
+IL_0089: stloc.s local(0x0004)
+IL_008B: ldloc.s local(0x0007)
+IL_008D: ldloc.s local(0x0004)
+IL_008F: call 0x0A000064 System.Math::Cos
+IL_0094: mul 
+IL_0095: stloc.2 
+IL_0096: call 0x06000246 \x88\x9c.\x88\x9b::\x87\x95
+IL_009B: brfalse.s 263
+IL_009D: ldloc.s local(0x0007)
+IL_009F: ldloc.s local(0x0004)
+IL_00A1: call 0x0A000065 System.Math::Sin
+IL_00A6: mul 
+IL_00A7: stloc.3 
+IL_00A8: call 0x06000247 \x88\x9c.\x88\x9b::\x87\x96
+IL_00AD: call 0x06000246 \x88\x9c.\x88\x9b::\x87\x95
+IL_00B2: brfalse 390
+IL_00B7: pop 
+IL_00B8: call 0x06000246 \x88\x9c.\x88\x9b::\x87\x95
+IL_00BD: brtrue.s 264
+IL_00BF: ldarg.0 
+IL_00C0: ldc.i4.0 
+IL_00C1: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_00C6: ldc.i4 2012
+IL_00CB: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00D0: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_00D5: stloc.1 
+IL_00D6: ldc.i4 2016
+IL_00DB: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00E0: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_00E5: stloc.s local(0x0008)
+IL_00E7: ldarg.0 
+IL_00E8: ldc.i4.1 
+IL_00E9: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_00EE: ldloc.1 
+IL_00EF: ldloc.s local(0x0008)
+IL_00F1: call 0x0A000060 Autodesk.AutoCAD.Geometry.Point3d::op_Equality
+IL_00F6: brfalse 70
+IL_00FB: ret 
+IL_00FC: ldloca.s local(0x0000)
+IL_00FE: ldloca.s local(0x0001)
+IL_0100: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0105: ldloc.2 
+IL_0106: add 
+IL_0107: ldloca.s local(0x0001)
+IL_0109: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_010E: ldloc.3 
+IL_010F: add 
+IL_0110: ldc.r8 0.0
+IL_0119: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_011E: ldc.r8 6000.0
+IL_0127: ldloc.s local(0x0004)
+IL_0129: ldc.r8 1.5707963267948966
+IL_0132: add 
+IL_0133: call 0x0A000064 System.Math::Cos
+IL_0138: mul 
+IL_0139: stloc.2 
+IL_013A: ldc.r8 6000.0
+IL_0143: ldloc.s local(0x0004)
+IL_0145: ldc.r8 1.5707963267948966
+IL_014E: add 
+IL_014F: call 0x0A000065 System.Math::Sin
+IL_0154: mul 
+IL_0155: stloc.3 
+IL_0156: ldloca.s local(0x0005)
+IL_0158: ldloca.s local(0x0000)
+IL_015A: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_015F: ldloc.2 
+IL_0160: add 
+IL_0161: ldloca.s local(0x0000)
+IL_0163: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0168: ldloc.3 
+IL_0169: add 
+IL_016A: ldc.r8 0.0
+IL_0173: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_0178: br.s 391
+IL_017A: pop 
+IL_017B: ldloca.s local(0x0009)
+IL_017D: ldloca.s local(0x0000)
+IL_017F: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0184: ldloc.2 
+IL_0185: sub 
+IL_0186: ldloca.s local(0x0000)
+IL_0188: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_018D: ldloc.3 
+IL_018E: sub 
+IL_018F: ldc.r8 0.0
+IL_0198: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_019D: ldloc.s local(0x0006)
+IL_019F: callvirt 0x0A00009A Autodesk.AutoCAD.ApplicationServices.Document::LockDocument
+IL_01A4: stloc.s local(0x000A)
+IL_01A6: call 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase
+IL_01AB: stloc.s local(0x000D)
+IL_01AD: ldloca.s local(0x0000)
+IL_01AF: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_01B4: ldloca.s local(0x0000)
+IL_01B6: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_01BB: ldloc.s local(0x0004)
+IL_01BD: ldloc.s local(0x000B)
+IL_01BF: ldfld 0x04000751 \x8e\x9c.\x8e\x9b::\x8a\x9d\x9a
+IL_01C4: ldloc.s local(0x000B)
+IL_01C6: ldfld 0x0400074C \x8e\x9c.\x8e\x9b::\x8a\x9d\x95
+IL_01CB: ldloc.s local(0x000B)
+IL_01CD: ldfld 0x0400074F \x8e\x9c.\x8e\x9b::\x8a\x9d\x98
+IL_01D2: ldloc.s local(0x000B)
+IL_01D4: ldfld 0x0400074D \x8e\x9c.\x8e\x9b::\x8a\x9d\x96
+IL_01D9: ldloc.s local(0x000B)
+IL_01DB: ldfld 0x04000750 \x8e\x9c.\x8e\x9b::\x8a\x9d\x99
+IL_01E0: ldloc.s local(0x000C)
+IL_01E2: ldloc.s local(0x0007)
+IL_01E4: call 0x0600069A \x8d\x91.\x8d\x90::\x8a\x96\x9a
+IL_01E9: ldloc.s local(0x000D)
+IL_01EB: ldloc.s local(0x0005)
+IL_01ED: ldloc.s local(0x0009)
+IL_01EF: call 0x060006A3 \x8d\x93.\x8d\x92::\x8a\x97\x87
+IL_01F4: pop 
+IL_01F5: call 0x06000247 \x88\x9c.\x88\x9b::\x87\x96
+IL_01FA: call 0x06000246 \x88\x9c.\x88\x9b::\x87\x95
+IL_01FF: brfalse.s 541
+IL_0201: pop 
+IL_0202: ldarg.0 
+IL_0203: ldfld 0x040000FA \x88\x9c.\x88\x9b::\x9b\x87
+IL_0208: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_020D: brfalse.s 635
+IL_020F: br.s 542
+IL_0211: pop 
+IL_0212: ldc.i4 2020
+IL_0217: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_021C: stloc.s local(0x000E)
+IL_021E: newobj 0x0A000071 Autodesk.AutoCAD.DatabaseServices.DBText::.ctor
+IL_0223: dup 
+IL_0224: ldc.r8 500.0
+IL_022D: callvirt 0x0A000072 Autodesk.AutoCAD.DatabaseServices.DBText::set_Height
+IL_0232: dup 
+IL_0233: ldloc.s local(0x000E)
+IL_0235: callvirt 0x0A000074 Autodesk.AutoCAD.DatabaseServices.DBText::set_TextString
+IL_023A: dup 
+IL_023B: ldc.i4.1 
+IL_023C: callvirt 0x0A000075 Autodesk.AutoCAD.DatabaseServices.DBText::set_HorizontalMode
+IL_0241: dup 
+IL_0242: ldc.i4.1 
+IL_0243: callvirt 0x0A000076 Autodesk.AutoCAD.DatabaseServices.DBText::set_VerticalMode
+IL_0248: dup 
+IL_0249: ldloc.s local(0x0005)
+IL_024B: callvirt 0x0A000078 Autodesk.AutoCAD.DatabaseServices.DBText::set_AlignmentPoint
+IL_0250: dup 
+IL_0251: ldloc.s local(0x0004)
+IL_0253: ldc.r8 1.5707963267948966
+IL_025C: sub 
+IL_025D: callvirt 0x0A0000D9 Autodesk.AutoCAD.DatabaseServices.DBText::set_Rotation
+IL_0262: ldloc.s local(0x000D)
+IL_0264: ldstr ''
+IL_0269: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_026E: pop 
+IL_026F: leave.s 649
+IL_0271: ldloc.s local(0x000A)
+IL_0273: brfalse.s 648
+IL_0275: ldloc.s local(0x000A)
+IL_0277: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_027C: endfinally 
+IL_027D: ret 
+

@@ -1,0 +1,23 @@
+61148: 		private void _0089_0095_009E(object P_0, EventArgs P_1)
+61149: 		{
+61150: 			OpenFileDialog openFileDialog = new OpenFileDialog();
+61151: 			openFileDialog.Title = "打开OAS参数文件" /* string-offset:6388 */;
+61152: 			openFileDialog.FileName = "*.txt" /* string-offset:6392 */;
+61153: 			if (openFileDialog.ShowDialog() != DialogResult.OK)
+61154: 			{
+61155: 				return;
+61156: 			}
+61157: 			_ = 0;
+61158: 			if (_0088_009D())
+61159: 			{
+61160: 				if (!_0088_009D())
+61161: 				{
+61162: 					return;
+61163: 				}
+61164: 				Text = "OAS面评估 " /* string-offset:6396 */ + openFileDialog.FileName;
+61165: 			}
+61166: 			StreamReader streamReader = new StreamReader(openFileDialog.FileName, Encoding.UTF8);
+61167: 			string text = streamReader.ReadToEnd();
+61168: 			streamReader.Close();
+61169: 			_0089_0096_0086(text);
+61170: 		}

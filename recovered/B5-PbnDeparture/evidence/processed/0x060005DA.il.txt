@@ -1,0 +1,17 @@
+METHOD 060005DA \x8c\x94.\x8c\x93::.cctor RVA=517B file=337B
+IL_0000: nop 
+IL_0001: ldtoken 0x02000068 \x8c\x94.\x8c\x93
+IL_0006: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_000B: call 0x0A000032 System.ComponentModel.LicenseManager::Validate
+IL_0010: call 0x060005DC \x8c\x94.\x8c\x93::\x88m
+IL_0015: call 0x060005DB \x8c\x94.\x8c\x93::\x88l
+IL_001A: brfalse.s 46
+IL_001C: pop 
+IL_001D: ldc.r8 0.2617993877991494
+IL_0026: stsfld 0x0400069A \x8c\x94.\x8c\x93::\x8a\x89\x9c
+IL_002B: br.s 47
+IL_002D: pop 
+IL_002E: ldc.r8 1.5707963267948966
+IL_0037: stsfld 0x0400069B \x8c\x94.\x8c\x93::\x8a\x89\x9d
+IL_003C: ret 
+

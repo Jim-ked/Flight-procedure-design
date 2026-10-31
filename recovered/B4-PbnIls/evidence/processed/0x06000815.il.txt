@@ -1,0 +1,15 @@
+METHOD 06000815 \x8f\x8f.\x8f\x8e::op_Addition RVA=62D2 file=44D2
+IL_0000: ldarg.0 
+IL_0001: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0006: ldarga.s argument(0x0001)
+IL_0008: call 0x06000845 \x8f\x97.\x8f\x96::\x8b\x8b\x99
+IL_000D: add 
+IL_000E: ldarg.0 
+IL_000F: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0014: ldarga.s argument(0x0001)
+IL_0016: call 0x06000847 \x8f\x97.\x8f\x96::\x8b\x8b\x9b
+IL_001B: add 
+IL_001C: ldc.r8 0.0
+IL_0025: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_002A: ret 
+

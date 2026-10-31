@@ -1,0 +1,95 @@
+METHOD 060000F6 \x98.\x97::\x8a\x93 RVA=BF28 file=A128
+IL_0000: ldc.i4 128
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 273
+IL_000F: ldarg.0 
+IL_0010: callvirt 0x0A000178 System.Object::GetType
+IL_0015: callvirt 0x0A000033 System.Type::get_Assembly
+IL_001A: callvirt 0x0A000037 System.Reflection.Assembly::get_Location
+IL_001F: call 0x0A000038 System.IO.Path::GetDirectoryName
+IL_0024: ldarg.1 
+IL_0025: call 0x0A000042 System.IO.Path::Combine
+IL_002A: stloc.0 
+IL_002B: ldloc.0 
+IL_002C: call 0x0A000098 System.IO.File::Exists
+IL_0031: brtrue.s 64
+IL_0033: ret 
+IL_0034: ldloc.0 
+IL_0035: call 0x0A00012D System.Xml.Linq.XDocument::Load
+IL_003A: ldc.i4 644
+IL_003F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0044: call 0x0A00012E System.Xml.Linq.XName::op_Implicit
+IL_0049: callvirt 0x0A000132 System.Xml.Linq.XContainer::Element
+IL_004E: dup 
+IL_004F: brtrue.s 113
+IL_0051: pop 
+IL_0052: call 0x06000100 \x98.\x97::\x9b
+IL_0057: call 0x06000101 \x98.\x97::\x9c
+IL_005C: brtrue.s 110
+IL_005E: pop 
+IL_005F: ldnull 
+IL_0060: br.s 124
+IL_0062: pop 
+IL_0063: br.s 136
+IL_0065: ldarg.2 
+IL_0066: call 0x0A00012E System.Xml.Linq.XName::op_Implicit
+IL_006B: call 0x0A000132 System.Xml.Linq.XContainer::Element
+IL_0070: stloc.1 
+IL_0071: ldloc.1 
+IL_0072: brtrue.s 129
+IL_0074: ret 
+IL_0075: ldarg.0 
+IL_0076: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_007B: stloc.3 
+IL_007C: ldloc.1 
+IL_007D: callvirt 0x0A000181 System.Xml.Linq.XContainer::Elements
+IL_0082: callvirt 0x0A000130 0x1B000011::GetEnumerator
+IL_0087: stloc.2 
+IL_0088: nop 
+IL_0089: br.s 253
+IL_008B: ldloc.2 
+IL_008C: callvirt 0x0A000131 0x1B000012::get_Current
+IL_0091: stloc.s local(0x0004)
+IL_0093: call 0x06000101 \x98.\x97::\x9c
+IL_0098: call 0x06000100 \x98.\x97::\x9b
+IL_009D: brfalse.s 174
+IL_009F: pop 
+IL_00A0: br.s 207
+IL_00A2: pop 
+IL_00A3: call 0x06000100 \x98.\x97::\x9b
+IL_00A8: brtrue.s 221
+IL_00AA: br.s 237
+IL_00AC: ldsfld 0x0400001A \x98.\x97::\x8a\x9b
+IL_00B1: ldloc.s local(0x0007)
+IL_00B3: ldloca.s local(0x0006)
+IL_00B5: callvirt 0x0600016E \x87\x95.\x87\x94::\x8d\x91
+IL_00BA: brfalse.s 253
+IL_00BC: call 0x06000100 \x98.\x97::\x9b
+IL_00C1: brtrue.s 237
+IL_00C3: ldloc.s local(0x0004)
+IL_00C5: callvirt 0x0A000182 System.Xml.Linq.XElement::get_Name
+IL_00CA: callvirt 0x0A000086 System.Object::ToString
+IL_00CF: stloc.s local(0x0005)
+IL_00D1: ldloc.3 
+IL_00D2: ldloc.s local(0x0005)
+IL_00D4: call 0x060000F7 \x98.\x97::\x8a\x94
+IL_00D9: stloc.s local(0x0007)
+IL_00DB: ldloc.s local(0x0007)
+IL_00DD: brfalse.s 253
+IL_00DF: br.s 184
+IL_00E1: ldloc.s local(0x0006)
+IL_00E3: ldloc.s local(0x0007)
+IL_00E5: ldloc.s local(0x0004)
+IL_00E7: callvirt 0x0A000133 System.Xml.Linq.XElement::get_Value
+IL_00EC: callvirt 0x0600017E \x87\x97.\x87\x96::SetValue
+IL_00F1: ldloc.2 
+IL_00F2: callvirt 0x0A0000E6 System.Collections.IEnumerator::MoveNext
+IL_00F7: brtrue.s 151
+IL_00F9: leave.s 273
+IL_00FB: ldloc.2 
+IL_00FC: brfalse.s 272
+IL_00FE: ldloc.2 
+IL_00FF: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0104: endfinally 
+IL_0105: ret 
+

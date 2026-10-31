@@ -1,0 +1,92 @@
+METHOD 060004E0 \x8b\x91.\x8b\x90::\x89\x8b\x8b RVA=64EA8 file=630A8
+IL_0000: call 0x060004E5 \x8b\x91.\x8b\x90::\x88\x97
+IL_0005: call 0x060004E6 \x8b\x91.\x8b\x90::\x88\x98
+IL_000A: brtrue.s 27
+IL_000C: pop 
+IL_000D: br.s 51
+IL_000F: pop 
+IL_0010: br 275
+IL_0015: ldc.i4 8
+IL_001A: stloc local(0x0000)
+IL_001E: call 0x060004E5 \x8b\x91.\x8b\x90::\x88\x97
+IL_0023: brfalse.s 170
+IL_0025: br.s 82
+IL_0027: ldc.i4 964
+IL_002C: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0031: brfalse 356
+IL_0036: ldc.i4 4
+IL_003B: stloc local(0x0000)
+IL_003F: call 0x060004E5 \x8b\x91.\x8b\x90::\x88\x97
+IL_0044: brfalse.s 184
+IL_0046: ldloc local(0x0000)
+IL_004A: switch [51, 201, 224, 275, 154, 51, 184, 275, 300, 170, 238, 247, 356]
+IL_0083: ldc.i4 10
+IL_0088: stloc local(0x0000)
+IL_008C: br.s 238
+IL_008E: ldarg.2 
+IL_008F: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_0094: brfalse.s 184
+IL_0096: ldarg.0 
+IL_0097: ldfld 0x04000633 \x8c\x86.\x8b\x9e::\x89\x9d\x93
+IL_009C: brfalse.s 184
+IL_009E: ldarg.0 
+IL_009F: ldfld 0x04000633 \x8c\x86.\x8b\x9e::\x89\x9d\x93
+IL_00A4: ldarg.1 
+IL_00A5: ldarg.s argument(0x0008)
+IL_00A7: callvirt 0x060005B6 \x8c\x8c.\x8c\x8b::\x89\x9e\x90
+IL_00AC: ldarg.3 
+IL_00AD: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_00B2: brfalse.s 238
+IL_00B4: ldc.i4 1
+IL_00B9: stloc local(0x0000)
+IL_00BD: ldarg.1 
+IL_00BE: ldarg.0 
+IL_00BF: ldfld 0x0400062E \x8c\x86.\x8b\x9e::\x89\x9d\x8e
+IL_00C4: ldarg.s argument(0x0008)
+IL_00C6: call 0x06000086 \x8c.\x8b::\x88\x8a
+IL_00CB: ldc.i4 2
+IL_00D0: stloc local(0x0000)
+IL_00D4: ldarg.1 
+IL_00D5: ldarg.0 
+IL_00D6: ldfld 0x0400062C \x8c\x86.\x8b\x9e::\x89\x9d\x8c
+IL_00DB: ldarg.s argument(0x0008)
+IL_00DD: call 0x06000086 \x8c.\x8b::\x88\x8a
+IL_00E2: ldarg.s argument(0x0004)
+IL_00E4: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_00E9: brtrue.s 261
+IL_00EB: ldarg.s argument(0x0005)
+IL_00ED: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_00F2: brfalse.s 314
+IL_00F4: br 33
+IL_00F9: ldarg.1 
+IL_00FA: ldarg.0 
+IL_00FB: ldfld 0x0400062F \x8c\x86.\x8b\x9e::\x89\x9d\x8f
+IL_0100: ldarg.s argument(0x0008)
+IL_0102: call 0x06000086 \x8c.\x8b::\x88\x8a
+IL_0107: ldarg.1 
+IL_0108: ldarg.0 
+IL_0109: ldfld 0x0400062D \x8c\x86.\x8b\x9e::\x89\x9d\x8d
+IL_010E: ldarg.s argument(0x0008)
+IL_0110: call 0x06000086 \x8c.\x8b::\x88\x8a
+IL_0115: ldc.i4 11
+IL_011A: stloc local(0x0000)
+IL_011E: br.s 247
+IL_0120: ldarg.1 
+IL_0121: ldarg.0 
+IL_0122: ldfld 0x04000630 \x8c\x86.\x8b\x9e::\x89\x9d\x90
+IL_0127: ldarg.s argument(0x0008)
+IL_0129: call 0x06000087 \x8c.\x8b::\x88\x8b
+IL_012E: ldarg.s argument(0x0006)
+IL_0130: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_0135: brfalse.s 356
+IL_0137: ldarg.1 
+IL_0138: ldarg.s argument(0x0007)
+IL_013A: ldarg.0 
+IL_013B: ldfld 0x04000624 \x8c\x86.\x8b\x9e::\x89\x9c\x9d
+IL_0140: callvirt 0x060005FA \x8c\x9a.\x8c\x99::\x8a\x8c\x9a
+IL_0145: ldstr ''
+IL_014A: call 0x06000086 \x8c.\x8b::\x88\x8a
+IL_014F: ldc.i4 12
+IL_0154: stloc local(0x0000)
+IL_0158: ret 
+

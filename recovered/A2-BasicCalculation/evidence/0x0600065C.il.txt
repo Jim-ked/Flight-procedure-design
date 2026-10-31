@@ -1,0 +1,13 @@
+METHOD 0600065C \x8d\x8f.\x8d\x8e::\x8a\x92\x8f RVA=54A4 file=36A4
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000709 \x8d\x8f.\x8d\x8e::\x8a\x95\x95
+IL_0006: dup 
+IL_0007: brtrue.s 12
+IL_0009: pop 
+IL_000A: ret 
+IL_000B: ldarg.0 
+IL_000C: ldarg.1 
+IL_000D: newobj 0x0A00039E System.ComponentModel.PropertyChangedEventArgs::.ctor
+IL_0012: callvirt 0x0A00039F System.ComponentModel.PropertyChangedEventHandler::Invoke
+IL_0017: ret 
+

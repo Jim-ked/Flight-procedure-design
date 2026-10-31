@@ -1,0 +1,31 @@
+572: 		public static bool _008C_009A(string P_0, string P_1, string P_2, string P_3)
+573: 		{
+574: 			try
+575: 			{
+576: 				XDocument xDocument = XDocument.Load(P_0);
+577: 				XElement xElement = xDocument.XPathSelectElement(P_1);
+578: 				if (xElement == null)
+579: 				{
+580: 					return false;
+581: 				}
+582: 				XElement xElement2 = xElement.Element(P_2);
+583: 				_ = 1;
+584: 				if (!_8())
+585: 				{
+586: 					if (xElement2 != null)
+587: 					{
+588: 						xElement2.Value = P_3;
+589: 					}
+590: 					else
+591: 					{
+592: 						xElement.Add(new XElement(P_2, P_3));
+593: 					}
+594: 				}
+595: 				xDocument.Save(P_0);
+596: 				return true;
+597: 			}
+598: 			catch (Exception innerException)
+599: 			{
+600: 				throw new Exception("创建或更新XML节点失败: " /* string-offset:1012 */ + P_1 + "/" /* string-offset:1008 */ + P_2, innerException);
+601: 			}
+602: 		}

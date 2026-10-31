@@ -1,0 +1,12 @@
+﻿GapId,Module,Feature,GapType,Description,StaticEvidenceAvailable,NeedsMoreStaticWork,NeedsOtherBuild,NeedsE4,NeedsStandardResearch,BusinessImpact,SuggestedAction
+G-A1,A1,full designer/CAD chain,EVENT_REACHABILITY_GAP,Partial package,YES,YES,NO,YES,NO,HIGH,A1 closure
+G-A3,A3,cross-facility semantics,GEOMETRY_GAP,Single-station/KK chain,YES,YES,NO,YES,YES,HIGH,A3 closure
+G-A5,A5,evaluator UI reachability,ORPHAN_IMPLEMENTATION,Complete bodies without incoming,YES,NO,YES,NO,NO,HIGH,Other-build comparison
+G-A7,A7,public chain closure,GEOMETRY_GAP,Three mode chains recovered,YES,YES,NO,YES,YES,HIGH,A7 closure
+G-B1,B1,boundary vertex equivalence,GEOMETRY_GAP,Candidate branch only,YES,YES,NO,YES,NO,HIGH,B1 closure
+G-B2,B2,DF boundary vertex equivalence,GEOMETRY_GAP,Candidate branch only,YES,YES,NO,YES,NO,HIGH,B2 closure
+G-B3,B3,evaluator UI reachability,ORPHAN_IMPLEMENTATION,P594/P5EE/P470 no incoming,YES,NO,YES,NO,NO,HIGH,Other-build comparison
+G-B4,B4,Evaluate/KML/evaluator,UI_STUB,Prompt-only/empty/orphan,YES,NO,YES,NO,NO,HIGH,Other-build comparison
+G-B5,B5,evaluation dispatcher,UI_STUB,Prompt-only/hidden,YES,NO,YES,NO,NO,HIGH,Other-build comparison
+G-E4,All,matched-host execution,RUNTIME_E4_GAP,No original host run,NO,NO,NO,YES,NO,MEDIUM,API23.1 host
+G-STD,All,historical provenance,STANDARD_BASIS_UNRESOLVED,Current mapping only,NO,NO,NO,NO,YES,MEDIUM,Standards research

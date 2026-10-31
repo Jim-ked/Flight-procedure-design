@@ -1,0 +1,30 @@
+﻿file,term,source
+_0089_008C.source.txt,FAF,"24054: 							double num2 = _008F_008A._008B_0087_009E(_0087_0095_009D, ""FAF定位容差输入有误"" /* string-offset:3808 */);"
+_0089_008C.source.txt,FAF,"24214: 				double num2 = _008F_008A._008B_0087_009E(_0087_0096_0087, ""FAF高度输入错误"" /* string-offset:3820 */);"
+_0089_008C.source.txt,FAF,"24735: 			Point3d val = _009D._008B_008D(""\n请选择FAF点"" /* string-offset:3868 */);"
+_0089_008C.source.txt,FAF,"24740: 				val2 = _009D._008B_008D(""\n请选择FAF最早点"" /* string-offset:3872 */);"
+_0089_008C.source.txt,GetEntity,24767: 				entity = editor.GetEntity(val);
+_0089_008C.source.txt,XData,"24776: 				ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;"
+_0089_008C.source.txt,XData,24777: 				if (!_00870() && !(xData != (ResultBuffer)null))
+_0089_008C.source.txt,XData,24783: 					string text = ((TypedValue)(ref xData.AsArray()[1])).Value.ToString();
+_0089_008C.source.txt,FAF,"24845: 						[""FAF_Height"" /* string-offset:3952 */] = _008F_008A._008B_0087_009E(_0087_0096_0087, ""输入数据有误，请检查。"" /* string-offset:1984 */),"
+_0089_008C.source.txt,FAF,"24847: 						[""FAF_Tolerance"" /* string-offset:3960 */] = _008F_008A._008B_0087_009E(_0087_0095_009D, ""输入数据有误，请检查。"" /* string-offset:1984 */)"
+_0089_008C.source.txt,FAF,"25079: 						if (dictionary4.ContainsKey(""FAF_Height"" /* string-offset:3952 */))"
+_0089_008C.source.txt,FAF,"25081: 							_0087_0096_0087.Text = Convert.ToDouble(dictionary4[""FAF_Height"" /* string-offset:3952 */]).ToString(""F2"" /* string-offset:3236 */);"
+_0089_008C.source.txt,FAF,"25151: 						if (dictionary4.ContainsKey(""FAF_Tolerance"" /* string-offset:3960 */))"
+_0089_008C.source.txt,FAF,"25335: 						_0087_0095_009D.Text = Convert.ToDouble(dictionary4[""FAF_Tolerance"" /* string-offset:3960 */]).ToString(""F2"" /* string-offset:3236 */);"
+_0089_008C.source.txt,DA,26099: 						goto IL_15da;
+_0089_008C.source.txt,DA,26138: 						goto IL_18da;
+_0089_008C.source.txt,FAF,"26449: 						_0087_0092_0099.SetToolTip(_0087_0096_0087, ""FAF点的海拔高度"" /* string-offset:4172 */);"
+_0089_008C.source.txt,FAP,"26604: 						_0087_0092_0097.Text = ""PA with FAP"" /* string-offset:4164 */;"
+_0089_008C.source.txt,DA,27341: 						goto IL_52da;
+_0089_008C.source.txt,DA,27452: 				goto IL_52da;
+_0089_008C.source.txt,DA,27453: 				IL_52da:
+_0089_008C.source.txt,DA,27524: 				goto IL_15da;
+_0089_008C.source.txt,DA,27593: 				IL_15da:
+_0089_008C.source.txt,FAF,"27672: 				_0087_0092_0096.Text = ""PA with FAF"" /* string-offset:4152 */;"
+_0089_008C.source.txt,DA,28368: 				goto IL_18da;
+_0089_008C.source.txt,DA,28369: 				IL_18da:
+_0089_008C.source.txt,FAF,"28422: 				_0087_0095_009C.Text = ""FAF高度(m)"" /* string-offset:2116 */;"
+_0089_008C.source.txt,FAF,"28434: 				_0087_0095_009E.Text = ""FAF容差(m)"" /* string-offset:4352 */;"
+_0089_008C.source.txt,FAF,"28534: 				_0087_0092_0099.SetToolTip(_0087_0095_009D, ""FAF位置处的定位容差"" /* string-offset:4192 */);"

@@ -1,0 +1,542 @@
+METHOD 060002F9 \x89\x8b.\x89\x8a::\x87\x90\x8f RVA=335CC file=317CC
+IL_0000: nop 
+IL_0001: br 2085
+IL_0006: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_000B: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0010: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_0015: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_001A: call 0x060002F6 \x89\x8b.\x89\x8a::\x87\x90\x8c
+IL_001F: pop 
+IL_0020: ldarg.0 
+IL_0021: ldc.i4.0 
+IL_0022: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0027: br 2051
+IL_002C: ldc.i4 3708
+IL_0031: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0036: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_003B: stloc.1 
+IL_003C: call 0x06000301 \x89\x8b.\x89\x8a::\x87\x9e
+IL_0041: call 0x06000300 \x89\x8b.\x89\x8a::\x87\x9d
+IL_0046: brfalse.s 99
+IL_0048: pop 
+IL_0049: ldc.i4 26
+IL_004E: stloc local(0x0018)
+IL_0052: br 1315
+IL_0057: pop 
+IL_0058: ldc.i4 29
+IL_005D: stloc local(0x0018)
+IL_0061: call 0x06000301 \x89\x8b.\x89\x8a::\x87\x9e
+IL_0066: brtrue 2028
+IL_006B: br 1379
+IL_0070: ldc.r8 4.71238898038469
+IL_0079: ldloc.2 
+IL_007A: sub 
+IL_007B: stloc.3 
+IL_007C: ldc.i4 23
+IL_0081: stloc local(0x0018)
+IL_0085: ldloc.3 
+IL_0086: ldc.r8 0.0
+IL_008F: bge 1309
+IL_0094: ldc.r8 6.283185307179586
+IL_009D: ldloc.3 
+IL_009E: add 
+IL_009F: stloc.3 
+IL_00A0: ldloc.3 
+IL_00A1: ldc.r8 6.283185307179586
+IL_00AA: bgt.s 187
+IL_00AC: ldloc.3 
+IL_00AD: br.s 198
+IL_00AF: ldloc.3 
+IL_00B0: ldc.r8 6.283185307179586
+IL_00B9: sub 
+IL_00BA: stloc.3 
+IL_00BB: ldloca.s local(0x0000)
+IL_00BD: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_00C2: ldloca.s local(0x0001)
+IL_00C4: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_00C9: sub 
+IL_00CA: ldc.r8 2.0
+IL_00D3: call 0x0A000112 System.Math::Pow
+IL_00D8: ldloca.s local(0x0000)
+IL_00DA: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_00DF: ldloca.s local(0x0001)
+IL_00E1: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_00E6: sub 
+IL_00E7: ldc.r8 2.0
+IL_00F0: call 0x0A000112 System.Math::Pow
+IL_00F5: add 
+IL_00F6: call 0x0A00002D System.Math::Sqrt
+IL_00FB: stloc.s local(0x0004)
+IL_00FD: ldarg.0 
+IL_00FE: ldarg.0 
+IL_00FF: ldfld 0x040001E6 \x89\x8b.\x89\x8a::\x87\x91\x87
+IL_0104: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0109: call 0x060002FA \x89\x8b.\x89\x8a::\x87\x90\x90
+IL_010E: ldsfld 0x040001DA \x89\x8b.\x89\x8a::\x87\x90\x94
+IL_0113: mul 
+IL_0114: stloc.s local(0x0005)
+IL_0116: ldarg.0 
+IL_0117: ldfld 0x040001E2 \x89\x8b.\x89\x8a::\x87\x90\x9c
+IL_011C: callvirt 0x0A000201 System.Windows.Forms.RadioButton::get_Checked
+IL_0121: brfalse.s 351
+IL_0123: ldarg.0 
+IL_0124: ldfld 0x040001E2 \x89\x8b.\x89\x8a::\x87\x90\x9c
+IL_0129: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_012E: callvirt 0x0A000094 System.String::Trim
+IL_0133: ldc.i4.1 
+IL_0134: newarr 0x010000B9 System.Char
+IL_0139: dup 
+IL_013A: ldc.i4.0 
+IL_013B: ldc.i4.s 110
+IL_013D: stelem.i2 
+IL_013E: callvirt 0x0A00003A System.String::Split
+IL_0143: stloc.s local(0x0006)
+IL_0145: ldc.i4 17
+IL_014A: stloc local(0x0018)
+IL_014E: br 1264
+IL_0153: ldarg.0 
+IL_0154: ldfld 0x040001E1 \x89\x8b.\x89\x8a::\x87\x90\x9b
+IL_0159: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_015E: callvirt 0x0A000094 System.String::Trim
+IL_0163: ldc.i4.1 
+IL_0164: newarr 0x010000B9 System.Char
+IL_0169: dup 
+IL_016A: ldc.i4.0 
+IL_016B: ldc.i4.s 110
+IL_016D: stelem.i2 
+IL_016E: callvirt 0x0A00003A System.String::Split
+IL_0173: stloc.s local(0x0006)
+IL_0175: br 1264
+IL_017A: ldloc.0 
+IL_017B: call 0x06000125 \x87\x87.\x87\x86::\x8b\x9c
+IL_0180: stloc.s local(0x0008)
+IL_0182: ldc.i4 20
+IL_0187: stloc local(0x0018)
+IL_018B: ldloc.1 
+IL_018C: call 0x06000125 \x87\x87.\x87\x86::\x8b\x9c
+IL_0191: stloc.s local(0x0009)
+IL_0193: ldc.i4 7
+IL_0198: stloc local(0x0018)
+IL_019C: newobj 0x0A0001D5 0x1B000001::.ctor
+IL_01A1: stloc.s local(0x000A)
+IL_01A3: ldarg.0 
+IL_01A4: ldfld 0x040001DD \x89\x8b.\x89\x8a::\x87\x90\x97
+IL_01A9: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_01AE: brtrue.s 536
+IL_01B0: ldarg.0 
+IL_01B1: ldfld 0x040001DC \x89\x8b.\x89\x8a::\x87\x90\x96
+IL_01B6: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_01BB: brtrue 1250
+IL_01C0: ldarg.0 
+IL_01C1: ldfld 0x040001DF \x89\x8b.\x89\x8a::\x87\x90\x99
+IL_01C6: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_01CB: brfalse 2205
+IL_01D0: ldloc.s local(0x0008)
+IL_01D2: ldloc.s local(0x0007)
+IL_01D4: ldloc.2 
+IL_01D5: ldc.r8 1.5707963267948966
+IL_01DE: sub 
+IL_01DF: ldc.r8 0.0
+IL_01E8: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_01ED: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_01F2: stloc.s local(0x0012)
+IL_01F4: ldc.i4 6
+IL_01F9: stloc local(0x0018)
+IL_01FD: call 0x06000301 \x89\x8b.\x89\x8a::\x87\x9e
+IL_0202: brtrue 750
+IL_0207: br 1379
+IL_020C: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0211: stloc.s local(0x000B)
+IL_0213: ldc.i4 3
+IL_0218: stloc local(0x0018)
+IL_021C: ldloc.s local(0x000B)
+IL_021E: ldloc.s local(0x0008)
+IL_0220: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0225: ldc.i4 28
+IL_022A: stloc local(0x0018)
+IL_022E: br 717
+IL_0233: ldloc.s local(0x0008)
+IL_0235: ldloc.s local(0x0007)
+IL_0237: ldloc.2 
+IL_0238: ldc.r8 1.5707963267948966
+IL_0241: add 
+IL_0242: ldc.r8 0.0
+IL_024B: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_0250: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_0255: stloc.s local(0x000C)
+IL_0257: ldloc.s local(0x0008)
+IL_0259: ldloc.s local(0x0007)
+IL_025B: ldc.r8 2.0
+IL_0264: div 
+IL_0265: ldloc.2 
+IL_0266: ldc.r8 1.5707963267948966
+IL_026F: add 
+IL_0270: ldc.r8 0.0
+IL_0279: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_027E: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_0283: stloc.s local(0x000D)
+IL_0285: ldc.i4 8
+IL_028A: stloc local(0x0018)
+IL_028E: br.s 750
+IL_0290: ldloc.s local(0x000B)
+IL_0292: ldloc.s local(0x0014)
+IL_0294: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0299: ldloc.s local(0x000A)
+IL_029B: ldloc.s local(0x000B)
+IL_029D: callvirt 0x0A0001D8 0x1B000001::Add
+IL_02A2: newobj 0x0A000126 0x1B00000F::.ctor
+IL_02A7: stloc.s local(0x000B)
+IL_02A9: ldc.i4 16
+IL_02AE: stloc local(0x0018)
+IL_02B2: call 0x06000301 \x89\x8b.\x89\x8a::\x87\x9e
+IL_02B7: brfalse 2133
+IL_02BC: br 1160
+IL_02C1: ldloc.s local(0x000B)
+IL_02C3: ldloc.s local(0x0009)
+IL_02C5: callvirt 0x0A00012A 0x1B00000F::Add
+IL_02CA: ldc.i4 43
+IL_02CF: stloc local(0x0018)
+IL_02D3: call 0x06000301 \x89\x8b.\x89\x8a::\x87\x9e
+IL_02D8: brfalse 1217
+IL_02DD: br 1185
+IL_02E2: ldloc.s local(0x0009)
+IL_02E4: ldloc.s local(0x0004)
+IL_02E6: ldloc.s local(0x0005)
+IL_02E8: call 0x0A000275 System.Math::Tan
+IL_02ED: mul 
+IL_02EE: ldloc.s local(0x0007)
+IL_02F0: add 
+IL_02F1: ldloc.2 
+IL_02F2: ldc.r8 1.5707963267948966
+IL_02FB: add 
+IL_02FC: ldc.r8 0.0
+IL_0305: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_030A: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_030F: stloc.s local(0x000E)
+IL_0311: ldloc.s local(0x0009)
+IL_0313: ldloc.s local(0x0004)
+IL_0315: ldloc.s local(0x0005)
+IL_0317: call 0x0A000275 System.Math::Tan
+IL_031C: mul 
+IL_031D: ldloc.s local(0x0007)
+IL_031F: add 
+IL_0320: ldc.r8 2.0
+IL_0329: div 
+IL_032A: ldloc.2 
+IL_032B: ldc.r8 1.5707963267948966
+IL_0334: add 
+IL_0335: ldc.r8 0.0
+IL_033E: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_0343: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_0348: stloc.s local(0x000F)
+IL_034A: ldc.i4 2
+IL_034F: stloc local(0x0018)
+IL_0353: ldarg.0 
+IL_0354: ldfld 0x040001DE \x89\x8b.\x89\x8a::\x87\x90\x98
+IL_0359: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_035E: brfalse 1117
+IL_0363: ldc.r8 1.0
+IL_036C: ldc.r8 1.0
+IL_0375: ldc.r8 1.0
+IL_037E: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_0383: stloc.s local(0x0010)
+IL_0385: ldc.i4 18
+IL_038A: stloc local(0x0018)
+IL_038E: ldc.r8 1.0
+IL_0397: ldc.r8 1.0
+IL_03A0: ldc.r8 1.0
+IL_03A9: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_03AE: ldloc.s local(0x0010)
+IL_03B0: ldloc.s local(0x000D)
+IL_03B2: ldloc.s local(0x000F)
+IL_03B4: callvirt 0x060007E7 \x8f\x8d.\x8f\x8c::\x8b\x88\x8e
+IL_03B9: dup 
+IL_03BA: ldloc.s local(0x000C)
+IL_03BC: ldloc.s local(0x000E)
+IL_03BE: callvirt 0x060007E7 \x8f\x8d.\x8f\x8c::\x8b\x88\x8e
+IL_03C3: ldc.r8 1.0
+IL_03CC: ldc.r8 1.0
+IL_03D5: ldc.r8 1.0
+IL_03DE: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_03E3: stloc.s local(0x0011)
+IL_03E5: ldloc.s local(0x0011)
+IL_03E7: ldloc.s local(0x0009)
+IL_03E9: ldloc.2 
+IL_03EA: ldc.r8 3.141592653589793
+IL_03F3: add 
+IL_03F4: ldc.r8 15.0
+IL_03FD: ldsfld 0x040001DA \x89\x8b.\x89\x8a::\x87\x90\x94
+IL_0402: mul 
+IL_0403: add 
+IL_0404: callvirt 0x060007E8 \x8f\x8d.\x8f\x8c::\x8b\x88\x8f
+IL_0409: ldloc.s local(0x0010)
+IL_040B: ldloc.s local(0x0011)
+IL_040D: callvirt 0x060007ED \x8f\x8d.\x8f\x8c::\x8b\x88\x93
+IL_0412: stloc.s local(0x000F)
+IL_0414: ldloc.s local(0x0011)
+IL_0416: callvirt 0x060007ED \x8f\x8d.\x8f\x8c::\x8b\x88\x93
+IL_041B: stloc.s local(0x000E)
+IL_041D: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0422: stloc.s local(0x000B)
+IL_0424: ldloc.s local(0x000B)
+IL_0426: ldloc.s local(0x0009)
+IL_0428: callvirt 0x0A00012A 0x1B00000F::Add
+IL_042D: ldc.i4 41
+IL_0432: stloc local(0x0018)
+IL_0436: ldloc.s local(0x000B)
+IL_0438: ldloc.s local(0x000E)
+IL_043A: callvirt 0x0A00012A 0x1B00000F::Add
+IL_043F: ldc.i4 42
+IL_0444: stloc local(0x0018)
+IL_0448: ldloc.s local(0x000A)
+IL_044A: ldloc.s local(0x000B)
+IL_044C: callvirt 0x0A0001D8 0x1B000001::Add
+IL_0451: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0456: stloc.s local(0x000B)
+IL_0458: ldloc.s local(0x000B)
+IL_045A: ldloc.s local(0x0008)
+IL_045C: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0461: ldloc.s local(0x000B)
+IL_0463: ldloc.s local(0x000C)
+IL_0465: callvirt 0x0A00012A 0x1B00000F::Add
+IL_046A: ldloc.s local(0x000B)
+IL_046C: ldloc.s local(0x000E)
+IL_046E: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0473: ldloc.s local(0x000A)
+IL_0475: ldloc.s local(0x000B)
+IL_0477: callvirt 0x0A0001D8 0x1B000001::Add
+IL_047C: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0481: stloc.s local(0x000B)
+IL_0483: ldloc.s local(0x000B)
+IL_0485: ldloc.s local(0x000D)
+IL_0487: callvirt 0x0A00012A 0x1B00000F::Add
+IL_048C: ldc.i4 40
+IL_0491: stloc local(0x0018)
+IL_0495: ldloc.s local(0x000B)
+IL_0497: ldloc.s local(0x000F)
+IL_0499: callvirt 0x0A00012A 0x1B00000F::Add
+IL_049E: ldloc.s local(0x000A)
+IL_04A0: ldloc.s local(0x000B)
+IL_04A2: callvirt 0x0A0001D8 0x1B000001::Add
+IL_04A7: ldc.i4 25
+IL_04AC: stloc local(0x0018)
+IL_04B0: br 460
+IL_04B5: ldloc.s local(0x000A)
+IL_04B7: ldloc.s local(0x000B)
+IL_04B9: callvirt 0x0A0001D8 0x1B000001::Add
+IL_04BE: ldc.i4 36
+IL_04C3: stloc local(0x0018)
+IL_04C7: call 0x06000301 \x89\x8b.\x89\x8a::\x87\x9e
+IL_04CC: brfalse 444
+IL_04D1: br 2188
+IL_04D6: ldc.i4 14
+IL_04DB: stloc local(0x0018)
+IL_04DF: br 575
+IL_04E4: ldloc.s local(0x0006)
+IL_04E6: ldc.i4.0 
+IL_04E7: ldelem.ref 
+IL_04E8: ldc.i4 1984
+IL_04ED: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_04F2: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_04F7: ldc.r8 1852.0
+IL_0500: mul 
+IL_0501: stloc.s local(0x0007)
+IL_0503: ldc.i4 9
+IL_0508: stloc local(0x0018)
+IL_050C: br 390
+IL_0511: ldloc.3 
+IL_0512: br 171
+IL_0517: ldloc.1 
+IL_0518: call 0x0A0000EB Autodesk.AutoCAD.Geometry.Point3d::get_Origin
+IL_051D: call 0x0A000060 Autodesk.AutoCAD.Geometry.Point3d::op_Equality
+IL_0522: brtrue 2122
+IL_0527: ldarg.0 
+IL_0528: ldc.i4.1 
+IL_0529: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_052E: ldloca.s local(0x0000)
+IL_0530: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0535: ldloca.s local(0x0001)
+IL_0537: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_053C: sub 
+IL_053D: ldloca.s local(0x0000)
+IL_053F: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0544: ldloca.s local(0x0001)
+IL_0546: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_054B: sub 
+IL_054C: call 0x0A000063 System.Math::Atan2
+IL_0551: stloc.2 
+IL_0552: br 124
+IL_0557: ldloc local(0x0018)
+IL_055B: switch [1994, 2151, 863, 552, 536, 1315, 1606, 424, 750, 390, 2169, 1842, 124, 2222, 575, 2085, 2133, 1264, 922, 2205, 407, 1072, 1573, 145, 1160, 460, 1315, 668, 717, 1699, 1699, 2051, 2028, 1799, 1065, 2180, 444, 2188, 2204, 2010, 1185, 1090, 1108, 1217, 2222]
+IL_0614: br 1065
+IL_0619: ldloc.s local(0x000B)
+IL_061B: ldloc.s local(0x0012)
+IL_061D: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0622: ldc.i4 27
+IL_0627: stloc local(0x0018)
+IL_062B: call 0x06000301 \x89\x8b.\x89\x8a::\x87\x9e
+IL_0630: brtrue 124
+IL_0635: br 1379
+IL_063A: ldloc.s local(0x0008)
+IL_063C: ldloc.s local(0x0007)
+IL_063E: ldc.r8 2.0
+IL_0647: div 
+IL_0648: ldloc.2 
+IL_0649: ldc.r8 1.5707963267948966
+IL_0652: sub 
+IL_0653: ldc.r8 0.0
+IL_065C: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_0661: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_0666: stloc.s local(0x0013)
+IL_0668: ldloc.s local(0x0009)
+IL_066A: ldloc.s local(0x0004)
+IL_066C: ldloc.s local(0x0005)
+IL_066E: call 0x0A000275 System.Math::Tan
+IL_0673: mul 
+IL_0674: ldloc.s local(0x0007)
+IL_0676: add 
+IL_0677: ldloc.2 
+IL_0678: ldc.r8 1.5707963267948966
+IL_0681: sub 
+IL_0682: ldc.r8 0.0
+IL_068B: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_0690: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_0695: stloc.s local(0x0014)
+IL_0697: ldloc.s local(0x0009)
+IL_0699: ldloc.s local(0x0004)
+IL_069B: ldloc.s local(0x0005)
+IL_069D: call 0x0A000275 System.Math::Tan
+IL_06A2: mul 
+IL_06A3: ldloc.s local(0x0007)
+IL_06A5: add 
+IL_06A6: ldc.r8 2.0
+IL_06AF: div 
+IL_06B0: ldloc.2 
+IL_06B1: ldc.r8 1.5707963267948966
+IL_06BA: sub 
+IL_06BB: ldc.r8 0.0
+IL_06C4: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_06C9: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_06CE: stloc.s local(0x0015)
+IL_06D0: ldarg.0 
+IL_06D1: ldfld 0x040001DE \x89\x8b.\x89\x8a::\x87\x90\x98
+IL_06D6: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_06DB: brtrue.s 1799
+IL_06DD: newobj 0x0A000126 0x1B00000F::.ctor
+IL_06E2: stloc.s local(0x000B)
+IL_06E4: ldloc.s local(0x000B)
+IL_06E6: ldloc.s local(0x0008)
+IL_06E8: callvirt 0x0A00012A 0x1B00000F::Add
+IL_06ED: ldc.i4 22
+IL_06F2: stloc local(0x0018)
+IL_06F6: br 1573
+IL_06FB: ldc.r8 1.0
+IL_0704: ldc.r8 1.0
+IL_070D: ldc.r8 1.0
+IL_0716: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_071B: stloc.s local(0x0016)
+IL_071D: ldc.i4 11
+IL_0722: stloc local(0x0018)
+IL_0726: ldc.r8 1.0
+IL_072F: ldc.r8 1.0
+IL_0738: ldc.r8 1.0
+IL_0741: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_0746: ldloc.s local(0x0016)
+IL_0748: ldloc.s local(0x0013)
+IL_074A: ldloc.s local(0x0015)
+IL_074C: callvirt 0x060007E7 \x8f\x8d.\x8f\x8c::\x8b\x88\x8e
+IL_0751: dup 
+IL_0752: ldloc.s local(0x0012)
+IL_0754: ldloc.s local(0x0014)
+IL_0756: callvirt 0x060007E7 \x8f\x8d.\x8f\x8c::\x8b\x88\x8e
+IL_075B: ldc.r8 1.0
+IL_0764: ldc.r8 1.0
+IL_076D: ldc.r8 1.0
+IL_0776: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_077B: stloc.s local(0x0017)
+IL_077D: ldloc.s local(0x0017)
+IL_077F: ldloc.s local(0x0009)
+IL_0781: ldloc.2 
+IL_0782: ldc.r8 3.141592653589793
+IL_078B: add 
+IL_078C: ldc.r8 15.0
+IL_0795: ldsfld 0x040001DA \x89\x8b.\x89\x8a::\x87\x90\x94
+IL_079A: mul 
+IL_079B: sub 
+IL_079C: callvirt 0x060007E8 \x8f\x8d.\x8f\x8c::\x8b\x88\x8f
+IL_07A1: ldloc.s local(0x0016)
+IL_07A3: ldloc.s local(0x0017)
+IL_07A5: callvirt 0x060007ED \x8f\x8d.\x8f\x8c::\x8b\x88\x93
+IL_07AA: stloc.s local(0x0015)
+IL_07AC: ldloc.s local(0x0017)
+IL_07AE: callvirt 0x060007ED \x8f\x8d.\x8f\x8c::\x8b\x88\x93
+IL_07B3: stloc.s local(0x0014)
+IL_07B5: ldc.i4 0
+IL_07BA: stloc local(0x0018)
+IL_07BE: newobj 0x0A000126 0x1B00000F::.ctor
+IL_07C3: stloc.s local(0x000B)
+IL_07C5: ldc.i4 39
+IL_07CA: stloc local(0x0018)
+IL_07CE: ldloc.s local(0x000B)
+IL_07D0: ldloc.s local(0x0009)
+IL_07D2: callvirt 0x0A00012A 0x1B00000F::Add
+IL_07D7: ldc.i4 32
+IL_07DC: stloc local(0x0018)
+IL_07E0: ldloc.s local(0x000B)
+IL_07E2: ldloc.s local(0x0014)
+IL_07E4: callvirt 0x0A00012A 0x1B00000F::Add
+IL_07E9: ldloc.s local(0x000A)
+IL_07EB: ldloc.s local(0x000B)
+IL_07ED: callvirt 0x0A0001D8 0x1B000001::Add
+IL_07F2: br 1769
+IL_07F7: ldc.i4 3704
+IL_07FC: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0801: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0806: stloc.0 
+IL_0807: ldloc.0 
+IL_0808: call 0x0A0000EB Autodesk.AutoCAD.Geometry.Point3d::get_Origin
+IL_080D: call 0x0A000060 Autodesk.AutoCAD.Geometry.Point3d::op_Equality
+IL_0812: brfalse 56
+IL_0817: br.s 2111
+IL_0819: ldc.i4 452
+IL_081E: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0823: brfalse 18
+IL_0828: ldc.i4 13
+IL_082D: stloc local(0x0018)
+IL_0831: br.s 2222
+IL_0833: ldc.i4 37
+IL_0838: stloc local(0x0018)
+IL_083C: br.s 2188
+IL_083E: ldc.i4 35
+IL_0843: stloc local(0x0018)
+IL_0847: br.s 2180
+IL_0849: ldloc.s local(0x000B)
+IL_084B: ldloc.s local(0x0013)
+IL_084D: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0852: ldc.i4 1
+IL_0857: stloc local(0x0018)
+IL_085B: ldloc.s local(0x000B)
+IL_085D: ldloc.s local(0x0015)
+IL_085F: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0864: ldc.i4 10
+IL_0869: stloc local(0x0018)
+IL_086D: ldloc.s local(0x000A)
+IL_086F: ldloc.s local(0x000B)
+IL_0871: callvirt 0x0A0001D8 0x1B000001::Add
+IL_0876: br.s 2205
+IL_0878: ldarg.0 
+IL_0879: ldc.i4.1 
+IL_087A: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_087F: ret 
+IL_0880: ldarg.0 
+IL_0881: ldc.i4.1 
+IL_0882: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0887: ldc.i4 38
+IL_088C: stloc local(0x0018)
+IL_0890: ret 
+IL_0891: call 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase
+IL_0896: ldloc.s local(0x000A)
+IL_0898: ldstr ''
+IL_089D: call 0x06000087 \x8c.\x8b::\x88\x8b
+IL_08A2: ret 
+

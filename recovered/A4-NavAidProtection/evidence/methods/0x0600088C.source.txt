@@ -1,0 +1,36 @@
+95243: 		internal static object _008B_0090_0089(object P_0)
+95244: 		{
+95245: 			try
+95246: 			{
+95247: 				if (File.Exists(((Assembly)P_0).Location))
+95248: 				{
+95249: 					return ((Assembly)P_0).Location;
+95250: 				}
+95251: 			}
+95252: 			catch
+95253: 			{
+95254: 			}
+95255: 			try
+95256: 			{
+95257: 				if (File.Exists(((Assembly)P_0).GetName().CodeBase.ToString().Replace("file:///", "")))
+95258: 				{
+95259: 					return ((Assembly)P_0).GetName().CodeBase.ToString().Replace("file:///", "");
+95260: 				}
+95261: 			}
+95262: 			catch
+95263: 			{
+95264: 			}
+95265: 			try
+95266: 			{
+95267: 				if (File.Exists(P_0.GetType().GetProperty("Location").GetValue(P_0, new object[0])
+95268: 					.ToString()))
+95269: 				{
+95270: 					return P_0.GetType().GetProperty("Location").GetValue(P_0, new object[0])
+95271: 						.ToString();
+95272: 				}
+95273: 			}
+95274: 			catch
+95275: 			{
+95276: 			}
+95277: 			return "";
+95278: 		}

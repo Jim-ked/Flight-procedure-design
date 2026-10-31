@@ -1,0 +1,12 @@
+# B1-FlyBy 真实事件索引
+
+L1处理代码/原事件元数据 + L2独立IL；原RVA可能是保护桩。源码编号摘录、完整事件/控件和直接调用CSV见evidence/。此表不代表运行调用图。
+
+| Control / Event | Handler | 原MethodDef / RVA | 处理MethodDef / RVA | Direct callees / API |
+|---|---|---|---|---|
+| button5 / Click | _0089_0089_0098 | 0x060004C5 / 0x79328 | 0x060004C4 / 0x4B9C | 0x060004C5 \x8b\x8f.\x8b\x8e::\x89\x89\x99 |
+| button4 / Click | _0089_0089_0097 | 0x060004C4 / 0x7930C | 0x060004C3 / 0x4B88 | 0x060004C5 \x8b\x8f.\x8b\x8e::\x89\x89\x99 |
+| button2 / Click | _0089_0089_0096 | 0x060004C3 / 0x792D0 | 0x060004C2 / 0x4B56 | 0x06000854 \x8f\x99.\x8f\x98::\x8b\x8c\x8a; 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager; 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument; 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor; 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage; 0x0A000086 System.Object::ToString |
+| button1 / Click | _0089_0089_0093 | 0x060004C0 / 0x78F24 | 0x060004BF / 0x62F9C | 0x06000113 \x9e.\x9d::\x8b\x8d; 0x060004BE \x8b\x8f.\x8b\x8e::\x89\x89\x92; 0x060004C6 \x8b\x8f.\x8b\x8e::\x89\x89\x9a; 0x060004CB \x8b\x8f.\x8b\x8e::\x88\x95; 0x060004CC \x8b\x8f.\x8b\x8e::\x88\x96; 0x060005A0 \x8c\x88.\x8c\x87::.ctor; 0x060005F8 \x8c\x9a.\x8c\x99::.ctor; 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e; 0x06000805 \x8f\x8f.\x8f\x8e::.ctor; 0x06000854 \x8f\x99.\x8f\x98::\x8b\x8c\x8a; 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a; 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d; 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager; 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument; 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y; 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X; 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase; 0x0A000086 System.Object::ToString; 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window; 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle; 0x0A00027A System.Windows.Forms.Control::set_Visible |
+| FormFlyBy / FormClosed | _0089_0089_0094 | 0x060004C1 / 0x79248 | 0x060004C0 / 0x4B3A | 0x060000F4 \x98.\x97::\x8a\x91; 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d |
+| FormFlyBy / Load | _0089_0089_0095 | 0x060004C2 / 0x7926C | 0x060004C1 / 0x631AC | 0x060000F6 \x98.\x97::\x8a\x93; 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d; 0x0A000030 System.Windows.Forms.MessageBox::Show; 0x0A000086 System.Object::ToString; 0x0A00008B System.String::Concat |

@@ -1,0 +1,157 @@
+24016: 		private void _0087_0091_008E(object P_0, EventArgs P_1)
+24017: 		{
+24018: 			int num = 12;
+24019: 			Editor editor = default(Editor);
+24020: 			Database workingDatabase = default(Database);
+24021: 			DocumentLock val = default(DocumentLock);
+24022: 			while (true /* original-file-bool-offset:464 */)
+24023: 			{
+24024: 				num = 3;
+24025: 				while (true)
+24026: 				{
+24027: 					IL_0105:
+24028: 					List<List<_008F_008E>> list = new List<List<_008F_008E>>();
+24029: 					_0087_0091_008F();
+24030: 					if (!_0087_0092_0097.Checked)
+24031: 					{
+24032: 						if (!_0087_0092_0096.Checked)
+24033: 						{
+24034: 							if (_0087_0092_009A.Checked)
+24035: 							{
+24036: 								goto IL_01d3;
+24037: 							}
+24038: 							if (_0087_0092_0095.Checked)
+24039: 							{
+24040: 								goto IL_01c5;
+24041: 							}
+24042: 							if (_0087_0092_0094.Checked)
+24043: 							{
+24044: 								num = 5;
+24045: 								goto IL_01ae;
+24046: 							}
+24047: 							if (_0087_0092_009B.Checked)
+24048: 							{
+24049: 								goto IL_00cc;
+24050: 							}
+24051: 						}
+24052: 						else
+24053: 						{
+24054: 							double num2 = _008F_008A._008B_0087_009E(_0087_0095_009D, "FAF定位容差输入有误" /* string-offset:3808 */);
+24055: 							list = new _008A_0099(_0087_0092_008E, _0087_0092_0091, _0087_0092_0090, num2)._0088_0095_0090;
+24056: 						}
+24057: 						goto IL_01f0;
+24058: 					}
+24059: 					_00870();
+24060: 					if (!_0087_009F())
+24061: 					{
+24062: 						num = 4;
+24063: 						goto IL_00cc;
+24064: 					}
+24065: 					num = 1;
+24066: 					goto IL_0186;
+24067: 					IL_01f0:
+24068: 					Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+24069: 					editor = Application.DocumentManager.MdiActiveDocument.Editor;
+24070: 					_008F_008E obj = new _008F_008E();
+24071: 					_008F_008E obj2 = new _008F_008E();
+24072: 					obj.X = _008F_008A._008B_0087_009D(_0087_0094_0099.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+24073: 					obj.Y = _008F_008A._008B_0087_009D(_0087_0094_0098.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+24074: 					obj.Z = _008F_008A._008B_0087_009D(_0087_0094_0097.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+24075: 					obj2.X = _008F_008A._008B_0087_009D(_0087_0095_008B.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+24076: 					obj2.Y = _008F_008A._008B_0087_009D(_0087_0095_0089.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+24077: 					obj2.Z = _008F_008A._008B_0087_009D(_0087_0095_0088.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+24078: 					_008E_0097 obj3 = _008D._0089_008F(obj, obj2);
+24079: 					list = _008F_0090._008B_008A_0094(list, new _008F_008E(0.0, 0.0), obj3._008A_009D_008A);
+24080: 					list = _008F_0090._008B_008A_0096(list, new _008F_008E(obj3.X, obj3.Y));
+24081: 					list = _008F_0090._008B_008A_009A(list);
+24082: 					workingDatabase = HostApplicationServices.WorkingDatabase;
+24083: 					val = mdiActiveDocument.LockDocument();
+24084: 					num = 0;
+24085: 					goto IL_0348;
+24086: 					IL_0186:
+24087: 					list = new _008A_009B(_0087_0092_008E, _0087_0092_0091, _0087_0092_0090)._0088_0096_008B;
+24088: 					num = 13;
+24089: 					goto IL_01f0;
+24090: 					IL_0348:
+24091: 					try
+24092: 					{
+24093: 						string text = _0087_0092_0088();
+24094: 						_008B._0088_008B(workingDatabase, list, text);
+24095: 					}
+24096: 					finally
+24097: 					{
+24098: 						((IDisposable)val)?.Dispose();
+24099: 					}
+24100: 					editor.WriteMessage("\n精密进近保护区绘制成功！" /* string-offset:3812 */);
+24101: 					num = 15;
+24102: 					return;
+24103: 					IL_00cc:
+24104: 					while (true)
+24105: 					{
+24106: 						list = _0087_0092_008F._0088_0094_0092;
+24107: 						num = 7;
+24108: 						if (!_0087_009F())
+24109: 						{
+24110: 							break;
+24111: 						}
+24112: 						while (true)
+24113: 						{
+24114: 							switch (num)
+24115: 							{
+24116: 							default:
+24117: 								num = 6;
+24118: 								if (!_00870())
+24119: 								{
+24120: 									continue;
+24121: 								}
+24122: 								goto end_IL_00cc;
+24123: 							case 4:
+24124: 							case 10:
+24125: 								break;
+24126: 							case 3:
+24127: 								goto IL_0105;
+24128: 							case 12:
+24129: 								goto end_IL_0105;
+24130: 							case 1:
+24131: 							case 2:
+24132: 								goto IL_0186;
+24133: 							case 5:
+24134: 								goto IL_01ae;
+24135: 							case 8:
+24136: 								goto IL_01c5;
+24137: 							case 14:
+24138: 								goto IL_01d3;
+24139: 							case 6:
+24140: 							case 7:
+24141: 							case 9:
+24142: 							case 11:
+24143: 							case 13:
+24144: 								goto end_IL_00cc;
+24145: 							case 0:
+24146: 								goto IL_0348;
+24147: 							case 15:
+24148: 								return;
+24149: 							}
+24150: 							break;
+24151: 						}
+24152: 						continue;
+24153: 						end_IL_00cc:
+24154: 						break;
+24155: 					}
+24156: 					goto IL_01f0;
+24157: 					IL_01ae:
+24158: 					list = _0087_0092_008F._0088_0094_0093;
+24159: 					num = 9;
+24160: 					goto IL_01f0;
+24161: 					IL_01d3:
+24162: 					list = new _0089_0096(_0087_0092_008E, _0087_0092_0091, _0087_0092_0090)._0088_0087_0099;
+24163: 					goto IL_01f0;
+24164: 					IL_01c5:
+24165: 					list = _0087_0092_008E._0088_0091_009D;
+24166: 					goto IL_01f0;
+24167: 					continue;
+24168: 					end_IL_0105:
+24169: 					break;
+24170: 				}
+24171: 			}
+24172: 		}

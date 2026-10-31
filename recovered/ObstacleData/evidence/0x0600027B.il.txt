@@ -1,0 +1,236 @@
+METHOD 0600027B \x89\x87.\x89\x86::\x87\x86\x9d RVA=25540 file=23740
+IL_0000: ldc.i4 360
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 750
+IL_000F: newobj 0x0A000136 System.Data.DataTable::.ctor
+IL_0014: stloc.0 
+IL_0015: ldloc.0 
+IL_0016: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_001B: ldc.i4 640
+IL_0020: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0025: nop 
+IL_0026: ldtoken 0x010000B8 System.String
+IL_002B: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_0030: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_0035: pop 
+IL_0036: ldloc.0 
+IL_0037: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_003C: ldc.i4 2728
+IL_0041: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0046: nop 
+IL_0047: ldtoken 0x010000B8 System.String
+IL_004C: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_0051: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_0056: pop 
+IL_0057: ldloc.0 
+IL_0058: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_005D: ldc.i4 2732
+IL_0062: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0067: nop 
+IL_0068: ldtoken 0x010000D2 System.Double
+IL_006D: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_0072: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_0077: pop 
+IL_0078: ldloc.0 
+IL_0079: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_007E: ldc.i4 2736
+IL_0083: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0088: nop 
+IL_0089: ldtoken 0x010000D2 System.Double
+IL_008E: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_0093: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_0098: pop 
+IL_0099: ldloc.0 
+IL_009A: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_009F: ldc.i4 2740
+IL_00A4: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00A9: nop 
+IL_00AA: ldtoken 0x010000D2 System.Double
+IL_00AF: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_00B4: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_00B9: pop 
+IL_00BA: ldloc.0 
+IL_00BB: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_00C0: ldc.i4 2744
+IL_00C5: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00CA: nop 
+IL_00CB: ldtoken 0x010000B8 System.String
+IL_00D0: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_00D5: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_00DA: pop 
+IL_00DB: ldloc.0 
+IL_00DC: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_00E1: ldc.i4 3004
+IL_00E6: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00EB: nop 
+IL_00EC: ldtoken 0x010000B8 System.String
+IL_00F1: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_00F6: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_00FB: pop 
+IL_00FC: ldloc.0 
+IL_00FD: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_0102: ldc.i4 2752
+IL_0107: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_010C: nop 
+IL_010D: ldtoken 0x010000B8 System.String
+IL_0112: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_0117: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_011C: pop 
+IL_011D: ldloc.0 
+IL_011E: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_0123: ldc.i4 2756
+IL_0128: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_012D: nop 
+IL_012E: ldtoken 0x010000D2 System.Double
+IL_0133: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_0138: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_013D: pop 
+IL_013E: ldloc.0 
+IL_013F: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_0144: ldc.i4 2760
+IL_0149: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_014E: nop 
+IL_014F: ldtoken 0x010000D2 System.Double
+IL_0154: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_0159: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_015E: pop 
+IL_015F: ldloc.0 
+IL_0160: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_0165: ldc.i4 2764
+IL_016A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_016F: nop 
+IL_0170: ldtoken 0x010000D2 System.Double
+IL_0175: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_017A: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_017F: pop 
+IL_0180: ldloc.0 
+IL_0181: callvirt 0x0A000137 System.Data.DataTable::get_Columns
+IL_0186: ldc.i4 3008
+IL_018B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0190: nop 
+IL_0191: ldtoken 0x010000D2 System.Double
+IL_0196: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_019B: callvirt 0x0A000138 System.Data.DataColumnCollection::Add
+IL_01A0: pop 
+IL_01A1: ldarg.1 
+IL_01A2: callvirt 0x0A0002C2 0x1B00002A::GetEnumerator
+IL_01A7: stloc.1 
+IL_01A8: nop 
+IL_01A9: br 687
+IL_01AE: ldloca.s local(0x0001)
+IL_01B0: call 0x0A0002C3 0x1B00002B::get_Current
+IL_01B5: stloc.2 
+IL_01B6: ldloc.0 
+IL_01B7: callvirt 0x0A000144 System.Data.DataTable::get_Rows
+IL_01BC: ldc.i4.s 12
+IL_01BE: newarr 0x01000001 System.Object
+IL_01C3: dup 
+IL_01C4: ldc.i4.0 
+IL_01C5: ldloc.2 
+IL_01C6: callvirt 0x060007F8 \x8f\x8f.\x8f\x8e::\x8b\x89\x92
+IL_01CB: stelem.ref 
+IL_01CC: dup 
+IL_01CD: ldc.i4.1 
+IL_01CE: ldloc.2 
+IL_01CF: callvirt 0x060007FA \x8f\x8f.\x8f\x8e::\x8b\x89\x94
+IL_01D4: stelem.ref 
+IL_01D5: dup 
+IL_01D6: ldc.i4.2 
+IL_01D7: ldloc.2 
+IL_01D8: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_01DD: ldc.i4.2 
+IL_01DE: call 0x0A0001C8 System.Math::Round
+IL_01E3: box 0x010000D2 System.Double
+IL_01E8: stelem.ref 
+IL_01E9: dup 
+IL_01EA: ldc.i4.3 
+IL_01EB: ldloc.2 
+IL_01EC: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_01F1: ldc.i4.2 
+IL_01F2: call 0x0A0001C8 System.Math::Round
+IL_01F7: box 0x010000D2 System.Double
+IL_01FC: stelem.ref 
+IL_01FD: dup 
+IL_01FE: ldc.i4.4 
+IL_01FF: ldloc.2 
+IL_0200: callvirt 0x06000800 \x8f\x8f.\x8f\x8e::\x8b\x89\x9a
+IL_0205: ldc.i4.2 
+IL_0206: call 0x0A0001C8 System.Math::Round
+IL_020B: box 0x010000D2 System.Double
+IL_0210: stelem.ref 
+IL_0211: dup 
+IL_0212: ldc.i4.5 
+IL_0213: ldloc.2 
+IL_0214: callvirt 0x060003EA \x8a\x8a.\x8a\x89::\x88\x8e\x95
+IL_0219: stelem.ref 
+IL_021A: dup 
+IL_021B: ldc.i4.6 
+IL_021C: ldloc.2 
+IL_021D: callvirt 0x060003F0 \x8a\x8a.\x8a\x89::\x88\x8e\x9e
+IL_0222: ldc.i4.2 
+IL_0223: call 0x0A0001C8 System.Math::Round
+IL_0228: box 0x010000D2 System.Double
+IL_022D: stelem.ref 
+IL_022E: dup 
+IL_022F: ldc.i4.7 
+IL_0230: ldloc.2 
+IL_0231: callvirt 0x060003EE \x8a\x8a.\x8a\x89::\x88\x8e\x9b
+IL_0236: ldc.i4.2 
+IL_0237: call 0x0A0001C8 System.Math::Round
+IL_023C: box 0x010000D2 System.Double
+IL_0241: stelem.ref 
+IL_0242: dup 
+IL_0243: ldc.i4.8 
+IL_0244: ldloc.2 
+IL_0245: callvirt 0x060003F2 \x8a\x8a.\x8a\x89::\x88\x8f\x88
+IL_024A: call 0x0A0001B8 System.Math::Round
+IL_024F: box 0x010000D2 System.Double
+IL_0254: stelem.ref 
+IL_0255: dup 
+IL_0256: ldc.i4.s 9
+IL_0258: ldloc.2 
+IL_0259: callvirt 0x060003F4 \x8a\x8a.\x8a\x89::\x88\x8f\x8b
+IL_025E: call 0x0A0001B8 System.Math::Round
+IL_0263: box 0x010000D2 System.Double
+IL_0268: stelem.ref 
+IL_0269: dup 
+IL_026A: ldc.i4.s 10
+IL_026C: ldloc.2 
+IL_026D: callvirt 0x060003F6 \x8a\x8a.\x8a\x89::\x88\x8f\x8e
+IL_0272: ldc.i4.2 
+IL_0273: call 0x0A0001C8 System.Math::Round
+IL_0278: box 0x010000D2 System.Double
+IL_027D: stelem.ref 
+IL_027E: dup 
+IL_027F: ldc.i4.s 11
+IL_0281: ldloc.2 
+IL_0282: callvirt 0x060003F8 \x8a\x8a.\x8a\x89::\x88\x8f\x91
+IL_0287: ldc.r8 100.0
+IL_0290: mul 
+IL_0291: ldc.i4.1 
+IL_0292: call 0x0A0001C8 System.Math::Round
+IL_0297: box 0x010000D2 System.Double
+IL_029C: stelem.ref 
+IL_029D: callvirt 0x0A0002BE System.Data.DataRowCollection::Add
+IL_02A2: pop 
+IL_02A3: ldloca.s local(0x0001)
+IL_02A5: call 0x0A0002C4 0x1B00002B::MoveNext
+IL_02AA: brtrue 442
+IL_02AF: leave.s 715
+IL_02B1: ldloca.s local(0x0001)
+IL_02B3: constrained. 0x1B00002B 
+IL_02B9: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_02BE: endfinally 
+IL_02BF: ldarg.0 
+IL_02C0: ldfld 0x04000159 \x89\x87.\x89\x86::\x87\x8a\x8c
+IL_02C5: ldloc.0 
+IL_02C6: callvirt 0x0A000147 System.Windows.Forms.DataGridView::set_DataSource
+IL_02CB: ldarg.0 
+IL_02CC: ldfld 0x04000159 \x89\x87.\x89\x86::\x87\x8a\x8c
+IL_02D1: callvirt 0x0A00014A System.Windows.Forms.DataGridView::get_Columns
+IL_02D6: ldc.i4.1 
+IL_02D7: callvirt 0x0A0002C0 System.Windows.Forms.DataGridViewColumnCollection::get_Item
+IL_02DC: ldc.i4.1 
+IL_02DD: callvirt 0x0A0002C1 System.Windows.Forms.DataGridViewBand::set_Frozen
+IL_02E2: ret 
+

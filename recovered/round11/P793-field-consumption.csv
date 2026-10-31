@@ -1,0 +1,7 @@
+﻿Field,Constructed/available in P793,Read by A7 business geometry,Read locations,Disposition
+Altitude,yes,yes,P1FB/P202 ldfld 0x0400074D,actual input
+TAS,yes,yes,P1FB/P202 ldfld 0x0400074F,actual input; delay
+Wind,yes,yes,P1FB/P202 ldfld 0x04000751,actual input; delay
+Rate,yes,no,P793 internal only,not boundary-driving
+Radius/WindRadius/Drift,yes,no,P793 internal; no A7 Spiral calls,not consumed
+IAS/bank/temperature,yes,no,model retained; no boundary read,not geometry-driving

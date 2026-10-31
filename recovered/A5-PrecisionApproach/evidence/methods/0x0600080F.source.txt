@@ -1,0 +1,6 @@
+84324: 		public static _008F_008E _008B_0089_008D(_008F_008E P_0, _008F_008E P_1, double P_2)
+84325: 		{
+84326: 			double num = _008B_0088_009E(P_0, P_1);
+84327: 			double num2 = Math.Atan2(P_1.Y - P_0.Y, P_1.X - P_0.X);
+84328: 			return _008B_0089_0088(P_0, _008B_0089_0087(num, num2 + P_2, P_1.Z));
+84329: 		}

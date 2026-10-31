@@ -1,0 +1,89 @@
+﻿recovery_class,field,type,role,basis
+PbnDepartureAltitudeTurn,_008A_0086_0096,double,initial full width=300,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0086_0097,double,early offset=600,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0086_0098,double,tan15,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0086_0099,double,TP outer width,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0086_009A,double,latest outer width,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0086_009B,double,TP distance,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0086_009C,double,latest reaction distance,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0086_009D,double,gradient before,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0086_009E,double,gradient after,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0086,bool,early flag,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0087,TemplatePoint,S,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0088,TemplatePoint,A; X6351.95/Z6531.95,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0089,TemplatePoint,B 13263.71,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_008A,TemplatePoint,K outer,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_008B,TemplatePoint,K primary,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_008C,TemplatePoint,C outer,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_008D,TemplatePoint,C inner1852,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_008E,TemplatePoint,early runwayLength offset,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_008F,TemplatePoint,DER,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0090,TemplatePoint,THR,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0091,TemplatePoint,TurnEnd,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0092,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0093,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0094,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0095,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0096,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0097,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0098,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_0099,List<List<TemplatePoint>>,all drawing lists,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_009A,LineCarrier,S-A line,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_009B,LineCarrier,K/B perpendicular line,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_009C,TurnInput,TurnInput,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_009D,List<TemplatePoint>,initial Hull,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0087_009E,List<TemplatePoint>,final evaluation Hull,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0088_0086,double,15degree radians,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureAltitudeTurn,_008A_0088_0087,double,90degree radians,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_008E,double,initial full width=300,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_008F,double,tan15,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0090,double,earliest width,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0091,double,navigation latest width,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0092,double,reaction latest width,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0093,double,earliest TP-1482,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0094,double,navigation latest TP+1482,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0095,double,reaction latest,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0096,double,gradient before,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0097,double,gradient after,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0098,TemplatePoint,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_0099,TemplatePoint,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_009A,TemplatePoint,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_009B,TemplatePoint,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_009C,TemplatePoint,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_009D,TemplatePoint,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0088_009E,TemplatePoint,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0086,TemplatePoint,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0087,TemplatePoint,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0088,TemplatePoint,DER,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0089,TemplatePoint,THR,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_008A,TemplatePoint,TurnEnd,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_008B,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_008C,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_008D,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_008E,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_008F,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0090,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0091,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0092,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0093,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0094,List<TemplatePoint>,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0095,List<List<TemplatePoint>>,drawing lists,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0096,LineCarrier,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0097,LineCarrier,"point-list/control state; see exact constructor writes, no normative role inferred",processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0098,TurnInput,TurnInput,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_0099,double,fixed1482; ATT source not spec-bound,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_009A,List<TemplatePoint>,initial evaluation Hull,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_009B,List<TemplatePoint>,final selected-subset Hull,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_009C,double,15degree radians,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_009D,double,90degree radians,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_0089_009E,List<TemplatePoint>,outer boundary sample list1,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_008A_0086,List<TemplatePoint>,outer boundary sample list2,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureFlyOver,_008A_008A_0087,List<List<TemplatePoint>>,post-turn lists,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureObstacle,_0088_008F_0094,string,area label,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureObstacle,_0088_008F_0095,string,secondary text getter0098,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureObstacle,_0088_008F_0096,double,d0,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureObstacle,_0088_008F_0097,double,dr,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureObstacle,_0088_008F_0098,double,MOC,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureObstacle,_0088_008F_0099,double,OCA,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureObstacle,_0088_008F_009A,double,PDA,processed source plus field-flow.csv; interpretation named only where assigned/read
+PbnDepartureObstacle,_0088_008F_009B,double,required gradient,processed source plus field-flow.csv; interpretation named only where assigned/read

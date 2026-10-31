@@ -1,0 +1,12 @@
+﻿Feature,HelpEvidence,UIEvidence,EventEvidence,BusinessMethod,Geometry,Evaluator,CADWriter,Reachable,Status,Evidence
+直线离场（独立构造）,Help未宣称独立工作流,无独立按钮；直线段在定高/定点内,P203内部二检；无独立Click,P1FB/P202直线边；P203二检,无独立保护区类,无独立evaluator,随模式输出,YES（依附模式链）,NOT_IMPLEMENTED_IN_BUILD,full Form source; area-stage-map.csv
+定高转弯,Help说明离场评价,tab2 TurnAlt/Grad/Early,P282/P283/P285/P286事件,P1FB/P1FD/P1FC,S-K、可选S-E、K-L镜像多边形,dr/do及MOC/OCA/PDA/required,2或3 Polyline+Group,YES,IMPLEMENTED,geometry-altitude-turn.md; events.csv
+定点转弯,Help说明定点/容差,TP/KK/C拾点文本,P287/P28A/P28B/P28D/P28C,P202/P204/P203,S-TP、E-TP、TP-L、L-D,直线/KK/C分支及二检,4 Polyline+Group,YES,IMPLEMENTED,point-turn.md; events.csv
+全向离场,Help说明全向,tab4 TNA/FinalAltitude/PDG,P290/P291/button14/button16,P420/P422/P421,S-D、D-K、K-F及外圆,三区+C1-C5,2或3 Polyline+Circle,YES,IMPLEMENTED,omnidirectional.md; events.csv
+电台上空转弯,未宣称,无VOR/NDB/DME/facility控件,A7闭包无导航设施分支,无A7 MethodDef/直接caller,无,无,无,NO,NOT_IMPLEMENTED_IN_BUILD,full Form source; reachability.json
+有/无航迹引导分支,未宣称,无guided/unguided/track控件,无状态分支；15/30度为几何常数,三模式无航迹输入,同一几何,无,同一writer,NO,NOT_IMPLEMENTED_IN_BUILD,full Form/business source
+导航设施参与,未宣称,无设施类型/位置/精度控件,无A7 facility reader,无直接reader/caller,无,无,无,NO,NOT_IMPLEMENTED_IN_BUILD,reachability.json; resolved-calls.csv
+TP/KK/C定位容差,定点输入说明,三个GetPoint及距离框,P287/P28A/P28B可达,P202/P203/P204,TP高度反算；KK/C距离,P203使用tp-k/E.X-X,定点4 Polyline,YES,IMPLEMENTED,cross-window-input-proof.md; point-turn.md
+风螺旋/Spiral86/88/P7AD,A7帮助未称风螺旋,仅TAS/Wind输入,238可达MethodDef不含Spiral86/88/P7AD,P793只供Altitude/TAS/Wind,直线/镜像边界,无螺旋调用,Polyline/Circle,NO,NOT_IMPLEMENTED_IN_BUILD,P793-field-consumption.csv; reachability.json
+障碍物评价公共链,Help描述障碍物评价,Screen→评价→Grid/Mark,P282/P28D/P291由Click可达,P1FC/P203/P421,局部XY+绝对Z,classifier→dr/do→MOC→OCA/PDA/required,表格/Mark,YES,IMPLEMENTED,obstacle-evaluation.md; events.csv
+直线段二次检查,未独立宣称,仅定点checkBoxSecChk,无独立Click；Checked传P203,P203内部同一行覆盖,DER→E直线,dr=tp-k; do=E.X-X; max75,无额外实体,YES（定点评价内部）,PARTIALLY_IMPLEMENTED,DepartureGeometry.Recovered.cs; Departure.Events.Recovered.cs

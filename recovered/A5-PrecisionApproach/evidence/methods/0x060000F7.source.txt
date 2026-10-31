@@ -1,0 +1,52 @@
+4338: 		private static Control _008A_0094(Control.ControlCollection P_0, string P_1)
+4339: 		{
+4340: 			Control control;
+4341: 			Control.ControlCollection controlCollection = default(Control.ControlCollection);
+4342: 			string[] array2 = default(string[]);
+4343: 			int num = default(int);
+4344: 			if (!false /* original-file-bool-offset:132 */)
+4345: 			{
+4346: 				string[] array = P_1.Split('.');
+4347: 				if (array.Length != 0)
+4348: 				{
+4349: 					control = null;
+4350: 					controlCollection = P_0;
+4351: 					_009B();
+4352: 					if (!_009C())
+4353: 					{
+4354: 						array2 = array;
+4355: 					}
+4356: 					num = 0;
+4357: 					goto IL_0047;
+4358: 				}
+4359: 				if (_009B())
+4360: 				{
+4361: 					return null;
+4362: 				}
+4363: 			}
+4364: 			goto IL_0072;
+4365: 			IL_0061:
+4366: 			num++;
+4367: 			goto IL_0047;
+4368: 			IL_0072:
+4369: 			string key = default(string);
+4370: 			Control[] array3 = controlCollection.Find(key, searchAllChildren: true);
+4371: 			if (array3.Length != 0)
+4372: 			{
+4373: 				control = array3[0];
+4374: 				controlCollection = control.Controls;
+4375: 				goto IL_0061;
+4376: 			}
+4377: 			return null;
+4378: 			IL_0047:
+4379: 			if (num < array2.Length)
+4380: 			{
+4381: 				key = array2[num];
+4382: 				goto IL_0072;
+4383: 			}
+4384: 			if (_009C())
+4385: 			{
+4386: 				goto IL_0061;
+4387: 			}
+4388: 			return control;
+4389: 		}

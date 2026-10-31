@@ -1,0 +1,85 @@
+METHOD 0600050B \x8b\x95.\x8b\x94::\x89\x8f\x95 RVA=6ABA0 file=68DA0
+IL_0000: ldc.i4 1028
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse 327
+IL_000F: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_0014: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_0019: brtrue 242
+IL_001E: pop 
+IL_001F: ldarg.0 
+IL_0020: call 0x060004FF \x8b\x95.\x8b\x94::\x89\x8f\x89
+IL_0025: stloc.1 
+IL_0026: ldarg.0 
+IL_0027: ldloc.1 
+IL_0028: call 0x06000502 \x8b\x95.\x8b\x94::\x89\x8f\x8c
+IL_002D: stloc.2 
+IL_002E: ldarg.0 
+IL_002F: call 0x0600050A \x8b\x95.\x8b\x94::\x89\x8f\x94
+IL_0034: ldarg.0 
+IL_0035: ldfld 0x0400056A \x8b\x95.\x8b\x94::\x89\x93\x99
+IL_003A: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_003F: ldc.i4 1984
+IL_0044: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0049: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_004E: ldc.r8 100.0
+IL_0057: div 
+IL_0058: stloc.3 
+IL_0059: ldarg.0 
+IL_005A: ldfld 0x04000580 \x8b\x95.\x8b\x94::\x89\x94\x96
+IL_005F: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0064: ldc.i4 1984
+IL_0069: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_006E: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_0073: ldc.r8 100.0
+IL_007C: div 
+IL_007D: stloc.s local(0x0004)
+IL_007F: ldarg.0 
+IL_0080: ldfld 0x04000567 \x8b\x95.\x8b\x94::\x89\x93\x96
+IL_0085: ldc.i4 1984
+IL_008A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_008F: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_0094: stloc.s local(0x0005)
+IL_0096: ldarg.0 
+IL_0097: ldfld 0x0400053E \x8b\x95.\x8b\x94::\x89\x92\x86
+IL_009C: ldarg.0 
+IL_009D: ldfld 0x0400053F \x8b\x95.\x8b\x94::\x89\x92\x87
+IL_00A2: ldarg.0 
+IL_00A3: ldfld 0x04000540 \x8b\x95.\x8b\x94::\x89\x92\x88
+IL_00A8: ldloc.s local(0x0005)
+IL_00AA: ldloc.2 
+IL_00AB: ldloc.3 
+IL_00AC: ldloc.s local(0x0004)
+IL_00AE: newobj 0x060005D3 \x8c\x94.\x8c\x93::.ctor
+IL_00B3: ldfld 0x04000693 \x8c\x94.\x8c\x93::\x8a\x89\x95
+IL_00B8: ldc.r8 0.0
+IL_00C1: ldc.r8 0.0
+IL_00CA: ldc.r8 0.0
+IL_00D3: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_00D8: ldloc.1 
+IL_00D9: ldfld 0x04000744 \x8e\x98.\x8e\x97::\x8a\x9d\x8a
+IL_00DE: call 0x06000821 \x8f\x91.\x8f\x90::\x8b\x8a\x94
+IL_00E3: stloc.0 
+IL_00E4: br.s 243
+IL_00E6: pop 
+IL_00E7: ldloc.0 
+IL_00E8: call 0x06000827 \x8f\x91.\x8f\x90::\x8b\x8a\x9a
+IL_00ED: ldloc.1 
+IL_00EE: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_00F3: ldloc.1 
+IL_00F4: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_00F9: ldc.r8 0.0
+IL_0102: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_0107: call 0x06000823 \x8f\x91.\x8f\x90::\x8b\x8a\x96
+IL_010C: stloc.0 
+IL_010D: call 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase
+IL_0112: ldloc.0 
+IL_0113: ldstr ''
+IL_0118: call 0x06000087 \x8c.\x8b::\x88\x8b
+IL_011D: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0122: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0127: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_012C: ldc.i4 3036
+IL_0131: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0136: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_013B: ret 
+

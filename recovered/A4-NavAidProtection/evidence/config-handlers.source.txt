@@ -1,0 +1,381 @@
+896: {
+897: 	[LicenseProvider(typeof(_0091_008B))]
+898: 	public class _0087_008E : _0087_0096
+899: 	{
+900: 		public bool y_0091(Control P_0)
+901: 		{
+902: 			return P_0 is _0087_008C;
+903: 		}
+904: 
+905: 		public string GetValue(Control P_0)
+906: 		{
+907: 			if (!((_0087_008C)P_0)._008D_0089)
+908: 			{
+909: 				return "False" /* string-offset:1036 */;
+910: 			}
+911: 			return "True" /* string-offset:1040 */;
+912: 		}
+913: 
+914: 		public void SetValue(Control P_0, string P_1)
+915: 		{
+916: 			((_0087_008C)P_0)._008D_0089 = P_1 == "True" /* string-offset:1040 */;
+917: 		}
+918: 
+919: 		static _0087_008E()
+920: 		{
+921: 			LicenseManager.Validate(typeof(_0087_008E));
+922: 		}
+923: 
+924: 		internal static bool b()
+925: 		{
+926: 			return true;
+927: 		}
+928: 
+929: 		internal static bool c()
+930: 		{
+931: 			return false;
+932: 		}
+933: 	}
+934: }
+935: namespace _0087_0091
+936: {
+937: 	[LicenseProvider(typeof(_0091_008B))]
+938: 	public class _0087_0090 : _0087_0096
+939: 	{
+940: 		public bool y_0091(Control P_0)
+941: 		{
+942: 			return P_0 is CheckBox;
+943: 		}
+944: 
+945: 		public string GetValue(Control P_0)
+946: 		{
+947: 			if (!((CheckBox)P_0).Checked)
+948: 			{
+949: 				return "False" /* string-offset:1036 */;
+950: 			}
+951: 			return "True" /* string-offset:1040 */;
+952: 		}
+953: 
+954: 		public void SetValue(Control P_0, string P_1)
+955: 		{
+956: 			((CheckBox)P_0).Checked = P_1 == "True" /* string-offset:1040 */;
+957: 		}
+958: 
+959: 		static _0087_0090()
+960: 		{
+961: 			LicenseManager.Validate(typeof(_0087_0090));
+962: 		}
+963: 
+964: 		internal static bool d()
+965: 		{
+966: 			return true;
+967: 		}
+968: 
+969: 		internal static bool e()
+970: 		{
+971: 			return false;
+972: 		}
+973: 	}
+974: }
+975: namespace _0087_0093
+976: {
+977: 	[LicenseProvider(typeof(_0091_008B))]
+978: 	public class _0087_0092 : _0087_0096
+979: 	{
+980: 		public bool y_0091(Control P_0)
+981: 		{
+982: 			return P_0 is ComboBox;
+983: 		}
+984: 
+985: 		public string GetValue(Control P_0)
+986: 		{
+987: 			return ((ComboBox)P_0).SelectedIndex.ToString();
+988: 		}
+989: 
+990: 		public void SetValue(Control P_0, string P_1)
+991: 		{
+992: 			f();
+993: 			ComboBox comboBox = default(ComboBox);
+994: 			if (!g())
+995: 			{
+996: 				comboBox = (ComboBox)P_0;
+997: 			}
+998: 			else if (g())
+999: 			{
+1000: 				return;
+1001: 			}
+1002: 			if (P_1 == "-1" /* string-offset:1044 */)
+1003: 			{
+1004: 				if (!g())
+1005: 				{
+1006: 					comboBox.SelectedIndex = 0;
+1007: 				}
+1008: 			}
+1009: 			else
+1010: 			{
+1011: 				comboBox.SelectedIndex = int.Parse(P_1);
+1012: 			}
+1013: 		}
+1014: 
+1015: 		static _0087_0092()
+1016: 		{
+1017: 			LicenseManager.Validate(typeof(_0087_0092));
+1018: 		}
+1019: 
+1020: 		internal static bool f()
+1021: 		{
+1022: 			return true;
+1023: 		}
+1024: 
+1025: 		internal static bool g()
+1026: 		{
+1027: 			return false;
+1028: 		}
+1029: 	}
+1030: }
+1031: namespace _0087_0095
+1032: {
+1033: 	[LicenseProvider(typeof(_0091_008B))]
+1034: 	public class _0087_0094
+1035: 	{
+1036: 		[Serializable]
+1037: 		[LicenseProvider(typeof(_0091_008B))]
+1038: 		[CompilerGenerated]
+1039: 		private sealed class _0090_0088
+1040: 		{
+1041: 			public static readonly _0090_0088 _003C_003E9;
+1042: 
+1043: 			static _0090_0088()
+1044: 			{
+1045: 				LicenseManager.Validate(typeof(_0090_0088));
+1046: 				_003C_003E9 = new _0090_0088();
+1047: 			}
+1048: 
+1049: 			internal _0087_0094 _008B_008D_009D()
+1050: 			{
+1051: 				return new _0087_0094();
+1052: 			}
+1053: 
+1054: 			internal static bool _008A_009B()
+1055: 			{
+1056: 				return true;
+1057: 			}
+1058: 
+1059: 			internal static bool _008A_009C()
+1060: 			{
+1061: 				return false;
+1062: 			}
+1063: 		}
+1064: 
+1065: 		[CompilerGenerated]
+1066: 		[LicenseProvider(typeof(_0091_008B))]
+1067: 		private sealed class _0090_0089
+1068: 		{
+1069: 			public Control control;
+1070: 
+1071: 			internal bool _008B_008D_009E(_0087_0096 h)
+1072: 			{
+1073: 				return h.y_0091(control);
+1074: 			}
+1075: 
+1076: 			static _0090_0089()
+1077: 			{
+1078: 				LicenseManager.Validate(typeof(_0090_0089));
+1079: 			}
+1080: 
+1081: 			internal static bool _008A_009D()
+1082: 			{
+1083: 				return true;
+1084: 			}
+1085: 
+1086: 			internal static bool _008A_009E()
+1087: 			{
+1088: 				return false;
+1089: 			}
+1090: 		}
+1091: 
+1092: 		private readonly List<_0087_0096> _008D_0094;
+1093: 
+1094: 		private static readonly Lazy<_0087_0094> _008D_0095;
+1095: 
+1096: 		[SpecialName]
+1097: 		public static _0087_0094 _008D_0092()
+1098: 		{
+1099: 			return _008D_0095.Value;
+1100: 		}
+1101: 
+1102: 		private _0087_0094()
+1103: 		{
+1104: 			_008D_0094 = new List<_0087_0096>
+1105: 			{
+1106: 				new _0087_009C(),
+1107: 				new _0087_009A(),
+1108: 				new _0088_0087(),
+1109: 				new _0087_0092(),
+1110: 				new _0087_0090(),
+1111: 				new _0087_0098(),
+1112: 				new _0087_008E()
+1113: 			};
+1114: 		}
+1115: 
+1116: 		public void _008D_008F(_0087_0096 P_0)
+1117: 		{
+1118: 			if (P_0 == null)
+1119: 			{
+1120: 				throw new ArgumentNullException("handler" /* string-offset:1048 */);
+1121: 			}
+1122: 			_008D_0094.Add(P_0);
+1123: 		}
+1124: 
+1125: 		public _0087_0096 _008D_0090(Control P_0)
+1126: 		{
+1127: 			return _008D_0094.FirstOrDefault((_0087_0096 h) => h.y_0091(P_0));
+1128: 		}
+1129: 
+1130: 		public bool _008D_0091(Control P_0, out _0087_0096 P_1)
+1131: 		{
+1132: 			P_1 = _008D_0090(P_0);
+1133: 			return P_1 != null;
+1134: 		}
+1135: 
+1136: 		static _0087_0094()
+1137: 		{
+1138: 			LicenseManager.Validate(typeof(_0087_0094));
+1139: 			_008D_0095 = new Lazy<_0087_0094>(() => new _0087_0094());
+1140: 		}
+1141: 
+1142: 		internal static bool h()
+1143: 		{
+1144: 			return true;
+1145: 		}
+1146: 
+1147: 		internal static bool i()
+1148: 		{
+1149: 			return false;
+1150: 		}
+1151: 	}
+1152: }
+1153: namespace _0087_0097
+1154: {
+1155: 	[LicenseProvider(typeof(_0091_008B))]
+1156: 	public interface _0087_0096
+1157: 	{
+1158: 		bool y_0091(Control P_0);
+1159: 
+1160: 		string GetValue(Control P_0);
+1161: 
+1162: 		void SetValue(Control P_0, string P_1);
+1163: 	}
+1164: }
+1165: namespace _0087_0099
+1166: {
+1167: 	[LicenseProvider(typeof(_0091_008B))]
+1168: 	public class _0087_0098 : _0087_0096
+1169: 	{
+1170: 		public bool y_0091(Control P_0)
+1171: 		{
+1172: 			return P_0 is RadioButton;
+1173: 		}
+1174: 
+1175: 		public string GetValue(Control P_0)
+1176: 		{
+1177: 			if (!((RadioButton)P_0).Checked)
+1178: 			{
+1179: 				return "False" /* string-offset:1036 */;
+1180: 			}
+1181: 			return "True" /* string-offset:1040 */;
+1182: 		}
+1183: 
+1184: 		public void SetValue(Control P_0, string P_1)
+1185: 		{
+1186: 			((RadioButton)P_0).Checked = P_1 == "True" /* string-offset:1040 */;
+1187: 		}
+1188: 
+1189: 		static _0087_0098()
+1190: 		{
+1191: 			LicenseManager.Validate(typeof(_0087_0098));
+1192: 		}
+1193: 
+1194: 		internal static bool l()
+1195: 		{
+1196: 			return true;
+1197: 		}
+1198: 
+1199: 		internal static bool m()
+1200: 		{
+1201: 			return false;
+1202: 		}
+1203: 	}
+1204: }
+1205: namespace _0087_009B
+1206: {
+1207: 	[LicenseProvider(typeof(_0091_008B))]
+1208: 	public class _0087_009A : _0087_0096
+1209: 	{
+1210: 		public bool y_0091(Control P_0)
+1211: 		{
+1212: 			return P_0 is RichTextBox;
+1213: 		}
+1214: 
+1215: 		public string GetValue(Control P_0)
+1216: 		{
+1217: 			return ((RichTextBox)P_0).Text;
+1218: 		}
+1219: 
+1220: 		public void SetValue(Control P_0, string P_1)
+1221: 		{
+1222: 			((RichTextBox)P_0).Text = P_1;
+1223: 		}
+1224: 
+1225: 		static _0087_009A()
+1226: 		{
+1227: 			LicenseManager.Validate(typeof(_0087_009A));
+1228: 		}
+1229: 
+1230: 		internal static bool n()
+1231: 		{
+1232: 			return true;
+1233: 		}
+1234: 
+1235: 		internal static bool o()
+1236: 		{
+1237: 			return false;
+1238: 		}
+1239: 	}
+1240: }
+1241: namespace _0087_009D
+1242: {
+1243: 	[LicenseProvider(typeof(_0091_008B))]
+1244: 	public class _0087_009C : _0087_0096
+1245: 	{
+1246: 		public bool y_0091(Control P_0)
+1247: 		{
+1248: 			return P_0 is TextBox;
+1249: 		}
+1250: 
+1251: 		public string GetValue(Control P_0)
+1252: 		{
+1253: 			return ((TextBox)P_0).Text;
+1254: 		}
+1255: 
+1256: 		public void SetValue(Control P_0, string P_1)
+1257: 		{
+1258: 			((TextBox)P_0).Text = P_1;
+1259: 		}
+1260: 
+1261: 		static _0087_009C()
+1262: 		{
+1263: 			LicenseManager.Validate(typeof(_0087_009C));
+1264: 		}
+1265: 
+1266: 		internal static bool p()
+1267: 		{
+1268: 			return true;
+1269: 		}
+1270: 
+1271: 		internal static bool q()
+1272: 		{
+1273: 			return false;
+1274: 		}
+1275: 	}
+1276: }

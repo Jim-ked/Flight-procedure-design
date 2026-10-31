@@ -1,0 +1,41 @@
+METHOD 06000650 \x8d\x8d.\x8d\x8c::\x8a\x90\x90 RVA=885E4 file=867E4
+IL_0000: ldarg.0 
+IL_0001: call 0x0A000134 System.String::IsNullOrEmpty
+IL_0006: brfalse.s 26
+IL_0008: newobj 0x06000656 \x8d\x8d.\x8d\x8c::.ctor
+IL_000D: ret 
+IL_000E: nop 
+IL_000F: nop 
+IL_0010: ldtoken 0x02000072 \x8d\x8d.\x8d\x8c
+IL_0015: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_001A: newobj 0x0A0003A0 System.Runtime.Serialization.Json.DataContractJsonSerializer::.ctor
+IL_001F: stloc.0 
+IL_0020: call 0x0A000306 System.Text.Encoding::get_UTF8
+IL_0025: ldarg.0 
+IL_0026: callvirt 0x0A00036B System.Text.Encoding::GetBytes
+IL_002B: newobj 0x0A0003A5 System.IO.MemoryStream::.ctor
+IL_0030: stloc.1 
+IL_0031: ldloc.0 
+IL_0032: ldloc.1 
+IL_0033: callvirt 0x0A0003A6 System.Runtime.Serialization.XmlObjectSerializer::ReadObject
+IL_0038: castclass 0x02000072 \x8d\x8d.\x8d\x8c
+IL_003D: stloc.2 
+IL_003E: leave.s 121
+IL_0040: ldloc.1 
+IL_0041: brfalse.s 85
+IL_0043: ldloc.1 
+IL_0044: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0049: endfinally 
+IL_004A: stloc.3 
+IL_004B: ldc.i4 6776
+IL_0050: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0055: ldloc.3 
+IL_0056: callvirt 0x0A000055 System.Exception::get_Message
+IL_005B: call 0x0A00008B System.String::Concat
+IL_0060: call 0x0A0000B6 Autodesk.AutoCAD.ApplicationServices.Core.Application::ShowAlertDialog
+IL_0065: newobj 0x06000656 \x8d\x8d.\x8d\x8c::.ctor
+IL_006A: stloc.2 
+IL_006B: leave.s 121
+IL_006D: ldloc.2 
+IL_006E: ret 
+

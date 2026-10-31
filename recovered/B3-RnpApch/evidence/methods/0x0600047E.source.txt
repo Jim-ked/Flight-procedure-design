@@ -1,0 +1,18 @@
+47249: 		private void _0088_009A_009D(object P_0, EventArgs P_1)
+47250: 		{
+47251: 			_ = 0;
+47252: 			byte[] bytes = default(byte[]);
+47253: 			if (_0088_0093())
+47254: 			{
+47255: 				OpenFileDialog openFileDialog = new OpenFileDialog();
+47256: 				openFileDialog.Filter = "RNP APCH程序文件|*.rnp" /* string-offset:5692 */;
+47257: 				openFileDialog.Title = "打开RNP APCH程序文件" /* string-offset:716 */;
+47258: 				if (openFileDialog.ShowDialog() != DialogResult.OK)
+47259: 				{
+47260: 					return;
+47261: 				}
+47262: 				bytes = File.ReadAllBytes(openFileDialog.FileName);
+47263: 			}
+47264: 			string text = Encoding.UTF8.GetString(bytes);
+47265: 			_0097._008A_009A(_0088_009E_008A.Controls, text, "FormApvEvl" /* string-offset:408 */);
+47266: 		}

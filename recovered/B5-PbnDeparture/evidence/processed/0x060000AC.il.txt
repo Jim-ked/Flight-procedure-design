@@ -1,0 +1,60 @@
+METHOD 060000AC \x8e.\x8d::\x89\x8f RVA=A650 file=8850
+IL_0000: newobj 0x06000785 \x8e\x98.\x8e\x97::.ctor
+IL_0005: dup 
+IL_0006: ldarg.0 
+IL_0007: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_000C: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_0011: dup 
+IL_0012: ldarg.0 
+IL_0013: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0018: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_001D: dup 
+IL_001E: ldarg.0 
+IL_001F: callvirt 0x06000800 \x8f\x8f.\x8f\x8e::\x8b\x89\x9a
+IL_0024: callvirt 0x06000801 \x8f\x8f.\x8f\x8e::\x8b\x89\x9b
+IL_0029: dup 
+IL_002A: ldarg.1 
+IL_002B: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0030: ldarg.0 
+IL_0031: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0036: sub 
+IL_0037: ldc.r8 2.0
+IL_0040: call 0x0A000112 System.Math::Pow
+IL_0045: ldarg.1 
+IL_0046: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_004B: ldarg.0 
+IL_004C: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0051: sub 
+IL_0052: ldc.r8 2.0
+IL_005B: call 0x0A000112 System.Math::Pow
+IL_0060: add 
+IL_0061: call 0x0A00002D System.Math::Sqrt
+IL_0066: stfld 0x04000742 \x8e\x98.\x8e\x97::\x8a\x9d\x88
+IL_006B: dup 
+IL_006C: ldarg.1 
+IL_006D: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0072: ldarg.0 
+IL_0073: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0078: sub 
+IL_0079: ldarg.1 
+IL_007A: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_007F: ldarg.0 
+IL_0080: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0085: sub 
+IL_0086: call 0x0A000063 System.Math::Atan2
+IL_008B: stfld 0x04000743 \x8e\x98.\x8e\x97::\x8a\x9d\x89
+IL_0090: dup 
+IL_0091: ldarg.0 
+IL_0092: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0097: ldarg.1 
+IL_0098: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_009D: sub 
+IL_009E: ldarg.0 
+IL_009F: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_00A4: ldarg.1 
+IL_00A5: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_00AA: sub 
+IL_00AB: call 0x0A000063 System.Math::Atan2
+IL_00B0: stfld 0x04000744 \x8e\x98.\x8e\x97::\x8a\x9d\x8a
+IL_00B5: ret 
+

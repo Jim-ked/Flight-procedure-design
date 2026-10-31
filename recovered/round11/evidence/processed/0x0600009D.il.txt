@@ -1,0 +1,122 @@
+METHOD 0600009D \x8c.\x8b::\x89\x88 RVA=9F14 file=8114
+IL_0000: call 0x060000A5 \x8c.\x8b::\x8f
+IL_0005: call 0x060000A6 \x8c.\x8b::\x90
+IL_000A: brtrue 354
+IL_000F: pop 
+IL_0010: ldc.i4 64
+IL_0015: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_001A: brtrue 355
+IL_001F: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0024: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0029: stloc.2 
+IL_002A: call 0x0A000036 System.Reflection.Assembly::GetExecutingAssembly
+IL_002F: callvirt 0x0A000037 System.Reflection.Assembly::get_Location
+IL_0034: call 0x0A000038 System.IO.Path::GetDirectoryName
+IL_0039: ldc.i4 588
+IL_003E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0043: call 0x0A0000FD System.IO.Directory::GetFiles
+IL_0048: stloc.0 
+IL_0049: ldloc.0 
+IL_004A: ldlen 
+IL_004B: brfalse 355
+IL_0050: ldloc.0 
+IL_0051: ldc.i4.0 
+IL_0052: ldelem.ref 
+IL_0053: stloc.1 
+IL_0054: ldloc.1 
+IL_0055: call 0x0A000098 System.IO.File::Exists
+IL_005A: brtrue.s 105
+IL_005C: ret 
+IL_005D: nop 
+IL_005E: ldc.i4.0 
+IL_005F: ldc.i4.1 
+IL_0060: newobj 0x0A0000FE Autodesk.AutoCAD.DatabaseServices.Database::.ctor
+IL_0065: stloc.3 
+IL_0066: ldloc.3 
+IL_0067: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_006C: stloc.s local(0x0004)
+IL_006E: ldloc.3 
+IL_006F: ldloc.1 
+IL_0070: ldc.i4.1 
+IL_0071: ldc.i4.1 
+IL_0072: ldnull 
+IL_0073: callvirt 0x0A0000FF Autodesk.AutoCAD.DatabaseServices.Database::ReadDwgFile
+IL_0078: newobj 0x0A000100 Autodesk.AutoCAD.DatabaseServices.ObjectIdCollection::.ctor
+IL_007D: stloc.s local(0x0005)
+IL_007F: ldloc.2 
+IL_0080: callvirt 0x0A00009A Autodesk.AutoCAD.ApplicationServices.Document::LockDocument
+IL_0085: stloc.s local(0x0006)
+IL_0087: ldloc.s local(0x0004)
+IL_0089: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_008E: stloc.s local(0x0007)
+IL_0090: ldloc.s local(0x0004)
+IL_0092: ldloc.3 
+IL_0093: callvirt 0x0A0000AE Autodesk.AutoCAD.DatabaseServices.Database::get_BlockTableId
+IL_0098: ldc.i4.0 
+IL_0099: ldc.i4.0 
+IL_009A: callvirt 0x0A000101 Autodesk.AutoCAD.DatabaseServices.TransactionManager::GetObject
+IL_009F: castclass 0x010000E2 Autodesk.AutoCAD.DatabaseServices.BlockTable
+IL_00A4: stloc.s local(0x0008)
+IL_00A6: ldc.i4.0 
+IL_00A7: call 0x060000A5 \x8c.\x8b::\x8f
+IL_00AC: brfalse.s 230
+IL_00AE: pop 
+IL_00AF: ldloc.s local(0x0008)
+IL_00B1: ldarg.0 
+IL_00B2: callvirt 0x0A0000A8 Autodesk.AutoCAD.DatabaseServices.SymbolTable::Has
+IL_00B7: brtrue.s 231
+IL_00B9: ldc.i4 592
+IL_00BE: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00C3: ldarg.0 
+IL_00C4: ldc.i4 596
+IL_00C9: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00CE: call 0x0A00003C System.String::Concat
+IL_00D3: call 0x0A0000B6 Autodesk.AutoCAD.ApplicationServices.Core.Application::ShowAlertDialog
+IL_00D8: br.s 247
+IL_00DA: pop 
+IL_00DB: ldloc.s local(0x0005)
+IL_00DD: ldloc.s local(0x0008)
+IL_00DF: ldarg.0 
+IL_00E0: callvirt 0x0A0000B0 Autodesk.AutoCAD.DatabaseServices.SymbolTable::get_Item
+IL_00E5: callvirt 0x0A000102 Autodesk.AutoCAD.DatabaseServices.ObjectIdCollection::Add
+IL_00EA: pop 
+IL_00EB: ldloc.s local(0x0008)
+IL_00ED: callvirt 0x0A000103 Autodesk.AutoCAD.Runtime.DisposableWrapper::Dispose
+IL_00F2: leave.s 268
+IL_00F4: ldloc.s local(0x0007)
+IL_00F6: brfalse.s 267
+IL_00F8: ldloc.s local(0x0007)
+IL_00FA: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00FF: endfinally 
+IL_0100: newobj 0x0A000104 Autodesk.AutoCAD.DatabaseServices.IdMapping::.ctor
+IL_0105: stloc.s local(0x0009)
+IL_0107: call 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase
+IL_010C: stloc.s local(0x000A)
+IL_010E: ldloc.3 
+IL_010F: ldloc.s local(0x0005)
+IL_0111: ldloc.s local(0x000A)
+IL_0113: callvirt 0x0A0000AE Autodesk.AutoCAD.DatabaseServices.Database::get_BlockTableId
+IL_0118: ldloc.s local(0x0009)
+IL_011A: ldc.i4.2 
+IL_011B: ldc.i4.0 
+IL_011C: callvirt 0x0A000105 Autodesk.AutoCAD.DatabaseServices.Database::WblockCloneObjects
+IL_0121: ldloc.3 
+IL_0122: callvirt 0x0A000103 Autodesk.AutoCAD.Runtime.DisposableWrapper::Dispose
+IL_0127: leave.s 321
+IL_0129: ldloc.s local(0x0006)
+IL_012B: brfalse.s 320
+IL_012D: ldloc.s local(0x0006)
+IL_012F: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0134: endfinally 
+IL_0135: leave.s 355
+IL_0137: stloc.s local(0x000B)
+IL_0139: ldc.i4 600
+IL_013E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0143: ldloc.s local(0x000B)
+IL_0145: callvirt 0x0A000055 System.Exception::get_Message
+IL_014A: call 0x0A00008B System.String::Concat
+IL_014F: call 0x0A0000B6 Autodesk.AutoCAD.ApplicationServices.Core.Application::ShowAlertDialog
+IL_0154: leave.s 355
+IL_0156: pop 
+IL_0157: ret 
+

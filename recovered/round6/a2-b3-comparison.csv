@@ -1,0 +1,9 @@
+﻿item,B3,other,classification,evidence
+NPA SOC,P48A Round((TAS+w)*t/3.6+444),A2 P233 (TAS+w)*t/3.6; displayRound,Different formula,No B3 direct call to P233; +444 retained
+PA SOC,P470/P5ED do not read DH/HLcor; no PA SOC helper,A2 P237 Round((DH-HLcor)/tanGP+Xz); HL0->-1,UI-only similarity,P470 input IL; no P237 call
+HL display,"P482 Round(sum,2); orphan","A2 P239 Round(Round(sum,2),1)",Copied formula with different rounding,Different MethodDefs; source P482/A2 formulas.md
+HL business,P5F2 table + elevation + GP*.05,A2 P238/P239 table + elevation display,Different formula,No direct call; APV adds GP branch
+Xz,P5F1 category constant,A2 editable Xz in P237,Different formula,No direct helper; comboXz not used by B3 factory
+TP,P489 Round(100*(end-start)/percent),A2 P23B same arithmetic (raw return/display separated),Copied formula,Different MethodDefs; no P23B call
+C,No B3 C reader/geometry,A2 P241 C calculation,UI-only similarity (no B3 counterpart),B3 core call index contains no P241 edge
+turn parameter,P48A new P793; consumes TAS only,A2 P793 via turn-input reader P854,Same MethodDef,Original P794/0xC3820 processed P793; downstream not same business

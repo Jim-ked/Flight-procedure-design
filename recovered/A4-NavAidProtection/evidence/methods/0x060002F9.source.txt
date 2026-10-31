@@ -1,0 +1,369 @@
+22708: 		private void _0087_0090_008F(object P_0, EventArgs P_1)
+22709: 		{
+22710: 			//IL_0801: Unknown result type (might be due to invalid IL or missing references)
+22711: 			//IL_0806: Unknown result type (might be due to invalid IL or missing references)
+22712: 			//IL_0807: Unknown result type (might be due to invalid IL or missing references)
+22713: 			//IL_0808: Unknown result type (might be due to invalid IL or missing references)
+22714: 			//IL_0036: Unknown result type (might be due to invalid IL or missing references)
+22715: 			//IL_003b: Unknown result type (might be due to invalid IL or missing references)
+22716: 			//IL_0517: Unknown result type (might be due to invalid IL or missing references)
+22717: 			//IL_0518: Unknown result type (might be due to invalid IL or missing references)
+22718: 			//IL_017a: Unknown result type (might be due to invalid IL or missing references)
+22719: 			//IL_018b: Unknown result type (might be due to invalid IL or missing references)
+22720: 			_008F_008E obj = default(_008F_008E);
+22721: 			_008F_008E obj2 = default(_008F_008E);
+22722: 			_008F_008E obj3 = default(_008F_008E);
+22723: 			List<List<_008F_008E>> list2 = default(List<List<_008F_008E>>);
+22724: 			List<_008F_008E> list = default(List<_008F_008E>);
+22725: 			_008F_008E obj4 = default(_008F_008E);
+22726: 			_008F_008E obj5 = default(_008F_008E);
+22727: 			_008F_008E obj6 = default(_008F_008E);
+22728: 			double num2 = default(double);
+22729: 			double num3 = default(double);
+22730: 			_008F_008E obj7 = default(_008F_008E);
+22731: 			double num4 = default(double);
+22732: 			double num5 = default(double);
+22733: 			double a = default(double);
+22734: 			string[] array = default(string[]);
+22735: 			_008F_008E obj8 = default(_008F_008E);
+22736: 			_008F_008E obj9 = default(_008F_008E);
+22737: 			_008F_008E obj10 = default(_008F_008E);
+22738: 			_008F_008C obj11 = default(_008F_008C);
+22739: 			_008F_008C obj15 = default(_008F_008C);
+22740: 			int num;
+22741: 			while (!false /* original-file-bool-offset:452 */)
+22742: 			{
+22743: 				_0087_0090_008C(Application.DocumentManager.MdiActiveDocument.Window.Handle);
+22744: 				base.Visible = false;
+22745: 				while (true)
+22746: 				{
+22747: 					Point3d val = _009D._008B_008D("请输入保护区起点" /* string-offset:3704 */);
+22748: 					Point3d val2;
+22749: 					if (!(val == Point3d.Origin))
+22750: 					{
+22751: 						val2 = _009D._008B_008D("请指定保护区终点" /* string-offset:3708 */);
+22752: 						_0087_009E();
+22753: 						if (_0087_009D())
+22754: 						{
+22755: 							num = 26;
+22756: 							goto IL_0517;
+22757: 						}
+22758: 						num = 29;
+22759: 						if (!_0087_009E())
+22760: 						{
+22761: 							goto IL_0557;
+22762: 						}
+22763: 						goto IL_07e0;
+22764: 					}
+22765: 					num = 37;
+22766: 					goto IL_0880;
+22767: 					IL_0451:
+22768: 					list = new List<_008F_008E>();
+22769: 					list.Add(obj);
+22770: 					list.Add(obj2);
+22771: 					list.Add(obj3);
+22772: 					list2.Add(list);
+22773: 					goto IL_047c;
+22774: 					IL_047c:
+22775: 					list = new List<_008F_008E>();
+22776: 					list.Add(obj4);
+22777: 					num = 40;
+22778: 					goto IL_0495;
+22779: 					IL_0495:
+22780: 					list.Add(obj5);
+22781: 					list2.Add(list);
+22782: 					num = 25;
+22783: 					goto IL_01c0;
+22784: 					IL_01c0:
+22785: 					if (_0087_0090_0099.Checked)
+22786: 					{
+22787: 						obj6 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(num2, num3 - Math.PI / 2.0));
+22788: 						num = 6;
+22789: 						if (_0087_009E())
+22790: 						{
+22791: 							goto IL_02e2;
+22792: 						}
+22793: 						goto IL_0557;
+22794: 					}
+22795: 					goto IL_0891;
+22796: 					IL_07e0:
+22797: 					list.Add(obj7);
+22798: 					list2.Add(list);
+22799: 					goto IL_06dd;
+22800: 					IL_06dd:
+22801: 					list = new List<_008F_008E>();
+22802: 					list.Add(obj);
+22803: 					num = 22;
+22804: 					goto IL_0619;
+22805: 					IL_0619:
+22806: 					list.Add(obj6);
+22807: 					num = 27;
+22808: 					if (_0087_009E())
+22809: 					{
+22810: 						goto IL_0070;
+22811: 					}
+22812: 					goto IL_0557;
+22813: 					IL_0070:
+22814: 					num4 = 4.71238898038469 - num3;
+22815: 					num = 23;
+22816: 					goto IL_0085;
+22817: 					IL_0085:
+22818: 					num4 = ((num4 >= 0.0) ? num4 : (Math.PI * 2.0 + num4));
+22819: 					num4 = ((num4 > Math.PI * 2.0) ? (num4 - Math.PI * 2.0) : num4);
+22820: 					num5 = Math.Sqrt(Math.Pow(((Point3d)(ref val)).Y - ((Point3d)(ref val2)).Y, 2.0) + Math.Pow(((Point3d)(ref val)).X - ((Point3d)(ref val2)).X, 2.0));
+22821: 					a = _0087_0090_0090(_0087_0091_0087.Text) * _0087_0090_0094;
+22822: 					if (_0087_0090_009C.Checked)
+22823: 					{
+22824: 						array = _0087_0090_009C.Text.Trim().Split('n');
+22825: 						num = 17;
+22826: 					}
+22827: 					else
+22828: 					{
+22829: 						array = _0087_0090_009B.Text.Trim().Split('n');
+22830: 					}
+22831: 					goto IL_04e4;
+22832: 					IL_0557:
+22833: 					switch (num)
+22834: 					{
+22835: 					case 12:
+22836: 						break;
+22837: 					case 23:
+22838: 						goto IL_0085;
+22839: 					case 9:
+22840: 						goto IL_017a;
+22841: 					case 20:
+22842: 						goto IL_018b;
+22843: 					case 7:
+22844: 						goto IL_019c;
+22845: 					case 36:
+22846: 						goto IL_01b0;
+22847: 					case 25:
+22848: 						goto IL_01c0;
+22849: 					case 4:
+22850: 						goto IL_020c;
+22851: 					case 3:
+22852: 						goto IL_021c;
+22853: 					case 14:
+22854: 						goto IL_0233;
+22855: 					case 27:
+22856: 						list.Add(obj7);
+22857: 						list2.Add(list);
+22858: 						list = new List<_008F_008E>();
+22859: 						num = 16;
+22860: 						if (_0087_009E())
+22861: 						{
+22862: 							goto IL_047c;
+22863: 						}
+22864: 						goto case 16;
+22865: 					case 28:
+22866: 						goto IL_02c1;
+22867: 					case 8:
+22868: 						goto IL_02e2;
+22869: 					case 2:
+22870: 						goto IL_0353;
+22871: 					case 18:
+22872: 						goto IL_038e;
+22873: 					default:
+22874: 						goto IL_041d;
+22875: 					case 21:
+22876: 						goto IL_0424;
+22877: 					case 41:
+22878: 						goto IL_0436;
+22879: 					case 42:
+22880: 						goto IL_0448;
+22881: 					case 24:
+22882: 						goto IL_047c;
+22883: 					case 40:
+22884: 						goto IL_0495;
+22885: 					case 43:
+22886: 						goto IL_04b5;
+22887: 					case 17:
+22888: 						goto IL_04e4;
+22889: 					case 5:
+22890: 					case 26:
+22891: 						goto IL_0517;
+22892: 					case 22:
+22893: 						goto IL_0619;
+22894: 					case 6:
+22895: 						obj8 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(num2 / 2.0, num3 - Math.PI / 2.0));
+22896: 						obj7 = _008F_008E._008B_0089_0088(obj9, _008F_008E._008B_0089_0087(num5 * Math.Tan(a) + num2, num3 - Math.PI / 2.0));
+22897: 						goto case 29;
+22898: 					case 29:
+22899: 					case 30:
+22900: 						obj10 = _008F_008E._008B_0089_0088(obj9, _008F_008E._008B_0089_0087((num5 * Math.Tan(a) + num2) / 2.0, num3 - Math.PI / 2.0));
+22901: 						if (!_0087_0090_0098.Checked)
+22902: 						{
+22903: 							goto IL_06dd;
+22904: 						}
+22905: 						goto case 33;
+22906: 					case 33:
+22907: 						obj11 = new _008F_008C();
+22908: 						num = 11;
+22909: 						goto case 11;
+22910: 					case 11:
+22911: 					{
+22912: 						_008F_008C obj12 = new _008F_008C();
+22913: 						obj11._008B_0088_008E(obj8, obj10);
+22914: 						obj12._008B_0088_008E(obj6, obj7);
+22915: 						_008F_008C obj13 = new _008F_008C();
+22916: 						obj13._008B_0088_008F(obj9, num3 + Math.PI - 15.0 * _0087_0090_0094);
+22917: 						obj10 = obj11._008B_0088_0093(obj13);
+22918: 						obj7 = obj12._008B_0088_0093(obj13);
+22919: 						num = 0;
+22920: 						goto case 0;
+22921: 					}
+22922: 					case 0:
+22923: 						list = new List<_008F_008E>();
+22924: 						num = 39;
+22925: 						goto case 39;
+22926: 					case 39:
+22927: 						list.Add(obj9);
+22928: 						num = 32;
+22929: 						goto IL_07e0;
+22930: 					case 32:
+22931: 						goto IL_07e0;
+22932: 					case 31:
+22933: 						continue;
+22934: 					case 15:
+22935: 						goto end_IL_07f7;
+22936: 					case 16:
+22937: 						list.Add(obj8);
+22938: 						num = 1;
+22939: 						goto case 1;
+22940: 					case 1:
+22941: 						list.Add(obj10);
+22942: 						num = 10;
+22943: 						goto case 10;
+22944: 					case 10:
+22945: 						list2.Add(list);
+22946: 						goto IL_0891;
+22947: 					case 35:
+22948: 						goto IL_0878;
+22949: 					case 37:
+22950: 						goto IL_0880;
+22951: 					case 38:
+22952: 						return;
+22953: 					case 19:
+22954: 						goto IL_0891;
+22955: 					case 13:
+22956: 					case 44:
+22957: 						return;
+22958: 					}
+22959: 					goto IL_0070;
+22960: 					IL_0880:
+22961: 					base.Visible = true;
+22962: 					num = 38;
+22963: 					return;
+22964: 					IL_0436:
+22965: 					list.Add(obj3);
+22966: 					num = 42;
+22967: 					goto IL_0448;
+22968: 					IL_0448:
+22969: 					list2.Add(list);
+22970: 					goto IL_0451;
+22971: 					IL_0891:
+22972: 					_008B._0088_008B(HostApplicationServices.WorkingDatabase, list2);
+22973: 					return;
+22974: 					IL_0517:
+22975: 					if (!(val2 == Point3d.Origin))
+22976: 					{
+22977: 						base.Visible = true;
+22978: 						num3 = Math.Atan2(((Point3d)(ref val)).Y - ((Point3d)(ref val2)).Y, ((Point3d)(ref val)).X - ((Point3d)(ref val2)).X);
+22979: 						goto IL_0070;
+22980: 					}
+22981: 					num = 35;
+22982: 					goto IL_0878;
+22983: 					IL_0878:
+22984: 					base.Visible = true;
+22985: 					return;
+22986: 					IL_038e:
+22987: 					_008F_008C obj14 = new _008F_008C();
+22988: 					obj15._008B_0088_008E(obj4, obj5);
+22989: 					obj14._008B_0088_008E(obj2, obj3);
+22990: 					_008F_008C obj16 = new _008F_008C();
+22991: 					obj16._008B_0088_008F(obj9, num3 + Math.PI + 15.0 * _0087_0090_0094);
+22992: 					obj5 = obj15._008B_0088_0093(obj16);
+22993: 					obj3 = obj14._008B_0088_0093(obj16);
+22994: 					goto IL_041d;
+22995: 					IL_04e4:
+22996: 					num2 = _008F_008A._008B_0087_009D(array[0], "输入数据有误，请检查。" /* string-offset:1984 */) * 1852.0;
+22997: 					num = 9;
+22998: 					goto IL_017a;
+22999: 					IL_017a:
+23000: 					obj = val._008B_009C();
+23001: 					num = 20;
+23002: 					goto IL_018b;
+23003: 					IL_018b:
+23004: 					obj9 = val2._008B_009C();
+23005: 					num = 7;
+23006: 					goto IL_019c;
+23007: 					IL_019c:
+23008: 					list2 = new List<List<_008F_008E>>();
+23009: 					if (!_0087_0090_0097.Checked)
+23010: 					{
+23011: 						goto IL_01b0;
+23012: 					}
+23013: 					goto IL_020c;
+23014: 					IL_020c:
+23015: 					list = new List<_008F_008E>();
+23016: 					num = 3;
+23017: 					goto IL_021c;
+23018: 					IL_021c:
+23019: 					list.Add(obj);
+23020: 					num = 28;
+23021: 					goto IL_02c1;
+23022: 					IL_02c1:
+23023: 					list.Add(obj9);
+23024: 					num = 43;
+23025: 					if (_0087_009E())
+23026: 					{
+23027: 						goto IL_0495;
+23028: 					}
+23029: 					goto IL_04b5;
+23030: 					IL_04b5:
+23031: 					list2.Add(list);
+23032: 					num = 36;
+23033: 					if (!_0087_009E())
+23034: 					{
+23035: 						goto IL_01b0;
+23036: 					}
+23037: 					goto IL_0880;
+23038: 					IL_01b0:
+23039: 					if (!_0087_0090_0096.Checked)
+23040: 					{
+23041: 						goto IL_01c0;
+23042: 					}
+23043: 					num = 14;
+23044: 					goto IL_0233;
+23045: 					IL_041d:
+23046: 					list = new List<_008F_008E>();
+23047: 					goto IL_0424;
+23048: 					IL_0233:
+23049: 					obj2 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(num2, num3 + Math.PI / 2.0));
+23050: 					obj4 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(num2 / 2.0, num3 + Math.PI / 2.0));
+23051: 					num = 8;
+23052: 					goto IL_02e2;
+23053: 					IL_02e2:
+23054: 					obj3 = _008F_008E._008B_0089_0088(obj9, _008F_008E._008B_0089_0087(num5 * Math.Tan(a) + num2, num3 + Math.PI / 2.0));
+23055: 					obj5 = _008F_008E._008B_0089_0088(obj9, _008F_008E._008B_0089_0087((num5 * Math.Tan(a) + num2) / 2.0, num3 + Math.PI / 2.0));
+23056: 					num = 2;
+23057: 					goto IL_0353;
+23058: 					IL_0353:
+23059: 					if (_0087_0090_0098.Checked)
+23060: 					{
+23061: 						obj15 = new _008F_008C();
+23062: 						num = 18;
+23063: 						goto IL_038e;
+23064: 					}
+23065: 					goto IL_0451;
+23066: 					IL_0424:
+23067: 					list.Add(obj9);
+23068: 					num = 41;
+23069: 					goto IL_0436;
+23070: 					continue;
+23071: 					end_IL_07f7:
+23072: 					break;
+23073: 				}
+23074: 			}
+23075: 			num = 13;
+23076: 		}

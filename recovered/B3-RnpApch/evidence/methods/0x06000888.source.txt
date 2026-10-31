@@ -1,0 +1,2532 @@
+90097: 		static string _008B_008F_009D(int P_0)
+90098: 		{
+90099: 			int num = 193;
+90100: 			if (_0088())
+90101: 			{
+90102: 				goto IL_043a;
+90103: 			}
+90104: 			goto IL_216e;
+90105: 			IL_043a:
+90106: 			byte[] array = default(byte[]);
+90107: 			array[31] = 101;
+90108: 			num = 230;
+90109: 			if (_0087())
+90110: 			{
+90111: 				goto IL_0453;
+90112: 			}
+90113: 			goto IL_057a;
+90114: 			IL_0453:
+90115: 			byte[] array2 = array;
+90116: 			num = 147;
+90117: 			goto IL_045c;
+90118: 			IL_045c:
+90119: 			byte[] array3 = new byte[16];
+90120: 			num = 63;
+90121: 			goto IL_046d;
+90122: 			IL_046d:
+90123: 			array3[0] = 116;
+90124: 			goto IL_0476;
+90125: 			IL_0476:
+90126: 			int num2 = 151;
+90127: 			num = 313;
+90128: 			goto IL_0483;
+90129: 			IL_0483:
+90130: 			array3[0] = (byte)num2;
+90131: 			goto IL_048c;
+90132: 			IL_048c:
+90133: 			array3[0] = 11;
+90134: 			goto IL_056b;
+90135: 			IL_056b:
+90136: 			num2 = 68;
+90137: 			num = 1;
+90138: 			goto IL_049a;
+90139: 			IL_049a:
+90140: 			array3[1] = (byte)num2;
+90141: 			goto IL_04a3;
+90142: 			IL_04a3:
+90143: 			num2 = 115;
+90144: 			num = 200;
+90145: 			goto IL_0358;
+90146: 			IL_0358:
+90147: 			array3[1] = (byte)num2;
+90148: 			num = 372;
+90149: 			goto IL_0367;
+90150: 			IL_0367:
+90151: 			array3[1] = 152;
+90152: 			num = 21;
+90153: 			if (!_0087())
+90154: 			{
+90155: 				goto IL_0383;
+90156: 			}
+90157: 			goto IL_04b2;
+90158: 			IL_0383:
+90159: 			array[30] = 103;
+90160: 			num = 387;
+90161: 			goto IL_0392;
+90162: 			IL_0392:
+90163: 			array[30] = 55;
+90164: 			num = 197;
+90165: 			goto IL_03a1;
+90166: 			IL_03a1:
+90167: 			int num3 = 138;
+90168: 			num = 61;
+90169: 			if (!_0087())
+90170: 			{
+90171: 				goto IL_0272;
+90172: 			}
+90173: 			goto IL_03b7;
+90174: 			IL_0272:
+90175: 			array[9] = (byte)num3;
+90176: 			goto IL_027a;
+90177: 			IL_027a:
+90178: 			array[9] = 154;
+90179: 			goto IL_0286;
+90180: 			IL_0286:
+90181: 			int num4 = 126;
+90182: 			num = 311;
+90183: 			if (_0087())
+90184: 			{
+90185: 				goto IL_029a;
+90186: 			}
+90187: 			goto IL_2147;
+90188: 			IL_029a:
+90189: 			array[9] = (byte)num4;
+90190: 			num = 300;
+90191: 			if (_0088())
+90192: 			{
+90193: 				goto IL_02b3;
+90194: 			}
+90195: 			goto IL_184c;
+90196: 			IL_02b3:
+90197: 			array[19] = (byte)num3;
+90198: 			goto IL_02bb;
+90199: 			IL_02bb:
+90200: 			array[19] = 38;
+90201: 			goto IL_02c4;
+90202: 			IL_02c4:
+90203: 			num4 = 79;
+90204: 			num = 343;
+90205: 			if (!_0087())
+90206: 			{
+90207: 				goto IL_0220;
+90208: 			}
+90209: 			goto IL_184c;
+90210: 			IL_184c:
+90211: 			uint num15 = default(uint);
+90212: 			uint num16 = default(uint);
+90213: 			int num8 = default(int);
+90214: 			int num9 = default(int);
+90215: 			int num10 = default(int);
+90216: 			byte[] array8 = default(byte[]);
+90217: 			int num13 = default(int);
+90218: 			uint num19 = default(uint);
+90219: 			CryptoStream cryptoStream = default(CryptoStream);
+90220: 			byte[] array7 = default(byte[]);
+90221: 			MemoryStream memoryStream = default(MemoryStream);
+90222: 			uint num11 = default(uint);
+90223: 			ICryptoTransform transform = default(ICryptoTransform);
+90224: 			byte[] array6 = default(byte[]);
+90225: 			byte[] publicKeyToken = default(byte[]);
+90226: 			int num14 = default(int);
+90227: 			uint num12 = default(uint);
+90228: 			SymmetricAlgorithm symmetricAlgorithm = default(SymmetricAlgorithm);
+90229: 			int num5 = default(int);
+90230: 			byte[] array4 = default(byte[]);
+90231: 			int num6 = default(int);
+90232: 			byte[] array5 = default(byte[]);
+90233: 			string text = default(string);
+90234: 			int num7 = default(int);
+90235: 			while (true)
+90236: 			{
+90237: 				switch (num)
+90238: 				{
+90239: 				case 65:
+90240: 					break;
+90241: 				case 228:
+90242: 				case 328:
+90243: 					goto IL_007b;
+90244: 				case 158:
+90245: 					goto IL_0085;
+90246: 				case 351:
+90247: 					goto IL_0094;
+90248: 				case 74:
+90249: 					goto IL_00ad;
+90250: 				case 393:
+90251: 					goto IL_00c6;
+90252: 				case 226:
+90253: 					goto IL_00d5;
+90254: 				case 408:
+90255: 					goto IL_00dc;
+90256: 				case 93:
+90257: 					goto IL_00e5;
+90258: 				case 273:
+90259: 					goto IL_0101;
+90260: 				case 334:
+90261: 					goto IL_011d;
+90262: 				case 195:
+90263: 					goto IL_012e;
+90264: 				case 344:
+90265: 					goto IL_013d;
+90266: 				case 256:
+90267: 					goto IL_0144;
+90268: 				case 218:
+90269: 					goto IL_014d;
+90270: 				case 363:
+90271: 					goto IL_015a;
+90272: 				case 354:
+90273: 					goto IL_0169;
+90274: 				case 66:
+90275: 					goto IL_017b;
+90276: 				case 60:
+90277: 					goto IL_018a;
+90278: 				case 261:
+90279: 					goto IL_019e;
+90280: 				case 23:
+90281: 					goto IL_01a8;
+90282: 				case 396:
+90283: 					goto IL_01c1;
+90284: 				case 369:
+90285: 					goto IL_01d3;
+90286: 				case 386:
+90287: 					goto IL_01ec;
+90288: 				case 280:
+90289: 					goto IL_01f9;
+90290: 				case 173:
+90291: 					goto IL_0208;
+90292: 				case 94:
+90293: 					goto IL_0217;
+90294: 				case 271:
+90295: 					goto IL_0220;
+90296: 				case 274:
+90297: 					goto IL_022e;
+90298: 				case 233:
+90299: 					goto IL_0237;
+90300: 				case 279:
+90301: 					goto IL_0245;
+90302: 				case 221:
+90303: 					goto IL_0257;
+90304: 				case 183:
+90305: 					goto IL_0266;
+90306: 				case 366:
+90307: 					goto IL_0272;
+90308: 				case 204:
+90309: 					goto IL_027a;
+90310: 				case 29:
+90311: 					goto IL_0286;
+90312: 				case 311:
+90313: 					goto IL_029a;
+90314: 				case 356:
+90315: 					goto IL_02b3;
+90316: 				case 110:
+90317: 					goto IL_02bb;
+90318: 				case 79:
+90319: 					goto IL_02c4;
+90320: 				case 429:
+90321: 					goto IL_02dd;
+90322: 				case 320:
+90323: 					goto IL_02e5;
+90324: 				case 358:
+90325: 					goto IL_02f7;
+90326: 				case 35:
+90327: 					goto IL_0309;
+90328: 				case 26:
+90329: 					goto IL_0318;
+90330: 				case 403:
+90331: 					goto IL_032a;
+90332: 				case 130:
+90333: 					goto IL_033c;
+90334: 				case 200:
+90335: 					goto IL_0358;
+90336: 				case 372:
+90337: 					goto IL_0367;
+90338: 				case 222:
+90339: 					goto IL_0383;
+90340: 				case 387:
+90341: 					goto IL_0392;
+90342: 				case 197:
+90343: 					goto IL_03a1;
+90344: 				case 61:
+90345: 					goto IL_03b7;
+90346: 				case 361:
+90347: 					goto IL_03bf;
+90348: 				case 368:
+90349: 					goto IL_03ce;
+90350: 				case 86:
+90351: 					goto IL_03da;
+90352: 				case 250:
+90353: 					goto IL_03e8;
+90354: 				case 244:
+90355: 					goto IL_03f1;
+90356: 				case 174:
+90357: 					goto IL_03ff;
+90358: 				case 306:
+90359: 					goto IL_040e;
+90360: 				case 234:
+90361: 					goto IL_041a;
+90362: 				case 43:
+90363: 					goto IL_0428;
+90364: 				case 142:
+90365: 					goto IL_043a;
+90366: 				case 230:
+90367: 					goto IL_0453;
+90368: 				case 147:
+90369: 					goto IL_045c;
+90370: 				case 63:
+90371: 					goto IL_046d;
+90372: 				case 47:
+90373: 					goto IL_0476;
+90374: 				case 313:
+90375: 					goto IL_0483;
+90376: 				case 308:
+90377: 					goto IL_048c;
+90378: 				case 1:
+90379: 					goto IL_049a;
+90380: 				case 177:
+90381: 					goto IL_04a3;
+90382: 				case 21:
+90383: 					goto IL_04b2;
+90384: 				case 13:
+90385: 					goto IL_04bc;
+90386: 				case 407:
+90387: 					goto IL_04c5;
+90388: 				case 180:
+90389: 					goto IL_04d2;
+90390: 				case 239:
+90391: 					goto IL_04e1;
+90392: 				case 20:
+90393: 					goto IL_04ee;
+90394: 				case 310:
+90395: 					goto IL_04fd;
+90396: 				case 6:
+90397: 					goto IL_0506;
+90398: 				case 304:
+90399: 					goto IL_0532;
+90400: 				case 341:
+90401: 					goto IL_054b;
+90402: 				case 301:
+90403: 					goto IL_055d;
+90404: 				case 207:
+90405: 					goto IL_056b;
+90406: 				case 232:
+90407: 					goto IL_057a;
+90408: 				case 203:
+90409: 					goto IL_058c;
+90410: 				case 191:
+90411: 					goto IL_0590;
+90412: 				case 214:
+90413: 					goto IL_059f;
+90414: 				case 265:
+90415: 					goto IL_05ac;
+90416: 				case 52:
+90417: 					goto IL_05bb;
+90418: 				case 345:
+90419: 					goto IL_05ca;
+90420: 				case 82:
+90421: 					goto IL_05d1;
+90422: 				case 58:
+90423: 					goto IL_05e0;
+90424: 				case 189:
+90425: 					goto IL_05ef;
+90426: 				case 379:
+90427: 					goto IL_05fe;
+90428: 				case 332:
+90429: 					goto IL_060d;
+90430: 				case 102:
+90431: 					goto IL_0614;
+90432: 				case 249:
+90433: 					goto IL_0622;
+90434: 				case 388:
+90435: 					goto IL_0635;
+90436: 				case 120:
+90437: 					goto IL_065a;
+90438: 				case 324:
+90439: 					goto IL_0660;
+90440: 				case 146:
+90441: 					goto IL_066e;
+90442: 				case 108:
+90443: 					goto IL_067d;
+90444: 				case 346:
+90445: 					goto IL_0687;
+90446: 				case 46:
+90447: 					goto IL_06a0;
+90448: 				case 417:
+90449: 					goto IL_06a9;
+90450: 				case 22:
+90451: 					goto IL_06b3;
+90452: 				case 16:
+90453: 					goto IL_06c2;
+90454: 				case 314:
+90455: 					goto IL_06c6;
+90456: 				case 55:
+90457: 					goto IL_06cf;
+90458: 				case 365:
+90459: 					goto IL_06dc;
+90460: 				case 333:
+90461: 					goto IL_06eb;
+90462: 				case 131:
+90463: 					goto IL_06fd;
+90464: 				case 285:
+90465: 					goto IL_0706;
+90466: 				case 150:
+90467: 					goto IL_0714;
+90468: 				case 153:
+90469: 					goto IL_0721;
+90470: 				case 277:
+90471: 					goto IL_073a;
+90472: 				case 392:
+90473: 					goto IL_0744;
+90474: 				case 237:
+90475: 					goto IL_0753;
+90476: 				case 140:
+90477: 					goto IL_0760;
+90478: 				case 159:
+90479: 					goto IL_076f;
+90480: 				case 206:
+90481: 					goto IL_077e;
+90482: 				case 427:
+90483: 					goto IL_0787;
+90484: 				case 152:
+90485: 					goto IL_0790;
+90486: 				case 375:
+90487: 					goto IL_07a1;
+90488: 				case 238:
+90489: 					goto IL_07b0;
+90490: 				case 349:
+90491: 					goto IL_07b9;
+90492: 				case 342:
+90493: 					goto IL_07c7;
+90494: 				case 231:
+90495: 					goto IL_07e0;
+90496: 				case 166:
+90497: 					goto IL_07e9;
+90498: 				case 68:
+90499: 					goto IL_07f1;
+90500: 				case 263:
+90501: 					goto IL_07fe;
+90502: 				case 295:
+90503: 					goto IL_080b;
+90504: 				case 167:
+90505: 					goto IL_0822;
+90506: 				case 42:
+90507: 					goto IL_0839;
+90508: 				case 371:
+90509: 					goto IL_084b;
+90510: 				case 154:
+90511: 					goto IL_085f;
+90512: 				case 172:
+90513: 					goto IL_0876;
+90514: 				case 155:
+90515: 					goto IL_0884;
+90516: 				case 90:
+90517: 					goto IL_088e;
+90518: 				case 370:
+90519: 					goto IL_089d;
+90520: 				case 391:
+90521: 					goto IL_08aa;
+90522: 				case 259:
+90523: 					goto IL_08b9;
+90524: 				case 138:
+90525: 				case 161:
+90526: 					goto IL_08cf;
+90527: 				case 266:
+90528: 					goto IL_08e5;
+90529: 				case 248:
+90530: 					goto IL_08eb;
+90531: 				case 107:
+90532: 					goto IL_0901;
+90533: 				case 217:
+90534: 					goto IL_0910;
+90535: 				case 199:
+90536: 					goto IL_0922;
+90537: 				case 298:
+90538: 					goto IL_0934;
+90539: 				case 133:
+90540: 					goto IL_093e;
+90541: 				case 236:
+90542: 					goto IL_0947;
+90543: 				case 169:
+90544: 					goto IL_0951;
+90545: 				case 126:
+90546: 					goto IL_0960;
+90547: 				case 179:
+90548: 					goto IL_096f;
+90549: 				case 251:
+90550: 					goto IL_097e;
+90551: 				case 14:
+90552: 					goto IL_0987;
+90553: 				case 96:
+90554: 					goto IL_09a2;
+90555: 				case 87:
+90556: 					goto IL_09af;
+90557: 				case 194:
+90558: 					goto IL_09bf;
+90559: 				case 31:
+90560: 					goto IL_09dc;
+90561: 				case 338:
+90562: 					goto IL_0a0d;
+90563: 				case 121:
+90564: 					goto IL_0a14;
+90565: 				case 415:
+90566: 					goto IL_0a2c;
+90567: 				case 145:
+90568: 					goto IL_0a2f;
+90569: 				case 160:
+90570: 					goto IL_0a37;
+90571: 				case 377:
+90572: 					goto IL_0a44;
+90573: 				case 143:
+90574: 					goto IL_0a4d;
+90575: 				case 384:
+90576: 					goto IL_0a51;
+90577: 				case 401:
+90578: 					goto IL_0a5c;
+90579: 				case 175:
+90580: 					goto IL_0a75;
+90581: 				case 428:
+90582: 					array3[10] = (byte)num2;
+90583: 					goto IL_057a;
+90584: 				case 426:
+90585: 					array[19] = 105;
+90586: 					num = 247;
+90587: 					goto case 247;
+90588: 				case 247:
+90589: 					num4 = 142;
+90590: 					goto case 15;
+90591: 				case 15:
+90592: 					array[20] = (byte)num4;
+90593: 					num = 111;
+90594: 					if (_0087())
+90595: 					{
+90596: 						continue;
+90597: 					}
+90598: 					goto case 264;
+90599: 				case 264:
+90600: 					array[4] = 86;
+90601: 					num = 85;
+90602: 					goto case 85;
+90603: 				case 85:
+90604: 					array[4] = 123;
+90605: 					num = 117;
+90606: 					goto case 117;
+90607: 				case 117:
+90608: 					num3 = 48;
+90609: 					num = 412;
+90610: 					goto case 412;
+90611: 				case 412:
+90612: 					array[4] = (byte)num3;
+90613: 					num = 254;
+90614: 					goto case 254;
+90615: 				case 254:
+90616: 					num4 = 196;
+90617: 					num = 297;
+90618: 					goto case 297;
+90619: 				case 297:
+90620: 					array[5] = (byte)num4;
+90621: 					num = 154;
+90622: 					goto IL_085f;
+90623: 				case 425:
+90624: 					num15 += num16;
+90625: 					goto case 267;
+90626: 				case 267:
+90627: 				case 317:
+90628: 				{
+90629: 					uint num17 = num15;
+90630: 					uint num18 = num15;
+90631: 					num18 ^= num18 >> 1;
+90632: 					num18 += 2534355145u;
+90633: 					num18 ^= num18 >> 6;
+90634: 					num18 += 4234190202u;
+90635: 					num18 ^= num18 << 11;
+90636: 					num18 += 2760573992u;
+90637: 					num18 = 107736963 - num18;
+90638: 					num15 = num17 + (uint)(double)num18;
+90639: 					num = 106;
+90640: 					if (_0088())
+90641: 					{
+90642: 						goto case 216;
+90643: 					}
+90644: 					goto case 106;
+90645: 				}
+90646: 				case 216:
+90647: 					num4 = 101;
+90648: 					goto case 240;
+90649: 				case 240:
+90650: 					array[28] = (byte)num4;
+90651: 					goto case 67;
+90652: 				case 67:
+90653: 					num4 = 144;
+90654: 					goto case 134;
+90655: 				case 134:
+90656: 					array[28] = (byte)num4;
+90657: 					num = 418;
+90658: 					if (_0088())
+90659: 					{
+90660: 						goto IL_09bf;
+90661: 					}
+90662: 					goto case 418;
+90663: 				case 418:
+90664: 					array[28] = 232;
+90665: 					goto case 305;
+90666: 				case 305:
+90667: 					array[29] = 147;
+90668: 					num = 246;
+90669: 					goto case 246;
+90670: 				case 246:
+90671: 					array[29] = 90;
+90672: 					num = 129;
+90673: 					goto case 129;
+90674: 				case 129:
+90675: 					array[29] = 112;
+90676: 					num = 224;
+90677: 					goto IL_0beb;
+90678: 				case 224:
+90679: 					goto IL_0beb;
+90680: 				case 347:
+90681: 					goto IL_0bf1;
+90682: 				case 163:
+90683: 					goto IL_0c09;
+90684: 				case 5:
+90685: 					goto IL_0c12;
+90686: 				case 116:
+90687: 					goto IL_0c1e;
+90688: 				case 106:
+90689: 					if (num8 == num9 - 1)
+90690: 					{
+90691: 						num = 383;
+90692: 						if (_0088())
+90693: 						{
+90694: 							goto case 176;
+90695: 						}
+90696: 						goto case 383;
+90697: 					}
+90698: 					goto IL_0d4c;
+90699: 				case 176:
+90700: 					array[25] = (byte)num4;
+90701: 					goto case 128;
+90702: 				case 128:
+90703: 					array[25] = 236;
+90704: 					num = 192;
+90705: 					goto case 192;
+90706: 				case 192:
+90707: 					num3 = 106;
+90708: 					goto case 105;
+90709: 				case 105:
+90710: 					array[26] = (byte)num3;
+90711: 					goto case 373;
+90712: 				case 373:
+90713: 					num4 = 222;
+90714: 					goto case 385;
+90715: 				case 385:
+90716: 					array[26] = (byte)num4;
+90717: 					num = 11;
+90718: 					goto case 11;
+90719: 				case 11:
+90720: 					num3 = 120;
+90721: 					num = 24;
+90722: 					goto case 24;
+90723: 				case 24:
+90724: 					array[26] = (byte)num3;
+90725: 					goto case 84;
+90726: 				case 84:
+90727: 					num3 = 198;
+90728: 					num = 45;
+90729: 					if (_0087())
+90730: 					{
+90731: 						continue;
+90732: 					}
+90733: 					goto case 364;
+90734: 				case 364:
+90735: 					if (num10 <= 0)
+90736: 					{
+90737: 						goto IL_07e0;
+90738: 					}
+90739: 					goto case 296;
+90740: 				case 296:
+90741: 					num9++;
+90742: 					goto IL_07e0;
+90743: 				case 383:
+90744: 					if (num10 > 0)
+90745: 					{
+90746: 						num = 186;
+90747: 						goto IL_0ccd;
+90748: 					}
+90749: 					goto IL_0d4c;
+90750: 				case 186:
+90751: 					goto IL_0ccd;
+90752: 				case 283:
+90753: 					goto IL_0cda;
+90754: 				case 178:
+90755: 					goto IL_0cea;
+90756: 				case 378:
+90757: 					goto IL_0d06;
+90758: 				case 156:
+90759: 					goto IL_0d12;
+90760: 				case 291:
+90761: 					goto IL_0d18;
+90762: 				case 299:
+90763: 					goto IL_0d32;
+90764: 				case 62:
+90765: 				case 164:
+90766: 					goto IL_0d3e;
+90767: 				case 270:
+90768: 					array8[num13] = (byte)(num19 & 0xFF);
+90769: 					goto case 210;
+90770: 				case 210:
+90771: 					array8[num13 + 1] = (byte)((num19 & 0xFF00) >> 8);
+90772: 					goto case 400;
+90773: 				case 400:
+90774: 					array8[num13 + 2] = (byte)((num19 & 0xFF0000) >> 16);
+90775: 					goto IL_0d86;
+90776: 				case 54:
+90777: 					goto IL_0d86;
+90778: 				case 202:
+90779: 				case 406:
+90780: 					goto IL_0d9f;
+90781: 				case 422:
+90782: 					num2 = 120;
+90783: 					num = 307;
+90784: 					goto case 307;
+90785: 				case 307:
+90786: 					array3[5] = (byte)num2;
+90787: 					num = 208;
+90788: 					goto case 208;
+90789: 				case 208:
+90790: 					num2 = 28;
+90791: 					num = 125;
+90792: 					goto IL_0ddd;
+90793: 				case 125:
+90794: 					goto IL_0ddd;
+90795: 				case 421:
+90796: 					num2 = 143;
+90797: 					goto case 211;
+90798: 				case 211:
+90799: 					array3[14] = (byte)num2;
+90800: 					goto IL_0901;
+90801: 				case 420:
+90802: 					num2 = 192;
+90803: 					num = 323;
+90804: 					if (_0087())
+90805: 					{
+90806: 						continue;
+90807: 					}
+90808: 					goto IL_0e27;
+90809: 				case 357:
+90810: 					goto IL_0e27;
+90811: 				case 327:
+90812: 					goto IL_0e3d;
+90813: 				case 293:
+90814: 					goto IL_0e4e;
+90815: 				case 229:
+90816: 					goto IL_0e60;
+90817: 				case 409:
+90818: 					goto IL_0e79;
+90819: 				case 40:
+90820: 					goto IL_0e85;
+90821: 				case 151:
+90822: 					goto IL_0e97;
+90823: 				case 253:
+90824: 					goto IL_0e9d;
+90825: 				case 374:
+90826: 					goto IL_0ea5;
+90827: 				case 115:
+90828: 					goto IL_0eac;
+90829: 				case 275:
+90830: 					goto IL_0ebb;
+90831: 				case 95:
+90832: 					goto IL_0ec5;
+90833: 				case 336:
+90834: 					goto IL_0ed4;
+90835: 				case 4:
+90836: 					goto IL_0ee0;
+90837: 				case 252:
+90838: 					goto IL_0eee;
+90839: 				case 405:
+90840: 					goto IL_0ef2;
+90841: 				case 100:
+90842: 					goto IL_0efb;
+90843: 				case 75:
+90844: 					goto IL_0f07;
+90845: 				case 294:
+90846: 					goto IL_0f15;
+90847: 				case 213:
+90848: 					goto IL_0f2b;
+90849: 				case 72:
+90850: 					goto IL_0f39;
+90851: 				case 157:
+90852: 					goto IL_0f3f;
+90853: 				case 325:
+90854: 					goto IL_0f57;
+90855: 				case 103:
+90856: 					goto IL_0f70;
+90857: 				case 223:
+90858: 					goto IL_0f79;
+90859: 				case 136:
+90860: 					goto IL_0f87;
+90861: 				case 25:
+90862: 					goto IL_0f93;
+90863: 				case 419:
+90864: 					cryptoStream.Write(array7, 0, array7.Length);
+90865: 					goto case 268;
+90866: 				case 268:
+90867: 					cryptoStream.FlushFinalBlock();
+90868: 					goto case 350;
+90869: 				case 350:
+90870: 					_008B_0091_008A = memoryStream.ToArray();
+90871: 					num = 249;
+90872: 					if (!_0088())
+90873: 					{
+90874: 						goto IL_0622;
+90875: 					}
+90876: 					goto IL_07e0;
+90877: 				case 416:
+90878: 					array[23] = 134;
+90879: 					num = 64;
+90880: 					goto case 64;
+90881: 				case 64:
+90882: 					array[23] = 212;
+90883: 					num = 69;
+90884: 					goto case 69;
+90885: 				case 69:
+90886: 					array[24] = 104;
+90887: 					num = 37;
+90888: 					goto case 37;
+90889: 				case 37:
+90890: 					array[24] = 168;
+90891: 					goto case 162;
+90892: 				case 162:
+90893: 					array[24] = 158;
+90894: 					num = 337;
+90895: 					goto case 337;
+90896: 				case 337:
+90897: 					num3 = 209;
+90898: 					num = 220;
+90899: 					goto case 220;
+90900: 				case 220:
+90901: 					array[25] = (byte)num3;
+90902: 					num = 98;
+90903: 					goto case 98;
+90904: 				case 98:
+90905: 					array[25] = 130;
+90906: 					goto case 335;
+90907: 				case 335:
+90908: 					num3 = 37;
+90909: 					num = 88;
+90910: 					goto case 88;
+90911: 				case 88:
+90912: 					array[25] = (byte)num3;
+90913: 					num = 290;
+90914: 					if (!_0088())
+90915: 					{
+90916: 						continue;
+90917: 					}
+90918: 					goto IL_07f1;
+90919: 				case 414:
+90920: 					array[3] = 92;
+90921: 					num = 137;
+90922: 					goto case 137;
+90923: 				case 137:
+90924: 					array[3] = 93;
+90925: 					goto case 353;
+90926: 				case 353:
+90927: 					num4 = 120;
+90928: 					num = 348;
+90929: 					goto case 348;
+90930: 				case 348:
+90931: 					array[4] = (byte)num4;
+90932: 					num = 264;
+90933: 					goto case 264;
+90934: 				case 413:
+90935: 					array[22] = 135;
+90936: 					num = 135;
+90937: 					goto case 135;
+90938: 				case 135:
+90939: 					array[22] = 87;
+90940: 					num = 315;
+90941: 					goto case 315;
+90942: 				case 315:
+90943: 					num3 = 99;
+90944: 					num = 3;
+90945: 					goto case 3;
+90946: 				case 3:
+90947: 					array[22] = (byte)num3;
+90948: 					goto case 262;
+90949: 				case 262:
+90950: 					num4 = 22;
+90951: 					num = 289;
+90952: 					if (!_0087())
+90953: 					{
+90954: 						goto IL_0428;
+90955: 					}
+90956: 					goto case 289;
+90957: 				case 289:
+90958: 					array[22] = (byte)num4;
+90959: 					num = 91;
+90960: 					goto case 91;
+90961: 				case 91:
+90962: 					num4 = 85;
+90963: 					num = 286;
+90964: 					goto case 286;
+90965: 				case 286:
+90966: 					array[23] = (byte)num4;
+90967: 					num = 416;
+90968: 					goto case 416;
+90969: 				case 404:
+90970: 					num2 = 136;
+90971: 					num = 127;
+90972: 					goto case 127;
+90973: 				case 127:
+90974: 					array3[10] = (byte)num2;
+90975: 					goto case 258;
+90976: 				case 258:
+90977: 					array3[10] = 70;
+90978: 					num = 188;
+90979: 					goto case 188;
+90980: 				case 188:
+90981: 					array3[10] = 130;
+90982: 					num = 243;
+90983: 					goto case 243;
+90984: 				case 243:
+90985: 					num2 = 232;
+90986: 					goto case 428;
+90987: 				case 398:
+90988: 					num11 = 0u;
+90989: 					goto case 364;
+90990: 				case 390:
+90991: 					num4 = 202;
+90992: 					num = 17;
+90993: 					goto case 17;
+90994: 				case 17:
+90995: 					array[28] = (byte)num4;
+90996: 					num = 216;
+90997: 					goto case 216;
+90998: 				case 389:
+90999: 					array[20] = 115;
+91000: 					num = 120;
+91001: 					if (_0087())
+91002: 					{
+91003: 						continue;
+91004: 					}
+91005: 					goto IL_0101;
+91006: 				case 382:
+91007: 					num2 = 209;
+91008: 					num = 70;
+91009: 					goto case 70;
+91010: 				case 70:
+91011: 					array3[9] = (byte)num2;
+91012: 					num = 38;
+91013: 					if (_0088())
+91014: 					{
+91015: 						goto IL_05ac;
+91016: 					}
+91017: 					goto case 38;
+91018: 				case 38:
+91019: 					array3[9] = 74;
+91020: 					goto case 57;
+91021: 				case 57:
+91022: 					num2 = 123;
+91023: 					goto case 319;
+91024: 				case 319:
+91025: 					array3[10] = (byte)num2;
+91026: 					num = 198;
+91027: 					goto case 198;
+91028: 				case 198:
+91029: 					array3[10] = 18;
+91030: 					num = 404;
+91031: 					goto case 404;
+91032: 				case 381:
+91033: 					array[26] = (byte)num4;
+91034: 					num = 112;
+91035: 					if (!_0088())
+91036: 					{
+91037: 						continue;
+91038: 					}
+91039: 					goto case 339;
+91040: 				case 339:
+91041: 					memoryStream = new MemoryStream();
+91042: 					goto case 73;
+91043: 				case 73:
+91044: 					cryptoStream = new CryptoStream(memoryStream, transform, CryptoStreamMode.Write);
+91045: 					num = 419;
+91046: 					if (!_0088())
+91047: 					{
+91048: 						continue;
+91049: 					}
+91050: 					goto case 428;
+91051: 				case 376:
+91052: 					num4 = 7;
+91053: 					num = 381;
+91054: 					goto case 381;
+91055: 				case 362:
+91056: 					array6[7] = publicKeyToken[3];
+91057: 					num = 326;
+91058: 					goto case 326;
+91059: 				case 326:
+91060: 					array6[9] = publicKeyToken[4];
+91061: 					num = 201;
+91062: 					if (!_0088())
+91063: 					{
+91064: 						continue;
+91065: 					}
+91066: 					goto IL_0257;
+91067: 				case 360:
+91068: 					num2 = 140;
+91069: 					num = 7;
+91070: 					if (!_0087())
+91071: 					{
+91072: 						goto case 307;
+91073: 					}
+91074: 					goto case 7;
+91075: 				case 359:
+91076: 					array3[3] = 96;
+91077: 					num = 44;
+91078: 					goto case 44;
+91079: 				case 44:
+91080: 					array3[3] = 109;
+91081: 					num = 288;
+91082: 					if (_0087())
+91083: 					{
+91084: 						continue;
+91085: 					}
+91086: 					goto IL_0a0d;
+91087: 				case 355:
+91088: 					array[14] = 96;
+91089: 					goto case 165;
+91090: 				case 165:
+91091: 					array[14] = 156;
+91092: 					num = 163;
+91093: 					goto IL_0c09;
+91094: 				case 343:
+91095: 					array[19] = (byte)num4;
+91096: 					goto case 426;
+91097: 				case 340:
+91098: 					array[27] = 232;
+91099: 					num = 390;
+91100: 					if (_0088())
+91101: 					{
+91102: 						goto IL_00ad;
+91103: 					}
+91104: 					goto case 390;
+91105: 				case 330:
+91106: 					array3[4] = 132;
+91107: 					num = 281;
+91108: 					goto case 281;
+91109: 				case 281:
+91110: 					array3[4] = 117;
+91111: 					num = 420;
+91112: 					goto case 420;
+91113: 				case 329:
+91114: 					num2 = 230;
+91115: 					goto case 10;
+91116: 				case 10:
+91117: 					array3[4] = (byte)num2;
+91118: 					num = 255;
+91119: 					goto case 255;
+91120: 				case 255:
+91121: 					num2 = 53;
+91122: 					goto case 278;
+91123: 				case 278:
+91124: 					array3[4] = (byte)num2;
+91125: 					num = 92;
+91126: 					goto case 92;
+91127: 				case 92:
+91128: 					array3[5] = 160;
+91129: 					num = 132;
+91130: 					goto case 132;
+91131: 				case 132:
+91132: 					num2 = 107;
+91133: 					num = 83;
+91134: 					goto case 83;
+91135: 				case 83:
+91136: 					array3[5] = (byte)num2;
+91137: 					num = 422;
+91138: 					goto case 422;
+91139: 				case 323:
+91140: 					array3[4] = (byte)num2;
+91141: 					goto case 329;
+91142: 				case 8:
+91143: 					num11 <<= 8;
+91144: 					num = 12;
+91145: 					goto case 12;
+91146: 				case 12:
+91147: 					num11 |= array7[array7.Length - (1 + num14)];
+91148: 					num = 205;
+91149: 					goto case 205;
+91150: 				case 205:
+91151: 					num14++;
+91152: 					goto case 59;
+91153: 				case 59:
+91154: 				case 322:
+91155: 					if (num14 < num10)
+91156: 					{
+91157: 						if (num14 > 0)
+91158: 						{
+91159: 							goto case 8;
+91160: 						}
+91161: 						goto case 12;
+91162: 					}
+91163: 					num = 318;
+91164: 					if (!_0088())
+91165: 					{
+91166: 						goto case 318;
+91167: 					}
+91168: 					goto IL_179d;
+91169: 				case 318:
+91170: 					num15 += num16;
+91171: 					num = 317;
+91172: 					goto case 267;
+91173: 				case 321:
+91174: 					array3[13] = (byte)num2;
+91175: 					num = 99;
+91176: 					goto case 99;
+91177: 				case 99:
+91178: 					array3[13] = 48;
+91179: 					num = 421;
+91180: 					if (_0087())
+91181: 					{
+91182: 						goto case 421;
+91183: 					}
+91184: 					goto case 350;
+91185: 				case 312:
+91186: 					array3[4] = 21;
+91187: 					num = 330;
+91188: 					goto case 330;
+91189: 				case 303:
+91190: 					array[27] = 184;
+91191: 					num = 123;
+91192: 					goto case 123;
+91193: 				case 123:
+91194: 					array[27] = 78;
+91195: 					num = 340;
+91196: 					goto case 340;
+91197: 				case 300:
+91198: 					array[9] = 204;
+91199: 					num = 182;
+91200: 					goto case 182;
+91201: 				case 182:
+91202: 					num4 = 155;
+91203: 					num = 304;
+91204: 					goto IL_0532;
+91205: 				case 290:
+91206: 					array[25] = 185;
+91207: 					num = 50;
+91208: 					goto case 50;
+91209: 				case 50:
+91210: 					num4 = 156;
+91211: 					num = 176;
+91212: 					goto case 176;
+91213: 				case 288:
+91214: 					array3[3] = 11;
+91215: 					num = 312;
+91216: 					goto case 312;
+91217: 				case 284:
+91218: 					array[13] = (byte)num4;
+91219: 					goto case 355;
+91220: 				case 272:
+91221: 					num2 = 112;
+91222: 					num = 49;
+91223: 					if (!_0087())
+91224: 					{
+91225: 						goto IL_046d;
+91226: 					}
+91227: 					goto case 49;
+91228: 				case 49:
+91229: 					array3[3] = (byte)num2;
+91230: 					num = 359;
+91231: 					goto case 359;
+91232: 				case 245:
+91233: 					num11 = (uint)((array7[num12 + 3] << 24) | (array7[num12 + 2] << 16) | (array7[num12 + 1] << 8) | array7[num12]);
+91234: 					num = 425;
+91235: 					goto case 425;
+91236: 				case 241:
+91237: 					array3[2] = (byte)num2;
+91238: 					goto case 212;
+91239: 				case 212:
+91240: 					array3[2] = 219;
+91241: 					goto case 272;
+91242: 				case 235:
+91243: 					num14 = 0;
+91244: 					goto case 59;
+91245: 				case 227:
+91246: 					transform = symmetricAlgorithm.CreateDecryptor(array2, array6);
+91247: 					num = 339;
+91248: 					goto case 339;
+91249: 				case 219:
+91250: 					goto IL_155d;
+91251: 				case 190:
+91252: 					_008B_0091_008E = new int[_008B_0091_008A.Length / 4 + 1];
+91253: 					num = 68;
+91254: 					if (_0087())
+91255: 					{
+91256: 						goto IL_07f1;
+91257: 					}
+91258: 					goto IL_089d;
+91259: 				case 185:
+91260: 					num2 = 99;
+91261: 					num = 241;
+91262: 					goto case 241;
+91263: 				case 170:
+91264: 					goto IL_15b6;
+91265: 				case 168:
+91266: 					if (num10 > 0)
+91267: 					{
+91268: 						num = 78;
+91269: 						goto case 78;
+91270: 					}
+91271: 					goto IL_15fa;
+91272: 				case 78:
+91273: 					num11 = 0u;
+91274: 					num = 235;
+91275: 					goto case 235;
+91276: 				case 144:
+91277: 					goto IL_1609;
+91278: 				case 19:
+91279: 					goto IL_1616;
+91280: 				case 139:
+91281: 					array[13] = 136;
+91282: 					num = 101;
+91283: 					goto case 101;
+91284: 				case 101:
+91285: 					num4 = 93;
+91286: 					num = 284;
+91287: 					if (_0088())
+91288: 					{
+91289: 						goto case 288;
+91290: 					}
+91291: 					goto case 284;
+91292: 				case 112:
+91293: 					array[27] = 118;
+91294: 					num = 303;
+91295: 					if (!_0087())
+91296: 					{
+91297: 						goto IL_0257;
+91298: 					}
+91299: 					goto case 303;
+91300: 				case 111:
+91301: 					array[20] = 84;
+91302: 					num = 389;
+91303: 					if (_0087())
+91304: 					{
+91305: 						continue;
+91306: 					}
+91307: 					goto case 321;
+91308: 				case 89:
+91309: 					num4 = 87;
+91310: 					goto case 34;
+91311: 				case 34:
+91312: 					array[26] = (byte)num4;
+91313: 					num = 376;
+91314: 					goto case 376;
+91315: 				case 77:
+91316: 					if (num8 == num9 - 1)
+91317: 					{
+91318: 						num = 168;
+91319: 						if (_0087())
+91320: 						{
+91321: 							continue;
+91322: 						}
+91323: 						goto IL_029a;
+91324: 					}
+91325: 					goto IL_15fa;
+91326: 				case 56:
+91327: 					array[3] = (byte)num3;
+91328: 					num = 9;
+91329: 					if (!_0088())
+91330: 					{
+91331: 						continue;
+91332: 					}
+91333: 					goto case 59;
+91334: 				case 53:
+91335: 					array6[3] = publicKeyToken[1];
+91336: 					goto case 18;
+91337: 				case 18:
+91338: 					array6[5] = publicKeyToken[2];
+91339: 					num = 362;
+91340: 					goto case 362;
+91341: 				case 45:
+91342: 					array[26] = (byte)num3;
+91343: 					num = 89;
+91344: 					if (!_0088())
+91345: 					{
+91346: 						continue;
+91347: 					}
+91348: 					goto case 211;
+91349: 				case 28:
+91350: 					array[3] = (byte)num4;
+91351: 					num = 414;
+91352: 					goto case 414;
+91353: 				case 9:
+91354: 					num4 = 92;
+91355: 					goto case 28;
+91356: 				default:
+91357: 					num = 207;
+91358: 					if (!_0087())
+91359: 					{
+91360: 						goto IL_0245;
+91361: 					}
+91362: 					goto IL_056b;
+91363: 				case 39:
+91364: 					array[6] = 201;
+91365: 					num = 276;
+91366: 					goto case 276;
+91367: 				case 276:
+91368: 					array[6] = 39;
+91369: 					num = 367;
+91370: 					goto case 367;
+91371: 				case 367:
+91372: 					array[6] = 86;
+91373: 					num = 124;
+91374: 					goto case 124;
+91375: 				case 124:
+91376: 					array[6] = 201;
+91377: 					num = 396;
+91378: 					goto IL_01c1;
+91379: 				case 30:
+91380: 					goto IL_179d;
+91381: 				case 76:
+91382: 					goto IL_17ac;
+91383: 				case 397:
+91384: 					goto IL_17b0;
+91385: 				case 33:
+91386: 					goto IL_17bf;
+91387: 				case 352:
+91388: 					goto IL_17d1;
+91389: 				case 171:
+91390: 					goto IL_17e3;
+91391: 				case 7:
+91392: 					array3[6] = (byte)num2;
+91393: 					goto case 242;
+91394: 				case 242:
+91395: 					num2 = 149;
+91396: 					num = 149;
+91397: 					goto case 149;
+91398: 				case 149:
+91399: 					array3[6] = (byte)num2;
+91400: 					goto case 410;
+91401: 				case 410:
+91402: 					array3[6] = 121;
+91403: 					goto case 282;
+91404: 				case 282:
+91405: 					num2 = 163;
+91406: 					num = 0;
+91407: 					goto case 0;
+91408: 				case 0:
+91409: 					array3[6] = (byte)num2;
+91410: 					num = 71;
+91411: 					goto case 71;
+91412: 				case 71:
+91413: 					array3[6] = 228;
+91414: 					num = 393;
+91415: 					goto IL_00c6;
+91416: 				case 302:
+91417: 					goto IL_1f13;
+91418: 				case 331:
+91419: 					goto IL_1f2b;
+91420: 				case 2:
+91421: 					goto IL_1f36;
+91422: 				case 395:
+91423: 					goto IL_1f46;
+91424: 				case 215:
+91425: 					goto IL_1f59;
+91426: 				case 113:
+91427: 					goto IL_1f69;
+91428: 				case 269:
+91429: 					goto IL_1f84;
+91430: 				case 122:
+91431: 				case 257:
+91432: 					goto IL_1f8a;
+91433: 				case 201:
+91434: 					array6[11] = publicKeyToken[5];
+91435: 					num = 148;
+91436: 					goto case 148;
+91437: 				case 148:
+91438: 					array6[13] = publicKeyToken[6];
+91439: 					num = 209;
+91440: 					goto case 209;
+91441: 				case 209:
+91442: 					array6[15] = publicKeyToken[7];
+91443: 					num = 27;
+91444: 					goto IL_1fc4;
+91445: 				case 27:
+91446: 					goto IL_1fc4;
+91447: 				case 51:
+91448: 					goto IL_1fc9;
+91449: 				case 316:
+91450: 					goto IL_1fe4;
+91451: 				case 109:
+91452: 				case 184:
+91453: 					goto IL_200a;
+91454: 				case 225:
+91455: 					goto IL_201e;
+91456: 				case 80:
+91457: 					goto IL_202b;
+91458: 				case 36:
+91459: 					goto IL_2035;
+91460: 				case 424:
+91461: 					goto IL_2052;
+91462: 				case 394:
+91463: 					goto IL_206e;
+91464: 				case 181:
+91465: 					goto IL_2096;
+91466: 				case 196:
+91467: 					goto IL_20ac;
+91468: 				case 141:
+91469: 				case 399:
+91470: 					goto IL_20b6;
+91471: 				case 309:
+91472: 					goto IL_20c0;
+91473: 				case 104:
+91474: 					goto IL_20d5;
+91475: 				case 119:
+91476: 					goto IL_20f0;
+91477: 				case 287:
+91478: 					goto IL_2101;
+91479: 				case 260:
+91480: 					goto IL_210f;
+91481: 				case 402:
+91482: 					goto IL_2125;
+91483: 				case 187:
+91484: 					goto IL_2137;
+91485: 				case 118:
+91486: 					goto IL_2147;
+91487: 				case 114:
+91488: 					goto IL_2153;
+91489: 				case 193:
+91490: 					goto IL_216e;
+91491: 				case 81:
+91492: 					if (IntPtr.Size == 4)
+91493: 					{
+91494: 						num = 380;
+91495: 						goto case 380;
+91496: 					}
+91497: 					_008B_0090_008B(_008B_0091_008B, new IntPtr(_008B_0091_0090 + num5 + 4L), array4, Convert.ToUInt32(num6), out _008B_0091_008C);
+91498: 					num = 411;
+91499: 					goto case 411;
+91500: 				case 380:
+91501: 					_008B_0090_008B(_008B_0091_008B, new IntPtr(_008B_0091_0091 + num5 + 4), array4, Convert.ToUInt32(num6), out _008B_0091_008C);
+91502: 					num = 423;
+91503: 					goto case 411;
+91504: 				case 411:
+91505: 				case 423:
+91506: 					array5 = _008B_0090_008F(array4);
+91507: 					num = 292;
+91508: 					goto case 292;
+91509: 				case 292:
+91510: 					text = Encoding.Unicode.GetString(array5, 0, array5.Length);
+91511: 					goto case 48;
+91512: 				case 48:
+91513: 					_008B_0091_008E[num7] = _008B_0091_008F;
+91514: 					num = 41;
+91515: 					goto case 41;
+91516: 				case 41:
+91517: 					((string[])_008B_0091_008D)[_008B_0091_008F] = text;
+91518: 					goto case 32;
+91519: 				case 32:
+91520: 					_008B_0091_008F++;
+91521: 					num = 430;
+91522: 					goto case 430;
+91523: 				case 97:
+91524: 					goto IL_224b;
+91525: 				case 430:
+91526: 					{
+91527: 						return text;
+91528: 					}
+91529: 					IL_15fa:
+91530: 					num12 = (uint)num13;
+91531: 					num = 245;
+91532: 					goto case 245;
+91533: 					IL_0d4c:
+91534: 					num19 = num15 ^ num11;
+91535: 					goto case 270;
+91536: 				}
+91537: 				break;
+91538: 			}
+91539: 			goto IL_006a;
+91540: 			IL_0a4d:
+91541: 			num4 = 89;
+91542: 			goto IL_0a51;
+91543: 			IL_04b2:
+91544: 			num2 = 120;
+91545: 			num = 13;
+91546: 			goto IL_04bc;
+91547: 			IL_04bc:
+91548: 			array3[1] = (byte)num2;
+91549: 			goto IL_04c5;
+91550: 			IL_0a44:
+91551: 			array[12] = (byte)num4;
+91552: 			goto IL_0a4d;
+91553: 			IL_0a51:
+91554: 			array[12] = (byte)num4;
+91555: 			goto IL_0a75;
+91556: 			IL_0a37:
+91557: 			num4 = 130;
+91558: 			num = 377;
+91559: 			goto IL_0a44;
+91560: 			IL_0a2f:
+91561: 			array[12] = (byte)num3;
+91562: 			goto IL_0a37;
+91563: 			IL_0a2c:
+91564: 			num3 = 95;
+91565: 			goto IL_0a2f;
+91566: 			IL_033c:
+91567: 			array[12] = 152;
+91568: 			num = 415;
+91569: 			if (_0088())
+91570: 			{
+91571: 				goto IL_0358;
+91572: 			}
+91573: 			goto IL_0a2c;
+91574: 			IL_032a:
+91575: 			array[11] = 129;
+91576: 			num = 130;
+91577: 			goto IL_033c;
+91578: 			IL_0318:
+91579: 			array[11] = 155;
+91580: 			num = 403;
+91581: 			goto IL_032a;
+91582: 			IL_0428:
+91583: 			array[31] = 134;
+91584: 			num = 142;
+91585: 			goto IL_043a;
+91586: 			IL_03ff:
+91587: 			array[31] = 111;
+91588: 			num = 306;
+91589: 			goto IL_040e;
+91590: 			IL_041a:
+91591: 			array[31] = (byte)num3;
+91592: 			num = 43;
+91593: 			goto IL_0428;
+91594: 			IL_0309:
+91595: 			array[11] = 111;
+91596: 			num = 26;
+91597: 			goto IL_0318;
+91598: 			IL_02f7:
+91599: 			array[11] = 140;
+91600: 			num = 35;
+91601: 			goto IL_0309;
+91602: 			IL_02e5:
+91603: 			array[11] = 134;
+91604: 			num = 358;
+91605: 			goto IL_02f7;
+91606: 			IL_02dd:
+91607: 			array[10] = (byte)num3;
+91608: 			goto IL_02e5;
+91609: 			IL_224b:
+91610: 			return ((string[])_008B_0091_008D)[_008B_0091_008E[num7]];
+91611: 			IL_09bf:
+91612: 			array6[1] = publicKeyToken[0];
+91613: 			num = 53;
+91614: 			if (!_0088())
+91615: 			{
+91616: 				goto IL_184c;
+91617: 			}
+91618: 			goto IL_224b;
+91619: 			IL_17d1:
+91620: 			array[5] = 184;
+91621: 			num = 171;
+91622: 			goto IL_17e3;
+91623: 			IL_1616:
+91624: 			symmetricAlgorithm.Mode = CipherMode.CBC;
+91625: 			num = 227;
+91626: 			if (!_0087())
+91627: 			{
+91628: 				goto IL_0d86;
+91629: 			}
+91630: 			goto IL_184c;
+91631: 			IL_0d9f:
+91632: 			num8++;
+91633: 			num = 138;
+91634: 			if (_0088())
+91635: 			{
+91636: 				goto IL_05bb;
+91637: 			}
+91638: 			goto IL_08cf;
+91639: 			IL_0d86:
+91640: 			array8[num13 + 3] = (byte)((num19 & 0xFF000000u) >> 24);
+91641: 			num = 406;
+91642: 			goto IL_0d9f;
+91643: 			IL_1609:
+91644: 			symmetricAlgorithm = _008B_008F_0098();
+91645: 			num = 19;
+91646: 			goto IL_1616;
+91647: 			IL_060d:
+91648: 			num2 = 158;
+91649: 			goto IL_0614;
+91650: 			IL_216e:
+91651: 			if (_008B_0091_008A.Length == 0)
+91652: 			{
+91653: 				num = 170;
+91654: 				goto IL_15b6;
+91655: 			}
+91656: 			goto IL_2153;
+91657: 			IL_05ac:
+91658: 			array3[11] = (byte)num2;
+91659: 			num = 52;
+91660: 			goto IL_05bb;
+91661: 			IL_15b6:
+91662: 			BinaryReader binaryReader = new BinaryReader(typeof(_0090_009B).Assembly.GetManifestResourceStream("867cf343-c42d-4756-bcac-bef7f44beea9"));
+91663: 			num = 219;
+91664: 			goto IL_155d;
+91665: 			IL_0266:
+91666: 			num3 = 158;
+91667: 			num = 366;
+91668: 			goto IL_0272;
+91669: 			IL_0257:
+91670: 			array[9] = 48;
+91671: 			num = 183;
+91672: 			goto IL_0266;
+91673: 			IL_0245:
+91674: 			array[8] = 174;
+91675: 			num = 221;
+91676: 			goto IL_0257;
+91677: 			IL_155d:
+91678: 			binaryReader.BaseStream.Position = 0L;
+91679: 			num = 357;
+91680: 			goto IL_0e27;
+91681: 			IL_0237:
+91682: 			array[8] = (byte)num3;
+91683: 			num = 279;
+91684: 			goto IL_0245;
+91685: 			IL_022e:
+91686: 			num3 = 96;
+91687: 			num = 233;
+91688: 			goto IL_0237;
+91689: 			IL_0220:
+91690: 			array[8] = (byte)num3;
+91691: 			num = 274;
+91692: 			goto IL_022e;
+91693: 			IL_0217:
+91694: 			num3 = 86;
+91695: 			num = 271;
+91696: 			goto IL_0220;
+91697: 			IL_0208:
+91698: 			array[8] = 124;
+91699: 			num = 94;
+91700: 			goto IL_0217;
+91701: 			IL_01f9:
+91702: 			array[7] = (byte)num4;
+91703: 			num = 173;
+91704: 			goto IL_0208;
+91705: 			IL_01ec:
+91706: 			num4 = 158;
+91707: 			num = 280;
+91708: 			goto IL_01f9;
+91709: 			IL_03b7:
+91710: 			array[30] = (byte)num3;
+91711: 			goto IL_03bf;
+91712: 			IL_01d3:
+91713: 			array[7] = 43;
+91714: 			num = 386;
+91715: 			if (_0087())
+91716: 			{
+91717: 				goto IL_01ec;
+91718: 			}
+91719: 			goto IL_040e;
+91720: 			IL_01c1:
+91721: 			array[7] = 149;
+91722: 			num = 369;
+91723: 			goto IL_01d3;
+91724: 			IL_01a8:
+91725: 			array[6] = (byte)num4;
+91726: 			num = 39;
+91727: 			if (!_0087())
+91728: 			{
+91729: 				goto IL_01c1;
+91730: 			}
+91731: 			goto IL_184c;
+91732: 			IL_019e:
+91733: 			num4 = 105;
+91734: 			num = 23;
+91735: 			goto IL_01a8;
+91736: 			IL_018a:
+91737: 			num2 = 58;
+91738: 			num = 74;
+91739: 			if (_0087())
+91740: 			{
+91741: 				goto IL_00ad;
+91742: 			}
+91743: 			goto IL_019e;
+91744: 			IL_017b:
+91745: 			array3[9] = 102;
+91746: 			num = 60;
+91747: 			goto IL_018a;
+91748: 			IL_0169:
+91749: 			array3[9] = 151;
+91750: 			num = 66;
+91751: 			goto IL_017b;
+91752: 			IL_015a:
+91753: 			array3[9] = (byte)num2;
+91754: 			num = 354;
+91755: 			goto IL_0169;
+91756: 			IL_014d:
+91757: 			num2 = 167;
+91758: 			num = 363;
+91759: 			goto IL_015a;
+91760: 			IL_0144:
+91761: 			array3[8] = (byte)num2;
+91762: 			goto IL_014d;
+91763: 			IL_013d:
+91764: 			num2 = 213;
+91765: 			goto IL_0144;
+91766: 			IL_05bb:
+91767: 			array3[11] = 57;
+91768: 			num = 345;
+91769: 			goto IL_05ca;
+91770: 			IL_1fe4:
+91771: 			_008B_0090_008B(_008B_0091_008B, new IntPtr(_008B_0091_0091 + num5), array4, 4u, out _008B_0091_008C);
+91772: 			num = 109;
+91773: 			goto IL_200a;
+91774: 			IL_012e:
+91775: 			array3[8] = (byte)num2;
+91776: 			num = 344;
+91777: 			goto IL_013d;
+91778: 			IL_011d:
+91779: 			num2 = 101;
+91780: 			num = 195;
+91781: 			if (_0088())
+91782: 			{
+91783: 				goto IL_00e5;
+91784: 			}
+91785: 			goto IL_012e;
+91786: 			IL_055d:
+91787: 			num3 = 24;
+91788: 			num = 429;
+91789: 			goto IL_02dd;
+91790: 			IL_1fc9:
+91791: 			array4 = new byte[num6];
+91792: 			num = 81;
+91793: 			if (!_0088())
+91794: 			{
+91795: 				goto IL_184c;
+91796: 			}
+91797: 			goto IL_1fc4;
+91798: 			IL_200a:
+91799: 			num6 = BitConverter.ToInt32(array4, 0);
+91800: 			goto IL_1fc9;
+91801: 			IL_05e0:
+91802: 			array3[12] = 117;
+91803: 			num = 189;
+91804: 			goto IL_05ef;
+91805: 			IL_05ef:
+91806: 			array3[12] = 114;
+91807: 			num = 379;
+91808: 			goto IL_05fe;
+91809: 			IL_201e:
+91810: 			if (IntPtr.Size != 4)
+91811: 			{
+91812: 				_008B_0090_008B(_008B_0091_008B, new IntPtr(_008B_0091_0090 + num5), array4, 4u, out _008B_0091_008C);
+91813: 				num = 184;
+91814: 				goto IL_200a;
+91815: 			}
+91816: 			num = 316;
+91817: 			goto IL_1fe4;
+91818: 			IL_2052:
+91819: 			array4 = new byte[4];
+91820: 			goto IL_201e;
+91821: 			IL_2035:
+91822: 			_0091_0086 obj = default(_0091_0086);
+91823: 			_008B_0091_008B = _008B_0090_008C((uint)obj, 1, (uint)Process.GetCurrentProcess().Id);
+91824: 			num = 424;
+91825: 			goto IL_2052;
+91826: 			IL_202b:
+91827: 			obj = (_0091_0086)16;
+91828: 			num = 36;
+91829: 			goto IL_2035;
+91830: 			IL_05d1:
+91831: 			array3[12] = (byte)num2;
+91832: 			num = 58;
+91833: 			goto IL_05e0;
+91834: 			IL_206e:
+91835: 			if (_008B_0091_008B == IntPtr.Zero)
+91836: 			{
+91837: 				num = 80;
+91838: 				if (!_0087())
+91839: 				{
+91840: 					goto IL_04a3;
+91841: 				}
+91842: 				goto IL_202b;
+91843: 			}
+91844: 			goto IL_2052;
+91845: 			IL_05ca:
+91846: 			num2 = 223;
+91847: 			goto IL_05d1;
+91848: 			IL_2096:
+91849: 			if (_008B_0091_008E[num7] <= 0)
+91850: 			{
+91851: 				num5 = BitConverter.ToInt32(_008B_0091_008A, P_0);
+91852: 				num = 394;
+91853: 				goto IL_206e;
+91854: 			}
+91855: 			num = 97;
+91856: 			if (!_0087())
+91857: 			{
+91858: 				goto IL_055d;
+91859: 			}
+91860: 			goto IL_224b;
+91861: 			IL_0f93:
+91862: 			num3 = 108;
+91863: 			num = 56;
+91864: 			if (!_0088())
+91865: 			{
+91866: 				goto IL_184c;
+91867: 			}
+91868: 			goto IL_2096;
+91869: 			IL_0f87:
+91870: 			array[3] = 152;
+91871: 			goto IL_0f93;
+91872: 			IL_0f79:
+91873: 			array[3] = (byte)num3;
+91874: 			num = 136;
+91875: 			goto IL_0f87;
+91876: 			IL_0f70:
+91877: 			num3 = 84;
+91878: 			num = 223;
+91879: 			goto IL_0f79;
+91880: 			IL_0790:
+91881: 			num3 = 217;
+91882: 			num = 172;
+91883: 			goto IL_0876;
+91884: 			IL_0787:
+91885: 			array[18] = 106;
+91886: 			goto IL_0790;
+91887: 			IL_077e:
+91888: 			array[18] = 68;
+91889: 			goto IL_0787;
+91890: 			IL_076f:
+91891: 			array[18] = 118;
+91892: 			num = 206;
+91893: 			goto IL_077e;
+91894: 			IL_0760:
+91895: 			array[18] = (byte)num4;
+91896: 			num = 159;
+91897: 			goto IL_076f;
+91898: 			IL_0753:
+91899: 			num4 = 129;
+91900: 			num = 140;
+91901: 			goto IL_0760;
+91902: 			IL_0706:
+91903: 			array[17] = (byte)num3;
+91904: 			num = 150;
+91905: 			goto IL_0714;
+91906: 			IL_06fd:
+91907: 			num3 = 115;
+91908: 			num = 285;
+91909: 			goto IL_0706;
+91910: 			IL_0a5c:
+91911: 			array[13] = 111;
+91912: 			num = 139;
+91913: 			if (!_0087())
+91914: 			{
+91915: 				goto IL_0a75;
+91916: 			}
+91917: 			goto IL_184c;
+91918: 			IL_0a75:
+91919: 			array[13] = 119;
+91920: 			num = 401;
+91921: 			goto IL_0a5c;
+91922: 			IL_06eb:
+91923: 			array[16] = 229;
+91924: 			num = 131;
+91925: 			goto IL_06fd;
+91926: 			IL_040e:
+91927: 			num3 = 222;
+91928: 			num = 234;
+91929: 			goto IL_041a;
+91930: 			IL_06dc:
+91931: 			array[16] = (byte)num4;
+91932: 			num = 333;
+91933: 			goto IL_06eb;
+91934: 			IL_06cf:
+91935: 			num4 = 197;
+91936: 			num = 365;
+91937: 			goto IL_06dc;
+91938: 			IL_06c6:
+91939: 			array[16] = (byte)num4;
+91940: 			goto IL_06cf;
+91941: 			IL_06c2:
+91942: 			num4 = 123;
+91943: 			goto IL_06c6;
+91944: 			IL_06b3:
+91945: 			array[15] = (byte)num4;
+91946: 			num = 16;
+91947: 			goto IL_06c2;
+91948: 			IL_06a9:
+91949: 			num4 = 85;
+91950: 			num = 22;
+91951: 			goto IL_06b3;
+91952: 			IL_06a0:
+91953: 			array[15] = 92;
+91954: 			goto IL_06a9;
+91955: 			IL_0cea:
+91956: 			array[15] = 148;
+91957: 			goto IL_06a0;
+91958: 			IL_0c1e:
+91959: 			array[15] = (byte)num3;
+91960: 			num = 178;
+91961: 			goto IL_0cea;
+91962: 			IL_0c12:
+91963: 			num3 = 151;
+91964: 			num = 116;
+91965: 			goto IL_0c1e;
+91966: 			IL_0c09:
+91967: 			array[14] = 68;
+91968: 			goto IL_0c12;
+91969: 			IL_0bf1:
+91970: 			array[29] = (byte)num3;
+91971: 			num = 222;
+91972: 			if (!_0088())
+91973: 			{
+91974: 				goto IL_0383;
+91975: 			}
+91976: 			goto IL_0c09;
+91977: 			IL_0beb:
+91978: 			num3 = 251;
+91979: 			goto IL_0bf1;
+91980: 			IL_0f57:
+91981: 			array[2] = 89;
+91982: 			num = 103;
+91983: 			if (_0088())
+91984: 			{
+91985: 				goto IL_0beb;
+91986: 			}
+91987: 			goto IL_0f70;
+91988: 			IL_0614:
+91989: 			array3[13] = (byte)num2;
+91990: 			goto IL_0839;
+91991: 			IL_0d32:
+91992: 			int num20 = num20 + 1;
+91993: 			num = 164;
+91994: 			goto IL_0d3e;
+91995: 			IL_0d18:
+91996: 			uint num21 = default(uint);
+91997: 			uint num22 = default(uint);
+91998: 			int num23 = default(int);
+91999: 			array8[num13 + num20] = (byte)((num21 & num22) >> num23);
+92000: 			num = 299;
+92001: 			goto IL_0d32;
+92002: 			IL_0d12:
+92003: 			num23 += 8;
+92004: 			goto IL_0d18;
+92005: 			IL_04c5:
+92006: 			num2 = 138;
+92007: 			num = 180;
+92008: 			goto IL_04d2;
+92009: 			IL_04d2:
+92010: 			array3[1] = (byte)num2;
+92011: 			num = 239;
+92012: 			goto IL_04e1;
+92013: 			IL_04e1:
+92014: 			num2 = 190;
+92015: 			num = 20;
+92016: 			goto IL_04ee;
+92017: 			IL_04ee:
+92018: 			array3[1] = (byte)num2;
+92019: 			num = 310;
+92020: 			goto IL_04fd;
+92021: 			IL_04fd:
+92022: 			array3[2] = 105;
+92023: 			goto IL_0506;
+92024: 			IL_0506:
+92025: 			array3[2] = 228;
+92026: 			_0088();
+92027: 			if (_0087())
+92028: 			{
+92029: 				num = 328;
+92030: 				if (_0088())
+92031: 				{
+92032: 					goto IL_0532;
+92033: 				}
+92034: 				goto IL_184c;
+92035: 			}
+92036: 			goto IL_20b6;
+92037: 			IL_085f:
+92038: 			num4 = 145;
+92039: 			num = 30;
+92040: 			if (_0088())
+92041: 			{
+92042: 				goto IL_0876;
+92043: 			}
+92044: 			goto IL_179d;
+92045: 			IL_0532:
+92046: 			array[10] = (byte)num4;
+92047: 			num = 341;
+92048: 			if (_0087())
+92049: 			{
+92050: 				goto IL_054b;
+92051: 			}
+92052: 			goto IL_0622;
+92053: 			IL_054b:
+92054: 			array[10] = 215;
+92055: 			num = 301;
+92056: 			goto IL_055d;
+92057: 			IL_0744:
+92058: 			array[17] = (byte)num4;
+92059: 			num = 237;
+92060: 			goto IL_0753;
+92061: 			IL_073a:
+92062: 			num4 = 82;
+92063: 			num = 392;
+92064: 			goto IL_0744;
+92065: 			IL_0721:
+92066: 			array[17] = (byte)num4;
+92067: 			num = 277;
+92068: 			if (_0088())
+92069: 			{
+92070: 				goto IL_0169;
+92071: 			}
+92072: 			goto IL_073a;
+92073: 			IL_0714:
+92074: 			num4 = 173;
+92075: 			num = 153;
+92076: 			goto IL_0721;
+92077: 			IL_0d06:
+92078: 			num22 <<= 8;
+92079: 			num = 156;
+92080: 			goto IL_0d12;
+92081: 			IL_084b:
+92082: 			num2 = 86;
+92083: 			num = 321;
+92084: 			if (_0088())
+92085: 			{
+92086: 				goto IL_085f;
+92087: 			}
+92088: 			goto IL_184c;
+92089: 			IL_0839:
+92090: 			array3[13] = 158;
+92091: 			num = 371;
+92092: 			goto IL_084b;
+92093: 			IL_0d3e:
+92094: 			if (num20 < num10)
+92095: 			{
+92096: 				if (num20 > 0)
+92097: 				{
+92098: 					num = 378;
+92099: 					goto IL_0d06;
+92100: 				}
+92101: 				goto IL_0d18;
+92102: 			}
+92103: 			num = 202;
+92104: 			goto IL_0d9f;
+92105: 			IL_0cda:
+92106: 			num20 = 0;
+92107: 			num = 62;
+92108: 			if (_0088())
+92109: 			{
+92110: 				goto IL_0cea;
+92111: 			}
+92112: 			goto IL_0d3e;
+92113: 			IL_0ccd:
+92114: 			num21 = num15 ^ num11;
+92115: 			num = 283;
+92116: 			goto IL_0cda;
+92117: 			IL_0f3f:
+92118: 			array[2] = (byte)num3;
+92119: 			num = 325;
+92120: 			if (_0088())
+92121: 			{
+92122: 				goto IL_0ccd;
+92123: 			}
+92124: 			goto IL_0f57;
+92125: 			IL_0f39:
+92126: 			num3 = 134;
+92127: 			goto IL_0f3f;
+92128: 			IL_0f2b:
+92129: 			array[2] = (byte)num3;
+92130: 			num = 72;
+92131: 			goto IL_0f39;
+92132: 			IL_0101:
+92133: 			array3[8] = 148;
+92134: 			num = 334;
+92135: 			if (_0087())
+92136: 			{
+92137: 				goto IL_011d;
+92138: 			}
+92139: 			goto IL_0f2b;
+92140: 			IL_0ddd:
+92141: 			array3[5] = (byte)num2;
+92142: 			num = 360;
+92143: 			if (_0087())
+92144: 			{
+92145: 				goto IL_184c;
+92146: 			}
+92147: 			goto IL_1f46;
+92148: 			IL_00e5:
+92149: 			array3[7] = 206;
+92150: 			num = 273;
+92151: 			if (!_0088())
+92152: 			{
+92153: 				goto IL_0101;
+92154: 			}
+92155: 			goto IL_0ddd;
+92156: 			IL_00dc:
+92157: 			array3[7] = (byte)num2;
+92158: 			goto IL_00e5;
+92159: 			IL_00d5:
+92160: 			num2 = 198;
+92161: 			goto IL_00dc;
+92162: 			IL_00c6:
+92163: 			array3[7] = 116;
+92164: 			num = 226;
+92165: 			goto IL_00d5;
+92166: 			IL_00ad:
+92167: 			array3[9] = (byte)num2;
+92168: 			num = 382;
+92169: 			if (!_0087())
+92170: 			{
+92171: 				goto IL_00c6;
+92172: 			}
+92173: 			goto IL_184c;
+92174: 			IL_0094:
+92175: 			array3[2] = 109;
+92176: 			num = 185;
+92177: 			if (_0088())
+92178: 			{
+92179: 				goto IL_00ad;
+92180: 			}
+92181: 			goto IL_184c;
+92182: 			IL_0085:
+92183: 			array3[2] = (byte)num2;
+92184: 			num = 351;
+92185: 			goto IL_0094;
+92186: 			IL_007b:
+92187: 			num2 = 98;
+92188: 			num = 158;
+92189: 			goto IL_0085;
+92190: 			IL_1f13:
+92191: 			num16 = 0u;
+92192: 			num = 398;
+92193: 			if (_0088())
+92194: 			{
+92195: 				goto IL_007b;
+92196: 			}
+92197: 			goto IL_184c;
+92198: 			IL_1f2b:
+92199: 			num15 = 0u;
+92200: 			num = 302;
+92201: 			goto IL_1f13;
+92202: 			IL_1f36:
+92203: 			int num24 = array2.Length / 4;
+92204: 			num = 331;
+92205: 			goto IL_1f2b;
+92206: 			IL_1f46:
+92207: 			array8 = new byte[array7.Length];
+92208: 			num = 2;
+92209: 			goto IL_1f36;
+92210: 			IL_1f59:
+92211: 			num9 = array7.Length / 4;
+92212: 			num = 395;
+92213: 			goto IL_1f46;
+92214: 			IL_1f69:
+92215: 			num10 = array7.Length % 4;
+92216: 			num = 215;
+92217: 			goto IL_1f59;
+92218: 			IL_0622:
+92219: 			if (_008B_0091_008A.Length > 0)
+92220: 			{
+92221: 				num = 388;
+92222: 				goto IL_0635;
+92223: 			}
+92224: 			goto IL_07f1;
+92225: 			IL_07f1:
+92226: 			memoryStream.Close();
+92227: 			num = 263;
+92228: 			goto IL_07fe;
+92229: 			IL_07fe:
+92230: 			cryptoStream.Close();
+92231: 			num = 295;
+92232: 			goto IL_080b;
+92233: 			IL_080b:
+92234: 			binaryReader.Close();
+92235: 			num = 167;
+92236: 			if (!_0088())
+92237: 			{
+92238: 				goto IL_0822;
+92239: 			}
+92240: 			goto IL_200a;
+92241: 			IL_0822:
+92242: 			array7 = _008B_0091_008A;
+92243: 			num = 113;
+92244: 			if (!_0087())
+92245: 			{
+92246: 				goto IL_0839;
+92247: 			}
+92248: 			goto IL_1f69;
+92249: 			IL_179d:
+92250: 			array[5] = (byte)num4;
+92251: 			num = 76;
+92252: 			goto IL_17ac;
+92253: 			IL_0635:
+92254: 			_008B_0091_008D = new string[_008B_0091_008A.Length / 4 + 1];
+92255: 			num = 190;
+92256: 			if (_0088())
+92257: 			{
+92258: 				goto IL_065a;
+92259: 			}
+92260: 			goto IL_184c;
+92261: 			IL_065a:
+92262: 			num3 = 226;
+92263: 			goto IL_0660;
+92264: 			IL_0660:
+92265: 			array[20] = (byte)num3;
+92266: 			num = 146;
+92267: 			goto IL_066e;
+92268: 			IL_066e:
+92269: 			array[21] = 88;
+92270: 			num = 108;
+92271: 			goto IL_067d;
+92272: 			IL_067d:
+92273: 			num4 = 83;
+92274: 			num = 346;
+92275: 			goto IL_0687;
+92276: 			IL_0687:
+92277: 			array[21] = (byte)num4;
+92278: 			num = 375;
+92279: 			if (!_0087())
+92280: 			{
+92281: 				goto IL_06a0;
+92282: 			}
+92283: 			goto IL_07a1;
+92284: 			IL_07a1:
+92285: 			array[21] = 103;
+92286: 			num = 238;
+92287: 			goto IL_07b0;
+92288: 			IL_07b0:
+92289: 			num3 = 67;
+92290: 			num = 349;
+92291: 			goto IL_07b9;
+92292: 			IL_07b9:
+92293: 			array[21] = (byte)num3;
+92294: 			num = 342;
+92295: 			goto IL_07c7;
+92296: 			IL_07c7:
+92297: 			array[22] = 99;
+92298: 			num = 413;
+92299: 			if (_0088())
+92300: 			{
+92301: 				goto IL_07e0;
+92302: 			}
+92303: 			goto IL_184c;
+92304: 			IL_1f84:
+92305: 			if (P_0 == -1)
+92306: 			{
+92307: 				num = 144;
+92308: 				goto IL_1609;
+92309: 			}
+92310: 			goto IL_1f69;
+92311: 			IL_0e27:
+92312: 			array7 = binaryReader.ReadBytes((int)binaryReader.BaseStream.Length);
+92313: 			goto IL_0e3d;
+92314: 			IL_0e3d:
+92315: 			array = new byte[32];
+92316: 			num = 293;
+92317: 			goto IL_0e4e;
+92318: 			IL_0e4e:
+92319: 			array[0] = 177;
+92320: 			num = 229;
+92321: 			goto IL_0e60;
+92322: 			IL_0e60:
+92323: 			array[0] = 92;
+92324: 			num = 409;
+92325: 			if (_0088())
+92326: 			{
+92327: 				goto IL_056b;
+92328: 			}
+92329: 			goto IL_0e79;
+92330: 			IL_0e79:
+92331: 			array[0] = 146;
+92332: 			goto IL_0e85;
+92333: 			IL_0e85:
+92334: 			array[0] = 172;
+92335: 			num = 151;
+92336: 			goto IL_0e97;
+92337: 			IL_0e97:
+92338: 			num3 = 218;
+92339: 			goto IL_0e9d;
+92340: 			IL_0e9d:
+92341: 			array[0] = (byte)num3;
+92342: 			goto IL_0ea5;
+92343: 			IL_0ea5:
+92344: 			num4 = 163;
+92345: 			goto IL_0eac;
+92346: 			IL_0eac:
+92347: 			array[1] = (byte)num4;
+92348: 			num = 275;
+92349: 			goto IL_0ebb;
+92350: 			IL_0ebb:
+92351: 			num4 = 99;
+92352: 			num = 95;
+92353: 			goto IL_0ec5;
+92354: 			IL_0ec5:
+92355: 			array[1] = (byte)num4;
+92356: 			num = 336;
+92357: 			goto IL_0ed4;
+92358: 			IL_0ed4:
+92359: 			num3 = 142;
+92360: 			num = 4;
+92361: 			goto IL_0ee0;
+92362: 			IL_0ee0:
+92363: 			array[1] = (byte)num3;
+92364: 			num = 252;
+92365: 			goto IL_0eee;
+92366: 			IL_0eee:
+92367: 			num4 = 89;
+92368: 			goto IL_0ef2;
+92369: 			IL_0ef2:
+92370: 			array[1] = (byte)num4;
+92371: 			goto IL_0efb;
+92372: 			IL_0efb:
+92373: 			num3 = 245;
+92374: 			num = 75;
+92375: 			goto IL_0f07;
+92376: 			IL_0f07:
+92377: 			array[1] = (byte)num3;
+92378: 			num = 294;
+92379: 			goto IL_0f15;
+92380: 			IL_0f15:
+92381: 			num3 = 162;
+92382: 			num = 213;
+92383: 			if (!_0087())
+92384: 			{
+92385: 				goto IL_0a5c;
+92386: 			}
+92387: 			goto IL_0f2b;
+92388: 			IL_006a:
+92389: 			int num25 = num25 + 1;
+92390: 			num = 257;
+92391: 			goto IL_1f8a;
+92392: 			IL_05fe:
+92393: 			array3[12] = 104;
+92394: 			num = 332;
+92395: 			goto IL_060d;
+92396: 			IL_1f8a:
+92397: 			if (num25 < array6.Length)
+92398: 			{
+92399: 				array2[num25] ^= array6[num25];
+92400: 				goto IL_006a;
+92401: 			}
+92402: 			goto IL_1f84;
+92403: 			IL_1fc4:
+92404: 			num25 = 0;
+92405: 			goto IL_1f8a;
+92406: 			IL_09af:
+92407: 			if (publicKeyToken.Length > 0)
+92408: 			{
+92409: 				num = 194;
+92410: 				goto IL_09bf;
+92411: 			}
+92412: 			goto IL_1fc4;
+92413: 			IL_03f1:
+92414: 			array[31] = (byte)num3;
+92415: 			num = 174;
+92416: 			goto IL_03ff;
+92417: 			IL_03e8:
+92418: 			num3 = 104;
+92419: 			num = 244;
+92420: 			goto IL_03f1;
+92421: 			IL_03da:
+92422: 			array[30] = (byte)num3;
+92423: 			num = 250;
+92424: 			goto IL_03e8;
+92425: 			IL_03ce:
+92426: 			num3 = 198;
+92427: 			num = 86;
+92428: 			goto IL_03da;
+92429: 			IL_03bf:
+92430: 			array[30] = 124;
+92431: 			num = 368;
+92432: 			goto IL_03ce;
+92433: 			IL_17bf:
+92434: 			array[5] = 164;
+92435: 			num = 352;
+92436: 			goto IL_17d1;
+92437: 			IL_09a2:
+92438: 			if (publicKeyToken != null)
+92439: 			{
+92440: 				num = 87;
+92441: 				goto IL_09af;
+92442: 			}
+92443: 			goto IL_1fc4;
+92444: 			IL_0922:
+92445: 			array3[15] = 167;
+92446: 			num = 298;
+92447: 			goto IL_0934;
+92448: 			IL_0910:
+92449: 			array3[14] = 228;
+92450: 			num = 199;
+92451: 			goto IL_0922;
+92452: 			IL_210f:
+92453: 			Assembly assembly = default(Assembly);
+92454: 			IntPtr hINSTANCE = Marshal.GetHINSTANCE(assembly.GetModules()[0]);
+92455: 			num = 402;
+92456: 			goto IL_2125;
+92457: 			IL_2101:
+92458: 			if (IntPtr.Size == 4)
+92459: 			{
+92460: 				num = 260;
+92461: 				goto IL_210f;
+92462: 			}
+92463: 			goto IL_2137;
+92464: 			IL_20f0:
+92465: 			assembly = typeof(_0090_009B).Assembly;
+92466: 			goto IL_2101;
+92467: 			IL_20d5:
+92468: 			_008B_0091_008E = new int[_008B_0091_008A.Length / 4 + 1];
+92469: 			num = 119;
+92470: 			goto IL_20f0;
+92471: 			IL_20c0:
+92472: 			_008B_0091_008D = new string[_008B_0091_008A.Length / 4 + 1];
+92473: 			goto IL_20d5;
+92474: 			IL_17e3:
+92475: 			array[6] = 88;
+92476: 			goto IL_019e;
+92477: 			IL_0901:
+92478: 			array3[14] = 33;
+92479: 			num = 217;
+92480: 			goto IL_0910;
+92481: 			IL_0a14:
+92482: 			num23 = 0;
+92483: 			num = 77;
+92484: 			if (!_0088())
+92485: 			{
+92486: 				goto IL_184c;
+92487: 			}
+92488: 			goto IL_1f36;
+92489: 			IL_0a0d:
+92490: 			num22 = 255u;
+92491: 			goto IL_0a14;
+92492: 			IL_09dc:
+92493: 			num16 = (uint)((array2[num12 + 3] << 24) | (array2[num12 + 2] << 16) | (array2[num12 + 1] << 8) | array2[num12]);
+92494: 			num = 338;
+92495: 			goto IL_0a0d;
+92496: 			IL_08eb:
+92497: 			int num26 = default(int);
+92498: 			num12 = (uint)(num26 * 4);
+92499: 			num = 31;
+92500: 			if (!_0087())
+92501: 			{
+92502: 				goto IL_0901;
+92503: 			}
+92504: 			goto IL_09dc;
+92505: 			IL_08e5:
+92506: 			num13 = num8 * 4;
+92507: 			goto IL_08eb;
+92508: 			IL_17ac:
+92509: 			num4 = 105;
+92510: 			goto IL_17b0;
+92511: 			IL_2153:
+92512: 			num7 = P_0 / 4;
+92513: 			num = 181;
+92514: 			goto IL_2096;
+92515: 			IL_2147:
+92516: 			IntPtr hINSTANCE2 = default(IntPtr);
+92517: 			_008B_0091_0090 = hINSTANCE2.ToInt64();
+92518: 			goto IL_2153;
+92519: 			IL_2137:
+92520: 			hINSTANCE2 = Marshal.GetHINSTANCE(assembly.GetModules()[0]);
+92521: 			goto IL_2147;
+92522: 			IL_2125:
+92523: 			_008B_0091_0091 = hINSTANCE.ToInt32();
+92524: 			num = 187;
+92525: 			goto IL_2137;
+92526: 			IL_07e0:
+92527: 			num12 = 0u;
+92528: 			num = 166;
+92529: 			goto IL_07e9;
+92530: 			IL_07e9:
+92531: 			num8 = 0;
+92532: 			goto IL_08cf;
+92533: 			IL_0987:
+92534: 			publicKeyToken = typeof(_0090_009B).Assembly.GetName().GetPublicKeyToken();
+92535: 			goto IL_09a2;
+92536: 			IL_097e:
+92537: 			array6 = array3;
+92538: 			num = 14;
+92539: 			goto IL_0987;
+92540: 			IL_096f:
+92541: 			array3[15] = 66;
+92542: 			num = 251;
+92543: 			goto IL_097e;
+92544: 			IL_0960:
+92545: 			array3[15] = 94;
+92546: 			num = 179;
+92547: 			goto IL_096f;
+92548: 			IL_0951:
+92549: 			array3[15] = (byte)num2;
+92550: 			num = 126;
+92551: 			goto IL_0960;
+92552: 			IL_0947:
+92553: 			num2 = 126;
+92554: 			num = 169;
+92555: 			goto IL_0951;
+92556: 			IL_093e:
+92557: 			array3[15] = (byte)num2;
+92558: 			goto IL_0947;
+92559: 			IL_0934:
+92560: 			num2 = 98;
+92561: 			num = 133;
+92562: 			goto IL_093e;
+92563: 			IL_20b6:
+92564: 			if (_008B_0091_008A.Length > 0)
+92565: 			{
+92566: 				goto IL_20c0;
+92567: 			}
+92568: 			goto IL_20f0;
+92569: 			IL_20ac:
+92570: 			_008B_0091_008A = array8;
+92571: 			goto IL_20b6;
+92572: 			IL_17b0:
+92573: 			array[5] = (byte)num4;
+92574: 			num = 33;
+92575: 			goto IL_17bf;
+92576: 			IL_08cf:
+92577: 			if (num8 < num9)
+92578: 			{
+92579: 				num26 = num8 % num24;
+92580: 				num = 266;
+92581: 				goto IL_08e5;
+92582: 			}
+92583: 			num = 196;
+92584: 			goto IL_20ac;
+92585: 			IL_08b9:
+92586: 			num3 = 215;
+92587: 			num = 356;
+92588: 			if (_0087())
+92589: 			{
+92590: 				goto IL_02b3;
+92591: 			}
+92592: 			goto IL_08cf;
+92593: 			IL_08aa:
+92594: 			array[19] = (byte)num4;
+92595: 			num = 259;
+92596: 			goto IL_08b9;
+92597: 			IL_089d:
+92598: 			num4 = 132;
+92599: 			num = 391;
+92600: 			goto IL_08aa;
+92601: 			IL_088e:
+92602: 			array[19] = (byte)num4;
+92603: 			num = 370;
+92604: 			goto IL_089d;
+92605: 			IL_0884:
+92606: 			num4 = 120;
+92607: 			num = 90;
+92608: 			goto IL_088e;
+92609: 			IL_0876:
+92610: 			array[18] = (byte)num3;
+92611: 			num = 155;
+92612: 			goto IL_0884;
+92613: 			IL_057a:
+92614: 			array3[11] = 170;
+92615: 			num = 203;
+92616: 			goto IL_058c;
+92617: 			IL_058c:
+92618: 			num2 = 114;
+92619: 			goto IL_0590;
+92620: 			IL_0590:
+92621: 			array3[11] = (byte)num2;
+92622: 			num = 214;
+92623: 			goto IL_059f;
+92624: 			IL_059f:
+92625: 			num2 = 245;
+92626: 			num = 265;
+92627: 			goto IL_05ac;
+92628: 		}

@@ -1,0 +1,25 @@
+PASS shared primitive reuse: frozen P793 outputs/spiral86 samples, spiral88 zero-wind circle
+PASS holding-w0-t1 left/right, auxiliary, XE/YE, VOR/NDB all-direction
+PASS holding-w0-t1.5 left/right, auxiliary, XE/YE, VOR/NDB all-direction
+PASS holding-w56-t1 left/right, auxiliary, XE/YE, VOR/NDB all-direction
+PASS holding-w56-t1.5 left/right, auxiliary, XE/YE, VOR/NDB all-direction
+PASS base-VOR-time-w0 mirror, phi, facility, width, repeatability, auxiliary
+PASS base-VOR-time-w56 mirror, phi, facility, width, repeatability, auxiliary
+PASS base-VOR-distance-w0 mirror, phi, facility, width, repeatability, auxiliary
+PASS base-VOR-distance-w56 mirror, phi, facility, width, repeatability, auxiliary
+PASS base-NDB-time-w0 mirror, phi, facility, width, repeatability, auxiliary
+PASS base-NDB-time-w56 mirror, phi, facility, width, repeatability, auxiliary
+PASS base-NDB-distance-w0 mirror, phi, facility, width, repeatability, auxiliary
+PASS base-NDB-distance-w56 mirror, phi, facility, width, repeatability, auxiliary
+PASS 45-w0-t1 mirror, time leg, boundary, auxiliary, repeatability
+PASS 45-w0-t1.5 mirror, time leg, boundary, auxiliary, repeatability
+PASS 80-w0 mirror, fixed 10v leg, boundary, auxiliary, repeatability
+PASS 45-w56-t1 mirror, time leg, boundary, auxiliary, repeatability
+PASS 45-w56-t1.5 mirror, time leg, boundary, auxiliary, repeatability
+PASS 80-w56 mirror, fixed 10v leg, boundary, auxiliary, repeatability
+PASS envelope-nested saved, reorder area, ignores bulge/closed
+PASS envelope-overlap saved, reorder area, ignores bulge/closed
+PASS envelope-crossing saved, reorder area, ignores bulge/closed
+PASS envelope single/cancel/empty/Line/Circle; collinear cycle saved without correction
+PASS writer label quirks/bounds, XE/YE opposite baselines, omni offset/mirror/metadata, empty/cancel; nominal arc endpoint radii
+PASS assertions=56545; recovery-only fixtures; no original DLL/AutoCAD execution

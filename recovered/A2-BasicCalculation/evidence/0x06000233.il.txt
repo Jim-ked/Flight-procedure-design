@@ -1,0 +1,38 @@
+METHOD 06000233 \x88\x9c.\x88\x9b::\x98\x86 RVA=1AD50 file=18F50
+IL_0000: ldc.i4.1 
+IL_0001: call 0x06000247 \x88\x9c.\x88\x9b::\x87\x96
+IL_0006: brtrue.s 57
+IL_0008: pop 
+IL_0009: ldarg.0 
+IL_000A: ldfld 0x0400011E \x88\x9c.\x88\x9b::\x9c\x92
+IL_000F: callvirt 0x06000854 \x8f\x99.\x8f\x98::\x8b\x8c\x8a
+IL_0014: stloc.0 
+IL_0015: ldarg.0 
+IL_0016: ldfld 0x040000CB \x88\x9c.\x88\x9b::\x99\x8a
+IL_001B: ldc.i4 1984
+IL_0020: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0025: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_002A: stloc.1 
+IL_002B: br.s 58
+IL_002D: pop 
+IL_002E: ldloc.0 
+IL_002F: ldfld 0x04000751 \x8e\x9c.\x8e\x9b::\x8a\x9d\x9a
+IL_0034: ldloc.0 
+IL_0035: ldfld 0x0400074F \x8e\x9c.\x8e\x9b::\x8a\x9d\x98
+IL_003A: add 
+IL_003B: ldloc.1 
+IL_003C: mul 
+IL_003D: ldc.r8 3.6
+IL_0046: div 
+IL_0047: stloc.2 
+IL_0048: ldarg.0 
+IL_0049: ldfld 0x04000120 \x88\x9c.\x88\x9b::\x9c\x94
+IL_004E: ldloc.2 
+IL_004F: call 0x0A0001B8 System.Math::Round
+IL_0054: stloc.3 
+IL_0055: ldloca.s local(0x0003)
+IL_0057: call 0x0A0001B7 System.Double::ToString
+IL_005C: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0061: ldloc.2 
+IL_0062: ret 
+

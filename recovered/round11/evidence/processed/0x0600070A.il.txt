@@ -1,0 +1,20 @@
+METHOD 0600070A \x8e\x8e.\x8e\x8d::\x8a\x9a\x8a RVA=5AAC file=3CAC
+IL_0000: ldc.i4.1 
+IL_0001: call 0x06000723 \x8e\x8e.\x8e\x8d::\x894
+IL_0006: brtrue.s 21
+IL_0008: pop 
+IL_0009: ldarg.0 
+IL_000A: ldfld 0x04000732 \x8e\x8e.\x8e\x8d::\x8a\x9a\x8f
+IL_000F: ldarg.1 
+IL_0010: beq.s 45
+IL_0012: br.s 22
+IL_0014: pop 
+IL_0015: ldarg.0 
+IL_0016: ldarg.1 
+IL_0017: stfld 0x04000732 \x8e\x8e.\x8e\x8d::\x8a\x9a\x8f
+IL_001C: ldarg.0 
+IL_001D: ldc.i4 6892
+IL_0022: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0027: call 0x06000706 \x8e\x8e.\x8e\x8d::\x8a\x99\x8c
+IL_002C: ret 
+

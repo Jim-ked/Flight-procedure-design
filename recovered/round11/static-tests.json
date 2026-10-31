@@ -1,0 +1,37 @@
+{
+  "scope": "additive fixtures; no DLL/AutoCAD; old E3=105 not rerun",
+  "tests": [
+    {
+      "id": "cross-window-repick",
+      "kind": "static",
+      "result": "PASS"
+    },
+    {
+      "id": "event-mode-dispatch",
+      "kind": "static",
+      "result": "PASS"
+    },
+    {
+      "id": "area-stage-map",
+      "kind": "static",
+      "result": "PASS"
+    },
+    {
+      "id": "negative-candidates",
+      "kind": "static",
+      "result": "PASS"
+    },
+    {
+      "id": "obstacle-ui-reachability",
+      "kind": "static",
+      "result": "PASS"
+    },
+    {
+      "id": "p793-consumption",
+      "kind": "static",
+      "result": "PASS"
+    }
+  ],
+  "count": 6,
+  "all_pass": true
+}

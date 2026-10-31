@@ -1,0 +1,24 @@
+METHOD 06000391 \x89\x95.\x89\x94::\x87\x9e\x8e RVA=4A418 file=48618
+IL_0000: ldc.i4.1 
+IL_0001: call 0x0600039D \x89\x95.\x89\x94::\x878
+IL_0006: brtrue.s 78
+IL_0008: pop 
+IL_0009: ldarg.0 
+IL_000A: ldfld 0x040002E3 \x89\x95.\x89\x94::\x88\x86\x9b
+IL_000F: callvirt 0x06000854 \x8f\x99.\x8f\x98::\x8b\x8c\x8a
+IL_0014: stloc.0 
+IL_0015: ldloc.0 
+IL_0016: brfalse.s 79
+IL_0018: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_001D: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0022: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0027: ldloc.0 
+IL_0028: callvirt 0x0A000086 System.Object::ToString
+IL_002D: ldc.i4 328
+IL_0032: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0037: call 0x0A00008B System.String::Concat
+IL_003C: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_0041: ret 
+IL_0042: pop 
+IL_0043: ret 
+

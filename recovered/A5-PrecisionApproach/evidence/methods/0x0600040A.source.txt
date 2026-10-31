@@ -1,0 +1,52 @@
+41814: 		private static string _0088_0090_0095(string P_0)
+41815: 		{
+41816: 			if (false /* original-file-bool-offset:772 */)
+41817: 			{
+41818: 				_ = 0;
+41819: 				if (_0087t())
+41820: 				{
+41821: 					goto IL_006c;
+41822: 				}
+41823: 				goto IL_0050;
+41824: 			}
+41825: 			char[] array = P_0.ToCharArray();
+41826: 			int length = P_0.Length;
+41827: 			int num = 0;
+41828: 			goto IL_0072;
+41829: 			IL_0050:
+41830: 			int num2 = default(int);
+41831: 			if (num2 != 5)
+41832: 			{
+41833: 				array[num] = char.Parse((10 - num2).ToString());
+41834: 			}
+41835: 			goto IL_006c;
+41836: 			IL_0072:
+41837: 			do
+41838: 			{
+41839: 				if (num < length)
+41840: 				{
+41841: 					num2 = int.Parse(P_0[num].ToString());
+41842: 					continue;
+41843: 				}
+41844: 				for (int i = 0; i < length / 2; i++)
+41845: 				{
+41846: 					char c = array[i];
+41847: 					if (!_0087t())
+41848: 					{
+41849: 						break;
+41850: 					}
+41851: 					array[i] = array[length - 1 - i];
+41852: 					array[length - 1 - i] = c;
+41853: 				}
+41854: 				return new string(array);
+41855: 			}
+41856: 			while (_0087u());
+41857: 			if (num2 != 0)
+41858: 			{
+41859: 				goto IL_0050;
+41860: 			}
+41861: 			goto IL_006c;
+41862: 			IL_006c:
+41863: 			num++;
+41864: 			goto IL_0072;
+41865: 		}

@@ -1,0 +1,71 @@
+60867: 		private List<_008A_008D> _0089_0095_0095(List<DBPoint> P_0)
+60868: 		{
+60869: 			//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
+60870: 			//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
+60871: 			//IL_00f6: Unknown result type (might be due to invalid IL or missing references)
+60872: 			//IL_00fb: Unknown result type (might be due to invalid IL or missing references)
+60873: 			//IL_010b: Unknown result type (might be due to invalid IL or missing references)
+60874: 			//IL_0110: Unknown result type (might be due to invalid IL or missing references)
+60875: 			//IL_0083: Unknown result type (might be due to invalid IL or missing references)
+60876: 			//IL_0088: Unknown result type (might be due to invalid IL or missing references)
+60877: 			List<_008A_008D> list = new List<_008A_008D>();
+60878: 			_0089_0097_008C = new Dictionary<string, DBPoint>();
+60879: 			int num = 1;
+60880: 			foreach (DBPoint item in P_0)
+60881: 			{
+60882: 				ResultBuffer xData = ((DBObject)item).XData;
+60883: 				string text = "";
+60884: 				object obj;
+60885: 				if (xData != (ResultBuffer)null)
+60886: 				{
+60887: 					TypedValue[] array = xData.AsArray();
+60888: 					if (array != null && array.Length >= 4)
+60889: 					{
+60890: 						object value = ((TypedValue)(ref array[3])).Value;
+60891: 						if (value == null)
+60892: 						{
+60893: 							obj = null;
+60894: 						}
+60895: 						else
+60896: 						{
+60897: 							obj = value.ToString();
+60898: 							if (obj != null)
+60899: 							{
+60900: 								goto IL_0077;
+60901: 							}
+60902: 						}
+60903: 						obj = "";
+60904: 						goto IL_0077;
+60905: 					}
+60906: 				}
+60907: 				goto IL_0079;
+60908: 				IL_0077:
+60909: 				text = (string)obj;
+60910: 				goto IL_0079;
+60911: 				IL_0079:
+60912: 				if (string.IsNullOrWhiteSpace(text))
+60913: 				{
+60914: 					string text2 = ((object)((DBObject)item).ObjectId/*cast due to .constrained prefix*/).ToString();
+60915: 					if (text2.Length > 6)
+60916: 					{
+60917: 						text = "P" /* string-offset:984 */ + text2.Substring(text2.Length - 5, 4);
+60918: 					}
+60919: 				}
+60920: 				_008A_008D obj2 = new _008A_008D
+60921: 				{
+60922: 					ID = num.ToString(),
+60923: 					Name = text
+60924: 				};
+60925: 				Point3d position = item.Position;
+60926: 				obj2.X = ((Point3d)(ref position)).X;
+60927: 				position = item.Position;
+60928: 				obj2.Y = ((Point3d)(ref position)).Y;
+60929: 				position = item.Position;
+60930: 				obj2.Z = ((Point3d)(ref position)).Z;
+60931: 				_008A_008D obj3 = obj2;
+60932: 				_0089_0097_008C.Add(obj3.ID, item);
+60933: 				list.Add(obj3);
+60934: 				num++;
+60935: 			}
+60936: 			return list;
+60937: 		}

@@ -1,0 +1,176 @@
+12310: 		}
+12311: 
+12312: 		private void _009D_008A(object P_0, EventArgs P_1)
+12313: 		{
+12314: 			//IL_00a2: Unknown result type (might be due to invalid IL or missing references)
+12315: 			//IL_00b0: Unknown result type (might be due to invalid IL or missing references)
+12316: 			//IL_00b5: Unknown result type (might be due to invalid IL or missing references)
+12317: 			//IL_00c1: Unknown result type (might be due to invalid IL or missing references)
+12318: 			//IL_00c6: Unknown result type (might be due to invalid IL or missing references)
+12319: 			_0087_0097();
+12320: 			if (_0087_0098() || false /* original-file-bool-offset:344 */)
+12321: 			{
+12322: 				return;
+12323: 			}
+12324: 			DBPoint val = default(DBPoint);
+12325: 			foreach (DataGridViewRow selectedRow in _009E_0089.SelectedRows)
+12326: 			{
+12327: 				_0087_0097();
+12328: 				if (!_0087_0098())
+12329: 				{
+12330: 					if (!_0087_0098())
+12331: 					{
+12332: 						val = _009D_009E[_009E_0089.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+12333: 					}
+12334: 				}
+12335: 				else if (!_0087_0097())
+12336: 				{
+12337: 					continue;
+12338: 				}
+12339: 				ObjectId val2 = _008B._0089_0087("obst" /* string-offset:2780 */, val.Position);
+12340: 				string obj = "Altitude" /* string-offset:536 */;
+12341: 				Point3d position = val.Position;
+12342: 				_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+12343: 				_008B._0089_0089(val._008C_008D(" " /* string-offset:584 */).Name, val2, "Name" /* string-offset:616 */);
+12344: 			}
+12345: 		}
+12346: 
+12347: 		private _008E_0097 _009D_008B()
+12348: 		{
+12349: 			double num = _008F_008A._008B_0087_009E(_009E_008E, "输入数据有误，请检查。" /* string-offset:1984 */);
+12350: 			double num2 = _008F_008A._008B_0087_009E(_009E_008D, "输入数据有误，请检查。" /* string-offset:1984 */);
+12351: 			double num3 = _008F_008A._008B_0087_009E(_009E_008F, "输入数据有误，请检查。" /* string-offset:1984 */);
+12352: 			_008F_008E obj = new _008F_008E(num, num2, num3);
+12353: 			double num4 = _008F_008A._008B_0087_009E(_009E_0095, "输入数据有误，请检查。" /* string-offset:1984 */);
+12354: 			num2 = _008F_008A._008B_0087_009E(_009E_0094, "输入数据有误，请检查。" /* string-offset:1984 */);
+12355: 			num3 = _008F_008A._008B_0087_009E(_009E_0097, "输入数据有误，请检查。" /* string-offset:1984 */);
+12356: 			_008F_008E obj2 = new _008F_008E(num4, num2, num3);
+12357: 			return _008D._0089_008F(obj, obj2);
+12358: 		}
+12359: 
+12360: 		private void ShowMessage(string s)
+12361: 		{
+12362: 			_009E_008B.Text = s;
+12363: 		}
+12364: 
+12365: 		private void _009D_008C(object P_0, EventArgs P_1)
+12366: 		{
+12367: 			_009E_008B.Text = "";
+12368: 		}
+12369: 
+12370: 		private void _009D_008D(object P_0, EventArgs P_1)
+12371: 		{
+12372: 			ShowMessage("标记障碍物" /* string-offset:2784 */);
+12373: 		}
+12374: 
+12375: 		private void _009D_008E(object P_0, EventArgs P_1)
+12376: 		{
+12377: 			ShowMessage("评估障碍物" /* string-offset:2788 */);
+12378: 		}
+12379: 
+12380: 		private void _009D_008F(object P_0, EventArgs P_1)
+12381: 		{
+12382: 			ShowMessage("交换KK'线方向" /* string-offset:2792 */);
+12383: 		}
+12384: 
+12385: 		private void _009D_0090(object P_0, EventArgs P_1)
+12386: 		{
+12387: 			ShowMessage("在屏幕中指定KK'线右侧位置点" /* string-offset:2796 */);
+12388: 		}
+12389: 
+12390: 		private void _009D_0091(object P_0, EventArgs P_1)
+12391: 		{
+12392: 			ShowMessage("在屏幕中指定KK'线左侧位置点" /* string-offset:2800 */);
+12393: 		}
+12394: 
+12395: 		private void _009D_0092(object P_0, EventArgs P_1)
+12396: 		{
+12397: 			ShowMessage("检索屏幕中全部的障碍物位置点" /* string-offset:2804 */);
+12398: 		}
+12399: 
+12400: 		private void _009D_0093(object P_0, EventArgs P_1)
+12401: 		{
+12402: 			if (false /* original-file-bool-offset:348 */)
+12403: 			{
+12404: 				_ = 1;
+12405: 				if (!_0087_0098())
+12406: 				{
+12407: 					return;
+12408: 				}
+12409: 				goto IL_00e4;
+12410: 			}
+12411: 			if (_009D_009D == null || _009D_009D.Count == 0)
+12412: 			{
+12413: 				return;
+12414: 			}
+12415: 			_008E_0097 obj = _009D_008B();
+12416: 			_0087 obj2 = default(_0087);
+12417: 			do
+12418: 			{
+12419: 				double num = _008F_008A._008B_0087_009E(_0087_0086_0089, "输入数据有误，请检查。" /* string-offset:1984 */);
+12420: 				double num2 = _008F_008A._008B_0087_009D(_0087_0086_008C.Text, "输入数据有误，请检查。" /* string-offset:1984 */) / 100.0;
+12421: 				double num3 = _008F_008A._008B_0087_009E(_0087_0086_008F, "输入数据有误，请检查。" /* string-offset:1984 */);
+12422: 				bool flag = _0087_0086_0092.Text == "指定高度" /* string-offset:2808 */;
+12423: 				obj2 = new _0087(obj._008A_009D_0088, obj.Z, num, num2, num3, _0020: false, flag);
+12424: 			}
+12425: 			while (_0087_0098());
+12426: 			List<_008A_0089> list = new List<_008A_0089>();
+12427: 			int num4 = 1;
+12428: 			goto IL_01fb;
+12429: 			IL_00e4:
+12430: 			List<DBPoint>.Enumerator enumerator = default(List<DBPoint>.Enumerator);
+12431: 			try
+12432: 			{
+12433: 				_008F_008E obj4 = default(_008F_008E);
+12434: 				while (enumerator.MoveNext())
+12435: 				{
+12436: 					_008F_008E obj3 = enumerator.Current._008C_008D(num4.ToString());
+12437: 					num4++;
+12438: 					_ = 1;
+12439: 					if (!_0087_0098())
+12440: 					{
+12441: 						goto IL_010d;
+12442: 					}
+12443: 					goto IL_0124;
+12444: 					IL_010d:
+12445: 					obj4 = _008D._0089_0090(obj, obj3);
+12446: 					obj4.Z = obj3.Z;
+12447: 					goto IL_0124;
+12448: 					IL_0124:
+12449: 					_008A_0089 item = obj2._0087(new _008A_0089(obj4));
+12450: 					list.Add(item);
+12451: 					if (!_0087_0098())
+12452: 					{
+12453: 						continue;
+12454: 					}
+12455: 					goto IL_010d;
+12456: 				}
+12457: 			}
+12458: 			finally
+12459: 			{
+12460: 				((IDisposable)enumerator/*cast due to .constrained prefix*/).Dispose();
+12461: 			}
+12462: 			_009E_008B.Text = "已评估" /* string-offset:2812 */ + list.Count + "个障碍物。" /* string-offset:2816 */ + list.Count + "个障碍物在范围内" /* string-offset:2820 */;
+12463: 			list = list.OrderByDescending((_008A_0089 o) => o._0088_008F_0091()).ToList();
+12464: 			_009C_009E(list);
+12465: 			if (_0087_0097())
+12466: 			{
+12467: 				return;
+12468: 			}
+12469: 			goto IL_01fb;
+12470: 			IL_01fb:
+12471: 			enumerator = _009D_009D.GetEnumerator();
+12472: 			goto IL_00e4;
+12473: 		}
+12474: 
+12475: 		private void _009D_0094(object P_0, EventArgs P_1)
+12476: 		{
+12477: 			//IL_003e: Unknown result type (might be due to invalid IL or missing references)
+12478: 			//IL_0043: Unknown result type (might be due to invalid IL or missing references)
+12479: 			//IL_0048: Unknown result type (might be due to invalid IL or missing references)
+12480: 			//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+12481: 			//IL_0065: Unknown result type (might be due to invalid IL or missing references)
+12482: 			_ = 1;
+12483: 			if (!_0087_0098())
+12484: 			{
+12485: 				if (_0087_0098())

@@ -1,0 +1,9 @@
+84753: 		public static string _008B_008B_0088(List<List<_008F_008E>> P_0)
+84754: 		{
+84755: 			string text = "";
+84756: 			foreach (List<_008F_008E> item in P_0)
+84757: 			{
+84758: 				text += _008B_008B_0089(item);
+84759: 			}
+84760: 			return text;
+84761: 		}

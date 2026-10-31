@@ -1,0 +1,49 @@
+METHOD 0600047F \x8b\x8d.\x8b\x8c::\x88\x9a\x9e RVA=5ABAC file=58DAC
+IL_0000: newobj 0x0A000184 System.Windows.Forms.SaveFileDialog::.ctor
+IL_0005: stloc.0 
+IL_0006: ldloc.0 
+IL_0007: ldc.i4 5692
+IL_000C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0011: callvirt 0x0A000185 System.Windows.Forms.FileDialog::set_Filter
+IL_0016: call 0x060004B5 \x8b\x8d.\x8b\x8c::\x88\x93
+IL_001B: call 0x060004B6 \x8b\x8d.\x8b\x8c::\x88\x94
+IL_0020: brtrue.s 49
+IL_0022: pop 
+IL_0023: br.s 52
+IL_0025: pop 
+IL_0026: br.s 77
+IL_0028: ldloc.0 
+IL_0029: ldc.i4 712
+IL_002E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0033: callvirt 0x0A000186 System.Windows.Forms.FileDialog::set_Title
+IL_0038: ldloc.0 
+IL_0039: callvirt 0x0A000188 System.Windows.Forms.CommonDialog::ShowDialog
+IL_003E: ldc.i4.1 
+IL_003F: bne.un.s 164
+IL_0041: ldc.i4 5684
+IL_0046: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_004B: stloc.1 
+IL_004C: ldarg.0 
+IL_004D: ldfld 0x04000464 \x8b\x8d.\x8b\x8c::\x88\x9e\x8a
+IL_0052: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0057: ldloca.s local(0x0001)
+IL_0059: call 0x060000FB \x98.\x97::\x8a\x98
+IL_005E: call 0x0A000306 System.Text.Encoding::get_UTF8
+IL_0063: ldloc.1 
+IL_0064: callvirt 0x0A00036B System.Text.Encoding::GetBytes
+IL_0069: stloc.2 
+IL_006A: ldloc.0 
+IL_006B: callvirt 0x0A000189 System.Windows.Forms.FileDialog::get_FileName
+IL_0070: ldloc.2 
+IL_0071: call 0x0A00036C System.IO.File::WriteAllBytes
+IL_0076: ldloc.0 
+IL_0077: callvirt 0x0A000189 System.Windows.Forms.FileDialog::get_FileName
+IL_007C: ldc.i4 5696
+IL_0081: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0086: call 0x0A00008B System.String::Concat
+IL_008B: call 0x0A000030 System.Windows.Forms.MessageBox::Show
+IL_0090: pop 
+IL_0091: call 0x060004B5 \x8b\x8d.\x8b\x8c::\x88\x93
+IL_0096: brfalse.s 52
+IL_0098: ret 
+

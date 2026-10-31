@@ -1,0 +1,45 @@
+3140: 		public static void _0089_0092(DBPoint P_0)
+3141: 		{
+3142: 			//IL_003a: Unknown result type (might be due to invalid IL or missing references)
+3143: 			//IL_003f: Unknown result type (might be due to invalid IL or missing references)
+3144: 			//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+3145: 			//IL_002e: Unknown result type (might be due to invalid IL or missing references)
+3146: 			//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
+3147: 			_ = 1;
+3148: 			Editor editor = default(Editor);
+3149: 			Point3d position = default(Point3d);
+3150: 			if (!_0092())
+3151: 			{
+3152: 				if (!true /* original-file-bool-offset:76 */)
+3153: 				{
+3154: 					return;
+3155: 				}
+3156: 				editor = Application.DocumentManager.MdiActiveDocument.Editor;
+3157: 				position = P_0.Position;
+3158: 			}
+3159: 			try
+3160: 			{
+3161: 				ViewTableRecord currentView = editor.GetCurrentView();
+3162: 				Point3d target = ((AbstractViewTableRecord)currentView).Target;
+3163: 				double viewTwist = ((AbstractViewTableRecord)currentView).ViewTwist;
+3164: 				double num = ((Point3d)(ref position)).X - ((Point3d)(ref target)).X;
+3165: 				double num2 = ((Point3d)(ref position)).Y - ((Point3d)(ref target)).Y;
+3166: 				double num3 = Math.Cos(0.0 - viewTwist);
+3167: 				double num4 = Math.Sin(0.0 - viewTwist);
+3168: 				double num5 = num * num3 - num2 * num4;
+3169: 				_0091();
+3170: 				double num6 = default(double);
+3171: 				if (!_0092())
+3172: 				{
+3173: 					num6 = num * num4 + num2 * num3;
+3174: 				}
+3175: 				((AbstractViewTableRecord)currentView).CenterPoint = new Point2d(num5, num6);
+3176: 				editor.SetCurrentView(currentView);
+3177: 			}
+3178: 			catch (Exception ex)
+3179: 			{
+3180: 				editor.WriteMessage("\n居中视图失败: " /* string-offset:604 */ + ex.Message);
+3181: 			}
+3182: 			((Entity)P_0).Highlight();
+3183: 			Application.UpdateScreen();
+3184: 		}

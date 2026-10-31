@@ -1,0 +1,19 @@
+METHOD 06000838 \x8f\x93.\x8f\x92::\x8b\x8b\x8d RVA=63AE file=45AE
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400077C \x8f\x93.\x8f\x92::\x8b\x8b\x92
+IL_0006: ldarg.1 
+IL_0007: ldfld 0x0400077C \x8f\x93.\x8f\x92::\x8b\x8b\x92
+IL_000C: sub 
+IL_000D: ldarg.0 
+IL_000E: ldfld 0x0400077D \x8f\x93.\x8f\x92::\x8b\x8b\x93
+IL_0013: ldarg.1 
+IL_0014: ldfld 0x0400077D \x8f\x93.\x8f\x92::\x8b\x8b\x93
+IL_0019: sub 
+IL_001A: ldarg.0 
+IL_001B: ldfld 0x0400077E \x8f\x93.\x8f\x92::\x8b\x8b\x94
+IL_0020: ldarg.1 
+IL_0021: ldfld 0x0400077E \x8f\x93.\x8f\x92::\x8b\x8b\x94
+IL_0026: sub 
+IL_0027: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_002C: ret 
+

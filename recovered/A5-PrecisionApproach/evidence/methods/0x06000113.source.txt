@@ -1,0 +1,49 @@
+5236: 		public static Point3d _008B_008D(string P_0)
+5237: 		{
+5238: 			//IL_002a: Unknown result type (might be due to invalid IL or missing references)
+5239: 			//IL_0030: Expected O, but got Unknown
+5240: 			//IL_0083: Unknown result type (might be due to invalid IL or missing references)
+5241: 			//IL_0088: Unknown result type (might be due to invalid IL or missing references)
+5242: 			//IL_0049: Unknown result type (might be due to invalid IL or missing references)
+5243: 			//IL_004f: Invalid comparison between Unknown and I4
+5244: 			//IL_00a2: Unknown result type (might be due to invalid IL or missing references)
+5245: 			//IL_0054: Unknown result type (might be due to invalid IL or missing references)
+5246: 			//IL_005a: Invalid comparison between Unknown and I4
+5247: 			//IL_0070: Unknown result type (might be due to invalid IL or missing references)
+5248: 			//IL_0076: Invalid comparison between Unknown and I4
+5249: 			//IL_008c: Unknown result type (might be due to invalid IL or missing references)
+5250: 			Editor editor = Application.DocumentManager.MdiActiveDocument.Editor;
+5251: 			PromptPointOptions val = new PromptPointOptions("\n" /* string-offset:328 */ + P_0 + ", 按Esc键退出。" /* string-offset:888 */);
+5252: 			((PromptCornerOptions)val).AllowArbitraryInput = true;
+5253: 			while (true)
+5254: 			{
+5255: 				PromptPointResult point = editor.GetPoint(val);
+5256: 				PromptStatus status = ((PromptResult)point).Status;
+5257: 				while (true)
+5258: 				{
+5259: 					if ((int)status != -5002)
+5260: 					{
+5261: 						_ = 0;
+5262: 						if (!_1())
+5263: 						{
+5264: 							if (_2())
+5265: 							{
+5266: 								continue;
+5267: 							}
+5268: 						}
+5269: 						else if ((int)status == -5001)
+5270: 						{
+5271: 							editor.WriteMessage("\n输入错误，请重试。" /* string-offset:896 */);
+5272: 							break;
+5273: 						}
+5274: 						if ((int)status != 5100)
+5275: 						{
+5276: 							break;
+5277: 						}
+5278: 						return point.Value;
+5279: 					}
+5280: 					editor.WriteMessage("\n已取消点选择。" /* string-offset:892 */);
+5281: 					return Point3d.Origin;
+5282: 				}
+5283: 			}
+5284: 		}

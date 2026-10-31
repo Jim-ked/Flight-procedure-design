@@ -1,0 +1,25 @@
+﻿Module,Function,HelpSays,UIExposes,CodeImplements,CodeReachable,Consistency,Evidence
+A1,Y01_风螺旋,Wind spiral,YES,IMPLEMENTED_STATIC,PARTIAL,CONSISTENT,A1-WindSpiral/overview.md
+A2,Y02_基础计算,Basic calculation,YES,IMPLEMENTED_STATIC,PARTIAL,CONSISTENT,A2-BasicCalculation/overview.md
+A3,Y03_定位容差,Fix tolerance,YES,IMPLEMENTED_STATIC,PARTIAL,CONSISTENT,A3-FixTolerance/overview.md
+A4,Y04_导航设备保护区,VOR/NDB protection boundary,YES,IMPLEMENTED_STATIC,CLOSED,CONSISTENT,A4-NavAidProtection/overview.md
+A5,Y05_精密进近保护区,Precision/OAS drawing,YES,IMPLEMENTED_STATIC,PARTIAL,CODE_ORPHAN,A5-PrecisionApproach/overview.md
+A6,Y06_传统模板,Holding/base/procedure templates,YES,IMPLEMENTED_STATIC,CLOSED,CONSISTENT,A6-Template/overview.md
+A7,Y07_离场保护区,Departure evaluation,YES,IMPLEMENTED_STATIC,PARTIAL,CONSISTENT,A7-Departure/overview.md
+A8,Y08_转弯区评估,KK turn-area evaluation,YES,IMPLEMENTED_STATIC,CLOSED,CONSISTENT,A8-TurnArea/overview.md
+A9,Y09_主副区评估,Primary/secondary evaluation,YES,IMPLEMENTED_STATIC,PARTIAL,CONSISTENT,ObstacleData/pri-sec-evaluation.md
+A10,Y10_起始进近DME弧,DME arc evaluation,YES,IMPLEMENTED_STATIC,CLOSED,CONSISTENT,A10-DmeArc/overview.md
+B1,Y51_FlyBy,Fly-by turn boundary,YES,IMPLEMENTED_STATIC,PARTIAL,CONSISTENT,B1-FlyBy/overview.md
+B2,Y52_FlyOver,Fly-over DF boundary,YES,IMPLEMENTED_STATIC,PARTIAL,CONSISTENT,B2-FlyOverDF/overview.md
+B3,Y53_RNP_APCH,RNP APCH,YES,IMPLEMENTED_STATIC,PARTIAL,CODE_ORPHAN,B3-RnpApch/overview.md
+B4,Y54_PBN_ILS,PBN-ILS/OAS,YES,IMPLEMENTED_STATIC,PARTIAL,CODE_ORPHAN,B4-PbnIls/overview.md
+B5,Y55_PBN_Departure,PBN departure,YES,IMPLEMENTED_STATIC,PARTIAL,CODE_ORPHAN,B5-PbnDeparture/overview.md
+Aux,Y90_LoadBlock,block import,COMMAND,INDEXED_ONLY,NOT_AUDITED,UNCERTAIN,doc/阶段8_人工交互矩阵.md; raw/commands.csv
+Aux,Y91_CreateLayer,layer creation,COMMAND,INDEXED_ONLY,NOT_AUDITED,UNCERTAIN,doc/阶段8_人工交互矩阵.md; raw/commands.csv
+Aux,exline,line utility,COMMAND,INDEXED_ONLY,NOT_AUDITED,UNCERTAIN,doc/阶段8_人工交互矩阵.md; raw/commands.csv
+Aux,Y92_RandomPoint,random points,COMMAND,INDEXED_ONLY,NOT_AUDITED,UNCERTAIN,doc/阶段8_人工交互矩阵.md; raw/commands.csv
+Aux,RCL,runway centerline,COMMAND,INDEXED_ONLY,NOT_AUDITED,UNCERTAIN,doc/阶段8_人工交互矩阵.md; raw/commands.csv
+Aux,NMCIRCLE,NM circle,COMMAND,INDEXED_ONLY,NOT_AUDITED,UNCERTAIN,doc/阶段8_人工交互矩阵.md; raw/commands.csv
+Aux,rectLine,rectangle,COMMAND,INDEXED_ONLY,NOT_AUDITED,UNCERTAIN,doc/阶段8_人工交互矩阵.md; raw/commands.csv
+Aux,Arc2,arc,COMMAND,INDEXED_ONLY,NOT_AUDITED,UNCERTAIN,doc/阶段8_人工交互矩阵.md; raw/commands.csv
+Aux,xInfo,XData inspector,COMMAND,INDEXED_ONLY,NOT_AUDITED,UNCERTAIN,doc/阶段8_人工交互矩阵.md; raw/commands.csv

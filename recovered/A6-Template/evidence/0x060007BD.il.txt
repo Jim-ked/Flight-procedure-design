@@ -1,0 +1,96 @@
+METHOD 060007BD \x8f\x89.\x8f\x88::\x8b\x86\x98 RVA=91258 file=8F458
+IL_0000: call 0x060007C6 \x8f\x89.\x8f\x88::\x89n
+IL_0005: brfalse 232
+IL_000A: ldc.i4 1412
+IL_000F: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0014: brfalse.s 46
+IL_0016: call 0x060007C6 \x8f\x89.\x8f\x88::\x89n
+IL_001B: brtrue.s 121
+IL_001D: br 189
+IL_0022: ldc.i4 7452
+IL_0027: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_002C: ldarg.3 
+IL_002D: ldarg.0 
+IL_002E: ldfld 0x0400076F \x8f\x89.\x8f\x88::\x8b\x87\x8f
+IL_0033: div 
+IL_0034: box 0x010000D2 System.Double
+IL_0039: ldarg.s argument(0x0004)
+IL_003B: ldarg.0 
+IL_003C: ldfld 0x0400076F \x8f\x89.\x8f\x88::\x8b\x87\x8f
+IL_0041: div 
+IL_0042: box 0x010000D2 System.Double
+IL_0047: call 0x0A000364 System.Console::WriteLine
+IL_004C: ldc.i4.0 
+IL_004D: stloc.3 
+IL_004E: br.s 189
+IL_0050: ldarg.1 
+IL_0051: ldloc.1 
+IL_0052: callvirt 0x060007EC \x8f\x8d.\x8f\x8c::\x8b\x88\x92
+IL_0057: stloc.2 
+IL_0058: ldloc.2 
+IL_0059: ldarg.2 
+IL_005A: ble.un.s 140
+IL_005C: ldarg.s argument(0x0006)
+IL_005E: brtrue.s 124
+IL_0060: call 0x060007C6 \x8f\x89.\x8f\x88::\x89n
+IL_0065: call 0x060007C7 \x8f\x89.\x8f\x88::\x89o
+IL_006A: brtrue.s 227
+IL_006C: pop 
+IL_006D: ldarg.3 
+IL_006E: br.s 125
+IL_0070: ldloc.0 
+IL_0071: starg.s argument(0x0003)
+IL_0073: ldarg.s argument(0x0006)
+IL_0075: brtrue.s 134
+IL_0077: ldloc.0 
+IL_0078: br.s 136
+IL_007A: ldarg.s argument(0x0004)
+IL_007C: starg.s argument(0x0004)
+IL_007E: br.s 161
+IL_0080: ldarg.s argument(0x0006)
+IL_0082: brtrue.s 147
+IL_0084: ldloc.0 
+IL_0085: br.s 148
+IL_0087: ldarg.3 
+IL_0088: starg.s argument(0x0003)
+IL_008A: ldarg.s argument(0x0006)
+IL_008C: brtrue.s 158
+IL_008E: ldarg.s argument(0x0004)
+IL_0090: br.s 159
+IL_0092: ldloc.0 
+IL_0093: starg.s argument(0x0004)
+IL_0095: ldloc.3 
+IL_0096: dup 
+IL_0097: ldc.i4.1 
+IL_0098: add 
+IL_0099: stloc.3 
+IL_009A: ldc.i4.s 20
+IL_009C: bgt.s 232
+IL_009E: ldloc.2 
+IL_009F: ldarg.2 
+IL_00A0: sub 
+IL_00A1: call 0x0A00002E System.Math::Abs
+IL_00A6: ldc.r8 0.01
+IL_00AF: ble.s 230
+IL_00B1: ldarg.3 
+IL_00B2: ldarg.s argument(0x0004)
+IL_00B4: add 
+IL_00B5: ldc.r8 2.0
+IL_00BE: div 
+IL_00BF: stloc.0 
+IL_00C0: ldarg.0 
+IL_00C1: ldloc.0 
+IL_00C2: ldarg.s argument(0x0005)
+IL_00C4: ldc.i4.1 
+IL_00C5: call 0x060007BA \x8f\x89.\x8f\x88::\x8b\x86\x95
+IL_00CA: stloc.1 
+IL_00CB: call 0x060007C6 \x8f\x89.\x8f\x88::\x89n
+IL_00D0: brtrue 92
+IL_00D5: br.s 131
+IL_00D7: pop 
+IL_00D8: br.s 232
+IL_00DA: ldloc.0 
+IL_00DB: ret 
+IL_00DC: ldloc.0 
+IL_00DD: ret 
+

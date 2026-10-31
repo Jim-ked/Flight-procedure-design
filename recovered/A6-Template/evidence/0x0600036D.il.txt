@@ -1,0 +1,72 @@
+METHOD 0600036D \x89\x93.\x89\x92::\x87\x9a\x9b RVA=447BC file=429BC
+IL_0000: ldc.i4 3
+IL_0005: stloc local(0x0005)
+IL_0009: ldarg.2 
+IL_000A: ldarg.1 
+IL_000B: call 0x0A000338 Autodesk.AutoCAD.Geometry.Point2d::op_Subtraction
+IL_0010: stloc.0 
+IL_0011: ldc.i4.1 
+IL_0012: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_0017: brtrue 232
+IL_001C: pop 
+IL_001D: ldc.i4 7
+IL_0022: stloc local(0x0005)
+IL_0026: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_002B: brfalse 191
+IL_0030: br.s 105
+IL_0032: ldloc.3 
+IL_0033: ldloc.2 
+IL_0034: bgt.un 204
+IL_0039: ldarg.1 
+IL_003A: ldloc.3 
+IL_003B: ldloc.2 
+IL_003C: div 
+IL_003D: ldloc.0 
+IL_003E: call 0x0A000339 Autodesk.AutoCAD.Geometry.Vector2d::op_Multiply
+IL_0043: call 0x0A00033A Autodesk.AutoCAD.Geometry.Point2d::op_Addition
+IL_0048: stloc.s local(0x0004)
+IL_004A: ldc.i4 8
+IL_004F: stloc local(0x0005)
+IL_0053: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_0058: brfalse 242
+IL_005D: ldloc local(0x0005)
+IL_0061: switch [213, 166, 191, 21, 242, 152, 242, 166, 222]
+IL_008A: br.s 242
+IL_008C: ldloc.3 
+IL_008D: ldc.r8 0.0
+IL_0096: bge.un.s 62
+IL_0098: br.s 242
+IL_009A: ldarg.3 
+IL_009B: ldarg.1 
+IL_009C: call 0x0A000338 Autodesk.AutoCAD.Geometry.Point2d::op_Subtraction
+IL_00A1: stloc.1 
+IL_00A2: ldloca.s local(0x0000)
+IL_00A4: call 0x0A00033B Autodesk.AutoCAD.Geometry.Vector2d::get_Length
+IL_00A9: stloc.2 
+IL_00AA: ldc.i4 2
+IL_00AF: stloc local(0x0005)
+IL_00B3: ldloca.s local(0x0001)
+IL_00B5: ldloc.0 
+IL_00B6: call 0x0A00033C Autodesk.AutoCAD.Geometry.Vector2d::DotProduct
+IL_00BB: ldloc.2 
+IL_00BC: div 
+IL_00BD: stloc.3 
+IL_00BE: br.s 152
+IL_00C0: ldc.i4 0
+IL_00C5: stloc local(0x0005)
+IL_00C9: ldarga.s argument(0x0003)
+IL_00CB: ldarg.2 
+IL_00CC: call 0x0A00033D Autodesk.AutoCAD.Geometry.Point2d::GetDistanceTo
+IL_00D1: ret 
+IL_00D2: ldarga.s argument(0x0003)
+IL_00D4: ldloc.s local(0x0004)
+IL_00D6: call 0x0A00033D Autodesk.AutoCAD.Geometry.Point2d::GetDistanceTo
+IL_00DB: ret 
+IL_00DC: pop 
+IL_00DD: ldc.i4 6
+IL_00E2: stloc local(0x0005)
+IL_00E6: ldarga.s argument(0x0003)
+IL_00E8: ldarg.1 
+IL_00E9: call 0x0A00033D Autodesk.AutoCAD.Geometry.Point2d::GetDistanceTo
+IL_00EE: ret 
+

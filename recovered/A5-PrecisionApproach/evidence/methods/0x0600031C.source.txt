@@ -1,0 +1,45 @@
+25487: 		private void _0087_0092_008B(object P_0, EventArgs P_1)
+25488: 		{
+25489: 			if (!true /* original-file-bool-offset:496 */)
+25490: 			{
+25491: 				return;
+25492: 			}
+25493: 			string text;
+25494: 			SaveFileDialog saveFileDialog = default(SaveFileDialog);
+25495: 			do
+25496: 			{
+25497: 				text = _0087_0092_0088();
+25498: 				if (!_0087_009F())
+25499: 				{
+25500: 				}
+25501: 				if (string.IsNullOrEmpty(text))
+25502: 				{
+25503: 					_ = 1;
+25504: 					if (!_00870())
+25505: 					{
+25506: 						MessageBox.Show("OAS参数获取失败，请检查输入数据。" /* string-offset:4052 */);
+25507: 						return;
+25508: 					}
+25509: 					continue;
+25510: 				}
+25511: 				saveFileDialog = new SaveFileDialog();
+25512: 				break;
+25513: 			}
+25514: 			while (!_0087_009F());
+25515: 			saveFileDialog.Filter = "JSON文件 (*.json)|*.json|文本文件 (*.txt)|*.txt" /* string-offset:4056 */;
+25516: 			saveFileDialog.FilterIndex = 1;
+25517: 			saveFileDialog.RestoreDirectory = true;
+25518: 			saveFileDialog.FileName = "OAS参数.json" /* string-offset:4060 */;
+25519: 			if (saveFileDialog.ShowDialog() == DialogResult.OK)
+25520: 			{
+25521: 				try
+25522: 				{
+25523: 					File.WriteAllText(saveFileDialog.FileName, text, Encoding.UTF8);
+25524: 					MessageBox.Show("OAS参数已成功保存到：\n" /* string-offset:4064 */ + saveFileDialog.FileName, "保存成功" /* string-offset:4068 */, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+25525: 				}
+25526: 				catch (Exception ex)
+25527: 				{
+25528: 					MessageBox.Show("保存失败：" /* string-offset:4072 */ + ex.Message, "错误" /* string-offset:340 */, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+25529: 				}
+25530: 			}
+25531: 		}

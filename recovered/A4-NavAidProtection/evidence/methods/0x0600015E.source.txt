@@ -1,0 +1,4 @@
+954: 		public void SetValue(Control P_0, string P_1)
+955: 		{
+956: 			((CheckBox)P_0).Checked = P_1 == "True" /* string-offset:1040 */;
+957: 		}

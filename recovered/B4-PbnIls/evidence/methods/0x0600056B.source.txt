@@ -1,0 +1,53 @@
+61820: 		private void _0089_0096_0090(object P_0, EventArgs P_1)
+61821: 		{
+61822: 			//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+61823: 			//IL_0066: Invalid comparison between Unknown and I4
+61824: 			//IL_0043: Unknown result type (might be due to invalid IL or missing references)
+61825: 			//IL_0049: Expected O, but got Unknown
+61826: 			//IL_0085: Unknown result type (might be due to invalid IL or missing references)
+61827: 			//IL_0090: Unknown result type (might be due to invalid IL or missing references)
+61828: 			_ = 1;
+61829: 			Editor editor = default(Editor);
+61830: 			PromptEntityResult entity = default(PromptEntityResult);
+61831: 			if (!_0088_009E())
+61832: 			{
+61833: 				if (!true /* original-file-bool-offset:1072 */)
+61834: 				{
+61835: 					return;
+61836: 				}
+61837: 				Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+61838: 				_0089_0095_0090(mdiActiveDocument.Window.Handle);
+61839: 				editor = mdiActiveDocument.Editor;
+61840: 				PromptEntityOptions val = new PromptEntityOptions("请选择OAS面" /* string-offset:6476 */);
+61841: 				if (_0088_009E())
+61842: 				{
+61843: 					return;
+61844: 				}
+61845: 				entity = editor.GetEntity(val);
+61846: 			}
+61847: 			if ((int)((PromptResult)entity).Status != 5100)
+61848: 			{
+61849: 				return;
+61850: 			}
+61851: 			Transaction val2 = Application.DocumentManager.MdiActiveDocument.Database.TransactionManager.StartTransaction();
+61852: 			try
+61853: 			{
+61854: 				ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;
+61855: 				_ = 0;
+61856: 				TypedValue[] array = default(TypedValue[]);
+61857: 				if (_0088_009D())
+61858: 				{
+61859: 					if (!(xData != (ResultBuffer)null))
+61860: 					{
+61861: 						editor.WriteMessage("未找到OAS参数。\n" /* string-offset:6480 */);
+61862: 						return;
+61863: 					}
+61864: 					array = xData.AsArray();
+61865: 				}
+61866: 				_0089_0096_0086(((TypedValue)(ref array[1])).Value.ToString());
+61867: 			}
+61868: 			finally
+61869: 			{
+61870: 				((IDisposable)val2)?.Dispose();
+61871: 			}
+61872: 		}

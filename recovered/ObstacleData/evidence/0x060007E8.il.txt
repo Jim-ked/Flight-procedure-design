@@ -1,0 +1,14 @@
+METHOD 060007E8 \x8f\x8d.\x8f\x8c::\x8b\x88\x8f RVA=92234 file=90434
+IL_0000: ldarg.1 
+IL_0001: ldc.r8 1000.0
+IL_000A: ldarg.2 
+IL_000B: ldc.r8 0.0
+IL_0014: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_0019: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_001E: stloc.0 
+IL_001F: ldarg.0 
+IL_0020: ldarg.1 
+IL_0021: ldloc.0 
+IL_0022: call 0x060007E7 \x8f\x8d.\x8f\x8c::\x8b\x88\x8e
+IL_0027: ret 
+

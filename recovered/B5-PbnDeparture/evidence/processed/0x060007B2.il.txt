@@ -1,0 +1,16 @@
+METHOD 060007B2 \x8f\x87.\x8f\x86::\x8b\x86\x87 RVA=90A54 file=8EC54
+IL_0000: ldarg.1 
+IL_0001: ldc.i4 964
+IL_0006: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_000B: ldarg.2 
+IL_000C: ldarg.0 
+IL_000D: ldfld 0x04000765 \x8f\x87.\x8f\x86::\x8b\x86\x91
+IL_0012: div 
+IL_0013: stloc.0 
+IL_0014: ldloca.s local(0x0000)
+IL_0016: call 0x0A0001B7 System.Double::ToString
+IL_001B: call 0x0A00003C System.String::Concat
+IL_0020: call 0x0A000030 System.Windows.Forms.MessageBox::Show
+IL_0025: pop 
+IL_0026: ret 
+

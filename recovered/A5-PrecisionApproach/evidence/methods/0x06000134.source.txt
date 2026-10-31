@@ -1,0 +1,17 @@
+342: 		public static void _008C_008F(this Polyline P_0, Point2dCollection P_1)
+343: 		{
+344: 			//IL_000f: Unknown result type (might be due to invalid IL or missing references)
+345: 			int num = 0;
+346: 			if (_5())
+347: 			{
+348: 			}
+349: 			while (num < P_1.Count)
+350: 			{
+351: 				P_0.AddVertexAt(num, P_1[num], 0.0, 0.0, 0.0);
+352: 				_5();
+353: 				if (!_6())
+354: 				{
+355: 					num++;
+356: 				}
+357: 			}
+358: 		}

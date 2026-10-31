@@ -1,0 +1,45 @@
+METHOD 06000432 \x8a\x98.\x8a\x97::\x88\x93\x8e RVA=55C34 file=53E34
+IL_0000: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0005: dup 
+IL_0006: ldarg.0 
+IL_0007: ldfld 0x040003C0 \x8a\x98.\x8a\x97::\x88\x93\x98
+IL_000C: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0011: dup 
+IL_0012: ldarg.0 
+IL_0013: ldfld 0x040003C4 \x8a\x98.\x8a\x97::\x88\x93\x9c
+IL_0018: callvirt 0x0A00012A 0x1B00000F::Add
+IL_001D: dup 
+IL_001E: ldarg.0 
+IL_001F: ldfld 0x040003C5 \x8a\x98.\x8a\x97::\x88\x93\x9d
+IL_0024: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0029: dup 
+IL_002A: ldarg.0 
+IL_002B: ldfld 0x040003C1 \x8a\x98.\x8a\x97::\x88\x93\x99
+IL_0030: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0035: dup 
+IL_0036: ldarg.0 
+IL_0037: ldfld 0x040003C0 \x8a\x98.\x8a\x97::\x88\x93\x98
+IL_003C: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0041: dup 
+IL_0042: ldarg.0 
+IL_0043: ldfld 0x040003BF \x8a\x98.\x8a\x97::\x88\x93\x97
+IL_0048: callvirt 0x0A00012A 0x1B00000F::Add
+IL_004D: dup 
+IL_004E: ldarg.0 
+IL_004F: ldfld 0x040003C2 \x8a\x98.\x8a\x97::\x88\x93\x9a
+IL_0054: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0059: dup 
+IL_005A: ldarg.0 
+IL_005B: ldfld 0x040003C4 \x8a\x98.\x8a\x97::\x88\x93\x9c
+IL_0060: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0065: dup 
+IL_0066: ldarg.0 
+IL_0067: ldfld 0x040003C0 \x8a\x98.\x8a\x97::\x88\x93\x98
+IL_006C: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0071: stloc.0 
+IL_0072: ldarg.0 
+IL_0073: ldfld 0x040003D3 \x8a\x98.\x8a\x97::\x88\x94\x92
+IL_0078: ldloc.0 
+IL_0079: callvirt 0x0A0001D8 0x1B000001::Add
+IL_007E: ret 
+

@@ -1,0 +1,28 @@
+4494: 		private static void _008A_0099(Control.ControlCollection P_0, ref string P_1, string P_2)
+4495: 		{
+4496: 			_ = 0;
+4497: 			if (!_009B() || false /* original-file-bool-offset:144 */)
+4498: 			{
+4499: 				return;
+4500: 			}
+4501: 			foreach (Control item in P_0)
+4502: 			{
+4503: 				string text = (string.IsNullOrEmpty(P_2) ? item.Name : (P_2 + "." /* string-offset:700 */ + item.Name));
+4504: 				if (_008A_009B._008D_0091(item, out var obj))
+4505: 				{
+4506: 					P_1 = P_1 + text + ":" /* string-offset:724 */ + obj.GetValue(item) + "\n" /* string-offset:328 */;
+4507: 					_ = 0;
+4508: 					if (!_009B())
+4509: 					{
+4510: 					}
+4511: 				}
+4512: 				else if (!(item is TabPage) && !(item is GroupBox))
+4513: 				{
+4514: 					_008A_0099(item.Controls, ref P_1, text);
+4515: 				}
+4516: 				else
+4517: 				{
+4518: 					_008A_0099(item.Controls, ref P_1, text);
+4519: 				}
+4520: 			}
+4521: 		}

@@ -1,0 +1,53 @@
+METHOD 06000329 \x89\x8f.\x89\x8e::\x87\x96\x90 RVA=3D4A4 file=3B6A4
+IL_0000: nop 
+IL_0001: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0006: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000B: dup 
+IL_000C: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0011: pop 
+IL_0012: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_0017: stloc.0 
+IL_0018: call 0x06000340 \x89\x8f.\x89\x8e::\x871
+IL_001D: call 0x06000341 \x89\x8f.\x89\x8e::\x872
+IL_0022: brfalse.s 58
+IL_0024: pop 
+IL_0025: call 0x06000340 \x89\x8f.\x89\x8e::\x871
+IL_002A: brtrue.s 152
+IL_002C: br.s 13
+IL_002E: pop 
+IL_002F: ldloc.0 
+IL_0030: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_0035: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_003A: stloc.1 
+IL_003B: ldarg.0 
+IL_003C: ldloc.0 
+IL_003D: ldc.i4.0 
+IL_003E: ldc.i4.0 
+IL_003F: call 0x2B00000D 
+IL_0044: stfld 0x0400024B \x89\x8f.\x89\x8e::\x87\x97\x8c
+IL_0049: leave.s 97
+IL_004B: ldloc.1 
+IL_004C: brfalse.s 96
+IL_004E: ldloc.1 
+IL_004F: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0054: endfinally 
+IL_0055: ldarg.0 
+IL_0056: ldfld 0x04000259 \x89\x8f.\x89\x8e::\x87\x97\x9a
+IL_005B: ldc.i4 2720
+IL_0060: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0065: ldarg.0 
+IL_0066: ldfld 0x0400024B \x89\x8f.\x89\x8e::\x87\x97\x8c
+IL_006B: callvirt 0x0A0001C3 0x1B00000A::get_Count
+IL_0070: stloc.2 
+IL_0071: ldloca.s local(0x0002)
+IL_0073: call 0x0A0001C4 System.Int32::ToString
+IL_0078: ldc.i4 936
+IL_007D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0082: call 0x0A00003C System.String::Concat
+IL_0087: callvirt 0x0A0002BD System.Windows.Forms.ToolStripItem::set_Text
+IL_008C: ldarg.0 
+IL_008D: ldarg.0 
+IL_008E: ldfld 0x0400024B \x89\x8f.\x89\x8e::\x87\x97\x8c
+IL_0093: call 0x0600032A \x89\x8f.\x89\x8e::\x87\x96\x91
+IL_0098: ret 
+

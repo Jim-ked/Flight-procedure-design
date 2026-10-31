@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞行程序基础计算 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 传统程序 / 飞行程序基础计算</div>
+        <h1>A2.飞行程序基础计算</h1>
+        <div class="cmd">命令：Y02_基础计算</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>传统程序</h2>
+                <ul>
+                    <li><a href="FormWindSpiral.html">A1.风螺旋</a></li>
+                    <li><a href="FormCalcu.html" class="active">A2.飞行程序基础计算</a></li>
+                    <li><a href="FixTolerance.html">A3.定位容差</a></li>
+                    <li><a href="FormNavAids.html">A4.非精密进近保护区</a></li>
+                    <li><a href="FormPA.html">A5.精密进近保护区</a></li>
+                    <li><a href="FormTemplate.html">A6.传统保护区模板</a></li>
+                    <li><a href="FormDepartureEvl.html">A7.离场越障评估</a></li>
+                    <li><a href="FormTurnAreaEvl.html">A8.复飞转弯区评估</a></li>
+                    <li><a href="FormPriSecEvl.html">A9.主副区评估</a></li>
+                    <li><a href="FormDmeEvl.html">A10.起始进近DME弧</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">PBN 程序 / 辅助功能</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【飞行程序基础计算】是一个<strong>综合计算模块</strong>，集成了 FAF、SOC、C 容差以及离场 / 复飞转弯点等常用距离计算。每个计算功能都包含参数输入、示意图预览、文字标注选项与 CAD 绘制。</p>
+            </div>             
+            <div class="card">
+                <h2>公共元素与通用操作</h2>
+                <p>每个选项卡都包含相同的三类公共控件：</p>
+                <table>
+                    <thead><tr><th>控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>示意图区</td><td>显示当前计算模型的几何示意图，用于绘制前核对。</td></tr>
+                        <tr><td>【文字标注】</td><td>勾选（默认开）后，绘制时一并标注计算文字。</td></tr>
+                        <tr><td>【CAD】</td><td>把当前选项卡的计算结果绘制到CAD窗口；绘制时按命令行提示拾取基准点与方向。</td></tr>
+                    </tbody>
+                </table>
+                <h3>通用操作步骤</h3>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y02_基础计算</code> 打开窗口。</li>
+                    <li>切换到需要的选项卡（FAF / 非精密SOC / 精密SOC / 复飞TP / 离场TP / C容差）。</li>
+                    <li>填写该选项卡的参数，结果框与示意图会随参数自动更新。</li>
+                    <li>如需标注文字，保持【文字标注】勾选。</li>
+                    <li>点击【CAD】，按命令行提示拾取基准点与方向，把结果绘制到CAD窗口。</li>
+                </ul>
+                <div class="tip"><strong>提示：</strong>各选项卡相互独立，分别对应不同的计算模型；灰色结果框为自动计算结果，无需手工输入。</div>
+            </div>
+            <div class="card">
+                <h2>选项卡一：FAF计算</h2>
+                <h3>界面截图</h3>
+                <!-- 将 images/FormCalcu_tab1.png 替换为该选项卡实际截图即可（保持文件名不变） -->
+                  <img src="images/FormCalcu_tab1.png" alt="FormCalcu 界面截图" width="536"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明（进近程序参数）</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>中间段长度(m)</td><td>10000</td><td>IF 至 FAF 的中间进近段长度。</td></tr>
+                        <tr><td>FAF高度(m)</td><td>900</td><td>最后进近定位点高度。</td></tr>
+                        <tr><td>入口标高(m)</td><td>300</td><td>跑道入口标高。</td></tr>
+                        <tr><td>GP角度(°)</td><td>3</td><td>下滑角。</td></tr>
+                        <tr><td>RDH(m)</td><td>15</td><td>入口基准高。</td></tr>
+                        <tr><td>FAF-THR(m)</td><td>11162</td><td>FAF至入口距离 = (FAF高度 − RDH − 入口标高) ÷ tan(GP角度)，随参数自动重算。</td></tr>
+                    </tbody>
+                </table>
+                <h3>操作步骤</h3>
+                <ul class="steps">
+                    <li>填写中间段长度、FAF 高度、入口标高、GP 角度、RDH。</li>
+                    <li>软件自动计算 FAF 至 THR 距离。</li>
+                    <li>点【CAD】，按提示拾取位置点，指定方向进行绘制。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>选项卡二：非精密SOC计算</h2>
+                <h3>界面截图</h3>
+                  <img src="images/FormCalcu_tab2.png" alt="非精密SOC计算选项卡截图" width="536"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>复飞参数计算</td><td>IAS380 / 高度900 / 坡度25 / 温度15 / 风速19</td><td>IAS(km/h)、高度(m)、坡度(°)、温度(℃)、风速(km/h)；IAS 与风速可点击标签更换数据单位（nm）。</td></tr>
+                        <tr><td>计时(sec)</td><td>18</td><td>复飞点（MAPt）定位容差最晚点与SOC之间的飞行时长。</td></tr>
+                        <tr><td>距离(m)</td><td>772</td><td>结果：计时飞行距离 = (TAS + 风速) × 计时 ÷ 3.6，自动计算。</td></tr>
+                    </tbody>
+                </table>
+                <h3>操作步骤</h3>
+                <ul class="steps">
+                    <li>在“空速计算”面板填写高度、IAS、温度、风速等参数。</li>
+                    <li>核对自动计算的计时与距离。</li>
+                    <li>点【CAD】，依次拾取“复飞定位容差最晚点”与“复飞方向”进行绘制。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>选项卡三：精密SOC计算</h2>
+                <h3>界面截图</h3>
+                  <img src="images/FormCalcu_tab3.png" alt="精密SOC计算选项卡截图" width="534"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明（精密进近参数）</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>GP(°)</td><td>3.0</td><td>下滑角，下拉选择 2.5～3.2（超过 3.2 时 APV 计算方法不同）。</td></tr>
+                        <tr><td>Xz(m)</td><td>-900</td><td>THR—SOC 距离的偏移修正量，下拉选择 -900 / -1100 / -1400。</td></tr>
+                        <tr><td>DH(m)</td><td>60</td><td>决断高。</td></tr>
+                        <tr><td>标高(m)</td><td>1800</td><td>机场标高；高于 900m 时自动对 HL 作标高修正。</td></tr>
+                        <tr><td>机型</td><td>D</td><td>航空器分类 H / A / B / C / D，决定 HLm 与 HLr 取值。</td></tr>
+                        <tr><td>HLm(m)</td><td>49</td><td>气压高度表高度损失，按机型自动取值，不可手输。</td></tr>
+                        <tr><td>HLr(m)</td><td>26</td><td>无线电高度表高度损失，按机型自动取值，不可手输。</td></tr>
+                        <tr><td>HL修正(m)</td><td>52.12</td><td>实际采用的 HL：标高 &gt; 900m 时为 HLm + HLr × 0.02 × 标高 ÷ 300，否则等于 HLm；可手改。</td></tr>
+                        <tr><td>SOC高(m)</td><td>0</td><td>SOC 高度 = DH − HL修正，自动计算。</td></tr>
+                        <tr><td>THR-SOC(m)</td><td>0</td><td>THR至SOC 距离 = (DH − HL修正) ÷ tan(GP) + Xz，自动计算。</td></tr>
+                    </tbody>
+                </table>
+                <h3>操作步骤</h3>
+                <ul class="steps">
+                    <li>选择 GP 角度、Xz、机型，填写 DH 与机场标高。</li>
+                    <li>核对自动计算的 HL修正、SOC高、THR-SOC 与示意图。</li>
+                    <li>点【CAD】，按提示拾取“跑道入口点”与“复飞方向”进行绘制。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>选项卡四：复飞TP计算</h2>
+                <h3>界面截图</h3>
+                  <img src="images/FormCalcu_tab4.png" alt="复飞TP计算选项卡截图" width="537"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明（航段参数）</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>SOC高度(m)</td><td>100</td><td>复飞起始爬升点高度。</td></tr>
+                        <tr><td>转弯高度(m)</td><td>300</td><td>复飞转弯开始高度。</td></tr>
+                        <tr><td>复飞梯度(%)</td><td>2.5</td><td>复飞爬升梯度。</td></tr>
+                        <tr><td>SOC-TP(m)</td><td>自动</td><td>SOC 至转弯点距离 = (转弯高度 − SOC高度) ÷ 复飞梯度 × 100，随参数自动重算。</td></tr>
+                    </tbody>
+                </table>
+                <h3>操作步骤</h3>
+                <ul class="steps">
+                    <li>填写 SOC 高度、转弯高度、复飞梯度。</li>
+                    <li>核对自动计算的 SOC-TP 距离。</li>
+                    <li>点【CAD】，按提示拾取 SOC 点与复飞方向进行绘制。</li>
+                </ul>                
+            </div>
+            <div class="card">
+                <h2>选项卡五：离场TP计算</h2>
+                <h3>界面截图</h3>
+                  <img src="images/FormCalcu_tab5.png" alt="离场TP计算选项卡截图" width="537"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明（航段参数）</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>DER高度(m)</td><td>100</td><td>起飞末端高度。</td></tr>
+                        <tr><td>转弯高度(m)</td><td>300</td><td>离场转弯开始高度。</td></tr>
+                        <tr><td>离场梯度(%)</td><td>3.3</td><td>离场爬升梯度（PDG）。</td></tr>
+                        <tr><td>DER-TP(m)</td><td>5909</td><td>DER 至转弯点距离 = (转弯高度 − DER高度 − 5) ÷ 离场梯度 × 100，随参数自动重算。</td></tr>
+                    </tbody>
+                </table>
+                <h3>操作步骤</h3>
+                <ul class="steps">
+                    <li>填写 DER 高度、转弯高度、离场梯度。</li>
+                    <li>核对自动计算的 DER-TP 距离。</li>
+                    <li>点【CAD】，依次拾取 DER 与“离场方向”绘制。</li>
+                </ul>                
+            </div>
+            <div class="card">
+                <h2>选项卡六：C容差计算</h2>
+                <h3>界面截图</h3>
+                  <img src="images/FormCalcu_tab6.png" alt="C容差计算选项卡截图" width="536"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>空速计算面板</td><td> IAS380 / 高度900 / 坡度15 / 温度15 / 风速56</td><td>换算C容差计算使用的真空速（TAS）。</td></tr>
+                        <tr><td>计时(sec)</td><td>6</td><td>飞行技术误差（C 容差）对应的计时，自动联动，不可手输。</td></tr>
+                        <tr><td>距离(m)</td><td>772</td><td>计时内飞行距离 = (TAS + 风速) × 计时 ÷ 3.6，自动计算。</td></tr>
+                    </tbody>
+                </table>
+                <h3>操作步骤</h3>
+                <ul class="steps">
+                    <li>在“空速计算”面板填写参数，核对自动计算的计时与距离。</li>
+                    <li>点【CAD】，依次拾取“转弯最晚点”与“飞行方向”绘制 C 容差线。</li>
+                </ul>                
+            </div>
+            <div class="pager">
+                <a href="FormWindSpiral.html">← 上一篇：A1.风螺旋</a>
+                <a href="FixTolerance.html">下一篇：A3.定位容差 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

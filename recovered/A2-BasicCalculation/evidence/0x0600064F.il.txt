@@ -1,0 +1,62 @@
+METHOD 0600064F \x8d\x8d.\x8d\x8c::\x8a\x90\x8f RVA=8851C file=8671C
+IL_0000: nop 
+IL_0001: nop 
+IL_0002: ldtoken 0x02000072 \x8d\x8d.\x8d\x8c
+IL_0007: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_000C: newobj 0x0A0003A0 System.Runtime.Serialization.Json.DataContractJsonSerializer::.ctor
+IL_0011: stloc.0 
+IL_0012: newobj 0x0A0003A1 System.IO.MemoryStream::.ctor
+IL_0017: stloc.1 
+IL_0018: ldloc.0 
+IL_0019: ldloc.1 
+IL_001A: ldarg.0 
+IL_001B: callvirt 0x0A0003A2 System.Runtime.Serialization.XmlObjectSerializer::WriteObject
+IL_0020: ldloc.1 
+IL_0021: callvirt 0x0A0003A3 System.IO.MemoryStream::ToArray
+IL_0026: stloc.2 
+IL_0027: call 0x06000658 \x8d\x8d.\x8d\x8c::\x89\x89
+IL_002C: call 0x06000659 \x8d\x8d.\x8d\x8c::\x89\x8a
+IL_0031: brtrue.s 76
+IL_0033: pop 
+IL_0034: ldloc.2 
+IL_0035: ldlen 
+IL_0036: conv.i4 
+IL_0037: ldc.i4 16384
+IL_003C: ble.s 105
+IL_003E: br.s 77
+IL_0040: pop 
+IL_0041: ldc.i4 6768
+IL_0046: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_004B: ldloc.2 
+IL_004C: ldlen 
+IL_004D: conv.i4 
+IL_004E: box 0x010000F3 System.Int32
+IL_0053: call 0x0A0001A4 System.String::Format
+IL_0058: call 0x0A0000B6 Autodesk.AutoCAD.ApplicationServices.Core.Application::ShowAlertDialog
+IL_005D: call 0x0A000306 System.Text.Encoding::get_UTF8
+IL_0062: ldloc.2 
+IL_0063: ldc.i4.0 
+IL_0064: ldloc.2 
+IL_0065: ldlen 
+IL_0066: conv.i4 
+IL_0067: callvirt 0x0A0003A4 System.Text.Encoding::GetString
+IL_006C: stloc.3 
+IL_006D: leave.s 170
+IL_006F: ldloc.1 
+IL_0070: brfalse.s 132
+IL_0072: ldloc.1 
+IL_0073: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0078: endfinally 
+IL_0079: stloc.s local(0x0004)
+IL_007B: ldc.i4 6772
+IL_0080: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0085: ldloc.s local(0x0004)
+IL_0087: callvirt 0x0A000055 System.Exception::get_Message
+IL_008C: call 0x0A00008B System.String::Concat
+IL_0091: call 0x0A0000B6 Autodesk.AutoCAD.ApplicationServices.Core.Application::ShowAlertDialog
+IL_0096: ldstr ''
+IL_009B: stloc.3 
+IL_009C: leave.s 170
+IL_009E: ldloc.3 
+IL_009F: ret 
+

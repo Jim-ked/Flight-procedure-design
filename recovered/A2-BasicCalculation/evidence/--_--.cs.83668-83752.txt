@@ -1,0 +1,85 @@
+83668: 		public static double _008B_0087_009D(string P_0, string P_1 = "输入数据有误，请检查。")
+83669: 		{
+83670: 			try
+83671: 			{
+83672: 				return Convert.ToDouble(P_0);
+83673: 			}
+83674: 			catch
+83675: 			{
+83676: 				MessageBox.Show(P_0 + " " /* string-offset:584 */ + P_1, "数据错误" /* string-offset:4984 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83677: 				return 0.0;
+83678: 			}
+83679: 		}
+83680: 
+83681: 		public static double _008B_0087_009E(TextBox P_0, string P_1 = "输入数据有误，请检查。")
+83682: 		{
+83683: 			_ = 0;
+83684: 			double result = default(double);
+83685: 			if (_0089p())
+83686: 			{
+83687: 				if (double.TryParse(P_0.Text, out result))
+83688: 				{
+83689: 					goto IL_0034;
+83690: 				}
+83691: 				P_0.Focus();
+83692: 				P_0.BackColor = Color.LightCoral;
+83693: 			}
+83694: 			else if (!_0089q())
+83695: 			{
+83696: 				goto IL_0034;
+83697: 			}
+83698: 			MessageBox.Show(P_0.Text + " " /* string-offset:584 */ + P_1, "数据错误" /* string-offset:4984 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83699: 			return 0.0;
+83700: 			IL_0034:
+83701: 			return result;
+83702: 		}
+83703: 
+83704: 		public static bool _008B_0088_0086(TextBox P_0, string P_1)
+83705: 		{
+83706: 			if (_0089p())
+83707: 			{
+83708: 				if (!false /* original-file-bool-offset:1432 */)
+83709: 				{
+83710: 					if (string.IsNullOrWhiteSpace(P_0.Text))
+83711: 					{
+83712: 						MessageBox.Show(P_1, "\n输入错误，请检查。" /* string-offset:7460 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83713: 						_ = 0;
+83714: 						if (_0089p())
+83715: 						{
+83716: 							P_0.Focus();
+83717: 							P_0.BackColor = Color.LightCoral;
+83718: 							return false;
+83719: 						}
+83720: 						goto IL_00bb;
+83721: 					}
+83722: 					if (double.TryParse(P_0.Text, out var _))
+83723: 					{
+83724: 						P_0.BackColor = Color.White;
+83725: 						return true;
+83726: 					}
+83727: 					P_1 = P_1.Replace("不能为空" /* string-offset:7464 */, "必须是一个有效的数字" /* string-offset:7468 */) + "\n" /* string-offset:328 */;
+83728: 				}
+83729: 				MessageBox.Show(P_1, "输入错误，请检查。" /* string-offset:7472 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83730: 			}
+83731: 			P_0.Focus();
+83732: 			goto IL_00bb;
+83733: 			IL_00bb:
+83734: 			P_0.BackColor = Color.LightCoral;
+83735: 			return false;
+83736: 		}
+83737: 
+83738: 		public static bool _008B_0088_0087(TextBox P_0)
+83739: 		{
+83740: 			_ = 0;
+83741: 			if (_0089p() && double.TryParse(P_0.Text, out var _))
+83742: 			{
+83743: 				P_0.BackColor = Color.White;
+83744: 				return true;
+83745: 			}
+83746: 			P_0.BackColor = Color.LightCoral;
+83747: 			return false;
+83748: 		}
+83749: 
+83750: 		public static double _008B_0088_0088(double P_0)
+83751: 		{
+83752: 			while (P_0 > Math.PI)

@@ -1,0 +1,40 @@
+﻿method,keyword,IL
+0x0600001A,Spiral,IL_0000: call 0x06000007 WindSpiralBasic.Properties.Resources::get_ResourceManager
+0x0600001A,Spiral,IL_000F: ldsfld 0x04000009 WindSpiralBasic.Properties.Resources::resourceCulture
+0x0600003D,Spiral,IL_0000: call 0x06000007 WindSpiralBasic.Properties.Resources::get_ResourceManager
+0x0600003D,Spiral,IL_000F: ldsfld 0x04000009 WindSpiralBasic.Properties.Resources::resourceCulture
+0x06000087,Group,IL_002B: newobj 0x0A00009D Autodesk.AutoCAD.DatabaseServices.Group::.ctor
+0x06000087,Polyline,IL_0044: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+0x06000087,Group,IL_0062: callvirt 0x0A0000A0 Autodesk.AutoCAD.DatabaseServices.Group::Append
+0x06000089,XData,IL_00C8: callvirt 0x0A0000B4 Autodesk.AutoCAD.DatabaseServices.DBObject::set_XData
+0x06000089,AppendEntity,IL_00FA: callvirt 0x0A0000B3 Autodesk.AutoCAD.DatabaseServices.BlockTableRecord::AppendEntity
+0x0600009C,BlockReference,IL_00F9: newobj 0x0A0000C7 Autodesk.AutoCAD.DatabaseServices.BlockReference::.ctor
+0x0600009C,AppendEntity,IL_012D: callvirt 0x0A0000B3 Autodesk.AutoCAD.DatabaseServices.BlockTableRecord::AppendEntity
+0x0600009C,BlockReference,IL_017F: callvirt 0x0A0000D3 Autodesk.AutoCAD.DatabaseServices.BlockReference::get_BlockTransform
+0x0600009C,BlockReference,IL_019F: callvirt 0x0A0000DF Autodesk.AutoCAD.DatabaseServices.BlockReference::get_AttributeCollection
+0x0600009E,BlockReference,IL_0076: isinst 0x01000019 Autodesk.AutoCAD.DatabaseServices.BlockReference
+0x0600009E,BlockReference,IL_007B: callvirt 0x0A0000DF Autodesk.AutoCAD.DatabaseServices.BlockReference::get_AttributeCollection
+0x060000F5,Group,IL_008A: isinst 0x01000044 System.Windows.Forms.GroupBox
+0x0600010D,SelectAll,IL_0071: callvirt 0x0A0001AE Autodesk.AutoCAD.EditorInput.Editor::SelectAll
+0x06000113,GetPoint,IL_007C: callvirt 0x0A0001B5 Autodesk.AutoCAD.EditorInput.Editor::GetPoint
+0x06000134,Polyline,IL_002F: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+0x06000134,AddVertexAt,IL_002F: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+0x06000318,GetEntity,IL_0055: callvirt 0x0A00007C Autodesk.AutoCAD.EditorInput.Editor::GetEntity
+0x06000318,XData,IL_009C: callvirt 0x0A000081 Autodesk.AutoCAD.DatabaseServices.DBObject::get_XData
+0x0600031F,Group,IL_0CBD: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x0600031F,Group,IL_0F88: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x0600031F,Group,IL_17E5: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x0600031F,Group,IL_2036: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x0600031F,Group,IL_227C: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x0600031F,Spiral,IL_32F5: call 0x0600003D WindSpiralBasic.Properties.Resources::get_SwitchSourceOrTarget_16x
+0x0600031F,Group,IL_3465: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x0600031F,Group,IL_3768: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x0600031F,Group,IL_3ACD: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x0600031F,Group,IL_45E6: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x0600031F,Group,IL_53AE: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x0600039E,4630,IL_00D1: ldc.r8 4630.0
+0x0600039E,9260,IL_0105: ldc.r8 9260.0
+0x06000437,4630,IL_0404: ldc.r8 4630.0
+0x06000437,9260,IL_0438: ldc.r8 9260.0
+0x06000443,4630,IL_02CE: ldc.r8 4630.0
+0x06000443,9260,IL_0302: ldc.r8 9260.0

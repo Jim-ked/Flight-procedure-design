@@ -1,0 +1,36 @@
+METHOD 06000238 \x88\x9c.\x88\x9b::\x98\x8b RVA=1B278 file=19478
+IL_0000: call 0x06000246 \x88\x9c.\x88\x9b::\x87\x95
+IL_0005: call 0x06000247 \x88\x9c.\x88\x9b::\x87\x96
+IL_000A: brtrue.s 105
+IL_000C: pop 
+IL_000D: ldarg.0 
+IL_000E: ldfld 0x0400010B \x88\x9c.\x88\x9b::\x9b\x98
+IL_0013: ldarg.0 
+IL_0014: ldfld 0x040000BF \x88\x9c.\x88\x9b::\x98\x97
+IL_0019: ldarg.0 
+IL_001A: ldfld 0x04000102 \x88\x9c.\x88\x9b::\x9b\x8f
+IL_001F: callvirt 0x0A0001F7 System.Windows.Forms.ListControl::get_SelectedIndex
+IL_0024: ldc.i4.0 
+IL_0025: call 0x0A0002B3 0x1B000029::Address
+IL_002A: call 0x0A0001B7 System.Double::ToString
+IL_002F: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0034: ldarg.0 
+IL_0035: ldfld 0x0400010A \x88\x9c.\x88\x9b::\x9b\x97
+IL_003A: ldarg.0 
+IL_003B: ldfld 0x040000BF \x88\x9c.\x88\x9b::\x98\x97
+IL_0040: ldarg.0 
+IL_0041: ldfld 0x04000102 \x88\x9c.\x88\x9b::\x9b\x8f
+IL_0046: callvirt 0x0A0001F7 System.Windows.Forms.ListControl::get_SelectedIndex
+IL_004B: ldc.i4.1 
+IL_004C: call 0x0A0002B3 0x1B000029::Address
+IL_0051: call 0x0A0001B7 System.Double::ToString
+IL_0056: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_005B: br.s 106
+IL_005D: pop 
+IL_005E: ldarg.0 
+IL_005F: call 0x06000239 \x88\x9c.\x88\x9b::\x98\x8c
+IL_0064: ldarg.0 
+IL_0065: call 0x06000237 \x88\x9c.\x88\x9b::\x98\x8a
+IL_006A: pop 
+IL_006B: ret 
+

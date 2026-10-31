@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>起始进近DME弧 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 传统程序 / 起始进近DME弧</div>
+        <h1>A10.起始进近 DME 弧评估</h1>
+        <div class="cmd">命令：Y10_起始进近DME弧</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>传统程序</h2>
+                <ul>
+                    <li><a href="FormWindSpiral.html">A1.风螺旋</a></li>
+                    <li><a href="FormCalcu.html">A2.飞行程序基础计算</a></li>
+                    <li><a href="FixTolerance.html">A3.定位容差</a></li>
+                    <li><a href="FormNavAids.html">A4.非精密进近保护区</a></li>
+                    <li><a href="FormPA.html">A5.精密进近保护区</a></li>
+                    <li><a href="FormTemplate.html">A6.传统保护区模板</a></li>
+                    <li><a href="FormDepartureEvl.html">A7.离场越障评估</a></li>
+                    <li><a href="FormTurnAreaEvl.html">A8.复飞转弯区评估</a></li>
+                    <li><a href="FormPriSecEvl.html">A9.主副区评估</a></li>
+                    <li><a href="FormDmeEvl.html" class="active">A10.起始进近DME弧</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">PBN 程序 / 辅助功能</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【起始进近DME弧】用于<strong>起始进近段的 DME 弧线评估与绘制</strong>。输入导航台位置、IF（中间进近定位点）位置与 IAF（起始进近定位点）方向后，评估并绘制 DME 弧保护区，可标注距离。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormDmeEvl.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormDmeEvl.png" alt="FormDmeEvl 界面截图" width="518"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>分区 / 控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>导航台位置</td><td>DME / VOR 导航台的坐标。</td></tr>
+                        <tr><td>IF位置</td><td>中间进近定位点（IF）的位置。</td></tr>
+                        <tr><td>IAF方向</td><td>起始进近定位点（IAF）的方位。</td></tr>
+                        <tr><td>屏幕数据（按钮）</td><td>从屏幕中拾取坐标点数据。</td></tr>
+                        <tr><td>标记（按钮）</td><td>标记重要障碍物。</td></tr>
+                        <tr><td>一键评估（按钮）</td><td>自动完成 DME 弧评估计算。</td></tr>
+                        <tr><td>标注距离（复选框）</td><td>是否在弧线上标注距离数值。</td></tr>
+                        <tr><td>CAD（按钮）</td><td>在 CAD 窗口中绘制 DME 弧保护区。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y10_起始进近DME弧</code> 打开窗口。</li>
+                    <li>填写或用【屏幕数据】拾取导航台位置、IF 位置、IAF 方向。</li>
+                    <li>点击【一键评估】完成计算，可勾选【标注距离】。</li>
+                    <li>点击【CAD】按钮，在 CAD 窗口中绘制 DME 弧保护区。</li>
+                </ul>
+                <div class="tip"><strong>提示：</strong>先用【标记】在图上确认各定位点位置，再评估绘制，可减少坐标填错。</div>
+            </div>
+            <div class="card">
+                <h2>效果示例</h2>
+                <!-- 效果图：将 images/FormDmeEvlEffect.png 替换为实际绘制效果截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormDmeEvlEffect.png" alt="FormDmeEvl 绘制效果示例" width="604"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="pager">
+                <a href="FormPriSecEvl.html">← 上一篇：A9.主副区评估</a>
+                <a href="FormFlyBy.html">下一篇：B1.旁切转弯 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

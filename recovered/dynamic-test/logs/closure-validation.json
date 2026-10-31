@@ -1,0 +1,72 @@
+{
+  "result": "PASS",
+  "scope": "Artifact integrity/status/link audit only; no original business runtime",
+  "required_files": 15,
+  "method_slices": 78,
+  "obstacle_edges": 15,
+  "original_files": 85,
+  "compiled_files": 19,
+  "checked_links": 22,
+  "files": [
+    {
+      "path": "round1-closure.md",
+      "sha256": "2cddfcc1cbbafcd6776680628bae19f91b0436fe7c31c681751ef1e5811c1795"
+    },
+    {
+      "path": "dynamic-test/environment.md",
+      "sha256": "6bea6084cc0de41ed46eacf262f56b2c075197136b5187efbf4dcb8071ebbef2"
+    },
+    {
+      "path": "dynamic-test/compile-validation.md",
+      "sha256": "c3648844adddab3fbcb3f204ffd42600c32ad2f84f14c308add8cd5983f69da6"
+    },
+    {
+      "path": "dynamic-test/experiment-index.md",
+      "sha256": "8275154063ab397e1bb99949ae7fff50dcd37fa9d7c7a4c7072ce14f7ab8ef51"
+    },
+    {
+      "path": "dynamic-test/dynamic-static-differences.md",
+      "sha256": "4b80fa3d8ac55ea045bb0b7892c067d96f961baf3943ab0f6b4f7b90c3a9d068"
+    },
+    {
+      "path": "A2-BasicCalculation/WsCalcuLine-schema.md",
+      "sha256": "9441e60f28911bf3b5bdfd47d75c9704b14ebbcef70b49db3c512b86b01044fe"
+    },
+    {
+      "path": "A2-BasicCalculation/cad-output-map.md",
+      "sha256": "cd478658d8384993b7fa4c64dcdbeaa2e46ce9c0807d34b020f2ecfc9f5c6efb"
+    },
+    {
+      "path": "A2-BasicCalculation/BasicCalculationForm.Events.Recovered.cs",
+      "sha256": "f357810545254b518bbdc32c62941125cef5d0a8689ff130f021e3537d6a7f7b"
+    },
+    {
+      "path": "ObstacleData/WsEntityFrame-schema.md",
+      "sha256": "86dc8e609078dfb79dbe5a66796b4d9a4675fe4c5e69559bac4915a405b69591"
+    },
+    {
+      "path": "ObstacleData/random-point.md",
+      "sha256": "5c2d46196f64692f53aeca918f54b181fd38a4ba594bee16947f29451150c63d"
+    },
+    {
+      "path": "ObstacleData/xinfo.md",
+      "sha256": "77d89a04b75df2b550bdc732b544639e2afda9a9b4b88ae228257daf691c6fd8"
+    },
+    {
+      "path": "ObstacleData/screen-data.md",
+      "sha256": "9ad9b50376f731449d6e1c3605b7260fce3762dbfa72b68fb102949972c4cf42"
+    },
+    {
+      "path": "ObstacleData/marker.md",
+      "sha256": "0e42c6db78379db9e269a13bc831f067893d0fcc7270a4a92ad5770d3a19f948"
+    },
+    {
+      "path": "A3-FixTolerance/geometry-chain.md",
+      "sha256": "7d8122307ef103b1d696fb119f64e3c39bceaefbbdfcae9477c75f43a900872e"
+    },
+    {
+      "path": "A3-FixTolerance/cad-output-map.md",
+      "sha256": "b7e88d5567ffb591497460c37afab15a746211c5ab0bf6d6378af08e860fc7bd"
+    }
+  ]
+}

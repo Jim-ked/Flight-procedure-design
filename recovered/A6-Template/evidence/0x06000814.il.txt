@@ -1,0 +1,14 @@
+METHOD 06000814 \x8f\x8f.\x8f\x8e::op_Subtraction RVA=62B1 file=44B1
+IL_0000: ldarg.0 
+IL_0001: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0006: ldarg.1 
+IL_0007: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_000C: sub 
+IL_000D: ldarg.0 
+IL_000E: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0013: ldarg.1 
+IL_0014: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0019: sub 
+IL_001A: newobj 0x06000849 \x8f\x97.\x8f\x96::.ctor
+IL_001F: ret 
+

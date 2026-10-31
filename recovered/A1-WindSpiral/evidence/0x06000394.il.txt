@@ -1,0 +1,38 @@
+METHOD 06000394 \x89\x95.\x89\x94::\x87\x9e\x91 RVA=4A468 file=48668
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x040002D3 \x89\x95.\x89\x94::\x88\x86\x8b
+IL_0006: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_000B: ldloca.s local(0x0000)
+IL_000D: call 0x0A0002E9 System.Double::TryParse
+IL_0012: brfalse.s 103
+IL_0014: ldloc.0 
+IL_0015: ldc.r8 0.0
+IL_001E: ble.s 74
+IL_0020: ldloc.0 
+IL_0021: ldc.r8 360.0
+IL_002A: bgt.un.s 74
+IL_002C: ldarg.0 
+IL_002D: ldfld 0x040002D3 \x89\x95.\x89\x94::\x88\x86\x8b
+IL_0032: call 0x0A00020C System.Drawing.Color::get_White
+IL_0037: callvirt 0x0A0001EC System.Windows.Forms.Control::set_BackColor
+IL_003C: br.s 127
+IL_003E: ldarg.0 
+IL_003F: ldfld 0x040002D3 \x89\x95.\x89\x94::\x88\x86\x8b
+IL_0044: call 0x0A000346 System.Drawing.Color::get_LightCoral
+IL_0049: callvirt 0x0A0001EC System.Windows.Forms.Control::set_BackColor
+IL_004E: ldc.i4.1 
+IL_004F: call 0x0600039D \x89\x95.\x89\x94::\x878
+IL_0054: brtrue.s 100
+IL_0056: pop 
+IL_0057: ret 
+IL_0058: pop 
+IL_0059: br.s 127
+IL_005B: ldarg.0 
+IL_005C: ldfld 0x040002D3 \x89\x95.\x89\x94::\x88\x86\x8b
+IL_0061: call 0x0A000346 System.Drawing.Color::get_LightCoral
+IL_0066: callvirt 0x0A0001EC System.Windows.Forms.Control::set_BackColor
+IL_006B: call 0x0600039C \x89\x95.\x89\x94::\x877
+IL_0070: brfalse.s 127
+IL_0072: ret 
+IL_0073: ret 
+

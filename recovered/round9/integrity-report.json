@@ -1,0 +1,134 @@
+{
+  "status": "PASS",
+  "baseline_files": 6678,
+  "frozen_missing": [],
+  "frozen_mismatch": [],
+  "unexpected_additions": [],
+  "checks": [
+    {
+      "name": "frozen baseline remains identical",
+      "passed": true,
+      "detail": {
+        "files": 6678,
+        "missing": [],
+        "mismatch": []
+      }
+    },
+    {
+      "name": "no new files outside two Round9 directories in four audited trees",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "baseline has expected 6678 files",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all local report links exist",
+      "passed": true,
+      "detail": {
+        "links": 236,
+        "broken": []
+      }
+    },
+    {
+      "name": "107 indexed methods and 13 A4 core identities",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "indexed non-native methods retain original and processed IL",
+      "passed": true,
+      "detail": []
+    },
+    {
+      "name": "P2F6 is native SetFocus, no fabricated method body",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all five events retain identity/RVA/callees",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all five handlers in resolved 74-method closure",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "twenty closure answers are present",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "scope stop and static-only acceptance explicit",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "test sources remain exactly the tested inputs",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "5550 recorded E3 assertions agree with layered counts",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "all recorded E3 equality assertions passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "thirty static checks passed",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "eight requested verification layers are represented",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "test execution log agrees with all layers",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "fixture index hashes and counts remain current",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "15deg endpoints saved for all 96 side cases",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "facility matrix includes VOR/NDB and negative evidence rows",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "A6 comparison limits line-sharing claim to observed P7E8",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "standard source identity matches actual PDF and frozen text",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "original DLL equals frozen original copy",
+      "passed": true,
+      "detail": null
+    }
+  ],
+  "failures": [],
+  "scope": "Four frozen material trees and two Round9 output directories; no filesystem-wide monitoring",
+  "target_runtime_executed": false
+}

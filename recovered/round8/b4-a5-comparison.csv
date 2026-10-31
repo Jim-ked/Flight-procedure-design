@@ -1,0 +1,19 @@
+﻿component,A5,B4,classification,detail,evidence
+database loader,P409,P571,Copied implementation,"same schema/key/query, separate MethodDef; A5 standalone parameter class",method-index/direct-calls + frozen Round7 reports; E1/E2
+decoder,P40A,P572,Copied implementation,same digit transform and fixed slicing,method-index/direct-calls + frozen Round7 reports; E1/E2
+size/RDH,P40B/P40C,P573/P574,Copied implementation,same arithmetic; independent methods,method-index/direct-calls + frozen Round7 reports; E1/E2
+OasModel,P411-P41E / _008A_0093,same,Same MethodDef,"shared five planes, cap, Build and orphan P41B",method-index/direct-calls + frozen Round7 reports; E1/E2
+Plane,P834-P840,same,Same MethodDef,"same line/plane equations, numeric not CAD surface",method-index/direct-calls + frozen Round7 reports; E1/E2
+W/Wstar draw,P412 mode2 W+Wstar,P5DE/P5DF WXYZ only,A5-only,B4 stores Wstar in shared model/text but dedicated geometry ignores it,method-index/direct-calls + frozen Round7 reports; E1/E2
+surface equations,shared five-plane model,shared + private four-plane copy,Same MethodDef,mathematical plane engine same; domain/consumer not interchangeable,method-index/direct-calls + frozen Round7 reports; E1/E2
+geometry/domain,shared P412; private GPINOP/PAOAS/FAF/FAP,private P5DE/P5DF/P5E0,A5-only,B4-only dedicated same-axis transition is separate,method-index/direct-calls + frozen Round7 reports; E1/E2
+HL,none,P55F/P567/P56A,B4-only,A5 has no corresponding chain; B4 no GP correction,method-index/direct-calls + frozen Round7 reports; E1/E2
+FAF/FAP,"nominal fix/IF, tolerance and two classes",FAF altitude request only; no FAP object,A5-only,not equivalent despite similar text label,method-index/direct-calls + frozen Round7 reports; E1/E2
+GPINOP/PAOAS,P39E/P427,none dedicated,A5-only,several private geometry classes,method-index/direct-calls + frozen Round7 reports; E1/E2
+CAD writer,P087/P089,same,Same MethodDef,2D Polyline + Group + WsObject; A5 transform rotate/translate/clearZ,method-index/direct-calls + frozen Round7 reports; E1/E2
+frame/point helpers,P821/P823/P827 + common frame,same helpers,Same MethodDef,ordering differs: B4 rotate/clearZ/translate,method-index/direct-calls + frozen Round7 reports; E1/E2
+portable TXT,P319/P31A sectioned JSON,P565/P561 CSV text,A5-only,different schema/format; common UTF8 concepts not same method,method-index/direct-calls + frozen Round7 reports; E1/E2
+XData envelope,P087/P089 WsObject+full text,same writer,Same MethodDef,"payload differs: A5 four section JSON, B4 CSV; no labels",method-index/direct-calls + frozen Round7 reports; E1/E2
+evaluation,P41B/P429 orphan; no parser/UI,P5E0/P567 orphan; parser/Mark reachable; Evaluate prompt,B4-only,private evaluation bodies different; shared P41B remains orphan,method-index/direct-calls + frozen Round7 reports; E1/E2
+config,P0F4/P0F6 FormPA,same helper / other form node,Same MethodDef,"same generic persistence, different UI state schema",method-index/direct-calls + frozen Round7 reports; E1/E2
+SOC/PBN transition,none,P55E/P5DF,B4-only,do not import B4 SOC -900 or fixed transition into A5,method-index/direct-calls + frozen Round7 reports; E1/E2

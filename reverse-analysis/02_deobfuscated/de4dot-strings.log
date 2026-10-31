@@ -1,0 +1,25 @@
+
+de4dot v3.1.41592.3405 Copyright (C) 2011-2015 de4dot@gmail.com
+Latest version and source code: https://github.com/0xd4d/de4dot
+
+Deobfuscating control flow: System.String .::(System.Int32) (0600088A)
+Deobfuscating control flow: System.String .::(System.Int32) (0600088B)
+Detected .NET Reactor (C:\Users\ZJ\Desktop\固定翼航空器飞行程序-工程大\飞行程序设计系统开发\reverse-analysis\01_original\WsTools-master\WindSpiral2026\WindSpiralBasic.dll)
+Cleaning C:\Users\ZJ\Desktop\固定翼航空器飞行程序-工程大\飞行程序设计系统开发\reverse-analysis\01_original\WsTools-master\WindSpiral2026\WindSpiralBasic.dll
+Deobfuscating control flow: System.Void .::() (0600088E)
+Reloading decrypted assembly (original filename: C:\Users\ZJ\Desktop\固定翼航空器飞行程序-工程大\飞行程序设计系统开发\reverse-analysis\01_original\WsTools-master\WindSpiral2026\WindSpiralBasic.dll)
+Deobfuscating control flow: System.String .::(System.Int32) (0600088B)
+Adding string decrypter. Resource: "867cf343-c42d-4756-bcac-bef7f44beea9"
+Deobfuscating control flow: System.Boolean .::(System.Int32) (06000889)
+Adding boolean decrypter. Resource: "f40ad091-f861-47e8-92dd-16688a8bb9a5"
+Deobfuscating methods
+Deobfuscating System.Void <Module>::.cctor() (06000001)
+  Removed call to System.Void .::()
+  Removed 1 dead instruction(s)
+Deobfuscating System.Void .::.ctor(System.Double,System.Double,System.Double,System.Double,System.Double,System.Boolean,System.Boolean) (06000002)
+  Removed 1 unused local(s)
+  Removed 29 dead instruction(s)
+Deobfuscating . .::(.) (06000003)
+
+
+   由于 Exception.ToString() 失败，因此无法打印异常字符串。

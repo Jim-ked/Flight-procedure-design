@@ -1,0 +1,688 @@
+4355: 	public class _0088_0097 : Form
+4356: 	{
+4357: 		private IContainer _0095_008F;
+4358: 
+4359: 		private GroupBox _0095_0090;
+4360: 
+4361: 		private CheckBox _0095_0091;
+4362: 
+4363: 		private TextBox _0095_0092;
+4364: 
+4365: 		private CheckBox _0095_0093;
+4366: 
+4367: 		private Button _0095_0094;
+4368: 
+4369: 		private CheckBox _0095_0095;
+4370: 
+4371: 		private GroupBox _0095_0096;
+4372: 
+4373: 		private RadioButton _0095_0097;
+4374: 
+4375: 		private RadioButton _0095_0098;
+4376: 
+4377: 		private RadioButton _0095_0099;
+4378: 
+4379: 		private CheckBox _0095_009A;
+4380: 
+4381: 		private GroupBox _0095_009B;
+4382: 
+4383: 		private PictureBox _0095_009C;
+4384: 
+4385: 		private TabControl _0095_009D;
+4386: 
+4387: 		private TabPage _0095_009E;
+4388: 
+4389: 		private TabPage _0096_0086;
+4390: 
+4391: 		private GroupBox _0096_0087;
+4392: 
+4393: 		private PictureBox _0096_0088;
+4394: 
+4395: 		private Button _0096_0089;
+4396: 
+4397: 		private CheckBox _0096_008A;
+4398: 
+4399: 		private GroupBox _0096_008B;
+4400: 
+4401: 		private Label _0096_008C;
+4402: 
+4403: 		private RadioButton _0096_008D;
+4404: 
+4405: 		private TextBox _0096_008E;
+4406: 
+4407: 		private RadioButton _0096_008F;
+4408: 
+4409: 		private GroupBox _0096_0090;
+4410: 
+4411: 		private Label _0096_0091;
+4412: 
+4413: 		private TextBox _0096_0092;
+4414: 
+4415: 		private PictureBox _0096_0093;
+4416: 
+4417: 		private CheckBox _0096_0094;
+4418: 
+4419: 		private ToolTip _0096_0095;
+4420: 
+4421: 		private TextBox _0096_0096;
+4422: 
+4423: 		private TextBox _0096_0097;
+4424: 
+4425: 		private Label _0096_0098;
+4426: 
+4427: 		public _0088_0097()
+4428: 		{
+4429: 			_0095_008E();
+4430: 		}
+4431: 
+4432: 		private void _0094_009A(object P_0, EventArgs P_1)
+4433: 		{
+4434: 			if (_0095_0099.Checked)
+4435: 			{
+4436: 				_0095_0092.Text = (_0095_0091.Checked ? "5.2" /* string-offset:1600 */ : "4.5" /* string-offset:1596 */);
+4437: 			}
+4438: 		}
+4439: 
+4440: 		private void _0094_009B(object P_0, EventArgs P_1)
+4441: 		{
+4442: 			if (_0095_0097.Checked)
+4443: 			{
+4444: 				_0095_0092.Text = (_0095_0091.Checked ? "2.4" /* string-offset:1608 */ : "1.4" /* string-offset:1604 */);
+4445: 			}
+4446: 		}
+4447: 
+4448: 		private void _0094_009C(object P_0, EventArgs P_1)
+4449: 		{
+4450: 			if (_0095_0098.Checked)
+4451: 			{
+4452: 				_0095_0092.Text = (_0095_0091.Checked ? "6.9" /* string-offset:1616 */ : "6.2" /* string-offset:1612 */);
+4453: 			}
+4454: 		}
+4455: 
+4456: 		private void _0094_009D(object P_0, EventArgs P_1)
+4457: 		{
+4458: 			if (false /* original-file-bool-offset:264 */)
+4459: 			{
+4460: 				return;
+4461: 			}
+4462: 			if (_0095_0091.Checked)
+4463: 			{
+4464: 				if (_0095_0099.Checked)
+4465: 				{
+4466: 					_0095_0092.Text = "5.2" /* string-offset:1600 */;
+4467: 				}
+4468: 				else if (_0095_0097.Checked)
+4469: 				{
+4470: 					_0095_0092.Text = "2.4" /* string-offset:1608 */;
+4471: 				}
+4472: 				else if (_0095_0098.Checked)
+4473: 				{
+4474: 					_0095_0092.Text = "6.9" /* string-offset:1616 */;
+4475: 				}
+4476: 				return;
+4477: 			}
+4478: 			if (_0095_0099.Checked)
+4479: 			{
+4480: 				_0095_0092.Text = "4.5" /* string-offset:1596 */;
+4481: 				return;
+4482: 			}
+4483: 			if (_0095_0097.Checked)
+4484: 			{
+4485: 				_0087_0091();
+4486: 				if (!_0087_0092())
+4487: 				{
+4488: 					_0095_0092.Text = "1.4" /* string-offset:1604 */;
+4489: 					return;
+4490: 				}
+4491: 			}
+4492: 			else if (!_0095_0098.Checked)
+4493: 			{
+4494: 				return;
+4495: 			}
+4496: 			_0095_0092.Text = "6.2" /* string-offset:1612 */;
+4497: 		}
+4498: 
+4499: 		[DllImport("user32.dll", EntryPoint = "SetFocus")]
+4500: 		public static extern int _0094_009E(IntPtr P_0);
+4501: 
+4502: 		private void _0095_0086(object P_0, EventArgs P_1)
+4503: 		{
+4504: 			//IL_0045: Unknown result type (might be due to invalid IL or missing references)
+4505: 			//IL_004a: Unknown result type (might be due to invalid IL or missing references)
+4506: 			//IL_004c: Unknown result type (might be due to invalid IL or missing references)
+4507: 			//IL_004e: Unknown result type (might be due to invalid IL or missing references)
+4508: 			//IL_006c: Unknown result type (might be due to invalid IL or missing references)
+4509: 			//IL_0071: Unknown result type (might be due to invalid IL or missing references)
+4510: 			//IL_0073: Unknown result type (might be due to invalid IL or missing references)
+4511: 			//IL_0075: Unknown result type (might be due to invalid IL or missing references)
+4512: 			//IL_0568: Unknown result type (might be due to invalid IL or missing references)
+4513: 			//IL_056d: Unknown result type (might be due to invalid IL or missing references)
+4514: 			//IL_033e: Unknown result type (might be due to invalid IL or missing references)
+4515: 			//IL_0345: Unknown result type (might be due to invalid IL or missing references)
+4516: 			//IL_034a: Unknown result type (might be due to invalid IL or missing references)
+4517: 			//IL_035b: Expected O, but got Unknown
+4518: 			//IL_0356: Unknown result type (might be due to invalid IL or missing references)
+4519: 			//IL_05d9: Unknown result type (might be due to invalid IL or missing references)
+4520: 			//IL_057c: Unknown result type (might be due to invalid IL or missing references)
+4521: 			//IL_0435: Unknown result type (might be due to invalid IL or missing references)
+4522: 			//IL_043c: Expected O, but got Unknown
+4523: 			//IL_043c: Unknown result type (might be due to invalid IL or missing references)
+4524: 			//IL_044a: Unknown result type (might be due to invalid IL or missing references)
+4525: 			//IL_045b: Expected O, but got Unknown
+4526: 			//IL_0456: Unknown result type (might be due to invalid IL or missing references)
+4527: 			//IL_045b: Unknown result type (might be due to invalid IL or missing references)
+4528: 			//IL_045f: Unknown result type (might be due to invalid IL or missing references)
+4529: 			//IL_0466: Unknown result type (might be due to invalid IL or missing references)
+4530: 			//IL_0471: Unknown result type (might be due to invalid IL or missing references)
+4531: 			//IL_0482: Expected O, but got Unknown
+4532: 			//IL_047d: Unknown result type (might be due to invalid IL or missing references)
+4533: 			//IL_0482: Unknown result type (might be due to invalid IL or missing references)
+4534: 			//IL_0486: Unknown result type (might be due to invalid IL or missing references)
+4535: 			//IL_048d: Unknown result type (might be due to invalid IL or missing references)
+4536: 			//IL_049b: Unknown result type (might be due to invalid IL or missing references)
+4537: 			//IL_04ac: Expected O, but got Unknown
+4538: 			//IL_04a7: Unknown result type (might be due to invalid IL or missing references)
+4539: 			//IL_04ac: Unknown result type (might be due to invalid IL or missing references)
+4540: 			//IL_04b0: Unknown result type (might be due to invalid IL or missing references)
+4541: 			//IL_0586: Unknown result type (might be due to invalid IL or missing references)
+4542: 			//IL_0595: Unknown result type (might be due to invalid IL or missing references)
+4543: 			//IL_05cc: Expected O, but got Unknown
+4544: 			//IL_05c7: Unknown result type (might be due to invalid IL or missing references)
+4545: 			//IL_04c9: Unknown result type (might be due to invalid IL or missing references)
+4546: 			//IL_03e2: Unknown result type (might be due to invalid IL or missing references)
+4547: 			//IL_03e9: Unknown result type (might be due to invalid IL or missing references)
+4548: 			//IL_03ee: Unknown result type (might be due to invalid IL or missing references)
+4549: 			//IL_03ff: Expected O, but got Unknown
+4550: 			//IL_03fa: Unknown result type (might be due to invalid IL or missing references)
+4551: 			if (false /* original-file-bool-offset:268 */)
+4552: 			{
+4553: 				return;
+4554: 			}
+4555: 			Database workingDatabase = HostApplicationServices.WorkingDatabase;
+4556: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+4557: 			_0094_009E(mdiActiveDocument.Window.Handle);
+4558: 			base.Visible = false;
+4559: 			Point3d val = _009D._008B_008D("请选择导航台" /* string-offset:1620 */);
+4560: 			if (val == Point3d.Origin)
+4561: 			{
+4562: 				base.Visible = true;
+4563: 				return;
+4564: 			}
+4565: 			Point3d val2 = _009D._008B_008D("请指定引导方向" /* string-offset:1624 */);
+4566: 			if (val2 == Point3d.Origin)
+4567: 			{
+4568: 				base.Visible = true;
+4569: 				return;
+4570: 			}
+4571: 			base.Visible = true;
+4572: 			_ = 1;
+4573: 			double num = default(double);
+4574: 			double num2 = default(double);
+4575: 			double num3 = default(double);
+4576: 			double num4 = default(double);
+4577: 			_008F_008E obj2 = default(_008F_008E);
+4578: 			_008F_008E item = default(_008F_008E);
+4579: 			_008F_008E item2 = default(_008F_008E);
+4580: 			_008F_008E obj3 = default(_008F_008E);
+4581: 			if (!_0087_0092())
+4582: 			{
+4583: 				num = Math.Atan2(((Point3d)(ref val2)).Y - ((Point3d)(ref val)).Y, ((Point3d)(ref val2)).X - ((Point3d)(ref val)).X);
+4584: 				num2 = Math.Sqrt(Math.Pow(((Point3d)(ref val)).Y - ((Point3d)(ref val2)).Y, 2.0) + Math.Pow(((Point3d)(ref val)).X - ((Point3d)(ref val2)).X, 2.0));
+4585: 				if (!_0087_0091())
+4586: 				{
+4587: 					goto IL_052d;
+4588: 				}
+4589: 				if (_0095_0095.Checked)
+4590: 				{
+4591: 					if (_0096_0094.Checked)
+4592: 					{
+4593: 						try
+4594: 						{
+4595: 							num2 = 1852.0 * Convert.ToDouble(_0096_0096.Text);
+4596: 						}
+4597: 						catch
+4598: 						{
+4599: 							if (!_008F_008A._008B_0088_0087(_0096_0096))
+4600: 							{
+4601: 								MessageBox.Show("DME距离输入错误，请检查。" /* string-offset:1628 */, "输入错误" /* string-offset:1632 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+4602: 								return;
+4603: 							}
+4604: 						}
+4605: 					}
+4606: 					else
+4607: 					{
+4608: 						_0096_0096.Text = Math.Round(num2 / 1852.0, 1).ToString("0.0" /* string-offset:1636 */);
+4609: 					}
+4610: 				}
+4611: 				num3 = Convert.ToDouble(_0095_0092.Text) * Math.PI / 180.0;
+4612: 				num4 = num2 * 0.0125 + 460.0;
+4613: 				obj2 = new _008F_008E(((Point3d)(ref val)).X, ((Point3d)(ref val)).Y);
+4614: 				item = _008F_008E._008B_0089_0088(obj2, _008F_008E._008B_0089_0087(num2 + num4, num - num3));
+4615: 				item2 = _008F_008E._008B_0089_0088(obj2, _008F_008E._008B_0089_0087(num2 + num4, num + num3));
+4616: 				obj3 = _008F_008E._008B_0089_0088(obj2, _008F_008E._008B_0089_0087(num2 + num4, num));
+4617: 			}
+4618: 			_008F_008E obj4 = _008F_008E._008B_0089_0088(obj2, _008F_008E._008B_0089_0087(num2, num));
+4619: 			List<List<_008F_008E>> list = new List<List<_008F_008E>>();
+4620: 			List<_008F_008E> list2 = new List<_008F_008E>();
+4621: 			list2.Add(item);
+4622: 			list2.Add(obj2);
+4623: 			list2.Add(item2);
+4624: 			list.Add(list2);
+4625: 			if (_0095_0093.Checked)
+4626: 			{
+4627: 				list2 = new List<_008F_008E>();
+4628: 				list2.Add(obj2);
+4629: 				list2.Add(obj3);
+4630: 				list.Add(list2);
+4631: 			}
+4632: 			if (_0095_009A.Checked)
+4633: 			{
+4634: 				DocumentLock val3 = mdiActiveDocument.LockDocument();
+4635: 				try
+4636: 				{
+4637: 					_008F_008E obj5 = _008F_008E._008B_0089_0088(obj3, _008F_008E._008B_0089_0087(9260.0, num + Math.PI / 2.0));
+4638: 					_008F_008E obj6 = _008F_008E._008B_0089_0088(obj3, _008F_008E._008B_0089_0087(9260.0, num - Math.PI / 2.0));
+4639: 					_008B._0088_008D((Entity)new Line(obj5._008C_0089(), obj6._008C_0089()), workingDatabase);
+4640: 					_ = 0;
+4641: 					double num5 = default(double);
+4642: 					if (_0087_0091())
+4643: 					{
+4644: 						num5 = (num2 - num4) * Math.Cos(num3);
+4645: 					}
+4646: 					_008F_008E obj7 = _008F_008E._008B_0089_0088(obj2, _008F_008E._008B_0089_0087(num5, num));
+4647: 					_008F_008E obj8 = _008F_008E._008B_0089_0088(obj7, _008F_008E._008B_0089_0087(9260.0, num + Math.PI / 2.0));
+4648: 					_008F_008E obj9 = _008F_008E._008B_0089_0088(obj7, _008F_008E._008B_0089_0087(9260.0, num - Math.PI / 2.0));
+4649: 					_008B._0088_008D((Entity)new Line(obj8._008C_0089(), obj9._008C_0089()), workingDatabase);
+4650: 				}
+4651: 				finally
+4652: 				{
+4653: 					((IDisposable)val3)?.Dispose();
+4654: 				}
+4655: 			}
+4656: 			_008B._0088_008B(workingDatabase, list);
+4657: 			if (!_0095_0095.Checked)
+4658: 			{
+4659: 				return;
+4660: 			}
+4661: 			DocumentLock val4 = mdiActiveDocument.LockDocument();
+4662: 			try
+4663: 			{
+4664: 				Group val5 = new Group();
+4665: 				ObjectId val6 = _008B._0088_008D((Entity)new Arc(val, num2 + num4, num - num3, num + num3), workingDatabase);
+4666: 				val5.Append(val6);
+4667: 				val6 = _008B._0088_008D((Entity)new Arc(val, num2, num - num3, num + num3), workingDatabase);
+4668: 				val5.Append(val6);
+4669: 				val6 = _008B._0088_008D((Entity)new Arc(val, num2 - num4, num - num3, num + num3), workingDatabase);
+4670: 				val5.Append(val6);
+4671: 				Transaction val7 = workingDatabase.TransactionManager.StartTransaction();
+4672: 				try
+4673: 				{
+4674: 					workingDatabase.AddDBObject((DBObject)(object)val5);
+4675: 					_0087_0092();
+4676: 					if (_0087_0091())
+4677: 					{
+4678: 						val7.AddNewlyCreatedDBObject((DBObject)(object)val5, true);
+4679: 					}
+4680: 					else if (_0087_0091())
+4681: 					{
+4682: 					}
+4683: 					val7.Commit();
+4684: 				}
+4685: 				finally
+4686: 				{
+4687: 					((IDisposable)val7)?.Dispose();
+4688: 				}
+4689: 			}
+4690: 			finally
+4691: 			{
+4692: 				((IDisposable)val4)?.Dispose();
+4693: 			}
+4694: 			if (!_0096_0096.Text.Contains("." /* string-offset:700 */))
+4695: 			{
+4696: 				goto IL_052d;
+4697: 			}
+4698: 			goto IL_054d;
+4699: 			IL_052d:
+4700: 			_0096_0096.Text += ".0" /* string-offset:1640 */;
+4701: 			goto IL_054d;
+4702: 			IL_054d:
+4703: 			do
+4704: 			{
+4705: 				_0096_0097.Text = _0096_0097.Text.ToUpper();
+4706: 				_008B._0088_008D((Entity)new DBText
+4707: 				{
+4708: 					Position = ((!_0096_0094.Checked) ? val2 : obj4._008C_0089()),
+4709: 					Height = 500.0,
+4710: 					TextString = "D" /* string-offset:1644 */ + _0096_0096.Text + _0096_0097.Text
+4711: 				}, workingDatabase);
+4712: 			}
+4713: 			while (!_0087_0091());
+4714: 		}
+4715: 
+4716: 		private void _0095_0087(object P_0, EventArgs P_1)
+4717: 		{
+4718: 			_0097._008A_0093(this, "config.xml" /* string-offset:676 */, "FixTolerance" /* string-offset:368 */);
+4719: 		}
+4720: 
+4721: 		private void _0095_0088(object P_0, FormClosedEventArgs P_1)
+4722: 		{
+4723: 			_0097._008A_0091(this, "config.xml" /* string-offset:676 */, "FixTolerance" /* string-offset:368 */);
+4724: 		}
+4725: 
+4726: 		private void _0095_0089(object P_0, EventArgs P_1)
+4727: 		{
+4728: 			//IL_0276: Unknown result type (might be due to invalid IL or missing references)
+4729: 			//IL_027b: Unknown result type (might be due to invalid IL or missing references)
+4730: 			//IL_025a: Unknown result type (might be due to invalid IL or missing references)
+4731: 			//IL_025b: Unknown result type (might be due to invalid IL or missing references)
+4732: 			//IL_0246: Unknown result type (might be due to invalid IL or missing references)
+4733: 			//IL_024b: Unknown result type (might be due to invalid IL or missing references)
+4734: 			//IL_0192: Unknown result type (might be due to invalid IL or missing references)
+4735: 			//IL_0193: Unknown result type (might be due to invalid IL or missing references)
+4736: 			//IL_0449: Unknown result type (might be due to invalid IL or missing references)
+4737: 			//IL_044a: Unknown result type (might be due to invalid IL or missing references)
+4738: 			//IL_0451: Unknown result type (might be due to invalid IL or missing references)
+4739: 			//IL_0461: Expected O, but got Unknown
+4740: 			//IL_045c: Unknown result type (might be due to invalid IL or missing references)
+4741: 			int num = 5;
+4742: 			double num5 = default(double);
+4743: 			double num9 = default(double);
+4744: 			double num10 = default(double);
+4745: 			double num11 = default(double);
+4746: 			double num12 = default(double);
+4747: 			List<_008F_008E> list = default(List<_008F_008E>);
+4748: 			_008F_008E item = default(_008F_008E);
+4749: 			_008F_008E item2 = default(_008F_008E);
+4750: 			_008F_008E item3 = default(_008F_008E);
+4751: 			List<List<_008F_008E>> list2 = default(List<List<_008F_008E>>);
+4752: 			_008F_008E item4 = default(_008F_008E);
+4753: 			while (true /* original-file-bool-offset:272 */)
+4754: 			{
+4755: 				while (true)
+4756: 				{
+4757: 					Database workingDatabase = HostApplicationServices.WorkingDatabase;
+4758: 					_0094_009E(Application.DocumentManager.MdiActiveDocument.Window.Handle);
+4759: 					base.Visible = false;
+4760: 					while (true)
+4761: 					{
+4762: 						Point3d val = _009D._008B_008D("请选择导航台" /* string-offset:1620 */);
+4763: 						while (true)
+4764: 						{
+4765: 							double num2;
+4766: 							if (!(val == Point3d.Origin))
+4767: 							{
+4768: 								num2 = Math.PI / 180.0;
+4769: 								_0087_0091();
+4770: 								if (!_0087_0092())
+4771: 								{
+4772: 									goto IL_01a4;
+4773: 								}
+4774: 								num = 7;
+4775: 								goto IL_023c;
+4776: 							}
+4777: 							base.Visible = true;
+4778: 							return;
+4779: 							IL_01a4:
+4780: 							double num3;
+4781: 							double num4;
+4782: 							try
+4783: 							{
+4784: 								num3 = Convert.ToDouble(_0096_0092.Text);
+4785: 								num4 = Convert.ToDouble(_0096_008E.Text);
+4786: 							}
+4787: 							catch
+4788: 							{
+4789: 								_008F_008A._008B_0088_0087(_0096_0092);
+4790: 								_008F_008A._008B_0088_0087(_0096_008E);
+4791: 								MessageBox.Show("数据输入有错误，请检查。" /* string-offset:1648 */, "输入错误" /* string-offset:1632 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+4792: 								return;
+4793: 							}
+4794: 							if (num3 > 0.0)
+4795: 							{
+4796: 								num5 = num3 * Math.Tan(num4 * num2);
+4797: 								num = 18;
+4798: 								goto IL_022c;
+4799: 							}
+4800: 							base.Visible = true;
+4801: 							return;
+4802: 							IL_022c:
+4803: 							if (_0096_008A.Checked)
+4804: 							{
+4805: 								goto IL_023c;
+4806: 							}
+4807: 							goto IL_0442;
+4808: 							IL_0442:
+4809: 							base.Visible = true;
+4810: 							_008B._0088_008D((Entity)new Circle(val, Vector3d.ZAxis, num5), workingDatabase);
+4811: 							num = 22;
+4812: 							return;
+4813: 							IL_023c:
+4814: 							while (true)
+4815: 							{
+4816: 								IL_023c_2:
+4817: 								Point3d val2 = _009D._008B_008D("请指定入航方向" /* string-offset:1652 */);
+4818: 								num = 14;
+4819: 								while (true)
+4820: 								{
+4821: 									if (!(val2 == Point3d.Origin))
+4822: 									{
+4823: 										double num6 = Math.Atan2(((Point3d)(ref val2)).Y - ((Point3d)(ref val)).Y, ((Point3d)(ref val2)).X - ((Point3d)(ref val)).X);
+4824: 										double num7 = 0.0;
+4825: 										double num8 = 0.0;
+4826: 										if (_0096_008D.Checked)
+4827: 										{
+4828: 											num7 = 5.0;
+4829: 											num8 = 15.0;
+4830: 										}
+4831: 										if (_0096_008F.Checked)
+4832: 										{
+4833: 											num7 = 15.0;
+4834: 											num8 = 25.0;
+4835: 										}
+4836: 										num9 = num6 + num8 * num2 + Math.PI;
+4837: 										num10 = num6 - num7 * num2;
+4838: 										num11 = num6 - num8 * num2 + Math.PI;
+4839: 										num12 = num6 + num7 * num2;
+4840: 										num = 19;
+4841: 										if (_0087_0092())
+4842: 										{
+4843: 											break;
+4844: 										}
+4845: 										goto IL_011a;
+4846: 									}
+4847: 									num = 15;
+4848: 									goto IL_0100;
+4849: 									IL_03b4:
+4850: 									list = new List<_008F_008E>();
+4851: 									num = 10;
+4852: 									goto IL_03c4;
+4853: 									IL_03c4:
+4854: 									list.Add(item);
+4855: 									num = 0;
+4856: 									goto IL_03d6;
+4857: 									IL_0401:
+4858: 									list.Add(item2);
+4859: 									num = 2;
+4860: 									if (_0087_0091())
+4861: 									{
+4862: 										goto IL_041a;
+4863: 									}
+4864: 									goto IL_0442;
+4865: 									IL_03d6:
+4866: 									list.Add(item3);
+4867: 									list2.Add(list);
+4868: 									list = new List<_008F_008E>();
+4869: 									list.Add(item4);
+4870: 									num = 13;
+4871: 									goto IL_0401;
+4872: 									IL_042c:
+4873: 									_008B._0088_008B(workingDatabase, list2);
+4874: 									num = 17;
+4875: 									goto IL_0442;
+4876: 									IL_041a:
+4877: 									list2.Add(list);
+4878: 									num = 12;
+4879: 									goto IL_042c;
+4880: 									IL_011a:
+4881: 									switch (num)
+4882: 									{
+4883: 									case 15:
+4884: 										break;
+4885: 									case 14:
+4886: 										continue;
+4887: 									case 4:
+4888: 									case 11:
+4889: 										goto IL_01a4;
+4890: 									case 18:
+4891: 										goto IL_022c;
+4892: 									case 6:
+4893: 									case 7:
+4894: 										goto IL_023c_2;
+4895: 									case 21:
+4896: 										goto end_IL_0192;
+4897: 									case 9:
+4898: 										goto end_IL_025a;
+4899: 									case 20:
+4900: 										goto end_IL_026c;
+4901: 									case 5:
+4902: 										goto end_IL_027e;
+4903: 									default:
+4904: 										num = 8;
+4905: 										goto IL_033c;
+4906: 									case 1:
+4907: 										return;
+4908: 									case 19:
+4909: 										goto IL_02d4;
+4910: 									case 8:
+4911: 										goto IL_033c;
+4912: 									case 3:
+4913: 										goto IL_0379;
+4914: 									case 16:
+4915: 										goto IL_03b4;
+4916: 									case 10:
+4917: 										goto IL_03c4;
+4918: 									case 0:
+4919: 										goto IL_03d6;
+4920: 									case 13:
+4921: 										goto IL_0401;
+4922: 									case 2:
+4923: 										goto IL_041a;
+4924: 									case 12:
+4925: 										goto IL_042c;
+4926: 									case 17:
+4927: 										goto IL_0442;
+4928: 									case 22:
+4929: 										return;
+4930: 									}
+4931: 									goto IL_0100;
+4932: 									IL_0100:
+4933: 									base.Visible = true;
+4934: 									num = 1;
+4935: 									if (!_0087_0092())
+4936: 									{
+4937: 										goto IL_011a;
+4938: 									}
+4939: 									goto IL_02d4;
+4940: 									IL_02d4:
+4941: 									item = new _008F_008E(num5 * Math.Cos(num9) + ((Point3d)(ref val)).X, num5 * Math.Sin(num9) + ((Point3d)(ref val)).Y);
+4942: 									item3 = new _008F_008E(num5 * Math.Cos(num10) + ((Point3d)(ref val)).X, num5 * Math.Sin(num10) + ((Point3d)(ref val)).Y);
+4943: 									goto IL_033c;
+4944: 									IL_033c:
+4945: 									item4 = new _008F_008E(num5 * Math.Cos(num11) + ((Point3d)(ref val)).X, num5 * Math.Sin(num11) + ((Point3d)(ref val)).Y);
+4946: 									num = 3;
+4947: 									goto IL_0379;
+4948: 									IL_0379:
+4949: 									item2 = new _008F_008E(num5 * Math.Cos(num12) + ((Point3d)(ref val)).X, num5 * Math.Sin(num12) + ((Point3d)(ref val)).Y);
+4950: 									list2 = new List<List<_008F_008E>>();
+4951: 									goto IL_03b4;
+4952: 									continue;
+4953: 									end_IL_0192:
+4954: 									break;
+4955: 								}
+4956: 								break;
+4957: 							}
+4958: 							continue;
+4959: 							end_IL_025a:
+4960: 							break;
+4961: 						}
+4962: 						continue;
+4963: 						end_IL_026c:
+4964: 						break;
+4965: 					}
+4966: 					continue;
+4967: 					end_IL_027e:
+4968: 					break;
+4969: 				}
+4970: 			}
+4971: 		}
+4972: 
+4973: 		private void _0095_008A(object P_0, EventArgs P_1)
+4974: 		{
+4975: 			if (_0096_008F.Checked)
+4976: 			{
+4977: 				_0087_0091();
+4978: 				if (!_0087_0092())
+4979: 				{
+4980: 					_0096_008E.Text = "40" /* string-offset:1656 */;
+4981: 				}
+4982: 				else if (!_0087_0091())
+4983: 				{
+4984: 					return;
+4985: 				}
+4986: 				do
+4987: 				{
+4988: 					_0096_0088.Visible = false;
+4989: 					_0096_0093.Visible = true;
+4990: 				}
+4991: 				while (_0087_0092());
+4992: 			}
+4993: 		}
+4994: 
+4995: 		private void _0095_008B(object P_0, EventArgs P_1)
+4996: 		{
+4997: 			while (_0096_008D.Checked)
+4998: 			{
+4999: 				_0096_008E.Text = "50" /* string-offset:1660 */;
+5000: 				_ = 1;
+5001: 				if (!_0087_0092())
+5002: 				{
+5003: 					if (!_0087_0091())
+5004: 					{
+5005: 						continue;
+5006: 					}
+5007: 					_0096_0088.Visible = true;
+5008: 				}
+5009: 				_0096_0093.Visible = false;
+5010: 				break;
+5011: 			}
+5012: 		}
+5013: 
+5014: 		private void _0095_008C(object P_0, EventArgs P_1)
+5015: 		{
+5016: 			_0096_0096.Enabled = _0096_0094.Checked;
+5017: 		}
+5018: 
+5019: 		private void _0095_008D(object P_0, EventArgs P_1)
+5020: 		{
+5021: 			_0087_0091();
+5022: 			if (!_0087_0092())
+5023: 			{
+5024: 				if (_0087_0091())
+5025: 				{
+5026: 					_0096_0096.Enabled = _0096_0094.Checked;
+5027: 				}
+5028: 				_0096_0097.Enabled = _0095_0095.Checked;
+5029: 			}
+5030: 			_0096_0094.Enabled = _0095_0095.Checked;
+5031: 		}
+5032: 
+5033: 		protected override void Dispose(bool P_0)
+5034: 		{
+5035: 			_ = 1;
+5036: 			if ((!_0087_0092() || _0087_0092()) && P_0 && _0095_008F != null)
+5037: 			{
+5038: 				_0095_008F.Dispose();
+5039: 			}
+5040: 			base.Dispose(P_0);
+5041: 		}
+5042: 

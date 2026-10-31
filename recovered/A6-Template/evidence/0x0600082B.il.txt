@@ -1,0 +1,99 @@
+METHOD 0600082B \x8f\x91.\x8f\x90::\x8b\x8a\x9e RVA=92F70 file=91170
+IL_0000: ldc.i4 1452
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue.s 127
+IL_000C: ldarg.0 
+IL_000D: brfalse 245
+IL_0012: ldarg.0 
+IL_0013: callvirt 0x0A000123 0x1B00000F::get_Count
+IL_0018: brfalse 245
+IL_001D: ldarg.1 
+IL_001E: brfalse 245
+IL_0023: ldarg.1 
+IL_0024: callvirt 0x0A000123 0x1B00000F::get_Count
+IL_0029: brfalse 245
+IL_002E: ldarg.0 
+IL_002F: callvirt 0x0A000123 0x1B00000F::get_Count
+IL_0034: ldarg.1 
+IL_0035: callvirt 0x0A000123 0x1B00000F::get_Count
+IL_003A: beq.s 74
+IL_003C: ldnull 
+IL_003D: ret 
+IL_003E: newobj 0x0A0001D5 0x1B000001::.ctor
+IL_0043: stloc.0 
+IL_0044: ldc.i4.1 
+IL_0045: stloc.1 
+IL_0046: br 231
+IL_004B: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0050: stloc.2 
+IL_0051: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0056: stloc.3 
+IL_0057: ldloc.2 
+IL_0058: ldarg.0 
+IL_0059: ldloc.1 
+IL_005A: ldc.i4.1 
+IL_005B: sub 
+IL_005C: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_0061: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0066: ldloc.2 
+IL_0067: ldarg.0 
+IL_0068: ldloc.1 
+IL_0069: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_006E: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0073: ldloc.2 
+IL_0074: ldarg.1 
+IL_0075: ldloc.1 
+IL_0076: ldc.i4.1 
+IL_0077: sub 
+IL_0078: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_007D: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0082: ldloc.2 
+IL_0083: ldarg.0 
+IL_0084: ldloc.1 
+IL_0085: ldc.i4.1 
+IL_0086: sub 
+IL_0087: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_008C: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0091: ldloc.0 
+IL_0092: ldloc.2 
+IL_0093: callvirt 0x0A0001D8 0x1B000001::Add
+IL_0098: ldloc.3 
+IL_0099: ldarg.1 
+IL_009A: ldloc.1 
+IL_009B: ldc.i4.1 
+IL_009C: sub 
+IL_009D: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_00A2: callvirt 0x0A00012A 0x1B00000F::Add
+IL_00A7: ldloc.3 
+IL_00A8: ldarg.1 
+IL_00A9: ldloc.1 
+IL_00AA: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_00AF: callvirt 0x0A00012A 0x1B00000F::Add
+IL_00B4: ldloc.3 
+IL_00B5: ldarg.0 
+IL_00B6: ldloc.1 
+IL_00B7: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_00BC: callvirt 0x0A00012A 0x1B00000F::Add
+IL_00C1: ldloc.3 
+IL_00C2: ldarg.1 
+IL_00C3: ldloc.1 
+IL_00C4: ldc.i4.1 
+IL_00C5: sub 
+IL_00C6: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_00CB: callvirt 0x0A00012A 0x1B00000F::Add
+IL_00D0: ldloc.0 
+IL_00D1: ldloc.3 
+IL_00D2: callvirt 0x0A0001D8 0x1B000001::Add
+IL_00D7: ldloc.1 
+IL_00D8: ldc.i4.1 
+IL_00D9: add 
+IL_00DA: stloc.1 
+IL_00DB: ldloc.1 
+IL_00DC: ldarg.0 
+IL_00DD: callvirt 0x0A000123 0x1B00000F::get_Count
+IL_00E2: blt 87
+IL_00E7: ldloc.0 
+IL_00E8: ret 
+IL_00E9: ldnull 
+IL_00EA: ret 
+

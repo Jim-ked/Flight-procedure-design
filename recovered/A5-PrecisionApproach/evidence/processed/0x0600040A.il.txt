@@ -1,0 +1,92 @@
+METHOD 0600040A \x8a\x92.\x8a\x91::\x88\x90\x95 RVA=51FC4 file=501C4
+IL_0000: ldc.i4 772
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse.s 38
+IL_000C: ldc.i4.0 
+IL_000D: call 0x0600040F \x8a\x92.\x8a\x91::\x87t
+IL_0012: brfalse.s 35
+IL_0014: pop 
+IL_0015: br.s 120
+IL_0017: pop 
+IL_0018: br.s 92
+IL_001A: ldarg.0 
+IL_001B: callvirt 0x0A00035E System.String::ToCharArray
+IL_0020: stloc.0 
+IL_0021: ldarg.0 
+IL_0022: callvirt 0x0A00008C System.String::get_Length
+IL_0027: stloc.2 
+IL_0028: ldc.i4.0 
+IL_0029: stloc.s local(0x0005)
+IL_002B: br.s 126
+IL_002D: ldarg.0 
+IL_002E: ldloc.s local(0x0005)
+IL_0030: callvirt 0x0A00008E System.String::get_Chars
+IL_0035: stloc.s local(0x0007)
+IL_0037: ldloca.s local(0x0007)
+IL_0039: call 0x0A00035F System.Char::ToString
+IL_003E: call 0x0A0001F9 System.Int32::Parse
+IL_0043: stloc.s local(0x0004)
+IL_0045: call 0x06000410 \x8a\x92.\x8a\x91::\x87u
+IL_004A: brtrue.s 126
+IL_004C: ldloc.s local(0x0004)
+IL_004E: brfalse.s 120
+IL_0050: ldloc.s local(0x0004)
+IL_0052: ldc.i4.5 
+IL_0053: beq.s 120
+IL_0055: ldc.i4.s 10
+IL_0057: ldloc.s local(0x0004)
+IL_0059: sub 
+IL_005A: stloc.s local(0x0006)
+IL_005C: ldloc.0 
+IL_005D: ldloc.s local(0x0005)
+IL_005F: ldloca.s local(0x0006)
+IL_0061: call 0x0A0001C4 System.Int32::ToString
+IL_0066: call 0x0A000360 System.Char::Parse
+IL_006B: stelem.i2 
+IL_006C: ldloc.s local(0x0005)
+IL_006E: ldc.i4.1 
+IL_006F: add 
+IL_0070: stloc.s local(0x0005)
+IL_0072: ldloc.s local(0x0005)
+IL_0074: ldloc.2 
+IL_0075: blt.s 57
+IL_0077: ldc.i4.0 
+IL_0078: stloc.1 
+IL_0079: br.s 168
+IL_007B: ldloc.0 
+IL_007C: ldloc.1 
+IL_007D: ldelem.u2 
+IL_007E: stloc.3 
+IL_007F: call 0x0600040F \x8a\x92.\x8a\x91::\x87t
+IL_0084: brfalse.s 174
+IL_0086: ldloc.0 
+IL_0087: ldloc.1 
+IL_0088: ldloc.0 
+IL_0089: ldloc.2 
+IL_008A: ldc.i4.1 
+IL_008B: sub 
+IL_008C: ldloc.1 
+IL_008D: sub 
+IL_008E: ldelem.u2 
+IL_008F: stelem.i2 
+IL_0090: ldloc.0 
+IL_0091: ldloc.2 
+IL_0092: ldc.i4.1 
+IL_0093: sub 
+IL_0094: ldloc.1 
+IL_0095: sub 
+IL_0096: ldloc.3 
+IL_0097: stelem.i2 
+IL_0098: ldloc.1 
+IL_0099: ldc.i4.1 
+IL_009A: add 
+IL_009B: stloc.1 
+IL_009C: ldloc.1 
+IL_009D: ldloc.2 
+IL_009E: ldc.i4.2 
+IL_009F: div 
+IL_00A0: blt.s 135
+IL_00A2: ldloc.0 
+IL_00A3: newobj 0x0A000361 System.String::.ctor
+IL_00A8: ret 
+

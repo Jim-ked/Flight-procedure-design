@@ -1,0 +1,97 @@
+METHOD 06000368 \x89\x93.\x89\x92::\x87\x9a\x96 RVA=440F0 file=422F0
+IL_0000: ldarg.0 
+IL_0001: callvirt 0x0A000328 0x1B000032::get_Count
+IL_0006: ldc.i4.3 
+IL_0007: bge.s 23
+IL_0009: ldarg.0 
+IL_000A: ret 
+IL_000B: newobj 0x0A00031D 0x1B000032::.ctor
+IL_0010: stloc.0 
+IL_0011: ldarg.0 
+IL_0012: ldc.i4.0 
+IL_0013: callvirt 0x0A000329 0x1B000032::get_Item
+IL_0018: stloc.1 
+IL_0019: ldarg.0 
+IL_001A: callvirt 0x0A000323 0x1B000032::GetEnumerator
+IL_001F: stloc.s local(0x0004)
+IL_0021: nop 
+IL_0022: br.s 108
+IL_0024: ldloca.s local(0x0004)
+IL_0026: call 0x0A000326 0x1B000033::get_Current
+IL_002B: stloc.s local(0x0005)
+IL_002D: ldloca.s local(0x0005)
+IL_002F: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0034: ldloca.s local(0x0001)
+IL_0036: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_003B: blt.s 105
+IL_003D: ldloca.s local(0x0005)
+IL_003F: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0044: ldloca.s local(0x0001)
+IL_0046: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_004B: bne.un.s 108
+IL_004D: ldloca.s local(0x0005)
+IL_004F: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0054: ldloca.s local(0x0001)
+IL_0056: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_005B: bge.un.s 108
+IL_005D: ldloc.s local(0x0005)
+IL_005F: stloc.1 
+IL_0060: ldloca.s local(0x0004)
+IL_0062: call 0x0A000327 0x1B000033::MoveNext
+IL_0067: brtrue.s 48
+IL_0069: leave.s 133
+IL_006B: ldloca.s local(0x0004)
+IL_006D: constrained. 0x1B000033 
+IL_0073: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0078: endfinally 
+IL_0079: ldloc.0 
+IL_007A: ldloc.1 
+IL_007B: callvirt 0x0A000320 0x1B000032::Add
+IL_0080: ldloc.1 
+IL_0081: stloc.2 
+IL_0082: br.s 223
+IL_0084: nop 
+IL_0085: br.s 180
+IL_0087: ldloca.s local(0x0004)
+IL_0089: call 0x0A000326 0x1B000033::get_Current
+IL_008E: stloc.s local(0x0006)
+IL_0090: ldloc.3 
+IL_0091: ldloc.2 
+IL_0092: call 0x0A000060 Autodesk.AutoCAD.Geometry.Point3d::op_Equality
+IL_0097: brtrue.s 177
+IL_0099: ldloc.2 
+IL_009A: ldloc.3 
+IL_009B: ldloc.s local(0x0006)
+IL_009D: call 0x06000369 \x89\x93.\x89\x92::\x87\x9a\x97
+IL_00A2: ldc.i4.2 
+IL_00A3: bne.un.s 180
+IL_00A5: ldloc.s local(0x0006)
+IL_00A7: stloc.3 
+IL_00A8: ldloca.s local(0x0004)
+IL_00AA: call 0x0A000327 0x1B000033::MoveNext
+IL_00AF: brtrue.s 147
+IL_00B1: leave.s 205
+IL_00B3: ldloca.s local(0x0004)
+IL_00B5: constrained. 0x1B000033 
+IL_00BB: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00C0: endfinally 
+IL_00C1: ldloc.0 
+IL_00C2: ldloc.3 
+IL_00C3: callvirt 0x0A000320 0x1B000032::Add
+IL_00C8: ldloc.3 
+IL_00C9: stloc.2 
+IL_00CA: ldloc.2 
+IL_00CB: ldloc.1 
+IL_00CC: call 0x0A00032A Autodesk.AutoCAD.Geometry.Point3d::op_Inequality
+IL_00D1: brfalse.s 241
+IL_00D3: ldarg.0 
+IL_00D4: ldc.i4.0 
+IL_00D5: callvirt 0x0A000329 0x1B000032::get_Item
+IL_00DA: stloc.3 
+IL_00DB: ldarg.0 
+IL_00DC: callvirt 0x0A000323 0x1B000032::GetEnumerator
+IL_00E1: stloc.s local(0x0004)
+IL_00E3: br.s 144
+IL_00E5: ldloc.0 
+IL_00E6: ret 
+

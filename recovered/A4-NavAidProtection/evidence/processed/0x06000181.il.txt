@@ -1,0 +1,10 @@
+METHOD 06000181 \x87\x99.\x87\x98::SetValue RVA=35C2 file=17C2
+IL_0000: ldarg.1 
+IL_0001: castclass 0x01000046 System.Windows.Forms.RadioButton
+IL_0006: ldarg.2 
+IL_0007: ldc.i4 1040
+IL_000C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0011: call 0x0A000108 System.String::op_Equality
+IL_0016: callvirt 0x0A000202 System.Windows.Forms.RadioButton::set_Checked
+IL_001B: ret 
+

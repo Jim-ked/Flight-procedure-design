@@ -1,0 +1,68 @@
+4269: 		public static void _008A_0093(Form P_0, string P_1, string P_2)
+4270: 		{
+4271: 			if (false /* original-file-bool-offset:128 */)
+4272: 			{
+4273: 				return;
+4274: 			}
+4275: 			string text = Path.Combine(Path.GetDirectoryName(P_0.GetType().Assembly.Location), P_1);
+4276: 			if (!File.Exists(text))
+4277: 			{
+4278: 				return;
+4279: 			}
+4280: 			XElement xElement = XDocument.Load(text).Element("Document" /* string-offset:644 */);
+4281: 			object obj;
+4282: 			if (xElement == null)
+4283: 			{
+4284: 				_009B();
+4285: 				if (_009C())
+4286: 				{
+4287: 					goto IL_007c;
+4288: 				}
+4289: 				obj = null;
+4290: 			}
+4291: 			else
+4292: 			{
+4293: 				obj = xElement.Element(P_2);
+4294: 			}
+4295: 			XElement xElement2 = (XElement)obj;
+4296: 			if (xElement2 == null)
+4297: 			{
+4298: 				return;
+4299: 			}
+4300: 			Control.ControlCollection controls = P_0.Controls;
+4301: 			goto IL_007c;
+4302: 			IL_007c:
+4303: 			string text2 = default(string);
+4304: 			_0087_0096 obj2 = default(_0087_0096);
+4305: 			Control control = default(Control);
+4306: 			foreach (XElement item in xElement2.Elements())
+4307: 			{
+4308: 				_009C();
+4309: 				if (_009B())
+4310: 				{
+4311: 					goto IL_00c3;
+4312: 				}
+4313: 				if (_009B())
+4314: 				{
+4315: 					goto IL_00d1;
+4316: 				}
+4317: 				goto IL_00e1;
+4318: 				IL_00c3:
+4319: 				text2 = item.Name.ToString();
+4320: 				goto IL_00d1;
+4321: 				IL_00e1:
+4322: 				obj2.SetValue(control, item.Value);
+4323: 				continue;
+4324: 				IL_00d1:
+4325: 				control = _008A_0094(controls, text2);
+4326: 				if (control == null || !_008A_009B._008D_0091(control, out obj2))
+4327: 				{
+4328: 					continue;
+4329: 				}
+4330: 				if (!_009B())
+4331: 				{
+4332: 					goto IL_00c3;
+4333: 				}
+4334: 				goto IL_00e1;
+4335: 			}
+4336: 		}

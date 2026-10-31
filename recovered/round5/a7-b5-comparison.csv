@@ -1,0 +1,13 @@
+﻿item,classification,B5,other,evidence
+runway frame,Same MethodDef,P4FF -> P0AC; P4FE -> P0AD,P281/P280 -> same,a7-b5-shared-identities.csv
+TurnEnd,Different implementation,actual XY used for heading and endpoints,no A7 TurnEnd field,runway-frame.md
+turn height / TP,Copied algorithm,P505/P506 display; P5C8 raw divide,P285/P286 display; P1FB raw divide,altitude-turn.md; frozen A7/altitude-turn.md
+reference/calculation height,Copied algorithm; Different implementation,P507/P509 two heights; P50A reads 10%; TP passed directly,P287/P289 two heights; P202 reverses TP from altitude,flyover-df.md; frozen A7/point-turn.md
+TAS bank wind,Same MethodDef,P500/P50A -> P793,A7 input -> P793,shared-pbn-departure-calls.csv
+earliest/latest,Different implementation,fixed1482 FO;600m optional early;C6,A7 separate ctor and own tolerance inputs,navigation-tolerance.md
+straight area,Different implementation,P5CC/P5D7 150 tan15 cap3704,independent A7 polygon methods,straight-segment.md
+turn area,Different implementation,P5C9/P5D4 -> Spiral86,no A7 business geometry reuse,negative-evidence.json
+MOC,Numerically similar; Different implementation,.008 /75 with own distance branches,same constants in independent evaluator,obstacle-evaluation.md
+obstacle evaluation,Different implementation,P5CD/P5D8 no UI incoming calls,P1FC/P203/P421 UI connected,negative-evidence.json; frozen A7 overview
+result carrier,Same MethodDef,_008A_0089,same result carrier,a7-b5-shared-identities.csv
+CAD writer,Same MethodDef,P503/P50B -> P087,P283/P28C/P290 -> P087,a7-b5-shared-identities.csv

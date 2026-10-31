@@ -1,0 +1,36 @@
+METHOD 0600033C \x89\x8f.\x89\x8e::\x87\x97\x8a RVA=3F29C file=3D49C
+IL_0000: call 0x06000341 \x89\x8f.\x89\x8e::\x872
+IL_0005: call 0x06000340 \x89\x8f.\x89\x8e::\x871
+IL_000A: brfalse.s 111
+IL_000C: pop 
+IL_000D: ldarg.0 
+IL_000E: ldfld 0x0400026D \x89\x8f.\x89\x8e::\x87\x98\x95
+IL_0013: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_0018: brfalse.s 68
+IL_001A: call 0x06000340 \x89\x8f.\x89\x8e::\x871
+IL_001F: brfalse.s 45
+IL_0021: ldarg.0 
+IL_0022: ldfld 0x0400025C \x89\x8f.\x89\x8e::\x87\x97\x9d
+IL_0027: ldc.i4 4468
+IL_002C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0031: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0036: br.s 112
+IL_0038: ldarg.0 
+IL_0039: ldfld 0x0400025C \x89\x8f.\x89\x8e::\x87\x97\x9d
+IL_003E: ldc.i4 4476
+IL_0043: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0048: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_004D: ldarg.0 
+IL_004E: ldfld 0x04000261 \x89\x8f.\x89\x8e::\x87\x98\x89
+IL_0053: ldc.i4 4480
+IL_0058: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_005D: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0062: ret 
+IL_0063: pop 
+IL_0064: ldarg.0 
+IL_0065: ldfld 0x04000261 \x89\x8f.\x89\x8e::\x87\x98\x89
+IL_006A: ldc.i4 4472
+IL_006F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0074: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0079: ret 
+

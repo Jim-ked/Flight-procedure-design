@@ -1,0 +1,91 @@
+21400: 			}
+21401: 			goto IL_01d0;
+21402: 		}
+21403: 
+21404: 		private void _0087_008E_0091(object P_0, EventArgs P_1)
+21405: 		{
+21406: 			//IL_008c: Unknown result type (might be due to invalid IL or missing references)
+21407: 			//IL_009a: Unknown result type (might be due to invalid IL or missing references)
+21408: 			//IL_00aa: Unknown result type (might be due to invalid IL or missing references)
+21409: 			//IL_00af: Unknown result type (might be due to invalid IL or missing references)
+21410: 			_ = 0;
+21411: 			if (!_0087_009B() || false /* original-file-bool-offset:444 */)
+21412: 			{
+21413: 				return;
+21414: 			}
+21415: 			DBPoint val = default(DBPoint);
+21416: 			foreach (DataGridViewRow selectedRow in _0087_0090_0088.SelectedRows)
+21417: 			{
+21418: 				_ = 0;
+21419: 				if (_0087_009B())
+21420: 				{
+21421: 					val = _0087_008E_009C[_0087_0090_0088.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+21422: 				}
+21423: 				ObjectId val2 = _008B._0089_0087("Obst" /* string-offset:3604 */, val.Position);
+21424: 				string obj = "Altitude" /* string-offset:536 */;
+21425: 				Point3d position = val.Position;
+21426: 				_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+21427: 			}
+21428: 		}
+21429: 
+21430: 		private void _0087_008E_0092(object P_0, DataGridViewCellEventArgs P_1)
+21431: 		{
+21432: 			_ = Application.DocumentManager.MdiActiveDocument.Editor;
+21433: 			while (_0087_008E_009B != null)
+21434: 			{
+21435: 				if (_0087_008E_009B.Count == 0)
+21436: 				{
+21437: 					_0087_009B();
+21438: 					if (!_0087_009C())
+21439: 					{
+21440: 						if (_0087_009B())
+21441: 						{
+21442: 							break;
+21443: 						}
+21444: 						continue;
+21445: 					}
+21446: 				}
+21447: 				else if (P_1.ColumnIndex < 0)
+21448: 				{
+21449: 					break;
+21450: 				}
+21451: 				if (P_1.RowIndex < 0)
+21452: 				{
+21453: 					if (!_0087_009C())
+21454: 					{
+21455: 					}
+21456: 				}
+21457: 				else
+21458: 				{
+21459: 					DBPoint obj = _0087_008E_009C[_0087_0090_0088.Rows[P_1.RowIndex].Cells[0].Value.ToString()];
+21460: 					_008D._0089_0093(_0087_008E_009B);
+21461: 					_008D._0089_0092(obj);
+21462: 				}
+21463: 				break;
+21464: 			}
+21465: 		}
+21466: 
+21467: 		private void _0087_008E_0093(object P_0, EventArgs P_1)
+21468: 		{
+21469: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21470: 		}
+21471: 
+21472: 		private void _0087_008E_0094(object P_0, EventArgs P_1)
+21473: 		{
+21474: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21475: 		}
+21476: 
+21477: 		private void _0087_008E_0095(object P_0, EventArgs P_1)
+21478: 		{
+21479: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21480: 		}
+21481: 
+21482: 		private void _0087_008E_0096(object P_0, EventArgs P_1)
+21483: 		{
+21484: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21485: 		}
+21486: 
+21487: 		private void _0087_008E_0097(object P_0, EventArgs P_1)
+21488: 		{
+21489: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+21490: 		}

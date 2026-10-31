@@ -1,0 +1,11 @@
+﻿side,condition,relative_order,vertices,meaning,point_source
+Right,Expand=False,0,S -> S - w*n -> E - (w+L*tan(a))*n,outer boundary open polyline,P2F9 polar/add/intersection
+Right,Expand=False,1,S - (w/2)*n -> E - ((w+L*tan(a))/2)*n,half-width demarcation open polyline,P2F9 polar/add/intersection
+Right,checkBoxExpand=true,0,E -> O*,15deg cap/seam,P2F9 intersection with E-line
+Right,Expand=True,1,S -> S - w*n -> O*,outer boundary open polyline,P2F9 polar/add/intersection
+Right,Expand=True,2,S - (w/2)*n -> I*,half-width demarcation open polyline,P2F9 polar/add/intersection
+Left,Expand=False,0,S -> S + w*n -> E + (w+L*tan(a))*n,outer boundary open polyline,P2F9 polar/add/intersection
+Left,Expand=False,1,S + (w/2)*n -> E + ((w+L*tan(a))/2)*n,half-width demarcation open polyline,P2F9 polar/add/intersection
+Left,checkBoxExpand=true,0,E -> O*,15deg cap/seam,P2F9 intersection with E-line
+Left,Expand=True,1,S -> S + w*n -> O*,outer boundary open polyline,P2F9 polar/add/intersection
+Left,Expand=True,2,S + (w/2)*n -> I*,half-width demarcation open polyline,P2F9 polar/add/intersection

@@ -1,0 +1,13 @@
+﻿SourceModule,TargetModule,SharedMethod,MetadataTransfer,EntitySemanticRead,ManualRepick,CopiedAlgorithm,ActualRelationship,Evidence
+A2,A7,P793及底层CAD,NO,NO,YES: TP/C,NO business handoff,A2计算线留在图面，A7重拾；WsCalcuLine reader wrapper无indexed incoming,recovered/A2-BasicCalculation/final-static-closure.md;recovered/A7-Departure/final-static-closure.md
+A3,A7,点/线与CAD primitive,NO,NO KK semantic read,YES: KK,NO business handoff,KK线用于人工取点，不读Group/XData恢复定位容差模型,recovered/A3-FixTolerance/final-static-closure.md;recovered/A7-Departure/final-static-closure.md
+A3,A6,点/线/通用CAD,NO,NO,YES anchors,NO direct A3 caller,共享primitive，模板业务独立,recovered/A3-FixTolerance/final-static-closure.md;recovered/A6-Template/shared-geometry.md
+A3,A10,通用CAD/点原语,NO,NO DME read,YES O/IF/IAF,BUSINESS_SIMILAR_ONLY,A10自建DME弧/扇区，不接收A3容差模型,recovered/A3-FixTolerance/final-static-closure.md;recovered/A10-DmeArc/overview.md
+A5,B4,OasModel P411–P41E; Plane P834–P840; P087/P089,独立参数快照；格式不互换,手动GetEntity读状态，不是区配对,YES runway/parameters,YES loaders P409–40C vs P571–574,共享数学底层；几何封装/格式/loader不同,recovered/A5-PrecisionApproach/class-map.md;recovered/B4-PbnIls/oas-parameter-model.md
+B4,A5,OasModel/Plane/CAD,NO automatic transfer,NO automatic geometry semantic read,YES,YES private loaders,A5六模式不等于B4同轴衔接模型,recovered/A5-PrecisionApproach/class-map.md;recovered/A5-PrecisionApproach/persistence.md
+A7,B5,P0AC/P0AD; P793; parser/Mark/CAD,NO procedure transfer,NO area semantic read,YES TP/runway; B5 TurnEnd,BUSINESS_SIMILAR_ONLY,A7无spiral；B5有Spiral86/Hull，非共享完整业务类,recovered/A7-Departure/final-static-closure.md;recovered/B5-PbnDeparture/protection-connections.md
+B5,A7,frame/P793/obstacle/CAD,NO,NO,YES,BUSINESS_SIMILAR_ONLY,B5 TurnEnd不属于A7字段/事件,recovered/A7-Departure/final-static-closure.md;recovered/B5-PbnDeparture/overview.md
+A9,B3,障碍物导入/点线primitive,点名称可共同解析；非评价模型,NO area semantic read,A9数值端点；B3自身参数,SIMILAR_MATH,P330/P331与P595/P5EF独立；端点纳入条件不同,recovered/A9-PriSec/final-static-closure.md;recovered/B3-RnpApch/obstacle-evaluation.md
+B3,A9,SelectAll/parser/Mark,NO procedure transfer,NO,各窗独立输入,SIMILAR_MATH,公共点数据不等于共享分类/副区算法,recovered/A9-PriSec/final-static-closure.md;recovered/B3-RnpApch/overview.md
+A1,B1,P793/P854; Spiral86 point/sample/radius; P7AD,NO procedure transfer,NO automatic anchor read,YES three points,独立业务边界类,共享风螺旋primitive；A1列表不等于FlyBy/DF保护区算法,recovered/A1-WindSpiral/final-static-closure.md;recovered/B1-FlyBy/final-static-closure.md;recovered/round13/shared-final.csv
+A1,B2,P793/P854; Spiral86 point/sample/radius; P7AD,NO procedure transfer,NO automatic anchor read,YES three points,独立业务边界类,共享风螺旋primitive；A1列表不等于FlyBy/DF保护区算法,recovered/A1-WindSpiral/final-static-closure.md;recovered/B2-FlyOverDF/final-static-closure.md;recovered/round13/shared-final.csv

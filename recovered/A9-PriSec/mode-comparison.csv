@@ -1,0 +1,9 @@
+﻿Aspect,Normal,IF,Evidence
+Longitudinal endpoint,-L < localX < 0 (strict),-L <= localX <= 0 (inclusive),pri-sec-evaluation.md; PriSec.Recovered.cs
+Primary boundary start width,W0/2,W0/2,pri-sec-evaluation.md
+Primary boundary end width,W1/2,W1,pri-sec-evaluation.md
+Outer boundary end width,W1,W1,pri-sec-evaluation.md
+Coarse lateral filter,"abs(localY) < max(W0,W1)",same strict filter,pri-sec-evaluation.md
+Primary inclusion,abs(localY) <= interpolated primary,same,PriSec.Recovered.cs
+Secondary inclusion,primary < abs(localY) <= outer,same,PriSec.Recovered.cs
+Output coordinates,"round(-localX,-localY,original Z)",same,PriSecForm.Events.Recovered.cs

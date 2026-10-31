@@ -1,0 +1,72 @@
+METHOD 0600024D \x88\x9e.\x88\x9d::\x9c\x9c RVA=21C44 file=1FE44
+IL_0000: ldc.i4 7
+IL_0005: stloc local(0x0003)
+IL_0009: ldarg.0 
+IL_000A: newobj 0x0A0001C2 0x1B00000A::.ctor
+IL_000F: stfld 0x04000124 \x88\x9e.\x88\x9d::\x9d\x9d
+IL_0014: call 0x0600026A \x88\x9e.\x88\x9d::\x87\x97
+IL_0019: call 0x0600026B \x88\x9e.\x88\x9d::\x87\x98
+IL_001E: brfalse.s 108
+IL_0020: pop 
+IL_0021: ldc.i4 5
+IL_0026: stloc local(0x0003)
+IL_002A: call 0x0600026B \x88\x9e.\x88\x9d::\x87\x98
+IL_002F: brtrue.s 157
+IL_0031: ldloc local(0x0003)
+IL_0035: switch [169, 130, 141, 130, 259, 141, 157, 21, 280]
+IL_005E: br.s 127
+IL_0060: pop 
+IL_0061: ldc.i4 3
+IL_0066: stloc local(0x0003)
+IL_006A: call 0x0600026B \x88\x9e.\x88\x9d::\x87\x98
+IL_006F: brtrue.s 141
+IL_0071: br.s 61
+IL_0073: nop 
+IL_0074: br.s 169
+IL_0076: ldarg.0 
+IL_0077: newobj 0x0A0002BC 0x1B00000C::.ctor
+IL_007C: stfld 0x04000125 \x88\x9e.\x88\x9d::\x9d\x9e
+IL_0081: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0086: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_008B: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_0090: stloc.0 
+IL_0091: ldloc.0 
+IL_0092: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_0097: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_009C: stloc.1 
+IL_009D: ldarg.0 
+IL_009E: ldloc.0 
+IL_009F: ldc.i4.0 
+IL_00A0: ldc.i4.0 
+IL_00A1: call 0x2B00000D 
+IL_00A6: stfld 0x04000124 \x88\x9e.\x88\x9d::\x9d\x9d
+IL_00AB: leave.s 195
+IL_00AD: ldloc.1 
+IL_00AE: brfalse.s 194
+IL_00B0: ldloc.1 
+IL_00B1: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00B6: endfinally 
+IL_00B7: ldarg.0 
+IL_00B8: ldfld 0x0400012B \x88\x9e.\x88\x9d::\x9e\x8b
+IL_00BD: ldc.i4 2720
+IL_00C2: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00C7: ldarg.0 
+IL_00C8: ldfld 0x04000124 \x88\x9e.\x88\x9d::\x9d\x9d
+IL_00CD: callvirt 0x0A0001C3 0x1B00000A::get_Count
+IL_00D2: stloc.2 
+IL_00D3: ldloca.s local(0x0002)
+IL_00D5: call 0x0A0001C4 System.Int32::ToString
+IL_00DA: ldc.i4 2724
+IL_00DF: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00E4: call 0x0A00003C System.String::Concat
+IL_00E9: callvirt 0x0A0002BD System.Windows.Forms.ToolStripItem::set_Text
+IL_00EE: ldc.i4 4
+IL_00F3: stloc local(0x0003)
+IL_00F7: ldarg.0 
+IL_00F8: ldarg.0 
+IL_00F9: ldfld 0x04000124 \x88\x9e.\x88\x9d::\x9d\x9d
+IL_00FE: call 0x0600024E \x88\x9e.\x88\x9d::\x9c\x9d
+IL_0103: ldc.i4 8
+IL_0108: stloc local(0x0003)
+IL_010C: ret 
+

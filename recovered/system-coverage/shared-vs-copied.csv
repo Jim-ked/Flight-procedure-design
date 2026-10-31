@@ -1,0 +1,8 @@
+﻿Topic,Modules,ObservedMethods,Classification,Interpretation,Evidence
+A5/B4 OAS loader,A5/B4,P409-P40C vs P571-P574,COPIED_IMPLEMENTATION,"Same schema, different methods",A5 class-map.md
+A5/B4 OAS model,A5/B4,OasModel/Plane,SAME_METHODDEF,Shared core wrappers differ,A5 overview.md
+B1/B2 boundaries,B1/B2,_008C_0087/_008C_0089,COPIED_IMPLEMENTATION,"Similar branches, independent classes",B1/B2 overview.md
+A7/B5 departure,A7/B5,Departure classes,ONLY_BUSINESS_SIMILAR,B5 does not call A7 business classes,A7/B5 overview.md
+A9/B3 PriSec,A9/B3,P330/P331 vs P595/P5EF,NO_RELATION,"Similar purpose, distinct methods",round6/closure.md
+A1/B1/B2 spiral,A1/B1/B2,Spiral primitives,NUMERICALLY_SIMILAR,Shared primitives plus copied logic,round3 closure
+A4/A3 facility,A4/A3,P113/point helpers,ONLY_BUSINESS_SIMILAR,Different accuracy/protection concepts,round9 a3-a4-comparison.csv

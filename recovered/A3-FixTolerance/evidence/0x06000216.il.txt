@@ -1,0 +1,22 @@
+METHOD 06000216 \x88\x98.\x88\x97::Dispose RVA=3AAB file=1CAB
+IL_0000: ldc.i4.1 
+IL_0001: call 0x0600021A \x88\x98.\x88\x97::\x87\x92
+IL_0006: brtrue.s 12
+IL_0008: pop 
+IL_0009: br.s 20
+IL_000B: pop 
+IL_000C: call 0x0600021A \x88\x98.\x88\x97::\x87\x92
+IL_0011: brfalse.s 42
+IL_0013: ldarg.1 
+IL_0014: brfalse.s 42
+IL_0016: ldarg.0 
+IL_0017: ldfld 0x0400008F \x88\x98.\x88\x97::\x95\x8f
+IL_001C: brfalse.s 42
+IL_001E: ldarg.0 
+IL_001F: ldfld 0x0400008F \x88\x98.\x88\x97::\x95\x8f
+IL_0024: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0029: ldarg.0 
+IL_002A: ldarg.1 
+IL_002B: call 0x0A00027D System.Windows.Forms.Form::Dispose
+IL_0030: ret 
+

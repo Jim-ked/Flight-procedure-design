@@ -1,0 +1,101 @@
+14310: 		{
+14311: 			_0087_0086_009B(P_0, P_1);
+14312: 		}
+14313: 
+14314: 		private void _0087_0086_0099(object P_0, EventArgs P_1)
+14315: 		{
+14316: 			_0087_0086_009B(P_0, P_1);
+14317: 		}
+14318: 
+14319: 		private void _0087_0086_009A(object P_0, EventArgs P_1)
+14320: 		{
+14321: 			_0087_0086_009B(P_0, P_1);
+14322: 		}
+14323: 
+14324: 		private void _0087_0086_009B(object P_0, EventArgs P_1)
+14325: 		{
+14326: 			_0087_0089_009B = new List<DBPoint>();
+14327: 			_0087_0089_009C = new Dictionary<string, DBPoint>();
+14328: 			_ = 1;
+14329: 			if (!_0087_009A())
+14330: 			{
+14331: 				Database database = Application.DocumentManager.MdiActiveDocument.Database;
+14332: 				Transaction val = database.TransactionManager.StartTransaction();
+14333: 				try
+14334: 				{
+14335: 					_0087_0089_009B = database._008B_008A<DBPoint>((OpenMode)0, _0020: false);
+14336: 				}
+14337: 				finally
+14338: 				{
+14339: 					((IDisposable)val)?.Dispose();
+14340: 				}
+14341: 				_0087_008A_0092.Text = "已检测到 " /* string-offset:2720 */ + _0087_0089_009B.Count + " 个障碍物。" /* string-offset:936 */;
+14342: 			}
+14343: 			_0087_0086_009C(_0087_0089_009B);
+14344: 		}
+14345: 
+14346: 		private void _0087_0086_009C(List<DBPoint> P_0)
+14347: 		{
+14348: 			if (!true /* original-file-bool-offset:356 */)
+14349: 			{
+14350: 				return;
+14351: 			}
+14352: 			DataTable dataTable = new DataTable();
+14353: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+14354: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+14355: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+14356: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+14357: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+14358: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+14359: 			dataTable.Columns.Add("dr(m)" /* string-offset:3004 */, typeof(string));
+14360: 			dataTable.Columns.Add("d0(m)" /* string-offset:2752 */, typeof(string));
+14361: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+14362: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+14363: 			dataTable.Columns.Add("程序高度(m)" /* string-offset:2764 */, typeof(double));
+14364: 			dataTable.Columns.Add("minPDG(%)" /* string-offset:3008 */, typeof(double));
+14365: 			int num = 1;
+14366: 			foreach (DBPoint item in P_0)
+14367: 			{
+14368: 				_008F_008E obj = item._008C_008D(num.ToString());
+14369: 				num++;
+14370: 				dataTable.Rows.Add(obj.ID, obj.Name, Math.Round(obj.X, 2), Math.Round(obj.Y, 2), Math.Round(obj.Z, 2));
+14371: 				_0087_0089_009C.Add(obj.ID, item);
+14372: 			}
+14373: 			_0087_008A_008C.DataSource = dataTable;
+14374: 			_0087_008A_008C.Columns[1].Frozen = true;
+14375: 		}
+14376: 
+14377: 		private void _0087_0086_009D(List<_008A_0089> P_0)
+14378: 		{
+14379: 			if (false /* original-file-bool-offset:360 */)
+14380: 			{
+14381: 				return;
+14382: 			}
+14383: 			DataTable dataTable = new DataTable();
+14384: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+14385: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+14386: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+14387: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+14388: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+14389: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+14390: 			dataTable.Columns.Add("dr(m)" /* string-offset:3004 */, typeof(string));
+14391: 			dataTable.Columns.Add("d0(m)" /* string-offset:2752 */, typeof(string));
+14392: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+14393: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+14394: 			dataTable.Columns.Add("程序高度(m)" /* string-offset:2764 */, typeof(double));
+14395: 			dataTable.Columns.Add("minPDG(%)" /* string-offset:3008 */, typeof(double));
+14396: 			foreach (_008A_0089 item in P_0)
+14397: 			{
+14398: 				dataTable.Rows.Add(item.ID, item.Name, Math.Round(item.X, 2), Math.Round(item.Y, 2), Math.Round(item.Z, 2), item._0088_008E_0095(), Math.Round(item._0088_008E_009E(), 2), Math.Round(item._0088_008E_009B(), 2), Math.Round(item._0088_008F_0088()), Math.Round(item._0088_008F_008B()), Math.Round(item._0088_008F_008E(), 2), Math.Round(item._0088_008F_0091() * 100.0, 1));
+14399: 			}
+14400: 			_0087_008A_008C.DataSource = dataTable;
+14401: 			_0087_008A_008C.Columns[1].Frozen = true;
+14402: 		}
+14403: 
+14404: 		private void _0087_0086_009E(object P_0, DataGridViewCellEventArgs P_1)
+14405: 		{
+14406: 			_ = Application.DocumentManager.MdiActiveDocument.Editor;
+14407: 			if (_0087_0089_009B != null && _0087_0089_009B.Count != 0 && P_1.ColumnIndex >= 0)
+14408: 			{
+14409: 				_0087_0099();
+14410: 				if (!_0087_009A() && P_1.RowIndex >= 0)

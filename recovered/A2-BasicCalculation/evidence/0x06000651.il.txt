@@ -1,0 +1,25 @@
+METHOD 06000651 \x8d\x8d.\x8d\x8c::\x8a\x90\x91 RVA=8867C file=8687C
+IL_0000: newobj 0x0A0000A6 Autodesk.AutoCAD.DatabaseServices.ResultBuffer::.ctor
+IL_0005: dup 
+IL_0006: ldc.i4 1001
+IL_000B: ldc.i4 6780
+IL_0010: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0015: newobj 0x0A0000AC Autodesk.AutoCAD.DatabaseServices.TypedValue::.ctor
+IL_001A: callvirt 0x0A0000AD Autodesk.AutoCAD.DatabaseServices.ResultBuffer::Add
+IL_001F: dup 
+IL_0020: ldc.i4 1000
+IL_0025: ldarg.0 
+IL_0026: call 0x0600063A \x8d\x8d.\x8d\x8c::\x8a\x90\x96
+IL_002B: stloc.0 
+IL_002C: ldloca.s local(0x0000)
+IL_002E: call 0x0A0001C4 System.Int32::ToString
+IL_0033: newobj 0x0A0000AC Autodesk.AutoCAD.DatabaseServices.TypedValue::.ctor
+IL_0038: callvirt 0x0A0000AD Autodesk.AutoCAD.DatabaseServices.ResultBuffer::Add
+IL_003D: dup 
+IL_003E: ldc.i4 1000
+IL_0043: ldarg.0 
+IL_0044: call 0x0600064F \x8d\x8d.\x8d\x8c::\x8a\x90\x8f
+IL_0049: newobj 0x0A0000AC Autodesk.AutoCAD.DatabaseServices.TypedValue::.ctor
+IL_004E: callvirt 0x0A0000AD Autodesk.AutoCAD.DatabaseServices.ResultBuffer::Add
+IL_0053: ret 
+

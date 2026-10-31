@@ -1,0 +1,27 @@
+METHOD 06000086 \x8c.\x8b::\x88\x8a RVA=8780 file=6980
+IL_0000: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0005: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000A: dup 
+IL_000B: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0010: stloc.0 
+IL_0011: callvirt 0x0A00009A Autodesk.AutoCAD.ApplicationServices.Document::LockDocument
+IL_0016: stloc.1 
+IL_0017: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+IL_001C: dup 
+IL_001D: ldarg.1 
+IL_001E: call 0x0600012D \x87\x87.\x87\x86::\x8c\x8b
+IL_0023: call 0x06000134 \x87\x89.\x87\x88::\x8c\x8f
+IL_0028: ldarg.0 
+IL_0029: ldarg.2 
+IL_002A: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_002F: pop 
+IL_0030: ldloc.0 
+IL_0031: callvirt 0x0A00009C Autodesk.AutoCAD.EditorInput.Editor::Regen
+IL_0036: leave.s 78
+IL_0038: ldloc.1 
+IL_0039: brfalse.s 77
+IL_003B: ldloc.1 
+IL_003C: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0041: endfinally 
+IL_0042: ret 
+

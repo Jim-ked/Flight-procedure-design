@@ -1,0 +1,21 @@
+METHOD 06000551 \x8b\x97.\x8b\x96::.ctor RVA=4F00 file=3100
+IL_0000: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_0005: call 0x06000581 \x8b\x97.\x8b\x96::\x88\x9d
+IL_000A: brfalse.s 40
+IL_000C: pop 
+IL_000D: ldarg.0 
+IL_000E: ldc.i4.4 
+IL_000F: ldc.i4.2 
+IL_0010: newobj 0x0A0002B1 0x1B000029::.ctor
+IL_0015: dup 
+IL_0016: ldtoken 0x04000793 .<PrivateImplementationDetails>::7E5594AE877640263DDF7F8D2CDA04BD375DB7C0F4B54761450840C450C27F48
+IL_001B: call 0x0A0002B2 System.Runtime.CompilerServices.RuntimeHelpers::InitializeArray
+IL_0020: stfld 0x04000599 \x8b\x97.\x8b\x96::\x89\x97\x8d
+IL_0025: br.s 41
+IL_0027: pop 
+IL_0028: ldarg.0 
+IL_0029: call 0x0A000277 System.Windows.Forms.Form::.ctor
+IL_002E: ldarg.0 
+IL_002F: call 0x0600057F \x8b\x97.\x8b\x96::\x89\x97\x8a
+IL_0034: ret 
+

@@ -1,0 +1,25 @@
+84659: 		public static List<_008F_008E> _008B_008A_009D(_008F_008E P_0, _008F_008E P_1, int P_2 = 10)
+84660: 		{
+84661: 			double num = default(double);
+84662: 			double num2 = default(double);
+84663: 			double num3 = default(double);
+84664: 			List<_008F_008E> list = default(List<_008F_008E>);
+84665: 			if (!false /* original-file-bool-offset:1448 */)
+84666: 			{
+84667: 				if (P_2 == 0)
+84668: 				{
+84669: 					return null;
+84670: 				}
+84671: 				num = (P_1.X - P_0.X) / (double)P_2;
+84672: 				num2 = (P_1.Y - P_0.Y) / (double)P_2;
+84673: 				num3 = (P_1.Z - P_0.Z) / (double)P_2;
+84674: 				list = new List<_008F_008E>();
+84675: 				list.Add(P_0);
+84676: 			}
+84677: 			for (int i = 1; i < P_2; i++)
+84678: 			{
+84679: 				list.Add(_008F_008E._008B_0089_008E(P_0, num * (double)i, num2 * (double)i, num3 * (double)i));
+84680: 			}
+84681: 			list.Add(P_1);
+84682: 			return list;
+84683: 		}

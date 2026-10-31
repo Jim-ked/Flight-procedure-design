@@ -1,0 +1,68 @@
+METHOD 060007D6 \x8f\x8b.\x8f\x8a::\x8b\x88\x86 RVA=91DCC file=8FFCC
+IL_0000: call 0x060007DE \x8f\x8b.\x8f\x8a::\x89p
+IL_0005: brfalse 192
+IL_000A: ldc.i4 1432
+IL_000F: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0014: brtrue.s 157
+IL_0016: ldarg.0 
+IL_0017: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_001C: call 0x0A000191 System.String::IsNullOrWhiteSpace
+IL_0021: brfalse.s 99
+IL_0023: ldarg.1 
+IL_0024: ldc.i4 7460
+IL_0029: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_002E: ldc.i4.0 
+IL_002F: ldc.i4.s 48
+IL_0031: call 0x0A000058 System.Windows.Forms.MessageBox::Show
+IL_0036: pop 
+IL_0037: ldc.i4.0 
+IL_0038: call 0x060007DE \x8f\x8b.\x8f\x8a::\x89p
+IL_003D: brfalse.s 96
+IL_003F: pop 
+IL_0040: ldarg.0 
+IL_0041: callvirt 0x0A00020D System.Windows.Forms.Control::Focus
+IL_0046: pop 
+IL_0047: ldarg.0 
+IL_0048: call 0x0A000346 System.Drawing.Color::get_LightCoral
+IL_004D: callvirt 0x0A0001EC System.Windows.Forms.Control::set_BackColor
+IL_0052: ldc.i4.0 
+IL_0053: ret 
+IL_0054: pop 
+IL_0055: br.s 199
+IL_0057: ldarg.0 
+IL_0058: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_005D: ldloca.s local(0x0000)
+IL_005F: call 0x0A0002E9 System.Double::TryParse
+IL_0064: brtrue.s 179
+IL_0066: ldarg.1 
+IL_0067: ldc.i4 7464
+IL_006C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0071: ldc.i4 7468
+IL_0076: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_007B: callvirt 0x0A00034F System.String::Replace
+IL_0080: ldc.i4 328
+IL_0085: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_008A: call 0x0A00008B System.String::Concat
+IL_008F: starg.s argument(0x0001)
+IL_0091: ldarg.1 
+IL_0092: ldc.i4 7472
+IL_0097: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_009C: ldc.i4.0 
+IL_009D: ldc.i4.s 48
+IL_009F: call 0x0A000058 System.Windows.Forms.MessageBox::Show
+IL_00A4: pop 
+IL_00A5: br.s 192
+IL_00A7: ldarg.0 
+IL_00A8: call 0x0A00020C System.Drawing.Color::get_White
+IL_00AD: callvirt 0x0A0001EC System.Windows.Forms.Control::set_BackColor
+IL_00B2: ldc.i4.1 
+IL_00B3: ret 
+IL_00B4: ldarg.0 
+IL_00B5: callvirt 0x0A00020D System.Windows.Forms.Control::Focus
+IL_00BA: pop 
+IL_00BB: ldarg.0 
+IL_00BC: call 0x0A000346 System.Drawing.Color::get_LightCoral
+IL_00C1: callvirt 0x0A0001EC System.Windows.Forms.Control::set_BackColor
+IL_00C6: ldc.i4.0 
+IL_00C7: ret 
+

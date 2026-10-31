@@ -1,0 +1,29 @@
+47268: 		private void _0088_009A_009E(object P_0, EventArgs P_1)
+47269: 		{
+47270: 			SaveFileDialog saveFileDialog = new SaveFileDialog();
+47271: 			saveFileDialog.Filter = "RNP APCH程序文件|*.rnp" /* string-offset:5692 */;
+47272: 			_0088_0093();
+47273: 			if (!_0088_0094())
+47274: 			{
+47275: 				goto IL_0028;
+47276: 			}
+47277: 			goto IL_0041;
+47278: 			IL_0028:
+47279: 			saveFileDialog.Title = "保存RNP APCH程序文件" /* string-offset:712 */;
+47280: 			if (saveFileDialog.ShowDialog() != DialogResult.OK)
+47281: 			{
+47282: 				return;
+47283: 			}
+47284: 			goto IL_0041;
+47285: 			IL_0041:
+47286: 			string s = "FormApvEvl\n" /* string-offset:5684 */;
+47287: 			_0097._008A_0098(_0088_009E_008A.Controls, ref s);
+47288: 			byte[] bytes = Encoding.UTF8.GetBytes(s);
+47289: 			File.WriteAllBytes(saveFileDialog.FileName, bytes);
+47290: 			MessageBox.Show(saveFileDialog.FileName + "保存成功。" /* string-offset:5696 */);
+47291: 			if (_0088_0093())
+47292: 			{
+47293: 				return;
+47294: 			}
+47295: 			goto IL_0028;
+47296: 		}

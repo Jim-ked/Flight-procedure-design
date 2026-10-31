@@ -1,0 +1,46 @@
+﻿method,keyword,IL
+0x06000087,Group,IL_002B: newobj 0x0A00009D Autodesk.AutoCAD.DatabaseServices.Group::.ctor
+0x06000087,Polyline,IL_0044: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+0x06000087,Group,IL_0062: callvirt 0x0A0000A0 Autodesk.AutoCAD.DatabaseServices.Group::Append
+0x06000089,XData,IL_00C8: callvirt 0x0A0000B4 Autodesk.AutoCAD.DatabaseServices.DBObject::set_XData
+0x06000089,AppendEntity,IL_00FA: callvirt 0x0A0000B3 Autodesk.AutoCAD.DatabaseServices.BlockTableRecord::AppendEntity
+0x0600009C,BlockReference,IL_00F9: newobj 0x0A0000C7 Autodesk.AutoCAD.DatabaseServices.BlockReference::.ctor
+0x0600009C,AppendEntity,IL_012D: callvirt 0x0A0000B3 Autodesk.AutoCAD.DatabaseServices.BlockTableRecord::AppendEntity
+0x0600009C,BlockReference,IL_017F: callvirt 0x0A0000D3 Autodesk.AutoCAD.DatabaseServices.BlockReference::get_BlockTransform
+0x0600009C,BlockReference,IL_019F: callvirt 0x0A0000DF Autodesk.AutoCAD.DatabaseServices.BlockReference::get_AttributeCollection
+0x0600009E,BlockReference,IL_0076: isinst 0x01000019 Autodesk.AutoCAD.DatabaseServices.BlockReference
+0x0600009E,BlockReference,IL_007B: callvirt 0x0A0000DF Autodesk.AutoCAD.DatabaseServices.BlockReference::get_AttributeCollection
+0x060000F5,Group,IL_008A: isinst 0x01000044 System.Windows.Forms.GroupBox
+0x0600010D,SelectAll,IL_0071: callvirt 0x0A0001AE Autodesk.AutoCAD.EditorInput.Editor::SelectAll
+0x06000113,GetPoint,IL_007C: callvirt 0x0A0001B5 Autodesk.AutoCAD.EditorInput.Editor::GetPoint
+0x06000134,Polyline,IL_002F: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+0x06000134,AddVertexAt,IL_002F: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+0x06000557,XData,IL_0029: callvirt 0x0A000081 Autodesk.AutoCAD.DatabaseServices.DBObject::get_XData
+0x0600056B,GetEntity,IL_0052: callvirt 0x0A00007C Autodesk.AutoCAD.EditorInput.Editor::GetEntity
+0x0600056B,XData,IL_0095: callvirt 0x0A000081 Autodesk.AutoCAD.DatabaseServices.DBObject::get_XData
+0x0600057F,Group,IL_082A: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x0600057F,Group,IL_20EC: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x0600057F,Group,IL_2DE7: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x0600057F,Group,IL_301B: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x0600057F,Group,IL_47A2: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x0600057F,Group,IL_491B: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x0600057F,Group,IL_544B: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x0600057F,Group,IL_54D5: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060005DF,3704,IL_00E0: ldc.r8 3704.0
+0x060005DF,3704,IL_00F4: ldc.r8 3704.0
+0x060005DF,1852,IL_013A: ldc.r8 1852.0
+0x060005DF,1852,IL_0148: ldc.r8 1852.0
+0x060005DF,3704,IL_019C: ldc.r8 3704.0
+0x060005DF,1852,IL_01DA: ldc.r8 1852.0
+0x060005DF,3704,IL_0282: ldc.r8 3704.0
+0x060005DF,3704,IL_0296: ldc.r8 3704.0
+0x060005DF,3704,IL_02BB: ldc.r8 3704.0
+0x060005DF,3704,IL_02C9: ldc.r8 3704.0
+0x060005DF,1852,IL_0414: ldc.r8 1852.0
+0x060005E0,3704,IL_04DF: ldc.r8 3704.0
+0x060005E0,1852,IL_0508: ldc.r8 1852.0
+0x060005E0,1852,IL_0512: ldc.r8 1852.0
+0x060005E0,3704,IL_0537: ldc.r8 3704.0
+0x060005E0,1852,IL_0560: ldc.r8 1852.0
+0x060005E0,1852,IL_056A: ldc.r8 1852.0
+0x060005E0,3704,IL_0731: ldc.r8 3704.0

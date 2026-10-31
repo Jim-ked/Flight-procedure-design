@@ -1,0 +1,57 @@
+4523: 		public static void _008A_009A(Control.ControlCollection P_0, string P_1, string P_2)
+4524: 		{
+4525: 			_ = 0;
+4526: 			string[] array = default(string[]);
+4527: 			int num = default(int);
+4528: 			if (_009B())
+4529: 			{
+4530: 				if (!true /* original-file-bool-offset:148 */)
+4531: 				{
+4532: 					return;
+4533: 				}
+4534: 				if (_009B())
+4535: 				{
+4536: 					array = P_1.Split(new string[3]
+4537: 					{
+4538: 						"\r\n" /* string-offset:728 */,
+4539: 						"\r" /* string-offset:732 */,
+4540: 						"\n" /* string-offset:328 */
+4541: 					}, StringSplitOptions.RemoveEmptyEntries);
+4542: 					if (P_2 != array[0])
+4543: 					{
+4544: 						MessageBox.Show("数据格式不匹配，请重新选择数据文件。" /* string-offset:736 */);
+4545: 						return;
+4546: 					}
+4547: 					num = 1;
+4548: 					goto IL_0084;
+4549: 				}
+4550: 				goto IL_00cc;
+4551: 			}
+4552: 			if (!_009C())
+4553: 			{
+4554: 				goto IL_00d4;
+4555: 			}
+4556: 			return;
+4557: 			IL_00cc:
+4558: 			_0087_0096 obj = default(_0087_0096);
+4559: 			Control control = default(Control);
+4560: 			string text = default(string);
+4561: 			obj.SetValue(control, text);
+4562: 			goto IL_00d4;
+4563: 			IL_00d4:
+4564: 			num++;
+4565: 			goto IL_0084;
+4566: 			IL_0084:
+4567: 			if (num < array.Length)
+4568: 			{
+4569: 				string[] array2 = array[num].Split(':');
+4570: 				string text2 = array2[0].Trim();
+4571: 				text = array2[1].Trim();
+4572: 				control = _008A_0094(P_0, text2);
+4573: 				if (control != null && _008A_009B._008D_0091(control, out obj))
+4574: 				{
+4575: 					goto IL_00cc;
+4576: 				}
+4577: 				goto IL_00d4;
+4578: 			}
+4579: 		}

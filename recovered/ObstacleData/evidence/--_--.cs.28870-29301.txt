@@ -1,0 +1,432 @@
+28870: 			_ = 0;
+28871: 			Point3d val = default(Point3d);
+28872: 			if (_00871())
+28873: 			{
+28874: 				base.Visible = false;
+28875: 				val = _009D._008B_008D("\n请选择终点" /* string-offset:440 */);
+28876: 				base.Visible = true;
+28877: 				_0087_0098_008B.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();
+28878: 				_0087_0098_008A.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();
+28879: 			}
+28880: 			_0087_0098_0098.Text = ((Point3d)(ref val)).Z.ToString();
+28881: 		}
+28882: 
+28883: 		private void _0087_0096_0090(object P_0, EventArgs P_1)
+28884: 		{
+28885: 			do
+28886: 			{
+28887: 				Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+28888: 				_ = mdiActiveDocument.Editor;
+28889: 				Database database = mdiActiveDocument.Database;
+28890: 				_00871();
+28891: 				if (!_00872())
+28892: 				{
+28893: 					Transaction val = database.TransactionManager.StartTransaction();
+28894: 					try
+28895: 					{
+28896: 						_0087_0097_008C = database._008B_008A<DBPoint>((OpenMode)0, _0020: false);
+28897: 					}
+28898: 					finally
+28899: 					{
+28900: 						((IDisposable)val)?.Dispose();
+28901: 					}
+28902: 					_0087_0097_009A.Text = "已检测到 " /* string-offset:2720 */ + _0087_0097_008C.Count + " 个障碍物。" /* string-offset:936 */;
+28903: 					break;
+28904: 				}
+28905: 			}
+28906: 			while (!_00871());
+28907: 			_0087_0096_0091(_0087_0097_008C);
+28908: 		}
+28909: 
+28910: 		private void _0087_0096_0091(List<DBPoint> P_0)
+28911: 		{
+28912: 			if (false /* original-file-bool-offset:508 */)
+28913: 			{
+28914: 				return;
+28915: 			}
+28916: 			_0087_0097_008D = new Dictionary<string, DBPoint>();
+28917: 			DataTable dataTable = new DataTable();
+28918: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+28919: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+28920: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+28921: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+28922: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+28923: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+28924: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+28925: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+28926: 			int num = 1;
+28927: 			foreach (DBPoint item in P_0)
+28928: 			{
+28929: 				_008F_008E obj = item._008C_008D(num.ToString());
+28930: 				num++;
+28931: 				dataTable.Rows.Add(obj.ID, obj.Name, Math.Round(obj.X, 2), Math.Round(obj.Y, 2), Math.Round(obj.Z, 2));
+28932: 				_0087_0097_008D.Add(obj.ID, item);
+28933: 			}
+28934: 			_0087_0097_0091.DataSource = dataTable;
+28935: 			_0087_0097_0091.Columns[1].Frozen = true;
+28936: 		}
+28937: 
+28938: 		private void _0087_0096_0092(List<_008A_008B> P_0)
+28939: 		{
+28940: 			if (!true /* original-file-bool-offset:512 */)
+28941: 			{
+28942: 				return;
+28943: 			}
+28944: 			DataTable dataTable = new DataTable();
+28945: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+28946: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+28947: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+28948: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+28949: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+28950: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+28951: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+28952: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+28953: 			foreach (_008A_008B item in P_0)
+28954: 			{
+28955: 				dataTable.Rows.Add(item.ID, item.Name, Math.Round(0.0 - item.X, 2), Math.Round(0.0 - item.Y, 2), Math.Round(item.Z, 2), item._0088_008F_009C, Math.Round(item._0088_008F_009D, 2), Math.Round(item._0088_008F_009E, 2));
+28956: 			}
+28957: 			_0087_0097_0091.DataSource = dataTable;
+28958: 			_0087_0097_0091.Columns[1].Frozen = true;
+28959: 		}
+28960: 
+28961: 		private void _0087_0096_0093(object P_0, EventArgs P_1)
+28962: 		{
+28963: 			int num = 5;
+28964: 			if (_00872())
+28965: 			{
+28966: 				return;
+28967: 			}
+28968: 			OpenFileDialog openFileDialog = default(OpenFileDialog);
+28969: 			List<_008A_008B> list = default(List<_008A_008B>);
+28970: 			while (true)
+28971: 			{
+28972: 				switch (num)
+28973: 				{
+28974: 				case 10:
+28975: 					if (openFileDialog.ShowDialog() == DialogResult.OK)
+28976: 					{
+28977: 						goto case 3;
+28978: 					}
+28979: 					goto case 11;
+28980: 				case 6:
+28981: 				case 8:
+28982: 					_0087_0097_009A.Text = "已加载" /* string-offset:4456 */ + list.Count + "个障碍物。" /* string-offset:2816 */;
+28983: 					_0087_0097_009C.Enabled = true;
+28984: 					_0087_0097_0097.Enabled = true;
+28985: 					num = 11;
+28986: 					if (_00871())
+28987: 					{
+28988: 						break;
+28989: 					}
+28990: 					goto case 3;
+28991: 				case 3:
+28992: 					list = _0087_0096_0094(openFileDialog.FileName);
+28993: 					if (list != null)
+28994: 					{
+28995: 						_0087_0096_0092(list);
+28996: 						goto case 6;
+28997: 					}
+28998: 					num = 9;
+28999: 					return;
+29000: 				case 7:
+29001: 					openFileDialog.RestoreDirectory = false;
+29002: 					num = 10;
+29003: 					goto case 10;
+29004: 				case 5:
+29005: 					if (!false /* original-file-bool-offset:516 */)
+29006: 					{
+29007: 						openFileDialog = new OpenFileDialog();
+29008: 						_00871();
+29009: 						if (!_00872())
+29010: 						{
+29011: 							num = 0;
+29012: 							goto case 0;
+29013: 						}
+29014: 						goto case 6;
+29015: 					}
+29016: 					return;
+29017: 				case 0:
+29018: 				case 2:
+29019: 					openFileDialog.Title = "导入障碍物数据" /* string-offset:4448 */;
+29020: 					num = 4;
+29021: 					if (!_00872())
+29022: 					{
+29023: 						break;
+29024: 					}
+29025: 					goto case 7;
+29026: 				case 4:
+29027: 					openFileDialog.Filter = "障碍物数据文件（*.txt）|*.txt" /* string-offset:4452 */;
+29028: 					goto case 7;
+29029: 				default:
+29030: 					num = 3;
+29031: 					goto case 3;
+29032: 				case 11:
+29033: 					openFileDialog.Dispose();
+29034: 					num = 12;
+29035: 					return;
+29036: 				case 1:
+29037: 				case 12:
+29038: 					return;
+29039: 				case 9:
+29040: 					return;
+29041: 				}
+29042: 			}
+29043: 		}
+29044: 
+29045: 		private List<_008A_008B> _0087_0096_0094(string P_0)
+29046: 		{
+29047: 			throw new NotImplementedException();
+29048: 		}
+29049: 
+29050: 		private void _0087_0096_0095(object P_0, EventArgs P_1)
+29051: 		{
+29052: 			int num = 8;
+29053: 			if (_00872())
+29054: 			{
+29055: 				return;
+29056: 			}
+29057: 			_008E_0097 obj3 = default(_008E_0097);
+29058: 			List<_008A_008B> list = default(List<_008A_008B>);
+29059: 			int num2 = default(int);
+29060: 			_008F_008E obj5 = default(_008F_008E);
+29061: 			_008A_008B item = default(_008A_008B);
+29062: 			do
+29063: 			{
+29064: 				switch (num)
+29065: 				{
+29066: 				case 8:
+29067: 					if (!false /* original-file-bool-offset:520 */)
+29068: 					{
+29069: 						if (_0087_0097_008C != null)
+29070: 						{
+29071: 							if (_0087_0097_008C.Count != 0)
+29072: 							{
+29073: 								_008F_008E obj = new _008F_008E();
+29074: 								_008F_008E obj2 = new _008F_008E();
+29075: 								obj.X = _008F_008A._008B_0087_009D(_0087_0098_0086.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29076: 								obj.Y = _008F_008A._008B_0087_009D(_0087_0097_009E.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29077: 								obj2.X = _008F_008A._008B_0087_009D(_0087_0098_008B.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29078: 								obj2.Y = _008F_008A._008B_0087_009D(_0087_0098_008A.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29079: 								obj3 = _008D._0089_008F(obj, obj2);
+29080: 								num = 1;
+29081: 								goto case 1;
+29082: 							}
+29083: 							num = 9;
+29084: 							return;
+29085: 						}
+29086: 						return;
+29087: 					}
+29088: 					num = 2;
+29089: 					return;
+29090: 				case 1:
+29091: 					list = new List<_008A_008B>();
+29092: 					goto case 5;
+29093: 				case 5:
+29094: 					num2 = 1;
+29095: 					_ = 0;
+29096: 					if (_00871())
+29097: 					{
+29098: 						num = 3;
+29099: 						goto case 3;
+29100: 					}
+29101: 					num = 4;
+29102: 					break;
+29103: 				case 3:
+29104: 				case 6:
+29105: 				{
+29106: 					using (List<DBPoint>.Enumerator enumerator = _0087_0097_008C.GetEnumerator())
+29107: 					{
+29108: 						for (; enumerator.MoveNext(); list.Add(item))
+29109: 						{
+29110: 							_008F_008E obj4 = enumerator.Current._008C_008D(num2.ToString());
+29111: 							if (_00871())
+29112: 							{
+29113: 								num2++;
+29114: 								obj5 = _008D._0089_0090(obj3, obj4);
+29115: 								_ = 0;
+29116: 								if (!_00871())
+29117: 								{
+29118: 									continue;
+29119: 								}
+29120: 							}
+29121: 							item = new _008A_008B(obj4)
+29122: 							{
+29123: 								X = obj5.X,
+29124: 								Y = obj5.Y
+29125: 							};
+29126: 						}
+29127: 					}
+29128: 					_0087_0097_009A.Text = "已转换" /* string-offset:3032 */ + list.Count + "个障碍物。" /* string-offset:2816 */;
+29129: 					break;
+29130: 				}
+29131: 				case 4:
+29132: 				case 7:
+29133: 					break;
+29134: 				default:
+29135: 					num = 5;
+29136: 					if (!_00871())
+29137: 					{
+29138: 						return;
+29139: 					}
+29140: 					goto case 5;
+29141: 				case 0:
+29142: 					return;
+29143: 				case 9:
+29144: 					return;
+29145: 				case 2:
+29146: 				case 10:
+29147: 					return;
+29148: 				}
+29149: 				_0087_0096_0092(list);
+29150: 				num = 10;
+29151: 			}
+29152: 			while (_00871());
+29153: 		}
+29154: 
+29155: 		private void _0087_0096_0096(object P_0, EventArgs P_1)
+29156: 		{
+29157: 			List<_008A_008B> list = default(List<_008A_008B>);
+29158: 			if (_00871())
+29159: 			{
+29160: 				if (!true /* original-file-bool-offset:524 */ || _0087_0097_008C == null || _0087_0097_008C.Count == 0)
+29161: 				{
+29162: 					return;
+29163: 				}
+29164: 				_008F_008E obj = new _008F_008E();
+29165: 				_008F_008E obj2 = new _008F_008E();
+29166: 				obj.X = _008F_008A._008B_0087_009D(_0087_0098_0086.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29167: 				obj.Y = _008F_008A._008B_0087_009D(_0087_0097_009E.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29168: 				obj.Z = _008F_008A._008B_0087_009D(_0087_0098_0096.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29169: 				double num = _008F_008A._008B_0087_009D(_0087_0097_0094.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29170: 				_00872();
+29171: 				if (!_00871())
+29172: 				{
+29173: 					goto IL_02ac;
+29174: 				}
+29175: 				double num2 = _008F_008A._008B_0087_009D(_0087_0098_008F.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29176: 				obj2.X = _008F_008A._008B_0087_009D(_0087_0098_008B.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29177: 				obj2.Y = _008F_008A._008B_0087_009D(_0087_0098_008A.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29178: 				obj2.Z = _008F_008A._008B_0087_009D(_0087_0098_0098.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29179: 				double num3 = _008F_008A._008B_0087_009D(_0087_0097_0093.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29180: 				double num4 = _008F_008A._008B_0087_009D(_0087_0098_008E.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+29181: 				_008E_0097 obj3 = _008D._0089_008F(obj, obj2);
+29182: 				list = new List<_008A_008B>();
+29183: 				int num5 = 1;
+29184: 				_008A_008B item = default(_008A_008B);
+29185: 				foreach (DBPoint item2 in _0087_0097_008C)
+29186: 				{
+29187: 					_008F_008E obj4 = item2._008C_008D(num5.ToString());
+29188: 					num5++;
+29189: 					_ = 1;
+29190: 					if (!_00872())
+29191: 					{
+29192: 						_008F_008E obj5 = _008D._0089_0090(obj3, obj4);
+29193: 						item = new _008A_008B(obj4)
+29194: 						{
+29195: 							X = obj5.X,
+29196: 							Y = obj5.Y
+29197: 						};
+29198: 					}
+29199: 					else if (!_00871())
+29200: 					{
+29201: 					}
+29202: 					list.Add(item);
+29203: 				}
+29204: 				list = ((!_0087_0098_0095.Checked) ? _0087_0096_0098(list, obj.Z, num, num2, obj2.Z, num3, num4, obj3._008A_009D_0088) : _0087_0096_0097(list, obj.Z, num, num2, obj2.Z, num3, num4, obj3._008A_009D_0088));
+29205: 			}
+29206: 			_0087_0097_009A.Text = "已评估" /* string-offset:2812 */ + _0087_0097_008C.Count + "个障碍物。" /* string-offset:2816 */;
+29207: 			goto IL_02ac;
+29208: 			IL_02ac:
+29209: 			_0087_0097_009B.Text = list.Count + "个障碍物在范围内" /* string-offset:2820 */;
+29210: 			list = list.OrderByDescending((_008A_008B o) => o._0088_008F_009E).ToList();
+29211: 			_0087_0096_0092(list);
+29212: 		}
+29213: 
+29214: 		private List<_008A_008B> _0087_0096_0097(List<_008A_008B> P_0, double P_1, double P_2, double P_3, double P_4, double P_5, double P_6, double P_7)
+29215: 		{
+29216: 			new _008F_0092();
+29217: 			_008F_008C obj = new _008F_008C();
+29218: 			_008F_008C obj2 = new _008F_008C();
+29219: 			_008F_008E obj3 = new _008F_008E(0.0, P_2 / 2.0, P_1 - P_3);
+29220: 			_008F_008E obj4 = new _008F_008E(0.0 - P_7, P_5, P_4 - P_6);
+29221: 			obj._008B_0088_008E(obj3, obj4);
+29222: 			_008F_008E obj5 = new _008F_008E(0.0, P_2, P_1 - P_3);
+29223: 			_008F_008E obj6 = new _008F_008E(0.0 - P_7, P_5, P_4 - P_6);
+29224: 			obj2._008B_0088_008E(obj5, obj6);
+29225: 			List<_008A_008B> list = new List<_008A_008B>();
+29226: 			double num = ((P_2 > P_5) ? P_2 : P_5);
+29227: 			foreach (_008A_008B item in P_0)
+29228: 			{
+29229: 				double num2 = Math.Abs(item.Y);
+29230: 				if (item.X <= 0.0 && item.X >= 0.0 - P_7 && num2 < num)
+29231: 				{
+29232: 					double num3 = P_6 + (P_3 - P_6) * (P_7 + item.X) / P_7;
+29233: 					double num4 = obj._008B_0088_008D(item.X);
+29234: 					double num5 = obj2._008B_0088_008D(item.X);
+29235: 					if (num2 <= num4)
+29236: 					{
+29237: 						item._0088_008F_009D = num3;
+29238: 						item._0088_008F_009E = num3 + item.Z;
+29239: 						_008A_008B obj7 = new _008A_008B();
+29240: 						obj7 = item;
+29241: 						obj7._0088_008F_009C = "主区" /* string-offset:3596 */;
+29242: 						list.Add(obj7);
+29243: 					}
+29244: 					else if (num2 <= num5)
+29245: 					{
+29246: 						item._0088_008F_009E = (item._0088_008F_009D = ((num5 - num4 == 0.0) ? num3 : (num3 * (num5 - num2) / (num5 - num4)))) + item.Z;
+29247: 						_008A_008B obj8 = new _008A_008B();
+29248: 						obj8 = item;
+29249: 						obj8._0088_008F_009C = "副区" /* string-offset:3600 */;
+29250: 						list.Add(obj8);
+29251: 					}
+29252: 				}
+29253: 			}
+29254: 			return list;
+29255: 		}
+29256: 
+29257: 		private List<_008A_008B> _0087_0096_0098(List<_008A_008B> P_0, double P_1, double P_2, double P_3, double P_4, double P_5, double P_6, double P_7)
+29258: 		{
+29259: 			new _008F_0092();
+29260: 			_008F_008C obj = new _008F_008C();
+29261: 			_008F_008C obj2 = new _008F_008C();
+29262: 			_008F_008E obj3 = new _008F_008E(0.0, P_2 / 2.0, P_1 - P_3);
+29263: 			_008F_008E obj4 = new _008F_008E(0.0 - P_7, P_5 / 2.0, P_4 - P_6);
+29264: 			obj._008B_0088_008E(obj3, obj4);
+29265: 			_008F_008E obj5 = new _008F_008E(0.0, P_2, P_1 - P_3);
+29266: 			_008F_008E obj6 = new _008F_008E(0.0 - P_7, P_5, P_4 - P_6);
+29267: 			obj2._008B_0088_008E(obj5, obj6);
+29268: 			List<_008A_008B> list = new List<_008A_008B>();
+29269: 			double num = ((P_2 > P_5) ? P_2 : P_5);
+29270: 			foreach (_008A_008B item in P_0)
+29271: 			{
+29272: 				double num2 = Math.Abs(item.Y);
+29273: 				if (item.X < 0.0 && item.X > 0.0 - P_7 && num2 < num)
+29274: 				{
+29275: 					double num3 = P_6 + (P_3 - P_6) * (P_7 + item.X) / P_7;
+29276: 					double num4 = obj._008B_0088_008D(item.X);
+29277: 					double num5 = obj2._008B_0088_008D(item.X);
+29278: 					if (num2 <= num4)
+29279: 					{
+29280: 						item._0088_008F_009D = num3;
+29281: 						item._0088_008F_009E = num3 + item.Z;
+29282: 						_008A_008B obj7 = new _008A_008B();
+29283: 						obj7 = item;
+29284: 						obj7._0088_008F_009C = "主区" /* string-offset:3596 */;
+29285: 						list.Add(obj7);
+29286: 					}
+29287: 					else if (num2 <= num5)
+29288: 					{
+29289: 						item._0088_008F_009E = (item._0088_008F_009D = ((num5 - num4 == 0.0) ? num3 : (num3 * (num5 - num2) / (num5 - num4)))) + item.Z;
+29290: 						_008A_008B obj8 = new _008A_008B();
+29291: 						obj8 = item;
+29292: 						obj8._0088_008F_009C = "副区" /* string-offset:3600 */;
+29293: 						list.Add(obj8);
+29294: 					}
+29295: 				}
+29296: 			}
+29297: 			return list;
+29298: 		}
+29299: 
+29300: 		private void _0087_0096_0099(object P_0, EventArgs P_1)
+29301: 		{

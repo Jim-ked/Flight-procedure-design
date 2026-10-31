@@ -1,0 +1,19 @@
+METHOD 06000140 \x87\x8b.\x87\x8a::\x8c\x98 RVA=10AE0 file=ECE0
+IL_0000: nop 
+IL_0001: ldarg.0 
+IL_0002: call 0x0A00012D System.Xml.Linq.XDocument::Load
+IL_0007: ldarg.1 
+IL_0008: call 0x0A0001E0 System.Xml.XPath.Extensions::XPathSelectElement
+IL_000D: stloc.0 
+IL_000E: leave.s 52
+IL_0010: stloc.1 
+IL_0011: ldc.i4 1000
+IL_0016: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_001B: ldarg.1 
+IL_001C: call 0x0A00008B System.String::Concat
+IL_0021: ldloc.1 
+IL_0022: newobj 0x0A0001DF System.Exception::.ctor
+IL_0027: throw 
+IL_0028: ldloc.0 
+IL_0029: ret 
+

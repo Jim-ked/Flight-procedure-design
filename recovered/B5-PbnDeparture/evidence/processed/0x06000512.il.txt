@@ -1,0 +1,7 @@
+METHOD 06000512 \x8b\x95.\x8b\x94::ShowMessage RVA=4DDA file=2FDA
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400054D \x8b\x95.\x8b\x94::\x89\x92\x95
+IL_0006: ldarg.1 
+IL_0007: callvirt 0x0A0002BD System.Windows.Forms.ToolStripItem::set_Text
+IL_000C: ret 
+

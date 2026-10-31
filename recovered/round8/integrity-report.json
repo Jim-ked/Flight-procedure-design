@@ -1,0 +1,115 @@
+{
+  "status": "PASS",
+  "round": "Round 8",
+  "acceptance": "PARTIALLY ACCEPTED (static recovery)",
+  "baseline_count": 5811,
+  "missing": [],
+  "mismatches": [],
+  "unexpected_additions": [],
+  "scope": "All files under four baseline trees; Round8/A5 excluded by design. No claim about unrelated pre-existing workspace files.",
+  "numeric_total": 2980,
+  "numeric_layers": {
+    "database": 406,
+    "cross-module": 810,
+    "formula": 437,
+    "surface": 311,
+    "geometry": 975,
+    "mode-dispatch": 15,
+    "serialization": 14,
+    "degenerate": 12
+  },
+  "static_event_reachability_count": 32,
+  "checks": [
+    {
+      "name": "Frozen baseline 5811 files unchanged",
+      "passed": true
+    },
+    {
+      "name": "No additions outside Round8/A5 within all baseline trees",
+      "passed": true
+    },
+    {
+      "name": "All 23 required and supplementary reports exist",
+      "passed": true
+    },
+    {
+      "name": "Six modes in matrix",
+      "passed": true
+    },
+    {
+      "name": "Database, B4/A5 and HL comparisons exist",
+      "passed": true
+    },
+    {
+      "name": "Exactly 26 closure answers",
+      "passed": true
+    },
+    {
+      "name": "Partially accepted and stop retained",
+      "passed": true
+    },
+    {
+      "name": "Latest test input source hashes match",
+      "passed": true
+    },
+    {
+      "name": "All 2980 independent assertions accounted by layer",
+      "passed": true
+    },
+    {
+      "name": "Current tests log has all 8 passing layers",
+      "passed": true
+    },
+    {
+      "name": "Current compile log has no diagnostic",
+      "passed": true
+    },
+    {
+      "name": "32 event/reachability static assertions passed",
+      "passed": true
+    },
+    {
+      "name": "All fixture hashes current",
+      "passed": true
+    },
+    {
+      "name": "Historical failure unambiguous",
+      "passed": true
+    },
+    {
+      "name": "All 260 managed methods have raw/processed IL; native P305 has import evidence",
+      "passed": true
+    },
+    {
+      "name": "20 event identities contain source, raw/processed tokens and RVAs",
+      "passed": true
+    },
+    {
+      "name": "P41B/P429/P3A7 have no incoming or event reachability",
+      "passed": true
+    },
+    {
+      "name": "70 recovered method identities retained",
+      "passed": true
+    },
+    {
+      "name": "Branch/field/output/semantic indexes nonempty",
+      "passed": true
+    },
+    {
+      "name": "Current standard hash and 13 physical PDF pages retained",
+      "passed": true
+    },
+    {
+      "name": "All new report links resolve",
+      "passed": true
+    },
+    {
+      "name": "All six PLAN tasks complete",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "missing_il": [],
+  "link_errors": []
+}

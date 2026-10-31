@@ -1,0 +1,242 @@
+84134: 	public class _008F_008E
+84135: 	{
+84136: 		[CompilerGenerated]
+84137: 		private string _008B_008A_0086;
+84138: 
+84139: 		[CompilerGenerated]
+84140: 		private string _008B_008A_0087;
+84141: 
+84142: 		[CompilerGenerated]
+84143: 		private double _008B_008A_0088;
+84144: 
+84145: 		[CompilerGenerated]
+84146: 		private double _008B_008A_0089;
+84147: 
+84148: 		[CompilerGenerated]
+84149: 		private double _008B_008A_008A;
+84150: 
+84151: 		[CompilerGenerated]
+84152: 		private double _008B_008A_008B;
+84153: 
+84154: 		public string ID
+84155: 		{
+84156: 			[CompilerGenerated]
+84157: 			get
+84158: 			{
+84159: 				return _008B_008A_0086;
+84160: 			}
+84161: 			[CompilerGenerated]
+84162: 			set
+84163: 			{
+84164: 				_008B_008A_0086 = text;
+84165: 			}
+84166: 		}
+84167: 
+84168: 		public string Name
+84169: 		{
+84170: 			[CompilerGenerated]
+84171: 			get
+84172: 			{
+84173: 				return _008B_008A_0087;
+84174: 			}
+84175: 			[CompilerGenerated]
+84176: 			set
+84177: 			{
+84178: 				_008B_008A_0087 = text;
+84179: 			}
+84180: 		}
+84181: 
+84182: 		public double X
+84183: 		{
+84184: 			[CompilerGenerated]
+84185: 			get
+84186: 			{
+84187: 				return _008B_008A_0088;
+84188: 			}
+84189: 			[CompilerGenerated]
+84190: 			set
+84191: 			{
+84192: 				_008B_008A_0088 = num;
+84193: 			}
+84194: 		}
+84195: 
+84196: 		public double Y
+84197: 		{
+84198: 			[CompilerGenerated]
+84199: 			get
+84200: 			{
+84201: 				return _008B_008A_0089;
+84202: 			}
+84203: 			[CompilerGenerated]
+84204: 			set
+84205: 			{
+84206: 				_008B_008A_0089 = num;
+84207: 			}
+84208: 		}
+84209: 
+84210: 		public double Z
+84211: 		{
+84212: 			[CompilerGenerated]
+84213: 			get
+84214: 			{
+84215: 				return _008B_008A_008A;
+84216: 			}
+84217: 			[CompilerGenerated]
+84218: 			set
+84219: 			{
+84220: 				_008B_008A_008A = num;
+84221: 			}
+84222: 		}
+84223: 
+84224: 		[SpecialName]
+84225: 		[CompilerGenerated]
+84226: 		public double _008B_0089_009C()
+84227: 		{
+84228: 			return _008B_008A_008B;
+84229: 		}
+84230: 
+84231: 		[SpecialName]
+84232: 		[CompilerGenerated]
+84233: 		public void _008B_0089_009D(double P_0)
+84234: 		{
+84235: 			_008B_008A_008B = P_0;
+84236: 		}
+84237: 
+84238: 		public _008F_008E()
+84239: 		{
+84240: 		}
+84241: 
+84242: 		public _008F_008E(double P_0, double P_1, double P_2 = 0.0)
+84243: 		{
+84244: 			_ = 0;
+84245: 			if (_0089t())
+84246: 			{
+84247: 				base._002Ector();
+84248: 				X = P_0;
+84249: 				Y = P_1;
+84250: 			}
+84251: 			Z = P_2;
+84252: 		}
+84253: 
+84254: 		public override string ToString()
+84255: 		{
+84256: 			return X + "," /* string-offset:704 */ + Y + "," /* string-offset:704 */ + Z;
+84257: 		}
+84258: 
+84259: 		public static double _008B_0088_009E(_008F_008E P_0, _008F_008E P_1)
+84260: 		{
+84261: 			return Math.Sqrt((P_0.X - P_1.X) * (P_0.X - P_1.X) + (P_0.Y - P_1.Y) * (P_0.Y - P_1.Y));
+84262: 		}
+84263: 
+84264: 		public static double _008B_0089_0086(_008F_008E P_0, _008F_008E P_1)
+84265: 		{
+84266: 			return Math.Atan2(P_1.Y - P_0.Y, P_1.X - P_0.X);
+84267: 		}
+84268: 
+84269: 		public static _008F_008E _008B_0089_0087(double P_0, double P_1, double P_2 = 0.0)
+84270: 		{
+84271: 			return new _008F_008E(P_0 * Math.Cos(P_1), P_0 * Math.Sin(P_1), P_2);
+84272: 		}
+84273: 
+84274: 		public static _008F_008E _008B_0089_0088(_008F_008E P_0, _008F_008E P_1)
+84275: 		{
+84276: 			return new _008F_008E(P_0.X + P_1.X, P_0.Y + P_1.Y, P_0.Z + P_1.Z);
+84277: 		}
+84278: 
+84279: 		public static _008F_008E _008B_0089_0089(_008F_008E P_0, _008F_008E P_1, _008F_008E P_2)
+84280: 		{
+84281: 			return new _008F_008E(P_0.X + P_1.X + P_2.X, P_0.Y + P_1.Y + P_2.Y);
+84282: 		}
+84283: 
+84284: 		public static _008F_008E _008B_0089_008A(_008F_008E P_0, params _008F_008E[] pts)
+84285: 		{
+84286: 			_008F_008E obj = P_0;
+84287: 			int num;
+84288: 			if (!_0089u())
+84289: 			{
+84290: 				num = 0;
+84291: 				_0089u();
+84292: 				if (_0089t())
+84293: 				{
+84294: 					goto IL_001f;
+84295: 				}
+84296: 				goto IL_0031;
+84297: 			}
+84298: 			goto IL_0037;
+84299: 			IL_0031:
+84300: 			num++;
+84301: 			goto IL_001f;
+84302: 			IL_001f:
+84303: 			if (num < pts.Length)
+84304: 			{
+84305: 				_008F_008E obj2 = pts[num];
+84306: 				obj = _008B_0089_0088(obj, obj2);
+84307: 				goto IL_0031;
+84308: 			}
+84309: 			goto IL_0037;
+84310: 			IL_0037:
+84311: 			return obj;
+84312: 		}
+84313: 
+84314: 		public static _008F_008E _008B_0089_008B(_008F_008E P_0)
+84315: 		{
+84316: 			return new _008F_008E(P_0.X, 0.0 - P_0.Y, P_0.Z);
+84317: 		}
+84318: 
+84319: 		public static _008F_008E _008B_0089_008C(_008F_008E P_0)
+84320: 		{
+84321: 			return new _008F_008E(P_0.X, P_0.Y);
+84322: 		}
+84323: 
+84324: 		public static _008F_008E _008B_0089_008D(_008F_008E P_0, _008F_008E P_1, double P_2)
+84325: 		{
+84326: 			double num = _008B_0088_009E(P_0, P_1);
+84327: 			double num2 = Math.Atan2(P_1.Y - P_0.Y, P_1.X - P_0.X);
+84328: 			return _008B_0089_0088(P_0, _008B_0089_0087(num, num2 + P_2, P_1.Z));
+84329: 		}
+84330: 
+84331: 		public static _008F_008E _008B_0089_008E(_008F_008E P_0, double P_1 = 0.0, double P_2 = 0.0, double P_3 = 0.0)
+84332: 		{
+84333: 			return new _008F_008E(P_0.X + P_1, P_0.Y + P_2, P_0.Z + P_3);
+84334: 		}
+84335: 
+84336: 		public static _008F_008E _008B_0089_008F(_008F_008E P_0, _008F_008E P_1)
+84337: 		{
+84338: 			return new _008F_008E(P_0.X + P_1.X, P_0.Y + P_1.Y, P_0.Z + P_1.Z);
+84339: 		}
+84340: 
+84341: 		public static _008F_008E _008B_0089_0090(_008F_008E P_0, double P_1 = 1.0, double P_2 = 1.0, double P_3 = 1.0)
+84342: 		{
+84343: 			return new _008F_008E(P_0.X * P_1, P_0.Y * P_2, P_0.Z * P_3);
+84344: 		}
+84345: 
+84346: 		public static _008F_008E _008B_0089_0091(_008F_008E P_0, _008F_008E P_1)
+84347: 		{
+84348: 			return new _008F_008E(P_0.X * P_1.X, P_0.Y * P_1.Y, P_0.Z * P_1.Z);
+84349: 		}
+84350: 
+84351: 		public static _008F_0096 operator -(_008F_008E P_0, _008F_008E P_1)
+84352: 		{
+84353: 			return new _008F_0096(P_0.X - P_1.X, P_0.Y - P_1.Y);
+84354: 		}
+84355: 
+84356: 		public static _008F_008E operator +(_008F_008E P_0, _008F_0096 P_1)
+84357: 		{
+84358: 			return new _008F_008E(P_0.X + P_1.X, P_0.Y + P_1.Y);
+84359: 		}
+84360: 
+84361: 		static _008F_008E()
+84362: 		{
+84363: 			LicenseManager.Validate(typeof(_008F_008E));
+84364: 		}
+84365: 
+84366: 		internal static bool _0089t()
+84367: 		{
+84368: 			return true;
+84369: 		}
+84370: 
+84371: 		internal static bool _0089u()
+84372: 		{
+84373: 			return false;
+84374: 		}
+84375: 	}

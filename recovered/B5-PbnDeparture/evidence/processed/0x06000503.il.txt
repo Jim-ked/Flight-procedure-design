@@ -1,0 +1,114 @@
+METHOD 06000503 \x8b\x95.\x8b\x94::\x89\x8f\x8d RVA=6A358 file=68558
+IL_0000: ldc.i4 3
+IL_0005: stloc local(0x0006)
+IL_0009: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_000E: brfalse 191
+IL_0013: br.s 52
+IL_0015: ldc.i4 4
+IL_001A: stloc local(0x0006)
+IL_001E: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_0023: brtrue 191
+IL_0028: ldloc local(0x0006)
+IL_002C: switch [191, 372, 441, 111, 273, 480, 372, 257, 441, 421, 233, 480]
+IL_0061: br.s 33
+IL_0063: ldc.i4 1008
+IL_0068: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_006D: brfalse.s 137
+IL_006F: ldc.i4 5
+IL_0074: stloc local(0x0006)
+IL_0078: br 480
+IL_007D: ldarg.0 
+IL_007E: call 0x060004FF \x8b\x95.\x8b\x94::\x89\x8f\x89
+IL_0083: stloc.0 
+IL_0084: ldarg.0 
+IL_0085: call 0x06000500 \x8b\x95.\x8b\x94::\x89\x8f\x8a
+IL_008A: stloc.1 
+IL_008B: ldarg.0 
+IL_008C: ldloc.0 
+IL_008D: call 0x06000502 \x8b\x95.\x8b\x94::\x89\x8f\x8c
+IL_0092: stloc.2 
+IL_0093: ldarg.0 
+IL_0094: ldfld 0x04000549 \x8b\x95.\x8b\x94::\x89\x92\x91
+IL_0099: ldc.i4 1984
+IL_009E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00A3: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_00A8: ldc.r8 100.0
+IL_00B1: div 
+IL_00B2: stloc.3 
+IL_00B3: ldarg.0 
+IL_00B4: ldfld 0x0400057F \x8b\x95.\x8b\x94::\x89\x94\x95
+IL_00B9: ldc.i4 1984
+IL_00BE: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00C3: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_00C8: ldc.r8 100.0
+IL_00D1: div 
+IL_00D2: stloc.s local(0x0004)
+IL_00D4: ldc.i4 10
+IL_00D9: stloc local(0x0006)
+IL_00DD: ldloc.1 
+IL_00DE: ldfld 0x0400074D \x8e\x9c.\x8e\x9b::\x8a\x9d\x96
+IL_00E3: ldloc.0 
+IL_00E4: callvirt 0x06000800 \x8f\x8f.\x8f\x8e::\x8b\x89\x9a
+IL_00E9: sub 
+IL_00EA: ldc.r8 186.0
+IL_00F3: bge.un.s 274
+IL_00F5: ldc.i4 6328
+IL_00FA: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00FF: call 0x0A000030 System.Windows.Forms.MessageBox::Show
+IL_0104: pop 
+IL_0105: ret 
+IL_0106: ldloc.1 
+IL_0107: ldarg.0 
+IL_0108: ldfld 0x0400053E \x8b\x95.\x8b\x94::\x89\x92\x86
+IL_010D: ldarg.0 
+IL_010E: ldfld 0x0400053F \x8b\x95.\x8b\x94::\x89\x92\x87
+IL_0113: ldarg.0 
+IL_0114: ldfld 0x04000540 \x8b\x95.\x8b\x94::\x89\x92\x88
+IL_0119: ldloc.2 
+IL_011A: ldloc.3 
+IL_011B: ldloc.s local(0x0004)
+IL_011D: ldarg.0 
+IL_011E: ldfld 0x0400055F \x8b\x95.\x8b\x94::\x89\x93\x8e
+IL_0123: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_0128: newobj 0x060005C8 \x8c\x92.\x8c\x91::.ctor
+IL_012D: ldfld 0x0400066B \x8c\x92.\x8c\x91::\x8a\x87\x99
+IL_0132: ldc.r8 0.0
+IL_013B: ldc.r8 0.0
+IL_0144: ldc.r8 0.0
+IL_014D: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_0152: ldloc.0 
+IL_0153: ldfld 0x04000744 \x8e\x98.\x8e\x97::\x8a\x9d\x8a
+IL_0158: call 0x06000821 \x8f\x91.\x8f\x90::\x8b\x8a\x94
+IL_015D: stloc.s local(0x0005)
+IL_015F: ldc.i4.0 
+IL_0160: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_0165: brfalse.s 440
+IL_0167: pop 
+IL_0168: ldloc.s local(0x0005)
+IL_016A: call 0x06000827 \x8f\x91.\x8f\x90::\x8b\x8a\x9a
+IL_016F: ldloc.0 
+IL_0170: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0175: ldloc.0 
+IL_0176: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_017B: ldc.r8 0.0
+IL_0184: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_0189: call 0x06000823 \x8f\x91.\x8f\x90::\x8b\x8a\x96
+IL_018E: stloc.s local(0x0005)
+IL_0190: ldc.i4 9
+IL_0195: stloc local(0x0006)
+IL_0199: call 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase
+IL_019E: ldloc.s local(0x0005)
+IL_01A0: ldstr ''
+IL_01A5: call 0x06000087 \x8c.\x8b::\x88\x8b
+IL_01AA: br.s 441
+IL_01AC: pop 
+IL_01AD: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_01B2: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_01B7: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_01BC: ldc.i4 3036
+IL_01C1: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_01C6: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_01CB: ldc.i4 11
+IL_01D0: stloc local(0x0006)
+IL_01D4: ret 
+

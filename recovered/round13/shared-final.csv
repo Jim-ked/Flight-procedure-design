@@ -1,0 +1,7 @@
+﻿Layer,Shared,A1,B1,B2,Not shared / limit,Evidence
+Turn parameter,P793/P854 reader and turn object,yes,yes,yes,implementation basis of constants remains unresolved,GeometryPrimitives/turn-parameter.md
+Spiral point/sample/radius,_008F_0086 MethodDefs,yes,yes,yes,no complete boundary algorithm shared,shared-turn-spiral-calls.csv
+Point-to-spiral iteration,P7AD-family candidate helper,yes,yes,yes,not a standalone common-tangent solver,common-tangent.md
+Point/line/CAD primitives,"low-level point, line and Polyline helpers",yes,yes,yes,helper metadata differs by writer overload,shared-cad-writers.csv; cad-output-map.md
+Complete boundary algorithm,none,none,private class,private class,"B1/B2 copied/similar math, not one business turn class",round3-closure.md
+Complete tangent solver,none,none,none,none,no circle-circle/spiral-spiral CommonTangent MethodDef,common-tangent.md

@@ -1,0 +1,10 @@
+METHOD 0600015E \x87\x91.\x87\x90::SetValue RVA=349B file=169B
+IL_0000: ldarg.1 
+IL_0001: castclass 0x01000045 System.Windows.Forms.CheckBox
+IL_0006: ldarg.2 
+IL_0007: ldc.i4 1040
+IL_000C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0011: call 0x0A000108 System.String::op_Equality
+IL_0016: callvirt 0x0A0001F6 System.Windows.Forms.CheckBox::set_Checked
+IL_001B: ret 
+

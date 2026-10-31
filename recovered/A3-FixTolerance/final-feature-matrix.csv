@@ -1,0 +1,13 @@
+﻿Feature,HelpEvidence,UIEvidence,Event,BusinessMethod,Geometry,CADWriter,Reachable,Status,Evidence
+Cross-fix / 单台单方向容差,Help称两个方位/距离交叉,交叉定位页；导航台+引导方向两次拾点,button1 Click→P20E,P20E读取S/Q、r、AccuracyDegrees,单台扇形楔形；可选Track/KK,Polyline Group；可选Line,YES,IMPLEMENTED,geometry-chain.md; 0x0600020E.il.txt
+DME定位容差,Help支持DME距离/指定距离,DME、指定距离、DistanceNm、Suffix,P20E DME branch,r=NM×1852或拾点平面距；e=.0125r+460,late/nominal/early三弧,3 Arc独立Group+DBText,YES,IMPLEMENTED,dme-final.md; cad-output-map.md
+KK早晚边界,Help有kk线选项,checkBoxkk,P20E KK branch,P20E生成late/early两条Line,中心r+e与(r-e)cos(a)，横向±9260,2 Line；不入Polyline Group,YES,IMPLEMENTED,kk-final.md; geometry-chain.md
+Overhead / 顶空盲区,Help说明顶空盲区,VOR/NDB、Height、HalfAngle,button2 Click→P211,P211 R=h·tan(halfAngle),Circle；可选两条航迹容差Polyline,Circle+Polyline Group,YES,IMPLEMENTED,FixToleranceForm.Events.Recovered.cs
+Track guidance auxiliary,Help称航迹线/航迹容差,checkBoxTrack、checkBox2,P20E/P211 optional,P20E S→late；P211按VOR/NDB小大角生成两线,参考中心线/盲区辅助边，非完整导航模型,Polyline Group,YES,PARTIALLY_IMPLEMENTED,track-guidance.md
+Facility accuracy dispatch,Help宣称设备精度影响容差,VOR/ILS/NDB、Guide,P209/P20A/P20B/P20C,5.2/4.5、2.4/1.4、6.9/6.2,AccuracyDegrees进入楔形、KK、DME弧角,间接影响Polyline/Line/Arc,YES,IMPLEMENTED,facility-matrix.csv
+VOR/DME composition,Help列VOR/DME,VOR radio + DME checkbox,P20E组合分支,VOR精度角+DME误差三弧,同一P20E输出,Arc+Polyline Group；DBText,YES,IMPLEMENTED,facility-matrix.csv; dme-final.md
+NDB/DME composition,Help列NDB/DME,NDB radio + DME checkbox,P20E组合分支,NDB精度角+DME误差三弧,同一P20E输出,Arc+Polyline Group；DBText,YES,IMPLEMENTED,facility-matrix.csv; dme-final.md
+Automatic two-facility cross-fix,Help暗示两个方位/距离,无第二设施或bearing2控件,P20E只有两次GetPoint：S/Q,无线线求交/IntersectWith,无自动交会点,无专用writer,NO,NOT_IMPLEMENTED_IN_BUILD,downstream-consumption.md; spot-checks.md
+LOC/TACAN/GNSS,Help未宣称,无对应UI option,无A3 MethodDef/直接caller,无分支,无,无,NO,NOT_IMPLEMENTED_IN_BUILD,facility-matrix.csv
+Full procedure protection area,Help称定位容差,无保护区evaluator/主副区控件,无保护区直接链,仅容差图元,非完整程序保护区引擎,仅CAD追加,NO,NOT_IMPLEMENTED_IN_BUILD,final-static-closure.md
+Semantic downstream reuse,Help未承诺,无语义导入控件,无A3语义下游reader证据,Group/XData不形成业务对象,仅图元容差结果,empty/neutral XData,NO,NOT_IMPLEMENTED_IN_BUILD,downstream-consumption.md

@@ -1,0 +1,9 @@
+62531: 		private void _0089_0097_0086(object P_0, KeyPressEventArgs P_1)
+62532: 		{
+62533: 			_ = 1;
+62534: 			if (_0088_009E() || P_1.KeyChar == '\r')
+62535: 			{
+62536: 				_0089_0096_0095(null, null);
+62537: 				P_1.Handled = true;
+62538: 			}
+62539: 		}

@@ -1,0 +1,21 @@
+95308: 		private static byte[] _008B_0090_008F(byte[] P_0)
+95309: 		{
+95310: 			MemoryStream memoryStream = new MemoryStream();
+95311: 			SymmetricAlgorithm symmetricAlgorithm = _008B_008F_0098();
+95312: 			symmetricAlgorithm.Key = new byte[32]
+95313: 			{
+95314: 				28, 140, 35, 220, 242, 181, 128, 254, 224, 127,
+95315: 				127, 85, 26, 117, 99, 60, 219, 55, 207, 32,
+95316: 				16, 227, 240, 251, 98, 107, 210, 152, 125, 236,
+95317: 				124, 188
+95318: 			};
+95319: 			symmetricAlgorithm.IV = new byte[16]
+95320: 			{
+95321: 				23, 5, 86, 220, 164, 189, 42, 28, 127, 65,
+95322: 				63, 226, 210, 146, 81, 145
+95323: 			};
+95324: 			CryptoStream cryptoStream = new CryptoStream(memoryStream, symmetricAlgorithm.CreateDecryptor(), CryptoStreamMode.Write);
+95325: 			cryptoStream.Write(P_0, 0, P_0.Length);
+95326: 			cryptoStream.Close();
+95327: 			return memoryStream.ToArray();
+95328: 		}

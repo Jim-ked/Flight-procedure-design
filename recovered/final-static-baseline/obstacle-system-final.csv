@@ -1,0 +1,12 @@
+﻿Module,Input,Take5,LocalFrame,Classifier,MOC,Output,Mark,Highlight,UIReachable,Evidence
+RandomPoint,生成随机XYZ；每点DBPoint+MText,N/A,CAD原坐标,无,无,裸DBPoint；不写WsEntityFrame；MText可空,N/A,N/A,YES creation,recovered/ObstacleData/WsEntityFrame-schema.md
+ScreenData,P10D SelectAll DXF POINT + Model,caller-dependent,先保留原点,不是保护区筛选,无,序号ID→原DBPoint字典,公共后续,公共后续,YES,recovered/ObstacleData/WsEntityFrame-schema.md
+parser P12F,DBPoint+caller ordinal,N/A,原XYZ,可选EntityName/后缀回退,无树高附加,obstacle carrier,保持原点映射,保持原点映射,shared,recovered/ObstacleData/WsEntityFrame-schema.md
+A7,Model DBPoint,NO,跑道frame,定高/定点/全向三独立分支+二检,分支公式/75下限等,表；二检覆盖同一行,原点/Altitude,原点,YES,recovered/A7-Departure/final-static-closure.md
+A8,Model DBPoint,NO,KK左端反向frame,KK线外/模式分类,输入固定MOC与Ds/梯度,表/MCG,原点/Altitude+Name,原点,YES,recovered/A8-TurnArea/overview.md
+A9,Model DBPoint,NO,UI数值S/E frame,Normal开区间/IF闭区间+严格粗筛,主区插值/副区线性,负localXY+原Z/MOC/OCA,原点/Altitude=Z,原点,YES,recovered/A9-PriSec/final-static-closure.md
+A10,Model DBPoint,NO,O/IF/IAF扇区,自己的Arc扇区,固定factor*300，非已解析UI MOC,表,Obst块/原点Z,原点,YES,recovered/A10-DmeArc/overview.md
+B3,Model DBPoint,NO,跑道frame,P594 LNAV/P5EE APV；P595/P5EF局部分类,LNAV/复飞及APV面/HL,初始导入表可达；评价/后处理孤立,原点/Altitude,原点,IMPORT YES; EVALUATION NO,recovered/B3-RnpApch/obstacle-evaluation.md
+B4,Model DBPoint,YES before parser first5,跑道frame,P5E0/P41B面；P567最低标准孤立,副面/HL自身分支,前5点表/字典；无端到端评价,限前5点映射,限前5点映射,IMPORT YES; P566 prompt only,recovered/B4-PbnIls/obstacle-evaluation.md
+B5,Model DBPoint,YES before parser first5,跑道frame,P5CD/P5D8孤立；不是P41B,直线/转弯体已恢复,前5点表；无归并排序可达链,限前5点映射,限前5点映射,IMPORT YES; prompt dispatch only,recovered/B5-PbnDeparture/obstacle-evaluation.md
+A5,surface numerical arguments; no reachable Screen/eval chain,N/A,模型局部坐标,孤立P41B/P429面高/标签,无自有HL/最低标准,绘图可达；非评价表链,无A5可达Mark,无A5评价高亮链,DRAW YES; EVALUATION NO,recovered/A5-PrecisionApproach/obstacle-evaluation.md;recovered/A5-PrecisionApproach/hl-correction.md

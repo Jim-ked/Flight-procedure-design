@@ -1,0 +1,51 @@
+METHOD 060003A7 \x89\x97.\x89\x96::\x88\x87\x8c RVA=4D1F8 file=4B3F8
+IL_0000: call 0x060003A9 \x89\x97.\x89\x96::\x879
+IL_0005: call 0x060003AA \x89\x97.\x89\x96::\x87a
+IL_000A: brtrue.s 87
+IL_000C: pop 
+IL_000D: ldarg.0 
+IL_000E: ldfld 0x040002E5 \x89\x97.\x89\x96::\x88\x87\x8d
+IL_0013: ldfld 0x04000395 \x8a\x94.\x8a\x93::\x88\x91\x91
+IL_0018: ldarg.1 
+IL_0019: neg 
+IL_001A: ldc.r8 -0.2617993877991494
+IL_0023: call 0x0A000064 System.Math::Cos
+IL_0028: mul 
+IL_0029: ldarg.1 
+IL_002A: neg 
+IL_002B: ldc.r8 -0.2617993877991494
+IL_0034: call 0x0A000065 System.Math::Sin
+IL_0039: mul 
+IL_003A: ldc.r8 0.0
+IL_0043: call 0x06000810 \x8f\x8f.\x8f\x8e::\x8b\x89\x8e
+IL_0048: stloc.0 
+IL_0049: br.s 88
+IL_004B: pop 
+IL_004C: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0051: dup 
+IL_0052: ldloc.0 
+IL_0053: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0058: dup 
+IL_0059: ldarg.0 
+IL_005A: ldfld 0x040002E5 \x89\x97.\x89\x96::\x88\x87\x8d
+IL_005F: ldfld 0x04000395 \x8a\x94.\x8a\x93::\x88\x91\x91
+IL_0064: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0069: dup 
+IL_006A: ldarg.0 
+IL_006B: ldfld 0x040002E5 \x89\x97.\x89\x96::\x88\x87\x8d
+IL_0070: ldfld 0x04000395 \x8a\x94.\x8a\x93::\x88\x91\x91
+IL_0075: call 0x0600080D \x8f\x8f.\x8f\x8e::\x8b\x89\x8b
+IL_007A: callvirt 0x0A00012A 0x1B00000F::Add
+IL_007F: dup 
+IL_0080: ldloc.0 
+IL_0081: call 0x0600080D \x8f\x8f.\x8f\x8e::\x8b\x89\x8b
+IL_0086: callvirt 0x0A00012A 0x1B00000F::Add
+IL_008B: stloc.1 
+IL_008C: ldarg.0 
+IL_008D: ldfld 0x040002F1 \x89\x97.\x89\x96::\x88\x87\x99
+IL_0092: ldloc.1 
+IL_0093: callvirt 0x0A0001D8 0x1B000001::Add
+IL_0098: call 0x060003A9 \x89\x97.\x89\x96::\x879
+IL_009D: brfalse.s 88
+IL_009F: ret 
+

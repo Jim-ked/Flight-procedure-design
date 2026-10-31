@@ -1,0 +1,10 @@
+86118: 		internal static void _008B_008F_0097()
+86119: 		{
+86120: 			try
+86121: 			{
+86122: 				_008B_0091_0086 = (bool)typeof(RijndaelManaged).Assembly.GetType("System.Security.Cryptography.CryptoConfig", throwOnError: false).GetMethod("get_AllowOnlyFipsAlgorithms", BindingFlags.Static | BindingFlags.Public).Invoke(null, new object[0]);
+86123: 			}
+86124: 			catch
+86125: 			{
+86126: 			}
+86127: 		}

@@ -1,0 +1,9 @@
+METHOD 060003B5 \x89\x99.\x89\x98::\x88\x88\x8a RVA=477E file=297E
+IL_0000: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0005: dup 
+IL_0006: ldarg.1 
+IL_0007: callvirt 0x0A00012A 0x1B00000F::Add
+IL_000C: ldarg.2 
+IL_000D: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0012: ret 
+

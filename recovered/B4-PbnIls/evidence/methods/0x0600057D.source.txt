@@ -1,0 +1,29 @@
+62563: 		private void _0089_0097_0089(object P_0, EventArgs P_1)
+62564: 		{
+62565: 			//IL_0090: Unknown result type (might be due to invalid IL or missing references)
+62566: 			//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+62567: 			//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
+62568: 			//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
+62569: 			_ = 0;
+62570: 			if (!_0088_009D() || false /* original-file-bool-offset:1096 */)
+62571: 			{
+62572: 				return;
+62573: 			}
+62574: 			DBPoint val = default(DBPoint);
+62575: 			foreach (DataGridViewRow selectedRow in _0089_0097_0093.SelectedRows)
+62576: 			{
+62577: 				_0088_009E();
+62578: 				if (_0088_009D())
+62579: 				{
+62580: 					val = _0089_0097_008C[_0089_0097_0093.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+62581: 				}
+62582: 				do
+62583: 				{
+62584: 					ObjectId val2 = _008B._0089_0087("obst" /* string-offset:2780 */, val.Position);
+62585: 					string obj = "Altitude" /* string-offset:536 */;
+62586: 					Point3d position = val.Position;
+62587: 					_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+62588: 				}
+62589: 				while (_0088_009E());
+62590: 			}
+62591: 		}

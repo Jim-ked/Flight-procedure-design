@@ -1,0 +1,39 @@
+4229: 		private static void _008A_0092(ref Dictionary<string, string> P_0, Control.ControlCollection P_1, string P_2)
+4230: 		{
+4231: 			_009C();
+4232: 			if (_009B() && !_009C() && !true /* original-file-bool-offset:124 */)
+4233: 			{
+4234: 				return;
+4235: 			}
+4236: 			foreach (Control item in P_1)
+4237: 			{
+4238: 				string text = (string.IsNullOrEmpty(P_2) ? item.Name : (P_2 + "." /* string-offset:700 */ + item.Name));
+4239: 				if (_008A_009B._008D_0091(item, out var obj))
+4240: 				{
+4241: 					P_0.Add(text, obj.GetValue(item));
+4242: 				}
+4243: 				else if (item is GroupBox)
+4244: 				{
+4245: 					_008A_0092(ref P_0, item.Controls, text);
+4246: 				}
+4247: 				else if (item is TabPage)
+4248: 				{
+4249: 					_008A_0092(ref P_0, item.Controls, text);
+4250: 				}
+4251: 				else if (item is TabControl)
+4252: 				{
+4253: 					foreach (TabPage tabPage in ((TabControl)item).TabPages)
+4254: 					{
+4255: 						_ = 0;
+4256: 						if (_009B())
+4257: 						{
+4258: 							_008A_0092(ref P_0, tabPage.Controls, text);
+4259: 						}
+4260: 					}
+4261: 				}
+4262: 				else
+4263: 				{
+4264: 					_008A_0092(ref P_0, item.Controls, text);
+4265: 				}
+4266: 			}
+4267: 		}

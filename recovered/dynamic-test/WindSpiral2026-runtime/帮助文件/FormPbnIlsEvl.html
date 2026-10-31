@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PBN-ILS 进近 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / PBN 程序 / PBN-ILS 进近</div>
+        <h1>B4.PBN-ILS 定点转弯评估</h1>
+        <div class="cmd">命令：Y54_PBN_ILS</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>PBN 程序</h2>
+                <ul>
+                    <li><a href="FormFlyBy.html">B1.旁切转弯</a></li>
+                    <li><a href="FormFlyOverDF.html">B2.飞越转弯</a></li>
+                    <li><a href="FormApvEvl.html">B3.RNP 进近</a></li>
+                    <li><a href="FormPbnIlsEvl.html" class="active">B4.PBN-ILS 进近</a></li>
+                    <li><a href="FormPbnDepEvl.html">B5.PBN 离场</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">传统程序 / 辅助功能</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【PBN-ILS 进近】基于 <strong>OAS 面参数</strong>评估 PBN-ILS 定点转弯区的障碍物穿透，含 HL 修正检查，可绘制进近复飞评估面并导出 KML。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormPbnIlsEvl.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormPbnIlsEvl.png" alt="FormPbnIlsEvl 界面截图" width="550"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>选项卡 / 控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>跑道数据（选项卡）</td><td>入口坐标、末端坐标、附加参数；含【入口坐标系】【屏幕数据】【拾取】【加载】/【保存】。</td></tr>
+                        <tr><td>OAS面参数（选项卡）</td><td>OAS 面各段参数。</td></tr>
+                        <tr><td>HL检查（选项卡）</td><td>HL 修正检查，核验障碍物修正高度。</td></tr>
+                        <tr><td>一键评估 / CAD / KML</td><td>评估穿透、绘制评估面、导出 KML。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>通用评估流程</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y54_PBN_ILS</code> 打开窗口。</li>
+                    <li>【入口坐标系】建立评估坐标系，填入跑道数据与附加参数。</li>
+                    <li>【屏幕数据】载入障碍物数据。</li>
+                    <li>在“OAS面参数”中设置参数，必要时用“HL检查”核验修正高度。</li>
+                    <li>【一键评估】检查穿透 →【CAD】绘制 /【KML】导出。</li>
+                </ul>
+                <div class="warn"><strong>基础版限制：</strong>【屏幕数据】载入障碍物时，若图中多于 5 个障碍物点，会提示“基础版仅提供前5项数据评估”，并只取前 5 项参与评估。</div>
+                <div class="tip"><strong>联动：</strong>在障碍物列表中单击某行，图纸会自动高亮并居中到该障碍物。</div>
+            </div>
+            <div class="pager">
+                <a href="FormApvEvl.html">← 上一篇：B3.RNP 进近</a>
+                <a href="FormPbnDepEvl.html">下一篇：B5.PBN 离场 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,474 @@
+83397: 	public class _008F_008A
+83398: 	{
+83399: 		[LicenseProvider(typeof(_0091_008B))]
+83400: 		public struct _0090_009A
+83401: 		{
+83402: 			public TextBox _008B_008F_008E;
+83403: 
+83404: 			public string _008B_008F_008F;
+83405: 
+83406: 			public _0090_009A(TextBox P_0, string P_1)
+83407: 			{
+83408: 				_008B_008F_008E = P_0;
+83409: 				_008B_008F_008F = P_1;
+83410: 			}
+83411: 
+83412: 			static _0090_009A()
+83413: 			{
+83414: 				LicenseManager.Validate(typeof(_0090_009A));
+83415: 			}
+83416: 
+83417: 			internal static bool _008Av()
+83418: 			{
+83419: 				return true;
+83420: 			}
+83421: 
+83422: 			internal static bool _008Aw()
+83423: 			{
+83424: 				return false;
+83425: 			}
+83426: 		}
+83427: 
+83428: 		public static double _008B_0087_0091(double P_0, int P_1)
+83429: 		{
+83430: 			double num = P_0 * 3.2808;
+83431: 			return P_1 switch
+83432: 			{
+83433: 				1 => Math.Round(num / 100.0) * 100.0, 
+83434: 				2 => Math.Round(num / 10.0) * 10.0, 
+83435: 				3 => Math.Ceiling(num / 10.0) * 10.0, 
+83436: 				4 => Math.Ceiling(num), 
+83437: 				_ => throw new ArgumentException("无效的规则" /* string-offset:7456 */), 
+83438: 			};
+83439: 		}
+83440: 
+83441: 		public static List<_008F_008E> _008B_0087_0092(List<_008F_008E> P_0, double P_1, bool P_2 = true, double P_3 = Math.PI / 180.0)
+83442: 		{
+83443: 			if (false /* original-file-bool-offset:1424 */)
+83444: 			{
+83445: 				goto IL_0059;
+83446: 			}
+83447: 			List<_008F_008E> list = new List<_008F_008E>();
+83448: 			if (P_0 == null)
+83449: 			{
+83450: 				return list;
+83451: 			}
+83452: 			_008F_008E[] array = P_0.ToArray();
+83453: 			int num = array.Length;
+83454: 			double num2 = Math.PI / 2.0;
+83455: 			double num3 = default(double);
+83456: 			switch (num)
+83457: 			{
+83458: 			case 1:
+83459: 				list = _008B_0087_0093(array[0], P_1, 0.0, Math.PI * 2.0);
+83460: 				goto IL_017f;
+83461: 			case 2:
+83462: 				num3 = _008F_008E._008B_0089_0086(array[0], array[1]);
+83463: 				list = _008B_0087_0093(array[0], P_1, num3 - num2, num3 + num2);
+83464: 				_008F_0090._008B_008B_0087(ref list, _008B_0087_0093(array[1], P_1, num3 + num2, num3 - num2));
+83465: 				goto IL_017f;
+83466: 			case 0:
+83467: 				goto IL_017f;
+83468: 			}
+83469: 			int num4 = 0;
+83470: 			goto IL_0103;
+83471: 			IL_00b0:
+83472: 			double num5;
+83473: 			if (P_2)
+83474: 			{
+83475: 				_008F_0090._008B_008B_0087(ref list, _008B_0087_0093(array[num4], P_1, num3 + num2, num5 + num2, P_2));
+83476: 			}
+83477: 			else
+83478: 			{
+83479: 				_008F_0090._008B_008B_0087(ref list, _008B_0087_0093(array[num4], P_1, num3 - num2, num5 - num2, P_2));
+83480: 			}
+83481: 			num4++;
+83482: 			goto IL_0103;
+83483: 			IL_0059:
+83484: 			num5 = _008F_008E._008B_0089_0086(array[0], array[1]);
+83485: 			goto IL_00b0;
+83486: 			IL_017f:
+83487: 			list.Add(list[0]);
+83488: 			return list;
+83489: 			IL_0103:
+83490: 			if (num4 < num)
+83491: 			{
+83492: 				if (num4 == 0)
+83493: 				{
+83494: 					num3 = _008F_008E._008B_0089_0086(array[num - 1], array[0]);
+83495: 					goto IL_0059;
+83496: 				}
+83497: 				if (num4 == num - 1)
+83498: 				{
+83499: 					num3 = _008F_008E._008B_0089_0086(array[num4 - 1], array[num4]);
+83500: 					num5 = _008F_008E._008B_0089_0086(array[num4], array[0]);
+83501: 				}
+83502: 				else
+83503: 				{
+83504: 					num3 = _008F_008E._008B_0089_0086(array[num4 - 1], array[num4]);
+83505: 					num5 = _008F_008E._008B_0089_0086(array[num4], array[num4 + 1]);
+83506: 				}
+83507: 				goto IL_00b0;
+83508: 			}
+83509: 			goto IL_017f;
+83510: 		}
+83511: 
+83512: 		public static List<_008F_008E> _008B_0087_0093(_008F_008E P_0, double P_1, double P_2, double P_3, bool P_4 = true, double P_5 = Math.PI / 180.0)
+83513: 		{
+83514: 			List<_008F_008E> list = default(List<_008F_008E>);
+83515: 			double num2 = default(double);
+83516: 			if (!false /* original-file-bool-offset:1428 */)
+83517: 			{
+83518: 				list = new List<_008F_008E>();
+83519: 				double num = P_2;
+83520: 				num2 = P_3;
+83521: 				if (!P_4)
+83522: 				{
+83523: 					if (num2 > num)
+83524: 					{
+83525: 						num += Math.PI * 2.0;
+83526: 					}
+83527: 					for (double num3 = num; num3 > num2; num3 -= P_5)
+83528: 					{
+83529: 						list.Add(new _008F_008E(P_1 * Math.Cos(num3) + P_0.X, P_1 * Math.Sin(num3) + P_0.Y));
+83530: 					}
+83531: 					list.Add(new _008F_008E(P_1 * Math.Cos(num2) + P_0.X, P_1 * Math.Sin(num2) + P_0.Y));
+83532: 					goto IL_012a;
+83533: 				}
+83534: 				if (num2 < num)
+83535: 				{
+83536: 					num2 += Math.PI * 2.0;
+83537: 				}
+83538: 				for (double num4 = num; num4 < num2; num4 += P_5)
+83539: 				{
+83540: 					list.Add(new _008F_008E(P_1 * Math.Cos(num4) + P_0.X, P_1 * Math.Sin(num4) + P_0.Y));
+83541: 				}
+83542: 			}
+83543: 			list.Add(new _008F_008E(P_1 * Math.Cos(num2) + P_0.X, P_1 * Math.Sin(num2) + P_0.Y));
+83544: 			goto IL_012a;
+83545: 			IL_012a:
+83546: 			return list;
+83547: 		}
+83548: 
+83549: 		public static void _008B_0087_0094(ref List<List<_008F_008E>> P_0, _008F_008E P_1, _008F_008E P_2)
+83550: 		{
+83551: 			List<_008F_008E> item = new List<_008F_008E> { P_1, P_2 };
+83552: 			P_0.Add(item);
+83553: 		}
+83554: 
+83555: 		public static double _008B_0087_0095(double P_0)
+83556: 		{
+83557: 			while (P_0 < 0.0)
+83558: 			{
+83559: 				P_0 += Math.PI * 2.0;
+83560: 				_ = 1;
+83561: 				if (_0089q())
+83562: 				{
+83563: 					break;
+83564: 				}
+83565: 			}
+83566: 			while (P_0 > Math.PI * 2.0)
+83567: 			{
+83568: 				P_0 -= Math.PI * 2.0;
+83569: 			}
+83570: 			return P_0;
+83571: 		}
+83572: 
+83573: 		public static double _008B_0087_0096(double P_0, double P_1)
+83574: 		{
+83575: 			return _008B_0087_0095(_008B_0087_0095(P_0) - _008B_0087_0095(P_1));
+83576: 		}
+83577: 
+83578: 		public static double _008B_0087_0097(double P_0, double P_1)
+83579: 		{
+83580: 			return _008B_0087_0095(_008B_0087_0095(P_0) + _008B_0087_0095(P_1));
+83581: 		}
+83582: 
+83583: 		public static bool _008B_0087_0098(double P_0, double P_1)
+83584: 		{
+83585: 			double num = _008B_0087_0095(P_0);
+83586: 			double num2 = _008B_0087_0095(P_1);
+83587: 			if (num2 < num)
+83588: 			{
+83589: 				_0089q();
+83590: 				if (_0089p() && num2 > num - Math.PI)
+83591: 				{
+83592: 					goto IL_003e;
+83593: 				}
+83594: 			}
+83595: 			if (!(num2 > num + Math.PI))
+83596: 			{
+83597: 				return true;
+83598: 			}
+83599: 			goto IL_003e;
+83600: 			IL_003e:
+83601: 			return false;
+83602: 		}
+83603: 
+83604: 		public static double _008B_0087_0099(double P_0, double P_1)
+83605: 		{
+83606: 			double num = _008B_0087_0095(P_0);
+83607: 			_ = 1;
+83608: 			double num2 = default(double);
+83609: 			if (!_0089q())
+83610: 			{
+83611: 				if (!_0089p())
+83612: 				{
+83613: 					goto IL_0025;
+83614: 				}
+83615: 				num2 = _008B_0087_0095(P_1);
+83616: 			}
+83617: 			if (num2 < num)
+83618: 			{
+83619: 				goto IL_0025;
+83620: 			}
+83621: 			goto IL_0033;
+83622: 			IL_0033:
+83623: 			if (!(num2 > num + Math.PI))
+83624: 			{
+83625: 				return _008B_0087_0095(num2 - num);
+83626: 			}
+83627: 			goto IL_0041;
+83628: 			IL_0041:
+83629: 			return _008B_0087_0095(num - num2);
+83630: 			IL_0025:
+83631: 			if (!(num2 > num - Math.PI))
+83632: 			{
+83633: 				goto IL_0033;
+83634: 			}
+83635: 			goto IL_0041;
+83636: 		}
+83637: 
+83638: 		public static double _008B_0087_009A(double P_0)
+83639: 		{
+83640: 			return P_0 * Math.PI / 180.0;
+83641: 		}
+83642: 
+83643: 		public static double _008B_0087_009B(double P_0)
+83644: 		{
+83645: 			return P_0 / (Math.PI / 180.0);
+83646: 		}
+83647: 
+83648: 		public static double _008B_0087_009C(double P_0, double P_1)
+83649: 		{
+83650: 			_ = 1;
+83651: 			double num = default(double);
+83652: 			double num2 = default(double);
+83653: 			if (!_0089q())
+83654: 			{
+83655: 				num = _008B_0087_0095(P_0 + Math.PI);
+83656: 				num2 = _008B_0087_0095(P_1);
+83657: 			}
+83658: 			else if (_0089q())
+83659: 			{
+83660: 			}
+83661: 			if (num2 < num && num2 > num - Math.PI)
+83662: 			{
+83663: 				return (num - num2) / 2.0 + num2;
+83664: 			}
+83665: 			return _008B_0087_0095((num2 - num) / 2.0 + num);
+83666: 		}
+83667: 
+83668: 		public static double _008B_0087_009D(string P_0, string P_1 = "输入数据有误，请检查。")
+83669: 		{
+83670: 			try
+83671: 			{
+83672: 				return Convert.ToDouble(P_0);
+83673: 			}
+83674: 			catch
+83675: 			{
+83676: 				MessageBox.Show(P_0 + " " /* string-offset:584 */ + P_1, "数据错误" /* string-offset:4984 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83677: 				return 0.0;
+83678: 			}
+83679: 		}
+83680: 
+83681: 		public static double _008B_0087_009E(TextBox P_0, string P_1 = "输入数据有误，请检查。")
+83682: 		{
+83683: 			_ = 0;
+83684: 			double result = default(double);
+83685: 			if (_0089p())
+83686: 			{
+83687: 				if (double.TryParse(P_0.Text, out result))
+83688: 				{
+83689: 					goto IL_0034;
+83690: 				}
+83691: 				P_0.Focus();
+83692: 				P_0.BackColor = Color.LightCoral;
+83693: 			}
+83694: 			else if (!_0089q())
+83695: 			{
+83696: 				goto IL_0034;
+83697: 			}
+83698: 			MessageBox.Show(P_0.Text + " " /* string-offset:584 */ + P_1, "数据错误" /* string-offset:4984 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83699: 			return 0.0;
+83700: 			IL_0034:
+83701: 			return result;
+83702: 		}
+83703: 
+83704: 		public static bool _008B_0088_0086(TextBox P_0, string P_1)
+83705: 		{
+83706: 			if (_0089p())
+83707: 			{
+83708: 				if (!false /* original-file-bool-offset:1432 */)
+83709: 				{
+83710: 					if (string.IsNullOrWhiteSpace(P_0.Text))
+83711: 					{
+83712: 						MessageBox.Show(P_1, "\n输入错误，请检查。" /* string-offset:7460 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83713: 						_ = 0;
+83714: 						if (_0089p())
+83715: 						{
+83716: 							P_0.Focus();
+83717: 							P_0.BackColor = Color.LightCoral;
+83718: 							return false;
+83719: 						}
+83720: 						goto IL_00bb;
+83721: 					}
+83722: 					if (double.TryParse(P_0.Text, out var _))
+83723: 					{
+83724: 						P_0.BackColor = Color.White;
+83725: 						return true;
+83726: 					}
+83727: 					P_1 = P_1.Replace("不能为空" /* string-offset:7464 */, "必须是一个有效的数字" /* string-offset:7468 */) + "\n" /* string-offset:328 */;
+83728: 				}
+83729: 				MessageBox.Show(P_1, "输入错误，请检查。" /* string-offset:7472 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83730: 			}
+83731: 			P_0.Focus();
+83732: 			goto IL_00bb;
+83733: 			IL_00bb:
+83734: 			P_0.BackColor = Color.LightCoral;
+83735: 			return false;
+83736: 		}
+83737: 
+83738: 		public static bool _008B_0088_0087(TextBox P_0)
+83739: 		{
+83740: 			_ = 0;
+83741: 			if (_0089p() && double.TryParse(P_0.Text, out var _))
+83742: 			{
+83743: 				P_0.BackColor = Color.White;
+83744: 				return true;
+83745: 			}
+83746: 			P_0.BackColor = Color.LightCoral;
+83747: 			return false;
+83748: 		}
+83749: 
+83750: 		public static double _008B_0088_0088(double P_0)
+83751: 		{
+83752: 			while (P_0 > Math.PI)
+83753: 			{
+83754: 				P_0 -= Math.PI * 2.0;
+83755: 			}
+83756: 			_ = 0;
+83757: 			if (!_0089p() || !_0089p())
+83758: 			{
+83759: 			}
+83760: 			while (P_0 < -Math.PI)
+83761: 			{
+83762: 				P_0 += Math.PI * 2.0;
+83763: 			}
+83764: 			return P_0;
+83765: 		}
+83766: 
+83767: 		public static List<_008F_008E> _008B_0088_0089(List<_008F_008E> P_0)
+83768: 		{
+83769: 			if (P_0.Count < 3)
+83770: 			{
+83771: 				return P_0;
+83772: 			}
+83773: 			List<_008F_008E> list = new List<_008F_008E>();
+83774: 			_008F_008E obj = P_0[0];
+83775: 			foreach (_008F_008E item in P_0)
+83776: 			{
+83777: 				if (item.Y < obj.Y || (item.Y == obj.Y && item.X < obj.X))
+83778: 				{
+83779: 					obj = item;
+83780: 				}
+83781: 			}
+83782: 			list.Add(obj);
+83783: 			_008F_008E obj2 = obj;
+83784: 			do
+83785: 			{
+83786: 				_008F_008E obj3 = P_0[0];
+83787: 				foreach (_008F_008E item2 in P_0)
+83788: 				{
+83789: 					if (obj3 == obj2 || _008B_0088_008A(obj2, obj3, item2) == 2)
+83790: 					{
+83791: 						obj3 = item2;
+83792: 					}
+83793: 				}
+83794: 				list.Add(obj3);
+83795: 				obj2 = obj3;
+83796: 			}
+83797: 			while (obj2 != obj);
+83798: 			return list;
+83799: 		}
+83800: 
+83801: 		private static int _008B_0088_008A(_008F_008E P_0, _008F_008E P_1, _008F_008E P_2)
+83802: 		{
+83803: 			double num = default(double);
+83804: 			if (!_0089q())
+83805: 			{
+83806: 				num = (P_1.Y - P_0.Y) * (P_2.X - P_1.X) - (P_1.X - P_0.X) * (P_2.Y - P_1.Y);
+83807: 				_0089q();
+83808: 				if (!_0089p())
+83809: 				{
+83810: 					goto IL_005d;
+83811: 				}
+83812: 			}
+83813: 			if (num != 0.0)
+83814: 			{
+83815: 				if (!(num > 0.0))
+83816: 				{
+83817: 					return 2;
+83818: 				}
+83819: 				return 1;
+83820: 			}
+83821: 			goto IL_005d;
+83822: 			IL_005d:
+83823: 			return 0;
+83824: 		}
+83825: 
+83826: 		public static bool _008B_0088_008B(List<_008F_008E> P_0, _008F_008E P_1)
+83827: 		{
+83828: 			if (false /* original-file-bool-offset:1436 */)
+83829: 			{
+83830: 				goto IL_002f;
+83831: 			}
+83832: 			int count = P_0.Count;
+83833: 			bool flag = false;
+83834: 			int num = 0;
+83835: 			int index = count - 1;
+83836: 			goto IL_0098;
+83837: 			IL_002f:
+83838: 			_008F_008E obj = default(_008F_008E);
+83839: 			_008F_008E obj2 = default(_008F_008E);
+83840: 			if (obj.Y > P_1.Y != obj2.Y > P_1.Y && P_1.X < (obj2.X - obj.X) * (P_1.Y - obj.Y) / (obj2.Y - obj.Y) + obj.X)
+83841: 			{
+83842: 				flag = !flag;
+83843: 			}
+83844: 			index = num++;
+83845: 			goto IL_0098;
+83846: 			IL_0098:
+83847: 			if (num < count)
+83848: 			{
+83849: 				obj = P_0[num];
+83850: 				obj2 = P_0[index];
+83851: 				goto IL_002f;
+83852: 			}
+83853: 			return flag;
+83854: 		}
+83855: 
+83856: 		static _008F_008A()
+83857: 		{
+83858: 			LicenseManager.Validate(typeof(_008F_008A));
+83859: 		}
+83860: 
+83861: 		internal static bool _0089p()
+83862: 		{
+83863: 			return true;
+83864: 		}
+83865: 
+83866: 		internal static bool _0089q()
+83867: 		{
+83868: 			return false;
+83869: 		}
+83870: 	}

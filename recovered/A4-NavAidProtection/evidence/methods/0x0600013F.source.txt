@@ -1,0 +1,16 @@
+513: 		public static bool _008C_0097(string P_0, string P_1, string P_2 = "1.0", string P_3 = "UTF-8", string P_4 = "no")
+514: 		{
+515: 			try
+516: 			{
+517: 				new XDocument(new XDeclaration(P_2, P_3, P_4), new XElement(P_1)).Save(P_0);
+518: 				return true;
+519: 			}
+520: 			catch (UnauthorizedAccessException inner)
+521: 			{
+522: 				throw new UnauthorizedAccessException("权限不足，无法创建文件: " /* string-offset:992 */ + P_0, inner);
+523: 			}
+524: 			catch (Exception innerException)
+525: 			{
+526: 				throw new Exception("创建XML文档失败: " /* string-offset:996 */ + P_0, innerException);
+527: 			}
+528: 		}

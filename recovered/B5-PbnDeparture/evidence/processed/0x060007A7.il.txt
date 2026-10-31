@@ -1,0 +1,33 @@
+METHOD 060007A7 \x8f\x87.\x8f\x86::\x8a\x9e\x95 RVA=8FD30 file=8DF30
+IL_0000: ldarg.1 
+IL_0001: ldarg.0 
+IL_0002: ldfld 0x0400075F \x8f\x87.\x8f\x86::\x8b\x86\x8b
+IL_0007: mul 
+IL_0008: ldarg.0 
+IL_0009: ldfld 0x0400075D \x8f\x87.\x8f\x86::\x8b\x86\x89
+IL_000E: add 
+IL_000F: ldarg.2 
+IL_0010: add 
+IL_0011: stloc.0 
+IL_0012: ldarg.0 
+IL_0013: ldfld 0x04000760 \x8f\x87.\x8f\x86::\x8b\x86\x8c
+IL_0018: ldarg.0 
+IL_0019: ldfld 0x04000760 \x8f\x87.\x8f\x86::\x8b\x86\x8c
+IL_001E: mul 
+IL_001F: ldloc.0 
+IL_0020: ldloc.0 
+IL_0021: mul 
+IL_0022: add 
+IL_0023: ldc.r8 2.0
+IL_002C: ldarg.0 
+IL_002D: ldfld 0x04000760 \x8f\x87.\x8f\x86::\x8b\x86\x8c
+IL_0032: mul 
+IL_0033: ldloc.0 
+IL_0034: mul 
+IL_0035: ldarg.0 
+IL_0036: ldfld 0x04000762 \x8f\x87.\x8f\x86::\x8b\x86\x8e
+IL_003B: mul 
+IL_003C: add 
+IL_003D: call 0x0A00002D System.Math::Sqrt
+IL_0042: ret 
+

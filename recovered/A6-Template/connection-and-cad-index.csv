@@ -1,0 +1,461 @@
+﻿Class,Line,Method,Token,Code,Evidence
+_0089_0092,32036,_0087_009A_0086,0x06000358,"_0087_009B_0092 = _009D._008B_008D(""请选择导航台位置"" /* string-offset:4620 */);",static source/IL; no AutoCAD runtime validation
+_0089_0092,32046,_0087_009A_0086,0x06000358,"_0087_009B_0093 = _009D._008B_008D(""请指定入航方向"" /* string-offset:1652 */);",static source/IL; no AutoCAD runtime validation
+_0089_0092,32075,_0087_009A_0087,0x06000359,"P_0 = _008F_0090._008B_008A_0094(P_0, new _008F_008E(0.0, 0.0), _0087_009B_0094);",static source/IL; no AutoCAD runtime validation
+_0089_0092,32076,_0087_009A_0087,0x06000359,"P_0 = _008F_0090._008B_008A_0096(_008F_0090._008B_008A_009A(P_0), _0087_009B_0092._008C_0087());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32087,_0087_009A_0088,0x0600035A,"P_0 = _008F_0090._008B_008A_0095(P_0, new _008F_008E(0.0, 0.0), _0087_009B_0094);",static source/IL; no AutoCAD runtime validation
+_0089_0092,32088,_0087_009A_0088,0x0600035A,"P_0 = _008F_0090._008B_008A_0098(_008F_0090._008B_008A_0099(P_0), _0087_009B_0092._008C_0087());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32134,_0087_009A_0089,0x0600035B,"list = _008F_0090._008B_008A_0095(list, new _008F_008E(0.0, 0.0), _0087_009B_0094);",static source/IL; no AutoCAD runtime validation
+_0089_0092,32135,_0087_009A_0089,0x0600035B,"list = _008F_0090._008B_008A_0098(_008F_0090._008B_008A_0099(list), _0087_009B_0092._008C_0087());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32136,_0087_009A_0089,0x0600035B,Polyline val = new Polyline();,static source/IL; no AutoCAD runtime validation
+_0089_0092,32145,_0087_009A_0089,0x0600035B,"Matrix3d val2 = Matrix3d.Mirroring(new Line3d(_0087_009B_0092._008B_009C()._008C_0089(), _0087_009B_0093._008B_009C()._008C_0089()));",static source/IL; no AutoCAD runtime validation
+_0089_0092,32153,_0087_009A_0089,0x0600035B,list2 = _008F_0090._008B_008A_009B(obj2._0088_0099_008C);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32203,_0087_009A_008B,0x0600035D,"list = _008F_0090._008B_008A_0095(list, new _008F_008E(0.0, 0.0), _0087_009B_0094);",static source/IL; no AutoCAD runtime validation
+_0089_0092,32204,_0087_009A_008B,0x0600035D,"list = _008F_0090._008B_008A_0098(_008F_0090._008B_008A_0099(list), _0087_009B_0092._008C_0087());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32205,_0087_009A_008B,0x0600035D,Polyline val = new Polyline();,static source/IL; no AutoCAD runtime validation
+_0089_0092,32214,_0087_009A_008B,0x0600035D,"Matrix3d val2 = Matrix3d.Mirroring(new Line3d(_0087_009B_0092._008B_009C()._008C_0089(), _0087_009B_0093._008B_009C()._008C_0089()));",static source/IL; no AutoCAD runtime validation
+_0089_0092,32221,_0087_009A_008B,0x0600035D,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj2._0088_0098_0088), obj2.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32289,_0087_009A_008D,0x0600035F,"list = _008F_0090._008B_008A_0095(list, new _008F_008E(0.0, 0.0), _0087_009B_0094);",static source/IL; no AutoCAD runtime validation
+_0089_0092,32290,_0087_009A_008D,0x0600035F,"list = _008F_0090._008B_008A_0098(_008F_0090._008B_008A_0099(list), _0087_009B_0092._008C_0087());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32291,_0087_009A_008D,0x0600035F,Polyline val = new Polyline();,static source/IL; no AutoCAD runtime validation
+_0089_0092,32298,_0087_009A_008D,0x0600035F,"Matrix3d val2 = Matrix3d.Mirroring(new Line3d(_0087_009B_0092._008B_009C()._008C_0089(), _0087_009B_0093._008B_009C()._008C_0089()));",static source/IL; no AutoCAD runtime validation
+_0089_0092,32314,_0087_009A_008D,0x0600035F,"_0087_009A_0088(_008F_0090._008B_008A_009C(obj2._0092_008E), obj2.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32315,_0087_009A_008D,0x0600035F,"_0087_009A_0088(_008F_0090._008B_008A_009C(obj2._0092_008F), obj2.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32318,_0087_009A_008D,0x0600035F,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj2._0092_0090), obj2.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32436,_0087_009A_0091,0x06000363,"val.AddAllowedClass(typeof(Polyline), true);",static source/IL; no AutoCAD runtime validation
+_0089_0092,32439,_0087_009A_0091,0x06000363,PromptEntityResult entity = editor.GetEntity(val);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32444,_0087_009A_0091,0x06000363,Polyline val2 = new Polyline();,static source/IL; no AutoCAD runtime validation
+_0089_0092,32458,_0087_009A_0091,0x06000363,Polyline val2 = (Polyline)(object)((obj is Polyline) ? obj : null);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32483,_0087_009A_0091,0x06000363,list.Add(obj3);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32498,_0087_009A_0091,0x06000363,list.Add(obj3);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32561,_0087_009A_0092,0x06000364,"list = _008F_0090._008B_008A_0095(list, new _008F_008E(0.0, 0.0), _0087_009B_0094);",static source/IL; no AutoCAD runtime validation
+_0089_0092,32562,_0087_009A_0092,0x06000364,"list = _008F_0090._008B_008A_0098(_008F_0090._008B_008A_0099(list), _0087_009B_0092._008C_0087());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32563,_0087_009A_0092,0x06000364,Polyline val = new Polyline();,static source/IL; no AutoCAD runtime validation
+_0089_0092,32571,_0087_009A_0092,0x06000364,"Matrix3d val2 = Matrix3d.Mirroring(new Line3d(_0087_009B_0092, _0087_009B_0093));",static source/IL; no AutoCAD runtime validation
+_0089_0092,32582,_0087_009A_0092,0x06000364,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj2._0088_008A_0095), obj2.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,32647,_0087_009A_0095,0x06000367,Polyline val = default(Polyline);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32652,_0087_009A_0095,0x06000367,Polyline val5 = default(Polyline);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32749,_0087_009A_0095,0x06000367,val5 = (Polyline)(object)((val4 is Polyline) ? val4 : null);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32765,_0087_009A_0095,0x06000367,if (val4 is Polyline),static source/IL; no AutoCAD runtime validation
+_0089_0092,32770,_0087_009A_0095,0x06000367,if (!(val4 is Line)),static source/IL; no AutoCAD runtime validation
+_0089_0092,32811,_0087_009A_0095,0x06000367,list.Add(val5.GetPoint3dAt(num3));,static source/IL; no AutoCAD runtime validation
+_0089_0092,32823,_0087_009A_0095,0x06000367,Line val6 = (Line)(object)((val4 is Line) ? val4 : null);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32824,_0087_009A_0095,0x06000367,list.Add(((Curve)val6).StartPoint);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32825,_0087_009A_0095,0x06000367,list.Add(((Curve)val6).EndPoint);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32834,_0087_009A_0095,0x06000367,val = new Polyline();,static source/IL; no AutoCAD runtime validation
+_0089_0092,32864,_0087_009A_0095,0x06000367,selection = editor.GetSelection(val7);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32921,_0087_009A_0096,0x06000368,list.Add(val);,static source/IL; no AutoCAD runtime validation
+_0089_0092,32933,_0087_009A_0096,0x06000368,list.Add(val3);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33069,_0087_009A_0098,0x0600036A,selection = editor.GetSelection(val);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33084,_0087_009A_0098,0x0600036A,"val2.BooleanOperation((BooleanOperationType)0, list[num2]);",static source/IL; no AutoCAD runtime validation
+_0089_0092,33123,_0087_009A_0098,0x0600036A,if (!(val7 is Polyline)),static source/IL; no AutoCAD runtime validation
+_0089_0092,33130,_0087_009A_0098,0x0600036A,val4.Add((DBObject)(object)val7);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33171,_0087_009A_0098,0x0600036A,list.Add(item);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33198,_0087_009A_0099,0x0600036B,"private bool _0087_009A_0099(Polyline P_0, _008F_008E P_1)",static source/IL; no AutoCAD runtime validation
+_0089_0092,33220,_0087_009A_0099,0x0600036B,Point2d point2dAt = P_0.GetPoint2dAt(num2);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33233,_0087_009A_0099,0x0600036B,point2dAt2 = P_0.GetPoint2dAt(num);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33239,_0087_009A_009A,0x0600036C,"private double _0087_009A_009A(Polyline P_0, _008F_008E P_1)",static source/IL; no AutoCAD runtime validation
+_0089_0092,33322,_0087_009A_009A,0x0600036C,Point2d point2dAt = P_0.GetPoint2dAt((num2 + 1) % P_0.NumberOfVertices);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33338,_0087_009A_009A,0x0600036C,point2dAt2 = P_0.GetPoint2dAt(num2);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33513,_0087_009A_009C,0x0600036E,"val.AddAllowedClass(typeof(Polyline), true);",static source/IL; no AutoCAD runtime validation
+_0089_0092,33517,_0087_009A_009C,0x0600036E,entity = editor.GetEntity(val);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33547,_0087_009A_009C,0x0600036E,Polyline val3 = (Polyline)(object)((obj is Polyline) ? obj : null);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33551,_0087_009A_009C,0x0600036E,DBObjectCollection offsetCurves = ((Curve)val3).GetOffsetCurves(P_0);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33553,_0087_009A_009C,0x0600036E,DBObject obj3 = ((obj2 is Polyline) ? obj2 : null);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33555,_0087_009A_009C,0x0600036E,_ = ((Polyline)obj3).Length;,static source/IL; no AutoCAD runtime validation
+_0089_0092,33556,_0087_009A_009C,0x0600036E,DBObjectCollection offsetCurves2 = ((Curve)val3).GetOffsetCurves(0.0 - P_0);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33558,_0087_009A_009C,0x0600036E,DBObject obj5 = ((obj4 is Polyline) ? obj4 : null);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33560,_0087_009A_009C,0x0600036E,_ = ((Polyline)obj5).Length;,static source/IL; no AutoCAD runtime validation
+_0089_0092,33695,_0087_009B_0088,0x06000373,"dataTable.Columns.Add(""ID"" /* string-offset:640 */, typeof(string));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33696,_0087_009B_0088,0x06000373,"dataTable.Columns.Add(""名称"" /* string-offset:2728 */, typeof(string));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33697,_0087_009B_0088,0x06000373,"dataTable.Columns.Add(""X坐标(m)"" /* string-offset:2732 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33698,_0087_009B_0088,0x06000373,"dataTable.Columns.Add(""Y坐标(m)"" /* string-offset:2736 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33699,_0087_009B_0088,0x06000373,"dataTable.Columns.Add(""高度(m)"" /* string-offset:2740 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33700,_0087_009B_0088,0x06000373,"dataTable.Columns.Add(""区域(m)"" /* string-offset:4728 */, typeof(string));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33701,_0087_009B_0088,0x06000373,"dataTable.Columns.Add(""MOC(m)"" /* string-offset:2756 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33702,_0087_009B_0088,0x06000373,"dataTable.Columns.Add(""OCA(m)"" /* string-offset:2760 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33708,_0087_009B_0088,0x06000373,"dataTable.Rows.Add(obj.ID, obj.Name, Math.Round(obj.X, 2), Math.Round(obj.Y, 2), Math.Round(obj.Z, 2));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33709,_0087_009B_0088,0x06000373,"_0087_009B_0091.Add(obj.ID, item);",static source/IL; no AutoCAD runtime validation
+_0089_0092,33720,_0087_009B_0089,0x06000374,"dataTable.Columns.Add(""ID"" /* string-offset:640 */, typeof(string));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33721,_0087_009B_0089,0x06000374,"dataTable.Columns.Add(""名称"" /* string-offset:2728 */, typeof(string));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33722,_0087_009B_0089,0x06000374,"dataTable.Columns.Add(""X坐标(m)"" /* string-offset:2732 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33723,_0087_009B_0089,0x06000374,"dataTable.Columns.Add(""Y坐标(m)"" /* string-offset:2736 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33724,_0087_009B_0089,0x06000374,"dataTable.Columns.Add(""高度(m)"" /* string-offset:2740 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33725,_0087_009B_0089,0x06000374,"dataTable.Columns.Add(""区域(m)"" /* string-offset:4728 */, typeof(string));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33726,_0087_009B_0089,0x06000374,"dataTable.Columns.Add(""MOC(m)"" /* string-offset:2756 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33727,_0087_009B_0089,0x06000374,"dataTable.Columns.Add(""OCA(m)"" /* string-offset:2760 */, typeof(double));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33730,_0087_009B_0089,0x06000374,"dataTable.Rows.Add(item.ID, item.Name, Math.Round(item.X, 2), Math.Round(item.Y, 2), Math.Round(item.Z, 2), item._0088_008F_009C, Math.Ceiling(item._0088_008F_009D), Math.Ceiling(item._0088_008F_009E));",static source/IL; no AutoCAD runtime validation
+_0089_0092,33758,_0087_009B_008A,0x06000375,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj2._0088_008C_0087), obj.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,33759,_0087_009B_008A,0x06000375,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj2._0088_008B_009E), obj.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,33760,_0087_009B_008A,0x06000375,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj2._0088_008C_0086), obj.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,33788,_0087_009B_008B,0x06000376,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj2._0088_008D_0091), obj.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,33804,_0087_009B_008B,0x06000376,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj2._0088_008D_008F), obj.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,33808,_0087_009B_008B,0x06000376,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj2._0088_008D_0090), obj.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,33877,_0087_009B_008C,0x06000377,list = _008F_0090._008B_008A_009B(obj._0088_008A_0096);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33892,_0087_009B_008C,0x06000377,"_0087_009A_0087(_008F_0090._008B_008A_009B(obj._0088_008A_0095), obj.ToString());",static source/IL; no AutoCAD runtime validation
+_0089_0092,33965,_0087_009B_008E,0x06000379,list.Add(item);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33976,_0087_009B_008E,0x06000379,list.Add(list.First());,static source/IL; no AutoCAD runtime validation
+_0089_0092,33982,_0087_009B_008E,0x06000379,list.Add(item2);,static source/IL; no AutoCAD runtime validation
+_0089_0092,33983,_0087_009B_008E,0x06000379,list.Add(list.First());,static source/IL; no AutoCAD runtime validation
+_0089_0092,34133,_0087_009B_008F,0x0600037B,_0087_009C_0094.Items.AddRange(new object[2],static source/IL; no AutoCAD runtime validation
+_0089_0092,34207,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0090);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34208,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0090);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34209,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0091);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34210,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0092);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34278,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_0099);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34281,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008A);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34284,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008B);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34285,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008C);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34289,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008D);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34290,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009C_009D);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34293,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009C_009E);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34301,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_0086);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34325,_0087_009B_008F,0x0600037B,_0087_009C_008E.Items.AddRange(new object[2],static source/IL; no AutoCAD runtime validation
+_0089_0092,34557,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0093);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34560,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0094);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34564,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0095);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34565,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0096);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34566,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0093);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34570,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0091);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34573,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0097);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34577,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0098);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34583,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0099);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34584,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_009A);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34585,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0094);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34593,_0087_009B_008F,0x0600037B,_0087_009D_008B.Items.AddRange(new object[2],static source/IL; no AutoCAD runtime validation
+_0089_0092,34683,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_009A);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34684,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_008E);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34685,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_008F);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34686,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_0087);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34690,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_0088);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34691,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_0089);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34733,_0087_009B_008F,0x0600037B,_0087_009C_0098.Items.AddRange(new object[2],static source/IL; no AutoCAD runtime validation
+_0089_0092,34754,_0087_009B_008F,0x0600037B,_0087_009C_0099.Items.AddRange(new object[2],static source/IL; no AutoCAD runtime validation
+_0089_0092,34790,_0087_009B_008F,0x0600037B,_0087_009D_008E.Items.AddRange(new object[2],static source/IL; no AutoCAD runtime validation
+_0089_0092,34931,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0088);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34935,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009B_009D);,static source/IL; no AutoCAD runtime validation
+_0089_0092,34938,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009B_009E);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35026,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_0098);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35064,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009D_0096);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35067,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0087);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35071,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0089);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35072,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008A);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35073,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008B);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35096,_0087_009B_008F,0x0600037B,_0087_009C_0086.Items.AddRange(new object[2],static source/IL; no AutoCAD runtime validation
+_0089_0092,35214,_0087_009B_008F,0x0600037B,base.Controls.Add(_0087_009D_0098);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35225,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009D_0097);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35228,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008D);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35229,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008E);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35233,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008F);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35234,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0086);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35235,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009B_009C);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35278,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_0099);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35279,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_009A);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35283,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_009B);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35327,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008C);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35403,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0092);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35404,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_009B);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35405,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_009C);,static source/IL; no AutoCAD runtime validation
+_0089_0092,35465,_0087_009B_008F,0x0600037B,base.Controls.Add(_0087_009B_0097);,static source/IL; no AutoCAD runtime validation
+_0088_0091,2844,_0091_0086,0x060001EF,_0092_0091.Add(_0092_0094);,static source/IL; no AutoCAD runtime validation
+_0088_0091,2877,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_0089._008B_0086_0093(0.0, num5 - _0092_0089._008B_0087_0087 - Math.PI * 2.0, _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2885,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008A._008B_0086_0093(num5 - _0092_008A._008B_0087_0087 - Math.PI * 2.0, _0092_0086 - _0091_008E));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2888,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008A._008B_0086_0093(num5 - _0092_008A._008B_0087_0087 - Math.PI * 2.0, _0092_0086 + _0091_008D._008A_009E_0086));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2899,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008C._008B_0086_0093(_0092_0086 + _0091_008D._008A_009E_0086, _0092_0086 - _0091_008E));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2900,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008A._008B_0086_0093(num5 - _0092_008A._008B_0087_0087 - Math.PI * 2.0, _0092_0086 + _0091_008D._008A_009E_0086, 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2904,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008C._008B_0086_0093(_0092_0086 + _0091_008D._008A_009E_0086, _0092_0086 - _0091_008E, 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2905,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008A._008B_0086_0093(num5 - _0092_008A._008B_0087_0087 - Math.PI * 2.0, _0092_0086 + _0091_008D._008A_009E_0086, _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2906,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008C._008B_0086_0093(_0092_0086 + _0091_008D._008A_009E_0086, _0092_0086 - _0091_008E, _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2910,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008A._008B_0086_0093(num5 - _0092_008A._008B_0087_0087 - Math.PI * 2.0, _0092_0086 + _0091_008D._008A_009E_0086, _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2918,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008C._008B_0086_0093(_0092_0086 + _0091_008D._008A_009E_0086, _0092_0086 - _0091_008E, _0091_0093, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2924,_0091_0087,0x060001F0,"obj2._008B_0088_008F(_0092_008C._008B_0086_0095(_0092_0086 - _0091_008E), _0092_0086 - _0091_008D._008A_009E_0086);",static source/IL; no AutoCAD runtime validation
+_0088_0091,2930,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008A._008B_0086_0093(num5 - _0092_008A._008B_0087_0087 - Math.PI * 2.0, _0092_0086 - _0091_008E, _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2931,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008A._008B_0086_0093(num5 - _0092_008A._008B_0087_0087 - Math.PI * 2.0, _0092_0086 - _0091_008E, 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2932,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008A._008B_0086_0093(num5 - _0092_008A._008B_0087_0087 - Math.PI * 2.0, _0092_0086 - _0091_008E, _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2936,_0091_0087,0x060001F0,num2 = _0092_008D._008B_0086_009D(_0092_008B);,static source/IL; no AutoCAD runtime validation
+_0088_0091,2940,_0091_0087,0x060001F0,num4 = _0092_008C._008B_0086_009D(_0092_008B);,static source/IL; no AutoCAD runtime validation
+_0088_0091,2945,_0091_0087,0x060001F0,num3 = _0092_008D._008B_0086_009D(_0092_008C);,static source/IL; no AutoCAD runtime validation
+_0088_0091,2946,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008D._008B_0086_0093(0.0, num3));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2950,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008D._008B_0086_0093(0.0, num2));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2954,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008C._008B_0086_0093(num3 - _0092_008C._008B_0087_0087, num4 - _0092_008C._008B_0087_0087));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2979,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008D._008B_0086_0093(0.0, num2, 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2982,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008B._008B_0086_0093(num2 - _0092_008B._008B_0087_0087, 5.340707511102648));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2983,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008B._008B_0086_0093(num2 - _0092_008B._008B_0087_0087, 5.340707511102648, 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2987,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008B._008B_0086_0093(num2 - _0092_008B._008B_0087_0087, _0092_008B._008B_0086_0099(_0092_0092)));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2988,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008B._008B_0086_0093(num2 - _0092_008B._008B_0087_0087, _0092_008B._008B_0086_0099(_0092_0092), 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2996,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008D._008B_0086_0093(0.0, num2, _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,2999,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008B._008B_0086_0093(num2 - _0092_008B._008B_0087_0087, _0092_008B._008B_0086_0099(_0092_0092), _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3010,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008D._008B_0086_0093(0.0, num2, _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3013,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008B._008B_0086_0093(num2 - _0092_008B._008B_0087_0087, 5.340707511102648, _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3021,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_0089._008B_0086_0093(0.0, num5 - _0092_0089._008B_0087_0087 - Math.PI * 2.0, 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3026,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_0089._008B_0086_0093(0.0, num5 - _0092_0089._008B_0087_0087 - Math.PI * 2.0, _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3033,_0091_0087,0x060001F0,num5 = _0092_0089._008B_0086_009D(_0092_008A);,static source/IL; no AutoCAD runtime validation
+_0088_0091,3036,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_0089._008B_0086_0093(0.0, num5 - _0092_0089._008B_0087_0087 - Math.PI * 2.0));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3048,_0091_0087,0x060001F0,"obj._008B_0088_008F(_0092_008A._008B_0086_0095(_0092_0086 - _0091_008E), _0092_0086 - _0091_008D._008A_009E_0086);",static source/IL; no AutoCAD runtime validation
+_0088_0091,3054,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008D._008B_0086_0093(0.0, num3, 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3057,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008B._008B_0086_0093(num2 - _0092_008B._008B_0087_0087, _0092_008B._008B_0086_0099(_0092_0092), _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3061,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008C._008B_0086_0093(num3 - _0092_008C._008B_0087_0087, num4 - _0092_008C._008B_0087_0087, 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3070,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008B._008B_0086_0093(num4 - _0092_008B._008B_0087_0087, _0092_008B._008B_0086_0099(_0092_0092)));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3074,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008E, _0092_008B._008B_0086_0093(num4 - _0092_008B._008B_0087_0087, 5.340707511102648));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3075,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008B._008B_0086_0093(num4 - _0092_008B._008B_0087_0087, 5.340707511102648, 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3078,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008B._008B_0086_0093(num4 - _0092_008B._008B_0087_0087, _0092_008B._008B_0086_0099(_0092_0092), 0.0, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3095,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008B._008B_0086_0093(num2 - _0092_008B._008B_0087_0087, 5.340707511102648, _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3130,_0091_0087,0x060001F0,num6 = _0092_008B._008B_0086_0099(_0092_0092);,static source/IL; no AutoCAD runtime validation
+_0088_0091,3133,_0091_0087,0x060001F0,obj3 = _0092_008B._008B_0086_0095(num6);,static source/IL; no AutoCAD runtime validation
+_0088_0091,3146,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008D._008B_0086_0093(0.0, num3, _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3147,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008C._008B_0086_0093(num3 - _0092_008C._008B_0087_0087, num4 - _0092_008C._008B_0087_0087, _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3151,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008D._008B_0086_0093(0.0, num3, _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3155,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008C._008B_0086_0093(num3 - _0092_008C._008B_0087_0087, num4 - _0092_008C._008B_0087_0087, _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3161,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008B._008B_0086_0093(num4 - _0092_008B._008B_0087_0087, 5.340707511102648, _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3164,_0091_0087,0x060001F0,"_008F_0090._008B_008B_0087(ref _0092_008F, _0092_008B._008B_0086_0093(num4 - _0092_008B._008B_0087_0087, _0092_008B._008B_0086_0099(_0092_0092), _0091_0093));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3167,_0091_0087,0x060001F0,"obj3 = _0092_008B._008B_0086_0095(num6, _0091_0093);",static source/IL; no AutoCAD runtime validation
+_0088_0091,3173,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008B._008B_0086_0093(num4 - _0092_008B._008B_0087_0087, 5.340707511102648, _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3179,_0091_0087,0x060001F0,"_0092_0090.Add(_0092_008B._008B_0086_0093(num4 - _0092_008B._008B_0087_0087, _0092_008B._008B_0086_0099(_0092_0092), _0091_0093, 1.0, P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3183,_0091_0087,0x060001F0,"_0092_008E.Add(new _008F_008E(0.0, 0.0));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3191,_0091_0087,0x060001F0,"_0092_008F.Insert(0, obj7);",static source/IL; no AutoCAD runtime validation
+_0088_0091,3195,_0091_0087,0x060001F0,_0092_008F.Add(obj8);,static source/IL; no AutoCAD runtime validation
+_0088_0091,3210,_0091_0088,0x060001F1,_0092_0090.Add(item);,static source/IL; no AutoCAD runtime validation
+_0088_0091,3228,_0091_0089,0x060001F2,_0093_008C.Add(value);,static source/IL; no AutoCAD runtime validation
+_0088_0091,3234,_0091_0089,0x060001F2,_0093_008C.Add(value);,static source/IL; no AutoCAD runtime validation
+_0088_0091,3253,_0091_0089,0x060001F2,_0093_008C.Add(value);,static source/IL; no AutoCAD runtime validation
+_0088_0091,3315,_0091_0089,0x060001F2,"_0093_008C.Add(_0091_008A(_0092_009A, _0093_0088, 235.0 * _0091_009C * _0091_008D._008A_009D_009E));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3318,_0091_0089,0x060001F2,"_0093_008C.Add(_0091_008A(_0092_0099, _0092_009D, 50.0 * _0091_009C * _0091_008D._008A_009D_009E));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3319,_0091_0089,0x060001F2,"_0093_008C.Add(_0091_008A(_0092_0099, _0092_009E, 100.0 * _0091_009C * _0091_008D._008A_009D_009E));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3323,_0091_0089,0x060001F2,"_0093_008C.Add(_0091_008A(_0092_009B, _0093_0086, 100.0 * _0091_009C * _0091_008D._008A_009D_009E));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3327,_0091_0089,0x060001F2,"_0093_008C.Add(_0091_008A(_0092_009A, _0093_0087, 190.0 * _0091_009C * _0091_008D._008A_009D_009E));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3412,_0091_008A,0x060001F4,"list.Add(new _008F_008E(num5, num6));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3415,_0091_008A,0x060001F4,"list.Add(new _008F_008E(P_2 * Math.Cos(num2) + P_1.X, P_2 * Math.Sin(num2) + P_1.Y));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3453,_0091_008B,0x060001F5,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3481,_0091_008B,0x060001F5,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3549,_0091_008C,0x060001F6,"P_0.Add(new _008F_008E(num5, num6));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3589,_0091_008C,0x060001F6,"P_0.Add(new _008F_008E(num8, num9));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3605,_0091_008C,0x060001F6,"P_0.Add(new _008F_008E(P_2 * Math.Cos(num2) + P_1.X, P_2 * Math.Sin(num2) + P_1.Y));",static source/IL; no AutoCAD runtime validation
+_0088_0091,3638,_0091_008C,0x060001F6,"P_0.Add(new _008F_008E(P_2 * Math.Cos(num2) + P_1.X, P_2 * Math.Sin(num2) + P_1.Y));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38794,_0089_0098,0x060003AB,_0088_008A_0097 = _0088_008A_0089._008B_0086_009D(_0088_008A_0088);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38799,_0089_0098,0x060003AB,"_008F_0090._008B_008B_0087(ref _0088_008A_0093, _0088_008A_0089._008B_0086_0093(0.0, _0088_008A_0097 - _0088_008A_0089._008B_0087_0087));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38800,_0089_0098,0x060003AB,"List<_008F_008E> list = _0088_008A_0088._008B_0086_0093(_0088_008A_0097 - _0088_008A_0088._008B_0087_0087, 5.026548245743669);",static source/IL; no AutoCAD runtime validation
+_0089_0098,38801,_0089_0098,0x060003AB,"_008F_0090._008B_008B_0087(ref _0088_008A_0093, list);",static source/IL; no AutoCAD runtime validation
+_0089_0098,38802,_0089_0098,0x060003AB,_0088_008A_0098 = _0088_008A_0089._008B_0086_009D(_0088_008A_008A);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38809,_0089_0098,0x060003AB,_0088_008A_0099 = _0088_008A_008A._008B_0086_009D(_0088_008A_008B);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38810,_0089_0098,0x060003AB,_0088_008A_009A = _0088_008A_008D._008B_0086_009D(_0088_008A_0089);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38814,_0089_0098,0x060003AB,"_0088_008A_0092.Add(new _008F_008E(0.0, 0.0));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38815,_0089_0098,0x060003AB,"_008F_0090._008B_008B_0087(ref _0088_008A_0092, _0088_008A_0089._008B_0086_0093(0.0, _0088_008A_0098 - _0088_008A_0089._008B_0087_0087));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38816,_0089_0098,0x060003AB,"_008F_0090._008B_008B_0087(ref _0088_008A_0092, _0088_008A_008A._008B_0086_0093(_0088_008A_0098 - _0088_008A_008A._008B_0087_0087, _0088_008A_0099 - _0088_008A_008A._008B_0087_0087));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38823,_0089_0098,0x060003AB,"_008F_0090._008B_008B_0087(ref _0088_008A_0092, _0088_008A_008B._008B_0086_0093(_0088_008A_0099 - _0088_008A_008B._008B_0087_0087, _0088_008A_0090 + _0088_0088_008E._008A_009E_0086));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38824,_0089_0098,0x060003AB,"_008F_0090._008B_008B_0087(ref _0088_008A_0092, _0088_008A_008D._008B_0086_0093(_0088_008A_0090 + _0088_0088_008E._008A_009E_0086, _0088_008A_009A - _0088_008A_008D._008B_0087_0087));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38827,_0089_0098,0x060003AB,"_008F_0090._008B_008B_0087(ref _0088_008A_0092, _0088_008A_0089._008B_0086_0093(_0088_008A_009A - _0088_008A_0089._008B_0087_0087, _0088_0088_008E._008A_009E_0086 + _0088_008A_0090));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38828,_0089_0098,0x060003AB,_0088_0088_0094 = _0088_008A_008D._008B_0086_0095(_0088_008A_0090 + _0088_0088_008E._008A_009E_0086).X;,static source/IL; no AutoCAD runtime validation
+_0089_0098,38829,_0089_0098,0x060003AB,_0088_0088_0095 = _0088_008A_008D._008B_0086_0095(Math.PI + _0088_0088_008E._008A_009E_0086).Y;,static source/IL; no AutoCAD runtime validation
+_0089_0098,38847,_0088_0087_009A,0x060003AC,_0088_008A_0091.Add(_0088_0089_0087);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38865,_0088_0087_009A,0x060003AC,_0088_008A_0091.Add(obj2);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38867,_0088_0087_009A,0x060003AC,_0088_008A_0091.Add(item);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38869,_0088_0087_009A,0x060003AC,_0088_008A_0091.Add(item2);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38874,_0088_0087_009A,0x060003AC,_0088_008A_0091.Add(obj3);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38878,_0088_0087_009A,0x060003AC,_0088_008A_0091.Add(obj4);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38881,_0088_0087_009A,0x060003AC,_0088_008A_0091.Add(_0088_0089_0087);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38896,_0088_0087_009B,0x060003AD,"_0088_008A_0095.Add(_0088_008A_0089._008B_0086_0093(0.0, _0088_008A_0097 - _0088_008A_0089._008B_0087_0087, 0.0, 1.0, _0020: false, P_0));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38908,_0088_0087_009B,0x060003AD,"_0088_008A_0095.Add(_0088_008A_0089._008B_0086_0093(_0088_008A_009A - _0088_008A_0089._008B_0087_0087, _0088_008A_0098 - _0088_008A_0089._008B_0087_0087, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38911,_0088_0087_009B,0x060003AD,"_0088_008A_0095.Add(_0088_008A_0088._008B_0086_0093(_0088_008A_0097 - _0088_008A_0088._008B_0087_0087, 5.026548245743669, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38912,_0088_0087_009B,0x060003AD,"_0088_008A_0095.Add(_0088_008A_008A._008B_0086_0093(_0088_008A_0098 - _0088_008A_008A._008B_0087_0087, _0088_008A_0099 - _0088_008A_008A._008B_0087_0087, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38913,_0088_0087_009B,0x060003AD,"_0088_008A_0095.Add(_0088_008A_008B._008B_0086_0093(_0088_008A_0099 - _0088_008A_008B._008B_0087_0087, _0088_008A_0090 + _0088_0088_008E._008A_009E_0086, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38916,_0088_0087_009B,0x060003AD,"_0088_008A_0095.Add(_0088_008A_008D._008B_0086_0093(_0088_008A_0090 + _0088_0088_008E._008A_009E_0086, _0088_008A_009A - _0088_008A_008D._008B_0087_0087, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38948,_0088_0087_009D,0x060003AF,"list2.Add(_008F_0090._008B_008A_0098(_0088_008A_0092, P_0));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38949,_0088_0087_009D,0x060003AF,"list2.Add(_008F_0090._008B_008A_0098(_0088_008A_0092, _008F_008E._008B_0089_008B(P_0)));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38956,_0088_0087_009D,0x060003AF,"list2.Add(_008F_0090._008B_008A_0098(_0088_008A_0092, P_1));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38957,_0088_0087_009D,0x060003AF,"list2.Add(_008F_0090._008B_008A_0098(_0088_008A_0092, _008F_008E._008B_0089_008B(P_1)));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38963,_0088_0087_009D,0x060003AF,list.Add(list3);,static source/IL; no AutoCAD runtime validation
+_0089_0098,38973,_0088_0087_009D,0x060003AF,"list.Add(_008F_0090._008B_008A_0098(list3, obj2));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38975,_0088_0087_009D,0x060003AF,"List<_008F_008E> list4 = _008F_0090._008B_008A_0098(_0088_008A_0093, _008F_008E._008B_0089_008B(P_1));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38976,_0088_0087_009D,0x060003AF,"List<_008F_008E> list5 = _008F_0090._008B_008A_0098(_008F_0090._008B_008A_009C(_0088_008A_0093), P_1);",static source/IL; no AutoCAD runtime validation
+_0089_0098,38977,_0088_0087_009D,0x060003AF,"list.Add(_008F_0090._008B_008A_0095(list4, new _008F_008E(0.0, 0.0), -70.0 * _0088_008A_008E));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38978,_0088_0087_009D,0x060003AF,"list.Add(_008F_0090._008B_008A_0095(list5, new _008F_008E(0.0, 0.0), -70.0 * _0088_008A_008E));",static source/IL; no AutoCAD runtime validation
+_0089_0098,38982,_0088_0087_009D,0x060003AF,"_008F_0090._008B_008B_0086(ref _0088_008A_0096, list);",static source/IL; no AutoCAD runtime validation
+_0089_0098,38983,_0088_0087_009D,0x060003AF,"_008F_0090._008B_008B_0086(ref _0088_008A_0096, list2);",static source/IL; no AutoCAD runtime validation
+_0089_0098,38987,_0088_0087_009D,0x060003AF,_0088_008A_0096.Add(list3);,static source/IL; no AutoCAD runtime validation
+_0089_0098,39005,_0088_0087_009E,0x060003B0,list.Add(obj);,static source/IL; no AutoCAD runtime validation
+_0089_0098,39017,_0088_0087_009E,0x060003B0,list.Add(obj3);,static source/IL; no AutoCAD runtime validation
+_0089_0098,39271,_0088_0088_0089,0x060003B4,list.Add(P_1);,static source/IL; no AutoCAD runtime validation
+_0089_0098,39273,_0088_0088_0089,0x060003B4,list.Add(P_2);,static source/IL; no AutoCAD runtime validation
+_0089_0098,39274,_0088_0088_0089,0x060003B4,P_0.Add(list);,static source/IL; no AutoCAD runtime validation
+_0089_0098,39302,_0088_0088_008B,0x060003B6,"list.Add(new _008F_008E(num5, num6));",static source/IL; no AutoCAD runtime validation
+_0089_0098,39305,_0088_0088_008B,0x060003B6,"list.Add(new _008F_008E(P_2 * Math.Cos(num2) + P_1.X, P_2 * Math.Sin(num2) + P_1.Y));",static source/IL; no AutoCAD runtime validation
+_0089_0098,39323,_0088_0088_008C,0x060003B7,"P_0.Add(new _008F_008E(num4, num5));",static source/IL; no AutoCAD runtime validation
+_0089_0098,39333,_0088_0088_008C,0x060003B7,"P_0.Add(new _008F_008E(num7, num8));",static source/IL; no AutoCAD runtime validation
+_0089_0098,39354,_0088_0088_008D,0x060003B8,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_0089_0098,39373,_0088_0088_008D,0x060003B8,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39499,_0088_008A_009B,0x060003BE,_0088_008C_0088.Add(obj);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39540,_0088_008A_009B,0x060003BE,_0088_008C_0088.Add(_0088_008B_0090);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39552,_0088_008A_009B,0x060003BE,_0088_008C_0088.Add(_0088_008B_0090);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39567,_0088_008A_009B,0x060003BE,_0088_008C_0088.Add(obj3);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39637,_0088_008A_009C,0x060003BF,list.Add(_0088_008B_0090);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39648,_0088_008A_009C,0x060003BF,_0088_008C_0086.Add(list);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39649,_0088_008A_009C,0x060003BF,_0088_008B_008F = _0088_008B_0099._008A_009E_0093(_0088_008B_009D + _0088_008B_0089._008A_009E_0086);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39660,_0088_008A_009C,0x060003BF,"_0088_008A_009D(_0088_008B_0098._008A_009E_0093(num2 - _0088_008B_0098._008B_0086_0088), _0088_008B_0099._008A_009E_0093(num2 - _0088_008B_0099._008B_0086_0088));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39715,_0088_008A_009C,0x060003BF,"_0088_008C_0087.Add(_0088_008B_0098._008A_009E_009E(0.0, num2 - _0088_008B_0098._008B_0086_0088, 0.0, 1.0, _0020: true, _0020: true));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39718,_0088_008A_009C,0x060003BF,"_0088_008C_0087.Add(_0088_008B_0099._008A_009E_009E(num2 - _0088_008B_0099._008B_0086_0088, _0088_008B_009D + _0088_008B_0089._008A_009E_0086, 0.0, 1.0, _0020: true, _0020: true));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39721,_0088_008A_009C,0x060003BF,"_0088_008C_0087.Add(_0088_008B_0099._008A_009E_009E(_0088_008B_009D + _0088_008B_0089._008A_009E_0086, _0088_008B_009D + _0088_008B_009C));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39722,_0088_008A_009C,0x060003BF,"_0088_008A_009D(_0088_008B_0090, _0088_008B_0098._008A_009E_0093(0.0));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39732,_0088_008A_009D,0x060003C0,list.Add(P_0);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39739,_0088_008A_009D,0x060003C0,list.Add(P_1);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39742,_0088_008A_009D,0x060003C0,_0088_008B_009E.Add(list);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39752,_0088_008A_009E,0x060003C1,list.Add(P_0);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39756,_0088_008A_009E,0x060003C1,list.Add(P_1);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39757,_0088_008A_009E,0x060003C1,_0088_008C_0086.Add(list);,static source/IL; no AutoCAD runtime validation
+_0089_009A,39782,_0088_008B_0086,0x060003C2,"list.Add(new _008F_008E(num5, num6));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39785,_0088_008B_0086,0x060003C2,"list.Add(new _008F_008E(P_2 * Math.Cos(num2) + P_1.X, P_2 * Math.Sin(num2) + P_1.Y));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39803,_0088_008B_0087,0x060003C3,"P_0.Add(new _008F_008E(num4, num5));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39813,_0088_008B_0087,0x060003C3,"P_0.Add(new _008F_008E(num7, num8));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39849,_0088_008B_0088,0x060003C4,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_0089_009A,39904,_0088_008B_0088,0x060003C4,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40052,_0088_008C_0089,0x060003CA,_0088_008D_0092.Add(_0088_008C_0097);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40063,_0088_008C_0089,0x060003CA,_0088_008D_0092.Add(obj2);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40067,_0088_008C_0089,0x060003CA,_0088_008D_0092.Add(obj3);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40072,_0088_008C_0089,0x060003CA,_0088_008D_0092.Add(_0088_008C_0097);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40109,_0088_008C_008A,0x060003CB,"_0088_008D_0091.Add(_0088_008D_0088._008A_009E_009E(0.0, num2 - _0088_008D_0088._008B_0086_0088, 0.0, 1.0, _0020: true, _0020: true));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40110,_0088_008C_008A,0x060003CB,"_0088_008D_0091.Add(_0088_008D_0089._008A_009E_009E(num2 - _0088_008D_0089._008B_0086_0088, _0088_008C_0090._008A_009E_0086, 0.0, 1.0, _0020: true, _0020: true));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40111,_0088_008C_008A,0x060003CB,"_0088_008D_0091.Add(_0088_008D_0089._008A_009E_009E(_0088_008C_0090._008A_009E_0086, _0088_008D_008E + _0088_008C_0090._008A_009E_0086));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40115,_0088_008C_008A,0x060003CB,"_0088_008C_008B(_0088_008C_0097, _0088_008D_0088._008A_009E_0093(0.0));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40119,_0088_008C_008A,0x060003CB,"_0088_008C_008B(_0088_008D_0088._008A_009E_0093(num2 - _0088_008D_0088._008B_0086_0088), _0088_008D_0089._008A_009E_0093(num2 - _0088_008D_0089._008B_0086_0088));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40123,_0088_008C_008A,0x060003CB,list.Add(_0088_008C_0097);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40126,_0088_008C_008A,0x060003CB,list.Add(_0088_008C_009B);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40127,_0088_008C_008A,0x060003CB,list.Add(_0088_008C_009D);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40128,_0088_008C_008A,0x060003CB,list.Add(_0088_008C_0098);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40136,_0088_008C_008A,0x060003CB,list.Add(_0088_008C_009C);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40140,_0088_008C_008A,0x060003CB,_0088_008D_0090.Add(list);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40145,_0088_008C_008A,0x060003CB,list.Add(_0088_008C_0097);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40154,_0088_008C_008A,0x060003CB,list.Add(_0088_008C_009D);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40162,_0088_008C_008A,0x060003CB,_0088_008D_0090.Add(list);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40269,_0088_008C_008A,0x060003CB,list.Add(_0088_008C_009E);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40310,_0088_008C_008A,0x060003CB,_0088_008C_0096 = _0088_008D_0089._008A_009E_0093(_0088_008C_0090._008A_009E_0086);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40313,_0088_008C_008A,0x060003CB,_0088_008D_0090.Add(list);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40332,_0088_008C_008B,0x060003CC,list.Add(P_0);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40333,_0088_008C_008B,0x060003CC,list.Add(P_1);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40335,_0088_008C_008B,0x060003CC,_0088_008D_008F.Add(list);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40344,_0088_008C_008C,0x060003CD,list.Add(P_0);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40346,_0088_008C_008C,0x060003CD,list.Add(P_1);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40347,_0088_008C_008C,0x060003CD,_0088_008D_0090.Add(list);,static source/IL; no AutoCAD runtime validation
+_0089_009C,40370,_0088_008C_008D,0x060003CE,"list.Add(new _008F_008E(num5, num6));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40373,_0088_008C_008D,0x060003CE,"list.Add(new _008F_008E(P_2 * Math.Cos(num2) + P_1.X, P_2 * Math.Sin(num2) + P_1.Y));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40391,_0088_008C_008E,0x060003CF,"P_0.Add(new _008F_008E(num4, num5));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40401,_0088_008C_008E,0x060003CF,"P_0.Add(new _008F_008E(num7, num8));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40416,_0088_008C_008F,0x060003D0,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_0089_009C,40423,_0088_008C_008F,0x060003D0,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_008B_0086,45750,_0088_0096_009C,0x06000453,_0088_0098_0086.Add(_0088_0098_008A);,static source/IL; no AutoCAD runtime validation
+_008B_0086,45751,_0088_0096_009C,0x06000453,_0088_0098_0086.Add(_0088_0098_008B);,static source/IL; no AutoCAD runtime validation
+_008B_0086,45774,_0088_0096_009C,0x06000453,_0088_0098_0086.Add(_0088_0098_008B);,static source/IL; no AutoCAD runtime validation
+_008B_0086,45775,_0088_0096_009C,0x06000453,_0088_0098_0086.Add(_0088_0098_008D);,static source/IL; no AutoCAD runtime validation
+_008B_0086,45787,_0088_0096_009C,0x06000453,_0088_0098_0086.Add(_0088_0098_008A);,static source/IL; no AutoCAD runtime validation
+_008B_0086,45832,_0088_0096_009D,0x06000454,obj2 = obj5._008B_0088_0093(obj);,static source/IL; no AutoCAD runtime validation
+_008B_0086,45839,_0088_0096_009D,0x06000454,"_008F_0090._008B_008B_0087(ref _0088_0098_0087, _0088_0097_009A._008A_009E_009E(0.0, Math.PI / 2.0 + _0088_0097_008A._008A_009E_0086));",static source/IL; no AutoCAD runtime validation
+_008B_0086,45841,_0088_0096_009D,0x06000454,"_008F_0090._008B_008B_0087(ref _0088_0098_0087, _0088_0097_0098._008A_009E_009E(Math.PI / 2.0 + _0088_0097_008A._008A_009E_0086, num4));",static source/IL; no AutoCAD runtime validation
+_008B_0086,45842,_0088_0096_009D,0x06000454,"_008F_0090._008B_008B_0087(ref _0088_0098_0087, _0088_0097_0099._008A_009E_009E(num4, 310.0 * _0088_0098_0095));",static source/IL; no AutoCAD runtime validation
+_008B_0086,45843,_0088_0096_009D,0x06000454,_0088_0098_0088.Add(_0088_0098_0087);,static source/IL; no AutoCAD runtime validation
+_008B_0086,45851,_0088_0096_009D,0x06000454,"_0088_0098_0088.Add(_0088_0097_009A._008A_009E_009E(0.0, Math.PI / 2.0 + _0088_0097_008A._008A_009E_0086, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_008B_0086,45853,_0088_0096_009D,0x06000454,"_0088_0098_0088.Add(_0088_0097_0098._008A_009E_009E(Math.PI / 2.0 + _0088_0097_008A._008A_009E_0086, num4, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_008B_0086,45854,_0088_0096_009D,0x06000454,"_0088_0098_0088.Add(_0088_0097_0099._008A_009E_009E(num4, 310.0 * _0088_0098_0095, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_008B_0086,45903,_0088_0096_009E,0x06000455,"list.Add(new _008F_008E(0.0, 0.0));",static source/IL; no AutoCAD runtime validation
+_008B_0086,45916,_0088_0096_009E,0x06000455,obj2 = obj3._008B_0088_0093(obj5);,static source/IL; no AutoCAD runtime validation
+_008B_0086,45917,_0088_0096_009E,0x06000455,list.Add(obj2);,static source/IL; no AutoCAD runtime validation
+_008B_0086,45944,_0088_0096_009E,0x06000455,"list.Add(new _008F_008E(_0088_0098_0094.X + obj4.X + obj6.X, _0088_0098_0094.Y + obj4.Y + obj6.Y));",static source/IL; no AutoCAD runtime validation
+_008B_0086,45955,_0088_0096_009E,0x06000455,list.Add(_0088_0097_0098._008A_009E_0093(Math.PI / 2.0 + _0088_0097_008A._008A_009E_0086));,static source/IL; no AutoCAD runtime validation
+_008B_0086,45959,_0088_0096_009E,0x06000455,list.Add(_0088_0097_009A._008A_009E_0093(Math.PI / 2.0 + _0088_0097_008A._008A_009E_0086));,static source/IL; no AutoCAD runtime validation
+_008B_0086,45992,_0088_0096_009E,0x06000455,"list.Add(new _008F_008E(_0088_0098_0093.X + obj4.X + obj.X, _0088_0098_0093.Y + obj4.Y + obj.Y));",static source/IL; no AutoCAD runtime validation
+_008B_0086,46023,_0088_0097_0088,0x06000459,"list2.Add(new _008F_008E(P_0, P_1));",static source/IL; no AutoCAD runtime validation
+_008B_0086,46024,_0088_0097_0088,0x06000459,"list2.Add(new _008F_008E(P_2, P_1));",static source/IL; no AutoCAD runtime validation
+_008B_0086,46025,_0088_0097_0088,0x06000459,list.Add(list2);,static source/IL; no AutoCAD runtime validation
+_008B_0086,46029,_0088_0097_0088,0x06000459,"list2.Add(new _008F_008E(num, P_1));",static source/IL; no AutoCAD runtime validation
+_008B_0086,46030,_0088_0097_0088,0x06000459,"list2.Add(new _008F_008E(num, P_1 - P_4));",static source/IL; no AutoCAD runtime validation
+_008B_0086,46031,_0088_0097_0088,0x06000459,list.Add(list2);,static source/IL; no AutoCAD runtime validation
+_008B_0086,46051,_0088_0097_0089,0x0600045A,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_008B_0086,46064,_0088_0097_0089,0x0600045A,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_008B_0088,46244,_0088_0098_0096,0x06000460,_0088_0099_008A.Add(_0088_0099_0095);,static source/IL; no AutoCAD runtime validation
+_008B_0088,46245,_0088_0098_0096,0x06000460,_0088_0099_008A.Add(_0088_0099_0096);,static source/IL; no AutoCAD runtime validation
+_008B_0088,46255,_0088_0098_0096,0x06000460,_0088_0099_008A.Add(_0088_0099_0098);,static source/IL; no AutoCAD runtime validation
+_008B_0088,46265,_0088_0098_0096,0x06000460,_0088_0099_008A.Add(_0088_0099_0095);,static source/IL; no AutoCAD runtime validation
+_008B_0088,46266,_0088_0098_0096,0x06000460,_0088_0099_008A.Add(_0088_0099_0096);,static source/IL; no AutoCAD runtime validation
+_008B_0088,46288,_0088_0098_0097,0x06000461,"_008F_0090._008B_008B_0087(ref _0088_0099_008B, _0088_0099_008E._008A_009E_009E(num, num2 - _0088_0099_0090 + Math.PI * 2.0));",static source/IL; no AutoCAD runtime validation
+_008B_0088,46289,_0088_0098_0097,0x06000461,"_008F_0090._008B_008B_0087(ref _0088_0099_008B, _0088_0099_008D._008A_009E_009E(num2 - _0088_0099_008F + Math.PI * 2.0, 5.497787143782138));",static source/IL; no AutoCAD runtime validation
+_008B_0088,46290,_0088_0098_0097,0x06000461,_0088_0099_008C.Add(_0088_0099_008B);,static source/IL; no AutoCAD runtime validation
+_008B_0088,46296,_0088_0098_0097,0x06000461,"_0088_0099_008C.Add(_0088_0099_008E._008A_009E_009E(num, num2 - _0088_0099_0090 + Math.PI * 2.0, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_008B_0088,46297,_0088_0098_0097,0x06000461,"_0088_0099_008C.Add(_0088_0099_008D._008A_009E_009E(num2 - _0088_0099_008F + Math.PI * 2.0, 5.497787143782138, 0.0, 1.0, P_0, P_0));",static source/IL; no AutoCAD runtime validation
+_008B_0088,46393,_0088_0098_009C,0x06000466,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_008B_0088,46415,_0088_0098_009C,0x06000466,"P_0.Add(_008F_008E._008B_0089_0088(P_1, obj));",static source/IL; no AutoCAD runtime validation
+_008F_0086,82115,_008A_009E_0091,0x060007A3,"list.Add(new _008F_008E(num7, num8));",static source/IL; no AutoCAD runtime validation
+_008F_0086,82125,_008A_009E_0091,0x060007A3,"list.Add(new _008F_008E(num7, num8));",static source/IL; no AutoCAD runtime validation
+_008F_0086,82157,_008A_009E_0092,0x060007A4,"list2.Add(new _008F_008E(num8, num9));",static source/IL; no AutoCAD runtime validation
+_008F_0086,82158,_008A_009E_0092,0x060007A4,list.Add(list2);,static source/IL; no AutoCAD runtime validation
+_008F_0086,82170,_008A_009E_0092,0x060007A4,"list2.Add(new _008F_008E(num8, num9));",static source/IL; no AutoCAD runtime validation
+_008F_0086,82180,_008A_009E_0092,0x060007A4,list.Add(list2);,static source/IL; no AutoCAD runtime validation
+_008F_0086,82187,_008A_009E_0093,0x060007A5,"public _008F_008E _008A_009E_0093(double P_0, double P_1 = 0.0)",static source/IL; no AutoCAD runtime validation
+_008F_0086,82346,_008A_009E_0099,0x060007AB,"obj2 = _008A_009E_0093(num, P_1);",static source/IL; no AutoCAD runtime validation
+_008F_0086,82354,_008A_009E_0099,0x060007AB,"obj2 = _008A_009E_0093(num6, P_1);",static source/IL; no AutoCAD runtime validation
+_008F_0086,82436,_008A_009E_009A,0x060007AC,"obj = _008A_009E_0093(num3, P_4);",static source/IL; no AutoCAD runtime validation
+_008F_0086,82467,_008A_009E_009B,0x060007AD,"public double _008A_009E_009B(_008F_008E P_0, double P_1 = 0.0)",static source/IL; no AutoCAD runtime validation
+_008F_0086,82497,_008A_009E_009B,0x060007AD,obj3 = _008A_009E_0093(0.0);,static source/IL; no AutoCAD runtime validation
+_008F_0086,82498,_008A_009E_009B,0x060007AD,obj4 = _008A_009E_0093(Math.PI * 2.0);,static source/IL; no AutoCAD runtime validation
+_008F_0086,82591,_008A_009E_009B,0x060007AD,obj2 = _008A_009E_0093(num5);,static source/IL; no AutoCAD runtime validation
+_008F_0086,82690,_008A_009E_009E,0x060007B0,"public List<_008F_008E> _008A_009E_009E(double P_0 = 0.0, double P_1 = Math.PI, double P_2 = 0.0, double P_3 = 1.0, bool P_4 = false, bool P_5 = false)",static source/IL; no AutoCAD runtime validation
+_008F_0086,82699,_008A_009E_009E,0x060007B0,list.Add(_008B_0086_008A);,static source/IL; no AutoCAD runtime validation
+_008F_0086,82700,_008A_009E_009E,0x060007B0,"list.Add(_008F_008E._008B_0089_008E(_008B_0086_008A, _008B_0086_008C * Math.Cos(P_0 + _008B_0086_0088), _008B_0086_008C * Math.Sin(P_0 + _008B_0086_0088)));",static source/IL; no AutoCAD runtime validation
+_008F_0086,82713,_008A_009E_009E,0x060007B0,"list.Add(new _008F_008E(num8, num9));",static source/IL; no AutoCAD runtime validation
+_008F_0086,82724,_008A_009E_009E,0x060007B0,"list.Add(new _008F_008E(num8, num9));",static source/IL; no AutoCAD runtime validation
+_008F_0086,82727,_008A_009E_009E,0x060007B0,"list.Add(new _008F_008E(_008B_0086_008C * Math.Cos(num2 + _008B_0086_0088) + _008B_0086_008A.X, _008B_0086_008C * Math.Sin(num2 + _008B_0086_0088) + _008B_0086_008A.Y));",static source/IL; no AutoCAD runtime validation
+_008F_0086,82728,_008A_009E_009E,0x060007B0,list.Add(_008B_0086_008A);,static source/IL; no AutoCAD runtime validation
+_008F_0086,82763,_008B_0086_0086,0x060007B1,"if (_008F_008E._008B_0088_009E(_008A_009E_0093(num3, P_1), _008B_0086_008A) > _008F_008E._008B_0088_009E(P_0, _008B_0086_008A))",static source/IL; no AutoCAD runtime validation
+_008F_0088,82899,_008B_0086_0093,0x060007B8,"public List<_008F_008E> _008B_0086_0093(double P_0 = 0.0, double P_1 = Math.PI, double P_2 = 0.0, double P_3 = 1.0, bool P_4 = false, bool P_5 = false)",static source/IL; no AutoCAD runtime validation
+_008F_0088,82908,_008B_0086_0093,0x060007B8,list.Add(_008B_0087_0089);,static source/IL; no AutoCAD runtime validation
+_008F_0088,82909,_008B_0086_0093,0x060007B8,"list.Add(_008F_008E._008B_0089_008E(_008B_0087_0089, _008B_0087_008B * Math.Cos(P_0 + _008B_0087_0087), _008B_0087_008B * Math.Sin(P_0 + _008B_0087_0087)));",static source/IL; no AutoCAD runtime validation
+_008F_0088,82922,_008B_0086_0093,0x060007B8,"list.Add(new _008F_008E(num8, num9));",static source/IL; no AutoCAD runtime validation
+_008F_0088,82933,_008B_0086_0093,0x060007B8,"list.Add(new _008F_008E(num8, num9));",static source/IL; no AutoCAD runtime validation
+_008F_0088,82936,_008B_0086_0093,0x060007B8,"list.Add(new _008F_008E(_008B_0087_008B * Math.Cos(num2 + _008B_0087_0087) + _008B_0087_0089.X, _008B_0087_008B * Math.Sin(num2 + _008B_0087_0087) + _008B_0087_0089.Y));",static source/IL; no AutoCAD runtime validation
+_008F_0088,82937,_008B_0086_0093,0x060007B8,list.Add(_008B_0087_0089);,static source/IL; no AutoCAD runtime validation
+_008F_0088,82969,_008B_0086_0094,0x060007B9,"list.Add(new _008F_008E(num7, num8));",static source/IL; no AutoCAD runtime validation
+_008F_0088,82979,_008B_0086_0094,0x060007B9,"list.Add(new _008F_008E(num7, num8));",static source/IL; no AutoCAD runtime validation
+_008F_0088,82983,_008B_0086_0095,0x060007BA,"public _008F_008E _008B_0086_0095(double P_0, double P_1 = 0.0, bool P_2 = true)",static source/IL; no AutoCAD runtime validation
+_008F_0088,83048,_008B_0086_0097,0x060007BC,"_008F_008E obj2 = _008B_0086_0095(num, P_1);",static source/IL; no AutoCAD runtime validation
+_008F_0088,83068,_008B_0086_0097,0x060007BC,"obj2 = _008B_0086_0095(num5, P_1);",static source/IL; no AutoCAD runtime validation
+_008F_0088,83142,_008B_0086_0098,0x060007BD,"_008F_008E obj = _008B_0086_0095(num5, P_4);",static source/IL; no AutoCAD runtime validation
+_008F_0088,83175,_008B_0086_0099,0x060007BE,"public double _008B_0086_0099(_008F_008E P_0, double P_1 = 0.0)",static source/IL; no AutoCAD runtime validation
+_008F_0088,83248,_008B_0086_0099,0x060007BE,"if (num6 < _008F_008E._008B_0088_009E(_008B_0086_0095(_008B_0086_009C(num5, P_1), P_1), obj2))",static source/IL; no AutoCAD runtime validation
+_008F_0088,83356,_008B_0086_009D,0x060007C2,public double _008B_0086_009D(_008F_0088 P_0),static source/IL; no AutoCAD runtime validation
+_008F_0088,83368,_008B_0086_009E,0x060007C3,"P_0._008B_0086_0095(P_2, P_4),",static source/IL; no AutoCAD runtime validation
+_008F_0088,83369,_008B_0086_009E,0x060007C3,"P_1._008B_0086_0095(P_3, P_4)",static source/IL; no AutoCAD runtime validation
+_008F_0090,84399,_008B_008A_008C,0x06000819,"list.Add(new _008F_008E(obj.X - P_1 * Math.Sin(num), obj.Y + P_1 * Math.Cos(num)));",static source/IL; no AutoCAD runtime validation
+_008F_0090,84413,_008B_008A_008C,0x06000819,"list.Add(new _008F_008E(num6, num7));",static source/IL; no AutoCAD runtime validation
+_008F_0090,84425,_008B_008A_008C,0x06000819,"list.Add(new _008F_008E(obj2.X - P_1 * Math.Sin(num), obj2.Y + P_1 * Math.Cos(num)));",static source/IL; no AutoCAD runtime validation
+_008F_0090,84436,_008B_008A_008D,0x0600081A,list.Add(item2);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84447,_008B_008A_008E,0x0600081B,list.Add(item);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84451,_008B_008A_008E,0x0600081B,list.Add(item2);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84515,_008B_008A_0094,0x06000821,"public static List<List<_008F_008E>> _008B_008A_0094(List<List<_008F_008E>> P_0, _008F_008E P_1, double P_2)",static source/IL; no AutoCAD runtime validation
+_008F_0090,84523,_008B_008A_0094,0x06000821,"list.Add(_008B_008A_0095(item, P_1, P_2));",static source/IL; no AutoCAD runtime validation
+_008F_0090,84531,_008B_008A_0095,0x06000822,"public static List<_008F_008E> _008B_008A_0095(List<_008F_008E> P_0, _008F_008E P_1, double P_2)",static source/IL; no AutoCAD runtime validation
+_008F_0090,84539,_008B_008A_0095,0x06000822,"list.Add(_008F_008E._008B_0089_008D(P_1, item, P_2));",static source/IL; no AutoCAD runtime validation
+_008F_0090,84555,_008B_008A_0096,0x06000823,"list.Add(_008B_008A_0098(item, P_1));",static source/IL; no AutoCAD runtime validation
+_008F_0090,84571,_008B_008A_0097,0x06000824,"list.Add(_008F_008E._008B_0089_0091(item, P_1));",static source/IL; no AutoCAD runtime validation
+_008F_0090,84579,_008B_008A_0098,0x06000825,"public static List<_008F_008E> _008B_008A_0098(List<_008F_008E> P_0, _008F_008E P_1)",static source/IL; no AutoCAD runtime validation
+_008F_0090,84587,_008B_008A_0098,0x06000825,"list.Add(_008F_008E._008B_0089_008F(item, P_1));",static source/IL; no AutoCAD runtime validation
+_008F_0090,84595,_008B_008A_0099,0x06000826,public static List<_008F_008E> _008B_008A_0099(List<_008F_008E> P_0),static source/IL; no AutoCAD runtime validation
+_008F_0090,84603,_008B_008A_0099,0x06000826,list.Add(_008F_008E._008B_0089_008C(item));,static source/IL; no AutoCAD runtime validation
+_008F_0090,84611,_008B_008A_009A,0x06000827,public static List<List<_008F_008E>> _008B_008A_009A(List<List<_008F_008E>> P_0),static source/IL; no AutoCAD runtime validation
+_008F_0090,84619,_008B_008A_009A,0x06000827,list.Add(_008B_008A_0099(item));,static source/IL; no AutoCAD runtime validation
+_008F_0090,84627,_008B_008A_009B,0x06000828,public static List<List<_008F_008E>> _008B_008A_009B(List<List<_008F_008E>> P_0),static source/IL; no AutoCAD runtime validation
+_008F_0090,84635,_008B_008A_009B,0x06000828,list.Add(_008B_008A_009C(item));,static source/IL; no AutoCAD runtime validation
+_008F_0090,84643,_008B_008A_009C,0x06000829,public static List<_008F_008E> _008B_008A_009C(List<_008F_008E> P_0),static source/IL; no AutoCAD runtime validation
+_008F_0090,84651,_008B_008A_009C,0x06000829,list.Add(_008F_008E._008B_0089_008B(item));,static source/IL; no AutoCAD runtime validation
+_008F_0090,84675,_008B_008A_009D,0x0600082A,list.Add(P_0);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84679,_008B_008A_009D,0x0600082A,"list.Add(_008F_008E._008B_0089_008E(P_0, num * (double)i, num2 * (double)i, num3 * (double)i));",static source/IL; no AutoCAD runtime validation
+_008F_0090,84681,_008B_008A_009D,0x0600082A,list.Add(P_1);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84711,_008B_008A_009E,0x0600082B,list2.Add(P_0[num - 1]);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84712,_008B_008A_009E,0x0600082B,list2.Add(P_0[num]);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84717,_008B_008A_009E,0x0600082B,list2.Add(P_1[num - 1]);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84718,_008B_008A_009E,0x0600082B,list2.Add(P_0[num - 1]);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84719,_008B_008A_009E,0x0600082B,list.Add(list2);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84720,_008B_008A_009E,0x0600082B,list3.Add(P_1[num - 1]);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84721,_008B_008A_009E,0x0600082B,list3.Add(P_1[num]);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84722,_008B_008A_009E,0x0600082B,list3.Add(P_0[num]);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84723,_008B_008A_009E,0x0600082B,list3.Add(P_1[num - 1]);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84724,_008B_008A_009E,0x0600082B,list.Add(list3);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84729,_008B_008B_0086,0x0600082C,"public static void _008B_008B_0086(ref List<List<_008F_008E>> P_0, List<List<_008F_008E>> P_1)",static source/IL; no AutoCAD runtime validation
+_008F_0090,84737,_008B_008B_0086,0x0600082C,P_0.Add(item);,static source/IL; no AutoCAD runtime validation
+_008F_0090,84741,_008B_008B_0087,0x0600082D,"public static void _008B_008B_0087(ref List<_008F_008E> P_0, List<_008F_008E> P_1)",static source/IL; no AutoCAD runtime validation
+_008F_0090,84749,_008B_008B_0087,0x0600082D,P_0.Add(item);,static source/IL; no AutoCAD runtime validation

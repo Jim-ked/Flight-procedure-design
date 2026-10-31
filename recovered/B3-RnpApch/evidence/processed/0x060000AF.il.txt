@@ -1,0 +1,89 @@
+METHOD 060000AF \x8e.\x8d::\x89\x92 RVA=A818 file=8A18
+IL_0000: ldc.i4.1 
+IL_0001: call 0x060000B5 \x8e.\x8d::\x92
+IL_0006: brtrue.s 61
+IL_0008: pop 
+IL_0009: ldc.i4 76
+IL_000E: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0013: brfalse 242
+IL_0018: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_001D: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0022: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0027: stloc.0 
+IL_0028: ldarg.0 
+IL_0029: callvirt 0x0A000113 Autodesk.AutoCAD.DatabaseServices.DBPoint::get_Position
+IL_002E: stloc.3 
+IL_002F: br.s 62
+IL_0031: pop 
+IL_0032: ldloc.0 
+IL_0033: callvirt 0x0A000114 Autodesk.AutoCAD.EditorInput.Editor::GetCurrentView
+IL_0038: stloc.1 
+IL_0039: ldloc.1 
+IL_003A: callvirt 0x0A000115 Autodesk.AutoCAD.DatabaseServices.AbstractViewTableRecord::get_Target
+IL_003F: stloc.2 
+IL_0040: ldloc.1 
+IL_0041: callvirt 0x0A000116 Autodesk.AutoCAD.DatabaseServices.AbstractViewTableRecord::get_ViewTwist
+IL_0046: ldloca.s local(0x0003)
+IL_0048: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_004D: ldloca.s local(0x0002)
+IL_004F: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0054: sub 
+IL_0055: stloc.s local(0x0004)
+IL_0057: ldloca.s local(0x0003)
+IL_0059: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_005E: ldloca.s local(0x0002)
+IL_0060: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0065: sub 
+IL_0066: stloc.s local(0x0005)
+IL_0068: dup 
+IL_0069: neg 
+IL_006A: call 0x0A000064 System.Math::Cos
+IL_006F: stloc.s local(0x0006)
+IL_0071: neg 
+IL_0072: call 0x0A000065 System.Math::Sin
+IL_0077: stloc.s local(0x0007)
+IL_0079: ldloc.s local(0x0004)
+IL_007B: ldloc.s local(0x0006)
+IL_007D: mul 
+IL_007E: ldloc.s local(0x0005)
+IL_0080: ldloc.s local(0x0007)
+IL_0082: mul 
+IL_0083: sub 
+IL_0084: stloc.s local(0x0008)
+IL_0086: call 0x060000B4 \x8e.\x8d::\x91
+IL_008B: call 0x060000B5 \x8e.\x8d::\x92
+IL_0090: brtrue.s 174
+IL_0092: pop 
+IL_0093: ldloc.s local(0x0004)
+IL_0095: ldloc.s local(0x0007)
+IL_0097: mul 
+IL_0098: ldloc.s local(0x0005)
+IL_009A: ldloc.s local(0x0006)
+IL_009C: mul 
+IL_009D: add 
+IL_009E: stloc.s local(0x0009)
+IL_00A0: br.s 175
+IL_00A2: pop 
+IL_00A3: ldloc.1 
+IL_00A4: ldloc.s local(0x0008)
+IL_00A6: ldloc.s local(0x0009)
+IL_00A8: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_00AD: callvirt 0x0A000118 Autodesk.AutoCAD.DatabaseServices.AbstractViewTableRecord::set_CenterPoint
+IL_00B2: ldloc.0 
+IL_00B3: ldloc.1 
+IL_00B4: callvirt 0x0A000119 Autodesk.AutoCAD.EditorInput.Editor::SetCurrentView
+IL_00B9: leave.s 231
+IL_00BB: stloc.s local(0x000A)
+IL_00BD: ldloc.0 
+IL_00BE: ldc.i4 604
+IL_00C3: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00C8: ldloc.s local(0x000A)
+IL_00CA: callvirt 0x0A000055 System.Exception::get_Message
+IL_00CF: call 0x0A00008B System.String::Concat
+IL_00D4: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_00D9: leave.s 231
+IL_00DB: ldarg.0 
+IL_00DC: callvirt 0x0A00011A Autodesk.AutoCAD.DatabaseServices.Entity::Highlight
+IL_00E1: call 0x0A0000A5 Autodesk.AutoCAD.ApplicationServices.Core.Application::UpdateScreen
+IL_00E6: ret 
+

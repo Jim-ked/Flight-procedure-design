@@ -1,0 +1,10 @@
+﻿topic,classification,B4,other,evidence
+OAS data/model,Same MethodDef,P411/P412 shared _008A_0093,A5 P307/P30A directly construct/build same class,resolved-global-incoming.csv
+coefficient DB loader,Same data schema,private P571 calls own decoderP572,A5 P30A calls P409 loader/decoderP40A,a5-shared-parameter-structure.source.txt; distinct MethodDefs
+size/RDH corrections,Copied formula,P573/P574,A5 parameter path P40B/P40C,P30A direct calls; no B4 calls to P40B/P40C
+surface primitive,Same MethodDef,Plane _008F_0092,same OAS parameter surface class,shared OAS direct calls
+CATII AUTO,Different implementation,shared model includes W*; dedicated drawing model omits,A5 shared OAS class includes W*; full UI path not recovered,P412/P41B vs P55D
+HL,Only same UI terminology,B4 P55F/P567; no shared HL call,A5 full HL path outside authorized shared query,no direct B4 P5F2; do not infer A5 implementation
+FAF/FAP,Only same UI terminology,scalar draw-height input,full A5 role deferred,no common FAF business object in B4
+GP/RDH/LOC,Same data schema,key/rounding/coefficient corrections,P409/P40B/P40C same parameter schema,bounded source excerpts
+CAD writer,Same MethodDef,P087/P089,A5 parameter drawing path P30A uses P087,global direct calls; higher-level contents differ

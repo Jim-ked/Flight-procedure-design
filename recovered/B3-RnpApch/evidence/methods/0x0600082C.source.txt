@@ -1,0 +1,11 @@
+84729: 		public static void _008B_008B_0086(ref List<List<_008F_008E>> P_0, List<List<_008F_008E>> P_1)
+84730: 		{
+84731: 			if (P_1 == null)
+84732: 			{
+84733: 				return;
+84734: 			}
+84735: 			foreach (List<_008F_008E> item in P_1)
+84736: 			{
+84737: 				P_0.Add(item);
+84738: 			}
+84739: 		}

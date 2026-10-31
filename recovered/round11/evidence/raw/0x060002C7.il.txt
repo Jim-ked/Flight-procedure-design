@@ -1,0 +1,8 @@
+METHOD 060002C7 \x89\x87.\x89\x86::.cctor RVA=3720C file=3540C
+IL_0000: call 0x0600088E \x90\x9c.\x90\x9b::\x8b\x90\x88
+IL_0005: ldc.i4 33554484
+IL_000A: call 0x060008B8 \x91\x8a.\x91\x89::e53w34m968awCm9P85taUZe
+IL_000F: call 0x0A000019 System.Type::GetTypeFromHandle
+IL_0014: call 0x0A00001A System.ComponentModel.LicenseManager::Validate
+IL_0019: ret 
+

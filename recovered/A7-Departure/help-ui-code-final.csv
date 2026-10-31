@@ -1,0 +1,10 @@
+﻿Function,HelpEvidence,UIEvidence,Reachability,Consistency,Finding,Evidence
+Y07 Departure evaluation,Departure evaluation; three tabs,FormDepartureEvl; three tabs,P283/P282; P28C/P28D; P290/P291,CONSISTENT,公开入口与三链一致,FormDepartureEvl.html; overview.md
+Independent straight departure,Not promised,No independent control,No independent builder/evaluator/Click,CONSISTENT,Help omission matches build,full Form source
+Station-overhead turn,Not promised,No facility controls,No A7 caller/MethodDef,CONSISTENT,No implementation evidence in this build,full Form source; reachability.json
+Guided/unguided departure,Not promised,No guidance control,No branch input,CONSISTENT,No implementation evidence in this build,full Form/business source
+KML button2,Not geometry help,button2 Click P284,Reachable; template copy only,CODE_HAS_EXTRA,Template save has no geometry injection,cad-output-map.md
+button9/button15 KML,Labels exist,button9 empty; button15 hover only,No calculation Click,HELP_OVRSTATES_BUILD,No calculation path,events.csv; cad-output-map.md
+IAS/wind toggles,Help suggests participation,Click converts units 1.852,Reachable,HELP_OVRSTATES_BUILD,Observed behavior is unit conversion,event-map.md
+ScreenData current screen,Help says current screen,SelectAll Model DBPoints,Reachable,HELP_OVRSTATES_BUILD,No view clipping evidence,obstacle-evaluation.md
+Entry coordinate system,Help says THR origin,Code uses DER origin,Reachable,HELP_OVRSTATES_BUILD,Retain code behavior,runway-coordinate.md

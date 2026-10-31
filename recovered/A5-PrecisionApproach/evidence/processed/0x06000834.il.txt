@@ -1,0 +1,31 @@
+METHOD 06000834 \x8f\x93.\x8f\x92::.ctor RVA=931D4 file=913D4
+IL_0000: ldarg.0 
+IL_0001: call 0x0A00002C System.Object::.ctor
+IL_0006: ldarg.0 
+IL_0007: ldarg.1 
+IL_0008: stfld 0x0400077C \x8f\x93.\x8f\x92::\x8b\x8b\x92
+IL_000D: call 0x06000840 \x8f\x93.\x8f\x92::\x89y
+IL_0012: call 0x0600083F \x8f\x93.\x8f\x92::\x89x
+IL_0017: brfalse.s 47
+IL_0019: pop 
+IL_001A: call 0x06000840 \x8f\x93.\x8f\x92::\x89y
+IL_001F: brfalse.s 50
+IL_0021: br.s 94
+IL_0023: pop 
+IL_0024: br.s 79
+IL_0026: ldarg.0 
+IL_0027: ldarg.2 
+IL_0028: stfld 0x0400077D \x8f\x93.\x8f\x92::\x8b\x8b\x93
+IL_002D: ldarg.0 
+IL_002E: ldarg.3 
+IL_002F: stfld 0x0400077E \x8f\x93.\x8f\x92::\x8b\x8b\x94
+IL_0034: ldarg.0 
+IL_0035: ldc.r8 0.0
+IL_003E: stfld 0x0400077F \x8f\x93.\x8f\x92::\x8b\x8b\x95
+IL_0043: ldarg.0 
+IL_0044: ldarg.s argument(0x0004)
+IL_0046: stfld 0x04000780 \x8f\x93.\x8f\x92::\x8b\x8b\x96
+IL_004B: call 0x0600083F \x8f\x93.\x8f\x92::\x89x
+IL_0050: brfalse.s 50
+IL_0052: ret 
+

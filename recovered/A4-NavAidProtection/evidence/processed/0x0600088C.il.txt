@@ -1,0 +1,68 @@
+METHOD 0600088C \x90\x9c.\x90\x9b::\x8b\x90\x89 RVA=9CF30 file=9B130
+IL_0000: nop 
+IL_0001: ldarg.0 
+IL_0002: castclass 0x0100000C System.Reflection.Assembly
+IL_0007: callvirt 0x0A000037 System.Reflection.Assembly::get_Location
+IL_000C: call 0x0A000098 System.IO.File::Exists
+IL_0011: brfalse.s 48
+IL_0013: ldarg.0 
+IL_0014: castclass 0x0100000C System.Reflection.Assembly
+IL_0019: callvirt 0x0A000037 System.Reflection.Assembly::get_Location
+IL_001E: stloc.0 
+IL_001F: leave 227
+IL_0024: leave.s 53
+IL_0026: pop 
+IL_0027: leave.s 53
+IL_0029: ldarg.0 
+IL_002A: castclass 0x0100000C System.Reflection.Assembly
+IL_002F: callvirt 0x0A000421 System.Reflection.Assembly::GetName
+IL_0034: callvirt 0x0A000444 System.Reflection.AssemblyName::get_CodeBase
+IL_0039: callvirt 0x0A000086 System.Object::ToString
+IL_003E: ldstr 'file:///'
+IL_0043: ldstr ''
+IL_0048: callvirt 0x0A00034F System.String::Replace
+IL_004D: call 0x0A000098 System.IO.File::Exists
+IL_0052: brfalse.s 135
+IL_0054: ldarg.0 
+IL_0055: castclass 0x0100000C System.Reflection.Assembly
+IL_005A: callvirt 0x0A000421 System.Reflection.Assembly::GetName
+IL_005F: callvirt 0x0A000444 System.Reflection.AssemblyName::get_CodeBase
+IL_0064: callvirt 0x0A000086 System.Object::ToString
+IL_0069: ldstr 'file:///'
+IL_006E: ldstr ''
+IL_0073: callvirt 0x0A00034F System.String::Replace
+IL_0078: stloc.0 
+IL_0079: leave.s 227
+IL_007B: leave.s 140
+IL_007D: pop 
+IL_007E: leave.s 140
+IL_0080: ldarg.0 
+IL_0081: callvirt 0x0A000178 System.Object::GetType
+IL_0086: ldstr 'Location'
+IL_008B: callvirt 0x0A000445 System.Type::GetProperty
+IL_0090: ldarg.0 
+IL_0091: ldc.i4.0 
+IL_0092: newarr 0x01000001 System.Object
+IL_0097: callvirt 0x0A000446 System.Reflection.PropertyInfo::GetValue
+IL_009C: callvirt 0x0A000086 System.Object::ToString
+IL_00A1: call 0x0A000098 System.IO.File::Exists
+IL_00A6: brfalse.s 216
+IL_00A8: ldarg.0 
+IL_00A9: callvirt 0x0A000178 System.Object::GetType
+IL_00AE: ldstr 'Location'
+IL_00B3: callvirt 0x0A000445 System.Type::GetProperty
+IL_00B8: ldarg.0 
+IL_00B9: ldc.i4.0 
+IL_00BA: newarr 0x01000001 System.Object
+IL_00BF: callvirt 0x0A000446 System.Reflection.PropertyInfo::GetValue
+IL_00C4: callvirt 0x0A000086 System.Object::ToString
+IL_00C9: stloc.0 
+IL_00CA: leave.s 227
+IL_00CC: leave.s 221
+IL_00CE: pop 
+IL_00CF: leave.s 221
+IL_00D1: ldstr ''
+IL_00D6: ret 
+IL_00D7: ldloc.0 
+IL_00D8: ret 
+

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>离场越障评估 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 传统程序 / 离场越障评估</div>
+        <h1>A7.离场越障评估</h1>
+        <div class="cmd">命令：Y07_离场保护区</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>传统程序</h2>
+                <ul>
+                    <li><a href="FormWindSpiral.html">A1.风螺旋</a></li>
+                    <li><a href="FormCalcu.html">A2.飞行程序基础计算</a></li>
+                    <li><a href="FixTolerance.html">A3.定位容差</a></li>
+                    <li><a href="FormNavAids.html">A4.非精密进近保护区</a></li>
+                    <li><a href="FormPA.html">A5.精密进近保护区</a></li>
+                    <li><a href="FormTemplate.html">A6.传统保护区模板</a></li>
+                    <li><a href="FormDepartureEvl.html" class="active">A7.离场越障评估</a></li>
+                    <li><a href="FormTurnAreaEvl.html">A8.复飞转弯区评估</a></li>
+                    <li><a href="FormPriSecEvl.html">A9.主副区评估</a></li>
+                    <li><a href="FormDmeEvl.html">A10.起始进近DME弧</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">PBN 程序 / 辅助功能</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【离场越障评估】用于绘制并评估<strong>离场（Departure）保护区</strong>。提供“定高转弯”“定点转弯”和“全向离场”三种模式，支持 DER 之前转弯、直线段二次检查，并可评估障碍物导致的离场梯度。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormDepartureEvl.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormDepartureEvl.png" alt="FormDepartureEvl 界面截图" width="452"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>公共元素：障碍物列表与通用操作</h2>
+                <p>窗口下半部为<strong>障碍物列表</strong>，状态栏显示提示信息。各选项卡共用的按钮：</p>
+                <table>
+                    <thead><tr><th>按钮</th><th>功能</th></tr></thead>
+                    <tbody>
+                        <tr><td>【屏幕数据】</td><td>拾取当前屏幕中的所有点实体（障碍物），读取名称、坐标、高度并填入下方列表。</td></tr>
+                        <tr><td>【一键评估】</td><td>按当前选项卡模式计算离场保护区，并逐个评估障碍物对应的离场梯度，结果列入障碍物列表。</td></tr>
+                        <tr><td>【CAD】</td><td>在图中绘制离场保护区。</td></tr>
+                        <tr><td>【标记】</td><td>将列表中选中的障碍物以图块形式标记到图中（含高度属性）。</td></tr>
+                    </tbody>
+                </table>
+                <h3>通用操作步骤</h3>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y07_离场保护区</code> 打开窗口。</li>
+                    <li>在“跑道数据”选项卡填入 DER / THR 数据（可用拾取按钮、【入口坐标系】【屏幕数据】）。</li>
+                    <li>切换到“定高转弯”“定点转弯”或“全向离场”，设置该模式参数。</li>
+                    <li>【一键评估】检查穿透 →【CAD】绘制 /【标记】标注障碍物。</li>
+                </ul>
+                <div class="tip"><strong>联动：</strong>在障碍物列表中单击某行，图纸会自动高亮并居中显示该障碍物。</div>
+            </div>
+            <div class="card">
+                <h2>选项卡一：跑道数据</h2>
+                <h3>界面截图</h3>
+                <!-- 将 images/FormDepartureEvl_tab1.png 替换为该选项卡实际截图即可（保持文件名不变） -->
+                  <img src="images/FormDepartureEvl_tab1.png" alt="跑道数据选项卡截图" width="452"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>起飞末端（DER）X / Y (m)</td><td>0 / 0</td><td>DER 在用户坐标系中的坐标；点右侧图标按钮可在图中拾取跑道末端点自动填入。</td></tr>
+                        <tr><td>起飞末端（DER）标高(m)</td><td>0</td><td>DER 标高。</td></tr>
+                        <tr><td>跑道入口（THR）X / Y (m)</td><td>-3000 / 0</td><td>THR 坐标；点图标按钮可在图中拾取跑道入口点；【交换跑道方向】按钮可互换 DER / THR 数据。</td></tr>
+                        <tr><td>跑道入口（THR）标高(m)</td><td>0</td><td>THR 标高。</td></tr>
+                    </tbody>
+                </table>
+                <h3>按钮功能</h3>
+                <table>
+                    <thead><tr><th>按钮</th><th>功能</th></tr></thead>
+                    <tbody>
+                        <tr><td>【屏幕数据】</td><td>拾取屏幕中的障碍物点，读取名称、坐标、高度填入障碍物列表。</td></tr>
+                        <tr><td>【入口坐标系】</td><td>将已拾取的障碍物坐标换算到以跑道入口为原点的坐标系并更新列表。</td></tr>
+                    </tbody>
+                </table>                
+            </div>
+            <div class="card">
+                <h2>选项卡二：定高转弯</h2>
+                <h3>界面截图</h3>
+                  <img src="images/FormDepartureEvl_tab2.png" alt="定高转弯选项卡截图" width="479"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>离场梯度(%)（左 / 右）</td><td>3.3 / 3.3</td><td>左框为直线段梯度，右框为转弯区梯度。</td></tr>
+                        <tr><td>转弯高度(m)</td><td>300</td><td>到达该高度后开始转弯。</td></tr>
+                        <tr><td>KK'-DER(m)</td><td>8939.39</td><td>KK′ 线（定位容差最早点）至 DER 的距离。</td></tr>
+                        <tr><td>DER之前转弯</td><td>关</td><td>勾选后按“在 DER 之前开始转弯”的模式计算保护区。</td></tr>
+                        <tr><td>IAS(km/h)</td><td>380</td><td>表速；点左侧标签可勾选 / 取消参与计算。</td></tr>
+                        <tr><td>坡度(°)</td><td>15</td><td>转弯坡度。</td></tr>
+                        <tr><td>温度(℃)</td><td>15</td><td>用于真空速换算。</td></tr>
+                        <tr><td>风速(km/h)</td><td>56</td><td>最大风速；点左侧标签可勾选 / 取消参与计算。</td></tr>
+                    </tbody>
+                </table>
+                <h3>按钮功能</h3>
+                <table>
+                    <thead><tr><th>按钮</th><th>功能</th></tr></thead>
+                    <tbody>
+                        <tr><td>【屏幕数据】</td><td>拾取屏幕障碍物填入列表。</td></tr>
+                        <tr><td>【CAD】</td><td>绘制定高转弯离场保护区。</td></tr>
+                        <tr><td>【一键评估】</td><td>计算保护区并评估障碍物穿透。</td></tr>
+                        <tr><td>【标记】</td><td>将选中障碍物以图块标记到图中。</td></tr>
+                    </tbody>
+                </table>
+                <h3>应用效果</h3>
+                  <img src="images/FormDepartureEvl_tab2_effect.png" alt="定高转弯评估效果示例" width="578"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>选项卡三：定点转弯</h2>
+                <h3>界面截图</h3>
+                  <img src="images/FormDepartureEvl_tab3.png" alt="定点转弯选项卡截图" width="479"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>离场梯度(%)（左 / 右）</td><td>3.3 / 3.3</td><td>左框为直线段梯度（修改后自动刷新参考高度），右框为转弯区梯度。</td></tr>
+                        <tr><td>TP点(m)</td><td>8939.39</td><td>转弯点（TP）至 DER 的距离；点旁侧图标按钮可在跑道延长线上拾取 TP 点自动计算。</td></tr>
+                        <tr><td>最早TP(m)</td><td>600</td><td>定位容差最早点（KK′）至 TP 的距离；由拾取按钮自动计算，不可手输。</td></tr>
+                        <tr><td>最晚TP(m)</td><td>600</td><td>定位容差最晚点（C）至 TP 的距离；由拾取按钮自动计算，不可手输。</td></tr>
+                        <tr><td>参考高度(m)</td><td>300</td><td>按直线段梯度推算的 TP 处参考高度（TP距离 × 梯度 + DER标高 + 5）。</td></tr>
+                        <tr><td>计算高度(m)</td><td>899</td><td>实际采用的转弯计算高度（TP距离 × 10% + DER标高 + 5）。</td></tr>
+                        <tr><td>IAS(km/h) / 坡度(°) / 温度(℃) / 风速(km/h)</td><td>380 / 15 / 15 / 56</td><td>转弯参数；IAS 与风速可点左侧标签勾选 / 取消。</td></tr>
+                        <tr><td>直线段二次检查</td><td>关</td><td>勾选后对直线段保护区再做一次穿透检查。</td></tr>
+                    </tbody>
+                </table>
+                <h3>按钮功能</h3>
+                <table>
+                    <thead><tr><th>按钮</th><th>功能</th></tr></thead>
+                    <tbody>
+                        <tr><td>【屏幕数据】</td><td>拾取屏幕障碍物填入列表。</td></tr>
+                        <tr><td>【CAD】</td><td>绘制定点转弯离场保护区。</td></tr>
+                        <tr><td>【一键评估】</td><td>计算保护区并评估障碍物穿透。</td></tr>
+                        <tr><td>【标记】</td><td>将选中障碍物以图块标记到图中。</td></tr>
+                        <tr><td>TP / KK′ / C 旁图标按钮</td><td>在跑道延长线上依次拾取转弯点、定位容差最早点、最晚点，自动计算对应距离。</td></tr>
+                    </tbody>
+                </table>
+                <h3>应用效果</h3>
+                  <img src="images/FormDepartureEvl_tab3_effect.png" alt="定点转弯评估效果示例" width="532"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>选项卡四：全向离场</h2>
+                <h3>界面截图</h3>
+                  <img src="images/FormDepartureEvl_tab4.png" alt="全向离场选项卡截图" width="478"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+                <h3>参数说明</h3>
+                <table>
+                    <thead><tr><th>控件</th><th>默认值</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>离场梯度(%)</td><td>3.3</td><td>全向离场面梯度（PDG）。</td></tr>
+                        <tr><td>转弯高度(m)</td><td>200</td><td>允许开始转弯的高度（TNA）。</td></tr>
+                        <tr><td>终点高度(m)</td><td>900</td><td>保护区计算终点高度。</td></tr>
+                    </tbody>
+                </table>
+                <h3>按钮功能</h3>
+                <table>
+                    <thead><tr><th>按钮</th><th>功能</th></tr></thead>
+                    <tbody>
+                        <tr><td>【屏幕数据】</td><td>拾取屏幕障碍物填入列表。</td></tr>
+                        <tr><td>【CAD】</td><td>绘制全向离场保护区。</td></tr>
+                        <tr><td>【一键评估】</td><td>计算保护区并评估各方向障碍物穿透。</td></tr>
+                        <tr><td>【标记】</td><td>将选中障碍物以图块标记到图中。</td></tr>
+                    </tbody>
+                </table>
+                <h3>应用效果</h3>
+                  <img src="images/FormDepartureEvl_tab4_effect.png" alt="全向离场评估效果示例" width="316"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="pager">
+                <a href="FormTemplate.html">← 上一篇：A6.传统保护区模板</a>
+                <a href="FormTurnAreaEvl.html">下一篇：A8.复飞转弯区评估 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

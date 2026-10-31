@@ -1,0 +1,28 @@
+METHOD 0600085F \x8f\x99.\x8f\x98::\x8b\x8c\x91 RVA=93858 file=91A58
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000789 \x8f\x99.\x8f\x98::\x8b\x8d\x8d
+IL_0006: ldc.i4.0 
+IL_0007: callvirt 0x0A00040E System.Windows.Forms.ButtonBase::set_FlatStyle
+IL_000C: ldc.i4.0 
+IL_000D: call 0x06000869 \x8f\x99.\x8f\x98::\x8a\x89
+IL_0012: brfalse.s 63
+IL_0014: pop 
+IL_0015: call 0x0600086A \x8f\x99.\x8f\x98::\x8a\x8a
+IL_001A: brtrue.s 64
+IL_001C: ldarg.0 
+IL_001D: ldfld 0x04000789 \x8f\x99.\x8f\x98::\x8b\x8d\x8d
+IL_0022: callvirt 0x0A00040F System.Windows.Forms.ButtonBase::get_FlatAppearance
+IL_0027: call 0x0A000414 System.Drawing.Color::get_Red
+IL_002C: callvirt 0x0A000412 System.Windows.Forms.FlatButtonAppearance::set_BorderColor
+IL_0031: br.s 64
+IL_0033: pop 
+IL_0034: ldarg.0 
+IL_0035: ldfld 0x04000789 \x8f\x99.\x8f\x98::\x8b\x8d\x8d
+IL_003A: callvirt 0x0A00040F System.Windows.Forms.ButtonBase::get_FlatAppearance
+IL_003F: ldc.i4.2 
+IL_0040: callvirt 0x0A000410 System.Windows.Forms.FlatButtonAppearance::set_BorderSize
+IL_0045: ldarg.0 
+IL_0046: newobj 0x0A000413 System.EventArgs::.ctor
+IL_004B: callvirt 0x06000865 \x8f\x99.\x8f\x98::yi
+IL_0050: ret 
+

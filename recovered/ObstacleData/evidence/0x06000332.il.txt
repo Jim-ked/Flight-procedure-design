@@ -1,0 +1,66 @@
+METHOD 06000332 \x89\x8f.\x89\x8e::\x87\x96\x99 RVA=3E56C file=3C76C
+IL_0000: call 0x06000340 \x89\x8f.\x89\x8e::\x871
+IL_0005: brfalse.s 102
+IL_0007: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_000C: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0011: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_0016: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_001B: call 0x06000324 \x89\x8f.\x89\x8e::\x87\x96\x8b
+IL_0020: pop 
+IL_0021: ldc.i4.1 
+IL_0022: call 0x06000341 \x89\x8f.\x89\x8e::\x872
+IL_0027: brfalse 232
+IL_002C: pop 
+IL_002D: br.s 178
+IL_002F: ldarg.0 
+IL_0030: ldfld 0x04000253 \x89\x8f.\x89\x8e::\x87\x97\x94
+IL_0035: ldloc.2 
+IL_0036: ldc.i4.2 
+IL_0037: call 0x0A0001C8 System.Math::Round
+IL_003C: stloc.3 
+IL_003D: ldloca.s local(0x0003)
+IL_003F: call 0x0A0001B7 System.Double::ToString
+IL_0044: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0049: call 0x06000341 \x89\x8f.\x89\x8e::\x872
+IL_004E: brfalse 238
+IL_0053: ldarg.0 
+IL_0054: ldc.i4.0 
+IL_0055: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_005A: ldc.i4 4460
+IL_005F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0064: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0069: stloc.0 
+IL_006A: call 0x06000341 \x89\x8f.\x89\x8e::\x872
+IL_006F: brtrue.s 19
+IL_0071: ldc.i4 4464
+IL_0076: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_007B: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0080: stloc.1 
+IL_0081: ldarg.0 
+IL_0082: ldc.i4.1 
+IL_0083: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0088: ldloca.s local(0x0000)
+IL_008A: ldloca.s local(0x0000)
+IL_008C: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0091: ldloca.s local(0x0000)
+IL_0093: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0098: ldc.r8 0.0
+IL_00A1: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_00A6: ldloca.s local(0x0001)
+IL_00A8: ldloca.s local(0x0001)
+IL_00AA: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_00AF: ldloca.s local(0x0001)
+IL_00B1: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_00B6: ldc.r8 0.0
+IL_00BF: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_00C4: ldloca.s local(0x0000)
+IL_00C6: ldloc.1 
+IL_00C7: call 0x0A0001B9 Autodesk.AutoCAD.Geometry.Point3d::DistanceTo
+IL_00CC: stloc.2 
+IL_00CD: call 0x06000341 \x89\x8f.\x89\x8e::\x872
+IL_00D2: brfalse 59
+IL_00D7: br 59
+IL_00DC: pop 
+IL_00DD: br 95
+IL_00E2: ret 
+

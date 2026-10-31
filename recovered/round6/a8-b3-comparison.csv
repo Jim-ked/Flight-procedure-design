@@ -1,0 +1,5 @@
+﻿item,B3,other,classification,evidence
+missed turn geometry,None; straight template only,A8 KK/turn-area chain,Different implementation,No B3 direct A8 business call
+obstacle evaluator,P594/595 and P5EE/5EF/5F4,A8 turn-area evaluator,Different implementation,Core outgoing-call index
+turn parameter,P793 TAS only in SOC,A8 turn input/turn geometry,Same MethodDef at shared model only,No C6/spiral/PDA consumer in B3
+C6/PDA/required gradient,No B3 counterpart; MCG is input,A8 turning evaluation quantities,Different implementation,P47D/P470/field-flow; no inferred reuse

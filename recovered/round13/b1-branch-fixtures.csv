@@ -1,0 +1,8 @@
+﻿case,condition,branch result,writer slot,status
+low-angle,A=60°,A<=60 candidate branch,BoundaryList03/01/04/02,PASS
+right-angle,A=90°,60<A<=90 candidate branch,BoundaryList03/01/04/02,PASS
+warning-limit,A=120°,"wide branch, no >120 warning",same four lists,PASS
+warning-over,A>120°,warning branch,no replacement formula proven,PASS
+fifteen,15° candidate,PI/12 connection candidate,secondary list slots,PASS
+thirty,30° candidate,PI/6 connection candidate,main/secondary list slots,PASS
+width-mismatch,SW1 != SW2,independent descriptor widths and distance selection,BoundaryGroup02 / boundary lists,PASS

@@ -1,0 +1,7 @@
+﻿case,condition,branch result,CAD effect,status
+att-zero,ATT=0,ordinary arithmetic; no special dispatch,normal writer path,PASS
+att-normal,ATT=1482 default,earliest=ATT; latest=-ATT-delay,same primary/secondary/spiral writer,PASS
+fifteen,15° constant,connection/candidate offset,selected child/boundary vertices,PASS
+fixed-12000,literal 12000,fixed-distance carrier/path point,two-point SpiralGroup child,PASS
+fixed-13000,literal 13000,fixed-distance carrier/path point,two-point SpiralGroup child,PASS
+candidate-distance,distance comparison/bisection,candidate point selected by line distance,BoundaryList03/01/04/02 or SpiralGroup,PASS

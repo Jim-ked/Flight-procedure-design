@@ -1,0 +1,199 @@
+METHOD 060004FA \x8b\x95.\x8b\x94::\x89\x8e\x9d RVA=69964 file=67B64
+IL_0000: ldc.i4 988
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse 677
+IL_000F: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0014: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0019: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_001E: stloc.1 
+IL_001F: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_0024: brtrue 264
+IL_0029: ldarg.2 
+IL_002A: callvirt 0x0A0002C5 System.Windows.Forms.DataGridViewCellEventArgs::get_ColumnIndex
+IL_002F: ldc.i4.0 
+IL_0030: blt 676
+IL_0035: ldarg.2 
+IL_0036: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_003B: ldc.i4.0 
+IL_003C: blt 676
+IL_0041: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_0046: stloc.0 
+IL_0047: ldloc.0 
+IL_0048: ldarg.0 
+IL_0049: ldfld 0x04000547 \x8b\x95.\x8b\x94::\x89\x92\x8f
+IL_004E: callvirt 0x0A00016F System.Windows.Forms.DataGridView::get_Rows
+IL_0053: ldarg.2 
+IL_0054: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_0059: callvirt 0x0A0002C7 System.Windows.Forms.DataGridViewRowCollection::get_Item
+IL_005E: callvirt 0x0A000173 System.Windows.Forms.DataGridViewRow::get_Cells
+IL_0063: ldc.i4.1 
+IL_0064: callvirt 0x0A0002C8 System.Windows.Forms.DataGridViewCellCollection::get_Item
+IL_0069: callvirt 0x0A000175 System.Windows.Forms.DataGridViewCell::get_Value
+IL_006E: unbox.any 0x010000D2 System.Double
+IL_0073: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_0078: ldloc.0 
+IL_0079: ldarg.0 
+IL_007A: ldfld 0x04000547 \x8b\x95.\x8b\x94::\x89\x92\x8f
+IL_007F: callvirt 0x0A00016F System.Windows.Forms.DataGridView::get_Rows
+IL_0084: ldarg.2 
+IL_0085: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_008A: callvirt 0x0A0002C7 System.Windows.Forms.DataGridViewRowCollection::get_Item
+IL_008F: callvirt 0x0A000173 System.Windows.Forms.DataGridViewRow::get_Cells
+IL_0094: ldc.i4.2 
+IL_0095: callvirt 0x0A0002C8 System.Windows.Forms.DataGridViewCellCollection::get_Item
+IL_009A: callvirt 0x0A000175 System.Windows.Forms.DataGridViewCell::get_Value
+IL_009F: unbox.any 0x010000D2 System.Double
+IL_00A4: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_00A9: ldloc.0 
+IL_00AA: ldarg.0 
+IL_00AB: ldfld 0x04000547 \x8b\x95.\x8b\x94::\x89\x92\x8f
+IL_00B0: callvirt 0x0A00016F System.Windows.Forms.DataGridView::get_Rows
+IL_00B5: ldarg.2 
+IL_00B6: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_00BB: callvirt 0x0A0002C7 System.Windows.Forms.DataGridViewRowCollection::get_Item
+IL_00C0: callvirt 0x0A000173 System.Windows.Forms.DataGridViewRow::get_Cells
+IL_00C5: ldc.i4.3 
+IL_00C6: callvirt 0x0A0002C8 System.Windows.Forms.DataGridViewCellCollection::get_Item
+IL_00CB: callvirt 0x0A000175 System.Windows.Forms.DataGridViewCell::get_Value
+IL_00D0: unbox.any 0x010000D2 System.Double
+IL_00D5: callvirt 0x06000801 \x8f\x8f.\x8f\x8e::\x8b\x89\x9b
+IL_00DA: ldc.i4.0 
+IL_00DB: stloc.s local(0x0006)
+IL_00DD: ldarg.0 
+IL_00DE: ldfld 0x0400053C \x8b\x95.\x8b\x94::\x89\x91\x9d
+IL_00E3: callvirt 0x0A00011B 0x1B00000A::GetEnumerator
+IL_00E8: stloc.2 
+IL_00E9: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_00EE: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_00F3: brtrue.s 263
+IL_00F5: pop 
+IL_00F6: br 526
+IL_00FB: pop 
+IL_00FC: nop 
+IL_00FD: br.s 389
+IL_00FF: ldloca.s local(0x0002)
+IL_0101: call 0x0A00011C 0x1B00000B::get_Current
+IL_0106: stloc.3 
+IL_0107: ldloc.0 
+IL_0108: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_010D: ldloc.3 
+IL_010E: callvirt 0x0A000113 Autodesk.AutoCAD.DatabaseServices.DBPoint::get_Position
+IL_0113: stloc.s local(0x0004)
+IL_0115: ldloca.s local(0x0004)
+IL_0117: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_011C: sub 
+IL_011D: call 0x0A00002E System.Math::Abs
+IL_0122: ldc.r8 0.5
+IL_012B: bge.un.s 389
+IL_012D: ldloc.0 
+IL_012E: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0133: ldloc.3 
+IL_0134: callvirt 0x0A000113 Autodesk.AutoCAD.DatabaseServices.DBPoint::get_Position
+IL_0139: stloc.s local(0x0004)
+IL_013B: ldloca.s local(0x0004)
+IL_013D: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0142: sub 
+IL_0143: call 0x0A00002E System.Math::Abs
+IL_0148: ldc.r8 0.5
+IL_0151: bge.un.s 389
+IL_0153: ldloc.0 
+IL_0154: callvirt 0x06000800 \x8f\x8f.\x8f\x8e::\x8b\x89\x9a
+IL_0159: ldloc.3 
+IL_015A: callvirt 0x0A000113 Autodesk.AutoCAD.DatabaseServices.DBPoint::get_Position
+IL_015F: stloc.s local(0x0004)
+IL_0161: ldloca.s local(0x0004)
+IL_0163: call 0x0A000077 Autodesk.AutoCAD.Geometry.Point3d::get_Z
+IL_0168: sub 
+IL_0169: call 0x0A00002E System.Math::Abs
+IL_016E: ldc.r8 0.5
+IL_0177: blt.un.s 406
+IL_0179: ldloca.s local(0x0002)
+IL_017B: call 0x0A00011E 0x1B00000B::MoveNext
+IL_0180: brtrue 267
+IL_0185: leave 583
+IL_018A: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_018F: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_0194: brtrue.s 421
+IL_0196: pop 
+IL_0197: br.s 424
+IL_0199: pop 
+IL_019A: br.s 493
+IL_019C: ldloc.3 
+IL_019D: callvirt 0x0A00011A Autodesk.AutoCAD.DatabaseServices.Entity::Highlight
+IL_01A2: ldloc.1 
+IL_01A3: callvirt 0x0A000114 Autodesk.AutoCAD.EditorInput.Editor::GetCurrentView
+IL_01A8: stloc.s local(0x0005)
+IL_01AA: ldloc.s local(0x0005)
+IL_01AC: ldloc.3 
+IL_01AD: callvirt 0x0A000113 Autodesk.AutoCAD.DatabaseServices.DBPoint::get_Position
+IL_01B2: stloc.s local(0x0004)
+IL_01B4: ldloca.s local(0x0004)
+IL_01B6: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_01BB: ldloc.3 
+IL_01BC: callvirt 0x0A000113 Autodesk.AutoCAD.DatabaseServices.DBPoint::get_Position
+IL_01C1: stloc.s local(0x0004)
+IL_01C3: ldloca.s local(0x0004)
+IL_01C5: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_01CA: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_01CF: callvirt 0x0A000118 Autodesk.AutoCAD.DatabaseServices.AbstractViewTableRecord::set_CenterPoint
+IL_01D4: ldloc.1 
+IL_01D5: ldloc.s local(0x0005)
+IL_01D7: callvirt 0x0A000119 Autodesk.AutoCAD.EditorInput.Editor::SetCurrentView
+IL_01DC: call 0x0A0000A5 Autodesk.AutoCAD.ApplicationServices.Core.Application::UpdateScreen
+IL_01E1: ldc.i4.1 
+IL_01E2: stloc.s local(0x0006)
+IL_01E4: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_01E9: brfalse.s 424
+IL_01EB: leave.s 583
+IL_01ED: ldloca.s local(0x0002)
+IL_01EF: constrained. 0x1B00000B 
+IL_01F5: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_01FA: endfinally 
+IL_01FB: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_0200: brtrue.s 589
+IL_0202: nop 
+IL_0203: br.s 541
+IL_0205: ldloca.s local(0x0002)
+IL_0207: call 0x0A00011C 0x1B00000B::get_Current
+IL_020C: callvirt 0x0A00011D Autodesk.AutoCAD.DatabaseServices.Entity::Unhighlight
+IL_0211: ldloca.s local(0x0002)
+IL_0213: call 0x0A00011E 0x1B00000B::MoveNext
+IL_0218: brtrue.s 529
+IL_021A: leave.s 566
+IL_021C: ldloca.s local(0x0002)
+IL_021E: constrained. 0x1B00000B 
+IL_0224: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0229: endfinally 
+IL_022A: ldarg.0 
+IL_022B: ldfld 0x0400053C \x8b\x95.\x8b\x94::\x89\x91\x9d
+IL_0230: callvirt 0x0A00011B 0x1B00000A::GetEnumerator
+IL_0235: stloc.2 
+IL_0236: br 264
+IL_023B: ldloc.s local(0x0006)
+IL_023D: brfalse.s 632
+IL_023F: br.s 519
+IL_0241: ldarg.0 
+IL_0242: ldfld 0x0400054D \x8b\x95.\x8b\x94::\x89\x92\x95
+IL_0247: ldc.i4 3012
+IL_024C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0251: ldloc.0 
+IL_0252: callvirt 0x060007FA \x8f\x8f.\x8f\x8e::\x8b\x89\x94
+IL_0257: ldc.i4 6312
+IL_025C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0261: call 0x0A00003C System.String::Concat
+IL_0266: callvirt 0x0A0002BD System.Windows.Forms.ToolStripItem::set_Text
+IL_026B: ret 
+IL_026C: ldarg.0 
+IL_026D: ldfld 0x0400054D \x8b\x95.\x8b\x94::\x89\x92\x95
+IL_0272: ldc.i4 3012
+IL_0277: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_027C: ldloc.0 
+IL_027D: callvirt 0x060007FA \x8f\x8f.\x8f\x8e::\x8b\x89\x94
+IL_0282: ldc.i4 6316
+IL_0287: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_028C: call 0x0A00003C System.String::Concat
+IL_0291: callvirt 0x0A0002BD System.Windows.Forms.ToolStripItem::set_Text
+IL_0296: br.s 677
+IL_0298: ret 
+IL_0299: ret 
+

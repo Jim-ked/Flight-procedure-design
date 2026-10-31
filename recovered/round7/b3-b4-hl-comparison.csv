@@ -1,0 +1,5 @@
+﻿topic,classification,B4,other,evidence
+HL table,Different implementation,P55F/567 four rows A-D; raw index,B3 P5F2 H/A/B/C/D and fallback D,P55F P567; frozen B3 hl-correction.md
+high elevation,Copied formula,e>900 adds HLr*.02*e/300,same arithmetic P5F2,different MethodDefs
+GP correction,Different implementation,none,P5F2 adds (GP-3.2)*HLr*.05,control readers and method bodies
+rounding,Different implementation,SOC none; P567 increment round2; display total round2,business no round; separate display total round2,P55F P567 P56A; B3 report

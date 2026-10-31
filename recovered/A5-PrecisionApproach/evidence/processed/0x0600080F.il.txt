@@ -1,0 +1,28 @@
+METHOD 0600080F \x8f\x8f.\x8f\x8e::\x8b\x89\x8d RVA=92690 file=90890
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: call 0x06000807 \x8f\x8f.\x8f\x8e::\x8b\x88\x9e
+IL_0007: stloc.0 
+IL_0008: ldarg.1 
+IL_0009: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_000E: ldarg.0 
+IL_000F: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0014: sub 
+IL_0015: ldarg.1 
+IL_0016: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_001B: ldarg.0 
+IL_001C: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0021: sub 
+IL_0022: call 0x0A000063 System.Math::Atan2
+IL_0027: stloc.1 
+IL_0028: ldarg.0 
+IL_0029: ldloc.0 
+IL_002A: ldloc.1 
+IL_002B: ldarg.2 
+IL_002C: add 
+IL_002D: ldarg.1 
+IL_002E: callvirt 0x06000800 \x8f\x8f.\x8f\x8e::\x8b\x89\x9a
+IL_0033: call 0x06000809 \x8f\x8f.\x8f\x8e::\x8b\x89\x87
+IL_0038: call 0x0600080A \x8f\x8f.\x8f\x8e::\x8b\x89\x88
+IL_003D: ret 
+

@@ -1,0 +1,250 @@
+METHOD 0600036A \x89\x93.\x89\x92::\x87\x9a\x98 RVA=4427C file=4247C
+IL_0000: nop 
+IL_0001: ldc.i4 588
+IL_0006: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000B: brfalse 817
+IL_0010: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0015: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_001A: dup 
+IL_001B: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_0020: stloc.0 
+IL_0021: dup 
+IL_0022: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0027: stloc.1 
+IL_0028: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_002D: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_0032: call 0x06000353 \x89\x93.\x89\x92::\x87\x99\x9a
+IL_0037: pop 
+IL_0038: ldarg.0 
+IL_0039: ldc.i4.0 
+IL_003A: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_003F: newobj 0x0A0000EF Autodesk.AutoCAD.EditorInput.PromptSelectionOptions::.ctor
+IL_0044: stloc.s local(0x0005)
+IL_0046: ldloc.s local(0x0005)
+IL_0048: ldc.i4 4700
+IL_004D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0052: callvirt 0x0A000325 Autodesk.AutoCAD.EditorInput.PromptSelectionOptions::set_MessageForAdding
+IL_0057: ldloc.s local(0x0005)
+IL_0059: ldc.i4 4704
+IL_005E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0063: callvirt 0x0A000324 Autodesk.AutoCAD.EditorInput.PromptSelectionOptions::set_MessageForRemoval
+IL_0068: ldc.i4.1 
+IL_0069: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_006E: brfalse 706
+IL_0073: pop 
+IL_0074: ldc.i4 12
+IL_0079: stloc.s local(0x0004)
+IL_007B: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_0080: brtrue.s 211
+IL_0082: ldc.i4.1 
+IL_0083: stloc.s local(0x0007)
+IL_0085: br 288
+IL_008A: ldloc.2 
+IL_008B: ldc.i4.0 
+IL_008C: ldloc.s local(0x0008)
+IL_008E: ldloc.s local(0x0007)
+IL_0090: callvirt 0x0A00032B 0x1B000034::get_Item
+IL_0095: callvirt 0x0A00032C Autodesk.AutoCAD.DatabaseServices.Region::BooleanOperation
+IL_009A: ldc.i4 5
+IL_009F: stloc.s local(0x0004)
+IL_00A1: ldloc.s local(0x0007)
+IL_00A3: ldc.i4.1 
+IL_00A4: add 
+IL_00A5: stloc.s local(0x0007)
+IL_00A7: ldc.i4 2
+IL_00AC: stloc.s local(0x0004)
+IL_00AE: br.s 288
+IL_00B0: newobj 0x0A00032D Autodesk.AutoCAD.DatabaseServices.DBObjectCollection::.ctor
+IL_00B5: stloc.3 
+IL_00B6: ldc.i4 7
+IL_00BB: stloc.s local(0x0004)
+IL_00BD: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_00C2: brtrue 610
+IL_00C7: ldloc.s local(0x0004)
+IL_00C9: switch [610, 13, 288, 334, 310, 173, 310, 740, 367, 749, 28, 75, 750, 750, 142, 68, 758]
+IL_0112: br.s 304
+IL_0114: ldloc.s local(0x0007)
+IL_0116: ldloc.s local(0x0008)
+IL_0118: callvirt 0x0A00032E 0x1B000034::get_Count
+IL_011D: blt 150
+IL_0122: br.s 188
+IL_0124: nop 
+IL_0125: br 610
+IL_012A: ldloc.1 
+IL_012B: ldloc.s local(0x0005)
+IL_012D: callvirt 0x0A0000F0 Autodesk.AutoCAD.EditorInput.Editor::GetSelection
+IL_0132: stloc.s local(0x0006)
+IL_0134: ldarg.0 
+IL_0135: ldc.i4.1 
+IL_0136: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_013B: ldc.i4 3
+IL_0140: stloc.s local(0x0004)
+IL_0142: ldloc.s local(0x0006)
+IL_0144: callvirt 0x0A0000F1 Autodesk.AutoCAD.EditorInput.PromptSelectionResult::get_Status
+IL_0149: ldc.i4 5100
+IL_014E: beq.s 353
+IL_0150: br 749
+IL_0155: newobj 0x0A00032F 0x1B000034::.ctor
+IL_015A: stloc.s local(0x0008)
+IL_015C: ldc.i4 8
+IL_0161: stloc.s local(0x0004)
+IL_0163: newobj 0x0A00032D Autodesk.AutoCAD.DatabaseServices.DBObjectCollection::.ctor
+IL_0168: stloc.s local(0x0009)
+IL_016A: ldloc.0 
+IL_016B: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_0170: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_0175: stloc.s local(0x000D)
+IL_0177: ldloc.s local(0x0006)
+IL_0179: callvirt 0x0A0000F2 Autodesk.AutoCAD.EditorInput.PromptSelectionResult::get_Value
+IL_017E: callvirt 0x0A00031E Autodesk.AutoCAD.EditorInput.SelectionSet::GetEnumerator
+IL_0183: stloc.s local(0x000A)
+IL_0185: nop 
+IL_0186: br.s 510
+IL_0188: ldloc.s local(0x000A)
+IL_018A: callvirt 0x0A0000E4 System.Collections.IEnumerator::get_Current
+IL_018F: castclass 0x0100017A Autodesk.AutoCAD.EditorInput.SelectedObject
+IL_0194: stloc.s local(0x000E)
+IL_0196: ldloc.s local(0x000E)
+IL_0198: brfalse.s 510
+IL_019A: ldc.i4.1 
+IL_019B: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_01A0: brtrue.s 481
+IL_01A2: pop 
+IL_01A3: ldloc.s local(0x000D)
+IL_01A5: ldloc.s local(0x000E)
+IL_01A7: callvirt 0x0A00031F Autodesk.AutoCAD.EditorInput.SelectedObject::get_ObjectId
+IL_01AC: ldc.i4.0 
+IL_01AD: callvirt 0x0A000080 Autodesk.AutoCAD.DatabaseServices.Transaction::GetObject
+IL_01B2: isinst 0x01000010 Autodesk.AutoCAD.DatabaseServices.Entity
+IL_01B7: stloc.s local(0x000F)
+IL_01B9: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_01BE: brfalse.s 500
+IL_01C0: ldloc.s local(0x000F)
+IL_01C2: ldnull 
+IL_01C3: call 0x0A000054 Autodesk.AutoCAD.Runtime.DisposableWrapper::op_Inequality
+IL_01C8: brfalse.s 510
+IL_01CA: ldloc.s local(0x000F)
+IL_01CC: isinst 0x01000030 Autodesk.AutoCAD.DatabaseServices.Polyline
+IL_01D1: brtrue.s 500
+IL_01D3: br.s 482
+IL_01D5: pop 
+IL_01D6: ldloc.s local(0x000F)
+IL_01D8: isinst 0x0100017E Autodesk.AutoCAD.DatabaseServices.Spline
+IL_01DD: brtrue.s 500
+IL_01DF: ldloc.s local(0x000F)
+IL_01E1: isinst 0x0100005C Autodesk.AutoCAD.DatabaseServices.Circle
+IL_01E6: brfalse.s 510
+IL_01E8: ldloc.s local(0x0009)
+IL_01EA: ldloc.s local(0x000F)
+IL_01EC: callvirt 0x0A000330 Autodesk.AutoCAD.DatabaseServices.DBObjectCollection::Add
+IL_01F1: pop 
+IL_01F2: ldloc.s local(0x000A)
+IL_01F4: callvirt 0x0A0000E6 System.Collections.IEnumerator::MoveNext
+IL_01F9: brtrue.s 404
+IL_01FB: leave.s 542
+IL_01FD: ldloc.s local(0x000A)
+IL_01FF: isinst 0x010000DB System.IDisposable
+IL_0204: stloc.s local(0x000C)
+IL_0206: ldloc.s local(0x000C)
+IL_0208: brfalse.s 541
+IL_020A: ldloc.s local(0x000C)
+IL_020C: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0211: endfinally 
+IL_0212: ldloc.s local(0x000D)
+IL_0214: callvirt 0x0A0000A4 Autodesk.AutoCAD.DatabaseServices.Transaction::Commit
+IL_0219: leave.s 563
+IL_021B: ldloc.s local(0x000D)
+IL_021D: brfalse.s 562
+IL_021F: ldloc.s local(0x000D)
+IL_0221: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0226: endfinally 
+IL_0227: ldloc.1 
+IL_0228: ldc.i4 4708
+IL_022D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0232: ldloc.s local(0x0009)
+IL_0234: callvirt 0x0A000331 Autodesk.AutoCAD.DatabaseServices.DBObjectCollection::get_Count
+IL_0239: stloc.s local(0x0010)
+IL_023B: ldloca.s local(0x0010)
+IL_023D: call 0x0A0001C4 System.Int32::ToString
+IL_0242: ldc.i4 4712
+IL_0247: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_024C: call 0x0A00003C System.String::Concat
+IL_0251: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_0256: ldloc.s local(0x0009)
+IL_0258: call 0x0A000332 Autodesk.AutoCAD.DatabaseServices.Region::CreateFromCurves
+IL_025D: callvirt 0x0A000333 Autodesk.AutoCAD.DatabaseServices.DBObjectCollection::GetEnumerator
+IL_0262: stloc.s local(0x000A)
+IL_0264: nop 
+IL_0265: br.s 662
+IL_0267: ldloc.s local(0x000A)
+IL_0269: callvirt 0x0A0000E4 System.Collections.IEnumerator::get_Current
+IL_026E: castclass 0x0100017B Autodesk.AutoCAD.DatabaseServices.Region
+IL_0273: stloc.s local(0x000B)
+IL_0275: ldc.i4.0 
+IL_0276: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_027B: brfalse.s 661
+IL_027D: pop 
+IL_027E: ldloc.s local(0x0008)
+IL_0280: ldloc.s local(0x000B)
+IL_0282: callvirt 0x0A000334 0x1B000034::Add
+IL_0287: br.s 662
+IL_0289: pop 
+IL_028A: ldloc.s local(0x000A)
+IL_028C: callvirt 0x0A0000E6 System.Collections.IEnumerator::MoveNext
+IL_0291: brtrue.s 627
+IL_0293: leave.s 694
+IL_0295: ldloc.s local(0x000A)
+IL_0297: isinst 0x010000DB System.IDisposable
+IL_029C: stloc.s local(0x000C)
+IL_029E: ldloc.s local(0x000C)
+IL_02A0: brfalse.s 693
+IL_02A2: ldloc.s local(0x000C)
+IL_02A4: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_02A9: endfinally 
+IL_02AA: leave.s 719
+IL_02AC: pop 
+IL_02AD: ldloc.s local(0x0008)
+IL_02AF: callvirt 0x0A000335 0x1B000034::Clear
+IL_02B4: leave.s 719
+IL_02B6: pop 
+IL_02B7: ldc.i4 6
+IL_02BC: stloc.s local(0x0004)
+IL_02BE: br 310
+IL_02C3: ldloc.s local(0x0008)
+IL_02C5: ldc.i4.0 
+IL_02C6: callvirt 0x0A00032B 0x1B000034::get_Item
+IL_02CB: stloc.2 
+IL_02CC: ldc.i4 14
+IL_02D1: stloc.s local(0x0004)
+IL_02D3: br 142
+IL_02D8: ldloc.2 
+IL_02D9: ldloc.3 
+IL_02DA: callvirt 0x0A000336 Autodesk.AutoCAD.DatabaseServices.Entity::Explode
+IL_02DF: br.s 750
+IL_02E1: ret 
+IL_02E2: ldloc.3 
+IL_02E3: callvirt 0x0A000333 Autodesk.AutoCAD.DatabaseServices.DBObjectCollection::GetEnumerator
+IL_02E8: stloc.s local(0x000A)
+IL_02EA: nop 
+IL_02EB: br.s 785
+IL_02ED: ldloc.s local(0x000A)
+IL_02EF: callvirt 0x0A0000E4 System.Collections.IEnumerator::get_Current
+IL_02F4: castclass 0x01000010 Autodesk.AutoCAD.DatabaseServices.Entity
+IL_02F9: ldloc.0 
+IL_02FA: ldstr ''
+IL_02FF: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_0304: pop 
+IL_0305: ldloc.s local(0x000A)
+IL_0307: callvirt 0x0A0000E6 System.Collections.IEnumerator::MoveNext
+IL_030C: brtrue.s 761
+IL_030E: leave.s 817
+IL_0310: ldloc.s local(0x000A)
+IL_0312: isinst 0x010000DB System.IDisposable
+IL_0317: stloc.s local(0x000C)
+IL_0319: ldloc.s local(0x000C)
+IL_031B: brfalse.s 816
+IL_031D: ldloc.s local(0x000C)
+IL_031F: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0324: endfinally 
+IL_0325: ret 
+

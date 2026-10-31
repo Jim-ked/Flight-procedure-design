@@ -1,0 +1,101 @@
+METHOD 06000237 \x88\x9c.\x88\x9b::\x98\x8a RVA=1B0D8 file=192D8
+IL_0000: ldc.i4.0 
+IL_0001: call 0x06000246 \x88\x9c.\x88\x9b::\x87\x95
+IL_0006: brfalse.s 32
+IL_0008: pop 
+IL_0009: ldc.i4 9
+IL_000E: stloc local(0x0006)
+IL_0012: br.s 57
+IL_0014: pop 
+IL_0015: ldc.i4 8
+IL_001A: stloc local(0x0006)
+IL_001E: call 0x06000246 \x88\x9c.\x88\x9b::\x87\x95
+IL_0023: brfalse 390
+IL_0028: br 219
+IL_002D: ldc.i4 316
+IL_0032: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0037: brtrue 277
+IL_003C: ldarg.0 
+IL_003D: ldfld 0x0400010D \x88\x9c.\x88\x9b::\x9b\x9a
+IL_0042: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0047: ldc.i4 1984
+IL_004C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0051: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_0056: stloc.0 
+IL_0057: ldc.i4 3
+IL_005C: stloc local(0x0006)
+IL_0060: ldarg.0 
+IL_0061: ldfld 0x0400010E \x88\x9c.\x88\x9b::\x9b\x9b
+IL_0066: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_006B: ldc.i4 1984
+IL_0070: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0075: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_007A: stloc.1 
+IL_007B: ldc.i4 6
+IL_0080: stloc local(0x0006)
+IL_0084: ldarg.0 
+IL_0085: ldfld 0x04000111 \x88\x9c.\x88\x9b::\x9b\x9e
+IL_008A: ldc.i4 1984
+IL_008F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0094: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_0099: stloc.2 
+IL_009A: ldarg.0 
+IL_009B: ldfld 0x04000108 \x88\x9c.\x88\x9b::\x9b\x95
+IL_00A0: ldc.i4 1984
+IL_00A5: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00AA: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_00AF: stloc.3 
+IL_00B0: ldloc.3 
+IL_00B1: ldc.r8 0.0
+IL_00BA: bne.un.s 288
+IL_00BC: ldc.i4 7
+IL_00C1: stloc local(0x0006)
+IL_00C5: call 0x06000246 \x88\x9c.\x88\x9b::\x87\x95
+IL_00CA: brfalse 390
+IL_00CF: ldloc local(0x0006)
+IL_00D3: switch [57, 390, 345, 108, 327, 406, 144, 390, 406, 57, 387]
+IL_0104: br 406
+IL_0109: ldc.i4 1
+IL_010E: stloc local(0x0006)
+IL_0112: br.s 390
+IL_0114: ldloc.2 
+IL_0115: ldloc.3 
+IL_0116: sub 
+IL_0117: ldloc.0 
+IL_0118: ldc.r8 3.141592653589793
+IL_0121: mul 
+IL_0122: ldc.r8 180.0
+IL_012B: div 
+IL_012C: call 0x0A000275 System.Math::Tan
+IL_0131: div 
+IL_0132: ldloc.1 
+IL_0133: add 
+IL_0134: call 0x0A0001B8 System.Math::Round
+IL_0139: stloc.s local(0x0004)
+IL_013B: ldarg.0 
+IL_013C: ldfld 0x0400010F \x88\x9c.\x88\x9b::\x9b\x9c
+IL_0141: ldloca.s local(0x0004)
+IL_0143: call 0x0A0001B7 System.Double::ToString
+IL_0148: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_014D: ldarg.0 
+IL_014E: ldfld 0x04000122 \x88\x9c.\x88\x9b::\x9c\x96
+IL_0153: ldloc.2 
+IL_0154: ldloc.3 
+IL_0155: sub 
+IL_0156: stloc.s local(0x0005)
+IL_0158: ldloca.s local(0x0005)
+IL_015A: ldc.i4 2040
+IL_015F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0164: call 0x0A000073 System.Double::ToString
+IL_0169: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_016E: ldc.i4 10
+IL_0173: stloc local(0x0006)
+IL_0177: ldloc.s local(0x0004)
+IL_0179: ret 
+IL_017A: ldc.i4 2036
+IL_017F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0184: call 0x0A000030 System.Windows.Forms.MessageBox::Show
+IL_0189: pop 
+IL_018A: ldc.r8 -1.0
+IL_0193: ret 
+

@@ -1,0 +1,104 @@
+METHOD 0600055C \x8b\x97.\x8b\x96::\x89\x95\x9a RVA=710AC file=6F2AC
+IL_0000: ldc.i4 1056
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse 397
+IL_000F: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_0014: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_0019: stloc.2 
+IL_001A: dup 
+IL_001B: ldarg.0 
+IL_001C: ldfld 0x040005A6 \x8b\x97.\x8b\x96::\x89\x97\x9a
+IL_0021: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0026: ldc.i4 1984
+IL_002B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0030: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_0035: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_003A: dup 
+IL_003B: ldarg.0 
+IL_003C: ldfld 0x040005A5 \x8b\x97.\x8b\x96::\x89\x97\x99
+IL_0041: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0046: ldc.i4 1984
+IL_004B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0050: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_0055: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_005A: dup 
+IL_005B: ldarg.0 
+IL_005C: ldfld 0x040005A4 \x8b\x97.\x8b\x96::\x89\x97\x98
+IL_0061: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0066: ldc.i4 1984
+IL_006B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0070: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_0075: callvirt 0x06000801 \x8f\x8f.\x8f\x8e::\x8b\x89\x9b
+IL_007A: ldloc.2 
+IL_007B: ldarg.0 
+IL_007C: ldfld 0x040005B0 \x8b\x97.\x8b\x96::\x89\x98\x8b
+IL_0081: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0086: ldc.i4 1984
+IL_008B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0090: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_0095: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_009A: ldloc.2 
+IL_009B: ldarg.0 
+IL_009C: ldfld 0x040005AE \x8b\x97.\x8b\x96::\x89\x98\x89
+IL_00A1: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_00A6: ldc.i4 1984
+IL_00AB: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00B0: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_00B5: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_00BA: ldloc.2 
+IL_00BB: ldarg.0 
+IL_00BC: ldfld 0x040005AD \x8b\x97.\x8b\x96::\x89\x98\x88
+IL_00C1: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_00C6: ldc.i4 1984
+IL_00CB: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00D0: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_00D5: callvirt 0x06000801 \x8f\x8f.\x8f\x8e::\x8b\x89\x9b
+IL_00DA: ldloc.2 
+IL_00DB: call 0x060000AC \x8e.\x8d::\x89\x8f
+IL_00E0: stloc.3 
+IL_00E1: newobj 0x060005DD \x8c\x96.\x8c\x95::.ctor
+IL_00E6: stloc.0 
+IL_00E7: ldc.i4.0 
+IL_00E8: call 0x06000581 \x8b\x97.\x8b\x96::\x88\x9d
+IL_00ED: brfalse.s 325
+IL_00EF: pop 
+IL_00F0: call 0x06000581 \x8b\x97.\x8b\x96::\x88\x9d
+IL_00F5: brfalse.s 364
+IL_00F7: ldarg.0 
+IL_00F8: ldloc.0 
+IL_00F9: call 0x0600055D \x8b\x97.\x8b\x96::\x89\x95\x9b
+IL_00FE: call 0x06000581 \x8b\x97.\x8b\x96::\x88\x9d
+IL_0103: brtrue.s 273
+IL_0105: ldloc.0 
+IL_0106: ldfld 0x040006BA \x8c\x96.\x8c\x95::\x8a\x8b\x95
+IL_010B: ldc.r8 0.0
+IL_0114: ldc.r8 0.0
+IL_011D: ldc.r8 0.0
+IL_0126: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_012B: ldloc.3 
+IL_012C: ldfld 0x04000744 \x8e\x98.\x8e\x97::\x8a\x9d\x8a
+IL_0131: call 0x06000821 \x8f\x91.\x8f\x90::\x8b\x8a\x94
+IL_0136: stloc.1 
+IL_0137: br.s 326
+IL_0139: pop 
+IL_013A: ldloc.1 
+IL_013B: call 0x06000827 \x8f\x91.\x8f\x90::\x8b\x8a\x9a
+IL_0140: ldloc.3 
+IL_0141: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0146: ldloc.3 
+IL_0147: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_014C: ldc.r8 0.0
+IL_0155: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_015A: call 0x06000823 \x8f\x91.\x8f\x90::\x8b\x8a\x96
+IL_015F: stloc.1 
+IL_0160: call 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase
+IL_0165: ldloc.1 
+IL_0166: ldarg.0 
+IL_0167: call 0x06000565 \x8b\x97.\x8b\x96::\x89\x96\x8a
+IL_016C: call 0x06000087 \x8c.\x8b::\x88\x8b
+IL_0171: ldc.i4 5688
+IL_0176: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_017B: call 0x0A000030 System.Windows.Forms.MessageBox::Show
+IL_0180: pop 
+IL_0181: ret 
+

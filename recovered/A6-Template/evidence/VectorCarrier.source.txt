@@ -1,0 +1,89 @@
+84943: 	public struct _008F_0096
+84944: 	{
+84945: 		[CompilerGenerated]
+84946: 		private double _008B_008C_0088;
+84947: 
+84948: 		[CompilerGenerated]
+84949: 		private double _008B_008C_0089;
+84950: 
+84951: 		public double X
+84952: 		{
+84953: 			[CompilerGenerated]
+84954: 			get
+84955: 			{
+84956: 				return _008B_008C_0088;
+84957: 			}
+84958: 			[CompilerGenerated]
+84959: 			set
+84960: 			{
+84961: 				_008B_008C_0088 = num;
+84962: 			}
+84963: 		}
+84964: 
+84965: 		public double Y
+84966: 		{
+84967: 			[CompilerGenerated]
+84968: 			get
+84969: 			{
+84970: 				return _008B_008C_0089;
+84971: 			}
+84972: 			[CompilerGenerated]
+84973: 			set
+84974: 			{
+84975: 				_008B_008C_0089 = num;
+84976: 			}
+84977: 		}
+84978: 
+84979: 		public _008F_0096(double P_0, double P_1)
+84980: 		{
+84981: 			X = P_0;
+84982: 			Y = P_1;
+84983: 		}
+84984: 
+84985: 		[SpecialName]
+84986: 		public double _008B_008B_009D()
+84987: 		{
+84988: 			return Math.Sqrt(X * X + Y * Y);
+84989: 		}
+84990: 
+84991: 		[SpecialName]
+84992: 		public double _008B_008C_0086()
+84993: 		{
+84994: 			return X * X + Y * Y;
+84995: 		}
+84996: 
+84997: 		public double _008B_008B_0097(_008F_0096 P_0)
+84998: 		{
+84999: 			return X * P_0.X + Y * P_0.Y;
+85000: 		}
+85001: 
+85002: 		public double _008B_008B_0098(_008F_0096 P_0)
+85003: 		{
+85004: 			return X * P_0.Y - Y * P_0.X;
+85005: 		}
+85006: 
+85007: 		public static _008F_0096 operator *(_008F_0096 P_0, double P_1)
+85008: 		{
+85009: 			return new _008F_0096(P_0.X * P_1, P_0.Y * P_1);
+85010: 		}
+85011: 
+85012: 		public static _008F_0096 operator *(double P_0, _008F_0096 P_1)
+85013: 		{
+85014: 			return P_1 * P_0;
+85015: 		}
+85016: 
+85017: 		static _008F_0096()
+85018: 		{
+85019: 			LicenseManager.Validate(typeof(_008F_0096));
+85020: 		}
+85021: 
+85022: 		internal static bool _008A_0087()
+85023: 		{
+85024: 			return true;
+85025: 		}
+85026: 
+85027: 		internal static bool _008A_0088()
+85028: 		{
+85029: 			return false;
+85030: 		}
+85031: 	}

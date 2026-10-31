@@ -1,0 +1,33 @@
+METHOD 06000826 \x8f\x91.\x8f\x90::\x8b\x8a\x99 RVA=92D3C file=90F3C
+IL_0000: ldarg.0 
+IL_0001: brfalse.s 86
+IL_0003: ldarg.0 
+IL_0004: callvirt 0x0A000123 0x1B00000F::get_Count
+IL_0009: brfalse.s 86
+IL_000B: newobj 0x0A000126 0x1B00000F::.ctor
+IL_0010: stloc.0 
+IL_0011: ldarg.0 
+IL_0012: callvirt 0x0A000127 0x1B00000F::GetEnumerator
+IL_0017: stloc.1 
+IL_0018: nop 
+IL_0019: br.s 59
+IL_001B: ldloca.s local(0x0001)
+IL_001D: call 0x0A000128 0x1B000010::get_Current
+IL_0022: stloc.2 
+IL_0023: ldloc.0 
+IL_0024: ldloc.2 
+IL_0025: call 0x0600080E \x8f\x8f.\x8f\x8e::\x8b\x89\x8c
+IL_002A: callvirt 0x0A00012A 0x1B00000F::Add
+IL_002F: ldloca.s local(0x0001)
+IL_0031: call 0x0A000129 0x1B000010::MoveNext
+IL_0036: brtrue.s 39
+IL_0038: leave.s 84
+IL_003A: ldloca.s local(0x0001)
+IL_003C: constrained. 0x1B000010 
+IL_0042: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0047: endfinally 
+IL_0048: ldloc.0 
+IL_0049: ret 
+IL_004A: ldnull 
+IL_004B: ret 
+

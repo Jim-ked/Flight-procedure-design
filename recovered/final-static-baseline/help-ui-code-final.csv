@@ -1,0 +1,12 @@
+﻿Module,Feature,Classification,ActualBuildBehavior,Evidence
+A1,common tangent,HELP_OVRSTATES_BUILD,UI标签与通用两spiral solver不能等同；实际点列拼接/候选；A6另有角度成员,recovered/A1-WindSpiral/final-static-closure.md;recovered/A6-Template/shared-geometry.md
+A3,cross-fix,HELP_OVRSTATES_BUILD,实现仅单台S+方向Q；无双台自动交叉定位,recovered/A3-FixTolerance/final-static-closure.md
+A5,surface evaluator,CODE_ORPHAN,P41B/P429完整面高体，无indexed incoming，不是漏反编译,recovered/round8/closure.md
+B3,LNAV/APV evaluator/factory,CODE_ORPHAN,P594/P5EE/P470及后处理链不可从当前UI到达,recovered/round6/closure.md
+B4,Evaluate P566,UI_STUB,消息提示，不调P5E0/P567/P41B,recovered/round7/closure.md
+B4,surface/minima evaluators,CODE_ORPHAN,数学体存在，公开入口调度缺失,recovered/round7/closure.md
+B4,KML P56D,UI_STUB,绑定方法为空；无输出区域/坐标/样式,recovered/round7/closure.md
+B5,Evaluate dispatch,UI_STUB,P501/P50C/P50D提示路径；无端到端评价/归并,recovered/round5/closure.md
+B5,P5CD/P5D8 evaluator,CODE_ORPHAN,两业务评价体存在且已恢复；不是共享P41B,recovered/round5/closure.md
+A7,ScreenData/DER/help,HELP_OVRSTATES_BUILD,SelectAll Model DBPoint；帮助THR而入口DER；无导航方式/电台上空独立分支,recovered/A7-Departure/final-static-closure.md
+A2,NPA time/C time labels,CONSISTENT,代码单时间字段18或6；不得把其解释为强制3+15或3+3,recovered/A2-BasicCalculation/final-static-closure.md

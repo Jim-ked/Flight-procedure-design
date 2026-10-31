@@ -1,0 +1,23 @@
+METHOD 060006A8 \x8d\x95.\x8d\x94::\x8a\x97\x89 RVA=56E2 file=38E2
+IL_0000: call 0x060006AE \x8d\x95.\x8d\x94::\x89\x91
+IL_0005: brfalse.s 47
+IL_0007: ldarga.s argument(0x0001)
+IL_0009: call 0x0A000106 Autodesk.AutoCAD.DatabaseServices.ObjectId::get_IsNull
+IL_000E: brtrue.s 59
+IL_0010: call 0x060006AE \x8d\x95.\x8d\x94::\x89\x91
+IL_0015: call 0x060006AF \x8d\x95.\x8d\x94::\x89\x92
+IL_001A: brtrue.s 46
+IL_001C: pop 
+IL_001D: ldarg.0 
+IL_001E: ldfld 0x04000726 \x8d\x95.\x8d\x94::\x8a\x97\x8d
+IL_0023: ldarg.1 
+IL_0024: callvirt 0x0A0003AC 0x1B000041::Contains
+IL_0029: brtrue.s 59
+IL_002B: br.s 47
+IL_002D: pop 
+IL_002E: ldarg.0 
+IL_002F: ldfld 0x04000726 \x8d\x95.\x8d\x94::\x8a\x97\x8d
+IL_0034: ldarg.1 
+IL_0035: callvirt 0x0A0003AD 0x1B000041::Add
+IL_003A: ret 
+

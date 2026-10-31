@@ -1,0 +1,16 @@
+47219: 		private void _0088_009A_009B(object P_0, EventArgs P_1)
+47220: 		{
+47221: 			_008B_009C obj = _0088_009A_009C();
+47222: 			_008E_0097 obj2 = _0088_009A_009A();
+47223: 			List<List<_008F_008E>> list = _008F_0090._008B_008A_0094(obj._0089_009C_0096, new _008F_008E(0.0, 0.0), obj2._008A_009D_008A);
+47224: 			list = _008F_0090._008B_008A_0096(list, new _008F_008E(obj2.X, obj2.Y, obj2.Z));
+47225: 			_0088_0093();
+47226: 			if (!_0088_0094())
+47227: 			{
+47228: 				Database workingDatabase = HostApplicationServices.WorkingDatabase;
+47229: 				string text = "FormApvEvl\n" /* string-offset:5684 */;
+47230: 				_0097._008A_0098(_0088_009E_008A.Controls, ref text);
+47231: 				_008B._0088_008B(workingDatabase, list, text);
+47232: 			}
+47233: 			MessageBox.Show("绘制成功!" /* string-offset:5688 */);
+47234: 		}

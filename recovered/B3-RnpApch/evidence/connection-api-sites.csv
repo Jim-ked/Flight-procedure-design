@@ -1,0 +1,50 @@
+﻿method,keyword,classification,IL
+0x06000087,Group,API lexical candidate; see IL target,IL_002B: newobj 0x0A00009D Autodesk.AutoCAD.DatabaseServices.Group::.ctor
+0x06000087,Polyline,API lexical candidate; see IL target,IL_0044: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+0x06000087,Group,API lexical candidate; see IL target,IL_0062: callvirt 0x0A0000A0 Autodesk.AutoCAD.DatabaseServices.Group::Append
+0x06000089,XData,API lexical candidate; see IL target,IL_00C8: callvirt 0x0A0000B4 Autodesk.AutoCAD.DatabaseServices.DBObject::set_XData
+0x06000089,AppendEntity,API lexical candidate; see IL target,IL_00FA: callvirt 0x0A0000B3 Autodesk.AutoCAD.DatabaseServices.BlockTableRecord::AppendEntity
+0x0600009C,BlockReference,API lexical candidate; see IL target,IL_00F9: newobj 0x0A0000C7 Autodesk.AutoCAD.DatabaseServices.BlockReference::.ctor
+0x0600009C,AppendEntity,API lexical candidate; see IL target,IL_012D: callvirt 0x0A0000B3 Autodesk.AutoCAD.DatabaseServices.BlockTableRecord::AppendEntity
+0x0600009C,BlockReference,API lexical candidate; see IL target,IL_017F: callvirt 0x0A0000D3 Autodesk.AutoCAD.DatabaseServices.BlockReference::get_BlockTransform
+0x0600009C,BlockReference,API lexical candidate; see IL target,IL_019F: callvirt 0x0A0000DF Autodesk.AutoCAD.DatabaseServices.BlockReference::get_AttributeCollection
+0x0600009E,BlockReference,API lexical candidate; see IL target,IL_0076: isinst 0x01000019 Autodesk.AutoCAD.DatabaseServices.BlockReference
+0x0600009E,BlockReference,API lexical candidate; see IL target,IL_007B: callvirt 0x0A0000DF Autodesk.AutoCAD.DatabaseServices.BlockReference::get_AttributeCollection
+0x060000F5,Group,"UI GroupBox, not CAD Group",IL_008A: isinst 0x01000044 System.Windows.Forms.GroupBox
+0x060000FC,Group,"UI GroupBox, not CAD Group",IL_00BB: isinst 0x01000044 System.Windows.Forms.GroupBox
+0x0600010D,SelectAll,API lexical candidate; see IL target,IL_0071: callvirt 0x0A0001AE Autodesk.AutoCAD.EditorInput.Editor::SelectAll
+0x06000113,GetPoint,API lexical candidate; see IL target,IL_007C: callvirt 0x0A0001B5 Autodesk.AutoCAD.EditorInput.Editor::GetPoint
+0x06000134,Polyline,API lexical candidate; see IL target,IL_002F: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+0x06000134,AddVertexAt,API lexical candidate; see IL target,IL_002F: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+0x06000483,GetEntity,API lexical candidate; see IL target,IL_0049: callvirt 0x0A00007C Autodesk.AutoCAD.EditorInput.Editor::GetEntity
+0x06000483,XData,API lexical candidate; see IL target,IL_0099: callvirt 0x0A000081 Autodesk.AutoCAD.DatabaseServices.DBObject::get_XData
+0x06000485,Clip,"clipboard, not clipping",IL_0000: call 0x0A00036D System.Windows.Forms.Clipboard::ContainsText
+0x06000485,Clip,"clipboard, not clipping",IL_000D: call 0x0A00036E System.Windows.Forms.Clipboard::GetText
+0x06000486,Clip,"clipboard, not clipping",IL_0000: call 0x0A00036D System.Windows.Forms.Clipboard::ContainsText
+0x06000486,Clip,"clipboard, not clipping",IL_000D: call 0x0A00036E System.Windows.Forms.Clipboard::GetText
+0x06000487,Clip,"clipboard, not clipping",IL_000B: call 0x0A00036F System.Windows.Forms.Clipboard::SetText
+0x06000488,Clip,"clipboard, not clipping",IL_000B: call 0x0A00036F System.Windows.Forms.Clipboard::SetText
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_05E2: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_1061: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_10CB: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_114D: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_1891: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_332C: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_37DF: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_3926: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_3B8C: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_3C1C: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_3D00: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_3DA8: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_458F: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_476A: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_4A52: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_4A71: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_4A87: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_4FA0: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_4FE6: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_55A2: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_5F98: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_5FB3: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_5FE1: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+0x060004AF,Group,"UI GroupBox, not CAD Group",IL_64D7: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop

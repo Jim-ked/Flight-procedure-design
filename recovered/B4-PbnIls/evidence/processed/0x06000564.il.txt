@@ -1,0 +1,55 @@
+METHOD 06000564 \x8b\x97.\x8b\x96::\x89\x96\x89 RVA=71B28 file=6FD28
+IL_0000: ldarg.0 
+IL_0001: call 0x06000565 \x8b\x97.\x8b\x96::\x89\x96\x8a
+IL_0006: stloc.0 
+IL_0007: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_000C: call 0x06000581 \x8b\x97.\x8b\x96::\x88\x9d
+IL_0011: brfalse.s 40
+IL_0013: pop 
+IL_0014: newobj 0x0A000184 System.Windows.Forms.SaveFileDialog::.ctor
+IL_0019: stloc.1 
+IL_001A: br.s 41
+IL_001C: pop 
+IL_001D: ldloc.1 
+IL_001E: ldc.i4 6424
+IL_0023: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0028: callvirt 0x0A000185 System.Windows.Forms.FileDialog::set_Filter
+IL_002D: ldloc.1 
+IL_002E: ldc.i4.1 
+IL_002F: callvirt 0x0A000304 System.Windows.Forms.FileDialog::set_FilterIndex
+IL_0034: ldloc.1 
+IL_0035: ldc.i4.1 
+IL_0036: callvirt 0x0A0002E7 System.Windows.Forms.FileDialog::set_RestoreDirectory
+IL_003B: ldarg.0 
+IL_003C: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0041: callvirt 0x0A00008C System.String::get_Length
+IL_0046: ldc.i4.6 
+IL_0047: ble.s 105
+IL_0049: ldloc.1 
+IL_004A: ldarg.0 
+IL_004B: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0050: ldc.i4.6 
+IL_0051: callvirt 0x0A000301 System.String::Substring
+IL_0056: callvirt 0x0A000305 System.Windows.Forms.FileDialog::set_FileName
+IL_005B: br.s 121
+IL_005D: ldloc.1 
+IL_005E: ldc.i4 6428
+IL_0063: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0068: callvirt 0x0A000305 System.Windows.Forms.FileDialog::set_FileName
+IL_006D: ldloc.1 
+IL_006E: callvirt 0x0A000188 System.Windows.Forms.CommonDialog::ShowDialog
+IL_0073: ldc.i4.1 
+IL_0074: bne.un.s 169
+IL_0076: ldarg.0 
+IL_0077: ldc.i4 6396
+IL_007C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0081: ldloc.1 
+IL_0082: callvirt 0x0A000189 System.Windows.Forms.FileDialog::get_FileName
+IL_0087: call 0x0A00008B System.String::Concat
+IL_008C: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0091: ldloc.1 
+IL_0092: callvirt 0x0A000189 System.Windows.Forms.FileDialog::get_FileName
+IL_0097: ldloc.0 
+IL_0098: call 0x0A000355 System.IO.File::WriteAllText
+IL_009D: ret 
+

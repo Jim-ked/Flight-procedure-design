@@ -1,0 +1,65 @@
+METHOD 060006A4 \x8d\x93.\x8d\x92::\x8a\x97\x88 RVA=892F8 file=874F8
+IL_0000: ldarg.0 
+IL_0001: callvirt 0x0600063A \x8d\x8d.\x8d\x8c::\x8a\x90\x96
+IL_0006: stloc.0 
+IL_0007: ldloc.0 
+IL_0008: ldc.i4.1 
+IL_0009: sub 
+IL_000A: switch [62, 104, 115, 126, 163, 205, 247]
+IL_002B: ldarg.0 
+IL_002C: callvirt 0x06000647 \x8d\x8d.\x8d\x8c::\x8a\x91\x91
+IL_0031: ret 
+IL_0032: ldc.i4 6800
+IL_0037: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_003C: ldarg.0 
+IL_003D: callvirt 0x06000649 \x8d\x8d.\x8d\x8c::\x8a\x91\x94
+IL_0042: callvirt 0x06000667 \x8d\x8f.\x8d\x8e::\x8a\x93\x86
+IL_0047: ldc.r8 1000.0
+IL_0050: div 
+IL_0051: box 0x010000D2 System.Double
+IL_0056: call 0x0A0001A4 System.String::Format
+IL_005B: ret 
+IL_005C: ldc.i4 1988
+IL_0061: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0066: ret 
+IL_0067: ldc.i4 6804
+IL_006C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0071: ret 
+IL_0072: ldc.i4 2028
+IL_0077: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_007C: ldarg.0 
+IL_007D: callvirt 0x06000649 \x8d\x8d.\x8d\x8c::\x8a\x91\x94
+IL_0082: callvirt 0x0600067F \x8d\x8f.\x8d\x8e::\x8a\x94\x8d
+IL_0087: ldc.i4 2032
+IL_008C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0091: call 0x0A00003C System.String::Concat
+IL_0096: ret 
+IL_0097: ldc.i4 6808
+IL_009C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00A1: ldarg.0 
+IL_00A2: callvirt 0x06000649 \x8d\x8d.\x8d\x8c::\x8a\x91\x94
+IL_00A7: callvirt 0x0600068F \x8d\x8f.\x8d\x8e::\x8a\x95\x8c
+IL_00AC: ldc.r8 1000.0
+IL_00B5: div 
+IL_00B6: box 0x010000D2 System.Double
+IL_00BB: call 0x0A0001A4 System.String::Format
+IL_00C0: ret 
+IL_00C1: ldc.i4 6812
+IL_00C6: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00CB: ldarg.0 
+IL_00CC: callvirt 0x06000649 \x8d\x8d.\x8d\x8c::\x8a\x91\x94
+IL_00D1: callvirt 0x0600068F \x8d\x8f.\x8d\x8e::\x8a\x95\x8c
+IL_00D6: ldc.r8 1000.0
+IL_00DF: div 
+IL_00E0: box 0x010000D2 System.Double
+IL_00E5: call 0x0A0001A4 System.String::Format
+IL_00EA: ret 
+IL_00EB: ldc.i4 6816
+IL_00F0: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00F5: ldarg.0 
+IL_00F6: callvirt 0x06000649 \x8d\x8d.\x8d\x8c::\x8a\x91\x94
+IL_00FB: callvirt 0x06000691 \x8d\x8f.\x8d\x8e::\x8a\x95\x8f
+IL_0100: box 0x010000D2 System.Double
+IL_0105: call 0x0A0001A4 System.String::Format
+IL_010A: ret 
+

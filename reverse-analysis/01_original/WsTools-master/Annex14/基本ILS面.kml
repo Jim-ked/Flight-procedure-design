@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2" xmlns:kml="http://www.opengis.net/kml/2.2" xmlns:atom="http://www.w3.org/2005/Atom">
+  <Document>
+    <name>基本ILS面</name>
+    <StyleMap id="m_ylw-pushpin">
+      <Pair>
+        <key>normal</key>
+        <styleUrl>#s_ylw-pushpin</styleUrl>
+      </Pair>
+      <Pair>
+        <key>highlight</key>
+        <styleUrl>#s_ylw-pushpin_hl</styleUrl>
+      </Pair>
+    </StyleMap>
+    <Style id="s_ylw-pushpin_hl">
+      <IconStyle>
+        <scale>1.3</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+        </Icon>
+        <hotSpot x="20" y="2" xunits="pixels" yunits="pixels" />
+      </IconStyle>
+      <LineStyle>
+        <color>ff7fffff</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>99ffffff</color>
+      </PolyStyle>
+    </Style>
+    <Style id="s_ylw-pushpin">
+      <IconStyle>
+        <scale>1.1</scale>
+        <Icon>
+          <href>http://maps.google.com/mapfiles/kml/pushpin/ylw-pushpin.png</href>
+        </Icon>
+        <hotSpot x="20" y="2" xunits="pixels" yunits="pixels" />
+      </IconStyle>
+      <LineStyle>
+        <color>ff7fffff</color>
+      </LineStyle>
+      <PolyStyle>
+        <color>99ffffff</color>
+      </PolyStyle>
+    </Style>
+    <Placemark xmlns="">
+      <name>进近面1</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.399650737924,30.2668587157973,500  104.415754280677,30.2903847604499,440  104.418641309032,30.289362911104,440  104.411197617785,30.2627719124052,500  104.399650737924,30.2668587157973,500  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>进近面2</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.399650737924,30.2668587157973,500  104.348170942433,30.1915615183157,740  104.38740472435,30.1776771522578,740  104.411197617785,30.2627719124052,500  104.399650737924,30.2668587157973,500  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>复飞面</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.41952276604,30.2984033175305,440  104.423562321821,30.3145140191441,485  104.43908327817,30.4083905729608,740  104.497167144381,30.3878286527375,740  104.432510615369,30.3113467032315,485  104.422410393224,30.2973812416936,440  104.41952276604,30.2984033175305,440  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>过渡面1左</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.415754280677,30.2903847604499,440  104.399650737924,30.2668587157973,500  104.383499086407,30.2725730114402,740  104.395552452433,30.2975125634319,740  104.415754280677,30.2903847604499,440  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>过渡面1右</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.418641309032,30.289362911104,440  104.411197617785,30.2627719124052,500  104.427346060003,30.2570541908068,740  104.438823547816,30.2821969763956,740  104.418641309032,30.289362911104,440  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>过渡面2左</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.399650737924,30.2668587157973,500  104.348170942433,30.1915615183157,740  104.383499086407,30.2725730114402,740  104.399650737924,30.2668587157973,500  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>过渡面2右</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.411197617785,30.2627719124052,500  104.38740472435,30.1776771522578,740  104.427346060003,30.2570541908068,740  104.411197617785,30.2627719124052,500  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>过渡面3左</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.415754280677,30.2903847604499,440  104.41952276604,30.2984033175305,440  104.423562321821,30.3145140191441,485  104.40639508598,30.3205882048852,740  104.395552452433,30.2975125634319,740  104.415754280677,30.2903847604499,440  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>过渡面3右</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.418641309032,30.289362911104,440  104.422410393224,30.2973812416936,440  104.432510615369,30.3113467032315,485  104.449674629427,30.3052690843432,740  104.438823547816,30.2821969763956,740  104.418641309032,30.289362911104,440  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>过渡面4左</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.423562321821,30.3145140191441,485  104.43908327817,30.4083905729608,740  104.40639508598,30.3205882048852,740  104.423562321821,30.3145140191441,485  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+    <Placemark xmlns="">
+      <name>过渡面4右</name>
+      <styleUrl>m_ylw-pushpin</styleUrl>
+      <Polygon>
+        <extrude>1</extrude>
+        <tessellate>1</tessellate>
+        <altitudeMode>absolute</altitudeMode>
+        <outerBoundaryIs>
+          <LinearRing>
+            <coordinates>104.432510615369,30.3113467032315,485  104.497167144381,30.3878286527375,740  104.449674629427,30.3052690843432,740  104.432510615369,30.3113467032315,485  </coordinates>
+          </LinearRing>
+        </outerBoundaryIs>
+      </Polygon>
+    </Placemark>
+  </Document>
+</kml>

@@ -1,0 +1,81 @@
+1578: 		public static ObjectId _0088_008D(Entity P_0, Database P_1, string P_2 = "")
+1579: 		{
+1580: 			//IL_0002: Unknown result type (might be due to invalid IL or missing references)
+1581: 			//IL_014c: Unknown result type (might be due to invalid IL or missing references)
+1582: 			//IL_0024: Unknown result type (might be due to invalid IL or missing references)
+1583: 			//IL_002a: Expected O, but got Unknown
+1584: 			//IL_00cf: Unknown result type (might be due to invalid IL or missing references)
+1585: 			//IL_00da: Unknown result type (might be due to invalid IL or missing references)
+1586: 			//IL_00e1: Expected O, but got Unknown
+1587: 			//IL_00e9: Unknown result type (might be due to invalid IL or missing references)
+1588: 			//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
+1589: 			//IL_00fa: Unknown result type (might be due to invalid IL or missing references)
+1590: 			//IL_00ff: Unknown result type (might be due to invalid IL or missing references)
+1591: 			//IL_003d: Unknown result type (might be due to invalid IL or missing references)
+1592: 			//IL_00ab: Unknown result type (might be due to invalid IL or missing references)
+1593: 			//IL_0062: Unknown result type (might be due to invalid IL or missing references)
+1594: 			//IL_0069: Expected O, but got Unknown
+1595: 			//IL_00bc: Unknown result type (might be due to invalid IL or missing references)
+1596: 			//IL_0087: Unknown result type (might be due to invalid IL or missing references)
+1597: 			ObjectId result = default(ObjectId);
+1598: 			try
+1599: 			{
+1600: 				DocumentLock val = Application.DocumentManager.MdiActiveDocument.LockDocument();
+1601: 				try
+1602: 				{
+1603: 					Transaction val2 = P_1.TransactionManager.StartTransaction();
+1604: 					try
+1605: 					{
+1606: 						ResultBuffer val3 = new ResultBuffer();
+1607: 						if (P_2.Trim().Length > 0)
+1608: 						{
+1609: 							DBObject obj = val2.GetObject(P_1.RegAppTableId, (OpenMode)1);
+1610: 							RegAppTable val4 = (RegAppTable)(object)((obj is RegAppTable) ? obj : null);
+1611: 							if (!((SymbolTable)val4).Has("WsObject" /* string-offset:524 */))
+1612: 							{
+1613: 								RegAppTableRecord val5 = new RegAppTableRecord();
+1614: 								_ = 1;
+1615: 								if (_0090())
+1616: 								{
+1617: 									goto IL_00b5;
+1618: 								}
+1619: 								((SymbolTableRecord)val5).Name = "WsObject" /* string-offset:524 */;
+1620: 								((SymbolTable)val4).Add((SymbolTableRecord)(object)val5);
+1621: 								val2.AddNewlyCreatedDBObject((DBObject)(object)val5, true);
+1622: 							}
+1623: 							val3.Add(new TypedValue(1001, (object)"WsObject" /* string-offset:524 */));
+1624: 							goto IL_00b5;
+1625: 						}
+1626: 						goto IL_00cd;
+1627: 						IL_00cd:
+1628: 						BlockTable val6 = (BlockTable)val2.GetObject(P_1.BlockTableId, (OpenMode)0);
+1629: 						result = ((BlockTableRecord)val2.GetObject(((SymbolTable)val6)[BlockTableRecord.ModelSpace], (OpenMode)1)).AppendEntity(P_0);
+1630: 						val2.AddNewlyCreatedDBObject((DBObject)(object)P_0, true);
+1631: 						val2.Commit();
+1632: 						Application.UpdateScreen();
+1633: 						goto end_IL_0024;
+1634: 						IL_00b5:
+1635: 						val3.Add(new TypedValue(1000, (object)P_2));
+1636: 						((DBObject)P_0).XData = val3;
+1637: 						goto IL_00cd;
+1638: 						end_IL_0024:;
+1639: 					}
+1640: 					finally
+1641: 					{
+1642: 						((IDisposable)val2)?.Dispose();
+1643: 					}
+1644: 				}
+1645: 				finally
+1646: 				{
+1647: 					((IDisposable)val)?.Dispose();
+1648: 				}
+1649: 			}
+1650: 			catch (Exception ex)
+1651: 			{
+1652: 				Application.ShowAlertDialog("绘制失败。\n" /* string-offset:520 */ + ex.ToString());
+1653: 			}
+1654: 			return result;
+1655: 		}
+1656: 
+1657: 		public static ObjectId _0088_008E(this Database P_0, string P_1, List<Entity> P_2)
+1658: 		{

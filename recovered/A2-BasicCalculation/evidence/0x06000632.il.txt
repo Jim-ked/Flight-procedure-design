@@ -1,0 +1,46 @@
+METHOD 06000632 \x8d\x89.\x8d\x88::\x8a\x90\x8c RVA=882C0 file=864C0
+IL_0000: nop 
+IL_0001: ldarg.0 
+IL_0002: ldarg.1 
+IL_0003: callvirt 0x0A0000A7 Autodesk.AutoCAD.DatabaseServices.Database::get_RegAppTableId
+IL_0008: ldc.i4.0 
+IL_0009: callvirt 0x0A000080 Autodesk.AutoCAD.DatabaseServices.Transaction::GetObject
+IL_000E: castclass 0x010000E3 Autodesk.AutoCAD.DatabaseServices.RegAppTable
+IL_0013: stloc.0 
+IL_0014: ldloc.0 
+IL_0015: ldarg.2 
+IL_0016: callvirt 0x0A0000A8 Autodesk.AutoCAD.DatabaseServices.SymbolTable::Has
+IL_001B: brtrue.s 106
+IL_001D: ldloc.0 
+IL_001E: callvirt 0x0A0000BB Autodesk.AutoCAD.DatabaseServices.DBObject::UpgradeOpen
+IL_0023: ldloc.0 
+IL_0024: ldarg.2 
+IL_0025: callvirt 0x0A0000A8 Autodesk.AutoCAD.DatabaseServices.SymbolTable::Has
+IL_002A: brtrue.s 101
+IL_002C: newobj 0x0A0000A9 Autodesk.AutoCAD.DatabaseServices.RegAppTableRecord::.ctor
+IL_0031: stloc.1 
+IL_0032: call 0x06000636 \x8d\x89.\x8d\x88::\x89\x86
+IL_0037: call 0x06000635 \x8d\x89.\x8d\x88::\x88z
+IL_003C: brfalse.s 84
+IL_003E: pop 
+IL_003F: ldloc.1 
+IL_0040: ldarg.2 
+IL_0041: callvirt 0x0A0000AA Autodesk.AutoCAD.DatabaseServices.SymbolTableRecord::set_Name
+IL_0046: br.s 85
+IL_0048: pop 
+IL_0049: ldloc.0 
+IL_004A: ldloc.1 
+IL_004B: callvirt 0x0A0000AB Autodesk.AutoCAD.DatabaseServices.SymbolTable::Add
+IL_0050: pop 
+IL_0051: ldarg.0 
+IL_0052: ldloc.1 
+IL_0053: ldc.i4.1 
+IL_0054: callvirt 0x0A0000A3 Autodesk.AutoCAD.DatabaseServices.Transaction::AddNewlyCreatedDBObject
+IL_0059: leave.s 106
+IL_005B: pop 
+IL_005C: leave.s 106
+IL_005E: leave.s 111
+IL_0060: pop 
+IL_0061: leave.s 111
+IL_0063: ret 
+

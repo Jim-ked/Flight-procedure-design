@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旁切转弯 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / PBN 程序 / 旁切转弯</div>
+        <h1>B1.旁切转弯</h1>
+        <div class="cmd">命令：Y51_FlyBy</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>PBN 程序</h2>
+                <ul>
+                    <li><a href="FormFlyBy.html" class="active">B1.旁切转弯</a></li>
+                    <li><a href="FormFlyOverDF.html">B2.飞越转弯</a></li>
+                    <li><a href="FormApvEvl.html">B3.RNP 进近</a></li>
+                    <li><a href="FormPbnIlsEvl.html">B4.PBN-ILS 进近</a></li>
+                    <li><a href="FormPbnDepEvl.html">B5.PBN 离场</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">传统程序 / 辅助功能</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【旁切转弯】用于绘制 PBN <strong>旁切转弯（Fly By）</strong>保护区。航空器在转弯点之前的一定距离开始转弯，从转弯点侧方经过后，切入下一航段，这种转弯方式称为旁切转弯。本窗口按转弯参数与航段数据生成旁切转弯保护区，并可绘制 NN′（最早下降线）、KK′（最早转弯线） 线以及转弯标称航迹。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormFlyBy.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormFlyBy.png" alt="FormFlyBy 界面截图" width="527"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>分区 / 控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>转弯参数</td><td>指示空速、高度、坡度、风速等转弯参数。</td></tr>
+                        <tr><td>航段数据</td><td>前后航段的航迹、宽度等数据。</td></tr>
+                        <tr><td>附加设置</td><td>其它绘制选项。</td></tr>
+                        <tr><td>NN′线 / KK′线（复选框）</td><td>是否绘制 NN′、KK′ 辅助线。</td></tr>
+                        <tr><td>计算（按钮）</td><td>计算转弯参数并输出到命令窗口。</td></tr>
+                        <tr><td>CAD（按钮）</td><td>将旁切转弯保护区绘制到 CAD 窗口中。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y51_FlyBy</code> 打开窗口。</li>
+                    <li>填写“转弯参数”与“航段数据”。</li>
+                    <li>点击【计算】，按需勾选【NN′线】【KK′线】。</li>
+                    <li>点击【CAD】，按提示依次指定转弯起点、转弯点、转弯终点，绘制旁切转弯保护区。</li>
+                </ul>
+                <div class="tip"><strong>提示：</strong>本软件在计算旁切转弯保护区时，若前后航段的宽度不同时，通过风螺旋进行衔接。</div>
+            </div>
+            <div class="card">
+                <h2>应用案例</h2>
+                <!-- 界面截图：将 images/FormFlyBy.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormFlyBySample.png" alt="FormFlyBy 界面截图" width="353"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="pager">
+                <a href="FormDmeEvl.html">← 上一篇：A10.起始进近DME弧</a>
+                <a href="FormFlyOverDF.html">下一篇：B2.飞越转弯 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,7 @@
+﻿condition,source method,geometry effect,CAD effect
+turn-angle-dependent,_008C_0089::_0089_009E_0089 / _0089_009E_008C / _0089_009E_008D,"signed heading, spiral sampling, line carrier and distance-selected candidate pairs",primary/secondary boundary lists and SpiralGroup children
+15°,_0089_009E_008C (PI/12 branch),connection offset/candidate heading in DF path,changes selected vertices in boundary or spiral child Polyline; no standalone 15° entity
+12000,_0089_009E_008C IL_0214/IL_028E,fixed-distance point on a carrier/path pair,"two-point child Polyline in SpiralGroup; internal construction length, not published width"
+13000,_0089_009E_008C IL_02DF/IL_0356,second fixed-distance point on a carrier/path pair,"two-point child Polyline in SpiralGroup; internal construction length, not published width"
+candidate-distance selection,_0089_009E_008B plus _0089_009E_008C,distance-to-line bisection and candidate comparison chooses path points,selected points enter BoundaryList03/01/04/02 or SpiralGroup; no evaluator
+ATT=0,public event + directly reachable _008C_0089 search,"ordinary arithmetic values; no equality, epsilon or <=0 dispatch","same writer path as nonzero ATT, subject to arithmetic degeneration"

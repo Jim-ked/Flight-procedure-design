@@ -1,0 +1,55 @@
+METHOD 06000253 \x88\x9e.\x88\x9d::\x9d\x89 RVA=22528 file=20728
+IL_0000: call 0x0600026A \x88\x9e.\x88\x9d::\x87\x97
+IL_0005: call 0x0600026B \x88\x9e.\x88\x9d::\x87\x98
+IL_000A: brtrue.s 80
+IL_000C: pop 
+IL_000D: call 0x0600026B \x88\x9e.\x88\x9d::\x87\x98
+IL_0012: brtrue.s 81
+IL_0014: ldarg.0 
+IL_0015: ldfld 0x0400012E \x88\x9e.\x88\x9d::\x9e\x8e
+IL_001A: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_001F: stloc.0 
+IL_0020: ldarg.0 
+IL_0021: ldfld 0x0400012E \x88\x9e.\x88\x9d::\x9e\x8e
+IL_0026: ldarg.0 
+IL_0027: ldfld 0x04000135 \x88\x9e.\x88\x9d::\x9e\x95
+IL_002C: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0031: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0036: ldarg.0 
+IL_0037: ldfld 0x04000135 \x88\x9e.\x88\x9d::\x9e\x95
+IL_003C: ldloc.0 
+IL_003D: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0042: br.s 81
+IL_0044: pop 
+IL_0045: ldarg.0 
+IL_0046: ldfld 0x0400012D \x88\x9e.\x88\x9d::\x9e\x8d
+IL_004B: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0050: stloc.0 
+IL_0051: call 0x0600026B \x88\x9e.\x88\x9d::\x87\x98
+IL_0056: brtrue.s 100
+IL_0058: ldarg.0 
+IL_0059: ldfld 0x0400012D \x88\x9e.\x88\x9d::\x9e\x8d
+IL_005E: ldarg.0 
+IL_005F: ldfld 0x04000134 \x88\x9e.\x88\x9d::\x9e\x94
+IL_0064: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0069: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_006E: ldarg.0 
+IL_006F: ldfld 0x04000134 \x88\x9e.\x88\x9d::\x9e\x94
+IL_0074: ldloc.0 
+IL_0075: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_007A: ldarg.0 
+IL_007B: ldfld 0x0400012F \x88\x9e.\x88\x9d::\x9e\x8f
+IL_0080: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0085: stloc.0 
+IL_0086: ldarg.0 
+IL_0087: ldfld 0x0400012F \x88\x9e.\x88\x9d::\x9e\x8f
+IL_008C: ldarg.0 
+IL_008D: ldfld 0x04000137 \x88\x9e.\x88\x9d::\x9e\x97
+IL_0092: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0097: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_009C: ldarg.0 
+IL_009D: ldfld 0x04000137 \x88\x9e.\x88\x9d::\x9e\x97
+IL_00A2: ldloc.0 
+IL_00A3: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_00A8: ret 
+

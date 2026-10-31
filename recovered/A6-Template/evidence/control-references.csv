@@ -1,0 +1,807 @@
+﻿Control,Field,SourceLine,Method,Token,Expression,Category
+buttonCalBT,_0087_009C_0091,31891,constructor/field,,private Button _0087_009C_0091;,reference (read/write classification in expression)
+buttonCalBT,_0087_009C_0091,34088,_0087_009B_008F,0x0600037B,"_0087_009C_0091.Location = new Point(399, 51);",initialization
+buttonCalBT,_0087_009C_0091,34089,_0087_009B_008F,0x0600037B,"_0087_009C_0091.Margin = new Padding(3, 2, 3, 2);",initialization
+buttonCalBT,_0087_009C_0091,34094,_0087_009B_008F,0x0600037B,"_0087_009C_0091.Size = new Size(80, 40);",initialization
+buttonCalBT,_0087_009C_0091,34095,_0087_009B_008F,0x0600037B,_0087_009C_0091.TabIndex = 36;,initialization
+buttonCalBT,_0087_009C_0091,34099,_0087_009B_008F,0x0600037B,"_0087_009C_0091.Text = ""计算"" /* string-offset:4792 */;",initialization
+buttonCalBT,_0087_009C_0091,34100,_0087_009B_008F,0x0600037B,_0087_009C_0091.UseVisualStyleBackColor = true;,initialization
+buttonCalBT,_0087_009C_0091,34101,_0087_009B_008F,0x0600037B,_0087_009C_0091.Click += _0087_009A_0090;,initialization
+buttonCalBT,_0087_009C_0091,34209,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0091);,initialization
+buttonCalBT,_0087_009C_0091,35355,_0087_009B_008F,0x0600037B,_0087_009C_0091 = new Button();,initialization
+comboBoxBtNavType,_0087_009C_0094,31897,constructor/field,,private ComboBox _0087_009C_0094;,reference (read/write classification in expression)
+comboBoxBtNavType,_0087_009C_0094,32265,_0087_009A_008D,0x0600035F,string text = _0087_009C_0094.Text;,reference (read/write classification in expression)
+comboBoxBtNavType,_0087_009C_0094,32367,_0087_009A_0090,0x06000362,string text = _0087_009C_0094.Text;,reference (read/write classification in expression)
+comboBoxBtNavType,_0087_009C_0094,32551,_0087_009A_0092,0x06000364,_ = _0087_009C_0094.Text;,reference (read/write classification in expression)
+comboBoxBtNavType,_0087_009C_0094,32620,_0087_009A_0094,0x06000366,_ = _0087_009C_0094.Text;,reference (read/write classification in expression)
+comboBoxBtNavType,_0087_009C_0094,33750,_0087_009B_008A,0x06000375,_ = _0087_009C_0094.Text;,reference (read/write classification in expression)
+comboBoxBtNavType,_0087_009C_0094,33782,_0087_009B_008B,0x06000376,_ = _0087_009C_0094.Text;,reference (read/write classification in expression)
+comboBoxBtNavType,_0087_009C_0094,33858,_0087_009B_008C,0x06000377,_ = _0087_009C_0094.Text;,reference (read/write classification in expression)
+comboBoxBtNavType,_0087_009C_0094,34130,_0087_009B_008F,0x0600037B,_0087_009C_0094.FormattingEnabled = true;,initialization
+comboBoxBtNavType,_0087_009C_0094,34133,_0087_009B_008F,0x0600037B,_0087_009C_0094.Items.AddRange(new object[2],initialization
+comboBoxBtNavType,_0087_009C_0094,34140,_0087_009B_008F,0x0600037B,"_0087_009C_0094.Location = new Point(294, 14);",initialization
+comboBoxBtNavType,_0087_009C_0094,34146,_0087_009B_008F,0x0600037B,"_0087_009C_0094.Size = new Size(80, 22);",initialization
+comboBoxBtNavType,_0087_009C_0094,34560,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0094);,initialization
+comboBoxBtNavType,_0087_009C_0094,34653,_0087_009B_008F,0x0600037B,"_0087_009C_0094.Text = ""VOR"" /* string-offset:1472 */;",initialization
+comboBoxBtNavType,_0087_009C_0094,35052,_0087_009B_008F,0x0600037B,_0087_009C_0094 = new ComboBox();,initialization
+comboBoxBtNavType,_0087_009C_0094,35414,_0087_009B_008F,0x0600037B,_0087_009C_0094.TabIndex = 31;,initialization
+label13,_0087_009C_009A,31909,constructor/field,,private Label _0087_009C_009A;,reference (read/write classification in expression)
+label13,_0087_009C_009A,34154,_0087_009B_008F,0x0600037B,"_0087_009C_009A.Location = new Point(15, 50);",initialization
+label13,_0087_009C_009A,34156,_0087_009B_008F,0x0600037B,"_0087_009C_009A.Size = new Size(67, 15);",initialization
+label13,_0087_009C_009A,34157,_0087_009B_008F,0x0600037B,_0087_009C_009A.TabIndex = 28;,initialization
+label13,_0087_009C_009A,34160,_0087_009B_008F,0x0600037B,"_0087_009C_009A.Text = ""出航方式"" /* string-offset:4892 */;",initialization
+label13,_0087_009C_009A,34584,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_009A);,initialization
+label13,_0087_009C_009A,34769,_0087_009B_008F,0x0600037B,_0087_009C_009A.AutoSize = true;,initialization
+label13,_0087_009C_009A,35141,_0087_009B_008F,0x0600037B,_0087_009C_009A = new Label();,initialization
+textBoxHdNavElev,_0087_009B_009D,31865,constructor/field,,private TextBox _0087_009B_009D;,reference (read/write classification in expression)
+textBoxHdNavElev,_0087_009B_009D,33916,_0087_009B_008D,0x06000378,"num = _008F_008A._008B_0087_009D(_0087_009B_009D.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxHdNavElev,_0087_009B_009D,34056,_0087_009B_008F,0x0600037B,_0087_009B_009D = new TextBox();,initialization
+textBoxHdNavElev,_0087_009B_009D,34174,_0087_009B_008F,0x0600037B,"_0087_009B_009D.Location = new Point(110, 107);",initialization
+textBoxHdNavElev,_0087_009B_009D,34175,_0087_009B_008F,0x0600037B,"_0087_009B_009D.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxHdNavElev,_0087_009B_009D,34183,_0087_009B_008F,0x0600037B,"_0087_009B_009D.Size = new Size(80, 23);",initialization
+textBoxHdNavElev,_0087_009B_009D,34184,_0087_009B_008F,0x0600037B,_0087_009B_009D.TabIndex = 2;,initialization
+textBoxHdNavElev,_0087_009B_009D,34187,_0087_009B_008F,0x0600037B,"_0087_009B_009D.Text = ""0"" /* string-offset:560 */;",initialization
+textBoxHdNavElev,_0087_009B_009D,34935,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009B_009D);,initialization
+label6,_0087_009B_009E,31867,constructor/field,,private Label _0087_009B_009E;,reference (read/write classification in expression)
+label6,_0087_009B_009E,34060,_0087_009B_008F,0x0600037B,_0087_009B_009E = new Label();,initialization
+label6,_0087_009B_009E,34191,_0087_009B_008F,0x0600037B,_0087_009B_009E.AutoSize = true;,initialization
+label6,_0087_009B_009E,34195,_0087_009B_008F,0x0600037B,"_0087_009B_009E.Location = new Point(15, 111);",initialization
+label6,_0087_009B_009E,34199,_0087_009B_008F,0x0600037B,"_0087_009B_009E.Size = new Size(91, 15);",initialization
+label6,_0087_009B_009E,34200,_0087_009B_008F,0x0600037B,_0087_009B_009E.TabIndex = 0;,initialization
+label6,_0087_009B_009E,34203,_0087_009B_008F,0x0600037B,"_0087_009B_009E.Text = ""天线高度(m)"" /* string-offset:4832 */;",initialization
+label6,_0087_009B_009E,34938,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009B_009E);,initialization
+checkBoxPt45,_0087_009C_009D,31915,constructor/field,,private CheckBox _0087_009C_009D;,reference (read/write classification in expression)
+checkBoxPt45,_0087_009C_009D,32218,_0087_009A_008B,0x0600035D,obj2._0088_0096_009D(_0087_009C_009D.Checked);,reference (read/write classification in expression)
+checkBoxPt45,_0087_009C_009D,34226,_0087_009B_008F,0x0600037B,_0087_009C_009D.AutoSize = true;,initialization
+checkBoxPt45,_0087_009C_009D,34227,_0087_009B_008F,0x0600037B,"_0087_009C_009D.Location = new Point(98, 81);",initialization
+checkBoxPt45,_0087_009C_009D,34228,_0087_009B_008F,0x0600037B,_0087_009C_009D.Margin = new Padding(4);,initialization
+checkBoxPt45,_0087_009C_009D,34232,_0087_009B_008F,0x0600037B,"_0087_009C_009D.Size = new Size(71, 19);",initialization
+checkBoxPt45,_0087_009C_009D,34236,_0087_009B_008F,0x0600037B,_0087_009C_009D.TabIndex = 15;,initialization
+checkBoxPt45,_0087_009C_009D,34237,_0087_009B_008F,0x0600037B,"_0087_009C_009D.Text = ""辅助线"" /* string-offset:4808 */;",initialization
+checkBoxPt45,_0087_009C_009D,34238,_0087_009B_008F,0x0600037B,_0087_009C_009D.UseVisualStyleBackColor = true;,initialization
+checkBoxPt45,_0087_009C_009D,34290,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009C_009D);,initialization
+checkBoxPt45,_0087_009C_009D,35331,_0087_009B_008F,0x0600037B,_0087_009C_009D = new CheckBox();,initialization
+button45PT,_0087_009C_009E,31917,constructor/field,,private Button _0087_009C_009E;,reference (read/write classification in expression)
+button45PT,_0087_009C_009E,34250,_0087_009B_008F,0x0600037B,"_0087_009C_009E.Size = new Size(80, 40);",initialization
+button45PT,_0087_009C_009E,34251,_0087_009B_008F,0x0600037B,_0087_009C_009E.TabIndex = 13;,initialization
+button45PT,_0087_009C_009E,34293,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009C_009E);,initialization
+button45PT,_0087_009C_009E,34309,_0087_009B_008F,0x0600037B,"_0087_009C_009E.Location = new Point(330, 113);",initialization
+button45PT,_0087_009C_009E,34310,_0087_009B_008F,0x0600037B,"_0087_009C_009E.Margin = new Padding(3, 2, 3, 2);",initialization
+button45PT,_0087_009C_009E,34403,_0087_009B_008F,0x0600037B,"_0087_009C_009E.Text = ""CAD"" /* string-offset:1696 */;",initialization
+button45PT,_0087_009C_009E,34404,_0087_009B_008F,0x0600037B,_0087_009C_009E.UseVisualStyleBackColor = true;,initialization
+button45PT,_0087_009C_009E,35335,_0087_009B_008F,0x0600037B,_0087_009C_009E = new Button();,initialization
+button45PT,_0087_009C_009E,35425,_0087_009B_008F,0x0600037B,_0087_009C_009E.Click += _0087_009A_008B;,initialization
+textBoxBtNavElev,_0087_009C_009B,31911,constructor/field,,private TextBox _0087_009C_009B;,reference (read/write classification in expression)
+textBoxBtNavElev,_0087_009C_009B,32266,_0087_009A_008D,0x0600035F,"double num = _008F_008A._008B_0087_009E(_0087_009C_009B, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtNavElev,_0087_009C_009B,32368,_0087_009A_0090,0x06000362,"double num = _008F_008A._008B_0087_009E(_0087_009C_009B, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtNavElev,_0087_009C_009B,32553,_0087_009A_0092,0x06000364,"_008F_008A._008B_0087_009E(_0087_009C_009B, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtNavElev,_0087_009C_009B,32622,_0087_009A_0094,0x06000366,"_008F_008A._008B_0087_009E(_0087_009C_009B, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtNavElev,_0087_009C_009B,33752,_0087_009B_008A,0x06000375,"_008F_008A._008B_0087_009E(_0087_009C_009B, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtNavElev,_0087_009C_009B,33784,_0087_009B_008B,0x06000376,"_008F_008A._008B_0087_009E(_0087_009C_009B, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtNavElev,_0087_009C_009B,33860,_0087_009B_008C,0x06000377,"_008F_008A._008B_0087_009E(_0087_009C_009B, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtNavElev,_0087_009C_009B,34259,_0087_009B_008F,0x0600037B,"_0087_009C_009B.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxBtNavElev,_0087_009C_009B,34263,_0087_009B_008F,0x0600037B,"_0087_009C_009B.Size = new Size(80, 23);",initialization
+textBoxBtNavElev,_0087_009C_009B,34264,_0087_009B_008F,0x0600037B,_0087_009C_009B.TabIndex = 26;,initialization
+textBoxBtNavElev,_0087_009C_009B,34265,_0087_009B_008F,0x0600037B,"_0087_009C_009B.Text = ""0"" /* string-offset:560 */;",initialization
+textBoxBtNavElev,_0087_009C_009B,34622,_0087_009B_008F,0x0600037B,_0087_009C_009B = new TextBox();,initialization
+textBoxBtNavElev,_0087_009C_009B,35048,_0087_009B_008F,0x0600037B,"_0087_009C_009B.Location = new Point(294, 46);",initialization
+textBoxBtNavElev,_0087_009C_009B,35404,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_009B);,initialization
+label9,_0087_009C_009C,31913,constructor/field,,private Label _0087_009C_009C;,reference (read/write classification in expression)
+label9,_0087_009C_009C,34269,_0087_009B_008F,0x0600037B,_0087_009C_009C.AutoSize = true;,initialization
+label9,_0087_009C_009C,34270,_0087_009B_008F,0x0600037B,"_0087_009C_009C.Location = new Point(15, 18);",initialization
+label9,_0087_009C_009C,34272,_0087_009B_008F,0x0600037B,"_0087_009C_009C.Size = new Size(67, 15);",initialization
+label9,_0087_009C_009C,34276,_0087_009B_008F,0x0600037B,_0087_009C_009C.TabIndex = 28;,initialization
+label9,_0087_009C_009C,34277,_0087_009B_008F,0x0600037B,"_0087_009C_009C.Text = ""转弯方向"" /* string-offset:4824 */;",initialization
+label9,_0087_009C_009C,34625,_0087_009B_008F,0x0600037B,_0087_009C_009C = new Label();,initialization
+label9,_0087_009C_009C,35405,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_009C);,initialization
+checkBoxHdAid,_0087_009C_008D,31883,constructor/field,,private CheckBox _0087_009C_008D;,reference (read/write classification in expression)
+checkBoxHdAid,_0087_009C_008D,32575,_0087_009A_0092,0x06000364,obj2._0088_0087_009B(_0087_009C_008D.Checked);,reference (read/write classification in expression)
+checkBoxHdAid,_0087_009C_008D,33862,_0087_009B_008C,0x06000377,obj._0088_0087_009B(_0087_009C_008D.Checked);,reference (read/write classification in expression)
+checkBoxHdAid,_0087_009C_008D,33866,_0087_009B_008C,0x06000377,"obj._0088_0087_009D(obj3, obj4, obj5._0088_008B_008F.X, obj6._0088_008C_0096.Y, _0087_009C_008D.Checked);",reference (read/write classification in expression)
+checkBoxHdAid,_0087_009C_008D,34036,_0087_009B_008F,0x0600037B,_0087_009C_008D = new CheckBox();,initialization
+checkBoxHdAid,_0087_009C_008D,34315,_0087_009B_008F,0x0600037B,"_0087_009C_008D.Size = new Size(71, 19);",initialization
+checkBoxHdAid,_0087_009C_008D,34319,_0087_009B_008F,0x0600037B,_0087_009C_008D.UseVisualStyleBackColor = true;,initialization
+checkBoxHdAid,_0087_009C_008D,34358,_0087_009B_008F,0x0600037B,_0087_009C_008D.TabIndex = 27;,initialization
+checkBoxHdAid,_0087_009C_008D,34359,_0087_009B_008F,0x0600037B,"_0087_009C_008D.Text = ""辅助线"" /* string-offset:4808 */;",initialization
+checkBoxHdAid,_0087_009C_008D,35186,_0087_009B_008F,0x0600037B,_0087_009C_008D.AutoSize = true;,initialization
+checkBoxHdAid,_0087_009C_008D,35187,_0087_009B_008F,0x0600037B,"_0087_009C_008D.Location = new Point(218, 16);",initialization
+checkBoxHdAid,_0087_009C_008D,35191,_0087_009B_008F,0x0600037B,_0087_009C_008D.Margin = new Padding(4);,initialization
+checkBoxHdAid,_0087_009C_008D,35228,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008D);,initialization
+comboBoxHdNavType,_0087_009C_008E,31885,constructor/field,,private ComboBox _0087_009C_008E;,reference (read/write classification in expression)
+comboBoxHdNavType,_0087_009C_008E,33928,_0087_009B_008D,0x06000378,"if (_0087_009C_008E.Text == ""VOR"" /* string-offset:1472 */)",reference (read/write classification in expression)
+comboBoxHdNavType,_0087_009C_008E,34040,_0087_009B_008F,0x0600037B,_0087_009C_008E = new ComboBox();,initialization
+comboBoxHdNavType,_0087_009C_008E,34322,_0087_009B_008F,0x0600037B,_0087_009C_008E.FormattingEnabled = true;,initialization
+comboBoxHdNavType,_0087_009C_008E,34325,_0087_009B_008F,0x0600037B,_0087_009C_008E.Items.AddRange(new object[2],initialization
+comboBoxHdNavType,_0087_009C_008E,34333,_0087_009B_008F,0x0600037B,"_0087_009C_008E.Location = new Point(110, 76);",initialization
+comboBoxHdNavType,_0087_009C_008E,34342,_0087_009B_008F,0x0600037B,"_0087_009C_008E.Size = new Size(80, 22);",initialization
+comboBoxHdNavType,_0087_009C_008E,34350,_0087_009B_008F,0x0600037B,_0087_009C_008E.TabIndex = 24;,initialization
+comboBoxHdNavType,_0087_009C_008E,35229,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008E);,initialization
+comboBoxHdNavType,_0087_009C_008E,35306,_0087_009B_008F,0x0600037B,"_0087_009C_008E.Text = ""VOR"" /* string-offset:1472 */;",initialization
+checkBoxBt,_0087_009C_0092,31893,constructor/field,,private CheckBox _0087_009C_0092;,reference (read/write classification in expression)
+checkBoxBt,_0087_009C_0092,32302,_0087_009A_008D,0x0600035F,"obj2._0091_0087(_0087_009C_0092.Checked, _0087_009C_0092.Checked);",reference (read/write classification in expression)
+checkBoxBt,_0087_009C_0092,32307,_0087_009A_008D,0x0600035F,if (_0087_009C_0092.Checked),reference (read/write classification in expression)
+checkBoxBt,_0087_009C_0092,32316,_0087_009A_008D,0x0600035F,if (_0087_009C_0092.Checked),reference (read/write classification in expression)
+checkBoxBt,_0087_009C_0092,34210,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0092);,initialization
+checkBoxBt,_0087_009C_0092,34366,_0087_009B_008F,0x0600037B,_0087_009C_0092.AutoSize = true;,initialization
+checkBoxBt,_0087_009C_0092,34369,_0087_009B_008F,0x0600037B,"_0087_009C_0092.Location = new Point(99, 114);",initialization
+checkBoxBt,_0087_009C_0092,34373,_0087_009B_008F,0x0600037B,_0087_009C_0092.Margin = new Padding(4);,initialization
+checkBoxBt,_0087_009C_0092,34379,_0087_009B_008F,0x0600037B,"_0087_009C_0092.Size = new Size(71, 19);",initialization
+checkBoxBt,_0087_009C_0092,34382,_0087_009B_008F,0x0600037B,_0087_009C_0092.TabIndex = 33;,initialization
+checkBoxBt,_0087_009C_0092,34386,_0087_009B_008F,0x0600037B,"_0087_009C_0092.Text = ""辅助线"" /* string-offset:4808 */;",initialization
+checkBoxBt,_0087_009C_0092,34387,_0087_009B_008F,0x0600037B,_0087_009C_0092.UseVisualStyleBackColor = true;,initialization
+checkBoxBt,_0087_009C_0092,35132,_0087_009B_008F,0x0600037B,_0087_009C_0092 = new CheckBox();,initialization
+labelBtDistTime,_0087_009C_0093,31895,constructor/field,,private Label _0087_009C_0093;,reference (read/write classification in expression)
+labelBtDistTime,_0087_009C_0093,32328,_0087_009A_008E,0x06000360,"_0087_009C_0093.Text = ""时间(min)"" /* string-offset:4652 */;",reference (read/write classification in expression)
+labelBtDistTime,_0087_009C_0093,32334,_0087_009A_008E,0x06000360,"_0087_009C_0093.Text = ""距离(nm)"" /* string-offset:4656 */;",reference (read/write classification in expression)
+labelBtDistTime,_0087_009C_0093,34126,_0087_009B_008F,0x0600037B,_0087_009C_0093.TabIndex = 0;,initialization
+labelBtDistTime,_0087_009C_0093,34362,_0087_009B_008F,0x0600037B,"_0087_009C_0093.Text = ""距离（nm）"" /* string-offset:4860 */;",initialization
+labelBtDistTime,_0087_009C_0093,34391,_0087_009B_008F,0x0600037B,_0087_009C_0093.AutoSize = true;,initialization
+labelBtDistTime,_0087_009C_0093,34395,_0087_009B_008F,0x0600037B,"_0087_009C_0093.Location = new Point(15, 83);",initialization
+labelBtDistTime,_0087_009C_0093,34399,_0087_009B_008F,0x0600037B,"_0087_009C_0093.Size = new Size(83, 15);",initialization
+labelBtDistTime,_0087_009C_0093,34557,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0093);,initialization
+labelBtDistTime,_0087_009C_0093,35133,_0087_009B_008F,0x0600037B,_0087_009C_0093 = new Label();,initialization
+buttonBasetTurn,_0087_009C_0090,31889,constructor/field,,private Button _0087_009C_0090;,reference (read/write classification in expression)
+buttonBasetTurn,_0087_009C_0090,34070,_0087_009B_008F,0x0600037B,_0087_009C_0090 = new Button();,initialization
+buttonBasetTurn,_0087_009C_0090,34081,_0087_009B_008F,0x0600037B,"_0087_009C_0090.Size = new Size(80, 40);",initialization
+buttonBasetTurn,_0087_009C_0090,34084,_0087_009B_008F,0x0600037B,_0087_009C_0090.TabIndex = 34;,initialization
+buttonBasetTurn,_0087_009C_0090,34085,_0087_009B_008F,0x0600037B,"_0087_009C_0090.Text = ""CAD"" /* string-offset:1696 */;",initialization
+buttonBasetTurn,_0087_009C_0090,34086,_0087_009B_008F,0x0600037B,_0087_009C_0090.UseVisualStyleBackColor = true;,initialization
+buttonBasetTurn,_0087_009C_0090,34087,_0087_009B_008F,0x0600037B,_0087_009C_0090.Click += _0087_009A_008D;,initialization
+buttonBasetTurn,_0087_009C_0090,34208,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0090);,initialization
+buttonBasetTurn,_0087_009C_0090,34412,_0087_009B_008F,0x0600037B,"_0087_009C_0090.Margin = new Padding(3, 2, 3, 2);",initialization
+buttonBasetTurn,_0087_009C_0090,34421,_0087_009B_008F,0x0600037B,"_0087_009C_0090.Location = new Point(399, 97);",initialization
+label8,_0087_009C_0096,31901,constructor/field,,private Label _0087_009C_0096;,reference (read/write classification in expression)
+label8,_0087_009C_0096,34437,_0087_009B_008F,0x0600037B,"_0087_009C_0096.Location = new Point(199, 18);",initialization
+label8,_0087_009C_0096,34441,_0087_009B_008F,0x0600037B,"_0087_009C_0096.Size = new Size(82, 15);",initialization
+label8,_0087_009C_0096,34444,_0087_009B_008F,0x0600037B,_0087_009C_0096.TabIndex = 27;,initialization
+label8,_0087_009C_0096,34565,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0096);,initialization
+label8,_0087_009C_0096,34668,_0087_009B_008F,0x0600037B,_0087_009C_0096.AutoSize = true;,initialization
+label8,_0087_009C_0096,35178,_0087_009B_008F,0x0600037B,_0087_009C_0096 = new Label();,initialization
+label8,_0087_009C_0096,35251,_0087_009B_008F,0x0600037B,"_0087_009C_0096.Text = ""导航台类型"" /* string-offset:4816 */;",initialization
+comboBoxPt80,_0087_009D_008E,31935,constructor/field,,private ComboBox _0087_009D_008E;,reference (read/write classification in expression)
+comboBoxPt80,_0087_009D_008E,32143,_0087_009A_0089,0x0600035B,"if (_0087_009D_008E.Text == ""右转入航"" /* string-offset:4624 */)",reference (read/write classification in expression)
+comboBoxPt80,_0087_009D_008E,32151,_0087_009A_0089,0x0600035B,"if (_0087_009D_008E.Text == ""右转入航"" /* string-offset:4624 */)",reference (read/write classification in expression)
+comboBoxPt80,_0087_009D_008E,34474,_0087_009B_008F,0x0600037B,"_0087_009D_008E.Size = new Size(80, 22);",initialization
+comboBoxPt80,_0087_009D_008E,34475,_0087_009B_008F,0x0600037B,_0087_009D_008E.TabIndex = 28;,initialization
+comboBoxPt80,_0087_009D_008E,34479,_0087_009B_008F,0x0600037B,"_0087_009D_008E.Text = ""右转入航"" /* string-offset:4624 */;",initialization
+comboBoxPt80,_0087_009D_008E,34684,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_008E);,initialization
+comboBoxPt80,_0087_009D_008E,34787,_0087_009B_008F,0x0600037B,_0087_009D_008E.FormattingEnabled = true;,initialization
+comboBoxPt80,_0087_009D_008E,34790,_0087_009B_008F,0x0600037B,_0087_009D_008E.Items.AddRange(new object[2],initialization
+comboBoxPt80,_0087_009D_008E,34795,_0087_009B_008F,0x0600037B,"_0087_009D_008E.Location = new Point(98, 15);",initialization
+comboBoxPt80,_0087_009D_008E,34997,_0087_009B_008F,0x0600037B,_0087_009D_008E = new ComboBox();,initialization
+label18,_0087_009D_008F,31937,constructor/field,,private Label _0087_009D_008F;,reference (read/write classification in expression)
+label18,_0087_009D_008F,34487,_0087_009B_008F,0x0600037B,_0087_009D_008F.AutoSize = true;,initialization
+label18,_0087_009D_008F,34491,_0087_009B_008F,0x0600037B,"_0087_009D_008F.Location = new Point(15, 18);",initialization
+label18,_0087_009D_008F,34496,_0087_009B_008F,0x0600037B,"_0087_009D_008F.Size = new Size(67, 15);",initialization
+label18,_0087_009D_008F,34497,_0087_009B_008F,0x0600037B,_0087_009D_008F.TabIndex = 25;,initialization
+label18,_0087_009D_008F,34501,_0087_009B_008F,0x0600037B,"_0087_009D_008F.Text = ""转弯方向"" /* string-offset:4824 */;",initialization
+label18,_0087_009D_008F,34685,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_008F);,initialization
+label18,_0087_009D_008F,35001,_0087_009B_008F,0x0600037B,_0087_009D_008F = new Label();,initialization
+checkBoxPt80,_0087_009D_0087,31921,constructor/field,,private CheckBox _0087_009D_0087;,reference (read/write classification in expression)
+checkBoxPt80,_0087_009D_0087,32149,_0087_009A_0089,0x0600035B,obj2._0088_0098_0097(_0087_009D_0087.Checked);,reference (read/write classification in expression)
+checkBoxPt80,_0087_009D_0087,34505,_0087_009B_008F,0x0600037B,_0087_009D_0087.AutoSize = true;,initialization
+checkBoxPt80,_0087_009D_0087,34509,_0087_009B_008F,0x0600037B,"_0087_009D_0087.Location = new Point(98, 47);",initialization
+checkBoxPt80,_0087_009D_0087,34510,_0087_009B_008F,0x0600037B,_0087_009D_0087.Margin = new Padding(4);,initialization
+checkBoxPt80,_0087_009D_0087,34514,_0087_009B_008F,0x0600037B,"_0087_009D_0087.Size = new Size(71, 19);",initialization
+checkBoxPt80,_0087_009D_0087,34517,_0087_009B_008F,0x0600037B,_0087_009D_0087.TabIndex = 9;,initialization
+checkBoxPt80,_0087_009D_0087,34518,_0087_009B_008F,0x0600037B,"_0087_009D_0087.Text = ""辅助线"" /* string-offset:4808 */;",initialization
+checkBoxPt80,_0087_009D_0087,34519,_0087_009B_008F,0x0600037B,_0087_009D_0087.UseVisualStyleBackColor = true;,initialization
+checkBoxPt80,_0087_009D_0087,34686,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_0087);,initialization
+checkBoxPt80,_0087_009D_0087,35005,_0087_009B_008F,0x0600037B,_0087_009D_0087 = new CheckBox();,initialization
+button80PT,_0087_009D_0088,31923,constructor/field,,private Button _0087_009D_0088;,reference (read/write classification in expression)
+button80PT,_0087_009D_0088,34523,_0087_009B_008F,0x0600037B,"_0087_009D_0088.Location = new Point(330, 113);",initialization
+button80PT,_0087_009D_0088,34524,_0087_009B_008F,0x0600037B,_0087_009D_0088.Margin = new Padding(2);,initialization
+button80PT,_0087_009D_0088,34529,_0087_009B_008F,0x0600037B,"_0087_009D_0088.Size = new Size(80, 40);",initialization
+button80PT,_0087_009D_0088,34533,_0087_009B_008F,0x0600037B,_0087_009D_0088.TabIndex = 7;,initialization
+button80PT,_0087_009D_0088,34534,_0087_009B_008F,0x0600037B,"_0087_009D_0088.Text = ""CAD"" /* string-offset:1696 */;",initialization
+button80PT,_0087_009D_0088,34537,_0087_009B_008F,0x0600037B,_0087_009D_0088.UseVisualStyleBackColor = true;,initialization
+button80PT,_0087_009D_0088,34538,_0087_009B_008F,0x0600037B,_0087_009D_0088.Click += _0087_009A_0089;,initialization
+button80PT,_0087_009D_0088,34690,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_0088);,initialization
+button80PT,_0087_009D_0088,35008,_0087_009B_008F,0x0600037B,_0087_009D_0088 = new Button();,initialization
+buttonCal80PT,_0087_009D_0089,31925,constructor/field,,private Button _0087_009D_0089;,reference (read/write classification in expression)
+buttonCal80PT,_0087_009D_0089,34452,_0087_009B_008F,0x0600037B,_0087_009D_0089.UseVisualStyleBackColor = true;,initialization
+buttonCal80PT,_0087_009D_0089,34453,_0087_009B_008F,0x0600037B,_0087_009D_0089.Click += _0087_009A_008A;,initialization
+buttonCal80PT,_0087_009D_0089,34539,_0087_009B_008F,0x0600037B,"_0087_009D_0089.Location = new Point(416, 113);",initialization
+buttonCal80PT,_0087_009D_0089,34543,_0087_009B_008F,0x0600037B,_0087_009D_0089.Margin = new Padding(2);,initialization
+buttonCal80PT,_0087_009D_0089,34548,_0087_009B_008F,0x0600037B,"_0087_009D_0089.Size = new Size(65, 40);",initialization
+buttonCal80PT,_0087_009D_0089,34549,_0087_009B_008F,0x0600037B,_0087_009D_0089.TabIndex = 8;,initialization
+buttonCal80PT,_0087_009D_0089,34553,_0087_009B_008F,0x0600037B,"_0087_009D_0089.Text = ""计算"" /* string-offset:4792 */;",initialization
+buttonCal80PT,_0087_009D_0089,34691,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_0089);,initialization
+buttonCal80PT,_0087_009D_0089,35009,_0087_009B_008F,0x0600037B,_0087_009D_0089 = new Button();,initialization
+comboBoxPt45,_0087_009D_008B,31929,constructor/field,,private ComboBox _0087_009D_008B;,reference (read/write classification in expression)
+comboBoxPt45,_0087_009D_008B,32212,_0087_009A_008B,0x0600035D,"if (_0087_009D_008B.Text == ""右转入航"" /* string-offset:4624 */)",reference (read/write classification in expression)
+comboBoxPt45,_0087_009D_008B,32219,_0087_009A_008B,0x0600035D,"if (_0087_009D_008B.Text == ""右转入航"" /* string-offset:4624 */)",reference (read/write classification in expression)
+comboBoxPt45,_0087_009D_008B,34284,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008B);,initialization
+comboBoxPt45,_0087_009D_008B,34592,_0087_009B_008F,0x0600037B,_0087_009D_008B.FormattingEnabled = true;,initialization
+comboBoxPt45,_0087_009D_008B,34593,_0087_009B_008F,0x0600037B,_0087_009D_008B.Items.AddRange(new object[2],initialization
+comboBoxPt45,_0087_009D_008B,34598,_0087_009B_008F,0x0600037B,"_0087_009D_008B.Location = new Point(98, 15);",initialization
+comboBoxPt45,_0087_009D_008B,34605,_0087_009B_008F,0x0600037B,"_0087_009D_008B.Size = new Size(80, 22);",initialization
+comboBoxPt45,_0087_009D_008B,34606,_0087_009B_008F,0x0600037B,_0087_009D_008B.TabIndex = 28;,initialization
+comboBoxPt45,_0087_009D_008B,34607,_0087_009B_008F,0x0600037B,"_0087_009D_008B.Text = ""右转入航"" /* string-offset:4624 */;",initialization
+comboBoxPt45,_0087_009D_008B,34644,_0087_009B_008F,0x0600037B,_0087_009D_008B = new ComboBox();,initialization
+textBoxBtDist,_0087_009C_0095,31899,constructor/field,,private TextBox _0087_009C_0095;,reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32271,_0087_009A_008D,0x0600035F,"num2 = 60.0 * _008F_008A._008B_0087_009E(_0087_009C_0095, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32275,_0087_009A_008D,0x0600035F,"num2 = _008F_008A._008B_0087_009E(_0087_009C_0095, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32280,_0087_009A_008D,0x0600035F,"_0087_009C_0095.Text = num2.ToString(""f2"" /* string-offset:4640 */);",reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32329,_0087_009A_008E,0x06000360,_0087_009C_0095.Width = 80;,reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32330,_0087_009A_008E,0x06000360,_0087_009C_0095.Enabled = true;,reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32335,_0087_009A_008E,0x06000360,_0087_009C_0095.Width = 65;,reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32339,_0087_009A_008E,0x06000360,_0087_009C_0095.Enabled = _0087_009D_0090.Checked;,reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32349,_0087_009A_008F,0x06000361,_0087_009C_0095.Enabled = _0087_009D_0090.Checked;,reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32373,_0087_009A_0090,0x06000362,"num2 = 60.0 * _008F_008A._008B_0087_009E(_0087_009C_0095, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32377,_0087_009A_0090,0x06000362,"num2 = _008F_008A._008B_0087_009E(_0087_009C_0095, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,32382,_0087_009A_0090,0x06000362,"_0087_009C_0095.Text = num2.ToString(""f2"" /* string-offset:4640 */);",reference (read/write classification in expression)
+textBoxBtDist,_0087_009C_0095,34564,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0095);,initialization
+textBoxBtDist,_0087_009C_0095,34654,_0087_009B_008F,0x0600037B,"_0087_009C_0095.Location = new Point(99, 79);",initialization
+textBoxBtDist,_0087_009C_0095,34658,_0087_009B_008F,0x0600037B,"_0087_009C_0095.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxBtDist,_0087_009C_0095,34665,_0087_009B_008F,0x0600037B,"_0087_009C_0095.Size = new Size(55, 23);",initialization
+textBoxBtDist,_0087_009C_0095,34666,_0087_009B_008F,0x0600037B,_0087_009C_0095.TabIndex = 1;,initialization
+textBoxBtDist,_0087_009C_0095,34667,_0087_009B_008F,0x0600037B,"_0087_009C_0095.Text = ""10"" /* string-offset:4580 */;",initialization
+textBoxBtDist,_0087_009C_0095,35056,_0087_009B_008F,0x0600037B,_0087_009C_0095 = new TextBox();,initialization
+tabPage4,_0087_009B_009B,31861,constructor/field,,private TabPage _0087_009B_009B;,reference (read/write classification in expression)
+tabPage4,_0087_009B_009B,34683,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_009A);,initialization
+tabPage4,_0087_009B_009B,34684,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_008E);,initialization
+tabPage4,_0087_009B_009B,34685,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_008F);,initialization
+tabPage4,_0087_009B_009B,34686,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_0087);,initialization
+tabPage4,_0087_009B_009B,34690,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_0088);,initialization
+tabPage4,_0087_009B_009B,34691,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_0089);,initialization
+tabPage4,_0087_009B_009B,34692,_0087_009B_008F,0x0600037B,"_0087_009B_009B.Location = new Point(4, 44);",initialization
+tabPage4,_0087_009B_009B,34697,_0087_009B_008F,0x0600037B,"_0087_009B_009B.Size = new Size(503, 164);",initialization
+tabPage4,_0087_009B_009B,34698,_0087_009B_008F,0x0600037B,_0087_009B_009B.TabIndex = 3;,initialization
+tabPage4,_0087_009B_009B,34702,_0087_009B_008F,0x0600037B,"_0087_009B_009B.Text = ""80/260程序转弯"" /* string-offset:4940 */;",initialization
+tabPage4,_0087_009B_009B,34705,_0087_009B_008F,0x0600037B,_0087_009B_009B.UseVisualStyleBackColor = true;,initialization
+tabPage4,_0087_009B_009B,34995,_0087_009B_008F,0x0600037B,_0087_009B_009B = new TabPage();,initialization
+tabPage4,_0087_009B_009B,35024,_0087_009B_008F,0x0600037B,_0087_009B_009B.SuspendLayout();,initialization
+tabPage4,_0087_009B_009B,35283,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_009B);,initialization
+tabPage4,_0087_009B_009B,35489,_0087_009B_008F,0x0600037B,_0087_009B_009B.ResumeLayout(performLayout: false);,initialization
+tabPage4,_0087_009B_009B,35493,_0087_009B_008F,0x0600037B,_0087_009B_009B.PerformLayout();,initialization
+button1,_0087_009D_009A,31959,constructor/field,,private Button _0087_009D_009A;,reference (read/write classification in expression)
+button1,_0087_009D_009A,34683,_0087_009B_008F,0x0600037B,_0087_009B_009B.Controls.Add(_0087_009D_009A);,initialization
+button1,_0087_009D_009A,34709,_0087_009B_008F,0x0600037B,"_0087_009D_009A.Location = new Point(98, 113);",initialization
+button1,_0087_009D_009A,34714,_0087_009B_008F,0x0600037B,"_0087_009D_009A.Size = new Size(80, 40);",initialization
+button1,_0087_009D_009A,34777,_0087_009B_008F,0x0600037B,_0087_009D_009A.TabIndex = 29;,initialization
+button1,_0087_009D_009A,34781,_0087_009B_008F,0x0600037B,"_0087_009D_009A.Text = ""包络线"" /* string-offset:4916 */;",initialization
+button1,_0087_009D_009A,34785,_0087_009B_008F,0x0600037B,_0087_009D_009A.UseVisualStyleBackColor = true;,initialization
+button1,_0087_009D_009A,34786,_0087_009B_008F,0x0600037B,_0087_009D_009A.Click += _0087_009A_0095;,initialization
+button1,_0087_009D_009A,34996,_0087_009B_008F,0x0600037B,_0087_009D_009A = new Button();,initialization
+label14,_0087_009C_0097,31903,constructor/field,,private Label _0087_009C_0097;,reference (read/write classification in expression)
+label14,_0087_009C_0097,34573,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0097);,initialization
+label14,_0087_009C_0097,34722,_0087_009B_008F,0x0600037B,"_0087_009C_0097.Location = new Point(199, 50);",initialization
+label14,_0087_009C_0097,34726,_0087_009B_008F,0x0600037B,"_0087_009C_0097.Size = new Size(91, 15);",initialization
+label14,_0087_009C_0097,34727,_0087_009B_008F,0x0600037B,_0087_009C_0097.TabIndex = 25;,initialization
+label14,_0087_009C_0097,34728,_0087_009B_008F,0x0600037B,"_0087_009C_0097.Text = ""天线高度(m)"" /* string-offset:4832 */;",initialization
+label14,_0087_009C_0097,35153,_0087_009B_008F,0x0600037B,_0087_009C_0097 = new Label();,initialization
+label14,_0087_009C_0097,35381,_0087_009B_008F,0x0600037B,_0087_009C_0097.AutoSize = true;,initialization
+comboBoxBtDistTime,_0087_009C_0098,31905,constructor/field,,private ComboBox _0087_009C_0098;,reference (read/write classification in expression)
+comboBoxBtDistTime,_0087_009C_0098,32269,_0087_009A_008D,0x0600035F,"if (flag = _0087_009C_0098.Text == ""按时间"" /* string-offset:4636 */)",reference (read/write classification in expression)
+comboBoxBtDistTime,_0087_009C_0098,32326,_0087_009A_008E,0x06000360,"if (_0087_009C_0098.Text == ""按时间"" /* string-offset:4636 */)",reference (read/write classification in expression)
+comboBoxBtDistTime,_0087_009C_0098,32371,_0087_009A_0090,0x06000362,"if (flag = _0087_009C_0098.Text == ""按时间"" /* string-offset:4636 */)",reference (read/write classification in expression)
+comboBoxBtDistTime,_0087_009C_0098,34577,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0098);,initialization
+comboBoxBtDistTime,_0087_009C_0098,34729,_0087_009B_008F,0x0600037B,_0087_009C_0098.FormattingEnabled = true;,initialization
+comboBoxBtDistTime,_0087_009C_0098,34733,_0087_009B_008F,0x0600037B,_0087_009C_0098.Items.AddRange(new object[2],initialization
+comboBoxBtDistTime,_0087_009C_0098,34741,_0087_009B_008F,0x0600037B,"_0087_009C_0098.Location = new Point(99, 46);",initialization
+comboBoxBtDistTime,_0087_009C_0098,34743,_0087_009B_008F,0x0600037B,"_0087_009C_0098.Size = new Size(80, 22);",initialization
+comboBoxBtDistTime,_0087_009C_0098,34744,_0087_009B_008F,0x0600037B,_0087_009C_0098.TabIndex = 32;,initialization
+comboBoxBtDistTime,_0087_009C_0098,34748,_0087_009B_008F,0x0600037B,"_0087_009C_0098.Text = ""按距离"" /* string-offset:4880 */;",initialization
+comboBoxBtDistTime,_0087_009C_0098,34749,_0087_009B_008F,0x0600037B,_0087_009C_0098.SelectedIndexChanged += _0087_009A_008E;,initialization
+comboBoxBtDistTime,_0087_009C_0098,35137,_0087_009B_008F,0x0600037B,_0087_009C_0098 = new ComboBox();,initialization
+comboBoxBtDir,_0087_009C_0099,31907,constructor/field,,private ComboBox _0087_009C_0099;,reference (read/write classification in expression)
+comboBoxBtDir,_0087_009C_0099,32296,_0087_009A_008D,0x0600035F,"if (_0087_009C_0099.Text == ""右转入航"" /* string-offset:4624 */)",reference (read/write classification in expression)
+comboBoxBtDir,_0087_009C_0099,32303,_0087_009A_008D,0x0600035F,"if (_0087_009C_0099.Text == ""左转入航"" /* string-offset:4644 */)",reference (read/write classification in expression)
+comboBoxBtDir,_0087_009C_0099,34583,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0099);,initialization
+comboBoxBtDir,_0087_009C_0099,34750,_0087_009B_008F,0x0600037B,_0087_009C_0099.FormattingEnabled = true;,initialization
+comboBoxBtDir,_0087_009C_0099,34754,_0087_009B_008F,0x0600037B,_0087_009C_0099.Items.AddRange(new object[2],initialization
+comboBoxBtDir,_0087_009C_0099,34759,_0087_009B_008F,0x0600037B,"_0087_009C_0099.Location = new Point(99, 14);",initialization
+comboBoxBtDir,_0087_009C_0099,34764,_0087_009B_008F,0x0600037B,"_0087_009C_0099.Size = new Size(80, 22);",initialization
+comboBoxBtDir,_0087_009C_0099,34765,_0087_009B_008F,0x0600037B,_0087_009C_0099.TabIndex = 32;,initialization
+comboBoxBtDir,_0087_009C_0099,34766,_0087_009B_008F,0x0600037B,"_0087_009C_0099.Text = ""右转入航"" /* string-offset:4624 */;",initialization
+comboBoxBtDir,_0087_009C_0099,35138,_0087_009B_008F,0x0600037B,_0087_009C_0099 = new ComboBox();,initialization
+textBoxHdTimes,_0087_009C_0087,31871,constructor/field,,private TextBox _0087_009C_0087;,reference (read/write classification in expression)
+textBoxHdTimes,_0087_009C_0087,32552,_0087_009A_0092,0x06000364,"double num = _008F_008A._008B_0087_009E(_0087_009C_0087, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxHdTimes,_0087_009C_0087,32621,_0087_009A_0094,0x06000366,"double num = _008F_008A._008B_0087_009E(_0087_009C_0087, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxHdTimes,_0087_009C_0087,33751,_0087_009B_008A,0x06000375,"double num = _008F_008A._008B_0087_009E(_0087_009C_0087, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxHdTimes,_0087_009C_0087,33783,_0087_009B_008B,0x06000376,"double num = _008F_008A._008B_0087_009E(_0087_009C_0087, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxHdTimes,_0087_009C_0087,33859,_0087_009B_008C,0x06000377,"double num2 = _008F_008A._008B_0087_009E(_0087_009C_0087, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxHdTimes,_0087_009C_0087,34019,_0087_009B_008F,0x0600037B,_0087_009C_0087 = new TextBox();,initialization
+textBoxHdTimes,_0087_009C_0087,34814,_0087_009B_008F,0x0600037B,"_0087_009C_0087.Location = new Point(110, 45);",initialization
+textBoxHdTimes,_0087_009C_0087,34817,_0087_009B_008F,0x0600037B,"_0087_009C_0087.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxHdTimes,_0087_009C_0087,34822,_0087_009B_008F,0x0600037B,"_0087_009C_0087.Size = new Size(80, 23);",initialization
+textBoxHdTimes,_0087_009C_0087,34826,_0087_009B_008F,0x0600037B,_0087_009C_0087.TabIndex = 23;,initialization
+textBoxHdTimes,_0087_009C_0087,34827,_0087_009B_008F,0x0600037B,"_0087_009C_0087.Text = ""1"" /* string-offset:4760 */;",initialization
+textBoxHdTimes,_0087_009C_0087,35067,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0087);,initialization
+buttonYE,_0087_009C_0089,31875,constructor/field,,private Button _0087_009C_0089;,reference (read/write classification in expression)
+buttonYE,_0087_009C_0089,34020,_0087_009B_008F,0x0600037B,_0087_009C_0089 = new Button();,initialization
+buttonYE,_0087_009C_0089,34835,_0087_009B_008F,0x0600037B,"_0087_009C_0089.Location = new Point(415, 46);",initialization
+buttonYE,_0087_009C_0089,34836,_0087_009B_008F,0x0600037B,_0087_009C_0089.Margin = new Padding(2);,initialization
+buttonYE,_0087_009C_0089,34838,_0087_009B_008F,0x0600037B,"_0087_009C_0089.Size = new Size(65, 27);",initialization
+buttonYE,_0087_009C_0089,34841,_0087_009B_008F,0x0600037B,_0087_009C_0089.TabIndex = 30;,initialization
+buttonYE,_0087_009C_0089,34842,_0087_009B_008F,0x0600037B,"_0087_009C_0089.Text = ""YE"" /* string-offset:4768 */;",initialization
+buttonYE,_0087_009C_0089,34843,_0087_009B_008F,0x0600037B,_0087_009C_0089.UseVisualStyleBackColor = true;,initialization
+buttonYE,_0087_009C_0089,34847,_0087_009B_008F,0x0600037B,_0087_009C_0089.Click += _0087_009B_008B;,initialization
+buttonYE,_0087_009C_0089,35071,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0089);,initialization
+buttonXE,_0087_009C_008A,31877,constructor/field,,private Button _0087_009C_008A;,reference (read/write classification in expression)
+buttonXE,_0087_009C_008A,34021,_0087_009B_008F,0x0600037B,_0087_009C_008A = new Button();,initialization
+buttonXE,_0087_009C_008A,34848,_0087_009B_008F,0x0600037B,"_0087_009C_008A.Location = new Point(415, 14);",initialization
+buttonXE,_0087_009C_008A,34852,_0087_009B_008F,0x0600037B,_0087_009C_008A.Margin = new Padding(2);,initialization
+buttonXE,_0087_009C_008A,34860,_0087_009B_008F,0x0600037B,"_0087_009C_008A.Size = new Size(65, 27);",initialization
+buttonXE,_0087_009C_008A,34861,_0087_009B_008F,0x0600037B,_0087_009C_008A.TabIndex = 31;,initialization
+buttonXE,_0087_009C_008A,34862,_0087_009B_008F,0x0600037B,"_0087_009C_008A.Text = ""XE"" /* string-offset:4776 */;",initialization
+buttonXE,_0087_009C_008A,34863,_0087_009B_008F,0x0600037B,_0087_009C_008A.UseVisualStyleBackColor = true;,initialization
+buttonXE,_0087_009C_008A,34867,_0087_009B_008F,0x0600037B,_0087_009C_008A.Click += _0087_009B_008A;,initialization
+buttonXE,_0087_009C_008A,35072,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008A);,initialization
+buttonHolding,_0087_009C_008B,31879,constructor/field,,private Button _0087_009C_008B;,reference (read/write classification in expression)
+buttonHolding,_0087_009C_008B,34024,_0087_009B_008F,0x0600037B,_0087_009C_008B = new Button();,initialization
+buttonHolding,_0087_009C_008B,34870,_0087_009B_008F,0x0600037B,"_0087_009C_008B.Location = new Point(330, 113);",initialization
+buttonHolding,_0087_009C_008B,34871,_0087_009B_008F,0x0600037B,"_0087_009C_008B.Margin = new Padding(3, 2, 3, 2);",initialization
+buttonHolding,_0087_009C_008B,34873,_0087_009B_008F,0x0600037B,"_0087_009C_008B.Size = new Size(80, 40);",initialization
+buttonHolding,_0087_009C_008B,34877,_0087_009B_008F,0x0600037B,_0087_009C_008B.TabIndex = 25;,initialization
+buttonHolding,_0087_009C_008B,34881,_0087_009B_008F,0x0600037B,"_0087_009C_008B.Text = ""等待模板"" /* string-offset:4784 */;",initialization
+buttonHolding,_0087_009C_008B,34882,_0087_009B_008F,0x0600037B,_0087_009C_008B.UseVisualStyleBackColor = true;,initialization
+buttonHolding,_0087_009C_008B,34885,_0087_009B_008F,0x0600037B,_0087_009C_008B.Click += _0087_009A_0092;,initialization
+buttonHolding,_0087_009C_008B,35073,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008B);,initialization
+buttonCalHD,_0087_009C_008C,31881,constructor/field,,private Button _0087_009C_008C;,reference (read/write classification in expression)
+buttonCalHD,_0087_009C_008C,34028,_0087_009B_008F,0x0600037B,_0087_009C_008C = new Button();,initialization
+buttonCalHD,_0087_009C_008C,34109,_0087_009B_008F,0x0600037B,_0087_009C_008C.UseVisualStyleBackColor = true;,initialization
+buttonCalHD,_0087_009C_008C,34110,_0087_009B_008F,0x0600037B,_0087_009C_008C.Click += _0087_009A_0094;,initialization
+buttonCalHD,_0087_009C_008C,34886,_0087_009B_008F,0x0600037B,"_0087_009C_008C.Location = new Point(416, 113);",initialization
+buttonCalHD,_0087_009C_008C,34887,_0087_009B_008F,0x0600037B,"_0087_009C_008C.Margin = new Padding(3, 2, 3, 2);",initialization
+buttonCalHD,_0087_009C_008C,34892,_0087_009B_008F,0x0600037B,"_0087_009C_008C.Size = new Size(65, 40);",initialization
+buttonCalHD,_0087_009C_008C,34896,_0087_009B_008F,0x0600037B,_0087_009C_008C.TabIndex = 26;,initialization
+buttonCalHD,_0087_009C_008C,34897,_0087_009B_008F,0x0600037B,"_0087_009C_008C.Text = ""计算"" /* string-offset:4792 */;",initialization
+buttonCalHD,_0087_009C_008C,35327,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008C);,initialization
+label7,_0087_009B_009C,31863,constructor/field,,private Label _0087_009B_009C;,reference (read/write classification in expression)
+label7,_0087_009B_009C,34051,_0087_009B_008F,0x0600037B,_0087_009B_009C = new Label();,initialization
+label7,_0087_009B_009C,34902,_0087_009B_008F,0x0600037B,_0087_009B_009C.AutoSize = true;,initialization
+label7,_0087_009B_009C,34903,_0087_009B_008F,0x0600037B,"_0087_009B_009C.Location = new Point(15, 18);",initialization
+label7,_0087_009B_009C,34907,_0087_009B_008F,0x0600037B,"_0087_009B_009C.Size = new Size(67, 15);",initialization
+label7,_0087_009B_009C,35235,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009B_009C);,initialization
+label7,_0087_009B_009C,35395,_0087_009B_008F,0x0600037B,"_0087_009B_009C.Text = ""转弯方向"" /* string-offset:4824 */;",initialization
+label7,_0087_009B_009C,35410,_0087_009B_008F,0x0600037B,_0087_009B_009C.TabIndex = 5;,initialization
+checkBoxInputDist,_0087_009D_0090,31939,constructor/field,,private CheckBox _0087_009D_0090;,reference (read/write classification in expression)
+checkBoxInputDist,_0087_009D_0090,32273,_0087_009A_008D,0x0600035F,else if (_0087_009D_0090.Checked),reference (read/write classification in expression)
+checkBoxInputDist,_0087_009D_0090,32331,_0087_009A_008E,0x06000360,_0087_009D_0090.Visible = false;,reference (read/write classification in expression)
+checkBoxInputDist,_0087_009D_0090,32339,_0087_009A_008E,0x06000360,_0087_009C_0095.Enabled = _0087_009D_0090.Checked;,reference (read/write classification in expression)
+checkBoxInputDist,_0087_009D_0090,32344,_0087_009A_008E,0x06000360,_0087_009D_0090.Visible = true;,reference (read/write classification in expression)
+checkBoxInputDist,_0087_009D_0090,32349,_0087_009A_008F,0x06000361,_0087_009C_0095.Enabled = _0087_009D_0090.Checked;,reference (read/write classification in expression)
+checkBoxInputDist,_0087_009D_0090,32375,_0087_009A_0090,0x06000362,else if (_0087_009D_0090.Checked),reference (read/write classification in expression)
+checkBoxInputDist,_0087_009D_0090,34069,_0087_009B_008F,0x0600037B,_0087_009D_0090 = new CheckBox();,initialization
+checkBoxInputDist,_0087_009D_0090,34207,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0090);,initialization
+checkBoxInputDist,_0087_009D_0090,34420,_0087_009B_008F,0x0600037B,_0087_009D_0090.CheckedChanged += _0087_009A_008F;,initialization
+checkBoxInputDist,_0087_009D_0090,34916,_0087_009B_008F,0x0600037B,_0087_009D_0090.AutoSize = true;,initialization
+checkBoxInputDist,_0087_009D_0090,34917,_0087_009B_008F,0x0600037B,_0087_009D_0090.Checked = true;,initialization
+checkBoxInputDist,_0087_009D_0090,34918,_0087_009B_008F,0x0600037B,_0087_009D_0090.CheckState = CheckState.Checked;,initialization
+checkBoxInputDist,_0087_009D_0090,34919,_0087_009B_008F,0x0600037B,"_0087_009D_0090.Location = new Point(165, 83);",initialization
+checkBoxInputDist,_0087_009D_0090,35195,_0087_009B_008F,0x0600037B,"_0087_009D_0090.Size = new Size(15, 14);",initialization
+checkBoxInputDist,_0087_009D_0090,35196,_0087_009B_008F,0x0600037B,_0087_009D_0090.TabIndex = 37;,initialization
+checkBoxInputDist,_0087_009D_0090,35197,_0087_009B_008F,0x0600037B,_0087_009D_0090.UseVisualStyleBackColor = true;,initialization
+tabPage1,_0087_009B_0098,31855,constructor/field,,private TabPage _0087_009B_0098;,reference (read/write classification in expression)
+tabPage1,_0087_009B_0098,34012,_0087_009B_008F,0x0600037B,_0087_009B_0098 = new TabPage();,initialization
+tabPage1,_0087_009B_0098,34931,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0088);,initialization
+tabPage1,_0087_009B_0098,34935,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009B_009D);,initialization
+tabPage1,_0087_009B_0098,34938,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009B_009E);,initialization
+tabPage1,_0087_009B_0098,34939,_0087_009B_008F,0x0600037B,"_0087_009B_0098.Location = new Point(4, 44);",initialization
+tabPage1,_0087_009B_0098,34946,_0087_009B_008F,0x0600037B,_0087_009B_0098.Padding = new Padding(3);,initialization
+tabPage1,_0087_009B_0098,34947,_0087_009B_008F,0x0600037B,"_0087_009B_0098.Size = new Size(503, 164);",initialization
+tabPage1,_0087_009B_0098,34950,_0087_009B_008F,0x0600037B,_0087_009B_0098.TabIndex = 0;,initialization
+tabPage1,_0087_009B_0098,34953,_0087_009B_008F,0x0600037B,"_0087_009B_0098.Text = ""等待与直角航线"" /* string-offset:4744 */;",initialization
+tabPage1,_0087_009B_0098,34954,_0087_009B_008F,0x0600037B,_0087_009B_0098.UseVisualStyleBackColor = true;,initialization
+tabPage1,_0087_009B_0098,35018,_0087_009B_008F,0x0600037B,_0087_009B_0098.SuspendLayout();,initialization
+tabPage1,_0087_009B_0098,35026,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_0098);,initialization
+tabPage1,_0087_009B_0098,35064,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009D_0096);,initialization
+tabPage1,_0087_009B_0098,35067,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0087);,initialization
+tabPage1,_0087_009B_0098,35071,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0089);,initialization
+tabPage1,_0087_009B_0098,35072,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008A);,initialization
+tabPage1,_0087_009B_0098,35073,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008B);,initialization
+tabPage1,_0087_009B_0098,35225,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009D_0097);,initialization
+tabPage1,_0087_009B_0098,35228,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008D);,initialization
+tabPage1,_0087_009B_0098,35229,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008E);,initialization
+tabPage1,_0087_009B_0098,35233,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008F);,initialization
+tabPage1,_0087_009B_0098,35234,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0086);,initialization
+tabPage1,_0087_009B_0098,35235,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009B_009C);,initialization
+tabPage1,_0087_009B_0098,35327,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008C);,initialization
+tabPage1,_0087_009B_0098,35478,_0087_009B_008F,0x0600037B,_0087_009B_0098.ResumeLayout(performLayout: false);,initialization
+tabPage1,_0087_009B_0098,35482,_0087_009B_008F,0x0600037B,_0087_009B_0098.PerformLayout();,initialization
+buttonOmiHD,_0087_009D_0096,31951,constructor/field,,private Button _0087_009D_0096;,reference (read/write classification in expression)
+buttonOmiHD,_0087_009D_0096,34015,_0087_009B_008F,0x0600037B,_0087_009D_0096 = new Button();,initialization
+buttonOmiHD,_0087_009D_0096,34429,_0087_009B_008F,0x0600037B,"_0087_009D_0096.Size = new Size(80, 59);",initialization
+buttonOmiHD,_0087_009D_0096,34799,_0087_009B_008F,0x0600037B,_0087_009D_0096.TabIndex = 32;,initialization
+buttonOmiHD,_0087_009D_0096,34803,_0087_009B_008F,0x0600037B,"_0087_009D_0096.Text = ""全向等待"" /* string-offset:4752 */;",initialization
+buttonOmiHD,_0087_009D_0096,34806,_0087_009B_008F,0x0600037B,_0087_009D_0096.UseVisualStyleBackColor = true;,initialization
+buttonOmiHD,_0087_009D_0096,34810,_0087_009B_008F,0x0600037B,_0087_009D_0096.Click += _0087_009B_008C;,initialization
+buttonOmiHD,_0087_009D_0096,34955,_0087_009B_008F,0x0600037B,"_0087_009D_0096.Location = new Point(330, 14);",initialization
+buttonOmiHD,_0087_009D_0096,35064,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009D_0096);,initialization
+buttonCal45PT,_0087_009D_0086,31919,constructor/field,,private Button _0087_009D_0086;,reference (read/write classification in expression)
+buttonCal45PT,_0087_009D_0086,34301,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_0086);,initialization
+buttonCal45PT,_0087_009D_0086,34672,_0087_009B_008F,0x0600037B,"_0087_009D_0086.Size = new Size(65, 40);",initialization
+buttonCal45PT,_0087_009D_0086,34673,_0087_009B_008F,0x0600037B,_0087_009D_0086.TabIndex = 14;,initialization
+buttonCal45PT,_0087_009D_0086,34674,_0087_009B_008F,0x0600037B,"_0087_009D_0086.Text = ""计算"" /* string-offset:4792 */;",initialization
+buttonCal45PT,_0087_009D_0086,34677,_0087_009B_008F,0x0600037B,_0087_009D_0086.UseVisualStyleBackColor = true;,initialization
+buttonCal45PT,_0087_009D_0086,34680,_0087_009B_008F,0x0600037B,_0087_009D_0086.Click += _0087_009A_008C;,initialization
+buttonCal45PT,_0087_009D_0086,34960,_0087_009B_008F,0x0600037B,"_0087_009D_0086.Location = new Point(416, 113);",initialization
+buttonCal45PT,_0087_009D_0086,34963,_0087_009B_008F,0x0600037B,"_0087_009D_0086.Margin = new Padding(3, 2, 3, 2);",initialization
+buttonCal45PT,_0087_009D_0086,34987,_0087_009B_008F,0x0600037B,_0087_009D_0086 = new Button();,initialization
+label17,_0087_009D_008D,31933,constructor/field,,private Label _0087_009D_008D;,reference (read/write classification in expression)
+label17,_0087_009D_008D,34218,_0087_009B_008F,0x0600037B,"_0087_009D_008D.Size = new Size(77, 15);",initialization
+label17,_0087_009D_008D,34219,_0087_009B_008F,0x0600037B,_0087_009D_008D.TabIndex = 26;,initialization
+label17,_0087_009D_008D,34223,_0087_009B_008F,0x0600037B,"_0087_009D_008D.Text = ""时间(min)"" /* string-offset:4652 */;",initialization
+label17,_0087_009D_008D,34289,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008D);,initialization
+label17,_0087_009D_008D,34975,_0087_009B_008F,0x0600037B,_0087_009D_008D.AutoSize = true;,initialization
+label17,_0087_009D_008D,34979,_0087_009B_008F,0x0600037B,"_0087_009D_008D.Location = new Point(15, 50);",initialization
+label17,_0087_009D_008D,35342,_0087_009B_008F,0x0600037B,_0087_009D_008D = new Label();,initialization
+textBoxBtPriMoc,_0087_009D_0092,31943,constructor/field,,private TextBox _0087_009D_0092;,reference (read/write classification in expression)
+textBoxBtPriMoc,_0087_009D_0092,32445,_0087_009A_0091,0x06000363,"num = _008F_008A._008B_0087_009E(_0087_009D_0092, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtPriMoc,_0087_009D_0092,34619,_0087_009B_008F,0x0600037B,_0087_009D_0092 = new TextBox();,initialization
+textBoxBtPriMoc,_0087_009D_0092,35042,_0087_009B_008F,0x0600037B,"_0087_009D_0092.Location = new Point(294, 79);",initialization
+textBoxBtPriMoc,_0087_009D_0092,35043,_0087_009B_008F,0x0600037B,"_0087_009D_0092.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxBtPriMoc,_0087_009D_0092,35045,_0087_009B_008F,0x0600037B,"_0087_009D_0092.Size = new Size(80, 23);",initialization
+textBoxBtPriMoc,_0087_009D_0092,35046,_0087_009B_008F,0x0600037B,_0087_009D_0092.TabIndex = 26;,initialization
+textBoxBtPriMoc,_0087_009D_0092,35047,_0087_009B_008F,0x0600037B,"_0087_009D_0092.Text = ""300"" /* string-offset:2180 */;",initialization
+textBoxBtPriMoc,_0087_009D_0092,35403,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0092);,initialization
+comboBoxHdDir,_0087_009C_0086,31869,constructor/field,,private ComboBox _0087_009C_0086;,reference (read/write classification in expression)
+comboBoxHdDir,_0087_009C_0086,32569,_0087_009A_0092,0x06000364,"if (_0087_009C_0086.Text == ""右转出航"" /* string-offset:4672 */)",reference (read/write classification in expression)
+comboBoxHdDir,_0087_009C_0086,32576,_0087_009A_0092,0x06000364,"if (_0087_009C_0086.Text == ""左转出航"" /* string-offset:4676 */)",reference (read/write classification in expression)
+comboBoxHdDir,_0087_009C_0086,32588,_0087_009A_0092,0x06000364,"if (_0087_009C_0086.Text == ""右转出航"" /* string-offset:4672 */)",reference (read/write classification in expression)
+comboBoxHdDir,_0087_009C_0086,33754,_0087_009B_008A,0x06000375,"if (_0087_009C_0086.Text == ""左转出航"" /* string-offset:4676 */)",reference (read/write classification in expression)
+comboBoxHdDir,_0087_009C_0086,33786,_0087_009B_008B,0x06000376,"if (_0087_009C_0086.Text == ""左转出航"" /* string-offset:4676 */)",reference (read/write classification in expression)
+comboBoxHdDir,_0087_009C_0086,33873,_0087_009B_008C,0x06000377,"if (_0087_009C_0086.Text == ""左转出航"" /* string-offset:4676 */)",reference (read/write classification in expression)
+comboBoxHdDir,_0087_009C_0086,34047,_0087_009B_008F,0x0600037B,_0087_009C_0086 = new ComboBox();,initialization
+comboBoxHdDir,_0087_009C_0086,34901,_0087_009B_008F,0x0600037B,"_0087_009C_0086.Text = ""左转出航"" /* string-offset:4676 */;",initialization
+comboBoxHdDir,_0087_009C_0086,35095,_0087_009B_008F,0x0600037B,_0087_009C_0086.FormattingEnabled = true;,initialization
+comboBoxHdDir,_0087_009C_0086,35096,_0087_009B_008F,0x0600037B,_0087_009C_0086.Items.AddRange(new object[2],initialization
+comboBoxHdDir,_0087_009C_0086,35101,_0087_009B_008F,0x0600037B,"_0087_009C_0086.Location = new Point(110, 14);",initialization
+comboBoxHdDir,_0087_009C_0086,35105,_0087_009B_008F,0x0600037B,"_0087_009C_0086.Size = new Size(80, 22);",initialization
+comboBoxHdDir,_0087_009C_0086,35106,_0087_009B_008F,0x0600037B,_0087_009C_0086.TabIndex = 24;,initialization
+comboBoxHdDir,_0087_009C_0086,35234,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0086);,initialization
+textBoxBtSecWidth,_0087_009D_0094,31947,constructor/field,,private TextBox _0087_009D_0094;,reference (read/write classification in expression)
+textBoxBtSecWidth,_0087_009D_0094,32282,_0087_009A_008D,0x0600035F,"_0088_0091 obj2 = new _0088_0091(_008F_008A._008B_0087_009E(_0087_009D_0094, ""输入数据有误，请检查。"" /* string-offset:1984 */), obj, text, num, flag, num2);",reference (read/write classification in expression)
+textBoxBtSecWidth,_0087_009D_0094,32446,_0087_009A_0091,0x06000363,"num2 = _008F_008A._008B_0087_009E(_0087_009D_0094, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBoxBtSecWidth,_0087_009D_0094,34161,_0087_009B_008F,0x0600037B,"_0087_009D_0094.Location = new Point(294, 112);",initialization
+textBoxBtSecWidth,_0087_009D_0094,34585,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0094);,initialization
+textBoxBtSecWidth,_0087_009D_0094,34615,_0087_009B_008F,0x0600037B,_0087_009D_0094 = new TextBox();,initialization
+textBoxBtSecWidth,_0087_009D_0094,35034,_0087_009B_008F,0x0600037B,_0087_009D_0094.TabIndex = 26;,initialization
+textBoxBtSecWidth,_0087_009D_0094,35038,_0087_009B_008F,0x0600037B,"_0087_009D_0094.Text = ""4630"" /* string-offset:4900 */;",initialization
+textBoxBtSecWidth,_0087_009D_0094,35110,_0087_009B_008F,0x0600037B,"_0087_009D_0094.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxBtSecWidth,_0087_009D_0094,35112,_0087_009B_008F,0x0600037B,"_0087_009D_0094.Size = new Size(80, 23);",initialization
+label15,_0087_009D_0091,31941,constructor/field,,private Label _0087_009D_0091;,reference (read/write classification in expression)
+label15,_0087_009D_0091,34570,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0091);,initialization
+label15,_0087_009D_0091,35120,_0087_009B_008F,0x0600037B,_0087_009D_0091.AutoSize = true;,initialization
+label15,_0087_009D_0091,35121,_0087_009B_008F,0x0600037B,"_0087_009D_0091.Location = new Point(199, 83);",initialization
+label15,_0087_009D_0091,35123,_0087_009B_008F,0x0600037B,"_0087_009D_0091.Size = new Size(85, 15);",initialization
+label15,_0087_009D_0091,35124,_0087_009B_008F,0x0600037B,_0087_009D_0091.TabIndex = 25;,initialization
+label15,_0087_009D_0091,35150,_0087_009B_008F,0x0600037B,_0087_009D_0091 = new Label();,initialization
+label15,_0087_009D_0091,35417,_0087_009B_008F,0x0600037B,"_0087_009D_0091.Text = ""主区MOC(m)"" /* string-offset:4876 */;",initialization
+textBox45time,_0087_009D_008A,31927,constructor/field,,private TextBox _0087_009D_008A;,reference (read/write classification in expression)
+textBox45time,_0087_009D_008A,32195,_0087_009A_008B,0x0600035D,"double num = _008F_008A._008B_0087_009D(_0087_009D_008A.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBox45time,_0087_009D_008A,32234,_0087_009A_008C,0x0600035E,"double num = _008F_008A._008B_0087_009D(_0087_009D_008A.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */);",reference (read/write classification in expression)
+textBox45time,_0087_009D_008A,34281,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008A);,initialization
+textBox45time,_0087_009D_008A,34591,_0087_009B_008F,0x0600037B,"_0087_009D_008A.Text = ""1"" /* string-offset:4760 */;",initialization
+textBox45time,_0087_009D_008A,34643,_0087_009B_008F,0x0600037B,_0087_009D_008A = new TextBox();,initialization
+textBox45time,_0087_009D_008A,35165,_0087_009B_008F,0x0600037B,"_0087_009D_008A.Location = new Point(98, 47);",initialization
+textBox45time,_0087_009D_008A,35166,_0087_009B_008F,0x0600037B,"_0087_009D_008A.Margin = new Padding(3, 2, 3, 2);",initialization
+textBox45time,_0087_009D_008A,35171,_0087_009B_008F,0x0600037B,"_0087_009D_008A.Size = new Size(80, 23);",initialization
+textBox45time,_0087_009D_008A,35174,_0087_009B_008F,0x0600037B,_0087_009D_008A.TabIndex = 27;,initialization
+label19,_0087_009D_0093,31945,constructor/field,,private Label _0087_009D_0093;,reference (read/write classification in expression)
+label19,_0087_009D_0093,34566,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0093);,initialization
+label19,_0087_009D_0093,35149,_0087_009B_008F,0x0600037B,_0087_009D_0093 = new Label();,initialization
+label19,_0087_009D_0093,35182,_0087_009B_008F,0x0600037B,"_0087_009D_0093.Text = ""副区宽度(m)"" /* string-offset:4872 */;",initialization
+label19,_0087_009D_0093,35252,_0087_009B_008F,0x0600037B,_0087_009D_0093.AutoSize = true;,initialization
+label19,_0087_009D_0093,35260,_0087_009B_008F,0x0600037B,"_0087_009D_0093.Location = new Point(199, 116);",initialization
+label19,_0087_009D_0093,35267,_0087_009B_008F,0x0600037B,"_0087_009D_0093.Size = new Size(91, 15);",initialization
+label19,_0087_009D_0093,35268,_0087_009B_008F,0x0600037B,_0087_009D_0093.TabIndex = 25;,initialization
+label16,_0087_009D_008C,31931,constructor/field,,private Label _0087_009D_008C;,reference (read/write classification in expression)
+label16,_0087_009D_008C,34285,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008C);,initialization
+label16,_0087_009D_008C,34971,_0087_009B_008F,0x0600037B,"_0087_009D_008C.Text = ""转弯方向"" /* string-offset:4824 */;",initialization
+label16,_0087_009D_008C,35295,_0087_009B_008F,0x0600037B,_0087_009D_008C.AutoSize = true;,initialization
+label16,_0087_009D_008C,35296,_0087_009B_008F,0x0600037B,"_0087_009D_008C.Location = new Point(15, 18);",initialization
+label16,_0087_009D_008C,35300,_0087_009B_008F,0x0600037B,"_0087_009D_008C.Size = new Size(67, 15);",initialization
+label16,_0087_009D_008C,35303,_0087_009B_008F,0x0600037B,_0087_009D_008C.TabIndex = 25;,initialization
+label16,_0087_009D_008C,35339,_0087_009B_008F,0x0600037B,_0087_009D_008C = new Label();,initialization
+label11,_0087_009C_008F,31887,constructor/field,,private Label _0087_009C_008F;,reference (read/write classification in expression)
+label11,_0087_009C_008F,34043,_0087_009B_008F,0x0600037B,_0087_009C_008F = new Label();,initialization
+label11,_0087_009C_008F,35081,_0087_009B_008F,0x0600037B,"_0087_009C_008F.Text = ""导航台类型"" /* string-offset:4816 */;",initialization
+label11,_0087_009C_008F,35233,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_008F);,initialization
+label11,_0087_009C_008F,35309,_0087_009B_008F,0x0600037B,_0087_009C_008F.AutoSize = true;,initialization
+label11,_0087_009C_008F,35313,_0087_009B_008F,0x0600037B,"_0087_009C_008F.Location = new Point(15, 80);",initialization
+label11,_0087_009C_008F,35318,_0087_009B_008F,0x0600037B,"_0087_009C_008F.Size = new Size(82, 15);",initialization
+label11,_0087_009C_008F,35319,_0087_009B_008F,0x0600037B,_0087_009C_008F.TabIndex = 5;,initialization
+button4,_0087_009D_0099,31957,constructor/field,,private Button _0087_009D_0099;,reference (read/write classification in expression)
+button4,_0087_009D_0099,34278,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_0099);,initialization
+button4,_0087_009D_0099,34639,_0087_009B_008F,0x0600037B,_0087_009D_0099 = new Button();,initialization
+button4,_0087_009D_0099,35157,_0087_009B_008F,0x0600037B,"_0087_009D_0099.Size = new Size(80, 40);",initialization
+button4,_0087_009D_0099,35158,_0087_009B_008F,0x0600037B,_0087_009D_0099.TabIndex = 29;,initialization
+button4,_0087_009D_0099,35159,_0087_009B_008F,0x0600037B,"_0087_009D_0099.Text = ""包络线"" /* string-offset:4916 */;",initialization
+button4,_0087_009D_0099,35160,_0087_009B_008F,0x0600037B,_0087_009D_0099.UseVisualStyleBackColor = true;,initialization
+button4,_0087_009D_0099,35161,_0087_009B_008F,0x0600037B,_0087_009D_0099.Click += _0087_009A_0095;,initialization
+button4,_0087_009D_0099,35350,_0087_009B_008F,0x0600037B,"_0087_009D_0099.Location = new Point(98, 113);",initialization
+checkBoxHdLabel,_0087_009D_0097,31953,constructor/field,,private CheckBox _0087_009D_0097;,reference (read/write classification in expression)
+checkBoxHdLabel,_0087_009D_0097,32584,_0087_009A_0092,0x06000364,if (_0087_009D_0097.Checked),reference (read/write classification in expression)
+checkBoxHdLabel,_0087_009D_0097,34032,_0087_009B_008F,0x0600037B,_0087_009D_0097 = new CheckBox();,initialization
+checkBoxHdLabel,_0087_009D_0097,34111,_0087_009B_008F,0x0600037B,_0087_009D_0097.AutoSize = true;,initialization
+checkBoxHdLabel,_0087_009D_0097,34115,_0087_009B_008F,0x0600037B,"_0087_009D_0097.Location = new Point(218, 47);",initialization
+checkBoxHdLabel,_0087_009D_0097,34118,_0087_009B_008F,0x0600037B,_0087_009D_0097.Margin = new Padding(4);,initialization
+checkBoxHdLabel,_0087_009D_0097,35225,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009D_0097);,initialization
+checkBoxHdLabel,_0087_009D_0097,35271,_0087_009B_008F,0x0600037B,"_0087_009D_0097.Size = new Size(86, 19);",initialization
+checkBoxHdLabel,_0087_009D_0097,35272,_0087_009B_008F,0x0600037B,_0087_009D_0097.TabIndex = 27;,initialization
+checkBoxHdLabel,_0087_009D_0097,35273,_0087_009B_008F,0x0600037B,"_0087_009D_0097.Text = ""文本标注"" /* string-offset:4800 */;",initialization
+checkBoxHdLabel,_0087_009D_0097,35274,_0087_009B_008F,0x0600037B,_0087_009D_0097.UseVisualStyleBackColor = true;,initialization
+tabControl1,_0087_009B_0097,31853,constructor/field,,private TabControl _0087_009B_0097;,reference (read/write classification in expression)
+tabControl1,_0087_009B_0097,34008,_0087_009B_008F,0x0600037B,_0087_009B_0097 = new TabControl();,initialization
+tabControl1,_0087_009B_0097,35015,_0087_009B_008F,0x0600037B,_0087_009B_0097.SuspendLayout();,initialization
+tabControl1,_0087_009B_0097,35026,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_0098);,initialization
+tabControl1,_0087_009B_0097,35278,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_0099);,initialization
+tabControl1,_0087_009B_0097,35279,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_009A);,initialization
+tabControl1,_0087_009B_0097,35283,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_009B);,initialization
+tabControl1,_0087_009B_0097,35286,_0087_009B_008F,0x0600037B,"_0087_009B_0097.ItemSize = new Size(68, 40);",initialization
+tabControl1,_0087_009B_0097,35287,_0087_009B_008F,0x0600037B,"_0087_009B_0097.Location = new Point(229, 0);",initialization
+tabControl1,_0087_009B_0097,35359,_0087_009B_008F,0x0600037B,_0087_009B_0097.SelectedIndex = 0;,initialization
+tabControl1,_0087_009B_0097,35360,_0087_009B_008F,0x0600037B,"_0087_009B_0097.Size = new Size(511, 212);",initialization
+tabControl1,_0087_009B_0097,35361,_0087_009B_008F,0x0600037B,_0087_009B_0097.TabIndex = 2;,initialization
+tabControl1,_0087_009B_0097,35465,_0087_009B_008F,0x0600037B,base.Controls.Add(_0087_009B_0097);,initialization
+tabControl1,_0087_009B_0097,35474,_0087_009B_008F,0x0600037B,_0087_009B_0097.ResumeLayout(performLayout: false);,initialization
+tabPage3,_0087_009B_009A,31859,constructor/field,,private TabPage _0087_009B_009A;,reference (read/write classification in expression)
+tabPage3,_0087_009B_009A,34278,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_0099);,initialization
+tabPage3,_0087_009B_009A,34281,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008A);,initialization
+tabPage3,_0087_009B_009A,34284,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008B);,initialization
+tabPage3,_0087_009B_009A,34285,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008C);,initialization
+tabPage3,_0087_009B_009A,34289,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_008D);,initialization
+tabPage3,_0087_009B_009A,34290,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009C_009D);,initialization
+tabPage3,_0087_009B_009A,34293,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009C_009E);,initialization
+tabPage3,_0087_009B_009A,34301,_0087_009B_008F,0x0600037B,_0087_009B_009A.Controls.Add(_0087_009D_0086);,initialization
+tabPage3,_0087_009B_009A,34636,_0087_009B_008F,0x0600037B,_0087_009B_009A = new TabPage();,initialization
+tabPage3,_0087_009B_009A,35023,_0087_009B_008F,0x0600037B,_0087_009B_009A.SuspendLayout();,initialization
+tabPage3,_0087_009B_009A,35279,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_009A);,initialization
+tabPage3,_0087_009B_009A,35346,_0087_009B_008F,0x0600037B,_0087_009B_009A.UseVisualStyleBackColor = true;,initialization
+tabPage3,_0087_009B_009A,35373,_0087_009B_008F,0x0600037B,_0087_009B_009A.TabIndex = 2;,initialization
+tabPage3,_0087_009B_009A,35377,_0087_009B_008F,0x0600037B,"_0087_009B_009A.Text = ""45/180程序转弯"" /* string-offset:4912 */;",initialization
+tabPage3,_0087_009B_009A,35384,_0087_009B_008F,0x0600037B,"_0087_009B_009A.Location = new Point(4, 44);",initialization
+tabPage3,_0087_009B_009A,35386,_0087_009B_008F,0x0600037B,"_0087_009B_009A.Size = new Size(503, 164);",initialization
+tabPage3,_0087_009B_009A,35485,_0087_009B_008F,0x0600037B,_0087_009B_009A.ResumeLayout(performLayout: false);,initialization
+tabPage3,_0087_009B_009A,35488,_0087_009B_008F,0x0600037B,_0087_009B_009A.PerformLayout();,initialization
+tabPage2,_0087_009B_0099,31857,constructor/field,,private TabPage _0087_009B_0099;,reference (read/write classification in expression)
+tabPage2,_0087_009B_0099,34065,_0087_009B_008F,0x0600037B,_0087_009B_0099 = new TabPage();,initialization
+tabPage2,_0087_009B_0099,34207,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0090);,initialization
+tabPage2,_0087_009B_0099,34208,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0090);,initialization
+tabPage2,_0087_009B_0099,34209,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0091);,initialization
+tabPage2,_0087_009B_0099,34210,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0092);,initialization
+tabPage2,_0087_009B_0099,34557,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0093);,initialization
+tabPage2,_0087_009B_0099,34560,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0094);,initialization
+tabPage2,_0087_009B_0099,34564,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0095);,initialization
+tabPage2,_0087_009B_0099,34565,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0096);,initialization
+tabPage2,_0087_009B_0099,34566,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0093);,initialization
+tabPage2,_0087_009B_0099,34570,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0091);,initialization
+tabPage2,_0087_009B_0099,34573,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0097);,initialization
+tabPage2,_0087_009B_0099,34577,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0098);,initialization
+tabPage2,_0087_009B_0099,34583,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_0099);,initialization
+tabPage2,_0087_009B_0099,34584,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_009A);,initialization
+tabPage2,_0087_009B_0099,34585,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0094);,initialization
+tabPage2,_0087_009B_0099,34915,_0087_009B_008F,0x0600037B,_0087_009B_0099.UseVisualStyleBackColor = true;,initialization
+tabPage2,_0087_009B_0099,35019,_0087_009B_008F,0x0600037B,_0087_009B_0099.SuspendLayout();,initialization
+tabPage2,_0087_009B_0099,35089,_0087_009B_008F,0x0600037B,_0087_009B_0099.TabIndex = 1;,initialization
+tabPage2,_0087_009B_0099,35092,_0087_009B_008F,0x0600037B,"_0087_009B_0099.Text = ""基线转弯"" /* string-offset:4836 */;",initialization
+tabPage2,_0087_009B_0099,35222,_0087_009B_008F,0x0600037B,"_0087_009B_0099.Size = new Size(503, 164);",initialization
+tabPage2,_0087_009B_0099,35278,_0087_009B_008F,0x0600037B,_0087_009B_0097.Controls.Add(_0087_009B_0099);,initialization
+tabPage2,_0087_009B_0099,35391,_0087_009B_008F,0x0600037B,_0087_009B_0099.Padding = new Padding(3);,initialization
+tabPage2,_0087_009B_0099,35403,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009D_0092);,initialization
+tabPage2,_0087_009B_0099,35404,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_009B);,initialization
+tabPage2,_0087_009B_0099,35405,_0087_009B_008F,0x0600037B,_0087_009B_0099.Controls.Add(_0087_009C_009C);,initialization
+tabPage2,_0087_009B_0099,35406,_0087_009B_008F,0x0600037B,"_0087_009B_0099.Location = new Point(4, 44);",initialization
+tabPage2,_0087_009B_0099,35483,_0087_009B_008F,0x0600037B,_0087_009B_0099.ResumeLayout(performLayout: false);,initialization
+tabPage2,_0087_009B_0099,35484,_0087_009B_008F,0x0600037B,_0087_009B_0099.PerformLayout();,initialization
+label5,_0087_009C_0088,31873,constructor/field,,private Label _0087_009C_0088;,reference (read/write classification in expression)
+label5,_0087_009C_0088,34052,_0087_009B_008F,0x0600037B,_0087_009C_0088 = new Label();,initialization
+label5,_0087_009C_0088,34169,_0087_009B_008F,0x0600037B,_0087_009C_0088.TabIndex = 22;,initialization
+label5,_0087_009C_0088,34170,_0087_009B_008F,0x0600037B,"_0087_009C_0088.Text = ""时间(min)"" /* string-offset:4652 */;",initialization
+label5,_0087_009C_0088,34931,_0087_009B_008F,0x0600037B,_0087_009B_0098.Controls.Add(_0087_009C_0088);,initialization
+label5,_0087_009C_0088,35396,_0087_009B_008F,0x0600037B,_0087_009C_0088.AutoSize = true;,initialization
+label5,_0087_009C_0088,35397,_0087_009B_008F,0x0600037B,"_0087_009C_0088.Location = new Point(15, 49);",initialization
+label5,_0087_009C_0088,35399,_0087_009B_008F,0x0600037B,"_0087_009C_0088.Size = new Size(77, 15);",initialization
+turnParameterControl1,_0087_009D_0098,31955,constructor/field,,private _008F_0098 _0087_009D_0098;,reference (read/write classification in expression)
+turnParameterControl1,_0087_009D_0098,32005,_0087_0099_009D,0x06000356,return _0087_009D_0098._008B_008C_008A();,reference (read/write classification in expression)
+turnParameterControl1,_0087_009D_0098,33917,_0087_009B_008D,0x06000378,num2 = _0087_009D_0098._008B_008C_008A()._008A_009D_0096;,reference (read/write classification in expression)
+turnParameterControl1,_0087_009D_0098,34456,_0087_009B_008F,0x0600037B,_0087_009D_0098._008B_008C_0097(_0020: false);,initialization
+turnParameterControl1,_0087_009D_0098,34457,_0087_009B_008F,0x0600037B,_0087_009D_0098._008B_008C_009A(_0020: false);,initialization
+turnParameterControl1,_0087_009D_0098,34461,_0087_009B_008F,0x0600037B,"_0087_009D_0098.Location = new Point(12, 11);",initialization
+turnParameterControl1,_0087_009D_0098,34465,_0087_009B_008F,0x0600037B,"_0087_009D_0098.Margin = new Padding(3, 2, 3, 2);",initialization
+turnParameterControl1,_0087_009D_0098,35014,_0087_009B_008F,0x0600037B,_0087_009D_0098 = new _008F_0098();,initialization
+turnParameterControl1,_0087_009D_0098,35201,_0087_009B_008F,0x0600037B,_0087_009D_0098.TabStop = false;,initialization
+turnParameterControl1,_0087_009D_0098,35202,_0087_009B_008F,0x0600037B,"_0087_009D_0098.Text = ""转弯参数"" /* string-offset:4960 */;",initialization
+turnParameterControl1,_0087_009D_0098,35214,_0087_009B_008F,0x0600037B,base.Controls.Add(_0087_009D_0098);,initialization
+turnParameterControl1,_0087_009D_0098,35239,_0087_009B_008F,0x0600037B,"_0087_009D_0098.Padding = new Padding(3, 2, 3, 2);",initialization
+turnParameterControl1,_0087_009D_0098,35242,_0087_009B_008F,0x0600037B,"_0087_009D_0098.Size = new Size(211, 194);",initialization
+turnParameterControl1,_0087_009D_0098,35243,_0087_009B_008F,0x0600037B,_0087_009D_0098.TabIndex = 27;,initialization
+FormTemplate,base,31981,_0089_0092,0x06000352,base._002Ector();,reference (read/write classification in expression)
+FormTemplate,base,32035,_0087_009A_0086,0x06000358,base.Visible = false;,reference (read/write classification in expression)
+FormTemplate,base,32039,_0087_009A_0086,0x06000358,base.Visible = true;,reference (read/write classification in expression)
+FormTemplate,base,32055,_0087_009A_0086,0x06000358,base.Visible = true;,reference (read/write classification in expression)
+FormTemplate,base,32060,_0087_009A_0086,0x06000358,base.Visible = true;,reference (read/write classification in expression)
+FormTemplate,base,32074,_0087_009A_0087,0x06000359,Database workingDatabase = HostApplicationServices.WorkingDatabase;,reference (read/write classification in expression)
+FormTemplate,base,32077,_0087_009A_0087,0x06000359,"_008B._0088_008B(workingDatabase, P_0, P_1);",reference (read/write classification in expression)
+FormTemplate,base,32086,_0087_009A_0088,0x0600035A,Database workingDatabase = HostApplicationServices.WorkingDatabase;,reference (read/write classification in expression)
+FormTemplate,base,32089,_0087_009A_0088,0x0600035A,"_008B._0088_008A(workingDatabase, P_0, P_1);",reference (read/write classification in expression)
+FormTemplate,base,32129,_0087_009A_0089,0x0600035B,Database workingDatabase = HostApplicationServices.WorkingDatabase;,reference (read/write classification in expression)
+FormTemplate,base,32148,_0087_009A_0089,0x0600035B,"_008B._0088_008D((Entity)(object)val, workingDatabase, obj2.ToString());",reference (read/write classification in expression)
+FormTemplate,base,32198,_0087_009A_008B,0x0600035D,Database workingDatabase = HostApplicationServices.WorkingDatabase;,reference (read/write classification in expression)
+FormTemplate,base,32217,_0087_009A_008B,0x0600035D,"_008B._0088_008D((Entity)(object)val, workingDatabase, obj2.ToString());",reference (read/write classification in expression)
+FormTemplate,base,32284,_0087_009A_008D,0x0600035F,Database workingDatabase = HostApplicationServices.WorkingDatabase;,reference (read/write classification in expression)
+FormTemplate,base,32301,_0087_009A_008D,0x0600035F,"_008B._0088_008D((Entity)(object)val, workingDatabase, obj2.ToString());",reference (read/write classification in expression)
+FormTemplate,base,32401,_0087_009A_0091,0x06000363,Database database = default(Database);,reference (read/write classification in expression)
+FormTemplate,base,32428,_0087_009A_0091,0x06000363,database = mdiActiveDocument.Database;,reference (read/write classification in expression)
+FormTemplate,base,32430,_0087_009A_0091,0x06000363,base.Visible = false;,reference (read/write classification in expression)
+FormTemplate,base,32440,_0087_009A_0091,0x06000363,base.Visible = true;,reference (read/write classification in expression)
+FormTemplate,base,32454,_0087_009A_0091,0x06000363,Transaction val3 = database.TransactionManager.StartTransaction();,reference (read/write classification in expression)
+FormTemplate,base,32556,_0087_009A_0092,0x06000364,Database workingDatabase = HostApplicationServices.WorkingDatabase;,reference (read/write classification in expression)
+FormTemplate,base,32574,_0087_009A_0092,0x06000364,"_008B._0088_008D((Entity)(object)val, workingDatabase, obj2.ToString());",reference (read/write classification in expression)
+FormTemplate,base,32603,_0087_009A_0092,0x06000364,"}, workingDatabase);",reference (read/write classification in expression)
+FormTemplate,base,32648,_0087_009A_0095,0x06000367,Database database = default(Database);,reference (read/write classification in expression)
+FormTemplate,base,32714,_0087_009A_0095,0x06000367,"_008B._0088_008D((Entity)(object)val, database);",reference (read/write classification in expression)
+FormTemplate,base,32844,_0087_009A_0095,0x06000367,database = mdiActiveDocument.Database;,reference (read/write classification in expression)
+FormTemplate,base,32850,_0087_009A_0095,0x06000367,base.Visible = false;,reference (read/write classification in expression)
+FormTemplate,base,32865,_0087_009A_0095,0x06000367,base.Visible = true;,reference (read/write classification in expression)
+FormTemplate,base,32872,_0087_009A_0095,0x06000367,val3 = database.TransactionManager.StartTransaction();,reference (read/write classification in expression)
+FormTemplate,base,32987,_0087_009A_0098,0x0600036A,Database database = mdiActiveDocument.Database;,reference (read/write classification in expression)
+FormTemplate,base,32993,_0087_009A_0098,0x0600036A,base.Visible = false;,reference (read/write classification in expression)
+FormTemplate,base,33052,_0087_009A_0098,0x0600036A,"_008B._0088_008D((Entity)enumerator.Current, database);",reference (read/write classification in expression)
+FormTemplate,base,33070,_0087_009A_0098,0x0600036A,base.Visible = true;,reference (read/write classification in expression)
+FormTemplate,base,33097,_0087_009A_0098,0x0600036A,Transaction val5 = database.TransactionManager.StartTransaction();,reference (read/write classification in expression)
+FormTemplate,base,33451,_0087_009A_009C,0x0600036E,Database database = default(Database);,reference (read/write classification in expression)
+FormTemplate,base,33507,_0087_009A_009C,0x0600036E,database = mdiActiveDocument.Database;,reference (read/write classification in expression)
+FormTemplate,base,33518,_0087_009A_009C,0x0600036E,base.Visible = true;,reference (read/write classification in expression)
+FormTemplate,base,33526,_0087_009A_009C,0x0600036E,val2 = database.TransactionManager.StartTransaction();,reference (read/write classification in expression)
+FormTemplate,base,33530,_0087_009A_009C,0x0600036E,base.Visible = false;,reference (read/write classification in expression)
+FormTemplate,base,33562,_0087_009A_009C,0x0600036E,"DBObject obj6 = val2.GetObject(database.BlockTableId, (OpenMode)0);",reference (read/write classification in expression)
+FormTemplate,base,33616,_0087_009B_0087,0x06000372,Database database = default(Database);,reference (read/write classification in expression)
+FormTemplate,base,33627,_0087_009B_0087,0x06000372,val = database.TransactionManager.StartTransaction();,reference (read/write classification in expression)
+FormTemplate,base,33644,_0087_009B_0087,0x06000372,"_0087_009B_0090 = database._008B_008A<DBPoint>((OpenMode)0, _0020: false);",reference (read/write classification in expression)
+FormTemplate,base,33678,_0087_009B_0087,0x06000372,database = Application.DocumentManager.MdiActiveDocument.Database;,reference (read/write classification in expression)
+FormTemplate,base,33872,_0087_009B_008C,0x06000377,_ = HostApplicationServices.WorkingDatabase;,reference (read/write classification in expression)
+FormTemplate,base,33999,Dispose,0x0600037A,base.Dispose(P_0);,reference (read/write classification in expression)
+FormTemplate,base,35206,_0087_009B_008F,0x0600037B,"base.AutoScaleDimensions = new SizeF(7f, 14f);",initialization
+FormTemplate,base,35207,_0087_009B_008F,0x0600037B,base.AutoScaleMode = AutoScaleMode.Font;,initialization
+FormTemplate,base,35211,_0087_009B_008F,0x0600037B,"base.ClientSize = new Size(746, 220);",initialization
+FormTemplate,base,35214,_0087_009B_008F,0x0600037B,base.Controls.Add(_0087_009D_0098);,initialization
+FormTemplate,base,35465,_0087_009B_008F,0x0600037B,base.Controls.Add(_0087_009B_0097);,initialization
+FormTemplate,base,35469,_0087_009B_008F,0x0600037B,base.FormBorderStyle = FormBorderStyle.FixedToolWindow;,initialization
+FormTemplate,base,35472,_0087_009B_008F,0x0600037B,base.FormClosed += _0087_0099_009C;,initialization
+FormTemplate,base,35473,_0087_009B_008F,0x0600037B,base.Load += _0087_0099_009B;,initialization
+button1,_008B_008D_008D,85051,constructor/field,,public Button _008B_008D_008D;,reference (read/write classification in expression)
+button1,_008B_008D_008D,85334,_008B_008C_008F,0x0600085D,_008B_008D_008D.BackColor = SystemColors.Control;,reference (read/write classification in expression)
+button1,_008B_008D_008D,85335,_008B_008C_008F,0x0600085D,_008B_008D_008D.FlatStyle = FlatStyle.Standard;,reference (read/write classification in expression)
+button1,_008B_008D_008D,85339,_008B_008C_008F,0x0600085D,_008B_008D_008D.FlatAppearance.BorderSize = 1;,reference (read/write classification in expression)
+button1,_008B_008D_008D,85341,_008B_008C_008F,0x0600085D,_008B_008D_008D.FlatAppearance.BorderColor = SystemColors.ControlDark;,reference (read/write classification in expression)
+button1,_008B_008D_008D,85361,_008B_008C_0091,0x0600085F,_008B_008D_008D.FlatStyle = FlatStyle.Flat;,reference (read/write classification in expression)
+button1,_008B_008D_008D,85365,_008B_008C_0091,0x0600085F,_008B_008D_008D.FlatAppearance.BorderColor = Color.Red;,reference (read/write classification in expression)
+button1,_008B_008D_008D,85367,_008B_008C_0091,0x0600085F,_008B_008D_008D.FlatAppearance.BorderSize = 2;,reference (read/write classification in expression)
+button1,_008B_008D_008D,85431,_008B_008C_0095,0x06000867,_008B_008D_008D.BackgroundImageLayout = ImageLayout.Center;,initialization
+button1,_008B_008D_008D,85432,_008B_008C_0095,0x06000867,_008B_008D_008D.Image = Resources.button1_BackgroundImage2;,initialization
+button1,_008B_008D_008D,85433,_008B_008C_0095,0x06000867,"_008B_008D_008D.Location = new Point(175, 154);",initialization
+button1,_008B_008D_008D,85437,_008B_008C_0095,0x06000867,"_008B_008D_008D.Size = new Size(25, 25);",initialization
+button1,_008B_008D_008D,85510,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_008D);,initialization
+button1,_008B_008D_008D,85699,_008B_008C_0095,0x06000867,_008B_008D_008D = new Button();,initialization
+button1,_008B_008D_008D,85762,_008B_008C_0095,0x06000867,_008B_008D_008D.TabIndex = 2;,initialization
+button1,_008B_008D_008D,85770,_008B_008C_0095,0x06000867,_008B_008D_008D.UseVisualStyleBackColor = true;,initialization
+button1,_008B_008D_008D,85773,_008B_008C_0095,0x06000867,_008B_008D_008D.Click += _008B_008C_008F;,initialization
+textBoxAlti,_008B_008D_0094,85065,constructor/field,,public TextBox _008B_008D_0094;,reference (read/write classification in expression)
+textBoxAlti,_008B_008D_0094,85146,_008B_008C_008A,0x06000854,double num2 = Convert.ToDouble(_008B_008D_0094.Text);,reference (read/write classification in expression)
+textBoxAlti,_008B_008D_0094,85243,_008B_008C_008B,0x06000855,"_008B_008D_0094.Text = P_0._008A_009D_0096.ToString(""F0"" /* string-offset:5104 */);",reference (read/write classification in expression)
+textBoxAlti,_008B_008D_0094,85269,_008B_008C_008C,0x06000856,"_008B_008D_0094.Text = ""600"" /* string-offset:3408 */;",reference (read/write classification in expression)
+textBoxAlti,_008B_008D_0094,85342,_008B_008C_008F,0x0600085D,"double num = _008F_008A._008B_0087_009D(_008B_008D_0094.Text, ""输入数据有误，请检查。"" /* string-offset:1984 */) * 0.012 + 87.0;",reference (read/write classification in expression)
+textBoxAlti,_008B_008D_0094,85476,_008B_008C_0095,0x06000867,"_008B_008D_0094.Location = new Point(105, 56);",initialization
+textBoxAlti,_008B_008D_0094,85477,_008B_008C_0095,0x06000867,"_008B_008D_0094.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxAlti,_008B_008D_0094,85488,_008B_008C_0095,0x06000867,"_008B_008D_0094.Size = new Size(60, 23);",initialization
+textBoxAlti,_008B_008D_0094,85491,_008B_008C_0095,0x06000867,_008B_008D_0094.TabIndex = 1;,initialization
+textBoxAlti,_008B_008D_0094,85492,_008B_008C_0095,0x06000867,"_008B_008D_0094.Text = ""900"" /* string-offset:2156 */;",initialization
+textBoxAlti,_008B_008D_0094,85495,_008B_008C_0095,0x06000867,_008B_008D_0094.TextChanged += _008B_008C_0091;,initialization
+textBoxAlti,_008B_008D_0094,85669,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_0094);,initialization
+textBoxAlti,_008B_008D_0094,85719,_008B_008C_0095,0x06000867,_008B_008D_0094 = new TextBox();,initialization
+label2,_008B_008D_0095,85067,constructor/field,,private Label _008B_008D_0095;,reference (read/write classification in expression)
+label2,_008B_008D_0095,85498,_008B_008C_0095,0x06000867,_008B_008D_0095.AutoSize = true;,initialization
+label2,_008B_008D_0095,85499,_008B_008C_0095,0x06000867,"_008B_008D_0095.Location = new Point(14, 60);",initialization
+label2,_008B_008D_0095,85501,_008B_008C_0095,0x06000867,"_008B_008D_0095.Size = new Size(61, 15);",initialization
+label2,_008B_008D_0095,85504,_008B_008C_0095,0x06000867,_008B_008D_0095.TabIndex = 0;,initialization
+label2,_008B_008D_0095,85505,_008B_008C_0095,0x06000867,"_008B_008D_0095.Text = ""高度(m)"" /* string-offset:2740 */;",initialization
+label2,_008B_008D_0095,85673,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_0095);,initialization
+label2,_008B_008D_0095,85722,_008B_008C_0095,0x06000867,_008B_008D_0095 = new Label();,initialization
+checkableLabel2,_008B_008D_008B,85047,constructor/field,,private _0087_008C _008B_008D_008B;,reference (read/write classification in expression)
+checkableLabel2,_008B_008D_008B,85291,_008B_008C_0099,0x06000859,return _008B_008D_008B._008D_0089;,reference (read/write classification in expression)
+checkableLabel2,_008B_008D_008B,85297,_008B_008C_009A,0x0600085A,_008B_008D_008B._008D_0089 = P_0;,reference (read/write classification in expression)
+checkableLabel2,_008B_008D_008B,85321,_008B_008C_008E,0x0600085C,if ((!_008A_0089() && _008A_0089()) || _008B_008D_008B._008D_0089),reference (read/write classification in expression)
+checkableLabel2,_008B_008D_008B,85343,_008B_008C_008F,0x0600085D,while (_008B_008D_008B._008D_0089),reference (read/write classification in expression)
+checkableLabel2,_008B_008D_008B,85412,_008B_008C_0095,0x06000867,_008B_008D_008B = new _0087_008C();,initialization
+checkableLabel2,_008B_008D_008B,85508,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_008B);,initialization
+checkableLabel2,_008B_008D_008B,85530,_008B_008C_0095,0x06000867,_008B_008D_008B.TabIndex = 42;,initialization
+checkableLabel2,_008B_008D_008B,85534,_008B_008C_0095,0x06000867,"_008B_008D_008B.Text = ""风速(kt)"" /* string-offset:7512 */;",initialization
+checkableLabel2,_008B_008D_008B,85535,_008B_008C_0095,0x06000867,_008B_008D_008B.TextAlign = ContentAlignment.MiddleCenter;,initialization
+checkableLabel2,_008B_008D_008B,85538,_008B_008C_0095,0x06000867,_008B_008D_008B.Click += _008B_008C_008E;,initialization
+checkableLabel2,_008B_008D_008B,85558,_008B_008C_0095,0x06000867,"_008B_008D_008B.Location = new Point(14, 158);",initialization
+checkableLabel2,_008B_008D_008B,85562,_008B_008C_0095,0x06000867,"_008B_008D_008B.Size = new Size(69, 15);",initialization
+checkableLabel2,_008B_008D_008B,85605,_008B_008C_0095,0x06000867,_008B_008D_008B._008D_0089 = false;,initialization
+checkableLabel2,_008B_008D_008B,85724,_008B_008C_0095,0x06000867,_008B_008D_008B.AutoSize = true;,initialization
+checkableLabel2,_008B_008D_008B,85725,_008B_008C_0095,0x06000867,_008B_008D_008B.BackColor = SystemColors.ButtonFace;,initialization
+checkableLabel2,_008B_008D_008B,85728,_008B_008C_0095,0x06000867,_008B_008D_008B.Cursor = Cursors.Hand;,initialization
+textBoxTemp,_008B_008D_008F,85055,constructor/field,,public TextBox _008B_008D_008F;,reference (read/write classification in expression)
+textBoxTemp,_008B_008D_008F,85154,_008B_008C_008A,0x06000854,num4 = Convert.ToDouble(_008B_008D_008F.Text);,reference (read/write classification in expression)
+textBoxTemp,_008B_008D_008F,85249,_008B_008C_008B,0x06000855,"_008B_008D_008F.Text = P_0._008A_009D_0099.ToString(""F0"" /* string-offset:5104 */);",reference (read/write classification in expression)
+textBoxTemp,_008B_008D_008F,85271,_008B_008C_008C,0x06000856,"_008B_008D_008F.Text = ""15"" /* string-offset:1964 */;",reference (read/write classification in expression)
+textBoxTemp,_008B_008D_008F,85515,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_008F);,initialization
+textBoxTemp,_008B_008D_008F,85615,_008B_008C_0095,0x06000867,"_008B_008D_008F.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxTemp,_008B_008D_008F,85620,_008B_008C_0095,0x06000867,"_008B_008D_008F.Size = new Size(60, 23);",initialization
+textBoxTemp,_008B_008D_008F,85628,_008B_008C_0095,0x06000867,_008B_008D_008F.TabIndex = 1;,initialization
+textBoxTemp,_008B_008D_008F,85631,_008B_008C_0095,0x06000867,"_008B_008D_008F.Text = ""15"" /* string-offset:1964 */;",initialization
+textBoxTemp,_008B_008D_008F,85635,_008B_008C_0095,0x06000867,_008B_008D_008F.TextChanged += _008B_008C_0093;,initialization
+textBoxTemp,_008B_008D_008F,85708,_008B_008C_0095,0x06000867,_008B_008D_008F = new TextBox();,initialization
+textBoxTemp,_008B_008D_008F,85795,_008B_008C_0095,0x06000867,"_008B_008D_008F.Location = new Point(105, 122);",initialization
+label4,_008B_008D_0090,85057,constructor/field,,private Label _008B_008D_0090;,reference (read/write classification in expression)
+label4,_008B_008D_0090,85519,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_0090);,initialization
+label4,_008B_008D_0090,85638,_008B_008C_0095,0x06000867,_008B_008D_0090.AutoSize = true;,initialization
+label4,_008B_008D_0090,85639,_008B_008C_0095,0x06000867,"_008B_008D_0090.Location = new Point(14, 126);",initialization
+label4,_008B_008D_0090,85712,_008B_008C_0095,0x06000867,_008B_008D_0090 = new Label();,initialization
+label4,_008B_008D_0090,85736,_008B_008C_0095,0x06000867,"_008B_008D_0090.Size = new Size(68, 15);",initialization
+label4,_008B_008D_0090,85737,_008B_008C_0095,0x06000867,_008B_008D_0090.TabIndex = 0;,initialization
+label4,_008B_008D_0090,85738,_008B_008C_0095,0x06000867,"_008B_008D_0090.Text = ""温度(℃)"" /* string-offset:3324 */;",initialization
+checkableLabel1,_008B_008D_008C,85049,constructor/field,,private _0087_008C _008B_008D_008C;,reference (read/write classification in expression)
+checkableLabel1,_008B_008D_008C,85279,_008B_008C_0096,0x06000857,return _008B_008D_008C._008D_0089;,reference (read/write classification in expression)
+checkableLabel1,_008B_008D_008C,85285,_008B_008C_0097,0x06000858,_008B_008D_008C._008D_0089 = P_0;,reference (read/write classification in expression)
+checkableLabel1,_008B_008D_008C,85305,_008B_008C_008D,0x0600085B,if (_008A_0089() && !_008B_008D_008C._008D_0089),reference (read/write classification in expression)
+checkableLabel1,_008B_008D_008C,85429,_008B_008C_0095,0x06000867,_008B_008D_008C.TextAlign = ContentAlignment.MiddleCenter;,initialization
+checkableLabel1,_008B_008D_008C,85430,_008B_008C_0095,0x06000867,_008B_008D_008C.Click += _008B_008C_008D;,initialization
+checkableLabel1,_008B_008D_008C,85509,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_008C);,initialization
+checkableLabel1,_008B_008D_008C,85567,_008B_008C_0095,0x06000867,_008B_008D_008C.AutoSize = true;,initialization
+checkableLabel1,_008B_008D_008C,85581,_008B_008C_0095,0x06000867,_008B_008D_008C.BackColor = SystemColors.ButtonFace;,initialization
+checkableLabel1,_008B_008D_008C,85582,_008B_008C_0095,0x06000867,_008B_008D_008C.Cursor = Cursors.Hand;,initialization
+checkableLabel1,_008B_008D_008C,85648,_008B_008C_0095,0x06000867,_008B_008D_008C._008D_0089 = false;,initialization
+checkableLabel1,_008B_008D_008C,85651,_008B_008C_0095,0x06000867,"_008B_008D_008C.Location = new Point(14, 26);",initialization
+checkableLabel1,_008B_008D_008C,85695,_008B_008C_0095,0x06000867,_008B_008D_008C = new _0087_008C();,initialization
+checkableLabel1,_008B_008D_008C,85847,_008B_008C_0095,0x06000867,"_008B_008D_008C.Size = new Size(81, 17);",initialization
+checkableLabel1,_008B_008D_008C,85850,_008B_008C_0095,0x06000867,_008B_008D_008C.TabIndex = 42;,initialization
+checkableLabel1,_008B_008D_008C,85854,_008B_008C_0095,0x06000867,"_008B_008D_008C.Text = ""IAS(km/h)"" /* string-offset:3308 */;",initialization
+textBoxBank,_008B_008D_0091,85059,constructor/field,,public TextBox _008B_008D_0091;,reference (read/write classification in expression)
+textBoxBank,_008B_008D_0091,85153,_008B_008C_008A,0x06000854,num3 = Convert.ToDouble(_008B_008D_0091.Text);,reference (read/write classification in expression)
+textBoxBank,_008B_008D_0091,85246,_008B_008C_008B,0x06000855,"_008B_008D_0091.Text = P_0._008A_009D_0097.ToString(""F0"" /* string-offset:5104 */);",reference (read/write classification in expression)
+textBoxBank,_008B_008D_0091,85270,_008B_008C_008C,0x06000856,"_008B_008D_0091.Text = ""25"" /* string-offset:6252 */;",reference (read/write classification in expression)
+textBoxBank,_008B_008D_0091,85522,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_0091);,initialization
+textBoxBank,_008B_008D_0091,85713,_008B_008C_0095,0x06000867,_008B_008D_0091 = new TextBox();,initialization
+textBoxBank,_008B_008D_0091,85742,_008B_008C_0095,0x06000867,"_008B_008D_0091.Location = new Point(105, 89);",initialization
+textBoxBank,_008B_008D_0091,85743,_008B_008C_0095,0x06000867,"_008B_008D_0091.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxBank,_008B_008D_0091,85803,_008B_008C_0095,0x06000867,"_008B_008D_0091.Size = new Size(60, 23);",initialization
+textBoxBank,_008B_008D_0091,85804,_008B_008C_0095,0x06000867,_008B_008D_0091.TabIndex = 1;,initialization
+textBoxBank,_008B_008D_0091,85805,_008B_008C_0095,0x06000867,"_008B_008D_0091.Text = ""25"" /* string-offset:6252 */;",initialization
+textBoxBank,_008B_008D_0091,85808,_008B_008C_0095,0x06000867,_008B_008D_0091.TextChanged += _008B_008C_0092;,initialization
+textBoxWindSpeed,_008B_008D_008E,85053,constructor/field,,public TextBox _008B_008D_008E;,reference (read/write classification in expression)
+textBoxWindSpeed,_008B_008D_008E,85155,_008B_008C_008A,0x06000854,num5 = Convert.ToDouble(_008B_008D_008E.Text);,reference (read/write classification in expression)
+textBoxWindSpeed,_008B_008D_008E,85239,_008B_008C_008B,0x06000855,"_008B_008D_008E.Text = P_0._008A_009D_0098.ToString(""F2"" /* string-offset:3236 */);",reference (read/write classification in expression)
+textBoxWindSpeed,_008B_008D_008E,85273,_008B_008C_008C,0x06000856,"_008B_008D_008E.Text = ""97.8"" /* string-offset:6248 */;",reference (read/write classification in expression)
+textBoxWindSpeed,_008B_008D_008E,85318,_008B_008C_008E,0x0600085C,"if (double.TryParse(_008B_008D_008E.Text, out var result))",reference (read/write classification in expression)
+textBoxWindSpeed,_008B_008D_008E,85323,_008B_008C_008E,0x0600085C,"_008B_008D_008E.Text = (result * 1.852).ToString(""F2"" /* string-offset:3236 */);",reference (read/write classification in expression)
+textBoxWindSpeed,_008B_008D_008E,85327,_008B_008C_008E,0x0600085C,"_008B_008D_008E.Text = (result * 0.539957).ToString(""F2"" /* string-offset:3236 */);",reference (read/write classification in expression)
+textBoxWindSpeed,_008B_008D_008E,85351,_008B_008C_008F,0x0600085D,"_008B_008D_008E.Text = num.ToString(""F2"" /* string-offset:3236 */);",reference (read/write classification in expression)
+textBoxWindSpeed,_008B_008D_008E,85514,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_008E);,initialization
+textBoxWindSpeed,_008B_008D_008E,85707,_008B_008C_0095,0x06000867,_008B_008D_008E = new TextBox();,initialization
+textBoxWindSpeed,_008B_008D_008E,85776,_008B_008C_0095,0x06000867,"_008B_008D_008E.Location = new Point(105, 155);",initialization
+textBoxWindSpeed,_008B_008D_008E,85784,_008B_008C_0095,0x06000867,"_008B_008D_008E.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxWindSpeed,_008B_008D_008E,85789,_008B_008C_0095,0x06000867,"_008B_008D_008E.Size = new Size(60, 23);",initialization
+textBoxWindSpeed,_008B_008D_008E,85790,_008B_008C_0095,0x06000867,_008B_008D_008E.TabIndex = 1;,initialization
+textBoxWindSpeed,_008B_008D_008E,85793,_008B_008C_0095,0x06000867,"_008B_008D_008E.Text = ""97.8"" /* string-offset:6248 */;",initialization
+textBoxWindSpeed,_008B_008D_008E,85794,_008B_008C_0095,0x06000867,_008B_008D_008E.TextChanged += _008B_008C_0094;,initialization
+label3,_008B_008D_0092,85061,constructor/field,,private Label _008B_008D_0092;,reference (read/write classification in expression)
+label3,_008B_008D_0092,85597,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_0092);,initialization
+label3,_008B_008D_0092,85714,_008B_008C_0095,0x06000867,_008B_008D_0092 = new Label();,initialization
+label3,_008B_008D_0092,85809,_008B_008C_0095,0x06000867,_008B_008D_0092.AutoSize = true;,initialization
+label3,_008B_008D_0092,85812,_008B_008C_0095,0x06000867,"_008B_008D_0092.Location = new Point(14, 93);",initialization
+label3,_008B_008D_0092,85821,_008B_008C_0095,0x06000867,"_008B_008D_0092.Size = new Size(68, 15);",initialization
+label3,_008B_008D_0092,85824,_008B_008C_0095,0x06000867,_008B_008D_0092.TabIndex = 0;,initialization
+label3,_008B_008D_0092,85827,_008B_008C_0095,0x06000867,"_008B_008D_0092.Text = ""坡度(°)"" /* string-offset:3332 */;",initialization
+textBoxIAS,_008B_008D_0093,85063,constructor/field,,public TextBox _008B_008D_0093;,reference (read/write classification in expression)
+textBoxIAS,_008B_008D_0093,85145,_008B_008C_008A,0x06000854,double num = Convert.ToDouble(_008B_008D_0093.Text);,reference (read/write classification in expression)
+textBoxIAS,_008B_008D_0093,85197,_008B_008C_008B,0x06000855,"_008B_008D_0093.Text = P_0._008A_009D_0095.ToString(""F2"" /* string-offset:3236 */);",reference (read/write classification in expression)
+textBoxIAS,_008B_008D_0093,85265,_008B_008C_008C,0x06000856,"_008B_008D_0093.Text = ""380"" /* string-offset:3340 */;",reference (read/write classification in expression)
+textBoxIAS,_008B_008D_0093,85302,_008B_008C_008D,0x0600085B,"if (double.TryParse(_008B_008D_0093.Text, out var result))",reference (read/write classification in expression)
+textBoxIAS,_008B_008D_0093,85307,_008B_008C_008D,0x0600085B,"_008B_008D_0093.Text = (result * 0.539957).ToString(""F2"" /* string-offset:3236 */);",reference (read/write classification in expression)
+textBoxIAS,_008B_008D_0093,85311,_008B_008C_008D,0x0600085B,"_008B_008D_0093.Text = (result * 1.852).ToString(""F2"" /* string-offset:3236 */);",reference (read/write classification in expression)
+textBoxIAS,_008B_008D_0093,85592,_008B_008C_0095,0x06000867,_008B_008D_0093.TextChanged += _008B_008C_0090;,initialization
+textBoxIAS,_008B_008D_0093,85668,_008B_008C_0095,0x06000867,base.Controls.Add(_008B_008D_0093);,initialization
+textBoxIAS,_008B_008D_0093,85718,_008B_008C_0095,0x06000867,_008B_008D_0093 = new TextBox();,initialization
+textBoxIAS,_008B_008D_0093,85831,_008B_008C_0095,0x06000867,"_008B_008D_0093.Location = new Point(105, 23);",initialization
+textBoxIAS,_008B_008D_0093,85832,_008B_008C_0095,0x06000867,"_008B_008D_0093.Margin = new Padding(3, 2, 3, 2);",initialization
+textBoxIAS,_008B_008D_0093,85837,_008B_008C_0095,0x06000867,"_008B_008D_0093.Size = new Size(60, 23);",initialization
+textBoxIAS,_008B_008D_0093,85838,_008B_008C_0095,0x06000867,_008B_008D_0093.TabIndex = 1;,initialization
+textBoxIAS,_008B_008D_0093,85839,_008B_008C_0095,0x06000867,"_008B_008D_0093.Text = ""380"" /* string-offset:3340 */;",initialization

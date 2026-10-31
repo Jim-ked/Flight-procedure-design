@@ -1,0 +1,20 @@
+[
+  [
+    "table",
+    "PartA",
+    "PartA",
+    "CREATE TABLE \"PartA\" (\r\n  \"ID\" INTEGER NOT NULL,\r\n  \"Value\" TEXT NOT NULL,\r\n  PRIMARY KEY (\"ID\")\r\n)"
+  ],
+  [
+    "table",
+    "PartB",
+    "PartB",
+    "CREATE TABLE \"PartB\" (\r\n  \"ID\" INTEGER NOT NULL,\r\n  \"Value\" TEXT NOT NULL,\r\n  PRIMARY KEY (\"ID\")\r\n)"
+  ],
+  [
+    "table",
+    "sqlite_sequence",
+    "sqlite_sequence",
+    "CREATE TABLE sqlite_sequence(name,seq)"
+  ]
+]

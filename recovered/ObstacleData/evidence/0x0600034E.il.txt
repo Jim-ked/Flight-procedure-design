@@ -1,0 +1,892 @@
+METHOD 0600034E \x89\x91.\x89\x90::\x87\x99\x88 RVA=419C0 file=3FBC0
+IL_0000: ldc.i4 45
+IL_0005: stloc local(0x0000)
+IL_0009: br 3566
+IL_000E: ldarg.0 
+IL_000F: newobj 0x0A0001E4 System.Windows.Forms.Label::.ctor
+IL_0014: stfld 0x04000277 \x89\x91.\x89\x90::\x87\x99\x8a
+IL_0019: ldarg.0 
+IL_001A: newobj 0x0A000206 System.Windows.Forms.TextBox::.ctor
+IL_001F: stfld 0x04000278 \x89\x91.\x89\x90::\x87\x99\x8b
+IL_0024: ldc.i4 4
+IL_0029: stloc local(0x0000)
+IL_002D: call 0x06000350 \x89\x91.\x89\x90::\x873
+IL_0032: brtrue 3544
+IL_0037: br 790
+IL_003C: ldarg.0 
+IL_003D: ldfld 0x0400027B \x89\x91.\x89\x90::\x87\x99\x8e
+IL_0042: ldc.i4 1876
+IL_0047: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_004C: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_0051: ldarg.0 
+IL_0052: ldfld 0x0400027B \x89\x91.\x89\x90::\x87\x99\x8e
+IL_0057: ldc.i4.s 91
+IL_0059: ldc.i4.s 15
+IL_005B: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_0060: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_0065: ldc.i4 30
+IL_006A: stloc local(0x0000)
+IL_006E: ldarg.0 
+IL_006F: ldfld 0x0400027B \x89\x91.\x89\x90::\x87\x99\x8e
+IL_0074: ldc.i4.5 
+IL_0075: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_007A: ldarg.0 
+IL_007B: ldfld 0x0400027B \x89\x91.\x89\x90::\x87\x99\x8e
+IL_0080: ldc.i4 4564
+IL_0085: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_008A: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_008F: ldarg.0 
+IL_0090: ldfld 0x0400027C \x89\x91.\x89\x90::\x87\x99\x8f
+IL_0095: ldc.i4 350
+IL_009A: ldc.i4 168
+IL_009F: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_00A4: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_00A9: ldarg.0 
+IL_00AA: ldfld 0x0400027C \x89\x91.\x89\x90::\x87\x99\x8f
+IL_00AF: ldc.i4 1692
+IL_00B4: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00B9: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_00BE: ldarg.0 
+IL_00BF: ldfld 0x0400027C \x89\x91.\x89\x90::\x87\x99\x8f
+IL_00C4: ldc.i4.s 75
+IL_00C6: ldc.i4.s 40
+IL_00C8: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_00CD: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_00D2: ldc.i4 13
+IL_00D7: stloc local(0x0000)
+IL_00DB: ldarg.0 
+IL_00DC: ldfld 0x0400027C \x89\x91.\x89\x90::\x87\x99\x8f
+IL_00E1: ldc.i4.8 
+IL_00E2: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_00E7: ldarg.0 
+IL_00E8: ldfld 0x0400027C \x89\x91.\x89\x90::\x87\x99\x8f
+IL_00ED: ldc.i4 1696
+IL_00F2: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00F7: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_00FC: ldc.i4 84
+IL_0101: stloc local(0x0000)
+IL_0105: ldarg.0 
+IL_0106: ldfld 0x0400027C \x89\x91.\x89\x90::\x87\x99\x8f
+IL_010B: ldc.i4.1 
+IL_010C: callvirt 0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+IL_0111: ldarg.0 
+IL_0112: ldfld 0x0400027C \x89\x91.\x89\x90::\x87\x99\x8f
+IL_0117: ldarg.0 
+IL_0118: ldftn 0x06000349 \x89\x91.\x89\x90::\x87\x98\x9d
+IL_011E: newobj 0x0A000150 System.EventHandler::.ctor
+IL_0123: callvirt 0x0A000153 System.Windows.Forms.Control::add_Click
+IL_0128: ldarg.0 
+IL_0129: ldfld 0x0400027D \x89\x91.\x89\x90::\x87\x99\x90
+IL_012E: ldc.i4.1 
+IL_012F: callvirt 0x0A000281 System.Windows.Forms.Control::set_AutoSize
+IL_0134: ldarg.0 
+IL_0135: ldfld 0x0400027D \x89\x91.\x89\x90::\x87\x99\x90
+IL_013A: ldc.i4.s 14
+IL_013C: ldc.i4.s 108
+IL_013E: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_0143: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_0148: ldarg.0 
+IL_0149: ldfld 0x0400027D \x89\x91.\x89\x90::\x87\x99\x90
+IL_014E: ldc.i4 1860
+IL_0153: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0158: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_015D: ldarg.0 
+IL_015E: ldfld 0x0400027D \x89\x91.\x89\x90::\x87\x99\x90
+IL_0163: ldc.i4.s 99
+IL_0165: ldc.i4.s 15
+IL_0167: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_016C: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_0171: br 698
+IL_0176: ldarg.0 
+IL_0177: ldfld 0x0400027D \x89\x91.\x89\x90::\x87\x99\x90
+IL_017C: ldc.i4 4568
+IL_0181: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0186: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_018B: ldarg.0 
+IL_018C: ldfld 0x0400027E \x89\x91.\x89\x90::\x87\x99\x91
+IL_0191: ldc.i4.1 
+IL_0192: callvirt 0x0A000281 System.Windows.Forms.Control::set_AutoSize
+IL_0197: ldc.i4 34
+IL_019C: stloc local(0x0000)
+IL_01A0: ldarg.0 
+IL_01A1: ldfld 0x0400027E \x89\x91.\x89\x90::\x87\x99\x91
+IL_01A6: ldc.i4 190
+IL_01AB: ldc.i4.s 71
+IL_01AD: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_01B2: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_01B7: ldarg.0 
+IL_01B8: ldfld 0x0400027E \x89\x91.\x89\x90::\x87\x99\x91
+IL_01BD: ldc.i4 2712
+IL_01C2: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_01C7: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_01CC: ldc.i4 58
+IL_01D1: stloc local(0x0000)
+IL_01D5: ldarg.0 
+IL_01D6: ldfld 0x0400027E \x89\x91.\x89\x90::\x87\x99\x91
+IL_01DB: ldc.i4.s 15
+IL_01DD: ldc.i4.s 15
+IL_01DF: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_01E4: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_01E9: ldarg.0 
+IL_01EA: ldfld 0x0400027E \x89\x91.\x89\x90::\x87\x99\x91
+IL_01EF: ldc.i4.1 
+IL_01F0: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_01F5: ldc.i4 83
+IL_01FA: stloc local(0x0000)
+IL_01FE: ldarg.0 
+IL_01FF: ldfld 0x0400027E \x89\x91.\x89\x90::\x87\x99\x91
+IL_0204: ldc.i4 4572
+IL_0209: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_020E: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0213: ldarg.0 
+IL_0214: ldfld 0x0400027F \x89\x91.\x89\x90::\x87\x99\x92
+IL_0219: ldc.i4.1 
+IL_021A: callvirt 0x0A0002AE System.Windows.Forms.ListControl::set_FormattingEnabled
+IL_021F: ldc.i4 77
+IL_0224: stloc local(0x0000)
+IL_0228: ldarg.0 
+IL_0229: ldfld 0x0400027F \x89\x91.\x89\x90::\x87\x99\x92
+IL_022E: callvirt 0x0A0002B6 System.Windows.Forms.ComboBox::get_Items
+IL_0233: ldc.i4.4 
+IL_0234: newarr 0x01000001 System.Object
+IL_0239: dup 
+IL_023A: ldc.i4.0 
+IL_023B: ldc.i4 4576
+IL_0240: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0245: stelem.ref 
+IL_0246: dup 
+IL_0247: ldc.i4.1 
+IL_0248: ldc.i4 4428
+IL_024D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0252: stelem.ref 
+IL_0253: dup 
+IL_0254: ldc.i4.2 
+IL_0255: ldc.i4 4580
+IL_025A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_025F: stelem.ref 
+IL_0260: dup 
+IL_0261: ldc.i4.3 
+IL_0262: ldc.i4 1964
+IL_0267: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_026C: stelem.ref 
+IL_026D: callvirt 0x0A0002B7 .ObjectCollection::AddRange
+IL_0272: ldarg.0 
+IL_0273: ldfld 0x0400027F \x89\x91.\x89\x90::\x87\x99\x92
+IL_0278: ldc.i4.s 117
+IL_027A: ldc.i4.s 104
+IL_027C: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_0281: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_0286: ldarg.0 
+IL_0287: ldfld 0x0400027F \x89\x91.\x89\x90::\x87\x99\x92
+IL_028C: ldc.i4 4584
+IL_0291: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0296: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_029B: ldc.i4 64
+IL_02A0: stloc local(0x0000)
+IL_02A4: call 0x06000350 \x89\x91.\x89\x90::\x873
+IL_02A9: brtrue 1076
+IL_02AE: ldarg.0 
+IL_02AF: ldfld 0x0400027D \x89\x91.\x89\x90::\x87\x99\x90
+IL_02B4: ldc.i4.1 
+IL_02B5: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_02BA: br 386
+IL_02BF: ldarg.0 
+IL_02C0: ldfld 0x0400027F \x89\x91.\x89\x90::\x87\x99\x92
+IL_02C5: ldc.i4.s 9
+IL_02C7: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_02CC: ldarg.0 
+IL_02CD: ldfld 0x0400027F \x89\x91.\x89\x90::\x87\x99\x92
+IL_02D2: ldc.i4 4428
+IL_02D7: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_02DC: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_02E1: ldarg.0 
+IL_02E2: ldfld 0x04000280 \x89\x91.\x89\x90::\x87\x99\x93
+IL_02E7: ldc.i4.1 
+IL_02E8: callvirt 0x0A000281 System.Windows.Forms.Control::set_AutoSize
+IL_02ED: ldarg.0 
+IL_02EE: ldfld 0x04000280 \x89\x91.\x89\x90::\x87\x99\x93
+IL_02F3: ldc.i4.s 14
+IL_02F5: ldc.i4.s 34
+IL_02F7: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_02FC: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_0301: ldc.i4 7
+IL_0306: stloc local(0x0000)
+IL_030A: ldarg.0 
+IL_030B: ldfld 0x04000280 \x89\x91.\x89\x90::\x87\x99\x93
+IL_0310: ldc.i4 2696
+IL_0315: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_031A: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_031F: ldc.i4 32
+IL_0324: stloc local(0x0000)
+IL_0328: ldarg.0 
+IL_0329: ldfld 0x04000280 \x89\x91.\x89\x90::\x87\x99\x93
+IL_032E: ldc.i4.s 68
+IL_0330: ldc.i4.s 15
+IL_0332: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_0337: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_033C: ldarg.0 
+IL_033D: ldfld 0x04000280 \x89\x91.\x89\x90::\x87\x99\x93
+IL_0342: ldc.i4.0 
+IL_0343: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_0348: ldarg.0 
+IL_0349: ldfld 0x04000280 \x89\x91.\x89\x90::\x87\x99\x93
+IL_034E: ldc.i4 4588
+IL_0353: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0358: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_035D: ldc.i4 47
+IL_0362: stloc local(0x0000)
+IL_0366: ldarg.0 
+IL_0367: ldfld 0x04000281 \x89\x91.\x89\x90::\x87\x99\x94
+IL_036C: ldc.i4.s 117
+IL_036E: ldc.i4.s 30
+IL_0370: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_0375: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_037A: ldc.i4 16
+IL_037F: stloc local(0x0000)
+IL_0383: ldarg.0 
+IL_0384: ldfld 0x04000281 \x89\x91.\x89\x90::\x87\x99\x94
+IL_0389: ldc.i4 4592
+IL_038E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0393: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_0398: ldarg.0 
+IL_0399: ldfld 0x04000281 \x89\x91.\x89\x90::\x87\x99\x94
+IL_039E: ldc.i4.s 66
+IL_03A0: ldc.i4.s 23
+IL_03A2: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_03A7: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_03AC: ldarg.0 
+IL_03AD: ldfld 0x04000281 \x89\x91.\x89\x90::\x87\x99\x94
+IL_03B2: ldc.i4.2 
+IL_03B3: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_03B8: ldarg.0 
+IL_03B9: ldfld 0x04000281 \x89\x91.\x89\x90::\x87\x99\x94
+IL_03BE: ldc.i4 4580
+IL_03C3: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_03C8: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_03CD: ldarg.0 
+IL_03CE: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_03D3: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_03D8: ldarg.0 
+IL_03D9: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_03DE: callvirt 0x0A000254 .ControlCollection::Add
+IL_03E3: ldc.i4 50
+IL_03E8: stloc local(0x0000)
+IL_03EC: call 0x06000351 \x89\x91.\x89\x90::\x874
+IL_03F1: brtrue 2412
+IL_03F6: br.s 1076
+IL_03F8: ldarg.0 
+IL_03F9: ldfld 0x0400027F \x89\x91.\x89\x90::\x87\x99\x92
+IL_03FE: ldc.i4.s 66
+IL_0400: ldc.i4.s 22
+IL_0402: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_0407: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_040C: ldc.i4 81
+IL_0411: stloc local(0x0000)
+IL_0415: br 715
+IL_041A: ldc.i4 15
+IL_041F: stloc local(0x0000)
+IL_0423: br 761
+IL_0428: ldloc local(0x0000)
+IL_042C: switch [3022, 3489, 2314, 3396, 3544, 964, 3456, 790, 638, 1637, 1770, 2433, 2412, 231, 2346, 761, 911, 3511, 2676, 3103, 1964, 1519, 2004, 3612, 361, 2150, 2645, 698, 340, 2926, 122, 1551, 820, 181, 428, 952, 3264, 2836, 386, 501, 2527, 1486, 2118, 1814, 2240, 3566, 728, 882, 2206, 1605, 2026, 1574, 2118, 3313, 3146, 3066, 3592, 2870, 481, 1442, 2506, 852, 2548, 2527, 1028, 285, 2367, 3221, 2707, 2751, 2801, 2334, 3383, 3196, 2980, 3073, 1857, 564, 1701, 3651, 1932, 715, 3370, 522, 273, 72, 2891, 3651]
+IL_0591: br 1062
+IL_0596: ldarg.0 
+IL_0597: ldfld 0x0400027B \x89\x91.\x89\x90::\x87\x99\x8e
+IL_059C: ldc.i4.s 14
+IL_059E: ldc.i4.s 71
+IL_05A0: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_05A5: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_05AA: ldc.i4 85
+IL_05AF: stloc local(0x0000)
+IL_05B3: call 0x06000351 \x89\x91.\x89\x90::\x874
+IL_05B8: brtrue 3511
+IL_05BD: br 1076
+IL_05C2: ldarg.0 
+IL_05C3: ldfld 0x0400027B \x89\x91.\x89\x90::\x87\x99\x8e
+IL_05C8: ldc.i4.1 
+IL_05C9: callvirt 0x0A000281 System.Windows.Forms.Control::set_AutoSize
+IL_05CE: ldc.i4 59
+IL_05D3: stloc local(0x0000)
+IL_05D7: call 0x06000350 \x89\x91.\x89\x90::\x873
+IL_05DC: brtrue.s 1442
+IL_05DE: br 2004
+IL_05E3: ldarg.0 
+IL_05E4: ldfld 0x0400027A \x89\x91.\x89\x90::\x87\x99\x8d
+IL_05E9: ldc.i4 572
+IL_05EE: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_05F3: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_05F8: ldc.i4 41
+IL_05FD: stloc local(0x0000)
+IL_0601: br.s 1486
+IL_0603: ldarg.0 
+IL_0604: ldfld 0x0400027A \x89\x91.\x89\x90::\x87\x99\x8d
+IL_0609: ldc.i4.4 
+IL_060A: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_060F: ldc.i4 21
+IL_0614: stloc local(0x0000)
+IL_0618: br.s 1519
+IL_061A: ldarg.0 
+IL_061B: ldfld 0x0400027A \x89\x91.\x89\x90::\x87\x99\x8d
+IL_0620: ldc.i4.s 66
+IL_0622: ldc.i4.s 23
+IL_0624: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_0629: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_062E: ldc.i4 31
+IL_0633: stloc local(0x0000)
+IL_0637: br.s 1551
+IL_0639: ldarg.0 
+IL_063A: ldfld 0x0400027A \x89\x91.\x89\x90::\x87\x99\x8d
+IL_063F: ldc.i4 1868
+IL_0644: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0649: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_064E: ldc.i4 51
+IL_0653: stloc local(0x0000)
+IL_0657: br.s 1574
+IL_0659: ldarg.0 
+IL_065A: ldfld 0x04000279 \x89\x91.\x89\x90::\x87\x99\x8c
+IL_065F: ldc.i4.3 
+IL_0660: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_0665: ldarg.0 
+IL_0666: ldfld 0x04000279 \x89\x91.\x89\x90::\x87\x99\x8c
+IL_066B: ldc.i4 2156
+IL_0670: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0675: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_067A: ldarg.0 
+IL_067B: ldfld 0x0400027A \x89\x91.\x89\x90::\x87\x99\x8d
+IL_0680: ldc.i4.s 112
+IL_0682: ldc.i4.s 67
+IL_0684: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_0689: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_068E: ldc.i4 49
+IL_0693: stloc local(0x0000)
+IL_0697: br.s 1605
+IL_0699: ldarg.0 
+IL_069A: ldfld 0x04000279 \x89\x91.\x89\x90::\x87\x99\x8c
+IL_069F: ldc.i4 212
+IL_06A4: ldc.i4.s 67
+IL_06A6: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_06AB: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_06B0: ldarg.0 
+IL_06B1: ldfld 0x04000279 \x89\x91.\x89\x90::\x87\x99\x8c
+IL_06B6: ldc.i4 4560
+IL_06BB: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_06C0: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_06C5: ldarg.0 
+IL_06C6: ldfld 0x04000279 \x89\x91.\x89\x90::\x87\x99\x8c
+IL_06CB: ldc.i4.s 66
+IL_06CD: ldc.i4.s 23
+IL_06CF: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_06D4: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_06D9: br 1637
+IL_06DE: ldarg.0 
+IL_06DF: ldfld 0x04000278 \x89\x91.\x89\x90::\x87\x99\x8b
+IL_06E4: ldc.i4.2 
+IL_06E5: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_06EA: ldarg.0 
+IL_06EB: ldfld 0x04000278 \x89\x91.\x89\x90::\x87\x99\x8b
+IL_06F0: ldc.i4 560
+IL_06F5: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_06FA: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_06FF: ldc.i4 78
+IL_0704: stloc local(0x0000)
+IL_0708: br.s 1701
+IL_070A: ldarg.0 
+IL_070B: ldfld 0x04000278 \x89\x91.\x89\x90::\x87\x99\x8b
+IL_0710: ldc.i4 4556
+IL_0715: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_071A: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_071F: ldarg.0 
+IL_0720: ldfld 0x04000278 \x89\x91.\x89\x90::\x87\x99\x8b
+IL_0725: ldc.i4.s 66
+IL_0727: ldc.i4.s 23
+IL_0729: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_072E: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_0733: br.s 1770
+IL_0735: ldarg.0 
+IL_0736: ldfld 0x04000277 \x89\x91.\x89\x90::\x87\x99\x8a
+IL_073B: ldc.i4.s 91
+IL_073D: ldc.i4.s 15
+IL_073F: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_0744: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_0749: ldarg.0 
+IL_074A: ldfld 0x04000277 \x89\x91.\x89\x90::\x87\x99\x8a
+IL_074F: ldc.i4.0 
+IL_0750: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_0755: ldarg.0 
+IL_0756: ldfld 0x04000277 \x89\x91.\x89\x90::\x87\x99\x8a
+IL_075B: ldc.i4 4552
+IL_0760: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0765: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_076A: ldarg.0 
+IL_076B: ldfld 0x04000278 \x89\x91.\x89\x90::\x87\x99\x8b
+IL_0770: ldc.i4.s 117
+IL_0772: ldc.i4.s 67
+IL_0774: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_0779: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_077E: br.s 1814
+IL_0780: ldarg.0 
+IL_0781: ldfld 0x04000277 \x89\x91.\x89\x90::\x87\x99\x8a
+IL_0786: ldc.i4 1832
+IL_078B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0790: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_0795: ldc.i4 76
+IL_079A: stloc local(0x0000)
+IL_079E: br.s 1857
+IL_07A0: ldarg.0 
+IL_07A1: call 0x0A00023B System.Windows.Forms.Control::SuspendLayout
+IL_07A6: ldarg.0 
+IL_07A7: ldfld 0x04000277 \x89\x91.\x89\x90::\x87\x99\x8a
+IL_07AC: ldc.i4.1 
+IL_07AD: callvirt 0x0A000281 System.Windows.Forms.Control::set_AutoSize
+IL_07B2: ldarg.0 
+IL_07B3: ldfld 0x04000277 \x89\x91.\x89\x90::\x87\x99\x8a
+IL_07B8: ldc.i4.s 14
+IL_07BA: ldc.i4.s 71
+IL_07BC: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_07C1: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_07C6: br.s 1932
+IL_07C8: ldarg.0 
+IL_07C9: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_07CE: callvirt 0x0A00023B System.Windows.Forms.Control::SuspendLayout
+IL_07D3: ldc.i4 20
+IL_07D8: stloc local(0x0000)
+IL_07DC: br.s 1964
+IL_07DE: ldarg.0 
+IL_07DF: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_07E4: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_07E9: ldarg.0 
+IL_07EA: ldfld 0x04000284 \x89\x91.\x89\x90::\x87\x99\x97
+IL_07EF: callvirt 0x0A000254 .ControlCollection::Add
+IL_07F4: ldarg.0 
+IL_07F5: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_07FA: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_07FF: ldarg.0 
+IL_0800: ldfld 0x0400027B \x89\x91.\x89\x90::\x87\x99\x8e
+IL_0805: callvirt 0x0A000254 .ControlCollection::Add
+IL_080A: ldarg.0 
+IL_080B: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0810: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0815: ldarg.0 
+IL_0816: ldfld 0x0400027A \x89\x91.\x89\x90::\x87\x99\x8d
+IL_081B: callvirt 0x0A000254 .ControlCollection::Add
+IL_0820: ldc.i4.1 
+IL_0821: call 0x06000351 \x89\x91.\x89\x90::\x874
+IL_0826: brtrue.s 2112
+IL_0828: pop 
+IL_0829: ldc.i4 42
+IL_082E: stloc local(0x0000)
+IL_0832: br.s 2118
+IL_0834: pop 
+IL_0835: br 2527
+IL_083A: ldarg.0 
+IL_083B: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0840: ldc.i4 325
+IL_0845: ldc.i4.s 12
+IL_0847: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_084C: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_0851: ldc.i4 25
+IL_0856: stloc local(0x0000)
+IL_085A: ldarg.0 
+IL_085B: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0860: ldc.i4 1664
+IL_0865: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_086A: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_086F: ldarg.0 
+IL_0870: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0875: ldc.i4 195
+IL_087A: ldc.i4 141
+IL_087F: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_0884: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_0889: ldc.i4 48
+IL_088E: stloc local(0x0000)
+IL_0892: ldarg.0 
+IL_0893: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0898: ldc.i4.s 10
+IL_089A: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_089F: ldarg.0 
+IL_08A0: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_08A5: ldc.i4.0 
+IL_08A6: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+IL_08AB: ldc.i4 44
+IL_08B0: stloc local(0x0000)
+IL_08B4: ldarg.0 
+IL_08B5: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_08BA: ldc.i4 4596
+IL_08BF: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_08C4: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_08C9: ldarg.0 
+IL_08CA: ldfld 0x04000284 \x89\x91.\x89\x90::\x87\x99\x97
+IL_08CF: ldc.i4.1 
+IL_08D0: callvirt 0x0A000281 System.Windows.Forms.Control::set_AutoSize
+IL_08D5: ldarg.0 
+IL_08D6: ldfld 0x04000284 \x89\x91.\x89\x90::\x87\x99\x97
+IL_08DB: ldc.i4.s 21
+IL_08DD: ldc.i4.s 32
+IL_08DF: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_08E4: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_08E9: ldarg.0 
+IL_08EA: ldfld 0x04000284 \x89\x91.\x89\x90::\x87\x99\x97
+IL_08EF: ldc.i4 4600
+IL_08F4: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_08F9: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_08FE: ldarg.0 
+IL_08FF: ldfld 0x04000284 \x89\x91.\x89\x90::\x87\x99\x97
+IL_0904: ldc.i4.s 56
+IL_0906: ldc.i4.s 19
+IL_0908: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_090D: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_0912: ldarg.0 
+IL_0913: ldfld 0x04000284 \x89\x91.\x89\x90::\x87\x99\x97
+IL_0918: ldc.i4.6 
+IL_0919: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_091E: ldarg.0 
+IL_091F: ldfld 0x04000284 \x89\x91.\x89\x90::\x87\x99\x97
+IL_0924: ldc.i4 2728
+IL_0929: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_092E: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0933: ldarg.0 
+IL_0934: ldfld 0x04000284 \x89\x91.\x89\x90::\x87\x99\x97
+IL_0939: ldc.i4.1 
+IL_093A: callvirt 0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+IL_093F: ldarg.0 
+IL_0940: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_0945: ldc.i4.1 
+IL_0946: callvirt 0x0A000281 System.Windows.Forms.Control::set_AutoSize
+IL_094B: ldarg.0 
+IL_094C: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_0951: ldc.i4.1 
+IL_0952: callvirt 0x0A0001F6 System.Windows.Forms.CheckBox::set_Checked
+IL_0957: ldc.i4 12
+IL_095C: stloc local(0x0000)
+IL_0960: ldarg.0 
+IL_0961: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_0966: ldc.i4.1 
+IL_0967: callvirt 0x0A000283 System.Windows.Forms.CheckBox::set_CheckState
+IL_096C: ldc.i4 11
+IL_0971: stloc local(0x0000)
+IL_0975: ldarg.0 
+IL_0976: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_097B: ldc.i4.s 112
+IL_097D: ldc.i4.s 32
+IL_097F: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_0984: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_0989: ldarg.0 
+IL_098A: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_098F: ldc.i4 4604
+IL_0994: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0999: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_099E: ldarg.0 
+IL_099F: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_09A4: ldc.i4.s 56
+IL_09A6: ldc.i4.s 19
+IL_09A8: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_09AD: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_09B2: ldarg.0 
+IL_09B3: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_09B8: ldc.i4.6 
+IL_09B9: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_09BE: ldarg.0 
+IL_09BF: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_09C4: ldc.i4 4608
+IL_09C9: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_09CE: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_09D3: ldarg.0 
+IL_09D4: ldfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_09D9: ldc.i4.1 
+IL_09DA: callvirt 0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+IL_09DF: ldc.i4 62
+IL_09E4: stloc local(0x0000)
+IL_09E8: ldarg.0 
+IL_09E9: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_09EE: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_09F3: ldarg.0 
+IL_09F4: ldfld 0x04000280 \x89\x91.\x89\x90::\x87\x99\x93
+IL_09F9: callvirt 0x0A000254 .ControlCollection::Add
+IL_09FE: ldarg.0 
+IL_09FF: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0A04: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0A09: ldarg.0 
+IL_0A0A: ldfld 0x04000277 \x89\x91.\x89\x90::\x87\x99\x8a
+IL_0A0F: callvirt 0x0A000254 .ControlCollection::Add
+IL_0A14: ldarg.0 
+IL_0A15: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0A1A: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0A1F: ldarg.0 
+IL_0A20: ldfld 0x0400027F \x89\x91.\x89\x90::\x87\x99\x92
+IL_0A25: callvirt 0x0A000254 .ControlCollection::Add
+IL_0A2A: ldarg.0 
+IL_0A2B: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0A30: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0A35: ldarg.0 
+IL_0A36: ldfld 0x0400027D \x89\x91.\x89\x90::\x87\x99\x90
+IL_0A3B: callvirt 0x0A000254 .ControlCollection::Add
+IL_0A40: ldc.i4 26
+IL_0A45: stloc local(0x0000)
+IL_0A49: ldarg.0 
+IL_0A4A: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0A4F: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0A54: ldarg.0 
+IL_0A55: ldfld 0x0400027E \x89\x91.\x89\x90::\x87\x99\x91
+IL_0A5A: callvirt 0x0A000254 .ControlCollection::Add
+IL_0A5F: ldc.i4 18
+IL_0A64: stloc local(0x0000)
+IL_0A68: ldarg.0 
+IL_0A69: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0A6E: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0A73: ldarg.0 
+IL_0A74: ldfld 0x04000279 \x89\x91.\x89\x90::\x87\x99\x8c
+IL_0A79: callvirt 0x0A000254 .ControlCollection::Add
+IL_0A7E: ldc.i4 68
+IL_0A83: stloc local(0x0000)
+IL_0A87: ldarg.0 
+IL_0A88: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0A8D: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0A92: ldarg.0 
+IL_0A93: ldfld 0x04000278 \x89\x91.\x89\x90::\x87\x99\x8b
+IL_0A98: callvirt 0x0A000254 .ControlCollection::Add
+IL_0A9D: ldarg.0 
+IL_0A9E: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0AA3: callvirt 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0AA8: ldarg.0 
+IL_0AA9: ldfld 0x04000281 \x89\x91.\x89\x90::\x87\x99\x94
+IL_0AAE: callvirt 0x0A000254 .ControlCollection::Add
+IL_0AB3: ldarg.0 
+IL_0AB4: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0AB9: ldc.i4.s 12
+IL_0ABB: ldc.i4.s 12
+IL_0ABD: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_0AC2: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_0AC7: ldarg.0 
+IL_0AC8: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0ACD: ldc.i4 1740
+IL_0AD2: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0AD7: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_0ADC: ldc.i4 70
+IL_0AE1: stloc local(0x0000)
+IL_0AE5: ldarg.0 
+IL_0AE6: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0AEB: ldc.i4 297
+IL_0AF0: ldc.i4 141
+IL_0AF5: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_0AFA: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_0AFF: ldc.i4 37
+IL_0B04: stloc local(0x0000)
+IL_0B08: ldarg.0 
+IL_0B09: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0B0E: ldc.i4.s 11
+IL_0B10: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_0B15: ldarg.0 
+IL_0B16: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0B1B: ldc.i4.0 
+IL_0B1C: callvirt 0x0A000284 System.Windows.Forms.GroupBox::set_TabStop
+IL_0B21: ldc.i4 57
+IL_0B26: stloc local(0x0000)
+IL_0B2A: ldarg.0 
+IL_0B2B: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0B30: ldc.i4 4612
+IL_0B35: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0B3A: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0B3F: ldarg.0 
+IL_0B40: ldfld 0x04000286 \x89\x91.\x89\x90::\x87\x99\x99
+IL_0B45: ldc.i4 437
+IL_0B4A: ldc.i4 168
+IL_0B4F: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_0B54: callvirt 0x0A000242 System.Windows.Forms.Control::set_Location
+IL_0B59: ldc.i4 29
+IL_0B5E: stloc local(0x0000)
+IL_0B62: ldarg.0 
+IL_0B63: ldfld 0x04000286 \x89\x91.\x89\x90::\x87\x99\x99
+IL_0B68: ldc.i4 1816
+IL_0B6D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0B72: callvirt 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_0B77: ldarg.0 
+IL_0B78: ldfld 0x04000286 \x89\x91.\x89\x90::\x87\x99\x99
+IL_0B7D: ldc.i4.s 66
+IL_0B7F: ldc.i4.s 40
+IL_0B81: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_0B86: callvirt 0x0A000244 System.Windows.Forms.Control::set_Size
+IL_0B8B: ldarg.0 
+IL_0B8C: ldfld 0x04000286 \x89\x91.\x89\x90::\x87\x99\x99
+IL_0B91: ldc.i4.s 12
+IL_0B93: callvirt 0x0A000245 System.Windows.Forms.Control::set_TabIndex
+IL_0B98: ldarg.0 
+IL_0B99: ldfld 0x04000286 \x89\x91.\x89\x90::\x87\x99\x99
+IL_0B9E: ldc.i4 1952
+IL_0BA3: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0BA8: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0BAD: ldarg.0 
+IL_0BAE: ldfld 0x04000286 \x89\x91.\x89\x90::\x87\x99\x99
+IL_0BB3: ldc.i4.1 
+IL_0BB4: callvirt 0x0A000282 System.Windows.Forms.ButtonBase::set_UseVisualStyleBackColor
+IL_0BB9: ldc.i4 0
+IL_0BBE: stloc local(0x0000)
+IL_0BC2: ldarg.0 
+IL_0BC3: ldfld 0x04000286 \x89\x91.\x89\x90::\x87\x99\x99
+IL_0BC8: ldarg.0 
+IL_0BC9: ldftn 0x0600034C \x89\x91.\x89\x90::\x87\x99\x87
+IL_0BCF: newobj 0x0A000150 System.EventHandler::.ctor
+IL_0BD4: callvirt 0x0A000153 System.Windows.Forms.Control::add_Click
+IL_0BD9: ldarg.0 
+IL_0BDA: ldc.r4 7.0
+IL_0BDF: ldc.r4 14.0
+IL_0BE4: newobj 0x0A000251 System.Drawing.SizeF::.ctor
+IL_0BE9: call 0x0A000252 System.Windows.Forms.ContainerControl::set_AutoScaleDimensions
+IL_0BEE: ldarg.0 
+IL_0BEF: ldc.i4.1 
+IL_0BF0: call 0x0A000253 System.Windows.Forms.ContainerControl::set_AutoScaleMode
+IL_0BF5: ldarg.0 
+IL_0BF6: ldc.i4 533
+IL_0BFB: ldc.i4 224
+IL_0C00: newobj 0x0A000233 System.Drawing.Size::.ctor
+IL_0C05: call 0x0A00028D System.Windows.Forms.Form::set_ClientSize
+IL_0C0A: ldc.i4 19
+IL_0C0F: stloc local(0x0000)
+IL_0C13: ldarg.0 
+IL_0C14: call 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0C19: ldarg.0 
+IL_0C1A: ldfld 0x04000286 \x89\x91.\x89\x90::\x87\x99\x99
+IL_0C1F: callvirt 0x0A000254 .ControlCollection::Add
+IL_0C24: ldarg.0 
+IL_0C25: call 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0C2A: ldarg.0 
+IL_0C2B: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0C30: callvirt 0x0A000254 .ControlCollection::Add
+IL_0C35: ldc.i4 54
+IL_0C3A: stloc local(0x0000)
+IL_0C3E: ldarg.0 
+IL_0C3F: call 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0C44: ldarg.0 
+IL_0C45: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0C4A: callvirt 0x0A000254 .ControlCollection::Add
+IL_0C4F: ldarg.0 
+IL_0C50: call 0x0A000179 System.Windows.Forms.Control::get_Controls
+IL_0C55: ldarg.0 
+IL_0C56: ldfld 0x0400027C \x89\x91.\x89\x90::\x87\x99\x8f
+IL_0C5B: callvirt 0x0A000254 .ControlCollection::Add
+IL_0C60: ldarg.0 
+IL_0C61: ldc.i4.5 
+IL_0C62: call 0x0A00028B System.Windows.Forms.Form::set_FormBorderStyle
+IL_0C67: ldc.i4 73
+IL_0C6C: stloc local(0x0000)
+IL_0C70: ldarg.0 
+IL_0C71: ldc.i4 476
+IL_0C76: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0C7B: call 0x0A000243 System.Windows.Forms.Control::set_Name
+IL_0C80: ldc.i4 67
+IL_0C85: stloc local(0x0000)
+IL_0C89: ldarg.0 
+IL_0C8A: ldc.i4 4616
+IL_0C8F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0C94: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0C99: ldarg.0 
+IL_0C9A: ldarg.0 
+IL_0C9B: ldftn 0x0600034B \x89\x91.\x89\x90::\x87\x99\x86
+IL_0CA1: newobj 0x0A000293 System.Windows.Forms.FormClosedEventHandler::.ctor
+IL_0CA6: call 0x0A000294 System.Windows.Forms.Form::add_FormClosed
+IL_0CAB: ldc.i4 36
+IL_0CB0: stloc local(0x0000)
+IL_0CB4: ldarg.0 
+IL_0CB5: ldarg.0 
+IL_0CB6: ldftn 0x0600034A \x89\x91.\x89\x90::\x87\x98\x9e
+IL_0CBC: newobj 0x0A000150 System.EventHandler::.ctor
+IL_0CC1: call 0x0A000295 System.Windows.Forms.Form::add_Load
+IL_0CC6: ldarg.0 
+IL_0CC7: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0CCC: ldc.i4.0 
+IL_0CCD: callvirt 0x0A000256 System.Windows.Forms.Control::ResumeLayout
+IL_0CD2: ldc.i4 56
+IL_0CD7: stloc local(0x0000)
+IL_0CDB: call 0x06000350 \x89\x91.\x89\x90::\x873
+IL_0CE0: brtrue 3592
+IL_0CE5: ldarg.0 
+IL_0CE6: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+IL_0CEB: stfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0CF0: ldarg.0 
+IL_0CF1: newobj 0x0A000297 System.Windows.Forms.Button::.ctor
+IL_0CF6: stfld 0x04000286 \x89\x91.\x89\x90::\x87\x99\x99
+IL_0CFB: ldarg.0 
+IL_0CFC: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0D01: callvirt 0x0A00023B System.Windows.Forms.Control::SuspendLayout
+IL_0D06: ldc.i4 22
+IL_0D0B: stloc local(0x0000)
+IL_0D0F: call 0x06000351 \x89\x91.\x89\x90::\x874
+IL_0D14: brfalse 2004
+IL_0D19: br 1701
+IL_0D1E: ldarg.0 
+IL_0D1F: newobj 0x0A00028F System.Windows.Forms.CheckBox::.ctor
+IL_0D24: stfld 0x04000283 \x89\x91.\x89\x90::\x87\x99\x96
+IL_0D29: br.s 3313
+IL_0D2B: ldarg.0 
+IL_0D2C: newobj 0x0A00028F System.Windows.Forms.CheckBox::.ctor
+IL_0D31: stfld 0x04000284 \x89\x91.\x89\x90::\x87\x99\x97
+IL_0D36: br.s 3370
+IL_0D38: ldarg.0 
+IL_0D39: newobj 0x0A0002B9 System.Windows.Forms.ComboBox::.ctor
+IL_0D3E: stfld 0x0400027F \x89\x91.\x89\x90::\x87\x99\x92
+IL_0D43: ldarg.0 
+IL_0D44: newobj 0x0A0001E4 System.Windows.Forms.Label::.ctor
+IL_0D49: stfld 0x04000280 \x89\x91.\x89\x90::\x87\x99\x93
+IL_0D4E: ldarg.0 
+IL_0D4F: newobj 0x0A000206 System.Windows.Forms.TextBox::.ctor
+IL_0D54: stfld 0x04000281 \x89\x91.\x89\x90::\x87\x99\x94
+IL_0D59: ldarg.0 
+IL_0D5A: newobj 0x0A00028A System.Windows.Forms.GroupBox::.ctor
+IL_0D5F: stfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0D64: ldc.i4 72
+IL_0D69: stloc local(0x0000)
+IL_0D6D: call 0x06000350 \x89\x91.\x89\x90::\x873
+IL_0D72: brtrue.s 3383
+IL_0D74: ldarg.0 
+IL_0D75: newobj 0x0A0001E4 System.Windows.Forms.Label::.ctor
+IL_0D7A: stfld 0x0400027D \x89\x91.\x89\x90::\x87\x99\x90
+IL_0D7F: ldarg.0 
+IL_0D80: newobj 0x0A0001E4 System.Windows.Forms.Label::.ctor
+IL_0D85: stfld 0x0400027E \x89\x91.\x89\x90::\x87\x99\x91
+IL_0D8A: ldc.i4 3
+IL_0D8F: stloc local(0x0000)
+IL_0D93: br.s 3396
+IL_0D95: ldarg.0 
+IL_0D96: newobj 0x0A000297 System.Windows.Forms.Button::.ctor
+IL_0D9B: stfld 0x0400027C \x89\x91.\x89\x90::\x87\x99\x8f
+IL_0DA0: ldc.i4 6
+IL_0DA5: stloc local(0x0000)
+IL_0DA9: br.s 3456
+IL_0DAB: ldarg.0 
+IL_0DAC: newobj 0x0A000206 System.Windows.Forms.TextBox::.ctor
+IL_0DB1: stfld 0x0400027A \x89\x91.\x89\x90::\x87\x99\x8d
+IL_0DB6: ldarg.0 
+IL_0DB7: newobj 0x0A0001E4 System.Windows.Forms.Label::.ctor
+IL_0DBC: stfld 0x0400027B \x89\x91.\x89\x90::\x87\x99\x8e
+IL_0DC1: ldc.i4 1
+IL_0DC6: stloc local(0x0000)
+IL_0DCA: br.s 3489
+IL_0DCC: ldarg.0 
+IL_0DCD: newobj 0x0A000206 System.Windows.Forms.TextBox::.ctor
+IL_0DD2: stfld 0x04000279 \x89\x91.\x89\x90::\x87\x99\x8c
+IL_0DD7: ldc.i4 17
+IL_0DDC: stloc local(0x0000)
+IL_0DE0: br.s 3511
+IL_0DE2: ldc.i4 552
+IL_0DE7: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0DEC: brfalse 26
+IL_0DF1: ldc.i4 79
+IL_0DF6: stloc local(0x0000)
+IL_0DFA: br.s 3651
+IL_0DFC: ldarg.0 
+IL_0DFD: ldfld 0x04000282 \x89\x91.\x89\x90::\x87\x99\x95
+IL_0E02: callvirt 0x0A00028E System.Windows.Forms.Control::PerformLayout
+IL_0E07: ldc.i4 23
+IL_0E0C: stloc local(0x0000)
+IL_0E10: ldarg.0 
+IL_0E11: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0E16: ldc.i4.0 
+IL_0E17: callvirt 0x0A000256 System.Windows.Forms.Control::ResumeLayout
+IL_0E1C: ldarg.0 
+IL_0E1D: ldfld 0x04000285 \x89\x91.\x89\x90::\x87\x99\x98
+IL_0E22: callvirt 0x0A00028E System.Windows.Forms.Control::PerformLayout
+IL_0E27: ldarg.0 
+IL_0E28: ldc.i4.0 
+IL_0E29: call 0x0A000256 System.Windows.Forms.Control::ResumeLayout
+IL_0E2E: ldc.i4 87
+IL_0E33: stloc local(0x0000)
+IL_0E37: ret 
+

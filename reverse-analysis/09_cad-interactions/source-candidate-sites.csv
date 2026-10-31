@@ -1,0 +1,375 @@
+﻿class,method,source,line,text
+_0089,_0087_0093,03_recovered-src\annotated-strings\-\-.cs,764,"_008B._0088_008D((Entity)new Polyline3d((Poly3dType)0, val7, true), workingDatabase);"
+_0089,_0087_0095,03_recovered-src\annotated-strings\-\-.cs,971,"_008B._0088_008D((Entity)new Arc(val, num2, num3 - Math.PI / 3.0, num3 + Math.PI / 3.0), database);"
+_0089,_0087_0099,03_recovered-src\annotated-strings\-\-.cs,1032,PromptEntityResult entity = editor.GetEntity(val);
+_0089,_0087_0099,03_recovered-src\annotated-strings\-\-.cs,1041,"ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;"
+_0089,_0087_009A,03_recovered-src\annotated-strings\-\-.cs,1086,string text = P_2.TrimStart();
+_0089,_0088_0086,03_recovered-src\annotated-strings\-\-.cs,1314,"return P_0.Substring(num, P_1 - num).Trim();"
+_008B,_0088_0088,03_recovered-src\annotated-strings\-\-.cs,1378,Polyline val2 = new Polyline();
+_008B,_0088_0089,03_recovered-src\annotated-strings\-\-.cs,1414,Polyline val4 = new Polyline();
+_008B,_0088_008A,03_recovered-src\annotated-strings\-\-.cs,1447,Polyline val2 = new Polyline();
+_008B,_0088_008B,03_recovered-src\annotated-strings\-\-.cs,1483,Polyline val4 = new Polyline();
+_008B,_0088_008C,03_recovered-src\annotated-strings\-\-.cs,1534,if (P_2.Trim().Length > 0)
+_008B,_0088_008C,03_recovered-src\annotated-strings\-\-.cs,1555,((DBObject)item).XData = val3;
+_008B,_0088_008D,03_recovered-src\annotated-strings\-\-.cs,1607,if (P_2.Trim().Length > 0)
+_008B,_0088_008D,03_recovered-src\annotated-strings\-\-.cs,1636,((DBObject)P_0).XData = val3;
+_008B,_0088_0098,03_recovered-src\annotated-strings\-\-.cs,2187,"((DBObject)(Entity)val.GetObject(P_0, (OpenMode)1)).XData = P_2;"
+_008B,_0088_009C,03_recovered-src\annotated-strings\-\-.cs,2372,entity = editor.GetEntity(val);
+_008B,_0088_009D,03_recovered-src\annotated-strings\-\-.cs,2421,selection = editor.GetSelection(val);
+_0095,_008A_0089,03_recovered-src\annotated-strings\-\-.cs,3792,for (; enumerator.MoveNext(); menuItem.Click += delegate
+_0095,_008A_0089,03_recovered-src\annotated-strings\-\-.cs,3830,button.Click += delegate
+_0095,_008A_008D,03_recovered-src\annotated-strings\-\-.cs,4145,"_008A_0090 = ""config.xml"" /* string-offset:676 */;"
+_0097,_008A_009A,03_recovered-src\annotated-strings\-\-.cs,4570,string text2 = array2[0].Trim();
+_0097,_008A_009A,03_recovered-src\annotated-strings\-\-.cs,4571,text = array2[1].Trim();
+_0099,_008A_009C,03_recovered-src\annotated-strings\-\-.cs,4638,P_0 = val3.StringResult.Trim();
+_0099,_008B_0087,03_recovered-src\annotated-strings\-\-.cs,5010,P_0 = val2.StringResult.Trim();
+_009B,,03_recovered-src\annotated-strings\-\-.cs,5185,PromptSelectionResult selection = editor.GetSelection(val);
+_009D,_008B_008D,03_recovered-src\annotated-strings\-\-.cs,5255,PromptPointResult point = editor.GetPoint(val);
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,5917,"val13 = new Arc(val14, num10 - (double)num13, num14, num2 - Math.PI / 2.0);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6044,"val19 = new Arc(val15, num10 - (double)num21, num2 + Math.PI / 2.0, num22);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6049,"val20 = new Arc(val21, num9 + (double)num21, num3 - Math.PI / 2.0, num23);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6050,"val22 = new Arc(val, num8 + (double)num21, num3 + num24, num2 - num15);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6053,val18 = new Polyline();
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6342,"val28 = new Arc(val16, num10 - (double)num20, num17, num2 - Math.PI / 2.0);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6343,"val27 = new Arc(val17, num9 + (double)num20, num19, num3 + Math.PI / 2.0);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6344,"val26 = new Arc(val, num8 + (double)num20, num2 + num11, num3 - num18);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6351,"val7 = new Arc(val12, num9 + (double)num13, num12, num3 + Math.PI / 2.0);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6355,val25 = new Polyline();
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6506,"val6 = new Arc(val, num8 + (double)num13, num2 + num16, num3 - num30);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6507,val4 = new Polyline();
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6550,"val9 = new Arc(val23, num10 - (double)num29, num2 + Math.PI / 2.0, num26);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6551,"val11 = new Arc(val24, num9 + (double)num29, num3 - Math.PI / 2.0, num28);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6569,"val10 = new Arc(val, num8 + (double)num29, num3 + num27, num2 - num25);"
+_009D,_008B_0090,03_recovered-src\annotated-strings\-\-.cs,6572,val8 = new Polyline();
+_009D,_008B_0091,03_recovered-src\annotated-strings\-\-.cs,6729,"ResultBuffer xDataForApplication = ((DBObject)val2).GetXDataForApplication(""WsEntityFrame"" /* string-offset:940 */);"
+_009D,_008B_0092,03_recovered-src\annotated-strings\-\-.cs,6832,"ResultBuffer xDataForApplication = ((DBObject)item).GetXDataForApplication(""WsEntityFrame"" /* string-offset:940 */);"
+_009D,_008B_0092,03_recovered-src\annotated-strings\-\-.cs,6907,"ResultBuffer xDataForApplication2 = ((DBObject)current2).GetXDataForApplication(""WsEntityFrame"" /* string-offset:940 */);"
+_009D,_008B_0096,03_recovered-src\annotated-strings\-\-.cs,7226,Polyline val12 = new Polyline();
+_009D,_008B_0096,03_recovered-src\annotated-strings\-\-.cs,7227,Polyline val13 = new Polyline();
+_009D,_008B_0096,03_recovered-src\annotated-strings\-\-.cs,7232,Polyline val14 = new Polyline();
+_0087_0088,_008C_0091,03_recovered-src\annotated-strings\--\--.cs,376,Polyline val = new Polyline();
+_0087_0088,_008C_0091,03_recovered-src\annotated-strings\--\--.cs,391,return new Polyline();
+_0087_0088,_008C_0092,03_recovered-src\annotated-strings\--\--.cs,403,"return new Polyline3d((Poly3dType)0, P_0, false);"
+_0087_0088,_008C_0092,03_recovered-src\annotated-strings\--\--.cs,407,return new Polyline3d();
+_0088_008B,_008F_008B,03_recovered-src\annotated-strings\--\--.cs,1873,"P_0.Click += delegate(object obj, EventArgs e)"
+_0088_008F,,03_recovered-src\annotated-strings\--\--.cs,2440,obj.Click += delegate
+_0088_0097,_0095_0086,03_recovered-src\annotated-strings\--\--.cs,4665,"ObjectId val6 = _008B._0088_008D((Entity)new Arc(val, num2 + num4, num - num3, num + num3), workingDatabase);"
+_0088_0097,_0095_0086,03_recovered-src\annotated-strings\--\--.cs,4667,"val6 = _008B._0088_008D((Entity)new Arc(val, num2, num - num3, num + num3), workingDatabase);"
+_0088_0097,_0095_0086,03_recovered-src\annotated-strings\--\--.cs,4669,"val6 = _008B._0088_008D((Entity)new Arc(val, num2 - num4, num - num3, num + num3), workingDatabase);"
+_0088_0097,_0095_0087,03_recovered-src\annotated-strings\--\--.cs,4718,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FixTolerance"" /* string-offset:368 */);"
+_0088_0097,_0095_0088,03_recovered-src\annotated-strings\--\--.cs,4723,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FixTolerance"" /* string-offset:368 */);"
+_0088_0097,_0095_008E,03_recovered-src\annotated-strings\--\--.cs,5423,_0095_0094.Click += _0095_0086;
+_0088_0097,_0095_008E,03_recovered-src\annotated-strings\--\--.cs,6149,_0096_0089.Click += _0095_0089;
+_0088_0099,_0097_0088,03_recovered-src\annotated-strings\--\--.cs,6791,_0097_008C.Click += _0096_0099;
+_0088_0099,_0097_0088,03_recovered-src\annotated-strings\--\--.cs,6820,_0097_008D.Click += _0096_009B;
+_0088_0099,_0097_0088,03_recovered-src\annotated-strings\--\--.cs,6886,_0097_0090.Click += _0096_009D;
+_0088_0099,_0097_0088,03_recovered-src\annotated-strings\--\--.cs,6932,_0097_0093.Click += _0096_009C;
+_0088_0099,_0097_0088,03_recovered-src\annotated-strings\--\--.cs,6940,_0097_0091.Click += _0097_0086;
+_0088_0099,_0097_0088,03_recovered-src\annotated-strings\--\--.cs,6957,_0097_0092.Click += _0096_009E;
+_0088_0099,_0097_0088,03_recovered-src\annotated-strings\--\--.cs,7078,_0097_0095.Click += _0097_0087;
+_0088_009B,_0097_0097,03_recovered-src\annotated-strings\--\--.cs,7525,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormCalcu"" /* string-offset:364 */);"
+_0088_009B,_0097_0098,03_recovered-src\annotated-strings\--\--.cs,7531,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormCalcu"" /* string-offset:364 */);"
+_0088_009B,_0098_0096,03_recovered-src\annotated-strings\--\--.cs,8755,_009B_0088.Click += _0097_009E;
+_0088_009B,_0098_0096,03_recovered-src\annotated-strings\--\--.cs,9410,_009B_008E.Click += _0098_0088;
+_0088_009B,_0098_0096,03_recovered-src\annotated-strings\--\--.cs,10102,_009B_0086.Click += _0098_008D;
+_0088_009B,_0098_0096,03_recovered-src\annotated-strings\--\--.cs,10121,_009C_008F.Click += _0098_0093;
+_0088_009B,_0098_0096,03_recovered-src\annotated-strings\--\--.cs,10460,_009A_0093.Click += _0098_0090;
+_0088_009B,_0098_0096,03_recovered-src\annotated-strings\--\--.cs,11202,_009A_0087.Click += _0097_0099;
+_0088_009D,_009C_009A,03_recovered-src\annotated-strings\--\--.cs,12080,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormTurnAreaEvl"" /* string-offset:388 */);"
+_0088_009D,_009C_009B,03_recovered-src\annotated-strings\--\--.cs,12088,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormTurnAreaEvl"" /* string-offset:388 */);"
+_0088_009D,_009D_009C,03_recovered-src\annotated-strings\--\--.cs,12734,_0087_0086_008E.Click += _009D_0094;
+_0088_009D,_009D_009C,03_recovered-src\annotated-strings\--\--.cs,12859,_0087_0086_0088.Click += _009D_0093;
+_0088_009D,_009D_009C,03_recovered-src\annotated-strings\--\--.cs,12877,_009E_009E.Click += _009C_009C;
+_0088_009D,_009D_009C,03_recovered-src\annotated-strings\--\--.cs,13089,_009E_0088.Click += _009D_0087;
+_0088_009D,_009D_009C,03_recovered-src\annotated-strings\--\--.cs,13331,_0087_0086_0087.Click += _009D_008A;
+_0088_009D,_009D_009C,03_recovered-src\annotated-strings\--\--.cs,13817,_0087_0086_0086.Click += _009D_0089;
+_0088_009D,_009D_009C,03_recovered-src\annotated-strings\--\--.cs,13841,_009E_0087.Click += _009D_0088;
+_0089_0086,_0087_0086_0096,03_recovered-src\annotated-strings\--\--.cs,14293,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormDeparture"" /* string-offset:3000 */);"
+_0089_0086,_0087_0086_0097,03_recovered-src\annotated-strings\--\--.cs,14301,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormDeparture"" /* string-offset:3000 */);"
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,16294,_0087_008B_009E.Click += _0087_0087_0095;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,16476,_0087_008A_009C.Click += _0087_0087_008D;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,16647,_0087_008C_009C.Click += _0087_0086_009B;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,16665,_0087_008D_0091.Click += _0087_0087_009B;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,16701,_0087_008C_0093.Click += _0087_0087_0094;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,16727,_0087_008B_0093.Click += _0087_0087_0093;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,16814,_0087_008B_009C.Click += _0087_0087_0096;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,16841,_0087_008B_009D.Click += _0087_0087_0098;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17024,_0087_008D_0098.Click += _0087_0089_0098;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17034,_0087_008D_0093.Click += _0087_0087_009C;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17354,_0087_008C_009E.Click += _0087_0086_0099;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17424,_0087_008C_0092.Click += _0087_0087_0090;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17432,_0087_008A_008B.Click += _0087_0087_0087;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17549,_0087_008D_0088.Click += _0087_0087_009A;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17558,_0087_008D_0097.Click += _0087_0089_0099;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17653,_0087_008D_008A.Click += _0087_0087_0099;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17794,_0087_008D_0095.Click += _0087_0089_0097;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,17984,_0087_008A_0093.Click += _0087_0087_008C;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,18012,_0087_008A_0094.Click += _0087_0087_008B;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,18384,_0087_008D_0094.Click += _0087_0087_009C;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,18431,_0087_008D_0096.Click += _0087_0089_0096;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,18443,_0087_008D_0092.Click += _0087_0087_009C;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,18478,_0087_008C_009D.Click += _0087_0086_0098;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,18518,_0087_008A_008A.Click += _0087_0087_0088;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,18794,_0087_008C_009B.Click += _0087_0087_0089;
+_0089_0086,_0087_0089_009A,03_recovered-src\annotated-strings\--\--.cs,18838,_0087_008D_0087.Click += _0087_0086_009A;
+_0089_0088,_0087_008D_009B,03_recovered-src\annotated-strings\--\--.cs,19078,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormDmeEvl"" /* string-offset:396 */);"
+_0089_0088,_0087_008D_009C,03_recovered-src\annotated-strings\--\--.cs,19086,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormDmeEvl"" /* string-offset:396 */);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,19877,"val13 = new Arc(val10, num11 - (double)num35, num32, num13 - Math.PI / 2.0);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,19897,"val15 = new Arc(val12, num5 + (double)num35, num34, num6 + Math.PI / 2.0);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,19900,"val16 = new Arc(obj2._008C_0089(), num12 + (double)num35, num13 + num27, num6 - num33);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,19901,val17 = new Polyline();
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20005,"val19 = new Arc(val9, num11 - (double)num29, num13 + Math.PI / 2.0, num24);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20018,"val18 = new Arc(val11, num5 + (double)num29, num6 - Math.PI / 2.0, num28);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20022,"val8 = new Arc(obj2._008C_0089(), num12 + (double)num29, num6 + num25, num13 - num19);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20023,val7 = new Polyline();
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20133,"val21 = new Arc(val14, num11 - (double)num9, num37, num13 - Math.PI / 2.0);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20134,"val24 = new Arc(val, num5 + (double)num9, num8, num6 + Math.PI / 2.0);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20182,"val22 = new Arc(obj2._008C_0089(), num12 + (double)num9, num13 + num36, num6 - num7);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20183,val20 = new Polyline();
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20288,"val25 = new Arc(val3, num11 - (double)num17, num13 + Math.PI / 2.0, num18);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20289,"val23 = new Arc(val2, num5 + (double)num17, num6 - Math.PI / 2.0, num16);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20332,"val6 = new Arc(obj2._008C_0089(), num12 + (double)num17, num6 + num15, num13 - num10);"
+_0089_0088,_0087_008E_008A,03_recovered-src\annotated-strings\--\--.cs,20333,val4 = new Polyline();
+_0089_0088,_0087_008E_009A,03_recovered-src\annotated-strings\--\--.cs,21762,_0087_0090_0087.Click += _0087_008E_0091;
+_0089_0088,_0087_008E_009A,03_recovered-src\annotated-strings\--\--.cs,21944,_0087_008E_009E.Click += _0087_008E_008D;
+_0089_0088,_0087_008E_009A,03_recovered-src\annotated-strings\--\--.cs,22041,_0087_008F_0087.Click += _0087_008D_009D;
+_0089_0088,_0087_008E_009A,03_recovered-src\annotated-strings\--\--.cs,22120,_0087_008F_0086.Click += _0087_008E_008A;
+_0089_0088,_0087_008E_009A,03_recovered-src\annotated-strings\--\--.cs,22449,_0087_008F_008E.Click += _0087_008E_0089;
+_0089_0088,_0087_008E_009A,03_recovered-src\annotated-strings\--\--.cs,22512,_0087_008F_0095.Click += _0087_008E_0088;
+_0089_0088,_0087_008E_009A,03_recovered-src\annotated-strings\--\--.cs,22602,_0087_008F_0099.Click += _0087_008E_0087;
+_0089_008A,_0087_0090_008F,03_recovered-src\annotated-strings\--\--.cs,22824,array = _0087_0090_009C.Text.Trim().Split('n');
+_0089_008A,_0087_0090_008F,03_recovered-src\annotated-strings\--\--.cs,22829,array = _0087_0090_009B.Text.Trim().Split('n');
+_0089_008A,_0087_0090_0091,03_recovered-src\annotated-strings\--\--.cs,23093,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""NavAids"" /* string-offset:3720 */);"
+_0089_008A,_0087_0090_0092,03_recovered-src\annotated-strings\--\--.cs,23098,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""NavAids"" /* string-offset:3720 */);"
+_0089_008A,_0087_0090_0093,03_recovered-src\annotated-strings\--\--.cs,23600,_0087_0091_0089.Click += _0087_0090_008F;
+_0089_008C,_0087_0091_008B,03_recovered-src\annotated-strings\--\--.cs,23939,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormPA"" /* string-offset:376 */);"
+_0089_008C,_0087_0091_008C,03_recovered-src\annotated-strings\--\--.cs,24010,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormPA"" /* string-offset:376 */);"
+_0089_008C,_0087_0092_0087,03_recovered-src\annotated-strings\--\--.cs,24767,entity = editor.GetEntity(val);
+_0089_008C,_0087_0092_0087,03_recovered-src\annotated-strings\--\--.cs,24776,"ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;"
+_0089_008C,_0087_0092_008D,03_recovered-src\annotated-strings\--\--.cs,26242,_0087_0094_0092.Click += _0087_0092_0087;
+_0089_008C,_0087_0092_008D,03_recovered-src\annotated-strings\--\--.cs,26433,_0087_0092_0098.Click += _0087_0091_008E;
+_0089_008C,_0087_0092_008D,03_recovered-src\annotated-strings\--\--.cs,26504,_0087_0094_0091.Click += _0087_0092_008B;
+_0089_008C,_0087_0092_008D,03_recovered-src\annotated-strings\--\--.cs,26721,_0087_0094_009B.Click += _0087_0091_009C;
+_0089_008C,_0087_0092_008D,03_recovered-src\annotated-strings\--\--.cs,26735,_0087_0095_0086.Click += _0087_0091_009B;
+_0089_008C,_0087_0092_008D,03_recovered-src\annotated-strings\--\--.cs,26789,_0087_0095_0099.Click += _0087_0091_009E;
+_0089_008C,_0087_0092_008D,03_recovered-src\annotated-strings\--\--.cs,26911,_0087_0095_0087.Click += _0087_0091_009D;
+_0089_008C,_0087_0092_008D,03_recovered-src\annotated-strings\--\--.cs,27114,_0087_0095_009A.Click += _0087_0092_0086;
+_0089_008C,_0087_0092_008D,03_recovered-src\annotated-strings\--\--.cs,27767,_0087_0096_0088.Click += _0087_0092_008C;
+_0089_008E,_0087_0096_008C,03_recovered-src\annotated-strings\--\--.cs,28822,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormPriSec"" /* string-offset:4444 */);"
+_0089_008E,_0087_0096_008D,03_recovered-src\annotated-strings\--\--.cs,28833,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormPriSec"" /* string-offset:4444 */);"
+_0089_008E,_0087_0096_009D,03_recovered-src\annotated-strings\--\--.cs,29517,Polyline val9 = new Polyline();
+_0089_008E,_0087_0096_009D,03_recovered-src\annotated-strings\--\--.cs,29518,Polyline val10 = new Polyline();
+_0089_008E,_0087_0096_009D,03_recovered-src\annotated-strings\--\--.cs,29519,Polyline val11 = new Polyline();
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,29782,_0087_0097_009C.Click += _0087_0096_0096;
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,29910,_0087_0098_0094.Click += _0087_0096_009C;
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,30022,_0087_0098_009A.Click += _0087_0097_0087;
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,30049,_0087_0097_008F.Click += _0087_0096_008F;
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,30279,_0087_0097_0098.Click += _0087_0096_0090;
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,30402,_0087_0097_0090.Click += _0087_0096_008E;
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,30636,_0087_0098_0092.Click += _0087_0096_009A;
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,30712,_0087_0098_009B.Click += _0087_0097_0089;
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,30756,_0087_0098_0093.Click += _0087_0096_0099;
+_0089_008E,_0087_0097_008B,03_recovered-src\annotated-strings\--\--.cs,30906,_0087_0097_0097.Click += _0087_0096_0095;
+_0089_0090,_0087_0098_009E,03_recovered-src\annotated-strings\--\--.cs,31208,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""RandomPoint"" /* string-offset:4548 */);"
+_0089_0090,_0087_0099_0086,03_recovered-src\annotated-strings\--\--.cs,31213,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""RandomPoint"" /* string-offset:4548 */);"
+_0089_0090,_0087_0099_0088,03_recovered-src\annotated-strings\--\--.cs,31411,_0087_0099_008F.Click += _0087_0098_009D;
+_0089_0090,_0087_0099_0088,03_recovered-src\annotated-strings\--\--.cs,31747,_0087_0099_0099.Click += _0087_0099_0087;
+_0089_0092,_0087_0099_009B,03_recovered-src\annotated-strings\--\--.cs,31990,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormTemplate"" /* string-offset:380 */);"
+_0089_0092,_0087_0099_009C,03_recovered-src\annotated-strings\--\--.cs,31995,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormTemplate"" /* string-offset:380 */);"
+_0089_0092,_0087_009A_0089,03_recovered-src\annotated-strings\--\--.cs,32136,Polyline val = new Polyline();
+_0089_0092,_0087_009A_008B,03_recovered-src\annotated-strings\--\--.cs,32205,Polyline val = new Polyline();
+_0089_0092,_0087_009A_008D,03_recovered-src\annotated-strings\--\--.cs,32291,Polyline val = new Polyline();
+_0089_0092,_0087_009A_0091,03_recovered-src\annotated-strings\--\--.cs,32439,PromptEntityResult entity = editor.GetEntity(val);
+_0089_0092,_0087_009A_0091,03_recovered-src\annotated-strings\--\--.cs,32444,Polyline val2 = new Polyline();
+_0089_0092,_0087_009A_0092,03_recovered-src\annotated-strings\--\--.cs,32563,Polyline val = new Polyline();
+_0089_0092,_0087_009A_0095,03_recovered-src\annotated-strings\--\--.cs,32811,list.Add(val5.GetPoint3dAt(num3));
+_0089_0092,_0087_009A_0095,03_recovered-src\annotated-strings\--\--.cs,32834,val = new Polyline();
+_0089_0092,_0087_009A_0095,03_recovered-src\annotated-strings\--\--.cs,32864,selection = editor.GetSelection(val7);
+_0089_0092,_0087_009A_0098,03_recovered-src\annotated-strings\--\--.cs,33069,selection = editor.GetSelection(val);
+_0089_0092,_0087_009A_0099,03_recovered-src\annotated-strings\--\--.cs,33220,Point2d point2dAt = P_0.GetPoint2dAt(num2);
+_0089_0092,_0087_009A_0099,03_recovered-src\annotated-strings\--\--.cs,33233,point2dAt2 = P_0.GetPoint2dAt(num);
+_0089_0092,_0087_009A_009A,03_recovered-src\annotated-strings\--\--.cs,33322,Point2d point2dAt = P_0.GetPoint2dAt((num2 + 1) % P_0.NumberOfVertices);
+_0089_0092,_0087_009A_009A,03_recovered-src\annotated-strings\--\--.cs,33338,point2dAt2 = P_0.GetPoint2dAt(num2);
+_0089_0092,_0087_009A_009C,03_recovered-src\annotated-strings\--\--.cs,33517,entity = editor.GetEntity(val);
+_0089_0092,_0087_009A_009C,03_recovered-src\annotated-strings\--\--.cs,33551,DBObjectCollection offsetCurves = ((Curve)val3).GetOffsetCurves(P_0);
+_0089_0092,_0087_009A_009C,03_recovered-src\annotated-strings\--\--.cs,33556,DBObjectCollection offsetCurves2 = ((Curve)val3).GetOffsetCurves(0.0 - P_0);
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34087,_0087_009C_0090.Click += _0087_009A_008D;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34101,_0087_009C_0091.Click += _0087_009A_0090;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34110,_0087_009C_008C.Click += _0087_009A_0094;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34453,_0087_009D_0089.Click += _0087_009A_008A;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34538,_0087_009D_0088.Click += _0087_009A_0089;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34680,_0087_009D_0086.Click += _0087_009A_008C;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34786,_0087_009D_009A.Click += _0087_009A_0095;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34810,_0087_009D_0096.Click += _0087_009B_008C;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34847,_0087_009C_0089.Click += _0087_009B_008B;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34867,_0087_009C_008A.Click += _0087_009B_008A;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,34885,_0087_009C_008B.Click += _0087_009A_0092;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,35161,_0087_009D_0099.Click += _0087_009A_0095;
+_0089_0092,_0087_009B_008F,03_recovered-src\annotated-strings\--\--.cs,35425,_0087_009C_009E.Click += _0087_009A_008B;
+_0089_0094,_0087_009E_0086,03_recovered-src\annotated-strings\--\--.cs,36442,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""WindSpiral"" /* string-offset:5008 */);"
+_0089_0094,_0087_009E_0087,03_recovered-src\annotated-strings\--\--.cs,36447,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""WindSpiral"" /* string-offset:5008 */);"
+_0089_0094,_0087_009E_0089,03_recovered-src\annotated-strings\--\--.cs,36572,val = new Polyline();
+_0089_0094,_0087_009E_0093,03_recovered-src\annotated-strings\--\--.cs,36978,entity = editor.GetEntity(val);
+_0089_0094,_0087_009E_0093,03_recovered-src\annotated-strings\--\--.cs,37001,"ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;"
+_0089_0094,_0087_009E_0096,03_recovered-src\annotated-strings\--\--.cs,37334,"_0088_0086_0092.Name = ""textBoxInitOffset"" /* string-offset:5208 */;"
+_0089_0094,_0087_009E_0096,03_recovered-src\annotated-strings\--\--.cs,37379,"_0087_009E_009E.Name = ""checkBoxTangent"" /* string-offset:5144 */;"
+_0089_0094,_0087_009E_0096,03_recovered-src\annotated-strings\--\--.cs,37505,_0088_0086_009C.Click += _0087_009E_0093;
+_0089_0094,_0087_009E_0096,03_recovered-src\annotated-strings\--\--.cs,37760,_0088_0086_0097.Click += _0087_009E_0092;
+_0089_0094,_0087_009E_0096,03_recovered-src\annotated-strings\--\--.cs,37817,_0088_0086_0096.Click += _0087_009E_008E;
+_0089_0094,_0087_009E_0096,03_recovered-src\annotated-strings\--\--.cs,37886,_0087_009E_009A.Click += _0087_009D_009E;
+_0089_0094,_0087_009E_0096,03_recovered-src\annotated-strings\--\--.cs,37908,_0087_009E_009B.Click += _0087_009D_009D;
+_0089_0094,_0087_009E_0096,03_recovered-src\annotated-strings\--\--.cs,38045,_0088_0086_0094.Click += _0087_009D_009C;
+_0089_0094,_0087_009E_0096,03_recovered-src\annotated-strings\--\--.cs,38118,_0088_0086_0095.Click += _0087_009E_0089;
+_0089_009E,_0088_008D_0093,03_recovered-src\annotated-strings\--\--.cs,40543,string text = _0088_008D_009A.Text.Trim();
+_0089_009E,_0088_008D_0093,03_recovered-src\annotated-strings\--\--.cs,40561,string text3 = array2[0].Trim();
+_0089_009E,_0088_008D_0093,03_recovered-src\annotated-strings\--\--.cs,40618,if (text2.Trim().Length != 0)
+_0089_009E,_0088_008D_0098,03_recovered-src\annotated-strings\--\--.cs,40920,_0088_008D_009B.Click += _0088_008D_0094;
+_0089_009E,_0088_008D_0098,03_recovered-src\annotated-strings\--\--.cs,40956,_0088_008D_009C.Click += _0088_008D_0095;
+_0089_009E,_0088_008D_0098,03_recovered-src\annotated-strings\--\--.cs,40979,_0088_008D_009D.Click += _0088_008D_0093;
+_0089_009E,_0088_008D_0098,03_recovered-src\annotated-strings\--\--.cs,41008,_0088_008E_0086.Click += _0088_008D_0096;
+_0089_009E,_0088_008D_0098,03_recovered-src\annotated-strings\--\--.cs,41028,_0088_008E_0087.Click += _0088_008D_0097;
+_008A_0091,_0088_0090_0094,03_recovered-src\annotated-strings\--\--.cs,41699,"string text4 = ""SELECT Value FROM PartA WHERE ID = @id"" /* string-offset:5460 */;"
+_008A_0091,_0088_0090_0094,03_recovered-src\annotated-strings\--\--.cs,41700,"string text5 = ""SELECT Value FROM PartB WHERE ID = @id"" /* string-offset:5464 */;"
+_008B_008C,_0088_009A_0093,03_recovered-src\annotated-strings\--\--.cs,47062,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormApvEvl"" /* string-offset:408 */);"
+_008B_008C,_0088_009A_0094,03_recovered-src\annotated-strings\--\--.cs,47070,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormApvEvl"" /* string-offset:408 */);"
+_008B_008C,_0088_009B_0089,03_recovered-src\annotated-strings\--\--.cs,47348,PromptEntityResult entity = editor.GetEntity(val);
+_008B_008C,_0088_009B_0089,03_recovered-src\annotated-strings\--\--.cs,47357,"ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;"
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,48406,_0089_0087_009A.Click += _0088_009B_008C;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,48586,_0089_0087_009C.Click += _0088_009B_008F;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,48830,_0088_009D_008F.Click += _0088_009A_009B;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,48897,_0088_009D_0092.Click += _0088_009A_0095;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49028,_0089_0086_0092.Click += _0088_009C_009D;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49045,_0089_0086_0093.Click += _0088_009A_008E;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49167,_0088_009E_008D.Click += _0088_009A_009D;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49204,_0088_009D_009C.Click += _0088_009A_0099;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49359,_0088_009D_0091.Click += _0088_009A_0097;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49442,_0089_0086_009E.Click += _0088_009B_0090;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49530,_0088_009E_008E.Click += _0088_009A_009E;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49549,_0088_009E_0092.Click += _0088_009B_0089;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49693,_0089_0089_008E.Click += _0088_009B_0091;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49730,_0089_0087_009B.Click += _0088_009B_008B;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,49786,_0089_0087_0086.Click += _0088_009B_008D;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,50490,_0088_009D_008E.Click += _0088_009C_009C;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,50736,_0089_0089_008F.Click += _0088_009B_0092;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,51021,_0089_0087_009D.Click += _0088_009B_008E;
+_008B_008C,_0088_009C_009B,03_recovered-src\annotated-strings\--\--.cs,51559,_0088_009D_0098.Click += _0088_009A_0098;
+_008B_008E,_0089_0089_0094,03_recovered-src\annotated-strings\--\--.cs,52318,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormFlyby"" /* string-offset:6028 */);"
+_008B_008E,_0089_0089_0095,03_recovered-src\annotated-strings\--\--.cs,52325,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormFlyby"" /* string-offset:6028 */);"
+_008B_008E,_0089_0089_0099,03_recovered-src\annotated-strings\--\--.cs,52368,menuItem4.Click += delegate
+_008B_008E,_0089_0089_0099,03_recovered-src\annotated-strings\--\--.cs,52372,menuItem5.Click += delegate
+_008B_008E,_0089_0089_0099,03_recovered-src\annotated-strings\--\--.cs,52376,menuItem6.Click += delegate
+_008B_008E,_0089_0089_0099,03_recovered-src\annotated-strings\--\--.cs,52380,menuItem7.Click += delegate
+_008B_008E,_0089_0089_0099,03_recovered-src\annotated-strings\--\--.cs,52384,menuItem8.Click += delegate
+_008B_008E,_0089_0089_0099,03_recovered-src\annotated-strings\--\--.cs,52388,menuItem9.Click += delegate
+_008B_008E,_0089_0089_0099,03_recovered-src\annotated-strings\--\--.cs,52392,menuItem10.Click += delegate
+_008B_008E,_0089_0089_0099,03_recovered-src\annotated-strings\--\--.cs,52396,menuItem12.Click += delegate
+_008B_008E,_0089_0089_0099,03_recovered-src\annotated-strings\--\--.cs,52400,menuItem11.Click += delegate
+_008B_008E,_0089_0089_009C,03_recovered-src\annotated-strings\--\--.cs,52523,_0089_008A_009A.Click += _0089_0089_0098;
+_008B_008E,_0089_0089_009C,03_recovered-src\annotated-strings\--\--.cs,52534,_0089_008A_009B.Click += _0089_0089_0097;
+_008B_008E,_0089_0089_009C,03_recovered-src\annotated-strings\--\--.cs,52728,_0089_008A_0095.Click += _0089_0089_0096;
+_008B_008E,_0089_0089_009C,03_recovered-src\annotated-strings\--\--.cs,52959,_0089_008A_0087.Click += _0089_0089_0093;
+_008B_0090,_0089_008B_0087,03_recovered-src\annotated-strings\--\--.cs,53368,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormFlyoverDF"" /* string-offset:6164 */);"
+_008B_0090,_0089_008B_0088,03_recovered-src\annotated-strings\--\--.cs,53375,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormFlyoverDF"" /* string-offset:6164 */);"
+_008B_0090,_0089_008B_008D,03_recovered-src\annotated-strings\--\--.cs,53930,_0089_008B_009E.Click += _0089_008B_0089;
+_008B_0090,_0089_008B_008D,03_recovered-src\annotated-strings\--\--.cs,53943,_0089_008C_0086.Click += _0089_008B_008A;
+_008B_0092,_0089_008C_008C,03_recovered-src\annotated-strings\--\--.cs,55205,_0089_008E_008B.Click += _0089_008C_008B;
+_008B_0094,_0089_008E_0094,03_recovered-src\annotated-strings\--\--.cs,56349,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormDeparture"" /* string-offset:3000 */);"
+_008B_0094,_0089_008E_0095,03_recovered-src\annotated-strings\--\--.cs,56357,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormDeparture"" /* string-offset:3000 */);"
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,57755,_0089_0095_008C.Click += _0089_0091_0097;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,57775,_0089_0095_008D.Click += _0089_0091_0096;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,57791,_0089_0094_009A.Click += _0089_008F_009B;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,57876,_0089_0095_008B.Click += _0089_008F_0097;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,57893,_0089_0093_009A.Click += _0089_008F_0096;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,58603,_0089_0092_008D.Click += _0089_008F_0086;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,58644,_0089_0093_009B.Click += _0089_008F_0099;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,58715,_0089_0094_0099.Click += _0089_008F_009A;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,58893,_0089_0094_009D.Click += _0089_008F_0087;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,58928,_0089_0092_0096.Click += _0089_008F_008D;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,58951,_0089_0092_0097.Click += _0089_008F_008B;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,59233,_0089_0095_008E.Click += _0089_0091_0099;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,59658,_0089_0092_008E.Click += _0089_008E_009E;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,59904,_0089_0093_0086.Click += _0089_008F_008E;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,59955,_0089_0095_008F.Click += _0089_0091_0098;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,59973,_0089_0094_009B.Click += _0089_008F_009B;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,60188,_0089_0093_009C.Click += _0089_008F_0095;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,60208,_0089_0094_0090.Click += _0089_008F_0091;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,60234,_0089_0094_0098.Click += _0089_008E_0097;
+_008B_0094,_0089_0091_009C,03_recovered-src\annotated-strings\--\--.cs,60351,_0089_0094_0097.Click += _0089_008E_0096;
+_008B_0096,_0089_0095_0091,03_recovered-src\annotated-strings\--\--.cs,60784,"_0097._008A_0093(this, ""config.xml"" /* string-offset:676 */, ""FormPbnIlsEvl"" /* string-offset:412 */);"
+_008B_0096,_0089_0095_0092,03_recovered-src\annotated-strings\--\--.cs,60792,"_0097._008A_0091(this, ""config.xml"" /* string-offset:676 */, ""FormPbnIlsEvl"" /* string-offset:412 */);"
+_008B_0096,_0089_0095_0095,03_recovered-src\annotated-strings\--\--.cs,60882,ResultBuffer xData = ((DBObject)item).XData;
+_008B_0096,_0089_0096_0086,03_recovered-src\annotated-strings\--\--.cs,61208,_0089_009A_008C.Text = array[1].Trim();
+_008B_0096,_0089_0096_0086,03_recovered-src\annotated-strings\--\--.cs,61234,_0089_009A_008E.Text = array[1].Trim();
+_008B_0096,_0089_0096_0086,03_recovered-src\annotated-strings\--\--.cs,61265,_0089_009A_0095.Text = array[1].Trim();
+_008B_0096,_0089_0096_0086,03_recovered-src\annotated-strings\--\--.cs,61312,_0089_009A_008A.Text = array[1].Trim();
+_008B_0096,_0089_0096_0086,03_recovered-src\annotated-strings\--\--.cs,61375,text = array[0].Trim().ToUpper();
+_008B_0096,_0089_0096_0086,03_recovered-src\annotated-strings\--\--.cs,61404,_0089_009A_0096.Text = array[1].Trim();
+_008B_0096,_0089_0096_0086,03_recovered-src\annotated-strings\--\--.cs,61414,_0089_009A_008F.Text = array[1].Trim();
+_008B_0096,_0089_0096_0087,03_recovered-src\annotated-strings\--\--.cs,61449,P_1.Text = P_0[1].Trim();
+_008B_0096,_0089_0096_0087,03_recovered-src\annotated-strings\--\--.cs,61451,P_2.Text = P_0[2].Trim();
+_008B_0096,_0089_0096_0087,03_recovered-src\annotated-strings\--\--.cs,61452,P_3.Text = P_0[3].Trim();
+_008B_0096,_0089_0096_0090,03_recovered-src\annotated-strings\--\--.cs,61845,entity = editor.GetEntity(val);
+_008B_0096,_0089_0096_0090,03_recovered-src\annotated-strings\--\--.cs,61854,"ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;"
+_008B_0096,_0089_0096_0096,03_recovered-src\annotated-strings\--\--.cs,62009,"string obj3 = ""SELECT Value FROM PartA WHERE ID = @id"" /* string-offset:5460 */;"
+_008B_0096,_0089_0096_0096,03_recovered-src\annotated-strings\--\--.cs,62010,"string text3 = ""SELECT Value FROM PartB WHERE ID = @id"" /* string-offset:5464 */;"
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,63479,_0089_009B_0087.Click += _0089_0097_0089;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,63703,_0089_009B_0086.Click += _0089_0097_0088;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,63794,_0089_0099_009E.Click += _0089_0096_008E;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,63857,_0089_0099_009D.Click += _0089_0096_0090;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,64170,_0089_0099_0087.Click += _0089_0095_009E;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,64649,_0089_0098_0087.Click += _0089_0095_0098;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,64681,_0089_0097_009C.Click += _0089_0095_0097;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,65068,_0089_0097_0091.Click += _0089_0096_0092;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,65141,_0089_0097_0092.Click += _0089_0095_009A;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,65431,_0089_0099_009C.Click += _0089_0096_0089;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,65504,_0089_0097_0094.Click += _0089_0095_0099;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,65521,_0089_0097_0095.Click += _0089_0095_0093;
+_008B_0096,_0089_0097_008A,03_recovered-src\annotated-strings\--\--.cs,65542,_0089_0097_0096.Click += _0089_0096_008B;
+_008C_008B,_0089_009E_0090,03_recovered-src\annotated-strings\--\--.cs,68257,Polyline val = new Polyline();
+_008C_008D,_0089_009E_0099,03_recovered-src\annotated-strings\--\--.cs,68421,val = new Polyline();
+_008C_009B,_008A_008D_0092,03_recovered-src\annotated-strings\--\--.cs,73787,_008A_008D_009A.Click += _008A_008D_0091;
+_008D_008C,_008A_0090_008F,03_recovered-src\annotated-strings\--\--.cs,74876,"Application.ShowAlertDialog(string.Format(""警告：XData 数据大小超过 16KB ({0} bytes)，可能导致保存失败"" /* string-offset:6768 */, array.Length));"
+_008D_008C,_008A_0090_0092,03_recovered-src\annotated-strings\--\--.cs,74981,"Application.ShowAlertDialog(""解析XData失败: "" /* string-offset:6784 */ + ex.Message);"
+_008D_008C,_008A_0090_0093,03_recovered-src\annotated-strings\--\--.cs,75016,((DBObject)val3).XData = _008A_0090_0091();
+_008D_008C,_008A_0090_0094,03_recovered-src\annotated-strings\--\--.cs,75076,((DBObject)val3).XData = _008A_0090_0091();
+_008D_008C,_008A_0090_0095,03_recovered-src\annotated-strings\--\--.cs,75128,"ResultBuffer xDataForApplication = ((DBObject)val3).GetXDataForApplication(""WsCalcuLine"" /* string-offset:6780 */);"
+_008D_0092,_008A_0097_0087,03_recovered-src\annotated-strings\--\--.cs,76116,"Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(""\n警告：线条创建成功，但XData写入失败"" /* string-offset:6824 */);"
+_008D_0096,_008A_0097_0092,03_recovered-src\annotated-strings\--\--.cs,76734,((DBObject)val2).Erase();
+_008D_009E,_008A_0098_0093,03_recovered-src\annotated-strings\--\--.cs,77314,return _008A_0098_009C.GetPoint3dAt(P_0);
+_008E_0087,_008A_0098_009D,03_recovered-src\annotated-strings\--\--.cs,77497,"ResultBuffer xDataForApplication = ((DBObject)P_0).GetXDataForApplication(""WsEntityFrame"" /* string-offset:940 */);"
+_008E_0087,y5,03_recovered-src\annotated-strings\--\--.cs,77973,result = val7.GetPoint3dAt(0);
+_008E_0087,_008A_0098_009E,03_recovered-src\annotated-strings\--\--.cs,78200,return val5.GetPoint3dAt(0);
+_008E_0087,y9,03_recovered-src\annotated-strings\--\--.cs,78228,((DBObject)val).Erase(true);
+_008E_008D,_008A_0099_0090,03_recovered-src\annotated-strings\--\--.cs,78632,"_008D_0088._008A_0090_008D(string.Format(""警告：XData 数据大小超过 16KB ({0} bytes)，可能导致保存失败"" /* string-offset:6768 */, array.Length));"
+_008E_008D,_008A_0099_0093,03_recovered-src\annotated-strings\--\--.cs,78765,"_008D_0088._008A_0090_008D(""解析XData失败: "" /* string-offset:6784 */ + ex.Message);"
+_008E_008D,_008A_0099_0095,03_recovered-src\annotated-strings\--\--.cs,78821,((DBObject)val3).XData = xData;
+_008E_008D,_008A_0099_0096,03_recovered-src\annotated-strings\--\--.cs,78887,((DBObject)val3).XData = xData;
+_008E_008D,_008A_0099_0097,03_recovered-src\annotated-strings\--\--.cs,78933,"ResultBuffer xDataForApplication = ((DBObject)val3).GetXDataForApplication(""WsEntityFrame"" /* string-offset:940 */);"
+_008E_008D,_008A_0099_009A,03_recovered-src\annotated-strings\--\--.cs,79225,((DBObject)val3).XData = xData;
+_008E_008D,_008A_0099_009B,03_recovered-src\annotated-strings\--\--.cs,79282,((DBObject)P_0).XData = xData;
+_008E_008D,_008A_0099_009C,03_recovered-src\annotated-strings\--\--.cs,79332,"ResultBuffer xDataForApplication = ((DBObject)val3).GetXDataForApplication(""WsEntityFrame"" /* string-offset:940 */);"
+_008E_0095,_008A_009B_008E,03_recovered-src\annotated-strings\--\--.cs,80417,((DBObject)val4).XData = xData;
+_008E_0095,_008A_009B_008F,03_recovered-src\annotated-strings\--\--.cs,80458,((DBObject)val4).XData = xData;
+_008E_0095,_008A_009B_0099,03_recovered-src\annotated-strings\--\--.cs,80736,PromptEntityResult entity = editor.GetEntity(val);
+_008E_0095,_008A_009B_009A,03_recovered-src\annotated-strings\--\--.cs,80768,"PromptSelectionResult selection = editor.GetSelection(val, val2);"
+_008E_0095,_008A_009B_009C,03_recovered-src\annotated-strings\--\--.cs,80859,((DBObject)val2).XData = xData;
+_008E_0095,_008A_009B_009C,03_recovered-src\annotated-strings\--\--.cs,80860,"Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage(""\n设置XData成功"" /* string-offset:7152 */);"
+_008E_0095,_008A_009B_009D,03_recovered-src\annotated-strings\--\--.cs,80935,if (((DBObject)val2).XData != (ResultBuffer)null)
+_008E_0095,_008A_009B_009E,03_recovered-src\annotated-strings\--\--.cs,80994,if ((DisposableWrapper)(object)val3 != (DisposableWrapper)null && ((DBObject)val3).XData != (ResultBuffer)null)
+_008F_0086,_008A_009E_009A,03_recovered-src\annotated-strings\--\--.cs,82401,"Console.WriteLine(""<<getIntersectSita>>\n search from: {0},\n  to {1}."" /* string-offset:7452 */, P_2 / _008B_0086_0091, P_3 / _008B_0086_0091);"
+_008F_0088,_008B_0086_0098,03_recovered-src\annotated-strings\--\--.cs,83110,"Console.WriteLine(""<<getIntersectSita>>\n search from: {0},\n  to {1}."" /* string-offset:7452 */, P_2 / _008B_0087_008F, P_3 / _008B_0087_008F);"
+_008F_0098,_008B_008C_0095,03_recovered-src\annotated-strings\--\--.cs,85430,_008B_008D_008C.Click += _008B_008C_008D;
+_008F_0098,_008B_008C_0095,03_recovered-src\annotated-strings\--\--.cs,85538,_008B_008D_008B.Click += _008B_008C_008E;
+_008F_0098,_008B_008C_0095,03_recovered-src\annotated-strings\--\--.cs,85773,_008B_008D_008D.Click += _008B_008C_008F;
+_0091_008B,,03_recovered-src\annotated-strings\--\--.cs,96945,"return Encoding.Unicode.GetString(array, 0, array.Length).Trim();"
+_0091_008B,_008B_0092_0093,03_recovered-src\annotated-strings\--\--.cs,102280,string text4 = text3.Trim();
+_0091_008B,_008B_0092_0097,03_recovered-src\annotated-strings\--\--.cs,102545,_008B_0096_0098 = array[0].Trim();
+_0091_008B,_008B_0092_0097,03_recovered-src\annotated-strings\--\--.cs,102546,_008B_0096_0099 = array[1].Trim();
+_0091_008B,_008B_0092_0097,03_recovered-src\annotated-strings\--\--.cs,102547,_008B_0096_009A = array[2].Trim();
+_0091_008B,_008B_0094_009B,03_recovered-src\annotated-strings\--\--.cs,111653,"ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher(""SELECT * FROM Win32_DiskDrive"" /* string-offset:7768 */);"
+_0091_008B,_008B_0094_009B,03_recovered-src\annotated-strings\--\--.cs,111661,"managementObjectSearcher = new ManagementObjectSearcher(""SELECT * FROM Win32_PhysicalMedia"" /* string-offset:7788 */);"
+_0091_008B,_008B_0094_009B,03_recovered-src\annotated-strings\--\--.cs,111677,_008B_0097_009A = obj.ToString().Trim();
+_0091_008B,_008B_0094_009D,03_recovered-src\annotated-strings\--\--.cs,111714,"ManagementObjectSearcher managementObjectSearcher = new ManagementObjectSearcher(""SELECT * FROM Win32_DiskDrive"" /* string-offset:7768 */);"
+_0091_008B,_008B_0094_009D,03_recovered-src\annotated-strings\--\--.cs,111736,"if (item[""SerialNumber"" /* string-offset:7716 */] != null && item[""SerialNumber"" /* string-offset:7716 */].ToString().Trim().Length > 0)"
+_0091_008B,_008B_0094_009D,03_recovered-src\annotated-strings\--\--.cs,111738,"dictionary[item[""DeviceID"" /* string-offset:7772 */].ToString()] = item[""SerialNumber"" /* string-offset:7716 */].ToString().Trim();"
+_0091_008B,_008B_0094_009D,03_recovered-src\annotated-strings\--\--.cs,111745,"managementObjectSearcher = new ManagementObjectSearcher(""SELECT * FROM Win32_PhysicalMedia"" /* string-offset:7788 */);"

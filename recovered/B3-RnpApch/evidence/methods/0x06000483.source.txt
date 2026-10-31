@@ -1,0 +1,48 @@
+47328: 		private void _0088_009B_0089(object P_0, EventArgs P_1)
+47329: 		{
+47330: 			//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+47331: 			//IL_0047: Expected O, but got Unknown
+47332: 			//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+47333: 			//IL_0066: Invalid comparison between Unknown and I4
+47334: 			//IL_0089: Unknown result type (might be due to invalid IL or missing references)
+47335: 			//IL_0094: Unknown result type (might be due to invalid IL or missing references)
+47336: 			Editor editor = default(Editor);
+47337: 			if (!_0088_0094())
+47338: 			{
+47339: 				if (false /* original-file-bool-offset:920 */)
+47340: 				{
+47341: 					return;
+47342: 				}
+47343: 				Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+47344: 				_0088_009A_0092(mdiActiveDocument.Window.Handle);
+47345: 				editor = mdiActiveDocument.Editor;
+47346: 			}
+47347: 			PromptEntityOptions val = new PromptEntityOptions("请选择RNP APCH保护区" /* string-offset:5700 */);
+47348: 			PromptEntityResult entity = editor.GetEntity(val);
+47349: 			_ = 0;
+47350: 			if (!_0088_0093() || (int)((PromptResult)entity).Status != 5100)
+47351: 			{
+47352: 				return;
+47353: 			}
+47354: 			Transaction val2 = Application.DocumentManager.MdiActiveDocument.Database.TransactionManager.StartTransaction();
+47355: 			try
+47356: 			{
+47357: 				ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;
+47358: 				_0088_0094();
+47359: 				if (_0088_0093() && !(xData != (ResultBuffer)null))
+47360: 				{
+47361: 					editor.WriteMessage("未找到RNP APCH参数。\n" /* string-offset:5704 */);
+47362: 					return;
+47363: 				}
+47364: 				do
+47365: 				{
+47366: 					TypedValue[] array = xData.AsArray();
+47367: 					_0097._008A_009A(_0088_009E_008A.Controls, ((TypedValue)(ref array[1])).Value.ToString(), "FormApvEvl" /* string-offset:408 */);
+47368: 				}
+47369: 				while (_0088_0094());
+47370: 			}
+47371: 			finally
+47372: 			{
+47373: 				((IDisposable)val2)?.Dispose();
+47374: 			}
+47375: 		}

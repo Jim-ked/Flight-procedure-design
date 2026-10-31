@@ -1,0 +1,18 @@
+61908: 		private void _0089_0096_0093(object P_0, DataGridViewCellEventArgs P_1)
+61909: 		{
+61910: 			_ = 0;
+61911: 			if (!_0088_009D())
+61912: 			{
+61913: 				return;
+61914: 			}
+61915: 			_ = Application.DocumentManager.MdiActiveDocument.Editor;
+61916: 			if (_0089_0097_008B != null && _0089_0097_008B.Count != 0 && P_1.ColumnIndex >= 0 && P_1.RowIndex >= 0)
+61917: 			{
+61918: 				DBPoint obj = _0089_0097_008C[_0089_0097_0093.Rows[P_1.RowIndex].Cells[0].Value.ToString()];
+61919: 				_008D._0089_0093(_0089_0097_008B);
+61920: 				_008D._0089_0092(obj);
+61921: 				if (_0088_009E())
+61922: 				{
+61923: 				}
+61924: 			}
+61925: 		}

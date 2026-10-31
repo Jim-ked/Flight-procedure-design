@@ -1,0 +1,27 @@
+{
+  "scope": "Round14 A2/A9 additive static closure integrity",
+  "frozen_count": 7628,
+  "frozen_missing": [],
+  "frozen_mismatch": [],
+  "unexpected_files_outside_round14_or_declared_final_reports": [],
+  "feature_matrix_checks": [
+    {
+      "path": "recovered/A2-BasicCalculation/final-feature-matrix.csv",
+      "columns_ok": true
+    },
+    {
+      "path": "recovered/A2-BasicCalculation/cad-output-final.csv",
+      "columns_ok": true
+    },
+    {
+      "path": "recovered/A9-PriSec/final-feature-matrix.csv",
+      "columns_ok": true
+    },
+    {
+      "path": "recovered/A9-PriSec/mode-comparison.csv",
+      "columns_ok": true
+    }
+  ],
+  "static_tests_all_pass": true,
+  "status": "PASS"
+}

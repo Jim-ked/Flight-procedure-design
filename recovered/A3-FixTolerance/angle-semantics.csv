@@ -1,0 +1,11 @@
+﻿AngleValue,Facility,SourceControl,Method,ActualUse,BusinessMeaning,Evidence
+5.2° / 4.5°,VOR,Guide/VOR events,P20C/P209,AccuracyDegrees in wedge/KK/arcs,"facility accuracy, not overhead cone",FixTolerance.Recovered.cs
+6.9° / 6.2°,NDB,Guide/NDB events,P20B/P212,AccuracyDegrees in wedge/KK/arcs,"facility accuracy, not overhead cone",FixTolerance.Recovered.cs
+2.4° / 1.4°,ILS,Guide/ILS events,P20A,AccuracyDegrees in same geometry,ILS accuracy branch,FixTolerance.Recovered.cs
+40°,NDB,radioButtonN and textBox2 Leave,P212,HalfAngle for overhead radius,overhead cone half-angle; anomalous suffix binding,events.csv; event-binding-final.md
+50°,VOR,radioButtonV CheckedChanged,P213,HalfAngle for overhead radius,overhead cone half-angle,FixToleranceForm.Events.Recovered.cs
+5° / 15°,VOR,BlindTrack branch,P211,two blind-track endpoint angles,overhead auxiliary geometry,geometry-chain.md
+15° / 25°,NDB,BlindTrack branch,P211,two blind-track endpoint angles,overhead auxiliary geometry,geometry-chain.md
+a=AccuracyDegrees,VOR/NDB/ILS,textBoxAng,P20E,theta±a,selected facility accuracy geometry,0x0600020E.il.txt
+7.8° / 10.3°,VOR/NDB,AC-97 comparison only,A4 protection code/docs,not read by A3,"protection divergence, different business",A4 standard-search.json
+DME error not angle,DME,none,P20E,e=.0125r+460 m,"range error, not angle",dme-final.md

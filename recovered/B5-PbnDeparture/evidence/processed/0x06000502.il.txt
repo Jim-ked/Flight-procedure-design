@@ -1,0 +1,90 @@
+METHOD 06000502 \x8b\x95.\x8b\x94::\x89\x8f\x8c RVA=6A1E8 file=683E8
+IL_0000: ldc.i4 8
+IL_0005: stloc local(0x0002)
+IL_0009: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_000E: brtrue 328
+IL_0013: br 253
+IL_0018: ldarg.0 
+IL_0019: ldfld 0x0400058D \x8b\x95.\x8b\x94::\x89\x95\x8a
+IL_001E: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0023: ldc.i4 5196
+IL_0028: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_002D: call 0x0A000108 System.String::op_Equality
+IL_0032: brfalse.s 93
+IL_0034: ldc.i4.1 
+IL_0035: stloc.0 
+IL_0036: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_003B: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_0040: brfalse 312
+IL_0045: pop 
+IL_0046: ldc.i4 0
+IL_004B: stloc local(0x0002)
+IL_004F: br.s 187
+IL_0051: ldarg.0 
+IL_0052: ldfld 0x0400058D \x8b\x95.\x8b\x94::\x89\x95\x8a
+IL_0057: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_005C: ldc.i4 5184
+IL_0061: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0066: call 0x0A000108 System.String::op_Equality
+IL_006B: brtrue 315
+IL_0070: ldarg.0 
+IL_0071: ldfld 0x0400053E \x8b\x95.\x8b\x94::\x89\x92\x86
+IL_0076: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_007B: ldarg.0 
+IL_007C: ldfld 0x0400053E \x8b\x95.\x8b\x94::\x89\x92\x86
+IL_0081: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0086: ldc.i4.m1 
+IL_0087: ldarg.1 
+IL_0088: ldfld 0x04000743 \x8e\x98.\x8e\x97::\x8a\x9d\x89
+IL_008D: newobj 0x0600079B \x8e\x9e.\x8e\x9d::.ctor
+IL_0092: ldarg.0 
+IL_0093: ldfld 0x04000540 \x8b\x95.\x8b\x94::\x89\x92\x88
+IL_0098: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_009D: ldarg.0 
+IL_009E: ldfld 0x04000540 \x8b\x95.\x8b\x94::\x89\x92\x88
+IL_00A3: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_00A8: callvirt 0x0600079C \x8e\x9e.\x8e\x9d::\x8a\x9e\x88
+IL_00AD: conv.r8 
+IL_00AE: stloc.1 
+IL_00AF: ldloc.1 
+IL_00B0: ldc.r8 1.0
+IL_00B9: beq 349
+IL_00BE: ldc.i4 10
+IL_00C3: stloc local(0x0002)
+IL_00C7: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_00CC: brfalse 364
+IL_00D1: br.s 253
+IL_00D3: ldc.i4 1004
+IL_00D8: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_00DD: brfalse.s 246
+IL_00DF: ldc.i4 2
+IL_00E4: stloc local(0x0002)
+IL_00E8: br.s 187
+IL_00EA: ldc.i4.0 
+IL_00EB: stloc.0 
+IL_00EC: br 36
+IL_00F1: ldloc local(0x0002)
+IL_00F5: switch [187, 349, 187, 364, 364, 187, 364, 364, 223, 36, 328, 364]
+IL_012A: br.s 187
+IL_012C: pop 
+IL_012D: br.s 364
+IL_012F: ldc.i4.0 
+IL_0130: stloc.0 
+IL_0131: ldc.i4 7
+IL_0136: stloc local(0x0002)
+IL_013A: br.s 364
+IL_013C: ldloc.1 
+IL_013D: ldc.r8 2.0
+IL_0146: bne.un.s 362
+IL_0148: ldc.i4 1
+IL_014D: stloc local(0x0002)
+IL_0151: ldc.i4.1 
+IL_0152: stloc.0 
+IL_0153: ldc.i4 4
+IL_0158: stloc local(0x0002)
+IL_015C: br.s 364
+IL_015E: ldc.i4.0 
+IL_015F: stloc.0 
+IL_0160: ldloc.0 
+IL_0161: ret 
+

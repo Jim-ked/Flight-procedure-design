@@ -1,0 +1,31 @@
+METHOD 06000114 \x9e.\x9d::\x8b\x8e RVA=30BD file=12BD
+IL_0000: ldc.i4.1 
+IL_0001: call 0x06000123 \x9e.\x9d::2
+IL_0006: brtrue.s 30
+IL_0008: pop 
+IL_0009: ldarg.1 
+IL_000A: ldarg.0 
+IL_000B: bge.un.s 31
+IL_000D: ldarg.1 
+IL_000E: ldarg.0 
+IL_000F: ldc.r8 180.0
+IL_0018: sub 
+IL_0019: bgt.s 45
+IL_001B: br.s 31
+IL_001D: pop 
+IL_001E: ldarg.1 
+IL_001F: ldarg.0 
+IL_0020: ldc.r8 180.0
+IL_0029: add 
+IL_002A: ble.un.s 54
+IL_002C: ldarg.0 
+IL_002D: ldarg.1 
+IL_002E: sub 
+IL_002F: call 0x0600011F \x9e.\x9d::\x8b\x99
+IL_0034: ret 
+IL_0035: ldarg.1 
+IL_0036: ldarg.0 
+IL_0037: sub 
+IL_0038: call 0x0600011F \x9e.\x9d::\x8b\x99
+IL_003D: ret 
+

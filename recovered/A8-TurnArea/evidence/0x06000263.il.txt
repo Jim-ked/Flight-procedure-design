@@ -1,0 +1,9 @@
+METHOD 06000263 \x88\x9e.\x88\x9d::\x9d\x98 RVA=3D55 file=1F55
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400012F \x88\x9e.\x88\x9d::\x9e\x8f
+IL_0006: ldarg.0 
+IL_0007: ldfld 0x04000137 \x88\x9e.\x88\x9d::\x9e\x97
+IL_000C: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0011: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0016: ret 
+

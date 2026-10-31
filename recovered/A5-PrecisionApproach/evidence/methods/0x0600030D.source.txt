@@ -1,0 +1,11 @@
+24584: 		private void _0087_0091_0095(object P_0, EventArgs P_1)
+24585: 		{
+24586: 			_ = 0;
+24587: 			double num = default(double);
+24588: 			if (_0087_009F())
+24589: 			{
+24590: 				num = Math.Round(Math.Tan(_008F_008A._008B_0087_009D(_0087_0093_0090.Text, "输入数据有误，请检查。" /* string-offset:1984 */) * Math.PI / 180.0), 4);
+24591: 			}
+24592: 			_0087_0095_0091.Text = num.ToString("f4" /* string-offset:3856 */);
+24593: 			_0087_0091_0092(null, null);
+24594: 		}

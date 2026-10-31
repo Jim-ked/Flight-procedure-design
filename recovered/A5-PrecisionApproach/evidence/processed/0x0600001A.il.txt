@@ -1,0 +1,9 @@
+METHOD 0600001A WindSpiralBasic.Properties.Resources::get_ExLine RVA=2518 file=718
+IL_0000: call 0x06000007 WindSpiralBasic.Properties.Resources::get_ResourceManager
+IL_0005: ldc.i4 76
+IL_000A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_000F: ldsfld 0x04000009 WindSpiralBasic.Properties.Resources::resourceCulture
+IL_0014: callvirt 0x0A000035 System.Resources.ResourceManager::GetObject
+IL_0019: castclass 0x01000004 System.Drawing.Bitmap
+IL_001E: ret 
+

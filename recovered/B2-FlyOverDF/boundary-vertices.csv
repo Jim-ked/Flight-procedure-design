@@ -1,0 +1,19 @@
+module,list,entity_kind,vertex_order,source_expression,branch_or_role,evidence
+B2,BoundaryList03,Polyline,0,_0089_009C_009A._008A_008D_008F,primary start carrier,_0089_009E_0089 line 67596
+B2,BoundaryList03,Polyline,1..n,_0089_009D_009C/_0089_009D_009B._008A_009E_0091(...),line/spiral selected candidates, _0089_009E_008C lines 67660-67990
+B2,BoundaryList03,Polyline,last,_0089_009C_009C._008A_008D_008F,primary end carrier,_0089_009E_008D line 68236
+B2,BoundaryList01,Polyline,0,_0089_009C_009A._008A_008D_008F,primary companion start,_0089_009E_0089 line 67596
+B2,BoundaryList01,Polyline,1..n,obj3._008A_009E_0093(...),line/spiral selected candidates,_0089_009E_008C lines 67660-67990
+B2,BoundaryList01,Polyline,last,_0089_009C_009C._008A_008D_008F,primary companion end,_0089_009E_008D lines 68237-68240
+B2,BoundaryList04,Polyline,0,_0089_009C_009A._008A_008D_008C,secondary start carrier,_0089_009E_0089 line 67597
+B2,BoundaryList04,Polyline,1..n,obj5._008A_009E_0091(...),secondary selected spiral candidates,_0089_009E_008C lines 67700-68115
+B2,BoundaryList04,Polyline,last,_0089_009C_009C._008A_008D_008C,secondary end carrier,_0089_009E_008D lines 68241-68244
+B2,BoundaryList02,Polyline,0,_0089_009C_009A._008A_008D_008E,secondary companion start,_0089_009E_0089 line 67597
+B2,BoundaryList02,Polyline,1..n,"obj5._008A_009E_0091(...,SW1/2)",secondary companion candidates,_0089_009E_008C lines 67700-68115
+B2,BoundaryList02,Polyline,last,_0089_009C_009C._008A_008D_008E,secondary companion end,_0089_009E_008D lines 68243-68246
+B2,SpiralGroup01[*],Polyline,0..n,_0089_009D_0090 inner lists,spiral/DF path pair group,_0089_009E_008C lines 67685-68105
+B2,SpiralGroup01[fixed-12000],Polyline,0,obj6,first fixed path point,_0089_009E_008C IL_0214/IL_028E
+B2,SpiralGroup01[fixed-12000],Polyline,1,"item=point(obj6,12000,bearing)",literal 12000 path,_0089_009E_008C IL_0214/IL_028E
+B2,SpiralGroup01[fixed-13000],Polyline,0,obj7=spiral point,first fixed path point,_0089_009E_008C IL_02DF/IL_0356
+B2,SpiralGroup01[fixed-13000],Polyline,1,"item2=point(obj7,13000,bearing)",literal 13000 path,_0089_009E_008C IL_02DF/IL_0356
+B2,NominalConnectionDescriptor,Polyline,0..3,"_0089_009E_0091; _0089_009E_0092 (bulge=tan(delta/4)); _0089_009E_0095; _0089_009E_0096",nominal connection,_008C_008B._0089_009E_0090 lines 68444-68461

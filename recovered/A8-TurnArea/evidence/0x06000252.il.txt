@@ -1,0 +1,55 @@
+METHOD 06000252 \x88\x9e.\x88\x9d::\x9d\x88 RVA=22474 file=20674
+IL_0000: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0005: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000A: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_000F: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_0014: call 0x0600024A \x88\x9e.\x88\x9d::\x9c\x99
+IL_0019: pop 
+IL_001A: ldarg.0 
+IL_001B: ldc.i4.0 
+IL_001C: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0021: ldc.i4 2776
+IL_0026: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_002B: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0030: stloc.0 
+IL_0031: ldarg.0 
+IL_0032: ldc.i4.1 
+IL_0033: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0038: ldarg.0 
+IL_0039: ldfld 0x04000135 \x88\x9e.\x88\x9d::\x9e\x95
+IL_003E: ldloca.s local(0x0000)
+IL_0040: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0045: ldc.i4.2 
+IL_0046: call 0x0A0001C8 System.Math::Round
+IL_004B: stloc.1 
+IL_004C: ldloca.s local(0x0001)
+IL_004E: call 0x0A0001B7 System.Double::ToString
+IL_0053: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0058: ldc.i4.0 
+IL_0059: call 0x0600026A \x88\x9e.\x88\x9d::\x87\x97
+IL_005E: brfalse.s 150
+IL_0060: pop 
+IL_0061: call 0x0600026B \x88\x9e.\x88\x9d::\x87\x98
+IL_0066: brtrue.s 38
+IL_0068: ldarg.0 
+IL_0069: ldfld 0x04000134 \x88\x9e.\x88\x9d::\x9e\x94
+IL_006E: ldloca.s local(0x0000)
+IL_0070: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0075: ldc.i4.2 
+IL_0076: call 0x0A0001C8 System.Math::Round
+IL_007B: stloc.1 
+IL_007C: ldloca.s local(0x0001)
+IL_007E: call 0x0A0001B7 System.Double::ToString
+IL_0083: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0088: br.s 151
+IL_008A: pop 
+IL_008B: ldarg.0 
+IL_008C: ldfld 0x04000137 \x88\x9e.\x88\x9d::\x9e\x97
+IL_0091: ldloca.s local(0x0000)
+IL_0093: call 0x0A000077 Autodesk.AutoCAD.Geometry.Point3d::get_Z
+IL_0098: stloc.1 
+IL_0099: ldloca.s local(0x0001)
+IL_009B: call 0x0A0001B7 System.Double::ToString
+IL_00A0: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_00A5: ret 
+

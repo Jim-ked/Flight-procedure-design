@@ -1,0 +1,26 @@
+METHOD 06000308 \x89\x8d.\x89\x8c::\x87\x91\x90 RVA=357FC file=339FC
+IL_0000: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_0005: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_000A: brfalse.s 40
+IL_000C: pop 
+IL_000D: ldarg.0 
+IL_000E: ldfld 0x040001F0 \x89\x8d.\x89\x8c::\x87\x92\x94
+IL_0013: callvirt 0x0A000201 System.Windows.Forms.RadioButton::get_Checked
+IL_0018: brtrue.s 54
+IL_001A: br.s 41
+IL_001C: pop 
+IL_001D: ldarg.0 
+IL_001E: ldfld 0x040001F7 \x89\x8d.\x89\x8c::\x87\x92\x9b
+IL_0023: callvirt 0x0A000201 System.Windows.Forms.RadioButton::get_Checked
+IL_0028: brfalse.s 67
+IL_002A: ldarg.0 
+IL_002B: ldfld 0x04000249 \x89\x8d.\x89\x8c::\x87\x96\x89
+IL_0030: ldc.i4.1 
+IL_0031: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0036: ret 
+IL_0037: ldarg.0 
+IL_0038: ldfld 0x04000249 \x89\x8d.\x89\x8c::\x87\x96\x89
+IL_003D: ldc.i4.0 
+IL_003E: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0043: ret 
+

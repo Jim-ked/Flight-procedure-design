@@ -1,0 +1,265 @@
+{
+  "evidence": "Recovered code only; no original DLL oracle",
+  "postcheck_count": 64,
+  "checks": [
+    {
+      "check": "alt nominal mirrored CAD vertex sets within 1e-6m",
+      "passed": true,
+      "residual_m": 3.016027599042222e-10
+    },
+    {
+      "check": "alt ias changes geometry",
+      "passed": true
+    },
+    {
+      "check": "alt wind changes geometry",
+      "passed": true
+    },
+    {
+      "check": "alt bank changes geometry",
+      "passed": true
+    },
+    {
+      "check": "alt pdg changes geometry",
+      "passed": true
+    },
+    {
+      "check": "alt near changes geometry",
+      "passed": true
+    },
+    {
+      "check": "alt wide changes geometry",
+      "passed": true
+    },
+    {
+      "check": "early flag adds geometry",
+      "passed": true
+    },
+    {
+      "check": "alt C6 lower boundary rejects",
+      "passed": true
+    },
+    {
+      "check": "alt C6 upper boundary computes",
+      "passed": true
+    },
+    {
+      "check": "fo nominal mirrored CAD vertex sets within 1e-6m",
+      "passed": true,
+      "residual_m": 2.9389065657306884e-10
+    },
+    {
+      "check": "fo ias changes geometry",
+      "passed": true
+    },
+    {
+      "check": "fo wind changes geometry",
+      "passed": true
+    },
+    {
+      "check": "fo bank changes geometry",
+      "passed": true
+    },
+    {
+      "check": "fo pdg changes geometry",
+      "passed": true
+    },
+    {
+      "check": "fo near changes geometry",
+      "passed": true
+    },
+    {
+      "check": "fo wide changes geometry",
+      "passed": true
+    },
+    {
+      "check": "fo C6 lower boundary rejects",
+      "passed": true
+    },
+    {
+      "check": "fo C6 upper boundary computes",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_E finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_after finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_bank finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_c6hi finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_c6upperhi finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_c6upperlow finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_ias finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_near finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_pdg finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_wide finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_L_N_wind finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_R_E finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_12000_R_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_13263.709_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_13263.711_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_13263.71_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_6351.949_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_6351.951_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "alt_6351.95_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_E finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_after finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_bank finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_c6hi finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_c6upperhi finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_c6upperlow finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_ias finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_navhi finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_navlow finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_near finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_pdg finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_wide finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_L_N_wind finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_R_E finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_12000_R_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_13263.709_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_13263.711_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_13263.71_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_6351.949_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_6351.951_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "fo_6351.95_L_N finite CAD XY",
+      "passed": true
+    },
+    {
+      "check": "legacy hull loses farthest collinear point 2",
+      "passed": true
+    },
+    {
+      "check": "dangerous sixth excluded before any available UI evaluation",
+      "passed": true
+    },
+    {
+      "check": "direct arithmetic evaluator has no five-item limit",
+      "passed": true
+    }
+  ],
+  "assertions": 490
+}

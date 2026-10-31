@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绘制外扩线 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 辅助功能 / 绘制外扩线</div>
+        <h1>C3.绘制外扩线</h1>
+        <div class="cmd">命令：exline</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>辅助功能</h2>
+                <ul>
+                    <li><a href="FormBlockImport.html">C1.导入图标库</a></li>
+                    <li><a href="LayerFactoryForm.html">C2.批量添加图层</a></li>
+                    <li><a href="FormExLine.html" class="active">C3.绘制外扩线</a></li>
+                    <li><a href="FormRandPoint.html">C4.随机添加高度点</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">传统程序 / PBN 程序</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【绘制外扩线】按给定的<strong>扩张角与长度</strong>，从选定的一点绘制向外扩张的边界线，常用于保护区边界的向外扩展作图，可选择是否同时绘制中心线。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormExLine.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormExLine.png" alt="FormExLine 界面截图" width="303"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>分区 / 控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>外扩线参数 · 扩张角(°)</td><td>外扩线的张角，默认 15°。</td></tr>
+                        <tr><td>外扩线参数 · 长度(km)</td><td>外扩线的延伸长度，默认 10 km。</td></tr>
+                        <tr><td>绘制中心线（复选框）</td><td>勾选后在绘制外扩线的同时绘制中心线。</td></tr>
+                        <tr><td>CAD（按钮）</td><td>按提示在图面拾取起点，绘制外扩线。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>exline</code> 打开窗口。</li>
+                    <li>在“外扩线参数”中设置扩张角(°)与长度(km)。</li>
+                    <li>如需中心线，勾选【绘制中心线】。</li>
+                    <li>点击【CAD】，按提示拾取起点完成绘制。</li>
+                </ul>
+                <div class="tip"><strong>提示：</strong>外扩方向与拾取起点的走向相关，若结果方向相反，可重新拾取或调整参数。</div>
+            </div>
+            <div class="pager">
+                <a href="LayerFactoryForm.html">← 上一篇：C2.批量添加图层</a>
+                <a href="FormRandPoint.html">下一篇：C4.随机添加高度点 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

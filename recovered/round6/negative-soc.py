@@ -1,0 +1,5 @@
+from pathlib import Path
+p=Path('recovered/round6/Round6.Tests.cs');s=p.read_text(encoding='utf-8');needle='  foreach(var kv in counts)Console.WriteLine';extra='''  double negativeSoc=RnpApchMissed.LnavSoc(380,0,0,15,-18,false,false);Check("degenerate","negative SOC distance retained",negativeSoc<0);Save("lnav_negative_soc","degenerate",new{ias=380,alt=0,wind=0,temp=15,seconds=-18},new{distance=negativeSoc});
+  var reverseSoc=new RnpApchLnav(10000,900,0,3,15,.025,-500,8000);Near("geometry","negative ThrToSoc reverses SOC station",reverseSoc._0089_009C_008F.X,500);Save("lnav_negative_thr_soc","degenerate",new{thrSoc=-500,socTp=8000},new{soc=Pt(reverseSoc._0089_009C_008F),end=Pt(reverseSoc._0089_009C_0090)});
+''';assert needle in s;s=s.replace(needle,extra+needle);p.write_text(s,encoding='utf-8')
+p=Path('recovered/round6/reports.py');s=p.read_text(encoding='utf-8');s=s.replace('A9 own PriSec helper','A9 P330(IF)/P331(normal) PriSec helpers').replace('A9 normal -L<x<0; IF inclusive endpoints','A9 P331 normal -L<x<0; P330 IF inclusive endpoints');p.write_text(s,encoding='utf-8')

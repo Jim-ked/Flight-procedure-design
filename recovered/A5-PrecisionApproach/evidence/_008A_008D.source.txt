@@ -1,0 +1,54 @@
+41608: 	public class _008A_008D : _008F_008E
+41609: 	{
+41610: 		public string _0088_0090_008A;
+41611: 
+41612: 		public double _0088_0090_008B;
+41613: 
+41614: 		public double _0088_0090_008C;
+41615: 
+41616: 		public double _0088_0090_008D;
+41617: 
+41618: 		public double _0088_0090_008E;
+41619: 
+41620: 		public double _0088_0090_008F;
+41621: 
+41622: 		public double _0088_0090_0090;
+41623: 
+41624: 		public double _0088_0090_0091;
+41625: 
+41626: 		public double _0088_0090_0092;
+41627: 
+41628: 		public double _0088_0090_0093;
+41629: 
+41630: 		public _008A_008D()
+41631: 		{
+41632: 		}
+41633: 
+41634: 		public _008A_008D(_008F_008E P_0)
+41635: 		{
+41636: 			base.ID = P_0.ID;
+41637: 			base.Name = P_0.Name;
+41638: 			_ = 1;
+41639: 			if (!_0087q())
+41640: 			{
+41641: 				base.X = P_0.X;
+41642: 			}
+41643: 			base.Y = P_0.Y;
+41644: 			base.Z = P_0.Z;
+41645: 		}
+41646: 
+41647: 		static _008A_008D()
+41648: 		{
+41649: 			LicenseManager.Validate(typeof(_008A_008D));
+41650: 		}
+41651: 
+41652: 		internal static bool _0087p()
+41653: 		{
+41654: 			return true;
+41655: 		}
+41656: 
+41657: 		internal static bool _0087q()
+41658: 		{
+41659: 			return false;
+41660: 		}
+41661: 	}

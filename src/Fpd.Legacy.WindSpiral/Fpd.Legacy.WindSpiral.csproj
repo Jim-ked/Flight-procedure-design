@@ -1,0 +1,24 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildThisFileDirectory)..\..\Directory.Build.props" Condition="Exists('$(MSBuildThisFileDirectory)..\..\Directory.Build.props')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <ProjectGuid>{C2C24F6D-79DD-47A4-95BF-0B6D8E4E4204}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <TargetExt>.dll</TargetExt><RootNamespace>Fpd.Legacy.WindSpiral</RootNamespace><AssemblyName>Fpd.Legacy.WindSpiral</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion><OutputPath>bin\$(Configuration)\</OutputPath><IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath>
+  </PropertyGroup>
+  <ItemGroup><Reference Include="System" /><Reference Include="System.Core" /></ItemGroup>
+  <ItemGroup><Reference Include="Fpd.Domain"><HintPath>..\Fpd.Domain\bin\$(Configuration)\Fpd.Domain.dll</HintPath></Reference></ItemGroup>
+  <ItemGroup><Compile Include="**\*.cs" Exclude="bin\**;obj\**" /></ItemGroup>
+</Project>
+
+
+
+
+
+
+
+
+
+
+

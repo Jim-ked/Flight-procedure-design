@@ -1,0 +1,56 @@
+METHOD 06000313 \x89\x8d.\x89\x8c::\x87\x91\x9b RVA=360D0 file=342D0
+IL_0000: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_0005: brtrue.s 78
+IL_0007: ldarg.0 
+IL_0008: ldfld 0x04000227 \x89\x8d.\x89\x8c::\x87\x94\x99
+IL_000D: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0012: stloc.0 
+IL_0013: ldarg.0 
+IL_0014: ldfld 0x04000227 \x89\x8d.\x89\x8c::\x87\x94\x99
+IL_0019: ldarg.0 
+IL_001A: ldfld 0x04000232 \x89\x8d.\x89\x8c::\x87\x95\x8b
+IL_001F: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0024: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0029: ldarg.0 
+IL_002A: ldfld 0x04000232 \x89\x8d.\x89\x8c::\x87\x95\x8b
+IL_002F: ldloc.0 
+IL_0030: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0035: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_003A: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_003F: brfalse.s 121
+IL_0041: pop 
+IL_0042: ldarg.0 
+IL_0043: ldfld 0x04000225 \x89\x8d.\x89\x8c::\x87\x94\x97
+IL_0048: ldarg.0 
+IL_0049: ldfld 0x0400022F \x89\x8d.\x89\x8c::\x87\x95\x88
+IL_004E: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0053: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0058: ldarg.0 
+IL_0059: ldfld 0x0400022F \x89\x8d.\x89\x8c::\x87\x95\x88
+IL_005E: ldloc.0 
+IL_005F: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0064: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_0069: brfalse.s 182
+IL_006B: br.s 53
+IL_006D: pop 
+IL_006E: ldarg.0 
+IL_006F: ldfld 0x04000226 \x89\x8d.\x89\x8c::\x87\x94\x98
+IL_0074: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0079: stloc.0 
+IL_007A: ldarg.0 
+IL_007B: ldfld 0x04000226 \x89\x8d.\x89\x8c::\x87\x94\x98
+IL_0080: ldarg.0 
+IL_0081: ldfld 0x04000230 \x89\x8d.\x89\x8c::\x87\x95\x89
+IL_0086: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_008B: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0090: ldarg.0 
+IL_0091: ldfld 0x04000230 \x89\x8d.\x89\x8c::\x87\x95\x89
+IL_0096: ldloc.0 
+IL_0097: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_009C: ldarg.0 
+IL_009D: ldfld 0x04000225 \x89\x8d.\x89\x8c::\x87\x94\x97
+IL_00A2: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_00A7: stloc.0 
+IL_00A8: br.s 78
+IL_00AA: ret 
+

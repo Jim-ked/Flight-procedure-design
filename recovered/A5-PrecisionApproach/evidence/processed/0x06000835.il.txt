@@ -1,0 +1,15 @@
+METHOD 06000835 \x8f\x93.\x8f\x92::\x8b\x8b\x8a RVA=6356 file=4556
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400077C \x8f\x93.\x8f\x92::\x8b\x8b\x92
+IL_0006: ldarg.1 
+IL_0007: mul 
+IL_0008: ldarg.0 
+IL_0009: ldfld 0x0400077D \x8f\x93.\x8f\x92::\x8b\x8b\x93
+IL_000E: ldarg.2 
+IL_000F: mul 
+IL_0010: add 
+IL_0011: ldarg.0 
+IL_0012: ldfld 0x0400077E \x8f\x93.\x8f\x92::\x8b\x8b\x94
+IL_0017: add 
+IL_0018: ret 
+

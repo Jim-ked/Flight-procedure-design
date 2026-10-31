@@ -1,0 +1,8 @@
+945: 		public string GetValue(Control P_0)
+946: 		{
+947: 			if (!((CheckBox)P_0).Checked)
+948: 			{
+949: 				return "False" /* string-offset:1036 */;
+950: 			}
+951: 			return "True" /* string-offset:1040 */;
+952: 		}

@@ -1,0 +1,55 @@
+{
+  "scope": "Round12 additive static fixtures; no AutoCAD/DLL; Round1 E3 not rerun",
+  "tests": [
+    {
+      "layer": "formula",
+      "id": "dme-error",
+      "assertion": "0.0125*r+460 and 1852 conversion",
+      "result": "PASS"
+    },
+    {
+      "layer": "geometry",
+      "id": "dme-arcs",
+      "assertion": "r+e,r,r-e arcs and theta±a",
+      "result": "PASS"
+    },
+    {
+      "layer": "geometry",
+      "id": "kk-lines",
+      "assertion": "two Lines with 9260 half-length",
+      "result": "PASS"
+    },
+    {
+      "layer": "geometry",
+      "id": "overhead",
+      "assertion": "h*tan(halfAngle), optional lines, Circle",
+      "result": "PASS"
+    },
+    {
+      "layer": "event/reachability",
+      "id": "facility-dispatch",
+      "assertion": "facility/Guide/DME/KK/Track handlers registered",
+      "result": "PASS"
+    },
+    {
+      "layer": "cross-module",
+      "id": "downstream-readers",
+      "assertion": "no A3 semantic consumer in indexed A7/A6/A10/A4 graphs",
+      "result": "PASS"
+    },
+    {
+      "layer": "negative-evidence",
+      "id": "two-station",
+      "assertion": "no second facility/radial/intersection",
+      "result": "PASS"
+    },
+    {
+      "layer": "negative-evidence",
+      "id": "metadata",
+      "assertion": "no semantic Ws payload",
+      "result": "PASS"
+    }
+  ],
+  "count": 8,
+  "all_pass": true
+}

@@ -1,0 +1,55 @@
+61931: 		private void _0089_0096_0095(object P_0, EventArgs P_1)
+61932: 		{
+61933: 			if (!true /* original-file-bool-offset:1076 */)
+61934: 			{
+61935: 				return;
+61936: 			}
+61937: 			double value = _008F_008A._008B_0087_009D(_0089_009A_0091.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+61938: 			if (Convert.ToDouble(value) < 2000.0)
+61939: 			{
+61940: 				MessageBox.Show("航向台至跑道入口的距离不得小于2000米。" /* string-offset:3832 */);
+61941: 				_0089_009A_0091.Text = "2000" /* string-offset:3836 */;
+61942: 			}
+61943: 			if (Convert.ToDouble(value) > 4500.0)
+61944: 			{
+61945: 				_0088_009E();
+61946: 				if (!_0088_009D())
+61947: 				{
+61948: 					goto IL_013e;
+61949: 				}
+61950: 				MessageBox.Show("航向台至跑道入口的距离不得大于4500米。" /* string-offset:3840 */);
+61951: 				_0089_009A_0091.Text = "4500" /* string-offset:3844 */;
+61952: 			}
+61953: 			if (_0089_009A_0096.SelectedIndex == -1 || _0089_009A_008F.SelectedIndex == -1 || _0089_009A_0095.SelectedIndex == -1)
+61954: 			{
+61955: 				return;
+61956: 			}
+61957: 			_008A_008F selectedIndex = default(_008A_008F);
+61958: 			string text = default(string);
+61959: 			string text2 = default(string);
+61960: 			if (_0089_009A_009A.SelectedIndex == -1)
+61961: 			{
+61962: 				if (!_0088_009E())
+61963: 				{
+61964: 					return;
+61965: 				}
+61966: 			}
+61967: 			else
+61968: 			{
+61969: 				selectedIndex = (_008A_008F)_0089_009A_0096.SelectedIndex;
+61970: 				text = _0089_009A_0095.Text;
+61971: 				text2 = _0089_009A_009A.Text;
+61972: 			}
+61973: 			string text3 = _0089_009A_0091.Text;
+61974: 			_008A_0093 obj = _0089_0096_0096(text, selectedIndex, text2, text3);
+61975: 			if (obj == null)
+61976: 			{
+61977: 				return;
+61978: 			}
+61979: 			_0089_0096_0098(ref obj);
+61980: 			goto IL_013e;
+61981: 			IL_013e:
+61982: 			_0089_0096_0099(ref obj);
+61983: 			obj._0088_0090_0098();
+61984: 			_0089_0096_009A(obj);
+61985: 		}

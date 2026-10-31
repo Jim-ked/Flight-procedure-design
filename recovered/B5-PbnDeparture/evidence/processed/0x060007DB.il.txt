@@ -1,0 +1,74 @@
+METHOD 060007DB \x8f\x8b.\x8f\x8a::\x8b\x88\x8b RVA=920B8 file=902B8
+IL_0000: ldc.i4 1436
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue.s 59
+IL_000C: ldarg.0 
+IL_000D: callvirt 0x0A000123 0x1B00000F::get_Count
+IL_0012: stloc.0 
+IL_0013: ldc.i4.0 
+IL_0014: stloc.1 
+IL_0015: ldc.i4.0 
+IL_0016: stloc.2 
+IL_0017: ldloc.0 
+IL_0018: ldc.i4.1 
+IL_0019: sub 
+IL_001A: stloc.3 
+IL_001B: br.s 164
+IL_001D: ldarg.0 
+IL_001E: ldloc.2 
+IL_001F: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_0024: stloc.s local(0x0004)
+IL_0026: ldarg.0 
+IL_0027: ldloc.3 
+IL_0028: callvirt 0x0A000124 0x1B00000F::get_Item
+IL_002D: stloc.s local(0x0005)
+IL_002F: ldloc.s local(0x0004)
+IL_0031: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0036: ldarg.1 
+IL_0037: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_003C: cgt 
+IL_003E: ldloc.s local(0x0005)
+IL_0040: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0045: ldarg.1 
+IL_0046: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_004B: cgt 
+IL_004D: beq.s 158
+IL_004F: ldarg.1 
+IL_0050: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0055: ldloc.s local(0x0005)
+IL_0057: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_005C: ldloc.s local(0x0004)
+IL_005E: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0063: sub 
+IL_0064: ldarg.1 
+IL_0065: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_006A: ldloc.s local(0x0004)
+IL_006C: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0071: sub 
+IL_0072: mul 
+IL_0073: ldloc.s local(0x0005)
+IL_0075: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_007A: ldloc.s local(0x0004)
+IL_007C: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0081: sub 
+IL_0082: div 
+IL_0083: ldloc.s local(0x0004)
+IL_0085: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_008A: add 
+IL_008B: bge.un.s 158
+IL_008D: ldloc.1 
+IL_008E: ldc.i4.0 
+IL_008F: ceq 
+IL_0091: stloc.1 
+IL_0092: ldloc.2 
+IL_0093: dup 
+IL_0094: ldc.i4.1 
+IL_0095: add 
+IL_0096: stloc.2 
+IL_0097: stloc.3 
+IL_0098: ldloc.2 
+IL_0099: ldloc.0 
+IL_009A: blt.s 41
+IL_009C: ldloc.1 
+IL_009D: ret 
+

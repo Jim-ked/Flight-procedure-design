@@ -1,0 +1,67 @@
+{
+  "E3_assertions_by_layer": {
+    "mode/facility dispatch": 12,
+    "CAD writer": 146,
+    "geometry": 4584,
+    "formula": 772,
+    "degenerate": 36
+  },
+  "E3_total": 5550,
+  "static_checks_by_layer": {
+    "event/reachability": 12,
+    "CAD writer": 3,
+    "serialization": 10,
+    "cross-module": 4,
+    "formula": 1
+  },
+  "static_total": 30,
+  "E4_total": 0,
+  "fixtures": [
+    {
+      "path": "recovered\\round9\\fixtures\\15-degree-endpoints.csv",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\recovered\\round9\\fixtures\\15-degree-endpoints.csv",
+      "size": 11547,
+      "sha256": "0ea81256661e4d3891eeb8651e7ad9829d964c9d7f9ab1442499c19da68768aa",
+      "data_rows": 96
+    },
+    {
+      "path": "recovered\\round9\\fixtures\\assertions.csv",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\recovered\\round9\\fixtures\\assertions.csv",
+      "size": 401167,
+      "sha256": "9523ce8448de1f4cbd2800fc06b8d1ab8f69aefa004b6877ae491a6af0145c3d",
+      "data_rows": 5550
+    },
+    {
+      "path": "recovered\\round9\\fixtures\\geometry-points.csv",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\recovered\\round9\\fixtures\\geometry-points.csv",
+      "size": 7413,
+      "sha256": "8a06e2a7510667a969ab0f0f25b35b28152b697d0edb92c092aee8e24d906047",
+      "data_rows": 112
+    },
+    {
+      "path": "recovered\\round9\\fixtures\\numeric-counts.json",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\recovered\\round9\\fixtures\\numeric-counts.json",
+      "size": 92,
+      "sha256": "61da81d127fbface2be5810c66364274b4fba1de65f8c8345799177f1423312e"
+    }
+  ],
+  "test_inputs": [
+    {
+      "path": "recovered\\A4-NavAidProtection\\NavAidProtectionForm.Recovered.cs",
+      "sha256": "a5e5eeb9d1b8a2aa844f25a538c85bbccbe6b9690ee942b42a9e545d63b062f7"
+    },
+    {
+      "path": "recovered\\A4-NavAidProtection\\NavAidProtectionGeometry.Recovered.cs",
+      "sha256": "d59a76d87db403a67ec5d21c2838a42da8038bdc129738dd25474ba8f0658be7"
+    },
+    {
+      "path": "recovered\\GeometryPrimitives\\Geometry.Recovered.cs",
+      "sha256": "dcf47e9b13c627bd8b42b42acf40b28261faff0949f67af11adfb7caad1a6650"
+    },
+    {
+      "path": "recovered\\round9\\Round9.Tests.cs",
+      "sha256": "f0f6face3846db76771904e74a3e6820262c223429af0abf900e2649f3b1b17d"
+    }
+  ],
+  "scope": "Independent recovered-source execution and separate static checks; not target DLL/CAD runtime"
+}

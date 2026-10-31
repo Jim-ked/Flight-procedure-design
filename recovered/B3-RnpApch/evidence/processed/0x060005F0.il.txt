@@ -1,0 +1,23 @@
+METHOD 060005F0 \x8c\x98.\x8c\x97::\x8a\x8b\x98 RVA=51F5 file=33F5
+IL_0000: ldarg.3 
+IL_0001: ldarg.1 
+IL_0002: bne.un.s 14
+IL_0004: ldarg.2 
+IL_0005: ldarg.s argument(0x0004)
+IL_0007: call 0x0A000125 System.Math::Min
+IL_000C: ret 
+IL_000D: ldarg.s argument(0x0004)
+IL_000F: ldarg.2 
+IL_0010: sub 
+IL_0011: ldarg.s argument(0x0005)
+IL_0013: ldarg.1 
+IL_0014: sub 
+IL_0015: mul 
+IL_0016: ldarg.3 
+IL_0017: ldarg.1 
+IL_0018: sub 
+IL_0019: div 
+IL_001A: ldarg.2 
+IL_001B: add 
+IL_001C: ret 
+

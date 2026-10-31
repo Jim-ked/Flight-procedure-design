@@ -1,0 +1,118 @@
+METHOD 06000572 \x8b\x97.\x8b\x96::\x89\x96\x97 RVA=72DA4 file=70FA4
+IL_0000: nop 
+IL_0001: br 342
+IL_0006: ldarg.0 
+IL_0007: callvirt 0x0A00035E System.String::ToCharArray
+IL_000C: stloc.0 
+IL_000D: call 0x06000581 \x8b\x97.\x8b\x96::\x88\x9d
+IL_0012: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_0017: brtrue.s 49
+IL_0019: pop 
+IL_001A: ldc.i4 7
+IL_001F: stloc local(0x0008)
+IL_0023: br.s 176
+IL_0025: pop 
+IL_0026: br 319
+IL_002B: ldloc.0 
+IL_002C: ldloc.s local(0x0006)
+IL_002E: ldelem.u2 
+IL_002F: stloc.s local(0x0007)
+IL_0031: ldloc.0 
+IL_0032: ldloc.s local(0x0006)
+IL_0034: ldloc.0 
+IL_0035: ldloc.1 
+IL_0036: ldc.i4.1 
+IL_0037: sub 
+IL_0038: ldloc.s local(0x0006)
+IL_003A: sub 
+IL_003B: ldelem.u2 
+IL_003C: stelem.i2 
+IL_003D: ldloc.0 
+IL_003E: ldloc.1 
+IL_003F: ldc.i4.1 
+IL_0040: sub 
+IL_0041: ldloc.s local(0x0006)
+IL_0043: sub 
+IL_0044: ldloc.s local(0x0007)
+IL_0046: stelem.i2 
+IL_0047: ldloc.s local(0x0006)
+IL_0049: ldc.i4.1 
+IL_004A: add 
+IL_004B: stloc.s local(0x0006)
+IL_004D: ldc.i4 4
+IL_0052: stloc local(0x0008)
+IL_0056: call 0x06000581 \x8b\x97.\x8b\x96::\x88\x9d
+IL_005B: brfalse.s 176
+IL_005D: ldloc local(0x0008)
+IL_0061: switch [230, 289, 176, 289, 319, 192, 255, 176, 319, 276, 319, 289, 342, 252, 359]
+IL_00A2: br.s 255
+IL_00A4: ldarg.0 
+IL_00A5: callvirt 0x0A00008C System.String::get_Length
+IL_00AA: stloc.1 
+IL_00AB: ldc.i4 5
+IL_00B0: stloc local(0x0008)
+IL_00B4: ldc.i4.0 
+IL_00B5: stloc.2 
+IL_00B6: ldc.i4 1
+IL_00BB: stloc local(0x0008)
+IL_00BF: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_00C4: brfalse.s 289
+IL_00C6: br.s 255
+IL_00C8: ldarg.0 
+IL_00C9: ldloc.2 
+IL_00CA: callvirt 0x0A00008E System.String::get_Chars
+IL_00CF: stloc.s local(0x0005)
+IL_00D1: ldc.i4 0
+IL_00D6: stloc local(0x0008)
+IL_00DA: ldloca.s local(0x0005)
+IL_00DC: call 0x0A00035F System.Char::ToString
+IL_00E1: call 0x0A0001F9 System.Int32::Parse
+IL_00E6: stloc.3 
+IL_00E7: ldc.i4 13
+IL_00EC: stloc local(0x0008)
+IL_00F0: ldloc.3 
+IL_00F1: brfalse.s 276
+IL_00F3: ldc.i4.s 10
+IL_00F5: ldloc.3 
+IL_00F6: sub 
+IL_00F7: stloc.s local(0x0004)
+IL_00F9: ldloc.0 
+IL_00FA: ldloc.2 
+IL_00FB: ldloca.s local(0x0004)
+IL_00FD: call 0x0A0001C4 System.Int32::ToString
+IL_0102: call 0x0A000360 System.Char::Parse
+IL_0107: stelem.i2 
+IL_0108: ldloc.2 
+IL_0109: ldc.i4.1 
+IL_010A: add 
+IL_010B: stloc.2 
+IL_010C: ldc.i4 11
+IL_0111: stloc local(0x0008)
+IL_0115: ldloc.2 
+IL_0116: ldloc.1 
+IL_0117: blt.s 212
+IL_0119: ldc.i4.0 
+IL_011A: stloc.s local(0x0006)
+IL_011C: br.s 319
+IL_011E: ldc.i4 14
+IL_0123: stloc local(0x0008)
+IL_0127: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_012C: brtrue.s 289
+IL_012E: br 105
+IL_0133: ldloc.s local(0x0006)
+IL_0135: ldloc.1 
+IL_0136: ldc.i4.2 
+IL_0137: div 
+IL_0138: blt 55
+IL_013D: br.s 298
+IL_013F: ldc.i4 3
+IL_0144: stloc local(0x0008)
+IL_0148: br.s 289
+IL_014A: ldc.i4 1080
+IL_014F: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0154: brfalse 18
+IL_0159: br.s 331
+IL_015B: ldloc.0 
+IL_015C: newobj 0x0A000361 System.String::.ctor
+IL_0161: ret 
+

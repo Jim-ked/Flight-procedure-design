@@ -1,0 +1,16 @@
+METHOD 06000390 \x89\x95.\x89\x94::\x87\x9e\x8d RVA=46F9 file=28F9
+IL_0000: ldarga.s argument(0x0001)
+IL_0002: call 0x0A000347 Autodesk.AutoCAD.Geometry.Vector2d::get_X
+IL_0007: ldarga.s argument(0x0002)
+IL_0009: call 0x0A000348 Autodesk.AutoCAD.Geometry.Vector2d::get_Y
+IL_000E: mul 
+IL_000F: ldarga.s argument(0x0001)
+IL_0011: call 0x0A000348 Autodesk.AutoCAD.Geometry.Vector2d::get_Y
+IL_0016: ldarga.s argument(0x0002)
+IL_0018: call 0x0A000347 Autodesk.AutoCAD.Geometry.Vector2d::get_X
+IL_001D: mul 
+IL_001E: sub 
+IL_001F: ldc.r8 0.0
+IL_0028: cgt 
+IL_002A: ret 
+

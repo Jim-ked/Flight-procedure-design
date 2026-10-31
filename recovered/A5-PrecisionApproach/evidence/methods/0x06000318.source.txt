@@ -1,0 +1,60 @@
+24747: 		private void _0087_0092_0087(object P_0, EventArgs P_1)
+24748: 		{
+24749: 			//IL_0044: Unknown result type (might be due to invalid IL or missing references)
+24750: 			//IL_004a: Expected O, but got Unknown
+24751: 			//IL_005f: Unknown result type (might be due to invalid IL or missing references)
+24752: 			//IL_0069: Invalid comparison between Unknown and I4
+24753: 			//IL_008c: Unknown result type (might be due to invalid IL or missing references)
+24754: 			//IL_0097: Unknown result type (might be due to invalid IL or missing references)
+24755: 			if (!_0087_009F() || !true /* original-file-bool-offset:488 */)
+24756: 			{
+24757: 				return;
+24758: 			}
+24759: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+24760: 			_0087_0091_008D(mdiActiveDocument.Window.Handle);
+24761: 			Editor editor = mdiActiveDocument.Editor;
+24762: 			PromptEntityOptions val = new PromptEntityOptions("\n请选择OAS保护区图形" /* string-offset:3876 */);
+24763: 			_ = 1;
+24764: 			PromptEntityResult entity = default(PromptEntityResult);
+24765: 			if (!_00870())
+24766: 			{
+24767: 				entity = editor.GetEntity(val);
+24768: 			}
+24769: 			if ((int)((PromptResult)entity).Status != 5100)
+24770: 			{
+24771: 				return;
+24772: 			}
+24773: 			Transaction val2 = Application.DocumentManager.MdiActiveDocument.Database.TransactionManager.StartTransaction();
+24774: 			try
+24775: 			{
+24776: 				ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;
+24777: 				if (!_00870() && !(xData != (ResultBuffer)null))
+24778: 				{
+24779: 					editor.WriteMessage("\n所选图形未包含OAS参数。\n" /* string-offset:3896 */);
+24780: 				}
+24781: 				else
+24782: 				{
+24783: 					string text = ((TypedValue)(ref xData.AsArray()[1])).Value.ToString();
+24784: 					_0087_009F();
+24785: 					bool flag = default(bool);
+24786: 					if (!_00870())
+24787: 					{
+24788: 						if (string.IsNullOrEmpty(text))
+24789: 						{
+24790: 							editor.WriteMessage("\n未找到有效的OAS参数数据。" /* string-offset:3892 */);
+24791: 							goto IL_0149;
+24792: 						}
+24793: 						flag = _0087_0092_008A("从 CAD 图形拾取参数" /* string-offset:3880 */);
+24794: 						_0087_0092_0089(text, flag);
+24795: 					}
+24796: 					editor.WriteMessage(flag ? "\n已导入全部参数（跑道+进近+PAOAS+OAS）！" /* string-offset:3888 */ : "\n已仅导入 OAS 面参数！" /* string-offset:3884 */);
+24797: 				}
+24798: 				goto IL_0149;
+24799: 				IL_0149:
+24800: 				val2.Commit();
+24801: 			}
+24802: 			finally
+24803: 			{
+24804: 				((IDisposable)val2)?.Dispose();
+24805: 			}
+24806: 		}

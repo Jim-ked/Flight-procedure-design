@@ -1,0 +1,79 @@
+METHOD 0600031C \x89\x8d.\x89\x8c::\x87\x92\x8b RVA=37BD0 file=35DD0
+IL_0000: ldc.i4 496
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse 251
+IL_000F: br.s 53
+IL_0011: ldloc.1 
+IL_0012: call 0x0A000134 System.String::IsNullOrEmpty
+IL_0017: brfalse.s 87
+IL_0019: ldc.i4.1 
+IL_001A: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_001F: brfalse.s 69
+IL_0021: pop 
+IL_0022: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_0027: brtrue.s 93
+IL_0029: ldarg.0 
+IL_002A: call 0x06000319 \x89\x8d.\x89\x8c::\x87\x92\x88
+IL_002F: stloc.1 
+IL_0030: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_0035: brtrue.s 29
+IL_0037: br.s 29
+IL_0039: pop 
+IL_003A: ldc.i4 4052
+IL_003F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0044: call 0x0A000030 System.Windows.Forms.MessageBox::Show
+IL_0049: pop 
+IL_004A: ret 
+IL_004B: newobj 0x0A000184 System.Windows.Forms.SaveFileDialog::.ctor
+IL_0050: stloc.0 
+IL_0051: ldloc.0 
+IL_0052: ldc.i4 4056
+IL_0057: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_005C: callvirt 0x0A000185 System.Windows.Forms.FileDialog::set_Filter
+IL_0061: ldloc.0 
+IL_0062: ldc.i4.1 
+IL_0063: callvirt 0x0A000304 System.Windows.Forms.FileDialog::set_FilterIndex
+IL_0068: ldloc.0 
+IL_0069: ldc.i4.1 
+IL_006A: callvirt 0x0A0002E7 System.Windows.Forms.FileDialog::set_RestoreDirectory
+IL_006F: ldloc.0 
+IL_0070: ldc.i4 4060
+IL_0075: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_007A: callvirt 0x0A000305 System.Windows.Forms.FileDialog::set_FileName
+IL_007F: ldloc.0 
+IL_0080: callvirt 0x0A000188 System.Windows.Forms.CommonDialog::ShowDialog
+IL_0085: ldc.i4.1 
+IL_0086: bne.un.s 251
+IL_0088: nop 
+IL_0089: ldloc.0 
+IL_008A: callvirt 0x0A000189 System.Windows.Forms.FileDialog::get_FileName
+IL_008F: ldloc.1 
+IL_0090: call 0x0A000306 System.Text.Encoding::get_UTF8
+IL_0095: call 0x0A000307 System.IO.File::WriteAllText
+IL_009A: ldc.i4 4064
+IL_009F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00A4: ldloc.0 
+IL_00A5: callvirt 0x0A000189 System.Windows.Forms.FileDialog::get_FileName
+IL_00AA: call 0x0A00008B System.String::Concat
+IL_00AF: ldc.i4 4068
+IL_00B4: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00B9: ldc.i4.0 
+IL_00BA: ldc.i4.s 64
+IL_00BC: call 0x0A000058 System.Windows.Forms.MessageBox::Show
+IL_00C1: pop 
+IL_00C2: leave.s 251
+IL_00C4: stloc.2 
+IL_00C5: ldc.i4 4072
+IL_00CA: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00CF: ldloc.2 
+IL_00D0: callvirt 0x0A000055 System.Exception::get_Message
+IL_00D5: call 0x0A00008B System.String::Concat
+IL_00DA: ldc.i4 340
+IL_00DF: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00E4: ldc.i4.0 
+IL_00E5: ldc.i4.s 16
+IL_00E7: call 0x0A000058 System.Windows.Forms.MessageBox::Show
+IL_00EC: pop 
+IL_00ED: leave.s 251
+IL_00EF: ret 
+

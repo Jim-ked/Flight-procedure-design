@@ -1,0 +1,39 @@
+METHOD 0600013F \x87\x8b.\x87\x8a::\x8c\x97 RVA=10A58 file=EC58
+IL_0000: nop 
+IL_0001: ldarg.2 
+IL_0002: ldarg.3 
+IL_0003: ldarg.s argument(0x0004)
+IL_0005: newobj 0x0A0001DC System.Xml.Linq.XDeclaration::.ctor
+IL_000A: ldc.i4.1 
+IL_000B: newarr 0x01000001 System.Object
+IL_0010: dup 
+IL_0011: ldc.i4.0 
+IL_0012: ldarg.1 
+IL_0013: call 0x0A00012E System.Xml.Linq.XName::op_Implicit
+IL_0018: newobj 0x0A000160 System.Xml.Linq.XElement::.ctor
+IL_001D: stelem.ref 
+IL_001E: newobj 0x0A0001DD System.Xml.Linq.XDocument::.ctor
+IL_0023: ldarg.0 
+IL_0024: callvirt 0x0A000168 System.Xml.Linq.XDocument::Save
+IL_0029: ldc.i4.1 
+IL_002A: stloc.0 
+IL_002B: leave.s 105
+IL_002D: stloc.1 
+IL_002E: ldc.i4 992
+IL_0033: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0038: ldarg.0 
+IL_0039: call 0x0A00008B System.String::Concat
+IL_003E: ldloc.1 
+IL_003F: newobj 0x0A0001DE System.UnauthorizedAccessException::.ctor
+IL_0044: throw 
+IL_0045: stloc.2 
+IL_0046: ldc.i4 996
+IL_004B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0050: ldarg.0 
+IL_0051: call 0x0A00008B System.String::Concat
+IL_0056: ldloc.2 
+IL_0057: newobj 0x0A0001DF System.Exception::.ctor
+IL_005C: throw 
+IL_005D: ldloc.0 
+IL_005E: ret 
+

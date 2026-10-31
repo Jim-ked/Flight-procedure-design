@@ -1,0 +1,9 @@
+﻿DataItem,Writer,Reader,Modules,Schema,AutomaticReuse,ManualReuse,KnownOrphanReaders,Evidence
+WsCalcuLine,A2,A2,A2/manual downstream,line parameters/XData,PARTIAL,MANUAL,No unified procedure reader,A2-BasicCalculation/WsCalcuLine-schema.md
+WsEntityFrame,frame helpers,frame helpers,A7/B3/B4/B5,local transform,PARTIAL,MANUAL,No global procedure model,A7-Departure/runway-coordinate.md
+WsObject,P089,P089,A1-A10/B1-B5,optional XData,PARTIAL,MANUAL,A4 empty metadata,A4 xdata-schema.md
+Form state TXT,config handlers,config handlers,A2-A5/B3-B5,control state,PARTIAL,MANUAL,Not geometry interchange,A4 persistence.md
+OAS parameter TXT/JSON,A5,A5,A5,mode JSON/TXT,CLOSED,MANUAL,B4 separate CSV,A5 oas-txt-format.md
+config.xml,P0F4/P0F6,P0F4/P0F6,A2-A5/B3-B5,dotted control keys,PARTIAL,MANUAL,Node may be absent,A4 persistence.md
+.rnp,none evidenced,none evidenced,none,none,ABSENT_IN_BUILD,MANUAL,No evidence,system spot-check
+oas.db,A5/B4 loaders,A5/B4 loaders,A5/B4,OAS rows,CLOSED,MANUAL,No unified model,A5 oas-parameter-model.md

@@ -1,0 +1,48 @@
+METHOD 0600027C \x89\x87.\x89\x86::\x87\x86\x9e RVA=2584C file=23A4C
+IL_0000: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0005: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000A: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_000F: pop 
+IL_0010: ldarg.0 
+IL_0011: ldfld 0x0400014F \x89\x87.\x89\x86::\x87\x89\x9b
+IL_0016: brtrue.s 37
+IL_0018: ret 
+IL_0019: ldarg.0 
+IL_001A: ldfld 0x0400014F \x89\x87.\x89\x86::\x87\x89\x9b
+IL_001F: callvirt 0x0A0001C3 0x1B00000A::get_Count
+IL_0024: brtrue.s 51
+IL_0026: ret 
+IL_0027: ldarg.2 
+IL_0028: callvirt 0x0A0002C5 System.Windows.Forms.DataGridViewCellEventArgs::get_ColumnIndex
+IL_002D: ldc.i4.0 
+IL_002E: blt.s 154
+IL_0030: call 0x060002C7 \x89\x87.\x89\x86::\x87\x99
+IL_0035: call 0x060002C8 \x89\x87.\x89\x86::\x87\x9a
+IL_003A: brtrue.s 153
+IL_003C: pop 
+IL_003D: ldarg.2 
+IL_003E: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_0043: ldc.i4.0 
+IL_0044: blt.s 154
+IL_0046: ldarg.0 
+IL_0047: ldfld 0x04000150 \x89\x87.\x89\x86::\x87\x89\x9c
+IL_004C: ldarg.0 
+IL_004D: ldfld 0x04000159 \x89\x87.\x89\x86::\x87\x8a\x8c
+IL_0052: callvirt 0x0A00016F System.Windows.Forms.DataGridView::get_Rows
+IL_0057: ldarg.2 
+IL_0058: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_005D: callvirt 0x0A0002C7 System.Windows.Forms.DataGridViewRowCollection::get_Item
+IL_0062: callvirt 0x0A000173 System.Windows.Forms.DataGridViewRow::get_Cells
+IL_0067: ldc.i4.0 
+IL_0068: callvirt 0x0A0002C8 System.Windows.Forms.DataGridViewCellCollection::get_Item
+IL_006D: callvirt 0x0A000175 System.Windows.Forms.DataGridViewCell::get_Value
+IL_0072: callvirt 0x0A000086 System.Object::ToString
+IL_0077: callvirt 0x0A0002C9 0x1B00000C::get_Item
+IL_007C: ldarg.0 
+IL_007D: ldfld 0x0400014F \x89\x87.\x89\x86::\x87\x89\x9b
+IL_0082: call 0x060000B0 \x8e.\x8d::\x89\x93
+IL_0087: call 0x060000AF \x8e.\x8d::\x89\x92
+IL_008C: ret 
+IL_008D: pop 
+IL_008E: ret 
+

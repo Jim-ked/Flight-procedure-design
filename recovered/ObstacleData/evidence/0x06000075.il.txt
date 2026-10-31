@@ -1,0 +1,46 @@
+METHOD 06000075 \x8a.\x89::\x87\x9a RVA=81C4 file=63C4
+IL_0000: ldarg.2 
+IL_0001: call 0x2B000002 
+IL_0006: callvirt 0x0A000089 System.String::TrimStart
+IL_000B: stloc.0 
+IL_000C: ldloc.0 
+IL_000D: ldc.i4 496
+IL_0012: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0017: callvirt 0x0A00008A System.String::StartsWith
+IL_001C: brtrue.s 94
+IL_001E: ldloc.0 
+IL_001F: ldc.i4 500
+IL_0024: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0029: callvirt 0x0A00008A System.String::StartsWith
+IL_002E: brtrue.s 94
+IL_0030: ldarg.0 
+IL_0031: ldarg.1 
+IL_0032: ldc.i4 504
+IL_0037: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_003C: ldarg.2 
+IL_003D: ldc.i4 328
+IL_0042: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0047: call 0x0A000057 System.String::Concat
+IL_004C: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_0051: ret 
+IL_0052: ldarg.0 
+IL_0053: ldarg.1 
+IL_0054: ldc.i4 328
+IL_0059: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_005E: call 0x0A00008B System.String::Concat
+IL_0063: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_0068: ldc.i4.0 
+IL_0069: stloc.1 
+IL_006A: call 0x0600007D \x8a.\x89::\x8d
+IL_006F: call 0x0600007E \x8a.\x89::\x8e
+IL_0074: brtrue.s 143
+IL_0076: pop 
+IL_0077: ldarg.0 
+IL_0078: ldloc.0 
+IL_0079: ldloca.s local(0x0001)
+IL_007B: ldc.i4.1 
+IL_007C: call 0x06000076 \x8a.\x89::\x87\x9b
+IL_0081: br.s 144
+IL_0083: pop 
+IL_0084: ret 
+

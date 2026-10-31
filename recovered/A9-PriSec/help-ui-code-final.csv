@@ -1,0 +1,6 @@
+﻿Function,Help/UI,Code,Classification,Finding,Evidence
+Primary/secondary evaluation,主副区评估 / Evaluate,"UI event reaches ScreenData, transform, Normal/IF evaluator and grid",CONSISTENT,"A9 is evaluator, not drawing command",A9 final-static-closure.md
+IF mode,Intermediate/IF checkbox,inclusive endpoints and W1 primary end width,CONSISTENT,distinct branch is implemented,mode-comparison.csv
+Mark,selected-row mark,ID maps to original DBPoint; inserts obst and writes Altitude=Z,CONSISTENT,does not mark OCA/MOC,marker.md
+Protection-area drawing,no public A9 drawing control in indexed chain,no Polyline/Line/Arc/Circle/Group writer,CONSISTENT,"A9 is an obstacle evaluator, not a protection-area construction command.",pri-sec-evaluation.md
+Normative endpoint/MOC meaning,primary/secondary labels,old strict/inclusive and proportional arithmetic recovered,UNCERTAIN,code behavior closed; standards interpretation remains unresolved,standard-basis-note.md

@@ -1,0 +1,14 @@
+METHOD 06000365 \x89\x93.\x89\x92::\x87\x9a\x93 RVA=45E5 file=27E5
+IL_0000: ldarg.0 
+IL_0001: ldc.r8 1.5707963267948966
+IL_000A: bge.un.s 27
+IL_000C: ldarg.0 
+IL_000D: ldc.r8 -1.5707963267948966
+IL_0016: ble.un.s 27
+IL_0018: ldarg.0 
+IL_0019: ret 
+IL_001A: ldc.r8 3.141592653589793
+IL_0023: ldarg.0 
+IL_0024: add 
+IL_0025: ret 
+

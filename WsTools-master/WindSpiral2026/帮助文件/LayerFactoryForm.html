@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>批量添加图层 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 辅助功能 / 批量添加图层</div>
+        <h1>C2.批量添加图层</h1>
+        <div class="cmd">命令：Y91_CreateLayer</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>辅助功能</h2>
+                <ul>
+                    <li><a href="FormBlockImport.html">C1.导入图标库</a></li>
+                    <li><a href="LayerFactoryForm.html" class="active">C2.批量添加图层</a></li>
+                    <li><a href="FormExLine.html">C3.绘制外扩线</a></li>
+                    <li><a href="FormRandPoint.html">C4.随机添加高度点</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">传统程序 / PBN 程序</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【批量添加图层】按文本清单<strong>批量创建多个图层</strong>，并可为每个图层指定颜色编号与线宽，快速建立符合规范的图层体系。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/LayerFactoryForm.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/LayerFactoryForm.png" alt="LayerFactoryForm 界面截图" width="392"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>图层配置</td><td>多行文本框，每行一个图层，格式为“名称，颜色编号，线宽”。</td></tr>
+                        <tr><td>加载（按钮）</td><td>载入图层配置文件。</td></tr>
+                        <tr><td>查询（按钮）</td><td>查询当前文件的图层设置。</td></tr>
+                        <tr><td>保存（按钮）</td><td>将当前图层配置数据保存到文本文件中。</td></tr>
+                        <tr><td>添加图层（按钮）</td><td>解析清单并批量创建图层，完成后提示“添加成功”。</td></tr>
+                        <tr><td>取消（按钮）</td><td>关闭窗口。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>数据格式</h2>
+                <p>每行一个图层，字段用逗号分隔（支持中文逗号“，”）。颜色编号、线宽可省略：</p>
+                <pre><code>名称，颜色编号，线宽
+跑道，1，50
+真北，2
+障碍物</code></pre>
+                <ul class="plain">
+                    <li>只写“名称”：按默认颜色 / 线宽创建图层。</li>
+                    <li>“名称，颜色编号”：指定颜色（ACI 颜色号）。</li>
+                    <li>“名称，颜色编号，线宽”：同时指定线宽。</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y91_CreateLayer</code> 打开窗口。</li>
+                    <li>在“图层配置”中按行填写图层清单（或点【加载】套用模板）。</li>
+                    <li>点击【添加图层】批量创建，完成后会提示“添加成功”。</li>
+                </ul>
+                <div class="warn"><strong>格式校验：</strong>字段多于 3 个或格式有误的行会提示“数据格式有误，添加失败”，该行不创建。</div>
+            </div>
+            <div class="pager">
+                <a href="FormBlockImport.html">← 上一篇：C1.导入图标库</a>
+                <a href="FormExLine.html">下一篇：C3.绘制外扩线 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+METHOD 0600057A \x8b\x97.\x8b\x96::\x89\x97\x86 RVA=4F81 file=3181
+IL_0000: ldc.i4.1 
+IL_0001: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_0006: brtrue.s 22
+IL_0008: pop 
+IL_0009: ldarg.2 
+IL_000A: callvirt 0x0A00020E System.Windows.Forms.KeyPressEventArgs::get_KeyChar
+IL_000F: ldc.i4.s 13
+IL_0011: bne.un.s 38
+IL_0013: br.s 23
+IL_0015: pop 
+IL_0016: ldarg.0 
+IL_0017: ldnull 
+IL_0018: ldnull 
+IL_0019: call 0x06000570 \x8b\x97.\x8b\x96::\x89\x96\x95
+IL_001E: ldarg.2 
+IL_001F: ldc.i4.1 
+IL_0020: callvirt 0x0A000211 System.Windows.Forms.KeyPressEventArgs::set_Handled
+IL_0025: ret 
+

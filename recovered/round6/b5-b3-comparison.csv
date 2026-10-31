@@ -1,0 +1,8 @@
+﻿item,B3,other,classification,evidence
+frame,"P47B P0AC(THR,RWY-end)","B5 P4FF P0AC(DER,THR)",Same MethodDef,Parameter order differs; frozen B5 runway-frame.md
+turn geometry,No turn branch/TurnEnd input,B5 PBN turning classes,Different implementation,No direct B3 business ctor calls
+evaluator,B3 own LNAV/APV,B5 own PBN evaluator,Different implementation,No direct B3 call
+P793,P48A direct new; TAS->SOC,B5 direct same ctor for turning,Same MethodDef,P793 original P794; actual field consumers differ
+parser/ID/Mark,SelectAll P10D; parser P12F; Mark P09C/P09E,B5 shared helper family,Same MethodDef,B3 MethodSpec resolved; no Take(5)
+CAD writer,P087/P089 Polyline/Group WsObject,B5 same shared writer,Same MethodDef,B3 no ZeroZ but Point2d losesZ; full state text
+C6/PDA/required gradient,No counterpart; MCG input,B5 own turning quantities,Different implementation,No new B5 analysis; frozen comparison only

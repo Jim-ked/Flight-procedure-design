@@ -1,0 +1,229 @@
+METHOD 06000363 \x89\x93.\x89\x92::\x87\x9a\x91 RVA=4353C file=4173C
+IL_0000: nop 
+IL_0001: br 271
+IL_0006: ldarg.0 
+IL_0007: ldfld 0x04000287 \x89\x93.\x89\x92::\x87\x9b\x90
+IL_000C: brtrue.s 38
+IL_000E: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_0013: brtrue 291
+IL_0018: br.s 163
+IL_001A: ldarg.0 
+IL_001B: ldfld 0x04000287 \x89\x93.\x89\x92::\x87\x9b\x90
+IL_0020: callvirt 0x0A0001C3 0x1B00000A::get_Count
+IL_0025: brfalse 292
+IL_002A: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_002F: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0034: dup 
+IL_0035: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_003A: stloc.2 
+IL_003B: dup 
+IL_003C: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_0041: stloc.0 
+IL_0042: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_0047: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_004C: call 0x06000353 \x89\x93.\x89\x92::\x87\x99\x9a
+IL_0051: pop 
+IL_0052: ldarg.0 
+IL_0053: ldc.i4.0 
+IL_0054: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0059: ldc.i4 4660
+IL_005E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0063: newobj 0x0A00007B Autodesk.AutoCAD.EditorInput.PromptEntityOptions::.ctor
+IL_0068: stloc.3 
+IL_0069: ldloc.3 
+IL_006A: ldc.i4 4664
+IL_006F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0074: callvirt 0x0A0000ED Autodesk.AutoCAD.EditorInput.PromptEntityOptions::SetRejectMessage
+IL_0079: ldc.i4.1 
+IL_007A: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_007F: brtrue.s 162
+IL_0081: pop 
+IL_0082: ldloc.3 
+IL_0083: nop 
+IL_0084: ldtoken 0x01000030 Autodesk.AutoCAD.DatabaseServices.Polyline
+IL_0089: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_008E: ldc.i4.1 
+IL_008F: callvirt 0x0A0000EE Autodesk.AutoCAD.EditorInput.PromptEntityOptions::AddAllowedClass
+IL_0094: br.s 163
+IL_0096: pop 
+IL_0097: ldloc.2 
+IL_0098: ldloc.3 
+IL_0099: callvirt 0x0A00007C Autodesk.AutoCAD.EditorInput.Editor::GetEntity
+IL_009E: stloc.s local(0x0004)
+IL_00A0: ldarg.0 
+IL_00A1: ldc.i4.1 
+IL_00A2: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_00A7: ldloc.s local(0x0004)
+IL_00A9: callvirt 0x0A00006D Autodesk.AutoCAD.EditorInput.PromptResult::get_Status
+IL_00AE: ldc.i4 5100
+IL_00B3: beq.s 195
+IL_00B5: br.s 293
+IL_00B7: ldloc.s local(0x0004)
+IL_00B9: callvirt 0x0A00007F Autodesk.AutoCAD.EditorInput.PromptEntityResult::get_ObjectId
+IL_00BE: stloc.s local(0x0005)
+IL_00C0: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+IL_00C5: stloc.s local(0x0006)
+IL_00C7: ldarg.0 
+IL_00C8: ldfld 0x040002BB \x89\x93.\x89\x92::\x87\x9d\x92
+IL_00CD: ldc.i4 1984
+IL_00D2: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00D7: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_00DC: stloc.s local(0x0007)
+IL_00DE: ldarg.0 
+IL_00DF: ldfld 0x040002BD \x89\x93.\x89\x92::\x87\x9d\x94
+IL_00E4: ldc.i4 1984
+IL_00E9: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00EE: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_00F3: stloc.s local(0x0008)
+IL_00F5: newobj 0x0A0002EF 0x1B00002D::.ctor
+IL_00FA: stloc.s local(0x0009)
+IL_00FC: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_0101: brtrue.s 310
+IL_0103: ldc.i4 576
+IL_0108: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_010D: brfalse 18
+IL_0112: br 716
+IL_0117: ret 
+IL_0118: ret 
+IL_0119: ldloc.2 
+IL_011A: ldc.i4 4668
+IL_011F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0124: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_0129: ret 
+IL_012A: ldloc.0 
+IL_012B: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_0130: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_0135: stloc.1 
+IL_0136: ldloc.1 
+IL_0137: ldloc.s local(0x0005)
+IL_0139: ldc.i4.0 
+IL_013A: callvirt 0x0A000080 Autodesk.AutoCAD.DatabaseServices.Transaction::GetObject
+IL_013F: isinst 0x01000030 Autodesk.AutoCAD.DatabaseServices.Polyline
+IL_0144: stloc.s local(0x0006)
+IL_0146: ldloc.s local(0x0006)
+IL_0148: ldnull 
+IL_0149: call 0x0A000054 Autodesk.AutoCAD.Runtime.DisposableWrapper::op_Inequality
+IL_014E: brfalse 645
+IL_0153: ldc.i4.1 
+IL_0154: stloc.s local(0x000A)
+IL_0156: ldarg.0 
+IL_0157: ldfld 0x04000287 \x89\x93.\x89\x92::\x87\x9b\x90
+IL_015C: callvirt 0x0A00011B 0x1B00000A::GetEnumerator
+IL_0161: stloc.s local(0x000B)
+IL_0163: nop 
+IL_0164: br 617
+IL_0169: ldloca.s local(0x000B)
+IL_016B: call 0x0A00011C 0x1B00000B::get_Current
+IL_0170: ldloca.s local(0x000A)
+IL_0172: call 0x0A0001C4 System.Int32::ToString
+IL_0177: call 0x0600012F \x87\x87.\x87\x86::\x8c\x8d
+IL_017C: stloc.s local(0x000C)
+IL_017E: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_0183: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_0188: brfalse 559
+IL_018D: pop 
+IL_018E: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_0193: brfalse.s 462
+IL_0195: ldloc.s local(0x000A)
+IL_0197: ldc.i4.1 
+IL_0198: add 
+IL_0199: stloc.s local(0x000A)
+IL_019B: ldloc.s local(0x000C)
+IL_019D: newobj 0x06000400 \x8a\x8c.\x8a\x8b::.ctor
+IL_01A2: stloc.s local(0x000D)
+IL_01A4: ldarg.0 
+IL_01A5: ldloc.s local(0x0006)
+IL_01A7: ldloc.s local(0x000C)
+IL_01A9: call 0x0600036B \x89\x93.\x89\x92::\x87\x9a\x99
+IL_01AE: brtrue.s 560
+IL_01B0: ldarg.0 
+IL_01B1: ldloc.s local(0x0006)
+IL_01B3: ldloc.s local(0x000C)
+IL_01B5: call 0x0600036C \x89\x93.\x89\x92::\x87\x9a\x9a
+IL_01BA: stloc.s local(0x000E)
+IL_01BC: ldloc.s local(0x000E)
+IL_01BE: ldloc.s local(0x0008)
+IL_01C0: ble.un.s 484
+IL_01C2: ldloc.s local(0x000D)
+IL_01C4: ldc.i4 1556
+IL_01C9: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_01CE: stfld 0x0400037B \x8a\x8c.\x8a\x8b::\x88\x8f\x9c
+IL_01D3: br 617
+IL_01D8: ldloc.s local(0x000D)
+IL_01DA: ldc.i4 3600
+IL_01DF: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_01E4: stfld 0x0400037B \x8a\x8c.\x8a\x8b::\x88\x8f\x9c
+IL_01E9: ldloc.s local(0x000D)
+IL_01EB: ldloc.s local(0x0007)
+IL_01ED: ldloc.s local(0x0008)
+IL_01EF: ldloc.s local(0x000E)
+IL_01F1: sub 
+IL_01F2: mul 
+IL_01F3: ldloc.s local(0x0008)
+IL_01F5: div 
+IL_01F6: stfld 0x0400037C \x8a\x8c.\x8a\x8b::\x88\x8f\x9d
+IL_01FB: ldloc.s local(0x000D)
+IL_01FD: ldloc.s local(0x000D)
+IL_01FF: callvirt 0x06000800 \x8f\x8f.\x8f\x8e::\x8b\x89\x9a
+IL_0204: ldloc.s local(0x000D)
+IL_0206: ldfld 0x0400037C \x8a\x8c.\x8a\x8b::\x88\x8f\x9d
+IL_020B: add 
+IL_020C: stfld 0x0400037D \x8a\x8c.\x8a\x8b::\x88\x8f\x9e
+IL_0211: ldloc.s local(0x0009)
+IL_0213: ldloc.s local(0x000D)
+IL_0215: callvirt 0x0A0002F1 0x1B00002D::Add
+IL_021A: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_021F: brtrue.s 617
+IL_0221: br.s 617
+IL_0223: pop 
+IL_0224: ldloc.s local(0x000D)
+IL_0226: ldc.i4 3596
+IL_022B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0230: stfld 0x0400037B \x8a\x8c.\x8a\x8b::\x88\x8f\x9c
+IL_0235: ldloc.s local(0x000D)
+IL_0237: ldloc.s local(0x0007)
+IL_0239: stfld 0x0400037C \x8a\x8c.\x8a\x8b::\x88\x8f\x9d
+IL_023E: ldloc.s local(0x000D)
+IL_0240: ldloc.s local(0x000D)
+IL_0242: callvirt 0x06000800 \x8f\x8f.\x8f\x8e::\x8b\x89\x9a
+IL_0247: ldloc.s local(0x000D)
+IL_0249: ldfld 0x0400037C \x8a\x8c.\x8a\x8b::\x88\x8f\x9d
+IL_024E: add 
+IL_024F: stfld 0x0400037D \x8a\x8c.\x8a\x8b::\x88\x8f\x9e
+IL_0254: ldloc.s local(0x0009)
+IL_0256: ldloc.s local(0x000D)
+IL_0258: callvirt 0x0A0002F1 0x1B00002D::Add
+IL_025D: ldloca.s local(0x000B)
+IL_025F: call 0x0A00011E 0x1B00000B::MoveNext
+IL_0264: brtrue 373
+IL_0269: leave.s 645
+IL_026B: ldloca.s local(0x000B)
+IL_026D: constrained. 0x1B00000B 
+IL_0273: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0278: endfinally 
+IL_0279: ldloc.1 
+IL_027A: callvirt 0x0A0000A4 Autodesk.AutoCAD.DatabaseServices.Transaction::Commit
+IL_027F: leave.s 663
+IL_0281: ldloc.1 
+IL_0282: brfalse.s 662
+IL_0284: ldloc.1 
+IL_0285: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_028A: endfinally 
+IL_028B: ldloc.s local(0x0009)
+IL_028D: ldsfld 0x040002C5 .\x90\x90::<>9__22_0
+IL_0292: dup 
+IL_0293: brtrue.s 696
+IL_0295: pop 
+IL_0296: ldsfld 0x040002C4 .\x90\x90::<>9
+IL_029B: ldftn 0x06000381 .\x90\x90::\x8b\x8e\x8e
+IL_02A1: newobj 0x0A0002F3 0x1B00002F::.ctor
+IL_02A6: dup 
+IL_02A7: stsfld 0x040002C5 .\x90\x90::<>9__22_0
+IL_02AC: call 0x2B000011 
+IL_02B1: call 0x2B000012 
+IL_02B6: stloc.s local(0x0009)
+IL_02B8: ldarg.0 
+IL_02B9: ldloc.s local(0x0009)
+IL_02BB: call 0x06000374 \x89\x93.\x89\x92::\x87\x9b\x89
+IL_02C0: ret 
+

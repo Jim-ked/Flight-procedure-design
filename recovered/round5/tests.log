@@ -1,0 +1,1101 @@
+Independent recovered C# tests; no target DLL loaded.
+=====Turn Parameters=====
+IAS = 185.2 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 194.66 km/h
+WindSpeed = 37.04 km/h
+BankAngle = 15°
+DraftAngle = 10.97°
+R = 2.78 °/s
+Radius = 1113 m
+Esita = 3.7 m /°
+E45 = 166 m 
+E90 = 333 m 
+E135 = 499 m 
+E180 = 665 m 
+E235 = 868 m 
+C6 = (v+w)*6 = 386 m 
+
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS form assertions=16
+PASS helpers assertions=6
+PASS hull-collinear assertions=0
+PASS hull-same-reference assertions=0
+PASS hull-coincident assertions=0
+LEGACY_TIMEOUT deg-alt-zero after 8s
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_N assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_E assertions=13
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_R_N assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_R_E assertions=13
+=====Turn Parameters=====
+IAS = 420 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 441.47 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 7.29°
+R = 1.23 °/s
+Radius = 5723 m
+Esita = 12.7 m /°
+E45 = 570 m 
+E90 = 1140 m 
+E135 = 1710 m 
+E180 = 2281 m 
+E235 = 2977 m 
+C6 = (v+w)*6 = 829 m 
+
+PASS alt_12000_L_N_ias assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 100 km/h
+BankAngle = 15°
+DraftAngle = 18.49°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 16.2 m /°
+E45 = 727 m 
+E90 = 1454 m 
+E135 = 2182 m 
+E180 = 2909 m 
+E235 = 3798 m 
+C6 = (v+w)*6 = 692 m 
+
+PASS alt_12000_L_N_wind assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 25°
+DraftAngle = 10.23°
+R = 2.99 °/s
+Radius = 1678 m
+Esita = 5.2 m /°
+E45 = 234 m 
+E90 = 468 m 
+E135 = 702 m 
+E180 = 936 m 
+E235 = 1222 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_N_bank assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 705 m
+k = 1.0617
+TAS = 318.52 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.13°
+R = 1.7 °/s
+Radius = 2979 m
+Esita = 9.1 m /°
+E45 = 411 m 
+E90 = 823 m 
+E135 = 1234 m 
+E180 = 1645 m 
+E235 = 2148 m 
+C6 = (v+w)*6 = 624 m 
+
+PASS alt_12000_L_N_pdg assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_N_after assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_N_near assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_N_wide assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 314.61 m
+k = 1.0416
+TAS = 312.47 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.32°
+R = 1.73 °/s
+Radius = 2867 m
+Esita = 9 m /°
+E45 = 404 m 
+E90 = 807 m 
+E135 = 1211 m 
+E180 = 1614 m 
+E235 = 2107 m 
+C6 = (v+w)*6 = 614 m 
+
+PASS alt_6351.949_L_N assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 314.61 m
+k = 1.0416
+TAS = 312.47 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.32°
+R = 1.73 °/s
+Radius = 2867 m
+Esita = 9 m /°
+E45 = 404 m 
+E90 = 807 m 
+E135 = 1211 m 
+E180 = 1614 m 
+E235 = 2107 m 
+C6 = (v+w)*6 = 614 m 
+
+PASS alt_6351.95_L_N assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 314.61 m
+k = 1.0416
+TAS = 312.47 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.32°
+R = 1.73 °/s
+Radius = 2867 m
+Esita = 9 m /°
+E45 = 404 m 
+E90 = 807 m 
+E135 = 1211 m 
+E180 = 1614 m 
+E235 = 2107 m 
+C6 = (v+w)*6 = 614 m 
+
+PASS alt_6351.951_L_N assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 542.7 m
+k = 1.0533
+TAS = 315.98 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.21°
+R = 1.72 °/s
+Radius = 2932 m
+Esita = 9.1 m /°
+E45 = 408 m 
+E90 = 816 m 
+E135 = 1224 m 
+E180 = 1632 m 
+E235 = 2131 m 
+C6 = (v+w)*6 = 620 m 
+
+PASS alt_13263.709_L_N assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 542.7 m
+k = 1.0533
+TAS = 315.98 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.21°
+R = 1.72 °/s
+Radius = 2932 m
+Esita = 9.1 m /°
+E45 = 408 m 
+E90 = 816 m 
+E135 = 1224 m 
+E180 = 1632 m 
+E235 = 2131 m 
+C6 = (v+w)*6 = 620 m 
+
+PASS alt_13263.71_L_N assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 542.7 m
+k = 1.0533
+TAS = 315.98 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.21°
+R = 1.72 °/s
+Radius = 2932 m
+Esita = 9.1 m /°
+E45 = 408 m 
+E90 = 816 m 
+E135 = 1224 m 
+E180 = 1632 m 
+E235 = 2131 m 
+C6 = (v+w)*6 = 620 m 
+
+PASS alt_13263.711_L_N assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 138 m
+k = 1.0326
+TAS = 309.79 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.41°
+R = 1.75 °/s
+Radius = 2818 m
+Esita = 8.9 m /°
+E45 = 400 m 
+E90 = 800 m 
+E135 = 1200 m 
+E180 = 1600 m 
+E235 = 2089 m 
+C6 = (v+w)*6 = 610 m 
+
+PASS alt_1000_L_N assertions=1 expected exception
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 72 m
+k = 1.0293
+TAS = 308.79 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.45°
+R = 1.76 °/s
+Radius = 2800 m
+Esita = 8.9 m /°
+E45 = 399 m 
+E90 = 798 m 
+E135 = 1196 m 
+E180 = 1595 m 
+E235 = 2083 m 
+C6 = (v+w)*6 = 608 m 
+
+PASS alt_-1000_L_N assertions=1 expected exception
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_N_c6low assertions=1 expected exception
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_N_c6hi assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_N_c6upperlow assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS alt_12000_L_N_c6upperhi assertions=12
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_E assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_R_N assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_R_E assertions=10
+=====Turn Parameters=====
+IAS = 420 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 441.47 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 7.29°
+R = 1.23 °/s
+Radius = 5723 m
+Esita = 12.7 m /°
+E45 = 570 m 
+E90 = 1140 m 
+E135 = 1710 m 
+E180 = 2281 m 
+E235 = 2977 m 
+C6 = (v+w)*6 = 829 m 
+
+PASS fo_12000_L_N_ias assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 100 km/h
+BankAngle = 15°
+DraftAngle = 18.49°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 16.2 m /°
+E45 = 727 m 
+E90 = 1454 m 
+E135 = 2182 m 
+E180 = 2909 m 
+E235 = 3798 m 
+C6 = (v+w)*6 = 692 m 
+
+PASS fo_12000_L_N_wind assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 25°
+DraftAngle = 10.23°
+R = 2.99 °/s
+Radius = 1678 m
+Esita = 5.2 m /°
+E45 = 234 m 
+E90 = 468 m 
+E135 = 702 m 
+E180 = 936 m 
+E235 = 1222 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_bank assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 705 m
+k = 1.0617
+TAS = 318.52 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.13°
+R = 1.7 °/s
+Radius = 2979 m
+Esita = 9.1 m /°
+E45 = 411 m 
+E90 = 823 m 
+E135 = 1234 m 
+E180 = 1645 m 
+E235 = 2148 m 
+C6 = (v+w)*6 = 624 m 
+
+PASS fo_12000_L_N_pdg assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_after assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_near assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 501 m
+k = 1.0511
+TAS = 315.34 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2920 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_wide assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 314.61 m
+k = 1.0416
+TAS = 312.47 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.32°
+R = 1.73 °/s
+Radius = 2867 m
+Esita = 9 m /°
+E45 = 404 m 
+E90 = 807 m 
+E135 = 1211 m 
+E180 = 1614 m 
+E235 = 2107 m 
+C6 = (v+w)*6 = 614 m 
+
+PASS fo_6351.949_L_N assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 314.61 m
+k = 1.0416
+TAS = 312.47 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.32°
+R = 1.73 °/s
+Radius = 2867 m
+Esita = 9 m /°
+E45 = 404 m 
+E90 = 807 m 
+E135 = 1211 m 
+E180 = 1614 m 
+E235 = 2107 m 
+C6 = (v+w)*6 = 614 m 
+
+PASS fo_6351.95_L_N assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 314.61 m
+k = 1.0416
+TAS = 312.47 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.32°
+R = 1.73 °/s
+Radius = 2867 m
+Esita = 9 m /°
+E45 = 404 m 
+E90 = 807 m 
+E135 = 1211 m 
+E180 = 1614 m 
+E235 = 2107 m 
+C6 = (v+w)*6 = 614 m 
+
+PASS fo_6351.951_L_N assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 542.7 m
+k = 1.0533
+TAS = 315.98 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.21°
+R = 1.72 °/s
+Radius = 2932 m
+Esita = 9.1 m /°
+E45 = 408 m 
+E90 = 816 m 
+E135 = 1224 m 
+E180 = 1632 m 
+E235 = 2131 m 
+C6 = (v+w)*6 = 620 m 
+
+PASS fo_13263.709_L_N assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 542.7 m
+k = 1.0533
+TAS = 315.98 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.21°
+R = 1.72 °/s
+Radius = 2932 m
+Esita = 9.1 m /°
+E45 = 408 m 
+E90 = 816 m 
+E135 = 1224 m 
+E180 = 1632 m 
+E235 = 2131 m 
+C6 = (v+w)*6 = 620 m 
+
+PASS fo_13263.71_L_N assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 542.7 m
+k = 1.0533
+TAS = 315.98 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.21°
+R = 1.72 °/s
+Radius = 2932 m
+Esita = 9.1 m /°
+E45 = 408 m 
+E90 = 816 m 
+E135 = 1224 m 
+E180 = 1632 m 
+E235 = 2131 m 
+C6 = (v+w)*6 = 620 m 
+
+PASS fo_13263.711_L_N assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 138 m
+k = 1.0326
+TAS = 309.79 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.41°
+R = 1.75 °/s
+Radius = 2818 m
+Esita = 8.9 m /°
+E45 = 400 m 
+E90 = 800 m 
+E135 = 1200 m 
+E180 = 1600 m 
+E235 = 2089 m 
+C6 = (v+w)*6 = 610 m 
+
+PASS fo_1000_L_N assertions=1 expected exception
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 72 m
+k = 1.0293
+TAS = 308.79 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.45°
+R = 1.76 °/s
+Radius = 2800 m
+Esita = 8.9 m /°
+E45 = 399 m 
+E90 = 798 m 
+E135 = 1196 m 
+E180 = 1595 m 
+E235 = 2083 m 
+C6 = (v+w)*6 = 608 m 
+
+PASS fo_-1000_L_N assertions=1 expected exception
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_c6low assertions=1 expected exception
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_c6hi assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_c6upperlow assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_c6upperhi assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_navlow assertions=10
+=====Turn Parameters=====
+IAS = 300 km/h
+Altitude = 500 m
+k = 1.0511
+TAS = 315.32 km/h
+WindSpeed = 56 km/h
+BankAngle = 15°
+DraftAngle = 10.23°
+R = 1.72 °/s
+Radius = 2919 m
+Esita = 9 m /°
+E45 = 407 m 
+E90 = 814 m 
+E135 = 1222 m 
+E180 = 1629 m 
+E235 = 2127 m 
+C6 = (v+w)*6 = 619 m 
+
+PASS fo_12000_L_N_navhi assertions=10
+fixtures=54 failures=0 legacy_timeouts=1
+PASS postchecks 64 C# assertions 490

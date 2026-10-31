@@ -1,0 +1,8 @@
+73110: 		private double _008A_008B_0098(double P_0, double P_1, double P_2, double P_3, double P_4)
+73111: 		{
+73112: 			if (P_2 == P_0)
+73113: 			{
+73114: 				return Math.Min(P_1, P_3);
+73115: 			}
+73116: 			return (P_3 - P_1) * (P_4 - P_0) / (P_2 - P_0) + P_1;
+73117: 		}

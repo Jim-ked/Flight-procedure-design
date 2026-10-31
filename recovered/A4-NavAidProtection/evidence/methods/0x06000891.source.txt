@@ -1,0 +1,15 @@
+95292: 		private static byte[] _008B_0090_008E(string P_0)
+95293: 		{
+95294: 			using FileStream fileStream = new FileStream(P_0, FileMode.Open, FileAccess.Read, FileShare.Read);
+95295: 			int num = 0;
+95296: 			long length = fileStream.Length;
+95297: 			int num2 = (int)length;
+95298: 			byte[] array = new byte[num2];
+95299: 			while (num2 > 0)
+95300: 			{
+95301: 				int num3 = fileStream.Read(array, num, num2);
+95302: 				num += num3;
+95303: 				num2 -= num3;
+95304: 			}
+95305: 			return array;
+95306: 		}

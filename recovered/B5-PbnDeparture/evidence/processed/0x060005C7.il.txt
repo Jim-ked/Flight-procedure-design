@@ -1,0 +1,26 @@
+METHOD 060005C7 \x8c\x92.\x8c\x91::.ctor RVA=7E76C file=7C96C
+IL_0000: ldarg.0 
+IL_0001: ldc.r8 1.0
+IL_000A: ldc.r8 1.0
+IL_0013: ldc.r8 1.0
+IL_001C: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_0021: stfld 0x0400066C \x8c\x92.\x8c\x91::\x8a\x87\x9a
+IL_0026: call 0x060005D1 \x8c\x92.\x8c\x91::\x88k
+IL_002B: call 0x060005D0 \x8c\x92.\x8c\x91::\x88j
+IL_0030: brfalse.s 65
+IL_0032: pop 
+IL_0033: br.s 68
+IL_0035: pop 
+IL_0036: br.s 106
+IL_0038: ldarg.0 
+IL_0039: ldc.r8 1.0
+IL_0042: ldc.r8 1.0
+IL_004B: ldc.r8 1.0
+IL_0054: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_0059: stfld 0x0400066D \x8c\x92.\x8c\x91::\x8a\x87\x9b
+IL_005E: ldarg.0 
+IL_005F: call 0x0A00002C System.Object::.ctor
+IL_0064: call 0x060005D1 \x8c\x92.\x8c\x91::\x88k
+IL_0069: brtrue.s 68
+IL_006B: ret 
+

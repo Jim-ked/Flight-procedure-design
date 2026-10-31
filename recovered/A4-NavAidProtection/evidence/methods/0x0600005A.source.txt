@@ -1,0 +1,20 @@
+439: 		private int _0098(string P_0)
+440: 		{
+441: 			_008E();
+442: 			Form form = default(Form);
+443: 			if (_008D())
+444: 			{
+445: 				if (_008D())
+446: 				{
+447: 				}
+448: 				form = Application.OpenForms[P_0];
+449: 			}
+450: 			if (form != null && !form.IsDisposed)
+451: 			{
+452: 				form.WindowState = FormWindowState.Normal;
+453: 				form.Activate();
+454: 				form.Show();
+455: 				return 1;
+456: 			}
+457: 			return 0;
+458: 		}

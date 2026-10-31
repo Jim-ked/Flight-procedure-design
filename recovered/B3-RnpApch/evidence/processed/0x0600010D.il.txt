@@ -1,0 +1,72 @@
+METHOD 0600010D \x9c.\x9b::\x8b\x8a RVA=D048 file=B248
+IL_0000: ldc.i4 160
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 160
+IL_000F: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0014: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0019: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_001E: stloc.0 
+IL_001F: newobj 0x0A0001AA 0x1B00001E::.ctor
+IL_0024: stloc.1 
+IL_0025: ldtoken 0x1B00001F 
+IL_002A: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_002F: call 0x0A0001AB Autodesk.AutoCAD.Runtime.RXObject::GetClass
+IL_0034: callvirt 0x0A0001AC Autodesk.AutoCAD.Runtime.RXClass::get_DxfName
+IL_0039: stloc.2 
+IL_003A: ldc.i4.2 
+IL_003B: newarr 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_0040: dup 
+IL_0041: ldc.i4.0 
+IL_0042: ldc.i4.0 
+IL_0043: ldloc.2 
+IL_0044: newobj 0x0A0000AC Autodesk.AutoCAD.DatabaseServices.TypedValue::.ctor
+IL_0049: stelem 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_004E: dup 
+IL_004F: ldc.i4.1 
+IL_0050: ldc.i4 410
+IL_0055: ldc.i4 884
+IL_005A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_005F: newobj 0x0A0000AC Autodesk.AutoCAD.DatabaseServices.TypedValue::.ctor
+IL_0064: stelem 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_0069: newobj 0x0A0001AD Autodesk.AutoCAD.EditorInput.SelectionFilter::.ctor
+IL_006E: stloc.3 
+IL_006F: ldloc.0 
+IL_0070: ldloc.3 
+IL_0071: callvirt 0x0A0001AE Autodesk.AutoCAD.EditorInput.Editor::SelectAll
+IL_0076: stloc.s local(0x0004)
+IL_0078: ldloc.s local(0x0004)
+IL_007A: callvirt 0x0A0000F1 Autodesk.AutoCAD.EditorInput.PromptSelectionResult::get_Status
+IL_007F: ldc.i4 5100
+IL_0084: bne.un.s 214
+IL_0086: ldloc.s local(0x0004)
+IL_0088: callvirt 0x0A0000F2 Autodesk.AutoCAD.EditorInput.PromptSelectionResult::get_Value
+IL_008D: callvirt 0x0A0001AF Autodesk.AutoCAD.EditorInput.SelectionSet::GetObjectIds
+IL_0092: stloc.s local(0x0005)
+IL_0094: ldc.i4.0 
+IL_0095: stloc.s local(0x0006)
+IL_0097: br.s 206
+IL_0099: ldloc.s local(0x0005)
+IL_009B: ldloc.s local(0x0006)
+IL_009D: ldelem 0x01000011 Autodesk.AutoCAD.DatabaseServices.ObjectId
+IL_00A2: stloc.s local(0x0007)
+IL_00A4: ldloca.s local(0x0007)
+IL_00A6: ldarg.1 
+IL_00A7: ldarg.2 
+IL_00A8: call 0x0A0001B0 Autodesk.AutoCAD.DatabaseServices.ObjectId::GetObject
+IL_00AD: unbox.any 0x1B00001F 
+IL_00B2: stloc.s local(0x0008)
+IL_00B4: ldloc.1 
+IL_00B5: ldloc.s local(0x0008)
+IL_00B7: callvirt 0x0A0001B1 0x1B00001E::Add
+IL_00BC: ldloc.s local(0x0006)
+IL_00BE: ldc.i4.1 
+IL_00BF: add 
+IL_00C0: stloc.s local(0x0006)
+IL_00C2: ldloc.s local(0x0006)
+IL_00C4: ldloc.s local(0x0005)
+IL_00C6: ldlen 
+IL_00C7: conv.i4 
+IL_00C8: blt.s 165
+IL_00CA: ldloc.1 
+IL_00CB: ret 
+

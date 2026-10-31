@@ -1,0 +1,8 @@
+METHOD 0600012A \x87\x87.\x87\x86::\x8c\x88 RVA=3282 file=1482
+IL_0000: ldarg.0 
+IL_0001: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0006: ldarg.0 
+IL_0007: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_000C: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0011: ret 
+

@@ -1,0 +1,65 @@
+2803: 		public static void _0089_0089(ObjectId P_0, string P_1, string P_2)
+2804: 		{
+2805: 			//IL_006f: Unknown result type (might be due to invalid IL or missing references)
+2806: 			//IL_008f: Unknown result type (might be due to invalid IL or missing references)
+2807: 			//IL_0094: Unknown result type (might be due to invalid IL or missing references)
+2808: 			//IL_0097: Unknown result type (might be due to invalid IL or missing references)
+2809: 			if (false /* original-file-bool-offset:68 */ || ((ObjectId)(ref P_0)).IsNull)
+2810: 			{
+2811: 				return;
+2812: 			}
+2813: 			if (!((ObjectId)(ref P_0)).IsValid)
+2814: 			{
+2815: 				if (!_008F())
+2816: 				{
+2817: 				}
+2818: 			}
+2819: 			else if (P_1 == null)
+2820: 			{
+2821: 				_0090();
+2822: 				if (!_008F())
+2823: 				{
+2824: 				}
+2825: 			}
+2826: 			else
+2827: 			{
+2828: 				if (P_2 == null)
+2829: 				{
+2830: 					return;
+2831: 				}
+2832: 				Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+2833: 				Database database = mdiActiveDocument.Database;
+2834: 				DocumentLock val = mdiActiveDocument.LockDocument();
+2835: 				try
+2836: 				{
+2837: 					Transaction val2 = database.TransactionManager.StartTransaction();
+2838: 					try
+2839: 					{
+2840: 						DBObject obj = val2.GetObject(P_0, (OpenMode)0);
+2841: 						foreach (ObjectId item in ((BlockReference)((obj is BlockReference) ? obj : null)).AttributeCollection)
+2842: 						{
+2843: 							DBObject obj2 = val2.GetObject(item, (OpenMode)1);
+2844: 							AttributeReference val4 = (AttributeReference)(object)((obj2 is AttributeReference) ? obj2 : null);
+2845: 							if ((DisposableWrapper)(object)val4 != (DisposableWrapper)null)
+2846: 							{
+2847: 								_008F();
+2848: 								if (_0090() || val4.Tag.ToUpper() == P_1.ToUpper())
+2849: 								{
+2850: 									((DBText)val4).TextString = P_2;
+2851: 								}
+2852: 							}
+2853: 						}
+2854: 						val2.Commit();
+2855: 						Application.UpdateScreen();
+2856: 					}
+2857: 					finally
+2858: 					{
+2859: 						((IDisposable)val2)?.Dispose();
+2860: 					}
+2861: 				}
+2862: 				finally
+2863: 				{
+2864: 					((IDisposable)val)?.Dispose();
+2865: 				}
+2866: 			}
+2867: 		}

@@ -1,0 +1,85 @@
+METHOD 06000653 \x8d\x8d.\x8d\x8c::\x8a\x90\x93 RVA=8879C file=8699C
+IL_0000: ldarg.1 
+IL_0001: ldnull 
+IL_0002: call 0x0A000047 Autodesk.AutoCAD.Runtime.DisposableWrapper::op_Equality
+IL_0007: brfalse.s 23
+IL_0009: ldc.i4.0 
+IL_000A: ret 
+IL_000B: nop 
+IL_000C: ldarg.1 
+IL_000D: callvirt 0x0A0003A7 Autodesk.AutoCAD.DatabaseServices.DBObject::get_Database
+IL_0012: stloc.0 
+IL_0013: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0018: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_001D: callvirt 0x0A00009A Autodesk.AutoCAD.ApplicationServices.Document::LockDocument
+IL_0022: stloc.1 
+IL_0023: ldloc.0 
+IL_0024: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_0029: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_002E: stloc.2 
+IL_002F: ldloc.2 
+IL_0030: ldarg.1 
+IL_0031: callvirt 0x0A0000E2 Autodesk.AutoCAD.DatabaseServices.DBObject::get_ObjectId
+IL_0036: ldc.i4.1 
+IL_0037: callvirt 0x0A000080 Autodesk.AutoCAD.DatabaseServices.Transaction::GetObject
+IL_003C: isinst 0x01000010 Autodesk.AutoCAD.DatabaseServices.Entity
+IL_0041: stloc.3 
+IL_0042: ldloc.3 
+IL_0043: ldnull 
+IL_0044: call 0x0A000054 Autodesk.AutoCAD.Runtime.DisposableWrapper::op_Inequality
+IL_0049: brfalse.s 157
+IL_004B: ldloc.2 
+IL_004C: ldloc.0 
+IL_004D: ldc.i4 6780
+IL_0052: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0057: call 0x06000632 \x8d\x89.\x8d\x88::\x8a\x90\x8c
+IL_005C: call 0x06000659 \x8d\x8d.\x8d\x8c::\x89\x8a
+IL_0061: call 0x06000658 \x8d\x8d.\x8d\x8c::\x89\x89
+IL_0066: brfalse.s 154
+IL_0068: pop 
+IL_0069: call 0x06000659 \x8d\x8d.\x8d\x8c::\x89\x8a
+IL_006E: brtrue.s 149
+IL_0070: ldloc.3 
+IL_0071: ldarg.0 
+IL_0072: call 0x06000651 \x8d\x8d.\x8d\x8c::\x8a\x90\x91
+IL_0077: callvirt 0x0A0000B4 Autodesk.AutoCAD.DatabaseServices.DBObject::set_XData
+IL_007C: call 0x06000658 \x8d\x8d.\x8d\x8c::\x89\x89
+IL_0081: brfalse.s 163
+IL_0083: ldloc.2 
+IL_0084: callvirt 0x0A0000A4 Autodesk.AutoCAD.DatabaseServices.Transaction::Commit
+IL_0089: ldc.i4.1 
+IL_008A: stloc.s local(0x0004)
+IL_008C: br.s 155
+IL_008E: pop 
+IL_008F: leave.s 237
+IL_0091: ldloc.2 
+IL_0092: callvirt 0x0A0001A8 Autodesk.AutoCAD.DatabaseServices.Transaction::Abort
+IL_0097: ldc.i4.0 
+IL_0098: stloc.s local(0x0004)
+IL_009A: leave.s 237
+IL_009C: ldloc.2 
+IL_009D: brfalse.s 177
+IL_009F: ldloc.2 
+IL_00A0: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00A5: endfinally 
+IL_00A6: ldloc.1 
+IL_00A7: brfalse.s 187
+IL_00A9: ldloc.1 
+IL_00AA: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00AF: endfinally 
+IL_00B0: stloc.s local(0x0005)
+IL_00B2: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_00B7: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_00BC: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_00C1: ldc.i4 6788
+IL_00C6: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00CB: ldloc.s local(0x0005)
+IL_00CD: callvirt 0x0A000055 System.Exception::get_Message
+IL_00D2: call 0x0A00008B System.String::Concat
+IL_00D7: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_00DC: ldc.i4.0 
+IL_00DD: stloc.s local(0x0004)
+IL_00DF: leave.s 237
+IL_00E1: ldloc.s local(0x0004)
+IL_00E3: ret 
+

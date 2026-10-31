@@ -1,0 +1,53 @@
+85141: 		public _008E_009B _008B_008C_008A()
+85142: 		{
+85143: 			try
+85144: 			{
+85145: 				double num = Convert.ToDouble(_008B_008D_0093.Text);
+85146: 				double num2 = Convert.ToDouble(_008B_008D_0094.Text);
+85147: 				_008A_0089();
+85148: 				double num3 = default(double);
+85149: 				double num4 = default(double);
+85150: 				double num5 = default(double);
+85151: 				if (!_008A_008A())
+85152: 				{
+85153: 					num3 = Convert.ToDouble(_008B_008D_0091.Text);
+85154: 					num4 = Convert.ToDouble(_008B_008D_008F.Text);
+85155: 					num5 = Convert.ToDouble(_008B_008D_008E.Text);
+85156: 					if (_008B_008C_0096())
+85157: 					{
+85158: 						goto IL_0071;
+85159: 					}
+85160: 					goto IL_007d;
+85161: 				}
+85162: 				goto IL_0085;
+85163: 				IL_009a:
+85164: 				return new _008E_009B(num, num2, num3, num5, num4);
+85165: 				IL_0071:
+85166: 				num *= 1.852;
+85167: 				goto IL_007d;
+85168: 				IL_007d:
+85169: 				if (_008B_008C_0099())
+85170: 				{
+85171: 					goto IL_0085;
+85172: 				}
+85173: 				goto IL_009a;
+85174: 				IL_0085:
+85175: 				num5 *= 1.852;
+85176: 				if (_008A_008A())
+85177: 				{
+85178: 					goto IL_0071;
+85179: 				}
+85180: 				goto IL_009a;
+85181: 			}
+85182: 			catch
+85183: 			{
+85184: 				MessageBox.Show("参数输入有误，请检查。" /* string-offset:7500 */, "\n输入错误" /* string-offset:7504 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+85185: 				return null;
+85186: 			}
+85187: 		}
+85188: 
+85189: 		public void _008B_008C_008B(_008E_009B P_0)
+85190: 		{
+85191: 			int num = 5;
+85192: 			while (P_0 != null)
+85193: 			{

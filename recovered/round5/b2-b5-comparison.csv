@@ -1,0 +1,11 @@
+﻿item,classification,B5,other,evidence
+turn parameter,Same MethodDef,direct P793 via P500/P50A,B2 via P854 -> P793,shared-pbn-departure-calls.csv; round3 shared table
+ATT,Different implementation,TA/H no ATT; FO fixed1482,UI waypoint descriptor ATT,navigation-tolerance.md
+earliest/latest,Different implementation,TA/H d/C6;FO TP+-1482 and C6,input ATT and reaction/bank delay,frozen B2 geometry; this round geometry docs
+spiral,Same MethodDef,P7A1 Spiral86 and called methods,shared Spiral86 subset,b2-b5-shared-identities.csv
+business class,Different implementation,_008C_0091 and _008C_0093,_008C_0089,negative-evidence.json
+inner boundary,Different implementation,StartArea/FlyOverPostArea;75degree side,independent descriptor-based boundary,protection-connections.md
+outer boundary,Copied algorithm structure; full equivalence unproved,independent spiral candidate and 15degree connection,independent business branch methods,altitude-turn-geometry.md
+width transition,Different implementation,hardcoded1852/3704 tan15,UI/preset widths via descriptors,navigation-tolerance.md
+CAD writer,Same MethodDef,P087 grouped polylines,actual shared identities in separate table,b2-b5-shared-identities.csv
+XData,Numerically similar output condition,description empty -> no business XData,shared append only writes if description nonempty,cad-output-map.md; frozen CAD map

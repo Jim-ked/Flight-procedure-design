@@ -1,0 +1,16 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildThisFileDirectory)..\..\Directory.Build.props" Condition="Exists('$(MSBuildThisFileDirectory)..\..\Directory.Build.props')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup><ProjectGuid>{16E7C03D-2ED2-4D63-96D4-7A2D5BE48608}</ProjectGuid><OutputType>Exe</OutputType><RootNamespace>Fpd.Engine.Tests</RootNamespace><AssemblyName>Fpd.Engine.Tests</AssemblyName><TargetFrameworkVersion>v4.0</TargetFrameworkVersion><OutputPath>bin\$(Configuration)\</OutputPath><IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath></PropertyGroup>
+  <ItemGroup><Reference Include="System" /><Reference Include="System.Core" /></ItemGroup>
+  <ItemGroup><Reference Include="Fpd.Domain"><HintPath>..\..\src\Fpd.Domain\bin\$(Configuration)\Fpd.Domain.dll</HintPath></Reference><Reference Include="Fpd.Engine"><HintPath>..\..\src\Fpd.Engine\bin\$(Configuration)\Fpd.Engine.dll</HintPath></Reference></ItemGroup>
+  <ItemGroup><Compile Include="**\*.cs" Exclude="bin\**;obj\**" /></ItemGroup>
+</Project>
+
+
+
+
+
+
+
+

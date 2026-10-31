@@ -1,0 +1,26 @@
+METHOD 060003A0 \x89\x97.\x89\x96::\x88\x86\x9e RVA=4CD00 file=4AF00
+IL_0000: ldarg.1 
+IL_0001: callvirt 0x06000800 \x8f\x8f.\x8f\x8e::\x8b\x89\x9a
+IL_0006: ldc.r8 0.0
+IL_000F: beq.s 78
+IL_0011: ldc.i4.0 
+IL_0012: call 0x060003A9 \x89\x97.\x89\x96::\x879
+IL_0017: brfalse.s 53
+IL_0019: pop 
+IL_001A: newobj 0x0A000126 0x1B00000F::.ctor
+IL_001F: stloc.0 
+IL_0020: ldloc.0 
+IL_0021: ldarg.1 
+IL_0022: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0027: br.s 54
+IL_0029: pop 
+IL_002A: ldloc.0 
+IL_002B: ldarg.1 
+IL_002C: call 0x0600080E \x8f\x8f.\x8f\x8e::\x8b\x89\x8c
+IL_0031: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0036: ldarg.0 
+IL_0037: ldfld 0x040002F1 \x89\x97.\x89\x96::\x88\x87\x99
+IL_003C: ldloc.0 
+IL_003D: callvirt 0x0A0001D8 0x1B000001::Add
+IL_0042: ret 
+

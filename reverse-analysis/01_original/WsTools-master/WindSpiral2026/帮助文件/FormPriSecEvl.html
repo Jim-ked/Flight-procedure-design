@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>主副区评估 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 传统程序 / 主副区评估</div>
+        <h1>A9.主副区评估</h1>
+        <div class="cmd">命令：Y09_主副区评估</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>传统程序</h2>
+                <ul>
+                    <li><a href="FormWindSpiral.html">A1.风螺旋</a></li>
+                    <li><a href="FormCalcu.html">A2.飞行程序基础计算</a></li>
+                    <li><a href="FixTolerance.html">A3.定位容差</a></li>
+                    <li><a href="FormNavAids.html">A4.非精密进近保护区</a></li>
+                    <li><a href="FormPA.html">A5.精密进近保护区</a></li>
+                    <li><a href="FormTemplate.html">A6.传统保护区模板</a></li>
+                    <li><a href="FormDepartureEvl.html">A7.离场越障评估</a></li>
+                    <li><a href="FormTurnAreaEvl.html">A8.复飞转弯区评估</a></li>
+                    <li><a href="FormPriSecEvl.html" class="active">A9.主副区评估</a></li>
+                    <li><a href="FormDmeEvl.html">A10.起始进近DME弧</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">PBN 程序 / 辅助功能</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【主副区评估】针对<strong>某一直线航段</strong>构建主区（Primary Area）与副区（Secondary Area）并评估其内障碍物对应的OCA（超障高度）。以航段起点 / 终点坐标与保护区半宽定义评估区，可选精密进近中间航段。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormPriSecEvl.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormPriSecEvl.png" alt="FormPriSecEvl 界面截图" width="568"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>分区 / 控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>起点坐标 / 终点坐标</td><td>定义kk'线的两端坐标。</td></tr>
+                        <tr><td>航段数据</td><td>保护区半宽、高度等航段参数。</td></tr>
+                        <tr><td>精密中间段（复选框）</td><td>勾选后按精密进近中间段规则评估。</td></tr>
+                        <tr><td>一键评估 / CAD / 标记</td><td>评估障碍物对应的OCA、绘制主副区、标记障碍物。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y09_主副区评估</code> 打开窗口。</li>
+                    <li>填入航段起点 / 终点坐标（可用【屏幕数据】拾取）。</li>
+                    <li>在“航段数据”中设置保护区半宽等参数，需要时勾选【精密中间段】。</li>
+                    <li>【一键评估】检查并核算 OCA →【标记】标注 →【CAD】绘制。</li>
+                </ul>
+                <div class="tip"><strong>联动：</strong>在障碍物列表中单击某行，图纸会自动高亮并居中显示该障碍物。</div>
+            </div>
+            <div class="pager">
+                <a href="FormTurnAreaEvl.html">← 上一篇：A8.复飞转弯区评估</a>
+                <a href="FormDmeEvl.html">下一篇：A10.起始进近DME弧 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

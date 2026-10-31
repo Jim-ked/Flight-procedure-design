@@ -1,0 +1,9 @@
+﻿case,input condition,recovered operation,expected legacy behavior,evidence
+wind-zero,"Wind=0, TAS>0",Drift=asin(0/TAS); q=offset,"with offset=0, exact base-circle geometry",A1-WindSpiral/spiral-model.md
+wind-near-tas,Wind/TAS approaches ±1,Drift=asin(Wind/TAS),drift approaches ±π/2; no clamp branch,GeometryPrimitives/turn-parameter.md
+wind-over-tas,abs(Wind)>TAS,Math.Asin(Wind/TAS),NaN propagates into downstream point terms,GeometryPrimitives/turn-parameter.md
+bank-zero-limit,Bank approaches 0,"Rate=min(tan(Bank)/(TAS),3) → 0; divide by Rate",Radius/WindRadius can become Infinity; no guard,GeometryPrimitives/turn-parameter.md
+rate-cap,uncapped rate > 3,"Rate=min(rawRate,3)",rate is capped at 3,GeometryPrimitives/turn-parameter.md
+turn-zero,turn angle 0,sample loop appends exact end point,one exact endpoint for the zero range,A1-WindSpiral/spiral-model.md
+turn-180,turn angle 180° at 1° step,inclusive start/end sampling,181 sampled positions including exact endpoint,A1-WindSpiral/spiral-model.md
+turn-over-360,UI accepts end angle >360°,range is sampled without angle normalization,continues to supplied endpoint; no wrap branch,A1-WindSpiral/spiral-model.md

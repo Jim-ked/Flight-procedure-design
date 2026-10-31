@@ -1,0 +1,84 @@
+METHOD 060007A9 \x8f\x87.\x8f\x86::\x8a\x9e\x97 RVA=8FD80 file=8DF80
+IL_0000: ldc.i4 1372
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 163
+IL_000F: ldarg.1 
+IL_0010: call 0x060007A2 \x8f\x87.\x8f\x86::\x8a\x9e\x90
+IL_0015: starg.s argument(0x0001)
+IL_0017: call 0x060007B4 \x8f\x87.\x8f\x86::\x89l
+IL_001C: call 0x060007B5 \x8f\x87.\x8f\x86::\x89m
+IL_0021: brtrue 187
+IL_0026: pop 
+IL_0027: call 0x060007B4 \x8f\x87.\x8f\x86::\x89l
+IL_002C: brfalse.s 163
+IL_002E: ldarg.1 
+IL_002F: stloc.0 
+IL_0030: ldc.i4.0 
+IL_0031: stloc.1 
+IL_0032: br.s 77
+IL_0034: ldloc.s local(0x0005)
+IL_0036: ldc.r8 1e-09
+IL_003F: ble.s 185
+IL_0041: ldloc.0 
+IL_0042: ldarg.0 
+IL_0043: ldfld 0x0400075F \x8f\x87.\x8f\x86::\x8b\x86\x8b
+IL_0048: mul 
+IL_0049: ldarg.0 
+IL_004A: ldfld 0x0400075D \x8f\x87.\x8f\x86::\x8b\x86\x89
+IL_004F: add 
+IL_0050: ldarg.2 
+IL_0051: add 
+IL_0052: stloc.2 
+IL_0053: ldarg.0 
+IL_0054: ldfld 0x04000760 \x8f\x87.\x8f\x86::\x8b\x86\x8c
+IL_0059: ldarg.0 
+IL_005A: ldfld 0x04000760 \x8f\x87.\x8f\x86::\x8b\x86\x8c
+IL_005F: mul 
+IL_0060: ldloc.2 
+IL_0061: ldloc.2 
+IL_0062: mul 
+IL_0063: add 
+IL_0064: ldc.r8 2.0
+IL_006D: ldarg.0 
+IL_006E: ldfld 0x04000760 \x8f\x87.\x8f\x86::\x8b\x86\x8c
+IL_0073: mul 
+IL_0074: ldloc.2 
+IL_0075: mul 
+IL_0076: ldarg.0 
+IL_0077: ldfld 0x04000762 \x8f\x87.\x8f\x86::\x8b\x86\x8e
+IL_007C: mul 
+IL_007D: add 
+IL_007E: call 0x0A00002D System.Math::Sqrt
+IL_0083: stloc.3 
+IL_0084: ldloc.0 
+IL_0085: ldloc.2 
+IL_0086: ldarg.0 
+IL_0087: ldfld 0x04000763 \x8f\x87.\x8f\x86::\x8b\x86\x8f
+IL_008C: mul 
+IL_008D: ldloc.3 
+IL_008E: div 
+IL_008F: call 0x0A0001BA System.Math::Asin
+IL_0094: sub 
+IL_0095: stloc.s local(0x0004)
+IL_0097: ldarg.1 
+IL_0098: ldloc.s local(0x0004)
+IL_009A: sub 
+IL_009B: stloc.s local(0x0005)
+IL_009D: ldloc.0 
+IL_009E: ldloc.s local(0x0005)
+IL_00A0: add 
+IL_00A1: stloc.0 
+IL_00A2: ldloc.1 
+IL_00A3: ldc.i4.1 
+IL_00A4: add 
+IL_00A5: stloc.1 
+IL_00A6: ldloc.1 
+IL_00A7: ldc.i4.s 20
+IL_00A9: ble.s 64
+IL_00AB: br.s 188
+IL_00AD: ldloc.0 
+IL_00AE: ret 
+IL_00AF: pop 
+IL_00B0: ldloc.0 
+IL_00B1: ret 
+

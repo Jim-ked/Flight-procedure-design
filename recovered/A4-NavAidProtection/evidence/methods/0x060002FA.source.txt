@@ -1,0 +1,12 @@
+23078: 		private double _0087_0090_0090(string P_0)
+23079: 		{
+23080: 			try
+23081: 			{
+23082: 				return _008F_008A._008B_0087_009D(P_0, "输入数据有误，请检查。" /* string-offset:1984 */);
+23083: 			}
+23084: 			catch
+23085: 			{
+23086: 				Application.ShowAlertDialog("数据 " /* string-offset:3712 */ + P_0 + " 输入有误，将以零代替。" /* string-offset:3716 */);
+23087: 				return 0.0;
+23088: 			}
+23089: 		}

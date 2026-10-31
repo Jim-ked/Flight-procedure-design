@@ -1,0 +1,7 @@
+47408: 		private void _0088_009B_008B(object P_0, EventArgs P_1)
+47409: 		{
+47410: 			if (Clipboard.ContainsText())
+47411: 			{
+47412: 				_0089_0086_0099.Text = Clipboard.GetText();
+47413: 			}
+47414: 		}

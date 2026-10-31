@@ -1,0 +1,26 @@
+2026-10-27 / AutoCAD2026 API25.1 / CLR8.0.12 / PID28660
+Source: Computer Use screenshots + read-only process module inventory + observer.jsonl.
+This is a transcription of visible output, not an exported complete AutoCAD logfile.
+
+1. NETLOAD isolated bin/WsToolsObserver.dll.
+   Visible: WsToolsObserver ready (isolated R01 drawings only).
+   ObserverInitialized recorded CLR .NET 8.0.12 and actual copied assembly path.
+2. NETLOAD isolated WindSpiral2026-runtime/WindSpiralBasic.dll.
+   User handled load-once prompt. CommandEnded NETLOAD at 2026-10-27T04:40:17.8286082Z.
+   No explicit load exception printed in the observed F2 history.
+   Process modules independently show exactly the isolated target path loaded.
+3. Typed RCL was auto-corrected to CIRCLE by AutoCAD; cancelled before any center point.
+   Observer confirms empty ModelSpace afterward. Not counted as a target experiment.
+4. Native AutoLISP (command "RCL") avoided auto-completion.
+   Visible:
+   命令: (command "RCL")
+   RCL 未知命令“RCL”。按 F1 查看帮助。
+   命令: nil
+   RCL input prompts never appeared. No RCL entity result exists.
+
+Two unintended PASTECLIP requests occurred when focus was outside the command editor;
+no insertion point was supplied. Keep observer events, do not reinterpret them as target behavior.
+The first was cancelled and ModelSpace remained empty. Later state is recorded separately.
+
+Status at this checkpoint: target image loaded, command registration unavailable.
+Cause not yet proven by the above output alone. Independent bounded type-load diagnostic pending.

@@ -1,0 +1,87 @@
+METHOD 06000358 \x89\x93.\x89\x92::\x87\x9a\x86 RVA=42804 file=40A04
+IL_0000: ldc.i4.1 
+IL_0001: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_0006: brtrue.s 117
+IL_0008: pop 
+IL_0009: ldc.i4 556
+IL_000E: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0013: brtrue 167
+IL_0018: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_001D: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0022: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_0027: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_002C: call 0x06000353 \x89\x93.\x89\x92::\x87\x99\x9a
+IL_0031: pop 
+IL_0032: ldarg.0 
+IL_0033: ldc.i4.0 
+IL_0034: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0039: ldarg.0 
+IL_003A: ldc.i4 4620
+IL_003F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0044: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0049: stfld 0x04000289 \x89\x93.\x89\x92::\x87\x9b\x92
+IL_004E: ldarg.0 
+IL_004F: ldfld 0x04000289 \x89\x93.\x89\x92::\x87\x9b\x92
+IL_0054: call 0x0A0000EB Autodesk.AutoCAD.Geometry.Point3d::get_Origin
+IL_0059: call 0x0A000060 Autodesk.AutoCAD.Geometry.Point3d::op_Equality
+IL_005E: brfalse.s 125
+IL_0060: ldarg.0 
+IL_0061: ldc.i4.1 
+IL_0062: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0067: br.s 125
+IL_0069: pop 
+IL_006A: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_006F: brtrue.s 181
+IL_0071: ldarg.0 
+IL_0072: ldc.i4 1652
+IL_0077: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_007C: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0081: stfld 0x0400028A \x89\x93.\x89\x92::\x87\x9b\x93
+IL_0086: ldarg.0 
+IL_0087: ldfld 0x0400028A \x89\x93.\x89\x92::\x87\x9b\x93
+IL_008C: call 0x0A0000EB Autodesk.AutoCAD.Geometry.Point3d::get_Origin
+IL_0091: call 0x0A000060 Autodesk.AutoCAD.Geometry.Point3d::op_Equality
+IL_0096: brfalse.s 181
+IL_0098: br.s 167
+IL_009A: nop 
+IL_009B: ldarg.0 
+IL_009C: ldc.i4.1 
+IL_009D: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_00A2: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_00A7: brtrue.s 166
+IL_00A9: ldarg.0 
+IL_00AA: ldc.i4.1 
+IL_00AB: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_00B0: ldarg.0 
+IL_00B1: ldfld 0x04000289 \x89\x93.\x89\x92::\x87\x9b\x92
+IL_00B6: call 0x0A0000EB Autodesk.AutoCAD.Geometry.Point3d::get_Origin
+IL_00BB: call 0x0A000060 Autodesk.AutoCAD.Geometry.Point3d::op_Equality
+IL_00C0: brfalse.s 234
+IL_00C2: ldarg.0 
+IL_00C3: ldfld 0x0400028A \x89\x93.\x89\x92::\x87\x9b\x93
+IL_00C8: call 0x0A0000EB Autodesk.AutoCAD.Geometry.Point3d::get_Origin
+IL_00CD: call 0x0A000060 Autodesk.AutoCAD.Geometry.Point3d::op_Equality
+IL_00D2: brfalse.s 234
+IL_00D4: ldc.r8 0.0
+IL_00DD: ret 
+IL_00DE: ldarg.0 
+IL_00DF: ldarg.0 
+IL_00E0: ldflda 0x0400028A \x89\x93.\x89\x92::\x87\x9b\x93
+IL_00E5: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_00EA: ldarg.0 
+IL_00EB: ldflda 0x04000289 \x89\x93.\x89\x92::\x87\x9b\x92
+IL_00F0: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_00F5: sub 
+IL_00F6: ldarg.0 
+IL_00F7: ldflda 0x0400028A \x89\x93.\x89\x92::\x87\x9b\x93
+IL_00FC: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0101: ldarg.0 
+IL_0102: ldflda 0x04000289 \x89\x93.\x89\x92::\x87\x9b\x92
+IL_0107: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_010C: sub 
+IL_010D: call 0x0A000063 System.Math::Atan2
+IL_0112: stfld 0x0400028B \x89\x93.\x89\x92::\x87\x9b\x94
+IL_0117: ldarg.0 
+IL_0118: ldfld 0x0400028B \x89\x93.\x89\x92::\x87\x9b\x94
+IL_011D: ret 
+

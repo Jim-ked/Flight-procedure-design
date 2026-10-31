@@ -1,0 +1,5627 @@
+46494: 	public class _008B_008C : Form
+46495: 	{
+46496: 		[Serializable]
+46497: 		[CompilerGenerated]
+46498: 		[LicenseProvider(typeof(_0091_008B))]
+46499: 		private sealed class _0090_0091
+46500: 		{
+46501: 			public static readonly _0090_0091 _003C_003E9;
+46502: 
+46503: 			public static Func<_008A_008D, double> _003C_003E9__0_0;
+46504: 
+46505: 			public static Func<_008A_008B, double> _003C_003E9__203_0;
+46506: 
+46507: 			static _0090_0091()
+46508: 			{
+46509: 				LicenseManager.Validate(typeof(_0090_0091));
+46510: 				_003C_003E9 = new _0090_0091();
+46511: 			}
+46512: 
+46513: 			internal double _008B_008E_008F(_008A_008D o)
+46514: 			{
+46515: 				return o._0088_0090_0092;
+46516: 			}
+46517: 
+46518: 			internal double _008B_008E_0090(_008A_008B o)
+46519: 			{
+46520: 				return o._0088_0090_0086;
+46521: 			}
+46522: 
+46523: 			internal static bool _008Ad()
+46524: 			{
+46525: 				return true;
+46526: 			}
+46527: 
+46528: 			internal static bool _008Ae()
+46529: 			{
+46530: 				return false;
+46531: 			}
+46532: 		}
+46533: 
+46534: 		private List<DBPoint> _0088_009D_0087;
+46535: 
+46536: 		private Dictionary<string, DBPoint> _0088_009D_0088;
+46537: 
+46538: 		private const double _0088_009D_0089 = 0.539957;
+46539: 
+46540: 		private const double _0088_009D_008A = 1.852;
+46541: 
+46542: 		private IContainer _0088_009D_008B;
+46543: 
+46544: 		private StatusStrip _0088_009D_008C;
+46545: 
+46546: 		private ToolStripStatusLabel _0088_009D_008D;
+46547: 
+46548: 		private Button _0088_009D_008E;
+46549: 
+46550: 		private Button _0088_009D_008F;
+46551: 
+46552: 		private DataGridView _0088_009D_0090;
+46553: 
+46554: 		private Button _0088_009D_0091;
+46555: 
+46556: 		private Button _0088_009D_0092;
+46557: 
+46558: 		private GroupBox _0088_009D_0093;
+46559: 
+46560: 		private TextBox _0088_009D_0094;
+46561: 
+46562: 		private TextBox _0088_009D_0095;
+46563: 
+46564: 		private TextBox _0088_009D_0096;
+46565: 
+46566: 		private Label _0088_009D_0097;
+46567: 
+46568: 		private Button _0088_009D_0098;
+46569: 
+46570: 		private Label _0088_009D_0099;
+46571: 
+46572: 		private Label _0088_009D_009A;
+46573: 
+46574: 		private GroupBox _0088_009D_009B;
+46575: 
+46576: 		private Button _0088_009D_009C;
+46577: 
+46578: 		private TextBox _0088_009D_009D;
+46579: 
+46580: 		private TextBox _0088_009D_009E;
+46581: 
+46582: 		private Label _0088_009E_0086;
+46583: 
+46584: 		private TextBox _0088_009E_0087;
+46585: 
+46586: 		private Label _0088_009E_0088;
+46587: 
+46588: 		private Label _0088_009E_0089;
+46589: 
+46590: 		private TabControl _0088_009E_008A;
+46591: 
+46592: 		private TabPage _0088_009E_008B;
+46593: 
+46594: 		private TabPage _0088_009E_008C;
+46595: 
+46596: 		private Button _0088_009E_008D;
+46597: 
+46598: 		private Button _0088_009E_008E;
+46599: 
+46600: 		private Label _0088_009E_008F;
+46601: 
+46602: 		private Label _0088_009E_0090;
+46603: 
+46604: 		private ComboBox _0088_009E_0091;
+46605: 
+46606: 		private Button _0088_009E_0092;
+46607: 
+46608: 		private TextBox _0088_009E_0093;
+46609: 
+46610: 		private Label _0088_009E_0094;
+46611: 
+46612: 		private TextBox _0088_009E_0095;
+46613: 
+46614: 		private Label _0088_009E_0096;
+46615: 
+46616: 		private GroupBox _0088_009E_0097;
+46617: 
+46618: 		private ComboBox _0088_009E_0098;
+46619: 
+46620: 		private Label _0088_009E_0099;
+46621: 
+46622: 		private TextBox _0088_009E_009A;
+46623: 
+46624: 		private TextBox _0088_009E_009B;
+46625: 
+46626: 		private TextBox _0088_009E_009C;
+46627: 
+46628: 		private Label _0088_009E_009D;
+46629: 
+46630: 		private Label _0088_009E_009E;
+46631: 
+46632: 		private Label _0089_0086_0086;
+46633: 
+46634: 		private GroupBox _0089_0086_0087;
+46635: 
+46636: 		private Label _0089_0086_0088;
+46637: 
+46638: 		private TextBox _0089_0086_0089;
+46639: 
+46640: 		private Label _0089_0086_008A;
+46641: 
+46642: 		private TextBox _0089_0086_008B;
+46643: 
+46644: 		private GroupBox _0089_0086_008C;
+46645: 
+46646: 		private TextBox _0089_0086_008D;
+46647: 
+46648: 		private Label _0089_0086_008E;
+46649: 
+46650: 		private GroupBox _0089_0086_008F;
+46651: 
+46652: 		private ComboBox _0089_0086_0090;
+46653: 
+46654: 		private TabPage _0089_0086_0091;
+46655: 
+46656: 		private Button _0089_0086_0092;
+46657: 
+46658: 		private Button _0089_0086_0093;
+46659: 
+46660: 		private Label _0089_0086_0094;
+46661: 
+46662: 		private ToolTip _0089_0086_0095;
+46663: 
+46664: 		private TextBox _0089_0086_0096;
+46665: 
+46666: 		private TabPage _0089_0086_0097;
+46667: 
+46668: 		private Label _0089_0086_0098;
+46669: 
+46670: 		private TextBox _0089_0086_0099;
+46671: 
+46672: 		private GroupBox _0089_0086_009A;
+46673: 
+46674: 		private CheckBox _0089_0086_009B;
+46675: 
+46676: 		private ToolStripStatusLabel _0089_0086_009C;
+46677: 
+46678: 		private GroupBox _0089_0086_009D;
+46679: 
+46680: 		private Button _0089_0086_009E;
+46681: 
+46682: 		private Button _0089_0087_0086;
+46683: 
+46684: 		private Label _0089_0087_0087;
+46685: 
+46686: 		private TextBox _0089_0087_0088;
+46687: 
+46688: 		private TextBox _0089_0087_0089;
+46689: 
+46690: 		private TextBox _0089_0087_008A;
+46691: 
+46692: 		private TextBox _0089_0087_008B;
+46693: 
+46694: 		private Label _0089_0087_008C;
+46695: 
+46696: 		private Label _0089_0087_008D;
+46697: 
+46698: 		private TextBox _0089_0087_008E;
+46699: 
+46700: 		private TextBox _0089_0087_008F;
+46701: 
+46702: 		private Label _0089_0087_0090;
+46703: 
+46704: 		private GroupBox _0089_0087_0091;
+46705: 
+46706: 		private TextBox _0089_0087_0092;
+46707: 
+46708: 		private Label _0089_0087_0093;
+46709: 
+46710: 		private Label _0089_0087_0094;
+46711: 
+46712: 		private Label _0089_0087_0095;
+46713: 
+46714: 		private TextBox _0089_0087_0096;
+46715: 
+46716: 		private TextBox _0089_0087_0097;
+46717: 
+46718: 		private Label _0089_0087_0098;
+46719: 
+46720: 		private TextBox _0089_0087_0099;
+46721: 
+46722: 		private Button _0089_0087_009A;
+46723: 
+46724: 		private Button _0089_0087_009B;
+46725: 
+46726: 		private Button _0089_0087_009C;
+46727: 
+46728: 		private Button _0089_0087_009D;
+46729: 
+46730: 		private TabPage _0089_0087_009E;
+46731: 
+46732: 		private GroupBox _0089_0088_0086;
+46733: 
+46734: 		private ComboBox _0089_0088_0087;
+46735: 
+46736: 		private Label _0089_0088_0088;
+46737: 
+46738: 		private Label _0089_0088_0089;
+46739: 
+46740: 		private Label _0089_0088_008A;
+46741: 
+46742: 		private Label _0089_0088_008B;
+46743: 
+46744: 		private TextBox _0089_0088_008C;
+46745: 
+46746: 		private TextBox _0089_0088_008D;
+46747: 
+46748: 		private TextBox _0089_0088_008E;
+46749: 
+46750: 		private Button _0089_0088_008F;
+46751: 
+46752: 		private GroupBox _0089_0088_0090;
+46753: 
+46754: 		private ComboBox _0089_0088_0091;
+46755: 
+46756: 		private ComboBox _0089_0088_0092;
+46757: 
+46758: 		private Label _0089_0088_0093;
+46759: 
+46760: 		private ComboBox _0089_0088_0094;
+46761: 
+46762: 		private Label _0089_0088_0095;
+46763: 
+46764: 		private TextBox _0089_0088_0096;
+46765: 
+46766: 		private Label _0089_0088_0097;
+46767: 
+46768: 		private Label _0089_0088_0098;
+46769: 
+46770: 		private GroupBox _0089_0088_0099;
+46771: 
+46772: 		private TextBox _0089_0088_009A;
+46773: 
+46774: 		private Label _0089_0088_009B;
+46775: 
+46776: 		private TextBox _0089_0088_009C;
+46777: 
+46778: 		private Label _0089_0088_009D;
+46779: 
+46780: 		private Label _0089_0088_009E;
+46781: 
+46782: 		private TextBox _0089_0089_0086;
+46783: 
+46784: 		private TextBox _0089_0089_0087;
+46785: 
+46786: 		private Label _0089_0089_0088;
+46787: 
+46788: 		private Label _0089_0089_0089;
+46789: 
+46790: 		private Label _0089_0089_008A;
+46791: 
+46792: 		private TextBox _0089_0089_008B;
+46793: 
+46794: 		private TextBox _0089_0089_008C;
+46795: 
+46796: 		private Label _0089_0089_008D;
+46797: 
+46798: 		private Button _0089_0089_008E;
+46799: 
+46800: 		private Button _0089_0089_008F;
+46801: 
+46802: 		private _0087_008C _0089_0089_0090;
+46803: 
+46804: 		private _0087_008C _0089_0089_0091;
+46805: 
+46806: 		private void _0088_009A_008E(object P_0, EventArgs P_1)
+46807: 		{
+46808: 			MessageBox.Show("基础版不支持此功能。" /* string-offset:5640 */);
+46809: 		}
+46810: 
+46811: 		private void _0088_009A_008F(List<_008A_008D> P_0)
+46812: 		{
+46813: 			if (false /* original-file-bool-offset:904 */)
+46814: 			{
+46815: 				return;
+46816: 			}
+46817: 			DataTable dataTable = new DataTable();
+46818: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+46819: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+46820: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+46821: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+46822: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+46823: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+46824: 			dataTable.Columns.Add("面高(m)" /* string-offset:5644 */, typeof(double));
+46825: 			dataTable.Columns.Add("穿透值(m)" /* string-offset:5648 */, typeof(double));
+46826: 			dataTable.Columns.Add("HL(m)" /* string-offset:5652 */, typeof(double));
+46827: 			dataTable.Columns.Add("Ha(m)" /* string-offset:5656 */, typeof(double));
+46828: 			dataTable.Columns.Add("OCH(m)" /* string-offset:5660 */, typeof(double));
+46829: 			dataTable.Columns.Add("DA(m)" /* string-offset:5664 */, typeof(double));
+46830: 			dataTable.Columns.Add("DH(m)" /* string-offset:2460 */, typeof(double));
+46831: 			dataTable.Columns.Add("RVR(m)" /* string-offset:5668 */, typeof(double));
+46832: 			foreach (_008A_008D item in P_0)
+46833: 			{
+46834: 				dataTable.Rows.Add(item.ID, item.Name, Math.Round(item.X, 2), Math.Round(item.Y, 2), Math.Round(item.Z, 2), item._0088_0090_008A, Math.Round(item._0088_0090_008B, 2), Math.Round(item._0088_0090_008C, 2), Math.Round(item._0088_0090_008D, 2), Math.Round(item._0088_0090_008E, 2), Math.Round(item._0088_0090_0090, 2), Math.Round(item._0088_0090_0091), Math.Round(item._0088_0090_0092), Math.Round(item._0088_0090_0093));
+46835: 			}
+46836: 			_0088_009D_0090.DataSource = dataTable;
+46837: 			_0088_009D_0090.Columns[1].Frozen = true;
+46838: 		}
+46839: 
+46840: 		private _008C_0097 _0088_009A_0090()
+46841: 		{
+46842: 			double num = _008F_008A._008B_0087_009E(_0089_0086_008D, "输入数据有误，请检查。" /* string-offset:1984 */);
+46843: 			double num2 = _008F_008A._008B_0087_009D(_0088_009E_0091.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+46844: 			double num3 = _008F_008A._008B_0087_009E(_0088_009E_0093, "输入数据有误，请检查。" /* string-offset:1984 */);
+46845: 			double num4 = _008F_008A._008B_0087_009E(_0088_009D_0094, "输入数据有误，请检查。" /* string-offset:1984 */);
+46846: 			double num5 = _008F_008A._008B_0087_009D(_0089_0086_0090.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+46847: 			double num6 = _008F_008A._008B_0087_009E(_0088_009E_0095, "输入数据有误，请检查。" /* string-offset:1984 */);
+46848: 			double num7 = _008F_008A._008B_0087_009E(_0089_0086_0089, "输入数据有误，请检查。" /* string-offset:1984 */) / 100.0;
+46849: 			double num8 = _008F_008A._008B_0087_009E(_0089_0086_0099, "输入数据有误，请检查。" /* string-offset:1984 */);
+46850: 			double num9 = _008F_008A._008B_0087_009E(_0089_0086_0096, "输入数据有误，请检查。" /* string-offset:1984 */);
+46851: 			double num10 = num8 + num9;
+46852: 			double num11 = _008F_008A._008B_0087_009E(_0088_009E_009C, "输入数据有误，请检查。" /* string-offset:1984 */);
+46853: 			double num12 = _008F_008A._008B_0087_009E(_0088_009E_009B, "输入数据有误，请检查。" /* string-offset:1984 */);
+46854: 			string text = _0088_009E_0098.Text;
+46855: 			return new _008C_0097(num, num3, num4, num2, num6, num5, num7, num10, num11, num12, text);
+46856: 		}
+46857: 
+46858: 		private void _0088_009A_0091(ref _008A_008D P_0, double P_1, double P_2, double P_3, string P_4)
+46859: 		{
+46860: 			int num = 6;
+46861: 			while (true)
+46862: 			{
+46863: 				if (!false /* original-file-bool-offset:908 */)
+46864: 				{
+46865: 					P_0._0088_0090_008F = P_0._0088_0090_0090 + P_1;
+46866: 					P_0._0088_0090_0092 = Math.Ceiling(P_0._0088_0090_0090 / 5.0) * 5.0;
+46867: 					P_0._0088_0090_0091 = Math.Round(P_0._0088_0090_0092 + P_1);
+46868: 					while (true)
+46869: 					{
+46870: 						double num2 = P_0._0088_0090_0092 / P_3 - P_2;
+46871: 						num = 11;
+46872: 						if (_0088_0094())
+46873: 						{
+46874: 							return;
+46875: 						}
+46876: 						while (true)
+46877: 						{
+46878: 							IL_02fa:
+46879: 							if (!(num2 < 800.0))
+46880: 							{
+46881: 								if (num2 < 5000.0)
+46882: 								{
+46883: 									num = 10;
+46884: 									goto IL_0239;
+46885: 								}
+46886: 								num2 = Math.Ceiling(num2 / 1000.0) * 1000.0;
+46887: 								num = 16;
+46888: 							}
+46889: 							else
+46890: 							{
+46891: 								_ = 1;
+46892: 								if (!_0088_0094())
+46893: 								{
+46894: 									num = 15;
+46895: 									goto IL_01e2;
+46896: 								}
+46897: 								num = 0;
+46898: 							}
+46899: 							goto IL_0254;
+46900: 							IL_01e2:
+46901: 							num2 = Math.Ceiling(num2 / 50.0) * 50.0;
+46902: 							goto IL_0254;
+46903: 							IL_0239:
+46904: 							num2 = Math.Ceiling(num2 / 100.0) * 100.0;
+46905: 							goto IL_0254;
+46906: 							IL_0254:
+46907: 							while (true)
+46908: 							{
+46909: 								if (!(P_1 < 3000.0))
+46910: 								{
+46911: 									goto IL_011d;
+46912: 								}
+46913: 								goto IL_01bd;
+46914: 								IL_01bd:
+46915: 								num2 = Math.Min(num2, 5000.0);
+46916: 								num = 2;
+46917: 								if (!_0088_0093())
+46918: 								{
+46919: 									break;
+46920: 								}
+46921: 								goto IL_014c;
+46922: 								IL_014c:
+46923: 								switch (num)
+46924: 								{
+46925: 								case 17:
+46926: 									break;
+46927: 								case 2:
+46928: 									goto IL_00c4;
+46929: 								case 13:
+46930: 									goto IL_00f2;
+46931: 								default:
+46932: 									goto IL_011d;
+46933: 								case 12:
+46934: 									goto IL_01bd;
+46935: 								case 4:
+46936: 								case 15:
+46937: 									goto IL_01e2;
+46938: 								case 10:
+46939: 									goto end_IL_0254;
+46940: 								case 0:
+46941: 								case 5:
+46942: 								case 16:
+46943: 								case 18:
+46944: 									continue;
+46945: 								case 1:
+46946: 								case 3:
+46947: 								case 8:
+46948: 									goto IL_02ba;
+46949: 								case 11:
+46950: 									goto IL_02fa;
+46951: 								case 7:
+46952: 									goto end_IL_02fa;
+46953: 								case 6:
+46954: 									goto end_IL_030b;
+46955: 								case 9:
+46956: 								case 19:
+46957: 									return;
+46958: 								}
+46959: 								goto IL_00a2;
+46960: 								IL_011d:
+46961: 								if (P_0._0088_0090_0092 <= 300.0)
+46962: 								{
+46963: 									if (!(P_1 >= 3000.0))
+46964: 									{
+46965: 										num = 17;
+46966: 										goto IL_00a2;
+46967: 									}
+46968: 									goto IL_00b4;
+46969: 								}
+46970: 								num = 12;
+46971: 								if (_0088_0093())
+46972: 								{
+46973: 									goto IL_01bd;
+46974: 								}
+46975: 								goto IL_02ba;
+46976: 								IL_00c4:
+46977: 								if (!(P_4 == "D" /* string-offset:1644 */))
+46978: 								{
+46979: 									if (P_2 > 720.0)
+46980: 									{
+46981: 										num = 13;
+46982: 										goto IL_00f2;
+46983: 									}
+46984: 									if (P_2 > 420.0)
+46985: 									{
+46986: 										P_0._0088_0090_0093 = Math.Max(num2, 1200.0);
+46987: 										num = 8;
+46988: 										if (!_0088_0093())
+46989: 										{
+46990: 											continue;
+46991: 										}
+46992: 									}
+46993: 									else
+46994: 									{
+46995: 										P_0._0088_0090_0093 = Math.Max(num2, 1600.0);
+46996: 									}
+46997: 								}
+46998: 								else if (P_2 > 720.0)
+46999: 								{
+47000: 									P_0._0088_0090_0093 = Math.Max(num2, 1200.0);
+47001: 								}
+47002: 								else
+47003: 								{
+47004: 									P_0._0088_0090_0093 = Math.Max(num2, 1600.0);
+47005: 								}
+47006: 								goto IL_02ba;
+47007: 								IL_02ba:
+47008: 								P_0._0088_0090_0093 = num2;
+47009: 								num = 19;
+47010: 								if (!_0088_0093())
+47011: 								{
+47012: 									goto IL_02fa;
+47013: 								}
+47014: 								return;
+47015: 								IL_00f2:
+47016: 								P_0._0088_0090_0093 = Math.Max(num2, 800.0);
+47017: 								num = 3;
+47018: 								if (!_0088_0094())
+47019: 								{
+47020: 									goto IL_014c;
+47021: 								}
+47022: 								goto IL_01bd;
+47023: 								IL_00a2:
+47024: 								if (P_0._0088_0090_0092 > 450.0)
+47025: 								{
+47026: 									goto IL_00b4;
+47027: 								}
+47028: 								goto IL_00c4;
+47029: 								IL_00b4:
+47030: 								num2 = Math.Min(num2, 8000.0);
+47031: 								goto IL_00c4;
+47032: 								continue;
+47033: 								end_IL_0254:
+47034: 								break;
+47035: 							}
+47036: 							goto IL_0239;
+47037: 							continue;
+47038: 							end_IL_02fa:
+47039: 							break;
+47040: 						}
+47041: 						continue;
+47042: 						end_IL_030b:
+47043: 						break;
+47044: 					}
+47045: 					continue;
+47046: 				}
+47047: 				num = 9;
+47048: 				break;
+47049: 			}
+47050: 		}
+47051: 
+47052: 		public _008B_008C()
+47053: 		{
+47054: 			_0088_009C_009B();
+47055: 		}
+47056: 
+47057: 		[DllImport("user32.dll", EntryPoint = "SetFocus")]
+47058: 		public static extern int _0088_009A_0092(IntPtr P_0);
+47059: 
+47060: 		private void _0088_009A_0093(object P_0, EventArgs P_1)
+47061: 		{
+47062: 			_0097._008A_0093(this, "config.xml" /* string-offset:676 */, "FormApvEvl" /* string-offset:408 */);
+47063: 		}
+47064: 
+47065: 		private void _0088_009A_0094(object P_0, FormClosedEventArgs P_1)
+47066: 		{
+47067: 			_ = 1;
+47068: 			if (!_0088_0094())
+47069: 			{
+47070: 				_0097._008A_0091(this, "config.xml" /* string-offset:676 */, "FormApvEvl" /* string-offset:408 */);
+47071: 				if (_0088_009D_0087 == null)
+47072: 				{
+47073: 					return;
+47074: 				}
+47075: 			}
+47076: 			do
+47077: 			{
+47078: 				_008D._0089_0093(_0088_009D_0087);
+47079: 			}
+47080: 			while (!_0088_0093());
+47081: 		}
+47082: 
+47083: 		private void _0088_009A_0095(object P_0, EventArgs P_1)
+47084: 		{
+47085: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+47086: 			_ = mdiActiveDocument.Editor;
+47087: 			Database database = mdiActiveDocument.Database;
+47088: 			_ = 0;
+47089: 			Transaction val = default(Transaction);
+47090: 			if (_0088_0093())
+47091: 			{
+47092: 				if (_0088_0093())
+47093: 				{
+47094: 				}
+47095: 				val = database.TransactionManager.StartTransaction();
+47096: 			}
+47097: 			try
+47098: 			{
+47099: 				_0088_009D_0087 = database._008B_008A<DBPoint>((OpenMode)0, _0020: false);
+47100: 			}
+47101: 			finally
+47102: 			{
+47103: 				((IDisposable)val)?.Dispose();
+47104: 			}
+47105: 			_0088_009D_008D.Text = "已检测到 " /* string-offset:2720 */ + _0088_009D_0087.Count + " 个障碍物。" /* string-offset:936 */;
+47106: 			_0088_009A_0096(_0088_009D_0087);
+47107: 		}
+47108: 
+47109: 		private void _0088_009A_0096(List<DBPoint> P_0)
+47110: 		{
+47111: 			if (false /* original-file-bool-offset:912 */)
+47112: 			{
+47113: 				return;
+47114: 			}
+47115: 			_0088_009D_0088 = new Dictionary<string, DBPoint>();
+47116: 			DataTable dataTable = new DataTable();
+47117: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+47118: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+47119: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+47120: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+47121: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+47122: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+47123: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+47124: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+47125: 			dataTable.Columns.Add("OCH(m)" /* string-offset:5660 */, typeof(double));
+47126: 			dataTable.Columns.Add("MDA(m)" /* string-offset:5672 */, typeof(double));
+47127: 			dataTable.Columns.Add("MDH(m)" /* string-offset:5676 */, typeof(double));
+47128: 			dataTable.Columns.Add("VIS(m)" /* string-offset:5680 */, typeof(double));
+47129: 			int num = 1;
+47130: 			foreach (DBPoint item in P_0)
+47131: 			{
+47132: 				_008F_008E obj = item._008C_008D(num.ToString());
+47133: 				num++;
+47134: 				dataTable.Rows.Add(obj.ID, obj.Name, Math.Round(obj.X, 2), Math.Round(obj.Y, 2), Math.Round(obj.Z, 2));
+47135: 				_0088_009D_0088.Add(obj.ID, item);
+47136: 			}
+47137: 			_0088_009D_0090.DataSource = dataTable;
+47138: 			_0088_009D_0090.Columns[1].Frozen = true;
+47139: 		}
+47140: 
+47141: 		private void _0088_009A_0097(object P_0, EventArgs P_1)
+47142: 		{
+47143: 			_0088_0094();
+47144: 			if (!_0088_0093() || false /* original-file-bool-offset:916 */ || _0088_009D_0087 == null || _0088_009D_0087.Count == 0)
+47145: 			{
+47146: 				return;
+47147: 			}
+47148: 			_008E_0097 obj = _0088_009A_009A();
+47149: 			List<_008A_008B> list = new List<_008A_008B>();
+47150: 			int num = 1;
+47151: 			_008A_008B obj4 = default(_008A_008B);
+47152: 			foreach (DBPoint item in _0088_009D_0087)
+47153: 			{
+47154: 				_008F_008E obj2 = item._008C_008D(num.ToString());
+47155: 				num++;
+47156: 				_008F_008E obj3 = _008D._0089_0090(obj, obj2);
+47157: 				_ = 0;
+47158: 				if (_0088_0093())
+47159: 				{
+47160: 					obj4 = new _008A_008B(obj2);
+47161: 					obj4.X = obj3.X;
+47162: 					obj4.Y = obj3.Y;
+47163: 				}
+47164: 				list.Add(obj4);
+47165: 			}
+47166: 			_0088_009D_008D.Text = "已转换" /* string-offset:3032 */ + list.Count + "个障碍物。" /* string-offset:2816 */;
+47167: 			_0088_009C_009E(list);
+47168: 		}
+47169: 
+47170: 		private void _0088_009A_0098(object P_0, EventArgs P_1)
+47171: 		{
+47172: 			//IL_0038: Unknown result type (might be due to invalid IL or missing references)
+47173: 			//IL_003d: Unknown result type (might be due to invalid IL or missing references)
+47174: 			_0088_009A_0092(Application.DocumentManager.MdiActiveDocument.Window.Handle);
+47175: 			_0088_0094();
+47176: 			Point3d val = default(Point3d);
+47177: 			if (_0088_0093())
+47178: 			{
+47179: 				base.Visible = false;
+47180: 				val = _009D._008B_008D("\n请选择起点" /* string-offset:436 */);
+47181: 				base.Visible = true;
+47182: 			}
+47183: 			_0088_009D_0096.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();
+47184: 			_0088_009D_0095.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();
+47185: 			_0088_009D_0094.Text = ((Point3d)(ref val)).Z.ToString();
+47186: 		}
+47187: 
+47188: 		private void _0088_009A_0099(object P_0, EventArgs P_1)
+47189: 		{
+47190: 			//IL_0038: Unknown result type (might be due to invalid IL or missing references)
+47191: 			//IL_003d: Unknown result type (might be due to invalid IL or missing references)
+47192: 			_0088_009A_0092(Application.DocumentManager.MdiActiveDocument.Window.Handle);
+47193: 			_0088_0093();
+47194: 			Point3d val = default(Point3d);
+47195: 			if (!_0088_0094())
+47196: 			{
+47197: 				base.Visible = false;
+47198: 				val = _009D._008B_008D("\n请选择终点" /* string-offset:440 */);
+47199: 				base.Visible = true;
+47200: 				_0088_009E_0087.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();
+47201: 			}
+47202: 			_0088_009D_009E.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();
+47203: 			_0088_009D_009D.Text = ((Point3d)(ref val)).Z.ToString();
+47204: 		}
+47205: 
+47206: 		private _008E_0097 _0088_009A_009A()
+47207: 		{
+47208: 			_008F_008E obj = new _008F_008E();
+47209: 			_008F_008E obj2 = new _008F_008E();
+47210: 			obj.X = _008F_008A._008B_0087_009D(_0088_009D_0096.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47211: 			obj.Y = _008F_008A._008B_0087_009D(_0088_009D_0095.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47212: 			obj.Z = _008F_008A._008B_0087_009D(_0088_009D_0094.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47213: 			obj2.X = _008F_008A._008B_0087_009D(_0088_009E_0087.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47214: 			obj2.Y = _008F_008A._008B_0087_009D(_0088_009D_009E.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47215: 			obj2.Z = _008F_008A._008B_0087_009D(_0088_009D_009D.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47216: 			return _008D._0089_008F(obj, obj2);
+47217: 		}
+47218: 
+47219: 		private void _0088_009A_009B(object P_0, EventArgs P_1)
+47220: 		{
+47221: 			_008B_009C obj = _0088_009A_009C();
+47222: 			_008E_0097 obj2 = _0088_009A_009A();
+47223: 			List<List<_008F_008E>> list = _008F_0090._008B_008A_0094(obj._0089_009C_0096, new _008F_008E(0.0, 0.0), obj2._008A_009D_008A);
+47224: 			list = _008F_0090._008B_008A_0096(list, new _008F_008E(obj2.X, obj2.Y, obj2.Z));
+47225: 			_0088_0093();
+47226: 			if (!_0088_0094())
+47227: 			{
+47228: 				Database workingDatabase = HostApplicationServices.WorkingDatabase;
+47229: 				string text = "FormApvEvl\n" /* string-offset:5684 */;
+47230: 				_0097._008A_0098(_0088_009E_008A.Controls, ref text);
+47231: 				_008B._0088_008B(workingDatabase, list, text);
+47232: 			}
+47233: 			MessageBox.Show("绘制成功!" /* string-offset:5688 */);
+47234: 		}
+47235: 
+47236: 		private _008B_009C _0088_009A_009C()
+47237: 		{
+47238: 			double num = _008F_008A._008B_0087_009D(_0089_0086_008D.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47239: 			double num2 = _008F_008A._008B_0087_009D(_0088_009E_0091.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47240: 			double num3 = _008F_008A._008B_0087_009D(_0088_009E_0093.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47241: 			double num4 = _008F_008A._008B_0087_009D(_0088_009D_0094.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47242: 			double num5 = _008F_008A._008B_0087_009D(_0088_009E_0095.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47243: 			double num6 = _008F_008A._008B_0087_009D(_0089_0086_0089.Text, "输入数据有误，请检查。" /* string-offset:1984 */) / 100.0;
+47244: 			double num7 = _008F_008A._008B_0087_009D(_0089_0086_0099.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47245: 			double num8 = _008F_008A._008B_0087_009D(_0089_0086_0096.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+47246: 			return new _008B_009C(num, num3, num4, num2, num5, num6, num7, num8);
+47247: 		}
+47248: 
+47249: 		private void _0088_009A_009D(object P_0, EventArgs P_1)
+47250: 		{
+47251: 			_ = 0;
+47252: 			byte[] bytes = default(byte[]);
+47253: 			if (_0088_0093())
+47254: 			{
+47255: 				OpenFileDialog openFileDialog = new OpenFileDialog();
+47256: 				openFileDialog.Filter = "RNP APCH程序文件|*.rnp" /* string-offset:5692 */;
+47257: 				openFileDialog.Title = "打开RNP APCH程序文件" /* string-offset:716 */;
+47258: 				if (openFileDialog.ShowDialog() != DialogResult.OK)
+47259: 				{
+47260: 					return;
+47261: 				}
+47262: 				bytes = File.ReadAllBytes(openFileDialog.FileName);
+47263: 			}
+47264: 			string text = Encoding.UTF8.GetString(bytes);
+47265: 			_0097._008A_009A(_0088_009E_008A.Controls, text, "FormApvEvl" /* string-offset:408 */);
+47266: 		}
+47267: 
+47268: 		private void _0088_009A_009E(object P_0, EventArgs P_1)
+47269: 		{
+47270: 			SaveFileDialog saveFileDialog = new SaveFileDialog();
+47271: 			saveFileDialog.Filter = "RNP APCH程序文件|*.rnp" /* string-offset:5692 */;
+47272: 			_0088_0093();
+47273: 			if (!_0088_0094())
+47274: 			{
+47275: 				goto IL_0028;
+47276: 			}
+47277: 			goto IL_0041;
+47278: 			IL_0028:
+47279: 			saveFileDialog.Title = "保存RNP APCH程序文件" /* string-offset:712 */;
+47280: 			if (saveFileDialog.ShowDialog() != DialogResult.OK)
+47281: 			{
+47282: 				return;
+47283: 			}
+47284: 			goto IL_0041;
+47285: 			IL_0041:
+47286: 			string s = "FormApvEvl\n" /* string-offset:5684 */;
+47287: 			_0097._008A_0098(_0088_009E_008A.Controls, ref s);
+47288: 			byte[] bytes = Encoding.UTF8.GetBytes(s);
+47289: 			File.WriteAllBytes(saveFileDialog.FileName, bytes);
+47290: 			MessageBox.Show(saveFileDialog.FileName + "保存成功。" /* string-offset:5696 */);
+47291: 			if (_0088_0093())
+47292: 			{
+47293: 				return;
+47294: 			}
+47295: 			goto IL_0028;
+47296: 		}
+47297: 
+47298: 		private void _0088_009B_0086(object P_0, EventArgs P_1)
+47299: 		{
+47300: 		}
+47301: 
+47302: 		private void _0088_009B_0087(object P_0, EventArgs P_1)
+47303: 		{
+47304: 			_0088_009B_0088();
+47305: 		}
+47306: 
+47307: 		private void _0088_009B_0088()
+47308: 		{
+47309: 			_0088_0094();
+47310: 			double num = default(double);
+47311: 			if (_0088_0093())
+47312: 			{
+47313: 				num = _008F_008A._008B_0087_009E(_0088_009E_009C, "输入数据有误，请检查。" /* string-offset:1984 */);
+47314: 			}
+47315: 			if (num > 900.0)
+47316: 			{
+47317: 				double num2 = _008F_008A._008B_0087_009E(_0089_0088_008E, "输入数据有误，请检查。" /* string-offset:1984 */);
+47318: 				double num3 = _008F_008A._008B_0087_009E(_0089_0088_008D, "输入数据有误，请检查。" /* string-offset:1984 */);
+47319: 				double num4 = Math.Round(num2 + num3 * 0.02 * num / 300.0, 2);
+47320: 				_0089_0088_008C.Text = num4.ToString();
+47321: 			}
+47322: 			else
+47323: 			{
+47324: 				_0089_0088_008C.Text = _0089_0088_008E.Text;
+47325: 			}
+47326: 		}
+47327: 
+47328: 		private void _0088_009B_0089(object P_0, EventArgs P_1)
+47329: 		{
+47330: 			//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+47331: 			//IL_0047: Expected O, but got Unknown
+47332: 			//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+47333: 			//IL_0066: Invalid comparison between Unknown and I4
+47334: 			//IL_0089: Unknown result type (might be due to invalid IL or missing references)
+47335: 			//IL_0094: Unknown result type (might be due to invalid IL or missing references)
+47336: 			Editor editor = default(Editor);
+47337: 			if (!_0088_0094())
+47338: 			{
+47339: 				if (false /* original-file-bool-offset:920 */)
+47340: 				{
+47341: 					return;
+47342: 				}
+47343: 				Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+47344: 				_0088_009A_0092(mdiActiveDocument.Window.Handle);
+47345: 				editor = mdiActiveDocument.Editor;
+47346: 			}
+47347: 			PromptEntityOptions val = new PromptEntityOptions("请选择RNP APCH保护区" /* string-offset:5700 */);
+47348: 			PromptEntityResult entity = editor.GetEntity(val);
+47349: 			_ = 0;
+47350: 			if (!_0088_0093() || (int)((PromptResult)entity).Status != 5100)
+47351: 			{
+47352: 				return;
+47353: 			}
+47354: 			Transaction val2 = Application.DocumentManager.MdiActiveDocument.Database.TransactionManager.StartTransaction();
+47355: 			try
+47356: 			{
+47357: 				ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;
+47358: 				_0088_0094();
+47359: 				if (_0088_0093() && !(xData != (ResultBuffer)null))
+47360: 				{
+47361: 					editor.WriteMessage("未找到RNP APCH参数。\n" /* string-offset:5704 */);
+47362: 					return;
+47363: 				}
+47364: 				do
+47365: 				{
+47366: 					TypedValue[] array = xData.AsArray();
+47367: 					_0097._008A_009A(_0088_009E_008A.Controls, ((TypedValue)(ref array[1])).Value.ToString(), "FormApvEvl" /* string-offset:408 */);
+47368: 				}
+47369: 				while (_0088_0094());
+47370: 			}
+47371: 			finally
+47372: 			{
+47373: 				((IDisposable)val2)?.Dispose();
+47374: 			}
+47375: 		}
+47376: 
+47377: 		private void _0088_009B_008A(object P_0, DataGridViewCellEventArgs P_1)
+47378: 		{
+47379: 			_ = Application.DocumentManager.MdiActiveDocument.Editor;
+47380: 			if (_0088_009D_0087 == null)
+47381: 			{
+47382: 				_ = 0;
+47383: 				if (!_0088_0093())
+47384: 				{
+47385: 				}
+47386: 			}
+47387: 			else
+47388: 			{
+47389: 				if (_0088_009D_0087.Count == 0 || P_1.ColumnIndex < 0)
+47390: 				{
+47391: 					return;
+47392: 				}
+47393: 				if (P_1.RowIndex < 0)
+47394: 				{
+47395: 					if (!_0088_0094())
+47396: 					{
+47397: 					}
+47398: 				}
+47399: 				else
+47400: 				{
+47401: 					DBPoint obj = _0088_009D_0088[_0088_009D_0090.Rows[P_1.RowIndex].Cells[0].Value.ToString()];
+47402: 					_008D._0089_0093(_0088_009D_0087);
+47403: 					_008D._0089_0092(obj);
+47404: 				}
+47405: 			}
+47406: 		}
+47407: 
+47408: 		private void _0088_009B_008B(object P_0, EventArgs P_1)
+47409: 		{
+47410: 			if (Clipboard.ContainsText())
+47411: 			{
+47412: 				_0089_0086_0099.Text = Clipboard.GetText();
+47413: 			}
+47414: 		}
+47415: 
+47416: 		private void _0088_009B_008C(object P_0, EventArgs P_1)
+47417: 		{
+47418: 			if (Clipboard.ContainsText())
+47419: 			{
+47420: 				_0089_0086_0096.Text = Clipboard.GetText();
+47421: 			}
+47422: 		}
+47423: 
+47424: 		private void _0088_009B_008D(object P_0, EventArgs P_1)
+47425: 		{
+47426: 			Clipboard.SetText(_0089_0087_0089.Text);
+47427: 		}
+47428: 
+47429: 		private void _0088_009B_008E(object P_0, EventArgs P_1)
+47430: 		{
+47431: 			Clipboard.SetText(_0089_0087_0092.Text);
+47432: 		}
+47433: 
+47434: 		private void _0088_009B_008F(object P_0, EventArgs P_1)
+47435: 		{
+47436: 			_0088_0093();
+47437: 			double a = default(double);
+47438: 			if (!_0088_0094())
+47439: 			{
+47440: 				double num = _008F_008A._008B_0087_009E(_0089_0087_0096, "输入数据有误，请检查。" /* string-offset:1984 */);
+47441: 				double num2 = _008F_008A._008B_0087_009E(_0089_0087_0097, "输入数据有误，请检查。" /* string-offset:1984 */);
+47442: 				double num3 = _008F_008A._008B_0087_009E(_0089_0087_0099, "输入数据有误，请检查。" /* string-offset:1984 */);
+47443: 				a = 100.0 * (num2 - num) / num3;
+47444: 			}
+47445: 			_0089_0087_0092.Text = Math.Round(a).ToString();
+47446: 		}
+47447: 
+47448: 		private void _0088_009B_0090(object P_0, EventArgs P_1)
+47449: 		{
+47450: 			double num = default(double);
+47451: 			double num2 = default(double);
+47452: 			double num3 = default(double);
+47453: 			double num4 = default(double);
+47454: 			if (false /* original-file-bool-offset:924 */)
+47455: 			{
+47456: 				_ = 1;
+47457: 				if (!_0088_0094() || !_0088_0093())
+47458: 				{
+47459: 					return;
+47460: 				}
+47461: 			}
+47462: 			else
+47463: 			{
+47464: 				num = _008F_008A._008B_0087_009E(_0089_0087_008E, "输入数据有误，请检查。" /* string-offset:1984 */);
+47465: 				num2 = _008F_008A._008B_0087_009E(_0089_0087_008F, "输入数据有误，请检查。" /* string-offset:1984 */);
+47466: 				num3 = 15.0;
+47467: 				num4 = _008F_008A._008B_0087_009E(_0089_0087_008A, "输入数据有误，请检查。" /* string-offset:1984 */);
+47468: 			}
+47469: 			double num5 = _008F_008A._008B_0087_009E(_0089_0087_0088, "输入数据有误，请检查。" /* string-offset:1984 */);
+47470: 			if (_0089_0089_0091._008D_0089)
+47471: 			{
+47472: 				goto IL_0100;
+47473: 			}
+47474: 			goto IL_011c;
+47475: 			IL_0100:
+47476: 			num *= 1.852;
+47477: 			goto IL_011c;
+47478: 			IL_011c:
+47479: 			if (_0089_0089_0090._008D_0089)
+47480: 			{
+47481: 				num5 *= 1.852;
+47482: 			}
+47483: 			_008E_009B obj = new _008E_009B(num, num2, num3, num5, num4);
+47484: 			double num6 = _008F_008A._008B_0087_009E(_0089_0087_008B, "输入数据有误，请检查。" /* string-offset:1984 */);
+47485: 			double a = (obj._008A_009D_009A + num5) * num6 / 3.6 + 444.0;
+47486: 			_0089_0087_0089.Text = Math.Round(a).ToString();
+47487: 			if (_0088_0093())
+47488: 			{
+47489: 				return;
+47490: 			}
+47491: 			goto IL_0100;
+47492: 		}
+47493: 
+47494: 		private void _0088_009B_0091(object P_0, EventArgs P_1)
+47495: 		{
+47496: 			_ = 1;
+47497: 			string text = default(string);
+47498: 			if (!_0088_0094())
+47499: 			{
+47500: 				text = _0088_009D_0096.Text;
+47501: 			}
+47502: 			_0088_009D_0096.Text = _0088_009E_0087.Text;
+47503: 			_0088_009E_0087.Text = text;
+47504: 			text = _0088_009D_0095.Text;
+47505: 			_0088_009D_0095.Text = _0088_009D_009E.Text;
+47506: 			_0088_009D_009E.Text = text;
+47507: 			text = _0088_009D_0094.Text;
+47508: 			_0088_009D_0094.Text = _0088_009D_009D.Text;
+47509: 			_0088_009D_009D.Text = text;
+47510: 		}
+47511: 
+47512: 		private void _0088_009B_0092(object P_0, EventArgs P_1)
+47513: 		{
+47514: 			//IL_0090: Unknown result type (might be due to invalid IL or missing references)
+47515: 			//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+47516: 			//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
+47517: 			//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
+47518: 			_ = 1;
+47519: 			if (!_0088_0094() && !true /* original-file-bool-offset:928 */)
+47520: 			{
+47521: 				return;
+47522: 			}
+47523: 			DBPoint val = default(DBPoint);
+47524: 			foreach (DataGridViewRow selectedRow in _0088_009D_0090.SelectedRows)
+47525: 			{
+47526: 				_0088_0093();
+47527: 				if (!_0088_0094())
+47528: 				{
+47529: 					val = _0088_009D_0088[_0088_009D_0090.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+47530: 				}
+47531: 				ObjectId val2 = _008B._0089_0087("obst" /* string-offset:2780 */, val.Position);
+47532: 				string obj = "Altitude" /* string-offset:536 */;
+47533: 				Point3d position = val.Position;
+47534: 				_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+47535: 			}
+47536: 		}
+47537: 
+47538: 		private void _0088_009B_0093(object P_0, EventArgs P_1)
+47539: 		{
+47540: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47541: 		}
+47542: 
+47543: 		private void _0088_009B_0094(object P_0, EventArgs P_1)
+47544: 		{
+47545: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47546: 		}
+47547: 
+47548: 		private void _0088_009B_0095(object P_0, EventArgs P_1)
+47549: 		{
+47550: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47551: 		}
+47552: 
+47553: 		private void _0088_009B_0096(object P_0, EventArgs P_1)
+47554: 		{
+47555: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47556: 		}
+47557: 
+47558: 		private void _0088_009B_0097(object P_0, EventArgs P_1)
+47559: 		{
+47560: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47561: 		}
+47562: 
+47563: 		private void _0088_009B_0098(object P_0, EventArgs P_1)
+47564: 		{
+47565: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47566: 		}
+47567: 
+47568: 		private void _0088_009B_0099(object P_0, EventArgs P_1)
+47569: 		{
+47570: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47571: 		}
+47572: 
+47573: 		private void _0088_009B_009A(object P_0, EventArgs P_1)
+47574: 		{
+47575: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47576: 		}
+47577: 
+47578: 		private void _0088_009B_009B(object P_0, EventArgs P_1)
+47579: 		{
+47580: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47581: 		}
+47582: 
+47583: 		private void _0088_009B_009C(object P_0, EventArgs P_1)
+47584: 		{
+47585: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47586: 		}
+47587: 
+47588: 		private void _0088_009B_009D(object P_0, EventArgs P_1)
+47589: 		{
+47590: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47591: 		}
+47592: 
+47593: 		private void _0088_009B_009E(object P_0, EventArgs P_1)
+47594: 		{
+47595: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47596: 		}
+47597: 
+47598: 		private void _0088_009C_0086(object P_0, EventArgs P_1)
+47599: 		{
+47600: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47601: 		}
+47602: 
+47603: 		private void _0088_009C_0087(object P_0, EventArgs P_1)
+47604: 		{
+47605: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47606: 		}
+47607: 
+47608: 		private void _0088_009C_0088(object P_0, EventArgs P_1)
+47609: 		{
+47610: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47611: 		}
+47612: 
+47613: 		private void _0088_009C_0089(object P_0, EventArgs P_1)
+47614: 		{
+47615: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47616: 		}
+47617: 
+47618: 		private void _0088_009C_008A(object P_0, EventArgs P_1)
+47619: 		{
+47620: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47621: 		}
+47622: 
+47623: 		private void _0088_009C_008B(object P_0, EventArgs P_1)
+47624: 		{
+47625: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47626: 		}
+47627: 
+47628: 		private void _0088_009C_008C(object P_0, EventArgs P_1)
+47629: 		{
+47630: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47631: 		}
+47632: 
+47633: 		private void _0088_009C_008D(object P_0, EventArgs P_1)
+47634: 		{
+47635: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47636: 		}
+47637: 
+47638: 		private void _0088_009C_008E(object P_0, EventArgs P_1)
+47639: 		{
+47640: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47641: 		}
+47642: 
+47643: 		private void _0088_009C_008F(object P_0, EventArgs P_1)
+47644: 		{
+47645: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47646: 		}
+47647: 
+47648: 		private void _0088_009C_0090(object P_0, EventArgs P_1)
+47649: 		{
+47650: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47651: 		}
+47652: 
+47653: 		private void _0088_009C_0091(object P_0, EventArgs P_1)
+47654: 		{
+47655: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47656: 		}
+47657: 
+47658: 		private void _0088_009C_0092(object P_0, EventArgs P_1)
+47659: 		{
+47660: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47661: 		}
+47662: 
+47663: 		private void _0088_009C_0093(object P_0, EventArgs P_1)
+47664: 		{
+47665: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47666: 		}
+47667: 
+47668: 		private void _0088_009C_0094(object P_0, EventArgs P_1)
+47669: 		{
+47670: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47671: 		}
+47672: 
+47673: 		private void _0088_009C_0095(object P_0, EventArgs P_1)
+47674: 		{
+47675: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47676: 		}
+47677: 
+47678: 		private void _0088_009C_0096(object P_0, EventArgs P_1)
+47679: 		{
+47680: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47681: 		}
+47682: 
+47683: 		private void _0088_009C_0097(object P_0, EventArgs P_1)
+47684: 		{
+47685: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47686: 		}
+47687: 
+47688: 		private void _0088_009C_0098(object P_0, EventArgs P_1)
+47689: 		{
+47690: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47691: 		}
+47692: 
+47693: 		private void _0088_009C_0099(object P_0, EventArgs P_1)
+47694: 		{
+47695: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47696: 		}
+47697: 
+47698: 		private void _0088_009C_009A(object P_0, EventArgs P_1)
+47699: 		{
+47700: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47701: 		}
+47702: 
+47703: 		protected override void Dispose(bool P_0)
+47704: 		{
+47705: 			_0088_0093();
+47706: 			if ((_0088_0094() || (_0088_0093() && P_0)) && _0088_009D_008B != null)
+47707: 			{
+47708: 				_0088_009D_008B.Dispose();
+47709: 			}
+47710: 			base.Dispose(P_0);
+47711: 		}
+47712: 
+47713: 		private void _0088_009C_009B()
+47714: 		{
+47715: 			int num = 521;
+47716: 			if (!_0088_0094())
+47717: 			{
+47718: 				goto IL_689c;
+47719: 			}
+47720: 			goto IL_7788;
+47721: 			IL_689c:
+47722: 			ComponentResourceManager componentResourceManager = default(ComponentResourceManager);
+47723: 			while (true)
+47724: 			{
+47725: 				switch (num)
+47726: 				{
+47727: 				case 121:
+47728: 					break;
+47729: 				case 505:
+47730: 					goto IL_0049;
+47731: 				case 353:
+47732: 					goto IL_0055;
+47733: 				case 10:
+47734: 					goto IL_0078;
+47735: 				case 639:
+47736: 					goto IL_00aa;
+47737: 				case 500:
+47738: 				case 640:
+47739: 					goto IL_00e1;
+47740: 				case 548:
+47741: 					goto IL_0101;
+47742: 				case 231:
+47743: 					goto IL_011f;
+47744: 				case 663:
+47745: 					goto IL_0126;
+47746: 				case 236:
+47747: 					goto IL_017f;
+47748: 				case 636:
+47749: 					goto IL_01aa;
+47750: 				case 250:
+47751: 					goto IL_01d5;
+47752: 				case 605:
+47753: 					goto IL_01ef;
+47754: 				case 325:
+47755: 					goto IL_0209;
+47756: 				case 429:
+47757: 					goto IL_0244;
+47758: 				case 327:
+47759: 					goto IL_0269;
+47760: 				case 668:
+47761: 					goto IL_028b;
+47762: 				case 43:
+47763: 					goto IL_02a0;
+47764: 				case 671:
+47765: 					goto IL_02b4;
+47766: 				case 647:
+47767: 					goto IL_02c0;
+47768: 				case 265:
+47769: 					goto IL_02ec;
+47770: 				case 185:
+47771: 					goto IL_0301;
+47772: 				case 603:
+47773: 					goto IL_030c;
+47774: 				case 272:
+47775: 					goto IL_0321;
+47776: 				case 618:
+47777: 					goto IL_0362;
+47778: 				case 574:
+47779: 					goto IL_0377;
+47780: 				case 223:
+47781: 					goto IL_0397;
+47782: 				case 465:
+47783: 					goto IL_03b6;
+47784: 				case 301:
+47785: 					goto IL_03cb;
+47786: 				case 501:
+47787: 					goto IL_0436;
+47788: 				case 320:
+47789: 					goto IL_0453;
+47790: 				case 218:
+47791: 					goto IL_0468;
+47792: 				case 76:
+47793: 					goto IL_0492;
+47794: 				case 323:
+47795: 					goto IL_04ba;
+47796: 				case 215:
+47797: 					goto IL_04f8;
+47798: 				case 517:
+47799: 					goto IL_0504;
+47800: 				case 427:
+47801: 					goto IL_0510;
+47802: 				case 86:
+47803: 					goto IL_0530;
+47804: 				case 337:
+47805: 					goto IL_0568;
+47806: 				case 675:
+47807: 					goto IL_05a0;
+47808: 				case 157:
+47809: 					goto IL_05ce;
+47810: 				case 350:
+47811: 					goto IL_05db;
+47812: 				case 538:
+47813: 					goto IL_05ec;
+47814: 				case 358:
+47815: 					goto IL_0601;
+47816: 				case 291:
+47817: 					goto IL_061e;
+47818: 				case 72:
+47819: 					goto IL_069f;
+47820: 				case 401:
+47821: 					goto IL_06bd;
+47822: 				case 222:
+47823: 					goto IL_06c9;
+47824: 				case 182:
+47825: 					goto IL_070f;
+47826: 				case 78:
+47827: 					goto IL_0725;
+47828: 				case 469:
+47829: 					goto IL_0763;
+47830: 				case 5:
+47831: 					goto IL_0795;
+47832: 				case 101:
+47833: 					goto IL_07d6;
+47834: 				case 155:
+47835: 					goto IL_080c;
+47836: 				case 518:
+47837: 					goto IL_0830;
+47838: 				case 44:
+47839: 					goto IL_0844;
+47840: 				case 65:
+47841: 					goto IL_0862;
+47842: 				case 410:
+47843: 					goto IL_0893;
+47844: 				case 475:
+47845: 					goto IL_08b7;
+47846: 				case 136:
+47847: 					goto IL_08cc;
+47848: 				case 392:
+47849: 					goto IL_0907;
+47850: 				case 290:
+47851: 					goto IL_0924;
+47852: 				case 666:
+47853: 					goto IL_095b;
+47854: 				case 356:
+47855: 					goto IL_09ac;
+47856: 				case 259:
+47857: 					goto IL_09d0;
+47858: 				case 387:
+47859: 					goto IL_09ed;
+47860: 				case 82:
+47861: 					goto IL_0a0b;
+47862: 				case 310:
+47863: 					goto IL_0a35;
+47864: 				case 140:
+47865: 					goto IL_0a5f;
+47866: 				case 207:
+47867: 					goto IL_0a73;
+47868: 				case 342:
+47869: 					goto IL_0a9a;
+47870: 				case 336:
+47871: 					goto IL_0ac4;
+47872: 				case 407:
+47873: 					goto IL_0aed;
+47874: 				case 129:
+47875: 					goto IL_0b01;
+47876: 				case 432:
+47877: 					goto IL_0b42;
+47878: 				case 468:
+47879: 					goto IL_0b61;
+47880: 				case 581:
+47881: 					goto IL_0b8d;
+47882: 				case 651:
+47883: 					goto IL_0bac;
+47884: 				case 240:
+47885: 					goto IL_0beb;
+47886: 				case 48:
+47887: 					goto IL_0c20;
+47888: 				case 368:
+47889: 					goto IL_0c49;
+47890: 				case 239:
+47891: 					goto IL_0c67;
+47892: 				case 584:
+47893: 					goto IL_0ca6;
+47894: 				case 650:
+47895: 					goto IL_0cd8;
+47896: 				case 665:
+47897: 					goto IL_0cec;
+47898: 				case 543:
+47899: 					goto IL_0d02;
+47900: 				case 487:
+47901: 					goto IL_0d20;
+47902: 				case 90:
+47903: 					goto IL_0d37;
+47904: 				case 472:
+47905: 					goto IL_0d60;
+47906: 				case 398:
+47907: 					goto IL_0d8d;
+47908: 				case 116:
+47909: 					goto IL_0db5;
+47910: 				case 559:
+47911: 					goto IL_0df4;
+47912: 				case 528:
+47913: 					goto IL_0e25;
+47914: 				case 204:
+47915: 					goto IL_0e48;
+47916: 				case 540:
+47917: 					goto IL_0e7e;
+47918: 				case 148:
+47919: 					goto IL_0eca;
+47920: 				case 123:
+47921: 					goto IL_0ef2;
+47922: 				case 98:
+47923: 					goto IL_0efd;
+47924: 				case 340:
+47925: 					goto IL_0f1d;
+47926: 				case 376:
+47927: 					goto IL_0f32;
+47928: 				case 562:
+47929: 					goto IL_0f50;
+47930: 				case 11:
+47931: 					goto IL_0f5c;
+47932: 				case 24:
+47933: 					goto IL_0f70;
+47934: 				case 375:
+47935: 					goto IL_0f9c;
+47936: 				case 193:
+47937: 					goto IL_0fb1;
+47938: 				case 533:
+47939: 					goto IL_0fd1;
+47940: 				case 430:
+47941: 					goto IL_0fe5;
+47942: 				case 4:
+47943: 					goto IL_0ff5;
+47944: 				case 170:
+47945: 					goto IL_100e;
+47946: 				case 583:
+47947: 					goto IL_1022;
+47948: 				case 221:
+47949: 					goto IL_1041;
+47950: 				case 467:
+47951: 					goto IL_1055;
+47952: 				case 6:
+47953: 					goto IL_106b;
+47954: 				case 470:
+47955: 					goto IL_107f;
+47956: 				case 460:
+47957: 					goto IL_1093;
+47958: 				case 14:
+47959: 					goto IL_10a9;
+47960: 				case 51:
+47961: 					goto IL_10ca;
+47962: 				case 189:
+47963: 					goto IL_10f6;
+47964: 				case 313:
+47965: 					goto IL_110c;
+47966: 				case 326:
+47967: 					goto IL_1120;
+47968: 				case 369:
+47969: 					goto IL_1141;
+47970: 				case 360:
+47971: 					goto IL_1176;
+47972: 				case 554:
+47973: 					goto IL_118a;
+47974: 				case 441:
+47975: 					goto IL_11b8;
+47976: 				case 275:
+47977: 					goto IL_11e4;
+47978: 				case 302:
+47979: 					goto IL_120c;
+47980: 				case 341:
+47981: 					goto IL_124a;
+47982: 				case 604:
+47983: 					goto IL_12aa;
+47984: 				case 224:
+47985: 					goto IL_12d3;
+47986: 				case 150:
+47987: 					goto IL_1343;
+47988: 				case 572:
+47989: 					goto IL_135c;
+47990: 				case 435:
+47991: 					goto IL_139d;
+47992: 				case 466:
+47993: 					goto IL_13b2;
+47994: 				case 642:
+47995: 					goto IL_13cf;
+47996: 				case 13:
+47997: 					goto IL_13f1;
+47998: 				case 557:
+47999: 					goto IL_1406;
+48000: 				case 59:
+48001: 					goto IL_1426;
+48002: 				case 645:
+48003: 					goto IL_1444;
+48004: 				case 141:
+48005: 					goto IL_1458;
+48006: 				case 378:
+48007: 					goto IL_1483;
+48008: 				case 537:
+48009: 					goto IL_14ec;
+48010: 				case 37:
+48011: 					goto IL_150d;
+48012: 				case 188:
+48013: 					goto IL_152d;
+48014: 				case 334:
+48015: 					goto IL_158c;
+48016: 				case 575:
+48017: 					goto IL_159b;
+48018: 				case 453:
+48019: 					goto IL_15e0;
+48020: 				case 509:
+48021: 					goto IL_1609;
+48022: 				case 200:
+48023: 					goto IL_161f;
+48024: 				case 591:
+48025: 					goto IL_1648;
+48026: 				case 196:
+48027: 					goto IL_1665;
+48028: 				case 455:
+48029: 					goto IL_1697;
+48030: 				case 117:
+48031: 					goto IL_16ad;
+48032: 				case 40:
+48033: 					goto IL_16c2;
+48034: 				case 661:
+48035: 					goto IL_16df;
+48036: 				case 373:
+48037: 					goto IL_1728;
+48038: 				case 261:
+48039: 					goto IL_1752;
+48040: 				case 439:
+48041: 					goto IL_1780;
+48042: 				case 227:
+48043: 					goto IL_1796;
+48044: 				case 628:
+48045: 					goto IL_17ab;
+48046: 				case 208:
+48047: 					goto IL_17de;
+48048: 				case 111:
+48049: 					goto IL_17fc;
+48050: 				case 565:
+48051: 					goto IL_184a;
+48052: 				case 89:
+48053: 					goto IL_187d;
+48054: 				case 535:
+48055: 					goto IL_189f;
+48056: 				case 412:
+48057: 					goto IL_18c9;
+48058: 				case 253:
+48059: 					goto IL_191c;
+48060: 				case 608:
+48061: 					goto IL_194e;
+48062: 				case 402:
+48063: 					goto IL_196b;
+48064: 				case 480:
+48065: 					goto IL_1981;
+48066: 				case 159:
+48067: 					goto IL_19ab;
+48068: 				case 99:
+48069: 					goto IL_1a2c;
+48070: 				case 365:
+48071: 					goto IL_1a65;
+48072: 				case 452:
+48073: 					goto IL_1a82;
+48074: 				case 19:
+48075: 					goto IL_1aa0;
+48076: 				case 27:
+48077: 					goto IL_1abd;
+48078: 				case 235:
+48079: 					goto IL_1ae8;
+48080: 				case 339:
+48081: 					goto IL_1aff;
+48082: 				case 634:
+48083: 					goto IL_1b31;
+48084: 				case 249:
+48085: 					goto IL_1b67;
+48086: 				case 106:
+48087: 					goto IL_1b96;
+48088: 				case 421:
+48089: 					goto IL_1c3e;
+48090: 				case 442:
+48091: 					goto IL_1c7d;
+48092: 				case 216:
+48093: 					goto IL_1cc1;
+48094: 				case 536:
+48095: 					goto IL_1cde;
+48096: 				case 542:
+48097: 					goto IL_1d13;
+48098: 				case 525:
+48099: 					goto IL_1d5d;
+48100: 				case 209:
+48101: 					goto IL_1d7d;
+48102: 				case 53:
+48103: 					goto IL_1d92;
+48104: 				case 434:
+48105: 					goto IL_1dc7;
+48106: 				case 418:
+48107: 					goto IL_1df3;
+48108: 				case 30:
+48109: 					goto IL_1e10;
+48110: 				case 514:
+48111: 					goto IL_1e4c;
+48112: 				case 166:
+48113: 					goto IL_1e9f;
+48114: 				case 213:
+48115: 					goto IL_1eb6;
+48116: 				case 245:
+48117: 					goto IL_1edf;
+48118: 				case 448:
+48119: 					goto IL_1f11;
+48120: 				case 108:
+48121: 					goto IL_1f3a;
+48122: 				case 71:
+48123: 					goto IL_1f76;
+48124: 				case 371:
+48125: 					goto IL_1f93;
+48126: 				case 403:
+48127: 					goto IL_1fc5;
+48128: 				case 17:
+48129: 					goto IL_1fda;
+48130: 				case 16:
+48131: 					goto IL_1ff8;
+48132: 				case 560:
+48133: 					goto IL_2018;
+48134: 				case 599:
+48135: 					goto IL_202d;
+48136: 				case 485:
+48137: 					goto IL_2041;
+48138: 				case 23:
+48139: 					goto IL_205e;
+48140: 				case 571:
+48141: 					goto IL_207c;
+48142: 				case 328:
+48143: 					goto IL_2090;
+48144: 				case 464:
+48145: 					goto IL_20bd;
+48146: 				case 266:
+48147: 					goto IL_20ee;
+48148: 				case 60:
+48149: 					goto IL_214b;
+48150: 				case 264:
+48151: 					goto IL_2180;
+48152: 				case 444:
+48153: 					goto IL_21a9;
+48154: 				case 364:
+48155: 					goto IL_21d0;
+48156: 				case 617:
+48157: 					goto IL_2224;
+48158: 				case 623:
+48159: 					goto IL_2295;
+48160: 				case 476:
+48161: 					goto IL_22b4;
+48162: 				case 594:
+48163: 					goto IL_22d0;
+48164: 				case 270:
+48165: 					goto IL_22ee;
+48166: 				case 669:
+48167: 					goto IL_2308;
+48168: 				case 199:
+48169: 					goto IL_2327;
+48170: 				case 308:
+48171: 					goto IL_2344;
+48172: 				case 619:
+48173: 					goto IL_2351;
+48174: 				case 555:
+48175: 					goto IL_2366;
+48176: 				case 210:
+48177: 					goto IL_238f;
+48178: 				case 114:
+48179: 					goto IL_23cb;
+48180: 				case 602:
+48181: 					goto IL_23e9;
+48182: 				case 47:
+48183: 					goto IL_2412;
+48184: 				case 309:
+48185: 					goto IL_2447;
+48186: 				case 21:
+48187: 					goto IL_2469;
+48188: 				case 145:
+48189: 					goto IL_2497;
+48190: 				case 91:
+48191: 					goto IL_24c2;
+48192: 				case 255:
+48193: 					goto IL_24d7;
+48194: 				case 219:
+48195: 					goto IL_24f4;
+48196: 				case 87:
+48197: 					goto IL_2512;
+48198: 				case 246:
+48199: 					goto IL_2539;
+48200: 				case 115:
+48201: 					goto IL_255c;
+48202: 				case 357:
+48203: 					goto IL_259a;
+48204: 				case 589:
+48205: 					goto IL_2605;
+48206: 				case 482:
+48207: 					goto IL_262c;
+48208: 				case 307:
+48209: 					goto IL_2639;
+48210: 				case 428:
+48211: 					goto IL_264e;
+48212: 				case 284:
+48213: 					goto IL_266f;
+48214: 				case 529:
+48215: 					goto IL_2685;
+48216: 				case 391:
+48217: 					goto IL_26a4;
+48218: 				case 610:
+48219: 					goto IL_26b9;
+48220: 				case 20:
+48221: 					goto IL_26e0;
+48222: 				case 624:
+48223: 					goto IL_26fe;
+48224: 				case 641:
+48225: 					goto IL_2712;
+48226: 				case 405:
+48227: 					goto IL_2744;
+48228: 				case 558:
+48229: 					goto IL_276d;
+48230: 				case 165:
+48231: 					goto IL_27b6;
+48232: 				case 531:
+48233: 					goto IL_27d8;
+48234: 				case 36:
+48235: 					goto IL_27fc;
+48236: 				case 85:
+48237: 					goto IL_2813;
+48238: 				case 477:
+48239: 					goto IL_2833;
+48240: 				case 459:
+48241: 					goto IL_2848;
+48242: 				case 616:
+48243: 					goto IL_2865;
+48244: 				case 493:
+48245: 					goto IL_287a;
+48246: 				case 232:
+48247: 					goto IL_2898;
+48248: 				case 258:
+48249: 					goto IL_28b5;
+48250: 				case 451:
+48251: 					goto IL_2907;
+48252: 				case 648:
+48253: 					goto IL_293c;
+48254: 				case 673:
+48255: 					goto IL_2948;
+48256: 				case 496:
+48257: 					goto IL_2985;
+48258: 				case 234:
+48259: 					goto IL_29a6;
+48260: 				case 397:
+48261: 					goto IL_29c0;
+48262: 				case 93:
+48263: 					goto IL_2a01;
+48264: 				case 132:
+48265: 					goto IL_2a17;
+48266: 				case 74:
+48267: 					goto IL_2a33;
+48268: 				case 385:
+48269: 					goto IL_2a51;
+48270: 				case 638:
+48271: 					goto IL_2a80;
+48272: 				case 508:
+48273: 					goto IL_2a9e;
+48274: 				case 370:
+48275: 					goto IL_2aaa;
+48276: 				case 502:
+48277: 					goto IL_2ad6;
+48278: 				case 620:
+48279: 					goto IL_2aff;
+48280: 				case 125:
+48281: 					goto IL_2b2a;
+48282: 				case 315:
+48283: 					goto IL_2b5d;
+48284: 				case 600:
+48285: 					goto IL_2b73;
+48286: 				case 102:
+48287: 					goto IL_2bf7;
+48288: 				case 149:
+48289: 					goto IL_2cfc;
+48290: 				case 35:
+48291: 					goto IL_2d25;
+48292: 				case 431:
+48293: 					goto IL_2d43;
+48294: 				case 332:
+48295: 					goto IL_2d4f;
+48296: 				case 38:
+48297: 					goto IL_2d77;
+48298: 				case 8:
+48299: 					goto IL_2dac;
+48300: 				case 352:
+48301: 					goto IL_2dc1;
+48302: 				case 18:
+48303: 					goto IL_2de0;
+48304: 				case 573:
+48305: 					goto IL_2e2b;
+48306: 				case 674:
+48307: 					goto IL_2e59;
+48308: 				case 156:
+48309: 					goto IL_2e76;
+48310: 				case 294:
+48311: 					goto IL_2e9f;
+48312: 				case 486:
+48313: 					goto IL_2eb4;
+48314: 				case 306:
+48315: 					goto IL_2ec9;
+48316: 				case 609:
+48317: 					goto IL_2ede;
+48318: 				case 88:
+48319: 					goto IL_2f3c;
+48320: 				case 582:
+48321: 					goto IL_2f50;
+48322: 				case 281:
+48323: 					goto IL_2f85;
+48324: 				case 596:
+48325: 					goto IL_2fed;
+48326: 				case 97:
+48327: 					goto IL_3042;
+48328: 				case 142:
+48329: 					goto IL_3057;
+48330: 				case 672:
+48331: 					goto IL_30a2;
+48332: 				case 130:
+48333: 					goto IL_30c1;
+48334: 				case 506:
+48335: 					goto IL_30e2;
+48336: 				case 346:
+48337: 					goto IL_30f6;
+48338: 				case 96:
+48339: 					goto IL_310c;
+48340: 				case 171:
+48341: 					goto IL_3117;
+48342: 				case 252:
+48343: 					goto IL_312b;
+48344: 				case 545:
+48345: 					goto IL_314a;
+48346: 				case 632:
+48347: 					goto IL_3155;
+48348: 				case 94:
+48349: 					_0088_009E_008C.Name = "tabPage2" /* string-offset:1788 */;
+48350: 					_0088_009E_008C.Padding = new Padding(3);
+48351: 					num = 62;
+48352: 					goto case 62;
+48353: 				case 62:
+48354: 					_0088_009E_008C.Size = new Size(720, 176);
+48355: 					num = 1;
+48356: 					goto case 1;
+48357: 				case 1:
+48358: 					_0088_009E_008C.TabIndex = 1;
+48359: 					_0088_009E_008C.Text = "程序参数" /* string-offset:5744 */;
+48360: 					_0088_009E_008C.UseVisualStyleBackColor = true;
+48361: 					_0089_0086_0087.Controls.Add(_0089_0087_009A);
+48362: 					_0089_0086_0087.Controls.Add(_0089_0087_009B);
+48363: 					num = 296;
+48364: 					goto case 296;
+48365: 				case 296:
+48366: 					_0089_0086_0087.Controls.Add(_0089_0086_0088);
+48367: 					_0089_0086_0087.Controls.Add(_0089_0086_0089);
+48368: 					_0089_0086_0087.Controls.Add(_0089_0086_0094);
+48369: 					_0089_0086_0087.Controls.Add(_0089_0086_0098);
+48370: 					_0089_0086_0087.Controls.Add(_0089_0086_008A);
+48371: 					_0089_0086_0087.Controls.Add(_0089_0086_0096);
+48372: 					_0089_0086_0087.Controls.Add(_0089_0086_0099);
+48373: 					goto case 569;
+48374: 				case 569:
+48375: 					_0089_0086_0087.Controls.Add(_0089_0086_008B);
+48376: 					_0089_0086_0087.Location = new Point(385, 12);
+48377: 					_0089_0086_0087.Name = "groupBox5" /* string-offset:1852 */;
+48378: 					_0089_0086_0087.Size = new Size(200, 156);
+48379: 					_0089_0086_0087.TabIndex = 65;
+48380: 					_0089_0086_0087.TabStop = false;
+48381: 					goto case 292;
+48382: 				case 292:
+48383: 					_0089_0086_0087.Text = "复飞" /* string-offset:5748 */;
+48384: 					_0089_0087_009A.BackgroundImage = (Image)componentResourceManager.GetObject("button11.BackgroundImage" /* string-offset:3484 */);
+48385: 					_0089_0087_009A.BackgroundImageLayout = ImageLayout.Center;
+48386: 					num = 173;
+48387: 					goto case 173;
+48388: 				case 173:
+48389: 					_0089_0087_009A.Location = new Point(168, 119);
+48390: 					goto case 169;
+48391: 				case 169:
+48392: 					_0089_0087_009A.Name = "button11" /* string-offset:3488 */;
+48393: 					_0089_0087_009A.Size = new Size(24, 24);
+48394: 					_0089_0087_009A.TabIndex = 72;
+48395: 					num = 194;
+48396: 					if (!_0088_0094())
+48397: 					{
+48398: 						goto case 194;
+48399: 					}
+48400: 					goto case 570;
+48401: 				case 194:
+48402: 					_0089_0087_009A.UseVisualStyleBackColor = true;
+48403: 					num = 120;
+48404: 					goto case 120;
+48405: 				case 120:
+48406: 					_0089_0087_009A.Click += _0088_009B_008C;
+48407: 					_0089_0087_009B.BackgroundImage = (Image)componentResourceManager.GetObject("button7.BackgroundImage" /* string-offset:3492 */);
+48408: 					_0089_0087_009B.BackgroundImageLayout = ImageLayout.Center;
+48409: 					goto case 178;
+48410: 				case 178:
+48411: 					_0089_0087_009B.Location = new Point(169, 87);
+48412: 					num = 532;
+48413: 					if (_0088_0094())
+48414: 					{
+48415: 						goto case 670;
+48416: 					}
+48417: 					goto case 532;
+48418: 				case 670:
+48419: 					_0088_009E_008C.Controls.Add(_0089_0086_008C);
+48420: 					num = 298;
+48421: 					if (_0088_0093())
+48422: 					{
+48423: 						continue;
+48424: 					}
+48425: 					goto case 94;
+48426: 				case 570:
+48427: 					_0089_0088_0093.Size = new Size(37, 15);
+48428: 					_0089_0088_0093.TabIndex = 9;
+48429: 					_0089_0088_0093.Text = "机型" /* string-offset:2356 */;
+48430: 					goto case 633;
+48431: 				case 633:
+48432: 					_0089_0088_0094.FormattingEnabled = true;
+48433: 					num = 474;
+48434: 					goto case 474;
+48435: 				case 474:
+48436: 					_0089_0088_0094.Items.AddRange(new object[3]
+48437: 					{
+48438: 						"-900" /* string-offset:2412 */,
+48439: 						"-1100" /* string-offset:2416 */,
+48440: 						"-1400" /* string-offset:2420 */
+48441: 					});
+48442: 					_0089_0088_0094.Location = new Point(108, 86);
+48443: 					_0089_0088_0094.Name = "comboXz" /* string-offset:2424 */;
+48444: 					_0089_0088_0094.Size = new Size(75, 22);
+48445: 					num = 649;
+48446: 					goto case 649;
+48447: 				case 649:
+48448: 					_0089_0088_0094.TabIndex = 3;
+48449: 					num = 660;
+48450: 					goto case 660;
+48451: 				case 660:
+48452: 					_0089_0088_0094.Text = "-900" /* string-offset:2412 */;
+48453: 					num = 154;
+48454: 					goto case 154;
+48455: 				case 154:
+48456: 					_0089_0088_0095.AutoSize = true;
+48457: 					_0089_0088_0095.Location = new Point(14, 121);
+48458: 					num = 550;
+48459: 					goto case 550;
+48460: 				case 550:
+48461: 					_0089_0088_0095.Name = "label35" /* string-offset:2472 */;
+48462: 					num = 191;
+48463: 					goto case 191;
+48464: 				case 191:
+48465: 					_0089_0088_0095.Size = new Size(91, 15);
+48466: 					_0089_0088_0095.TabIndex = 9;
+48467: 					goto case 530;
+48468: 				case 530:
+48469: 					_0089_0088_0095.Text = "机场标高(m)" /* string-offset:5740 */;
+48470: 					_0089_0088_0096.Location = new Point(108, 117);
+48471: 					num = 282;
+48472: 					goto case 282;
+48473: 				case 282:
+48474: 					_0089_0088_0096.Margin = new Padding(3, 2, 3, 2);
+48475: 					_0089_0088_0096.Name = "textBoxElev" /* string-offset:2404 */;
+48476: 					_0089_0088_0096.Size = new Size(75, 23);
+48477: 					num = 135;
+48478: 					goto case 135;
+48479: 				case 135:
+48480: 					_0089_0088_0096.TabIndex = 4;
+48481: 					_0089_0088_0096.Text = "1800" /* string-offset:2408 */;
+48482: 					_0089_0088_0096.TextChanged += _0088_009C_0094;
+48483: 					num = 63;
+48484: 					goto case 63;
+48485: 				case 63:
+48486: 					_0089_0088_0097.AutoSize = true;
+48487: 					num = 248;
+48488: 					if (!_0088_0094())
+48489: 					{
+48490: 						continue;
+48491: 					}
+48492: 					goto case 395;
+48493: 				case 395:
+48494: 					_0089_0088_0097.Text = "GP/VPA(°)" /* string-offset:5944 */;
+48495: 					num = 564;
+48496: 					goto case 564;
+48497: 				case 564:
+48498: 					_0089_0088_0098.AutoSize = true;
+48499: 					_0089_0088_0098.Location = new Point(14, 90);
+48500: 					_0089_0088_0098.Name = "label41" /* string-offset:5948 */;
+48501: 					_0089_0088_0098.Size = new Size(47, 15);
+48502: 					_0089_0088_0098.TabIndex = 0;
+48503: 					goto IL_21d0;
+48504: 				case 532:
+48505: 					_0089_0087_009B.Name = "button7" /* string-offset:1948 */;
+48506: 					num = 318;
+48507: 					if (!_0088_0094())
+48508: 					{
+48509: 						continue;
+48510: 					}
+48511: 					goto case 563;
+48512: 				case 563:
+48513: 					_0089_0088_0099.Name = "groupBox12" /* string-offset:2276 */;
+48514: 					num = 303;
+48515: 					if (_0088_0094())
+48516: 					{
+48517: 						goto IL_16ad;
+48518: 					}
+48519: 					goto case 303;
+48520: 				case 303:
+48521: 					_0089_0088_0099.Padding = new Padding(3, 2, 3, 2);
+48522: 					num = 667;
+48523: 					goto case 667;
+48524: 				case 667:
+48525: 					_0089_0088_0099.Size = new Size(194, 153);
+48526: 					goto case 279;
+48527: 				case 279:
+48528: 					_0089_0088_0099.TabIndex = 39;
+48529: 					goto case 519;
+48530: 				case 519:
+48531: 					_0089_0088_0099.TabStop = false;
+48532: 					num = 595;
+48533: 					goto case 595;
+48534: 				case 595:
+48535: 					_0089_0088_0099.Text = "进近参数" /* string-offset:5952 */;
+48536: 					num = 228;
+48537: 					if (!_0088_0093())
+48538: 					{
+48539: 						goto IL_118a;
+48540: 					}
+48541: 					goto case 228;
+48542: 				case 228:
+48543: 					_0089_0088_009A.Enabled = false;
+48544: 					_0089_0088_009A.Location = new Point(104, 117);
+48545: 					goto IL_2224;
+48546: 				case 664:
+48547: 					goto IL_383a;
+48548: 				case 629:
+48549: 					goto IL_385a;
+48550: 				case 70:
+48551: 					goto IL_388c;
+48552: 				case 285:
+48553: 					goto IL_38b7;
+48554: 				case 662:
+48555: 					_0088_009D_0093.Padding = new Padding(4, 3, 4, 3);
+48556: 					num = 181;
+48557: 					goto case 181;
+48558: 				case 181:
+48559: 					_0088_009D_0093.Size = new Size(214, 157);
+48560: 					_0088_009D_0093.TabIndex = 57;
+48561: 					_0088_009D_0093.TabStop = false;
+48562: 					num = 361;
+48563: 					if (_0088_0093())
+48564: 					{
+48565: 						continue;
+48566: 					}
+48567: 					goto case 550;
+48568: 				case 659:
+48569: 					_0089_0087_0091.Text = "复飞中间段" /* string-offset:5860 */;
+48570: 					num = 515;
+48571: 					goto case 515;
+48572: 				case 515:
+48573: 					_0089_0087_009C.Location = new Point(199, 30);
+48574: 					_0089_0087_009C.Name = "button15" /* string-offset:3516 */;
+48575: 					_0089_0087_009C.Size = new Size(40, 70);
+48576: 					_0089_0087_009C.TabIndex = 72;
+48577: 					_0089_0087_009C.Text = "计算" /* string-offset:4792 */;
+48578: 					num = 520;
+48579: 					if (_0088_0094())
+48580: 					{
+48581: 						goto IL_2aff;
+48582: 					}
+48583: 					goto case 520;
+48584: 				case 520:
+48585: 					_0089_0087_009C.UseVisualStyleBackColor = true;
+48586: 					_0089_0087_009C.Click += _0088_009B_008F;
+48587: 					num = 576;
+48588: 					if (_0088_0094())
+48589: 					{
+48590: 						goto IL_20ee;
+48591: 					}
+48592: 					goto case 576;
+48593: 				case 658:
+48594: 					_0089_0086_009A.Text = "绘图设置" /* string-offset:5988 */;
+48595: 					num = 386;
+48596: 					goto case 386;
+48597: 				case 386:
+48598: 					_0089_0086_009B.AutoSize = true;
+48599: 					_0089_0086_009B.Location = new Point(19, 26);
+48600: 					_0089_0086_009B.Name = "checkBox1" /* string-offset:1820 */;
+48601: 					_0089_0086_009B.Size = new Size(116, 19);
+48602: 					_0089_0086_009B.TabIndex = 0;
+48603: 					_0089_0086_009B.Text = "显示定位容差" /* string-offset:5992 */;
+48604: 					_0089_0086_009B.UseVisualStyleBackColor = true;
+48605: 					goto case 343;
+48606: 				case 343:
+48607: 					_0089_0088_0086.Controls.Add(_0089_0088_0087);
+48608: 					goto case 138;
+48609: 				case 138:
+48610: 					_0089_0088_0086.Controls.Add(_0089_0088_0088);
+48611: 					goto case 359;
+48612: 				case 359:
+48613: 					_0089_0088_0086.Controls.Add(_0089_0088_0089);
+48614: 					num = 461;
+48615: 					goto case 461;
+48616: 				case 461:
+48617: 					_0089_0088_0086.Controls.Add(_0089_0088_008A);
+48618: 					goto IL_2b5d;
+48619: 				case 657:
+48620: 					_0089_0087_008A = new TextBox();
+48621: 					_0089_0087_008B = new TextBox();
+48622: 					goto case 160;
+48623: 				case 160:
+48624: 					_0089_0089_008D = new Label();
+48625: 					_0089_0087_008C = new Label();
+48626: 					_0089_0087_008D = new Label();
+48627: 					_0089_0087_008E = new TextBox();
+48628: 					_0089_0087_008F = new TextBox();
+48629: 					num = 491;
+48630: 					goto case 491;
+48631: 				case 491:
+48632: 					_0089_0087_0090 = new Label();
+48633: 					num = 226;
+48634: 					goto case 226;
+48635: 				case 226:
+48636: 					_0089_0087_009E = new TabPage();
+48637: 					_0089_0088_008F = new Button();
+48638: 					_0089_0088_0090 = new GroupBox();
+48639: 					num = 300;
+48640: 					goto case 300;
+48641: 				case 300:
+48642: 					_0089_0088_0091 = new ComboBox();
+48643: 					_0089_0088_0092 = new ComboBox();
+48644: 					num = 201;
+48645: 					goto case 201;
+48646: 				case 201:
+48647: 					_0089_0088_0093 = new Label();
+48648: 					goto case 68;
+48649: 				case 68:
+48650: 					_0089_0088_0094 = new ComboBox();
+48651: 					num = 626;
+48652: 					goto case 626;
+48653: 				case 626:
+48654: 					_0089_0088_0095 = new Label();
+48655: 					_0089_0088_0096 = new TextBox();
+48656: 					num = 25;
+48657: 					goto case 25;
+48658: 				case 25:
+48659: 					_0089_0088_0097 = new Label();
+48660: 					num = 544;
+48661: 					goto case 544;
+48662: 				case 544:
+48663: 					_0089_0088_0098 = new Label();
+48664: 					_0089_0088_0099 = new GroupBox();
+48665: 					num = 488;
+48666: 					if (_0088_0093())
+48667: 					{
+48668: 						continue;
+48669: 					}
+48670: 					goto case 478;
+48671: 				case 478:
+48672: 					_0089_0086_008F.Controls.Add(_0088_009E_0093);
+48673: 					num = 153;
+48674: 					goto case 153;
+48675: 				case 153:
+48676: 					_0089_0086_008F.Controls.Add(_0088_009E_0090);
+48677: 					num = 509;
+48678: 					goto IL_1609;
+48679: 				case 655:
+48680: 					_0089_0087_0086.BackgroundImage = (Image)componentResourceManager.GetObject("button12.BackgroundImage" /* string-offset:5888 */);
+48681: 					num = 271;
+48682: 					goto case 271;
+48683: 				case 271:
+48684: 					_0089_0087_0086.BackgroundImageLayout = ImageLayout.Center;
+48685: 					num = 52;
+48686: 					goto case 52;
+48687: 				case 52:
+48688: 					_0089_0087_0086.Location = new Point(336, 107);
+48689: 					_0089_0087_0086.Name = "button12" /* string-offset:3496 */;
+48690: 					num = 373;
+48691: 					goto IL_1728;
+48692: 				case 654:
+48693: 					_0089_0086_0097 = new TabPage();
+48694: 					_0089_0087_0091 = new GroupBox();
+48695: 					goto case 288;
+48696: 				case 288:
+48697: 					_0089_0087_009C = new Button();
+48698: 					num = 168;
+48699: 					if (_0088_0094())
+48700: 					{
+48701: 						goto IL_38b7;
+48702: 					}
+48703: 					goto case 168;
+48704: 				case 168:
+48705: 					_0089_0087_009D = new Button();
+48706: 					num = 105;
+48707: 					goto case 105;
+48708: 				case 105:
+48709: 					_0089_0087_0092 = new TextBox();
+48710: 					_0089_0087_0093 = new Label();
+48711: 					_0089_0087_0094 = new Label();
+48712: 					num = 510;
+48713: 					if (_0088_0094())
+48714: 					{
+48715: 						goto IL_1483;
+48716: 					}
+48717: 					goto case 510;
+48718: 				case 510:
+48719: 					_0089_0087_0095 = new Label();
+48720: 					_0089_0087_0096 = new TextBox();
+48721: 					_0089_0087_0097 = new TextBox();
+48722: 					goto case 484;
+48723: 				case 484:
+48724: 					_0089_0087_0098 = new Label();
+48725: 					_0089_0087_0099 = new TextBox();
+48726: 					_0089_0086_009D = new GroupBox();
+48727: 					num = 653;
+48728: 					goto case 653;
+48729: 				case 653:
+48730: 					_0089_0089_0090 = new _0087_008C();
+48731: 					_0089_0089_0091 = new _0087_008C();
+48732: 					_0089_0086_009E = new Button();
+48733: 					_0089_0087_0086 = new Button();
+48734: 					_0089_0087_0087 = new Label();
+48735: 					goto case 109;
+48736: 				case 109:
+48737: 					_0089_0087_0088 = new TextBox();
+48738: 					_0089_0087_0089 = new TextBox();
+48739: 					goto case 657;
+48740: 				case 652:
+48741: 					goto IL_3e0d;
+48742: 				case 230:
+48743: 					goto IL_3e37;
+48744: 				case 646:
+48745: 					_0088_009D_009D.Text = " " /* string-offset:584 */;
+48746: 					num = 280;
+48747: 					goto case 280;
+48748: 				case 280:
+48749: 					_0088_009D_009D.TextChanged += _0088_009B_0098;
+48750: 					_0088_009D_009E.Location = new Point(78, 57);
+48751: 					num = 363;
+48752: 					goto case 363;
+48753: 				case 363:
+48754: 					_0088_009D_009E.Margin = new Padding(4, 3, 4, 3);
+48755: 					goto IL_1e4c;
+48756: 				case 644:
+48757: 					_0089_0088_0087 = new ComboBox();
+48758: 					num = 614;
+48759: 					goto case 614;
+48760: 				case 614:
+48761: 					_0089_0088_0088 = new Label();
+48762: 					_0089_0088_0089 = new Label();
+48763: 					_0089_0088_008A = new Label();
+48764: 					_0089_0088_008B = new Label();
+48765: 					_0089_0088_008C = new TextBox();
+48766: 					num = 243;
+48767: 					goto case 243;
+48768: 				case 243:
+48769: 					_0089_0088_008D = new TextBox();
+48770: 					goto case 527;
+48771: 				case 527:
+48772: 					_0089_0088_008E = new TextBox();
+48773: 					_0089_0086_0092 = new Button();
+48774: 					goto IL_3f30;
+48775: 				case 335:
+48776: 					goto IL_3f30;
+48777: 				case 447:
+48778: 					goto IL_3f44;
+48779: 				case 630:
+48780: 					goto IL_3f5e;
+48781: 				case 58:
+48782: 					goto IL_3f72;
+48783: 				case 163:
+48784: 					goto IL_3f86;
+48785: 				case 643:
+48786: 					_0089_0086_0094.Text = "SOC-TP(m)" /* string-offset:2536 */;
+48787: 					_0089_0086_0095.SetToolTip(_0089_0086_0094, "复飞转弯点至SOC的距离" /* string-offset:5756 */);
+48788: 					goto case 100;
+48789: 				case 100:
+48790: 					_0089_0086_0098.AutoSize = true;
+48791: 					_0089_0086_0098.Location = new Point(11, 92);
+48792: 					_0089_0086_0098.Name = "label15" /* string-offset:2532 */;
+48793: 					num = 256;
+48794: 					goto case 256;
+48795: 				case 256:
+48796: 					_0089_0086_0098.Size = new Size(87, 15);
+48797: 					_0089_0086_0098.TabIndex = 24;
+48798: 					_0089_0086_0098.Text = "THR-SOC(m)" /* string-offset:2436 */;
+48799: 					_0089_0086_008A.AutoSize = true;
+48800: 					num = 183;
+48801: 					goto case 183;
+48802: 				case 183:
+48803: 					_0089_0086_008A.Location = new Point(11, 60);
+48804: 					num = 277;
+48805: 					goto case 277;
+48806: 				case 277:
+48807: 					_0089_0086_008A.Name = "label10" /* string-offset:2952 */;
+48808: 					num = 101;
+48809: 					goto IL_07d6;
+48810: 				case 637:
+48811: 					_0088_009E_008C.Controls.Add(_0088_009E_0092);
+48812: 					num = 225;
+48813: 					goto case 225;
+48814: 				case 225:
+48815: 					_0088_009E_008C.Controls.Add(_0088_009E_008D);
+48816: 					num = 445;
+48817: 					goto case 445;
+48818: 				case 445:
+48819: 					_0088_009E_008C.Controls.Add(_0089_0086_008F);
+48820: 					num = 497;
+48821: 					goto case 497;
+48822: 				case 497:
+48823: 					_0088_009E_008C.Location = new Point(4, 34);
+48824: 					num = 94;
+48825: 					goto case 94;
+48826: 				case 635:
+48827: 					_0088_009D_008F.UseVisualStyleBackColor = true;
+48828: 					goto case 566;
+48829: 				case 566:
+48830: 					_0088_009D_008F.Click += _0088_009A_009B;
+48831: 					_0088_009D_0090.AllowUserToAddRows = false;
+48832: 					num = 380;
+48833: 					goto case 380;
+48834: 				case 380:
+48835: 					_0088_009D_0090.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+48836: 					num = 410;
+48837: 					if (!_0088_0094())
+48838: 					{
+48839: 						goto IL_0893;
+48840: 					}
+48841: 					goto IL_7788;
+48842: 				case 631:
+48843: 					_0089_0088_0091.FormattingEnabled = true;
+48844: 					num = 268;
+48845: 					goto case 268;
+48846: 				case 268:
+48847: 					_0089_0088_0091.Items.AddRange(new object[8]
+48848: 					{
+48849: 						"3.2" /* string-offset:2368 */,
+48850: 						"3.1" /* string-offset:2372 */,
+48851: 						"3.0" /* string-offset:2376 */,
+48852: 						"2.9" /* string-offset:2380 */,
+48853: 						"2.8" /* string-offset:2384 */,
+48854: 						"2.7" /* string-offset:2388 */,
+48855: 						"2.6" /* string-offset:2392 */,
+48856: 						"2.5" /* string-offset:2396 */
+48857: 					});
+48858: 					num = 606;
+48859: 					goto case 606;
+48860: 				case 606:
+48861: 					_0089_0088_0091.Location = new Point(108, 55);
+48862: 					_0089_0088_0091.Name = "comboBoxGP" /* string-offset:2400 */;
+48863: 					_0089_0088_0091.Size = new Size(75, 22);
+48864: 					_0089_0088_0091.TabIndex = 5;
+48865: 					num = 415;
+48866: 					goto case 415;
+48867: 				case 415:
+48868: 					_0089_0088_0091.Text = "3.0" /* string-offset:2376 */;
+48869: 					num = 513;
+48870: 					if (!_0088_0093())
+48871: 					{
+48872: 						goto IL_184a;
+48873: 					}
+48874: 					goto case 513;
+48875: 				case 513:
+48876: 					_0089_0088_0092.FormattingEnabled = true;
+48877: 					_0089_0088_0092.Items.AddRange(new object[5]
+48878: 					{
+48879: 						"H" /* string-offset:2320 */,
+48880: 						"A" /* string-offset:2324 */,
+48881: 						"B" /* string-offset:2328 */,
+48882: 						"C" /* string-offset:2084 */,
+48883: 						"D" /* string-offset:1644 */
+48884: 					});
+48885: 					goto case 322;
+48886: 				case 322:
+48887: 					_0089_0088_0092.Location = new Point(108, 24);
+48888: 					_0089_0088_0092.Name = "comboBox1" /* string-offset:5936 */;
+48889: 					_0089_0088_0092.Size = new Size(75, 22);
+48890: 					num = 620;
+48891: 					if (!_0088_0094())
+48892: 					{
+48893: 						continue;
+48894: 					}
+48895: 					goto case 312;
+48896: 				case 312:
+48897: 					_0088_009D_0092.Click += _0088_009A_0095;
+48898: 					_0088_009D_0093.Controls.Add(_0088_009D_0094);
+48899: 					_0088_009D_0093.Controls.Add(_0088_009D_0095);
+48900: 					num = 601;
+48901: 					goto case 601;
+48902: 				case 601:
+48903: 					_0088_009D_0093.Controls.Add(_0088_009D_0096);
+48904: 					num = 553;
+48905: 					goto case 553;
+48906: 				case 553:
+48907: 					_0088_009D_0093.Controls.Add(_0088_009D_0097);
+48908: 					_0088_009D_0093.Controls.Add(_0088_009D_0098);
+48909: 					num = 211;
+48910: 					goto case 211;
+48911: 				case 211:
+48912: 					_0088_009D_0093.Controls.Add(_0088_009D_0099);
+48913: 					num = 133;
+48914: 					goto case 133;
+48915: 				case 133:
+48916: 					_0088_009D_0093.Controls.Add(_0088_009D_009A);
+48917: 					_0088_009D_0093.Location = new Point(13, 12);
+48918: 					_0088_009D_0093.Margin = new Padding(4, 3, 4, 3);
+48919: 					num = 351;
+48920: 					goto case 351;
+48921: 				case 351:
+48922: 					_0088_009D_0093.Name = "groupBox1" /* string-offset:1664 */;
+48923: 					num = 662;
+48924: 					if (_0088_0093())
+48925: 					{
+48926: 						goto case 662;
+48927: 					}
+48928: 					goto IL_3f86;
+48929: 				case 627:
+48930: 					_0089_0088_0097.Size = new Size(86, 15);
+48931: 					num = 399;
+48932: 					goto case 399;
+48933: 				case 399:
+48934: 					_0089_0088_0097.TabIndex = 0;
+48935: 					goto case 395;
+48936: 				case 625:
+48937: 					_0089_0086_009D.Controls.Add(_0089_0087_008D);
+48938: 					num = 437;
+48939: 					goto case 437;
+48940: 				case 437:
+48941: 					_0089_0086_009D.Controls.Add(_0089_0087_008E);
+48942: 					_0089_0086_009D.Controls.Add(_0089_0087_008F);
+48943: 					goto case 319;
+48944: 				case 319:
+48945: 					_0089_0086_009D.Controls.Add(_0089_0087_0090);
+48946: 					_0089_0086_009D.Location = new Point(13, 12);
+48947: 					_0089_0086_009D.Margin = new Padding(3, 2, 3, 2);
+48948: 					num = 492;
+48949: 					goto case 492;
+48950: 				case 492:
+48951: 					_0089_0086_009D.Name = "groupBox8" /* string-offset:2632 */;
+48952: 					num = 498;
+48953: 					goto case 498;
+48954: 				case 498:
+48955: 					_0089_0086_009D.Padding = new Padding(3, 2, 3, 2);
+48956: 					_0089_0086_009D.Size = new Size(390, 156);
+48957: 					_0089_0086_009D.TabIndex = 34;
+48958: 					goto case 417;
+48959: 				case 417:
+48960: 					_0089_0086_009D.TabStop = false;
+48961: 					_0089_0086_009D.Text = "复飞初始段（SOC计算）" /* string-offset:5876 */;
+48962: 					_0089_0089_0090.AutoSize = true;
+48963: 					num = 190;
+48964: 					goto case 190;
+48965: 				case 190:
+48966: 					_0089_0089_0090.Cursor = Cursors.Hand;
+48967: 					num = 507;
+48968: 					goto case 507;
+48969: 				case 507:
+48970: 					_0089_0089_0090._008D_0089 = false;
+48971: 					goto case 362;
+48972: 				case 362:
+48973: 					_0089_0089_0090.Location = new Point(11, 122);
+48974: 					num = 176;
+48975: 					goto IL_4600;
+48976: 				case 176:
+48977: 					goto IL_4600;
+48978: 				case 177:
+48979: 					goto IL_4632;
+48980: 				case 612:
+48981: 					goto IL_46bb;
+48982: 				case 202:
+48983: 					goto IL_46d8;
+48984: 				case 436:
+48985: 					goto IL_4703;
+48986: 				case 622:
+48987: 					_0089_0087_0091.Name = "groupBox9" /* string-offset:2556 */;
+48988: 					_0089_0087_0091.Size = new Size(262, 156);
+48989: 					_0089_0087_0091.TabIndex = 35;
+48990: 					num = 146;
+48991: 					goto case 146;
+48992: 				case 146:
+48993: 					_0089_0087_0091.TabStop = false;
+48994: 					goto case 659;
+48995: 				case 621:
+48996: 					_0089_0088_008D.Size = new Size(60, 23);
+48997: 					num = 297;
+48998: 					goto case 297;
+48999: 				case 297:
+49000: 					_0089_0088_008D.TabIndex = 4;
+49001: 					goto case 579;
+49002: 				case 579:
+49003: 					_0089_0088_008D.Text = "26" /* string-offset:2316 */;
+49004: 					goto case 276;
+49005: 				case 276:
+49006: 					_0089_0088_008E.Enabled = false;
+49007: 					num = 331;
+49008: 					goto case 331;
+49009: 				case 331:
+49010: 					_0089_0088_008E.Location = new Point(95, 55);
+49011: 					_0089_0088_008E.Margin = new Padding(3, 2, 3, 2);
+49012: 					_0089_0088_008E.Name = "textBoxHLm" /* string-offset:2336 */;
+49013: 					goto case 490;
+49014: 				case 490:
+49015: 					_0089_0088_008E.Size = new Size(60, 23);
+49016: 					_0089_0088_008E.TabIndex = 4;
+49017: 					_0089_0088_008E.Text = "49" /* string-offset:2340 */;
+49018: 					_0089_0086_0092.Location = new Point(541, 223);
+49019: 					_0089_0086_0092.Name = "button9" /* string-offset:3472 */;
+49020: 					_0089_0086_0092.Size = new Size(94, 40);
+49021: 					_0089_0086_0092.TabIndex = 24;
+49022: 					_0089_0086_0092.Text = "LNAV评估" /* string-offset:6000 */;
+49023: 					_0089_0086_0092.UseVisualStyleBackColor = true;
+49024: 					_0089_0086_0092.Visible = false;
+49025: 					num = 110;
+49026: 					goto case 110;
+49027: 				case 110:
+49028: 					_0089_0086_0092.Click += _0088_009C_009D;
+49029: 					_0089_0086_0093.Location = new Point(441, 223);
+49030: 					num = 372;
+49031: 					goto case 372;
+49032: 				case 372:
+49033: 					_0089_0086_0093.Name = "button10" /* string-offset:3476 */;
+49034: 					_0089_0086_0093.Size = new Size(94, 40);
+49035: 					_0089_0086_0093.TabIndex = 24;
+49036: 					_0089_0086_0093.Text = "APV评估" /* string-offset:6004 */;
+49037: 					num = 377;
+49038: 					goto case 377;
+49039: 				case 377:
+49040: 					_0089_0086_0093.UseVisualStyleBackColor = true;
+49041: 					_0089_0086_0093.Visible = false;
+49042: 					num = 311;
+49043: 					goto case 311;
+49044: 				case 311:
+49045: 					_0089_0086_0093.Click += _0088_009A_008E;
+49046: 					_0089_0089_008F.Location = new Point(642, 223);
+49047: 					goto IL_17de;
+49048: 				case 615:
+49049: 					_0089_0088_009D = new Label();
+49050: 					_0089_0088_009E = new Label();
+49051: 					num = 539;
+49052: 					goto case 539;
+49053: 				case 539:
+49054: 					_0089_0089_0086 = new TextBox();
+49055: 					num = 568;
+49056: 					goto case 568;
+49057: 				case 568:
+49058: 					_0089_0089_0087 = new TextBox();
+49059: 					num = 481;
+49060: 					goto case 481;
+49061: 				case 481:
+49062: 					_0089_0089_0088 = new Label();
+49063: 					_0089_0089_0089 = new Label();
+49064: 					num = 423;
+49065: 					goto case 423;
+49066: 				case 423:
+49067: 					_0089_0089_008A = new Label();
+49068: 					num = 499;
+49069: 					goto case 499;
+49070: 				case 499:
+49071: 					_0089_0089_008B = new TextBox();
+49072: 					goto case 241;
+49073: 				case 241:
+49074: 					_0089_0089_008C = new TextBox();
+49075: 					num = 588;
+49076: 					goto case 588;
+49077: 				case 588:
+49078: 					_0089_0086_0091 = new TabPage();
+49079: 					num = 607;
+49080: 					goto case 607;
+49081: 				case 607:
+49082: 					_0089_0086_009A = new GroupBox();
+49083: 					_0089_0086_009B = new CheckBox();
+49084: 					num = 161;
+49085: 					goto case 161;
+49086: 				case 161:
+49087: 					_0089_0088_0086 = new GroupBox();
+49088: 					goto case 644;
+49089: 				case 611:
+49090: 					_0089_0088_0090.TabStop = false;
+49091: 					_0089_0088_0090.Text = "HL修正检查" /* string-offset:5932 */;
+49092: 					num = 631;
+49093: 					goto case 631;
+49094: 				case 598:
+49095: 					_0089_0088_008F.UseVisualStyleBackColor = true;
+49096: 					num = 50;
+49097: 					goto case 50;
+49098: 				case 50:
+49099: 					_0089_0088_0090.Controls.Add(_0089_0088_0091);
+49100: 					_0089_0088_0090.Controls.Add(_0089_0088_0092);
+49101: 					num = 197;
+49102: 					goto case 197;
+49103: 				case 197:
+49104: 					_0089_0088_0090.Controls.Add(_0089_0088_0093);
+49105: 					_0089_0088_0090.Controls.Add(_0089_0088_0094);
+49106: 					_0089_0088_0090.Controls.Add(_0089_0088_0095);
+49107: 					num = 151;
+49108: 					goto case 151;
+49109: 				case 151:
+49110: 					_0089_0088_0090.Controls.Add(_0089_0088_0096);
+49111: 					_0089_0088_0090.Controls.Add(_0089_0088_0097);
+49112: 					_0089_0088_0090.Controls.Add(_0089_0088_0098);
+49113: 					num = 593;
+49114: 					if (_0088_0093())
+49115: 					{
+49116: 						continue;
+49117: 					}
+49118: 					goto IL_4600;
+49119: 				case 597:
+49120: 					_0089_0087_009E.Controls.Add(_0089_0089_008A);
+49121: 					goto case 541;
+49122: 				case 541:
+49123: 					_0089_0087_009E.Controls.Add(_0089_0089_008B);
+49124: 					num = 390;
+49125: 					goto case 390;
+49126: 				case 390:
+49127: 					_0089_0087_009E.Controls.Add(_0089_0089_008C);
+49128: 					num = 559;
+49129: 					goto IL_0df4;
+49130: 				case 593:
+49131: 					_0089_0088_0090.Location = new Point(13, 12);
+49132: 					_0089_0088_0090.Margin = new Padding(3, 2, 3, 2);
+49133: 					_0089_0088_0090.Name = "groupBox10" /* string-offset:2480 */;
+49134: 					goto case 329;
+49135: 				case 329:
+49136: 					_0089_0088_0090.Padding = new Padding(3, 2, 3, 2);
+49137: 					num = 179;
+49138: 					goto case 179;
+49139: 				case 179:
+49140: 					_0089_0088_0090.Size = new Size(194, 153);
+49141: 					goto case 295;
+49142: 				case 295:
+49143: 					_0089_0088_0090.TabIndex = 40;
+49144: 					num = 611;
+49145: 					goto case 611;
+49146: 				case 592:
+49147: 					_0088_009D_009B.Location = new Point(244, 12);
+49148: 					num = 92;
+49149: 					goto case 92;
+49150: 				case 92:
+49151: 					_0088_009D_009B.Margin = new Padding(4, 3, 4, 3);
+49152: 					num = 257;
+49153: 					if (!_0088_0093())
+49154: 					{
+49155: 						goto case 139;
+49156: 					}
+49157: 					goto case 257;
+49158: 				case 139:
+49159: 					_0088_009E_008D.TabIndex = 22;
+49160: 					goto case 374;
+49161: 				case 374:
+49162: 					_0088_009E_008D.Text = "加载" /* string-offset:5808 */;
+49163: 					_0088_009E_008D.UseVisualStyleBackColor = true;
+49164: 					num = 479;
+49165: 					goto case 479;
+49166: 				case 479:
+49167: 					_0088_009E_008D.Click += _0088_009A_009D;
+49168: 					num = 305;
+49169: 					goto case 305;
+49170: 				case 305:
+49171: 					_0089_0086_008F.Controls.Add(_0089_0086_0090);
+49172: 					_0089_0086_008F.Controls.Add(_0088_009E_0091);
+49173: 					num = 478;
+49174: 					if (_0088_0093())
+49175: 					{
+49176: 						continue;
+49177: 					}
+49178: 					goto case 330;
+49179: 				case 330:
+49180: 					_0088_009D_009C.BackgroundImage = (Image)componentResourceManager.GetObject("button4.BackgroundImage" /* string-offset:2888 */);
+49181: 					num = 41;
+49182: 					goto case 41;
+49183: 				case 41:
+49184: 					_0088_009D_009C.BackgroundImageLayout = ImageLayout.Center;
+49185: 					num = 22;
+49186: 					goto case 22;
+49187: 				case 22:
+49188: 					_0088_009D_009C.Location = new Point(170, 122);
+49189: 					num = 348;
+49190: 					goto case 348;
+49191: 				case 348:
+49192: 					_0088_009D_009C.Name = "button4" /* string-offset:1928 */;
+49193: 					num = 122;
+49194: 					goto case 122;
+49195: 				case 122:
+49196: 					_0088_009D_009C.Size = new Size(24, 24);
+49197: 					num = 164;
+49198: 					goto case 164;
+49199: 				case 164:
+49200: 					_0088_009D_009C.TabIndex = 3;
+49201: 					_0088_009D_009C.UseVisualStyleBackColor = true;
+49202: 					goto case 81;
+49203: 				case 81:
+49204: 					_0088_009D_009C.Click += _0088_009A_0099;
+49205: 					num = 267;
+49206: 					goto case 267;
+49207: 				case 267:
+49208: 					_0088_009D_009D.Location = new Point(78, 90);
+49209: 					goto case 237;
+49210: 				case 237:
+49211: 					_0088_009D_009D.Margin = new Padding(4, 3, 4, 3);
+49212: 					_0088_009D_009D.Name = "textBoxZ2" /* string-offset:4372 */;
+49213: 					num = 299;
+49214: 					goto case 299;
+49215: 				case 299:
+49216: 					_0088_009D_009D.Size = new Size(116, 23);
+49217: 					num = 107;
+49218: 					if (!_0088_0094())
+49219: 					{
+49220: 						continue;
+49221: 					}
+49222: 					goto case 119;
+49223: 				case 119:
+49224: 					_0089_0087_009B = new Button();
+49225: 					_0089_0086_0088 = new Label();
+49226: 					num = 2;
+49227: 					goto case 2;
+49228: 				case 2:
+49229: 					_0089_0086_0089 = new TextBox();
+49230: 					_0089_0086_0094 = new Label();
+49231: 					num = 524;
+49232: 					goto case 524;
+49233: 				case 524:
+49234: 					_0089_0086_0098 = new Label();
+49235: 					num = 118;
+49236: 					goto case 118;
+49237: 				case 118:
+49238: 					_0089_0086_008A = new Label();
+49239: 					num = 314;
+49240: 					goto case 314;
+49241: 				case 314:
+49242: 					_0089_0086_0096 = new TextBox();
+49243: 					num = 158;
+49244: 					goto case 158;
+49245: 				case 158:
+49246: 					_0089_0086_0099 = new TextBox();
+49247: 					goto case 419;
+49248: 				case 419:
+49249: 					_0089_0086_008B = new TextBox();
+49250: 					num = 379;
+49251: 					if (_0088_0093())
+49252: 					{
+49253: 						continue;
+49254: 					}
+49255: 					goto case 343;
+49256: 				case 257:
+49257: 					_0088_009D_009B.Name = "groupBox2" /* string-offset:1740 */;
+49258: 					_0088_009D_009B.Padding = new Padding(4, 3, 4, 3);
+49259: 					_0088_009D_009B.Size = new Size(210, 157);
+49260: 					_0088_009D_009B.TabIndex = 58;
+49261: 					_0088_009D_009B.TabStop = false;
+49262: 					_0088_009D_009B.Text = "末端坐标" /* string-offset:4368 */;
+49263: 					num = 333;
+49264: 					if (!_0088_0094())
+49265: 					{
+49266: 						continue;
+49267: 					}
+49268: 					goto IL_7599;
+49269: 				case 590:
+49270: 					_0089_0086_008F.TabIndex = 69;
+49271: 					_0089_0086_008F.TabStop = false;
+49272: 					_0089_0086_008F.Text = "最后进近" /* string-offset:5812 */;
+49273: 					_0089_0086_0090.FormattingEnabled = true;
+49274: 					_0089_0086_0090.Items.AddRange(new object[3]
+49275: 					{
+49276: 						"75" /* string-offset:5816 */,
+49277: 						"105" /* string-offset:5820 */,
+49278: 						"120" /* string-offset:5824 */
+49279: 					});
+49280: 					goto case 366;
+49281: 				case 366:
+49282: 					_0089_0086_0090.Location = new Point(106, 120);
+49283: 					_0089_0086_0090.Name = "comboBoxHi" /* string-offset:5828 */;
+49284: 					_0089_0086_0090.Size = new Size(60, 22);
+49285: 					num = 578;
+49286: 					goto case 578;
+49287: 				case 578:
+49288: 					_0089_0086_0090.TabIndex = 16;
+49289: 					_0089_0086_0090.Text = "75" /* string-offset:5816 */;
+49290: 					_0088_009E_0091.FormattingEnabled = true;
+49291: 					num = 389;
+49292: 					goto case 389;
+49293: 				case 389:
+49294: 					_0088_009E_0091.Items.AddRange(new object[11]
+49295: 					{
+49296: 						"2.5" /* string-offset:2396 */,
+49297: 						"2.6" /* string-offset:2392 */,
+49298: 						"2.7" /* string-offset:2388 */,
+49299: 						"2.8" /* string-offset:2384 */,
+49300: 						"2.9" /* string-offset:2380 */,
+49301: 						"3.0" /* string-offset:2376 */,
+49302: 						"3.1" /* string-offset:2372 */,
+49303: 						"3.2" /* string-offset:2368 */,
+49304: 						"3.3" /* string-offset:2656 */,
+49305: 						"3.4" /* string-offset:4228 */,
+49306: 						"3.5" /* string-offset:4232 */
+49307: 					});
+49308: 					num = 591;
+49309: 					goto IL_1648;
+49310: 				case 587:
+49311: 					_0089_0086_0089.Text = "2.5" /* string-offset:2396 */;
+49312: 					num = 286;
+49313: 					goto case 286;
+49314: 				case 286:
+49315: 					_0089_0086_0089.TextChanged += _0088_009C_0086;
+49316: 					goto case 504;
+49317: 				case 504:
+49318: 					_0089_0086_0094.AutoSize = true;
+49319: 					num = 406;
+49320: 					goto case 406;
+49321: 				case 406:
+49322: 					_0089_0086_0094.Location = new Point(11, 124);
+49323: 					goto case 83;
+49324: 				case 83:
+49325: 					_0089_0086_0094.Name = "label16" /* string-offset:2540 */;
+49326: 					num = 175;
+49327: 					goto case 175;
+49328: 				case 175:
+49329: 					_0089_0086_0094.Size = new Size(79, 15);
+49330: 					_0089_0086_0094.TabIndex = 24;
+49331: 					num = 643;
+49332: 					goto case 643;
+49333: 				case 585:
+49334: 					_0088_009D_0090.RowTemplate.Height = 27;
+49335: 					num = 382;
+49336: 					goto case 382;
+49337: 				case 382:
+49338: 					_0088_009D_0090.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+49339: 					_0088_009D_0090.Size = new Size(717, 300);
+49340: 					_0088_009D_0090.TabIndex = 61;
+49341: 					_0088_009D_0090.CellClick += _0088_009B_008A;
+49342: 					_0088_009D_0090.CellContentClick += _0088_009B_008A;
+49343: 					num = 29;
+49344: 					goto case 29;
+49345: 				case 29:
+49346: 					_0088_009D_0091.Location = new Point(123, 223);
+49347: 					_0088_009D_0091.Margin = new Padding(4, 3, 4, 3);
+49348: 					_0088_009D_0091.Name = "buttonAix" /* string-offset:3284 */;
+49349: 					num = 287;
+49350: 					goto case 287;
+49351: 				case 287:
+49352: 					_0088_009D_0091.Size = new Size(99, 40);
+49353: 					num = 269;
+49354: 					goto case 269;
+49355: 				case 269:
+49356: 					_0088_009D_0091.TabIndex = 1;
+49357: 					_0088_009D_0091.Text = "入口坐标系" /* string-offset:3288 */;
+49358: 					_0088_009D_0091.UseVisualStyleBackColor = true;
+49359: 					_0088_009D_0091.Click += _0088_009A_0097;
+49360: 					_0088_009D_0092.Location = new Point(16, 223);
+49361: 					goto case 33;
+49362: 				case 33:
+49363: 					_0088_009D_0092.Margin = new Padding(4, 3, 4, 3);
+49364: 					_0088_009D_0092.Name = "button3" /* string-offset:1936 */;
+49365: 					num = 260;
+49366: 					if (_0088_0094())
+49367: 					{
+49368: 						goto case 367;
+49369: 					}
+49370: 					goto case 260;
+49371: 				case 367:
+49372: 					_0089_0086_008C.Text = "中间进近" /* string-offset:5788 */;
+49373: 					_0089_0086_008D.Location = new Point(108, 25);
+49374: 					num = 421;
+49375: 					goto IL_1c3e;
+49376: 				case 260:
+49377: 					_0088_009D_0092.Size = new Size(99, 40);
+49378: 					_0088_009D_0092.TabIndex = 0;
+49379: 					_0088_009D_0092.Text = "屏幕数据" /* string-offset:2988 */;
+49380: 					goto case 321;
+49381: 				case 321:
+49382: 					_0088_009D_0092.UseVisualStyleBackColor = true;
+49383: 					goto case 312;
+49384: 				case 580:
+49385: 					_0089_0086_008C.Controls.Add(_0089_0086_008E);
+49386: 					num = 80;
+49387: 					if (_0088_0093())
+49388: 					{
+49389: 						continue;
+49390: 					}
+49391: 					goto case 237;
+49392: 				case 577:
+49393: 					_0089_0087_009E.Controls.Add(_0089_0088_008F);
+49394: 					_0089_0087_009E.Controls.Add(_0089_0088_0090);
+49395: 					num = 440;
+49396: 					goto case 440;
+49397: 				case 440:
+49398: 					_0089_0087_009E.Controls.Add(_0089_0088_0099);
+49399: 					_0089_0087_009E.Controls.Add(_0089_0089_0087);
+49400: 					goto case 212;
+49401: 				case 212:
+49402: 					_0089_0087_009E.Controls.Add(_0089_0089_0088);
+49403: 					num = 205;
+49404: 					goto case 205;
+49405: 				case 205:
+49406: 					_0089_0087_009E.Controls.Add(_0089_0089_0089);
+49407: 					goto case 597;
+49408: 				case 561:
+49409: 					_0089_0086_0091.Text = "附加设置" /* string-offset:2920 */;
+49410: 					num = 552;
+49411: 					goto case 552;
+49412: 				case 552:
+49413: 					_0089_0086_0091.UseVisualStyleBackColor = true;
+49414: 					_0089_0086_009A.Controls.Add(_0089_0086_009B);
+49415: 					num = 162;
+49416: 					if (_0088_0094())
+49417: 					{
+49418: 						goto IL_255c;
+49419: 					}
+49420: 					goto case 162;
+49421: 				case 162:
+49422: 					_0089_0086_009A.Location = new Point(188, 11);
+49423: 					_0089_0086_009A.Name = "groupBox7" /* string-offset:2604 */;
+49424: 					goto case 547;
+49425: 				case 547:
+49426: 					_0089_0086_009A.Size = new Size(172, 156);
+49427: 					_0089_0086_009A.TabIndex = 70;
+49428: 					num = 489;
+49429: 					goto case 489;
+49430: 				case 489:
+49431: 					_0089_0086_009A.TabStop = false;
+49432: 					goto case 658;
+49433: 				case 556:
+49434: 					_0089_0086_0095.SetToolTip(_0089_0086_008B, "复飞转弯的海拔高度" /* string-offset:5784 */);
+49435: 					num = 511;
+49436: 					if (_0088_0093())
+49437: 					{
+49438: 						continue;
+49439: 					}
+49440: 					goto case 229;
+49441: 				case 229:
+49442: 					_0089_0086_009E.Click += _0088_009B_0090;
+49443: 					num = 655;
+49444: 					if (_0088_0094())
+49445: 					{
+49446: 						goto case 660;
+49447: 					}
+49448: 					goto case 655;
+49449: 				case 549:
+49450: 					_0088_009D_009B.Controls.Add(_0088_009E_0087);
+49451: 					num = 55;
+49452: 					goto case 55;
+49453: 				case 55:
+49454: 					_0088_009D_009B.Controls.Add(_0088_009E_0088);
+49455: 					num = 278;
+49456: 					goto case 278;
+49457: 				case 278:
+49458: 					_0088_009D_009B.Controls.Add(_0088_009E_0089);
+49459: 					goto case 592;
+49460: 				case 546:
+49461: 					_0089_0086_0088.Location = new Point(11, 28);
+49462: 					_0089_0086_0088.Name = "label8" /* string-offset:2960 */;
+49463: 					goto case 473;
+49464: 				case 473:
+49465: 					_0089_0086_0088.Size = new Size(91, 15);
+49466: 					num = 56;
+49467: 					goto case 56;
+49468: 				case 56:
+49469: 					_0089_0086_0088.TabIndex = 24;
+49470: 					_0089_0086_0088.Text = "复飞梯度(%)" /* string-offset:2572 */;
+49471: 					_0089_0086_0089.Location = new Point(102, 23);
+49472: 					_0089_0086_0089.Name = "textBoxMCG" /* string-offset:5752 */;
+49473: 					_0089_0086_0089.Size = new Size(60, 23);
+49474: 					_0089_0086_0089.TabIndex = 18;
+49475: 					num = 587;
+49476: 					goto case 587;
+49477: 				case 526:
+49478: 					_0088_009E_008C = new TabPage();
+49479: 					num = 404;
+49480: 					if (_0088_0093())
+49481: 					{
+49482: 						continue;
+49483: 					}
+49484: 					goto case 112;
+49485: 				case 112:
+49486: 					_0088_009E_008B.UseVisualStyleBackColor = true;
+49487: 					num = 184;
+49488: 					goto case 184;
+49489: 				case 184:
+49490: 					_0088_009E_0097.Controls.Add(_0088_009E_0098);
+49491: 					num = 7;
+49492: 					goto case 7;
+49493: 				case 7:
+49494: 					_0088_009E_0097.Controls.Add(_0088_009E_0099);
+49495: 					goto case 242;
+49496: 				case 242:
+49497: 					_0088_009E_0097.Controls.Add(_0088_009E_009A);
+49498: 					_0088_009E_0097.Controls.Add(_0088_009E_009B);
+49499: 					goto case 32;
+49500: 				case 32:
+49501: 					_0088_009E_0097.Controls.Add(_0088_009E_009C);
+49502: 					num = 426;
+49503: 					goto case 426;
+49504: 				case 426:
+49505: 					_0088_009E_0097.Controls.Add(_0088_009E_009D);
+49506: 					num = 116;
+49507: 					goto IL_0db5;
+49508: 				case 523:
+49509: 					_0088_009E_0091 = new ComboBox();
+49510: 					goto case 186;
+49511: 				case 186:
+49512: 					_0088_009E_0093 = new TextBox();
+49513: 					_0088_009E_0090 = new Label();
+49514: 					num = 516;
+49515: 					goto case 516;
+49516: 				case 516:
+49517: 					_0088_009E_0095 = new TextBox();
+49518: 					_0088_009E_0096 = new Label();
+49519: 					num = 354;
+49520: 					goto case 354;
+49521: 				case 354:
+49522: 					_0088_009E_008F = new Label();
+49523: 					num = 180;
+49524: 					goto case 180;
+49525: 				case 180:
+49526: 					_0088_009E_0094 = new Label();
+49527: 					num = 654;
+49528: 					goto case 654;
+49529: 				case 522:
+49530: 					_0088_009E_008E.Click += _0088_009A_009E;
+49531: 					num = 446;
+49532: 					goto case 446;
+49533: 				case 446:
+49534: 					_0088_009E_0092.Location = new Point(602, 56);
+49535: 					_0088_009E_0092.Name = "button2" /* string-offset:1816 */;
+49536: 					goto case 244;
+49537: 				case 244:
+49538: 					_0088_009E_0092.Size = new Size(75, 30);
+49539: 					_0088_009E_0092.TabIndex = 23;
+49540: 					num = 293;
+49541: 					if (!_0088_0093())
+49542: 					{
+49543: 						goto IL_2bf7;
+49544: 					}
+49545: 					goto case 293;
+49546: 				case 293:
+49547: 					_0088_009E_0092.Text = "拾取" /* string-offset:5804 */;
+49548: 					_0088_009E_0092.UseVisualStyleBackColor = true;
+49549: 					_0088_009E_0092.Click += _0088_009B_0089;
+49550: 					_0088_009E_008D.Location = new Point(602, 20);
+49551: 					goto case 203;
+49552: 				case 203:
+49553: 					_0088_009E_008D.Name = "buttonLoad" /* string-offset:5380 */;
+49554: 					_0088_009E_008D.Size = new Size(75, 30);
+49555: 					goto case 139;
+49556: 				case 521:
+49557: 					if (!false /* original-file-bool-offset:932 */)
+49558: 					{
+49559: 						_0088_009D_008B = new Container();
+49560: 						componentResourceManager = new ComponentResourceManager(typeof(_008B_008C));
+49561: 						_0088_009D_008C = new StatusStrip();
+49562: 						num = 144;
+49563: 						goto case 144;
+49564: 					}
+49565: 					num = 613;
+49566: 					return;
+49567: 				case 144:
+49568: 					_0088_009D_008D = new ToolStripStatusLabel();
+49569: 					num = 113;
+49570: 					goto case 113;
+49571: 				case 113:
+49572: 					_0089_0086_009C = new ToolStripStatusLabel();
+49573: 					num = 170;
+49574: 					goto IL_100e;
+49575: 				case 512:
+49576: 					_0088_009D_008F.Text = "CAD" /* string-offset:1696 */;
+49577: 					goto case 635;
+49578: 				case 511:
+49579: 					_0089_0086_008B.TextChanged += _0088_009C_0087;
+49580: 					num = 383;
+49581: 					goto case 383;
+49582: 				case 383:
+49583: 					_0089_0086_008C.Controls.Add(_0089_0086_008D);
+49584: 					num = 580;
+49585: 					goto case 580;
+49586: 				case 503:
+49587: 					_0089_0087_0090.AutoSize = true;
+49588: 					_0089_0087_0090.Location = new Point(23, 60);
+49589: 					goto case 289;
+49590: 				case 289:
+49591: 					_0089_0087_0090.Name = "label26" /* string-offset:2144 */;
+49592: 					goto case 187;
+49593: 				case 187:
+49594: 					_0089_0087_0090.Size = new Size(61, 15);
+49595: 					_0089_0087_0090.TabIndex = 0;
+49596: 					goto case 46;
+49597: 				case 46:
+49598: 					_0089_0087_0090.Text = "高度(m)" /* string-offset:2740 */;
+49599: 					goto case 577;
+49600: 				case 495:
+49601: 					_0088_009E_008B.Controls.Add(_0088_009D_0093);
+49602: 					_0088_009E_008B.Controls.Add(_0088_009D_009B);
+49603: 					_0088_009E_008B.Location = new Point(4, 34);
+49604: 					goto case 283;
+49605: 				case 283:
+49606: 					_0088_009E_008B.Name = "tabPage1" /* string-offset:1760 */;
+49607: 					goto case 137;
+49608: 				case 137:
+49609: 					_0088_009E_008B.Padding = new Padding(3);
+49610: 					num = 49;
+49611: 					if (!_0088_0093())
+49612: 					{
+49613: 						goto case 423;
+49614: 					}
+49615: 					goto case 49;
+49616: 				case 49:
+49617: 					_0088_009E_008B.Size = new Size(720, 176);
+49618: 					_0088_009E_008B.TabIndex = 0;
+49619: 					num = 131;
+49620: 					goto case 131;
+49621: 				case 131:
+49622: 					_0088_009E_008B.Text = "跑道数据" /* string-offset:3280 */;
+49623: 					num = 112;
+49624: 					goto case 112;
+49625: 				case 494:
+49626: 					goto IL_5b6f;
+49627: 				case 458:
+49628: 					goto IL_5b84;
+49629: 				case 254:
+49630: 					goto IL_5b98;
+49631: 				case 273:
+49632: 					goto IL_5bad;
+49633: 				case 349:
+49634: 					goto IL_5be0;
+49635: 				case 488:
+49636: 					_0089_0088_009A = new TextBox();
+49637: 					goto case 79;
+49638: 				case 79:
+49639: 					_0089_0088_009B = new Label();
+49640: 					goto case 449;
+49641: 				case 449:
+49642: 					_0089_0088_009C = new TextBox();
+49643: 					num = 615;
+49644: 					goto case 615;
+49645: 				case 471:
+49646: 					_0088_009E_008A.Size = new Size(728, 214);
+49647: 					_0088_009E_008A.TabIndex = 64;
+49648: 					num = 400;
+49649: 					goto case 400;
+49650: 				case 400:
+49651: 					_0088_009E_008B.Controls.Add(_0088_009E_0097);
+49652: 					num = 495;
+49653: 					goto case 495;
+49654: 				case 463:
+49655: 					_0089_0086_0086 = new Label();
+49656: 					goto case 526;
+49657: 				case 457:
+49658: 					_0089_0086_009D.Controls.Add(_0089_0089_008D);
+49659: 					goto case 347;
+49660: 				case 347:
+49661: 					_0089_0086_009D.Controls.Add(_0089_0087_008C);
+49662: 					num = 625;
+49663: 					goto case 625;
+49664: 				case 456:
+49665: 					_0088_009D_0090.Location = new Point(4, 271);
+49666: 					num = 454;
+49667: 					goto case 454;
+49668: 				case 454:
+49669: 					_0088_009D_0090.Name = "dataGridView1" /* string-offset:2832 */;
+49670: 					num = 233;
+49671: 					if (_0088_0094())
+49672: 					{
+49673: 						goto IL_1406;
+49674: 					}
+49675: 					goto case 233;
+49676: 				case 233:
+49677: 					_0088_009D_0090.ReadOnly = true;
+49678: 					_0088_009D_0090.RowHeadersWidth = 49;
+49679: 					num = 585;
+49680: 					goto case 585;
+49681: 				case 388:
+49682: 				case 425:
+49683: 					goto IL_5d41;
+49684: 				case 124:
+49685: 					goto IL_5d60;
+49686: 				case 409:
+49687: 					goto IL_5d88;
+49688: 				case 424:
+49689: 					_0089_0089_008E.UseVisualStyleBackColor = true;
+49690: 					num = 214;
+49691: 					goto case 214;
+49692: 				case 214:
+49693: 					_0089_0089_008E.Click += _0088_009B_0091;
+49694: 					goto case 330;
+49695: 				case 422:
+49696: 					_0089_0087_008F.TextChanged += _0088_009C_008B;
+49697: 					goto case 503;
+49698: 				case 420:
+49699: 					goto IL_5df1;
+49700: 				case 251:
+49701: 					goto IL_5e26;
+49702: 				case 416:
+49703: 					_0089_0087_0091.Controls.Add(_0089_0087_0093);
+49704: 					goto case 28;
+49705: 				case 28:
+49706: 					_0089_0087_0091.Controls.Add(_0089_0087_0094);
+49707: 					goto case 39;
+49708: 				case 39:
+49709: 					_0089_0087_0091.Controls.Add(_0089_0087_0095);
+49710: 					num = 192;
+49711: 					goto case 192;
+49712: 				case 192:
+49713: 					_0089_0087_0091.Controls.Add(_0089_0087_0096);
+49714: 					num = 393;
+49715: 					goto case 393;
+49716: 				case 393:
+49717: 					_0089_0087_0091.Controls.Add(_0089_0087_0097);
+49718: 					goto case 174;
+49719: 				case 174:
+49720: 					_0089_0087_0091.Controls.Add(_0089_0087_0098);
+49721: 					_0089_0087_0091.Controls.Add(_0089_0087_0099);
+49722: 					_0089_0087_0091.Location = new Point(417, 12);
+49723: 					goto case 622;
+49724: 				case 414:
+49725: 					_0089_0087_008D.TabIndex = 0;
+49726: 					num = 20;
+49727: 					goto IL_26e0;
+49728: 				case 411:
+49729: 					_0089_0087_009B.UseVisualStyleBackColor = true;
+49730: 					_0089_0087_009B.Click += _0088_009B_008B;
+49731: 					_0089_0086_0088.AutoSize = true;
+49732: 					goto case 546;
+49733: 				case 408:
+49734: 					_0089_0086_008D = new TextBox();
+49735: 					_0089_0086_008E = new Label();
+49736: 					_0088_009E_008E = new Button();
+49737: 					_0088_009E_0092 = new Button();
+49738: 					_0088_009E_008D = new Button();
+49739: 					_0089_0086_008F = new GroupBox();
+49740: 					goto case 128;
+49741: 				case 128:
+49742: 					_0089_0086_0090 = new ComboBox();
+49743: 					goto case 523;
+49744: 				case 404:
+49745: 					_0089_0086_0087 = new GroupBox();
+49746: 					goto case 152;
+49747: 				case 152:
+49748: 					_0089_0087_009A = new Button();
+49749: 					num = 119;
+49750: 					if (_0088_0094())
+49751: 					{
+49752: 						goto IL_0d60;
+49753: 					}
+49754: 					goto case 119;
+49755: 				case 379:
+49756: 					_0089_0086_008C = new GroupBox();
+49757: 					num = 408;
+49758: 					goto case 408;
+49759: 				case 361:
+49760: 					_0088_009D_0093.Text = "入口坐标" /* string-offset:4356 */;
+49761: 					num = 134;
+49762: 					goto case 134;
+49763: 				case 134:
+49764: 					_0088_009D_0094.Location = new Point(118, 90);
+49765: 					_0088_009D_0094.Margin = new Padding(4, 3, 4, 3);
+49766: 					num = 0;
+49767: 					goto case 0;
+49768: 				case 0:
+49769: 					_0088_009D_0094.Name = "textBoxZ1" /* string-offset:4360 */;
+49770: 					_0088_009D_0094.Size = new Size(75, 23);
+49771: 					num = 316;
+49772: 					goto case 316;
+49773: 				case 316:
+49774: 					_0088_009D_0094.TabIndex = 2;
+49775: 					goto case 45;
+49776: 				case 45:
+49777: 					_0088_009D_0094.TextChanged += _0088_009B_0095;
+49778: 					goto case 167;
+49779: 				case 167:
+49780: 					_0088_009D_0095.Location = new Point(77, 57);
+49781: 					_0088_009D_0095.Margin = new Padding(4, 3, 4, 3);
+49782: 					num = 114;
+49783: 					goto IL_23cb;
+49784: 				case 355:
+49785: 					_0089_0087_0086.UseVisualStyleBackColor = true;
+49786: 					_0089_0087_0086.Click += _0088_009B_008D;
+49787: 					num = 31;
+49788: 					if (_0088_0094())
+49789: 					{
+49790: 						goto IL_1981;
+49791: 					}
+49792: 					goto case 31;
+49793: 				case 31:
+49794: 					_0089_0087_0087.AutoSize = true;
+49795: 					num = 263;
+49796: 					if (_0088_0093())
+49797: 					{
+49798: 						continue;
+49799: 					}
+49800: 					goto case 419;
+49801: 				case 333:
+49802: 					_0089_0089_008E.BackgroundImage = (Image)componentResourceManager.GetObject("button17.BackgroundImage" /* string-offset:5708 */);
+49803: 					_0089_0089_008E.BackgroundImageLayout = ImageLayout.Center;
+49804: 					num = 57;
+49805: 					goto case 57;
+49806: 				case 57:
+49807: 					_0089_0089_008E.Location = new Point(78, 123);
+49808: 					_0089_0089_008E.Name = "button17" /* string-offset:2884 */;
+49809: 					_0089_0089_008E.Size = new Size(24, 24);
+49810: 					goto case 61;
+49811: 				case 61:
+49812: 					_0089_0089_008E.TabIndex = 65;
+49813: 					_0089_0086_0095.SetToolTip(_0089_0089_008E, "交换跑道方向" /* string-offset:3080 */);
+49814: 					goto case 424;
+49815: 				case 318:
+49816: 					_0089_0087_009B.Size = new Size(24, 24);
+49817: 					_0089_0087_009B.TabIndex = 72;
+49818: 					goto case 411;
+49819: 				case 317:
+49820: 					_0089_0086_0099.TextChanged += _0088_009C_0089;
+49821: 					_0089_0086_008B.Location = new Point(102, 55);
+49822: 					num = 73;
+49823: 					goto case 73;
+49824: 				case 73:
+49825: 					_0089_0086_008B.Name = "textBoxTpAlti" /* string-offset:5780 */;
+49826: 					_0089_0086_008B.Size = new Size(60, 23);
+49827: 					_0089_0086_008B.TabIndex = 18;
+49828: 					goto case 238;
+49829: 				case 238:
+49830: 					_0089_0086_008B.Text = "300" /* string-offset:2180 */;
+49831: 					num = 556;
+49832: 					if (!_0088_0093())
+49833: 					{
+49834: 						goto case 268;
+49835: 					}
+49836: 					goto case 556;
+49837: 				case 304:
+49838: 					_0089_0088_0099.Margin = new Padding(3, 2, 3, 2);
+49839: 					num = 563;
+49840: 					goto case 563;
+49841: 				case 298:
+49842: 					_0088_009E_008C.Controls.Add(_0088_009E_008E);
+49843: 					num = 637;
+49844: 					goto case 637;
+49845: 				case 262:
+49846: 					_0088_009E_009D = new Label();
+49847: 					_0088_009E_009E = new Label();
+49848: 					num = 463;
+49849: 					goto case 463;
+49850: 				case 248:
+49851: 					_0089_0088_0097.Location = new Point(14, 59);
+49852: 					_0089_0088_0097.Name = "label42" /* string-offset:5940 */;
+49853: 					goto case 627;
+49854: 				case 220:
+49855: 					_0088_009E_008A.Location = new Point(0, 0);
+49856: 					num = 75;
+49857: 					goto case 75;
+49858: 				case 75:
+49859: 					_0088_009E_008A.Name = "tabControl1" /* string-offset:1756 */;
+49860: 					_0088_009E_008A.SelectedIndex = 0;
+49861: 					goto case 471;
+49862: 				case 206:
+49863: 					_0089_0088_0099.Controls.Add(_0089_0088_009C);
+49864: 					_0089_0088_0099.Controls.Add(_0089_0088_009D);
+49865: 					_0089_0088_0099.Controls.Add(_0089_0088_009E);
+49866: 					num = 104;
+49867: 					goto case 104;
+49868: 				case 104:
+49869: 					_0089_0088_0099.Controls.Add(_0089_0089_0086);
+49870: 					num = 12;
+49871: 					goto case 12;
+49872: 				case 12:
+49873: 					_0089_0088_0099.Location = new Point(220, 12);
+49874: 					num = 304;
+49875: 					goto case 304;
+49876: 				case 198:
+49877: 					_0089_0086_009D.Controls.Add(_0089_0087_0089);
+49878: 					_0089_0086_009D.Controls.Add(_0089_0087_008A);
+49879: 					_0089_0086_009D.Controls.Add(_0089_0087_008B);
+49880: 					goto case 457;
+49881: 				case 147:
+49882: 					_0089_0087_008F.Text = "900" /* string-offset:2156 */;
+49883: 					goto case 422;
+49884: 				case 127:
+49885: 					_0089_0088_008C.Text = "52.12" /* string-offset:2364 */;
+49886: 					num = 3;
+49887: 					goto case 3;
+49888: 				case 3:
+49889: 					_0089_0088_008D.Enabled = false;
+49890: 					_0089_0088_008D.Location = new Point(95, 87);
+49891: 					num = 15;
+49892: 					goto case 15;
+49893: 				case 15:
+49894: 					_0089_0088_008D.Margin = new Padding(3, 2, 3, 2);
+49895: 					_0089_0088_008D.Name = "textBoxHLr" /* string-offset:2312 */;
+49896: 					num = 621;
+49897: 					goto case 621;
+49898: 				case 126:
+49899: 					_0089_0086_008C.TabStop = false;
+49900: 					goto case 367;
+49901: 				case 107:
+49902: 					_0088_009D_009D.TabIndex = 2;
+49903: 					num = 646;
+49904: 					goto case 646;
+49905: 				case 103:
+49906: 					_0089_0086_008F.Controls.Add(_0088_009E_008F);
+49907: 					goto case 66;
+49908: 				case 66:
+49909: 					_0089_0086_008F.Controls.Add(_0088_009E_0094);
+49910: 					_0089_0086_008F.Location = new Point(199, 12);
+49911: 					_0089_0086_008F.Name = "groupBox4" /* string-offset:1828 */;
+49912: 					_0089_0086_008F.Size = new Size(180, 156);
+49913: 					num = 590;
+49914: 					goto case 590;
+49915: 				case 95:
+49916: 					_0089_0089_008C.Size = new Size(75, 23);
+49917: 					_0089_0089_008C.TabIndex = 4;
+49918: 					num = 420;
+49919: 					goto IL_5df1;
+49920: 				case 80:
+49921: 					_0089_0086_008C.Location = new Point(13, 12);
+49922: 					_0089_0086_008C.Name = "groupBox6" /* string-offset:1796 */;
+49923: 					num = 9;
+49924: 					if (_0088_0094())
+49925: 					{
+49926: 						goto IL_061e;
+49927: 					}
+49928: 					goto case 9;
+49929: 				case 9:
+49930: 					_0089_0086_008C.Size = new Size(180, 60);
+49931: 					_0089_0086_008C.TabIndex = 66;
+49932: 					goto case 126;
+49933: 				case 42:
+49934: 					_0088_009E_008C.Controls.Add(_0089_0086_0087);
+49935: 					num = 670;
+49936: 					goto case 670;
+49937: 				case 34:
+49938: 					_0089_0088_0093.Name = "label25" /* string-offset:2136 */;
+49939: 					goto case 570;
+49940: 				case 26:
+49941: 					_0089_0088_008F.TabIndex = 4;
+49942: 					num = 598;
+49943: 					goto case 598;
+49944: 				default:
+49945: 					num = 40;
+49946: 					goto IL_16c2;
+49947: 				case 586:
+49948: 					goto IL_6674;
+49949: 				case 384:
+49950: 					goto IL_674a;
+49951: 				case 567:
+49952: 					goto IL_676d;
+49953: 				case 217:
+49954: 					goto IL_67bf;
+49955: 				case 247:
+49956: 					goto IL_67d5;
+49957: 				case 274:
+49958: 					goto IL_67f8;
+49959: 				case 576:
+49960: 					_0089_0087_009D.BackgroundImage = (Image)componentResourceManager.GetObject("button14.BackgroundImage" /* string-offset:5864 */);
+49961: 					_0089_0087_009D.BackgroundImageLayout = ImageLayout.Center;
+49962: 					goto case 483;
+49963: 				case 483:
+49964: 					_0089_0087_009D.Location = new Point(202, 107);
+49965: 					_0089_0087_009D.Name = "button14" /* string-offset:3512 */;
+49966: 					_0089_0087_009D.Size = new Size(34, 34);
+49967: 					num = 121;
+49968: 					break;
+49969: 				case 77:
+49970: 					goto IL_733e;
+49971: 				case 195:
+49972: 					goto IL_739f;
+49973: 				case 534:
+49974: 					goto IL_73c2;
+49975: 				case 84:
+49976: 					goto IL_73fa;
+49977: 				case 656:
+49978: 					goto IL_7428;
+49979: 				case 345:
+49980: 					goto IL_7440;
+49981: 				case 394:
+49982: 					goto IL_745e;
+49983: 				case 462:
+49984: 					goto IL_7498;
+49985: 				case 344:
+49986: 					goto IL_74b1;
+49987: 				case 54:
+49988: 					goto IL_74fc;
+49989: 				case 67:
+49990: 					goto IL_7513;
+49991: 				case 450:
+49992: 					goto IL_7529;
+49993: 				case 413:
+49994: 					goto IL_757a;
+49995: 				case 433:
+49996: 					goto IL_7599;
+49997: 				case 69:
+49998: 					goto IL_75b0;
+49999: 				case 324:
+50000: 					goto IL_75da;
+50001: 				case 396:
+50002: 					goto IL_75f3;
+50003: 				case 172:
+50004: 					goto IL_762e;
+50005: 				case 143:
+50006: 					goto IL_765a;
+50007: 				case 551:
+50008: 					goto IL_76a5;
+50009: 				case 64:
+50010: 					goto IL_76b3;
+50011: 				case 263:
+50012: 					_0089_0087_0087.Location = new Point(187, 28);
+50013: 					_0089_0087_0087.Name = "label17" /* string-offset:2548 */;
+50014: 					goto case 338;
+50015: 				case 338:
+50016: 					_0089_0087_0087.Size = new Size(107, 15);
+50017: 					num = 438;
+50018: 					goto case 438;
+50019: 				case 438:
+50020: 					_0089_0087_0087.TabIndex = 36;
+50021: 					goto case 443;
+50022: 				case 443:
+50023: 					_0089_0087_0087.Text = "飞行时间(sec)" /* string-offset:5892 */;
+50024: 					_0089_0087_0088.Location = new Point(106, 118);
+50025: 					num = 381;
+50026: 					goto IL_7788;
+50027: 				case 381:
+50028: 					goto IL_7788;
+50029: 				case 613:
+50030: 				case 676:
+50031: 					return;
+50032: 				}
+50033: 				break;
+50034: 			}
+50035: 			goto IL_0018;
+50036: 			IL_0893:
+50037: 			_0088_009D_0090.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+50038: 			num = 456;
+50039: 			if (_0088_0094())
+50040: 			{
+50041: 				goto IL_2744;
+50042: 			}
+50043: 			goto IL_689c;
+50044: 			IL_0924:
+50045: 			_0089_0086_0099.Name = "tbThrToSoc" /* string-offset:5772 */;
+50046: 			_0089_0086_0099.Size = new Size(60, 23);
+50047: 			num = 439;
+50048: 			goto IL_1780;
+50049: 			IL_0907:
+50050: 			_0089_0086_0099.Location = new Point(102, 88);
+50051: 			num = 290;
+50052: 			goto IL_0924;
+50053: 			IL_08cc:
+50054: 			_0089_0086_0095.SetToolTip(_0089_0086_0096, "复飞转弯点至SOC的距离" /* string-offset:5756 */);
+50055: 			_0089_0086_0096.TextChanged += _0088_009C_0088;
+50056: 			num = 392;
+50057: 			goto IL_0907;
+50058: 			IL_08b7:
+50059: 			_0089_0086_0096.Text = "8000" /* string-offset:5768 */;
+50060: 			goto IL_08cc;
+50061: 			IL_0862:
+50062: 			_0089_0086_0096.Size = new Size(60, 23);
+50063: 			_0089_0086_0096.TabIndex = 18;
+50064: 			num = 475;
+50065: 			if (_0088_0094())
+50066: 			{
+50067: 				goto IL_0893;
+50068: 			}
+50069: 			goto IL_08b7;
+50070: 			IL_0844:
+50071: 			_0089_0086_0096.Name = "tbSocToTp" /* string-offset:5764 */;
+50072: 			num = 65;
+50073: 			goto IL_0862;
+50074: 			IL_0830:
+50075: 			_0089_0086_0096.Location = new Point(102, 120);
+50076: 			goto IL_0844;
+50077: 			IL_080c:
+50078: 			_0089_0086_0095.SetToolTip(_0089_0086_008A, "复飞转弯高度" /* string-offset:5760 */);
+50079: 			num = 518;
+50080: 			goto IL_0830;
+50081: 			IL_07d6:
+50082: 			_0089_0086_008A.Size = new Size(91, 15);
+50083: 			_0089_0086_008A.TabIndex = 24;
+50084: 			_0089_0086_008A.Text = "转弯高度(m)" /* string-offset:2552 */;
+50085: 			goto IL_080c;
+50086: 			IL_2985:
+50087: 			_0089_0088_009D.TabIndex = 0;
+50088: 			_0089_0088_009D.Text = "DH(m)" /* string-offset:2460 */;
+50089: 			goto IL_29a6;
+50090: 			IL_2948:
+50091: 			_0089_0088_009D.Location = new Point(13, 28);
+50092: 			_0089_0088_009D.Name = "label40" /* string-offset:5960 */;
+50093: 			_0089_0088_009D.Size = new Size(47, 15);
+50094: 			goto IL_2985;
+50095: 			IL_293c:
+50096: 			_0089_0088_009D.AutoSize = true;
+50097: 			goto IL_2948;
+50098: 			IL_2907:
+50099: 			_0089_0088_009C.Text = "60" /* string-offset:2452 */;
+50100: 			_0089_0088_009C.TextChanged += _0088_009C_0095;
+50101: 			num = 648;
+50102: 			goto IL_293c;
+50103: 			IL_28b5:
+50104: 			_0089_0088_009C.Margin = new Padding(3, 2, 3, 2);
+50105: 			_0089_0088_009C.Name = "textBoxDH" /* string-offset:2448 */;
+50106: 			_0089_0088_009C.Size = new Size(75, 23);
+50107: 			_0089_0088_009C.TabIndex = 1;
+50108: 			num = 451;
+50109: 			goto IL_2907;
+50110: 			IL_0d60:
+50111: 			_0088_009E_0096.Name = "label3" /* string-offset:1876 */;
+50112: 			num = 199;
+50113: 			if (!_0088_0094())
+50114: 			{
+50115: 				goto IL_2327;
+50116: 			}
+50117: 			goto IL_28b5;
+50118: 			IL_0d37:
+50119: 			_0088_009E_0096.AutoSize = true;
+50120: 			_0088_009E_0096.Location = new Point(29, 92);
+50121: 			num = 472;
+50122: 			goto IL_0d60;
+50123: 			IL_0d20:
+50124: 			_0088_009E_0095.TextChanged += _0088_009B_009E;
+50125: 			goto IL_0d37;
+50126: 			IL_0d02:
+50127: 			_0088_009E_0095.Text = "15" /* string-offset:1964 */;
+50128: 			num = 487;
+50129: 			goto IL_0d20;
+50130: 			IL_0cec:
+50131: 			_0088_009E_0095.TabIndex = 18;
+50132: 			num = 543;
+50133: 			goto IL_0d02;
+50134: 			IL_0cd8:
+50135: 			_0088_009E_0095.Size = new Size(60, 23);
+50136: 			goto IL_0cec;
+50137: 			IL_0ca6:
+50138: 			_0088_009E_0095.Location = new Point(106, 88);
+50139: 			_0088_009E_0095.Name = "textBoxTCH" /* string-offset:5844 */;
+50140: 			num = 650;
+50141: 			goto IL_0cd8;
+50142: 			IL_2412:
+50143: 			_0088_009D_0095.Text = " " /* string-offset:584 */;
+50144: 			_0088_009D_0095.TextChanged += _0088_009B_0094;
+50145: 			num = 309;
+50146: 			goto IL_2447;
+50147: 			IL_0c67:
+50148: 			_0088_009E_0090.Size = new Size(62, 15);
+50149: 			_0088_009E_0090.TabIndex = 25;
+50150: 			_0088_009E_0090.Text = "VPA(°)" /* string-offset:5840 */;
+50151: 			num = 584;
+50152: 			goto IL_0ca6;
+50153: 			IL_0c49:
+50154: 			_0088_009E_0090.Name = "label22" /* string-offset:2104 */;
+50155: 			num = 239;
+50156: 			goto IL_0c67;
+50157: 			IL_0c20:
+50158: 			_0088_009E_0090.AutoSize = true;
+50159: 			_0088_009E_0090.Location = new Point(25, 60);
+50160: 			num = 368;
+50161: 			goto IL_0c49;
+50162: 			IL_0beb:
+50163: 			_0088_009E_0093.Text = "900" /* string-offset:2156 */;
+50164: 			_0088_009E_0093.TextChanged += _0088_009B_009D;
+50165: 			num = 48;
+50166: 			goto IL_0c20;
+50167: 			IL_0bac:
+50168: 			_0089_0086_009D.Controls.Add(_0089_0087_0087);
+50169: 			_0089_0086_009D.Controls.Add(_0089_0087_0088);
+50170: 			num = 198;
+50171: 			if (!_0088_0093())
+50172: 			{
+50173: 				goto IL_0beb;
+50174: 			}
+50175: 			goto IL_689c;
+50176: 			IL_0b8d:
+50177: 			_0089_0086_009D.Controls.Add(_0089_0087_0086);
+50178: 			num = 651;
+50179: 			goto IL_0bac;
+50180: 			IL_0b61:
+50181: 			_0089_0086_009D.Controls.Add(_0089_0089_0091);
+50182: 			_0089_0086_009D.Controls.Add(_0089_0086_009E);
+50183: 			goto IL_0b8d;
+50184: 			IL_0b42:
+50185: 			_0089_0086_009D.Controls.Add(_0089_0089_0090);
+50186: 			num = 468;
+50187: 			goto IL_0b61;
+50188: 			IL_0b01:
+50189: 			_0089_0087_0099.TabIndex = 3;
+50190: 			_0089_0087_0099.Text = "2.5" /* string-offset:2396 */;
+50191: 			_0089_0087_0099.TextChanged += _0088_009C_0090;
+50192: 			num = 432;
+50193: 			goto IL_0b42;
+50194: 			IL_23e9:
+50195: 			_0088_009D_0095.Size = new Size(116, 23);
+50196: 			_0088_009D_0095.TabIndex = 1;
+50197: 			num = 47;
+50198: 			goto IL_2412;
+50199: 			IL_0aed:
+50200: 			_0089_0087_0099.Size = new Size(70, 23);
+50201: 			goto IL_0b01;
+50202: 			IL_0ac4:
+50203: 			_0089_0087_0099.Location = new Point(115, 87);
+50204: 			_0089_0087_0099.Name = "textBoxMPdg" /* string-offset:2576 */;
+50205: 			goto IL_0aed;
+50206: 			IL_0a9a:
+50207: 			_0089_0087_0098.TabIndex = 2;
+50208: 			_0089_0087_0098.Text = "复飞梯度(%)" /* string-offset:2572 */;
+50209: 			num = 336;
+50210: 			goto IL_0ac4;
+50211: 			IL_2295:
+50212: 			_0089_0086_0091.Controls.Add(_0089_0088_0086);
+50213: 			num = 476;
+50214: 			goto IL_22b4;
+50215: 			IL_2898:
+50216: 			_0089_0088_009C.Location = new Point(104, 24);
+50217: 			num = 258;
+50218: 			goto IL_28b5;
+50219: 			IL_287a:
+50220: 			_0089_0088_009B.Text = "THR-SOC(m)" /* string-offset:2436 */;
+50221: 			num = 232;
+50222: 			goto IL_2898;
+50223: 			IL_2865:
+50224: 			_0089_0088_009B.TabIndex = 0;
+50225: 			num = 493;
+50226: 			goto IL_287a;
+50227: 			IL_2848:
+50228: 			_0089_0088_009B.Size = new Size(87, 15);
+50229: 			num = 616;
+50230: 			goto IL_2865;
+50231: 			IL_2833:
+50232: 			_0089_0088_009B.Name = "label38" /* string-offset:5956 */;
+50233: 			goto IL_2848;
+50234: 			IL_2813:
+50235: 			_0089_0088_009B.AutoSize = true;
+50236: 			_0089_0088_009B.Location = new Point(13, 121);
+50237: 			goto IL_2833;
+50238: 			IL_27fc:
+50239: 			_0089_0088_009A.TextChanged += _0088_009C_0097;
+50240: 			goto IL_2813;
+50241: 			IL_2224:
+50242: 			_0089_0088_009A.Margin = new Padding(3, 2, 3, 2);
+50243: 			_0089_0088_009A.Name = "textBoxPDist" /* string-offset:2428 */;
+50244: 			_0089_0088_009A.Size = new Size(75, 23);
+50245: 			_0089_0088_009A.TabIndex = 1;
+50246: 			_0089_0088_009A.Text = "0" /* string-offset:560 */;
+50247: 			num = 36;
+50248: 			if (!_0088_0093())
+50249: 			{
+50250: 				goto IL_2295;
+50251: 			}
+50252: 			goto IL_27fc;
+50253: 			IL_21d0:
+50254: 			_0089_0088_0098.Text = "Xz(m)" /* string-offset:2468 */;
+50255: 			_0089_0088_0099.Controls.Add(_0089_0088_009A);
+50256: 			_0089_0088_0099.Controls.Add(_0089_0088_009B);
+50257: 			num = 206;
+50258: 			if (!_0088_0093())
+50259: 			{
+50260: 				goto IL_2224;
+50261: 			}
+50262: 			goto IL_689c;
+50263: 			IL_21a9:
+50264: 			_0089_0088_008F.Size = new Size(30, 30);
+50265: 			num = 26;
+50266: 			if (!_0088_0093())
+50267: 			{
+50268: 				goto IL_21d0;
+50269: 			}
+50270: 			goto IL_689c;
+50271: 			IL_2712:
+50272: 			_0089_0087_008E.Margin = new Padding(3, 2, 3, 2);
+50273: 			_0089_0087_008E.Name = "textBoxNIAS" /* string-offset:5916 */;
+50274: 			num = 405;
+50275: 			goto IL_2744;
+50276: 			IL_26fe:
+50277: 			_0089_0087_008E.Location = new Point(106, 25);
+50278: 			goto IL_2712;
+50279: 			IL_26e0:
+50280: 			_0089_0087_008D.Text = "温度(℃)" /* string-offset:3324 */;
+50281: 			num = 624;
+50282: 			goto IL_26fe;
+50283: 			IL_26b9:
+50284: 			_0088_009E_008A.ItemSize = new Size(68, 30);
+50285: 			num = 220;
+50286: 			if (_0088_0094())
+50287: 			{
+50288: 				goto IL_26e0;
+50289: 			}
+50290: 			goto IL_689c;
+50291: 			IL_26a4:
+50292: 			_0088_009E_008A.Dock = DockStyle.Top;
+50293: 			num = 610;
+50294: 			goto IL_26b9;
+50295: 			IL_2685:
+50296: 			_0088_009E_008A.Controls.Add(_0089_0086_0091);
+50297: 			num = 391;
+50298: 			goto IL_26a4;
+50299: 			IL_266f:
+50300: 			_0088_009E_008A.Controls.Add(_0089_0087_009E);
+50301: 			goto IL_2685;
+50302: 			IL_2180:
+50303: 			_0088_009E_008A.Controls.Add(_0089_0086_0097);
+50304: 			num = 284;
+50305: 			if (!_0088_0093())
+50306: 			{
+50307: 				goto IL_21a9;
+50308: 			}
+50309: 			goto IL_266f;
+50310: 			IL_214b:
+50311: 			_0088_009E_008A.Controls.Add(_0088_009E_008B);
+50312: 			_0088_009E_008A.Controls.Add(_0088_009E_008C);
+50313: 			num = 264;
+50314: 			goto IL_2180;
+50315: 			IL_20ee:
+50316: 			_0088_009E_0089.Name = "label7" /* string-offset:2236 */;
+50317: 			_0088_009E_0089.Size = new Size(53, 15);
+50318: 			_0088_009E_0089.TabIndex = 2;
+50319: 			_0088_009E_0089.Text = "X（m）" /* string-offset:2876 */;
+50320: 			num = 60;
+50321: 			if (_0088_0093())
+50322: 			{
+50323: 				goto IL_214b;
+50324: 			}
+50325: 			goto IL_2469;
+50326: 			IL_23cb:
+50327: 			_0088_009D_0095.Name = "textBoxLat1" /* string-offset:2848 */;
+50328: 			num = 602;
+50329: 			goto IL_23e9;
+50330: 			IL_276d:
+50331: 			_0089_0087_008E.Text = "380" /* string-offset:3340 */;
+50332: 			_0089_0087_008E.TextChanged += _0088_009C_008A;
+50333: 			_0089_0087_008F.Location = new Point(106, 56);
+50334: 			num = 165;
+50335: 			goto IL_27b6;
+50336: 			IL_20bd:
+50337: 			_0088_009E_0089.Location = new Point(17, 28);
+50338: 			_0088_009E_0089.Margin = new Padding(4, 0, 4, 0);
+50339: 			num = 266;
+50340: 			goto IL_20ee;
+50341: 			IL_2090:
+50342: 			_0088_009E_0088.TabIndex = 2;
+50343: 			_0088_009E_0088.Text = "Y（m）" /* string-offset:2868 */;
+50344: 			_0088_009E_0089.AutoSize = true;
+50345: 			goto IL_20bd;
+50346: 			IL_207c:
+50347: 			_0088_009E_0088.Size = new Size(53, 15);
+50348: 			goto IL_2090;
+50349: 			IL_205e:
+50350: 			_0088_009E_0088.Name = "label4" /* string-offset:2904 */;
+50351: 			num = 571;
+50352: 			goto IL_207c;
+50353: 			IL_2041:
+50354: 			_0088_009E_0088.Margin = new Padding(4, 0, 4, 0);
+50355: 			num = 23;
+50356: 			goto IL_205e;
+50357: 			IL_202d:
+50358: 			_0088_009E_0088.Location = new Point(17, 61);
+50359: 			goto IL_2041;
+50360: 			IL_2018:
+50361: 			_0088_009E_0088.AutoSize = true;
+50362: 			num = 599;
+50363: 			goto IL_202d;
+50364: 			IL_118a:
+50365: 			_0088_009E_009B = new TextBox();
+50366: 			_0088_009E_009C = new TextBox();
+50367: 			num = 262;
+50368: 			if (_0088_0094())
+50369: 			{
+50370: 				goto IL_2018;
+50371: 			}
+50372: 			goto IL_689c;
+50373: 			IL_1176:
+50374: 			_0088_009E_009A = new TextBox();
+50375: 			num = 554;
+50376: 			goto IL_118a;
+50377: 			IL_1141:
+50378: 			_0088_009E_008B = new TabPage();
+50379: 			_0088_009E_0097 = new GroupBox();
+50380: 			_0088_009E_0098 = new ComboBox();
+50381: 			_0088_009E_0099 = new Label();
+50382: 			num = 360;
+50383: 			goto IL_1176;
+50384: 			IL_1120:
+50385: 			_0088_009E_0088 = new Label();
+50386: 			_0088_009E_0089 = new Label();
+50387: 			_0088_009E_008A = new TabControl();
+50388: 			goto IL_1141;
+50389: 			IL_110c:
+50390: 			_0088_009E_0087 = new TextBox();
+50391: 			num = 326;
+50392: 			goto IL_1120;
+50393: 			IL_10f6:
+50394: 			_0088_009D_009E = new TextBox();
+50395: 			_0088_009E_0086 = new Label();
+50396: 			goto IL_110c;
+50397: 			IL_10ca:
+50398: 			_0088_009D_009B = new GroupBox();
+50399: 			_0089_0089_008E = new Button();
+50400: 			_0088_009D_009C = new Button();
+50401: 			_0088_009D_009D = new TextBox();
+50402: 			goto IL_10f6;
+50403: 			IL_10a9:
+50404: 			_0088_009D_0098 = new Button();
+50405: 			_0088_009D_0099 = new Label();
+50406: 			_0088_009D_009A = new Label();
+50407: 			goto IL_10ca;
+50408: 			IL_1093:
+50409: 			_0088_009D_0096 = new TextBox();
+50410: 			_0088_009D_0097 = new Label();
+50411: 			goto IL_10a9;
+50412: 			IL_107f:
+50413: 			_0088_009D_0095 = new TextBox();
+50414: 			num = 460;
+50415: 			goto IL_1093;
+50416: 			IL_106b:
+50417: 			_0088_009D_0094 = new TextBox();
+50418: 			num = 470;
+50419: 			goto IL_107f;
+50420: 			IL_1055:
+50421: 			_0088_009D_0092 = new Button();
+50422: 			_0088_009D_0093 = new GroupBox();
+50423: 			goto IL_106b;
+50424: 			IL_1041:
+50425: 			_0088_009D_0091 = new Button();
+50426: 			num = 467;
+50427: 			goto IL_1055;
+50428: 			IL_1022:
+50429: 			_0088_009D_008F = new Button();
+50430: 			_0088_009D_0090 = new DataGridView();
+50431: 			num = 221;
+50432: 			goto IL_1041;
+50433: 			IL_100e:
+50434: 			_0088_009D_008E = new Button();
+50435: 			num = 583;
+50436: 			goto IL_1022;
+50437: 			IL_0ff5:
+50438: 			PerformLayout();
+50439: 			num = 676;
+50440: 			if (!_0088_0094())
+50441: 			{
+50442: 				return;
+50443: 			}
+50444: 			goto IL_100e;
+50445: 			IL_0fe5:
+50446: 			ResumeLayout(performLayout: false);
+50447: 			num = 4;
+50448: 			goto IL_0ff5;
+50449: 			IL_0f70:
+50450: 			_0089_0088_0099.ResumeLayout(performLayout: false);
+50451: 			_0089_0088_0099.PerformLayout();
+50452: 			_0089_0086_0091.ResumeLayout(performLayout: false);
+50453: 			num = 375;
+50454: 			goto IL_0f9c;
+50455: 			IL_0fd1:
+50456: 			_0089_0088_0086.PerformLayout();
+50457: 			num = 430;
+50458: 			goto IL_0fe5;
+50459: 			IL_0fb1:
+50460: 			_0089_0086_009A.PerformLayout();
+50461: 			_0089_0088_0086.ResumeLayout(performLayout: false);
+50462: 			num = 533;
+50463: 			goto IL_0fd1;
+50464: 			IL_0f9c:
+50465: 			_0089_0086_009A.ResumeLayout(performLayout: false);
+50466: 			num = 193;
+50467: 			goto IL_0fb1;
+50468: 			IL_0f5c:
+50469: 			_0089_0088_0090.PerformLayout();
+50470: 			num = 24;
+50471: 			goto IL_0f70;
+50472: 			IL_0f50:
+50473: 			_0089_0088_0090.ResumeLayout(performLayout: false);
+50474: 			goto IL_0f5c;
+50475: 			IL_0568:
+50476: 			_0088_009D_008F.Size = new Size(49, 40);
+50477: 			_0088_009D_008F.TabIndex = 2;
+50478: 			num = 512;
+50479: 			if (!_0088_0093())
+50480: 			{
+50481: 				goto IL_00e1;
+50482: 			}
+50483: 			goto IL_689c;
+50484: 			IL_0530:
+50485: 			_0088_009D_008F.Location = new Point(296, 223);
+50486: 			_0088_009D_008F.Name = "button6" /* string-offset:1920 */;
+50487: 			num = 337;
+50488: 			goto IL_0568;
+50489: 			IL_0510:
+50490: 			_0088_009D_008E.Click += _0088_009C_009C;
+50491: 			num = 86;
+50492: 			goto IL_0530;
+50493: 			IL_0504:
+50494: 			_0088_009D_008E.Visible = false;
+50495: 			goto IL_0510;
+50496: 			IL_04f8:
+50497: 			_0088_009D_008E.UseVisualStyleBackColor = true;
+50498: 			goto IL_0504;
+50499: 			IL_04ba:
+50500: 			_0088_009D_008E.Size = new Size(49, 40);
+50501: 			_0088_009D_008E.TabIndex = 3;
+50502: 			_0088_009D_008E.Text = "KML" /* string-offset:3272 */;
+50503: 			num = 215;
+50504: 			goto IL_04f8;
+50505: 			IL_0492:
+50506: 			_0089_0086_0086.Text = "机场标高(m)" /* string-offset:5740 */;
+50507: 			num = 42;
+50508: 			if (_0088_0094())
+50509: 			{
+50510: 				goto IL_04ba;
+50511: 			}
+50512: 			goto IL_689c;
+50513: 			IL_0468:
+50514: 			_0089_0086_0086.Size = new Size(91, 15);
+50515: 			_0089_0086_0086.TabIndex = 63;
+50516: 			num = 76;
+50517: 			goto IL_0492;
+50518: 			IL_0453:
+50519: 			_0089_0086_0086.Name = "label14" /* string-offset:2260 */;
+50520: 			goto IL_0468;
+50521: 			IL_0436:
+50522: 			_0089_0086_0086.Location = new Point(12, 61);
+50523: 			num = 320;
+50524: 			goto IL_0453;
+50525: 			IL_03cb:
+50526: 			_0088_009E_009E.Location = new Point(12, 94);
+50527: 			_0088_009E_009E.Name = "label13" /* string-offset:3460 */;
+50528: 			_0088_009E_009E.Size = new Size(98, 15);
+50529: 			_0088_009E_009E.TabIndex = 61;
+50530: 			_0088_009E_009E.Text = "机场温度(℃)" /* string-offset:5736 */;
+50531: 			_0089_0086_0086.AutoSize = true;
+50532: 			goto IL_0436;
+50533: 			IL_03b6:
+50534: 			_0088_009E_009E.AutoSize = true;
+50535: 			num = 301;
+50536: 			goto IL_03cb;
+50537: 			IL_0397:
+50538: 			_0089_0087_0091.ResumeLayout(performLayout: false);
+50539: 			num = 123;
+50540: 			if (_0088_0094())
+50541: 			{
+50542: 				goto IL_03b6;
+50543: 			}
+50544: 			goto IL_689c;
+50545: 			IL_0377:
+50546: 			_0089_0086_008F.PerformLayout();
+50547: 			_0089_0086_0097.ResumeLayout(performLayout: false);
+50548: 			num = 223;
+50549: 			goto IL_0397;
+50550: 			IL_0362:
+50551: 			_0089_0086_008F.ResumeLayout(performLayout: false);
+50552: 			num = 574;
+50553: 			goto IL_0377;
+50554: 			IL_1ff8:
+50555: 			_0088_009E_0087.TextChanged += _0088_009B_0096;
+50556: 			num = 560;
+50557: 			goto IL_2018;
+50558: 			IL_1fda:
+50559: 			_0088_009E_0087.Text = " " /* string-offset:584 */;
+50560: 			num = 16;
+50561: 			goto IL_1ff8;
+50562: 			IL_1fc5:
+50563: 			_0088_009E_0087.TabIndex = 0;
+50564: 			num = 17;
+50565: 			goto IL_1fda;
+50566: 			IL_1f93:
+50567: 			_0088_009E_0087.Name = "textBoxLon2" /* string-offset:2896 */;
+50568: 			_0088_009E_0087.Size = new Size(116, 23);
+50569: 			num = 403;
+50570: 			goto IL_1fc5;
+50571: 			IL_1f76:
+50572: 			_0088_009E_0087.Margin = new Padding(4, 3, 4, 3);
+50573: 			num = 371;
+50574: 			goto IL_1f93;
+50575: 			IL_1f3a:
+50576: 			_0088_009E_0086.Text = "Z（m）" /* string-offset:2872 */;
+50577: 			_0088_009E_0087.Location = new Point(78, 24);
+50578: 			num = 71;
+50579: 			if (_0088_0093())
+50580: 			{
+50581: 				goto IL_1f76;
+50582: 			}
+50583: 			goto IL_26a4;
+50584: 			IL_0321:
+50585: 			_0089_0086_0087.ResumeLayout(performLayout: false);
+50586: 			_0089_0086_0087.PerformLayout();
+50587: 			_0089_0086_008C.ResumeLayout(performLayout: false);
+50588: 			_0089_0086_008C.PerformLayout();
+50589: 			num = 618;
+50590: 			if (!_0088_0094())
+50591: 			{
+50592: 				goto IL_0362;
+50593: 			}
+50594: 			goto IL_1f3a;
+50595: 			IL_030c:
+50596: 			_0088_009E_008C.ResumeLayout(performLayout: false);
+50597: 			num = 272;
+50598: 			goto IL_0321;
+50599: 			IL_0301:
+50600: 			_0088_009E_0097.PerformLayout();
+50601: 			goto IL_030c;
+50602: 			IL_02ec:
+50603: 			_0088_009E_0097.ResumeLayout(performLayout: false);
+50604: 			num = 185;
+50605: 			goto IL_0301;
+50606: 			IL_02c0:
+50607: 			_0088_009D_009B.PerformLayout();
+50608: 			_0088_009E_008A.ResumeLayout(performLayout: false);
+50609: 			_0088_009E_008B.ResumeLayout(performLayout: false);
+50610: 			num = 265;
+50611: 			goto IL_02ec;
+50612: 			IL_02b4:
+50613: 			_0088_009D_009B.ResumeLayout(performLayout: false);
+50614: 			goto IL_02c0;
+50615: 			IL_02a0:
+50616: 			_0088_009D_0093.PerformLayout();
+50617: 			num = 671;
+50618: 			goto IL_02b4;
+50619: 			IL_028b:
+50620: 			_0088_009D_0093.ResumeLayout(performLayout: false);
+50621: 			num = 43;
+50622: 			goto IL_02a0;
+50623: 			IL_0269:
+50624: 			_0088_009D_008C.ResumeLayout(performLayout: false);
+50625: 			_0088_009D_008C.PerformLayout();
+50626: 			((ISupportInitialize)_0088_009D_0090).EndInit();
+50627: 			goto IL_028b;
+50628: 			IL_75f3:
+50629: 			_0089_0087_0089.Text = "2300" /* string-offset:5900 */;
+50630: 			_0089_0086_0095.SetToolTip(_0089_0087_0089, "包含ATT 444m" /* string-offset:5904 */);
+50631: 			num = 324;
+50632: 			goto IL_75da;
+50633: 			IL_762e:
+50634: 			_0089_0087_0089.Size = new Size(70, 23);
+50635: 			_0089_0087_0089.TabIndex = 35;
+50636: 			num = 396;
+50637: 			goto IL_75f3;
+50638: 			IL_38b7:
+50639: 			_0089_0086_009E.UseVisualStyleBackColor = true;
+50640: 			num = 229;
+50641: 			if (!_0088_0094())
+50642: 			{
+50643: 				goto IL_689c;
+50644: 			}
+50645: 			goto IL_762e;
+50646: 			IL_388c:
+50647: 			_0089_0086_009E.TabIndex = 72;
+50648: 			_0089_0086_009E.Text = "计算" /* string-offset:4792 */;
+50649: 			num = 285;
+50650: 			goto IL_38b7;
+50651: 			IL_385a:
+50652: 			_0089_0086_009E.Name = "button13" /* string-offset:3508 */;
+50653: 			_0089_0086_009E.Size = new Size(70, 34);
+50654: 			num = 70;
+50655: 			goto IL_388c;
+50656: 			IL_383a:
+50657: 			_0089_0086_009E.Location = new Point(260, 107);
+50658: 			num = 629;
+50659: 			goto IL_385a;
+50660: 			IL_4703:
+50661: 			_0089_0089_0091.TextAlign = ContentAlignment.MiddleCenter;
+50662: 			num = 664;
+50663: 			goto IL_383a;
+50664: 			IL_46d8:
+50665: 			_0089_0089_0091.TabIndex = 73;
+50666: 			_0089_0089_0091.Text = "IAS(km/h)" /* string-offset:3308 */;
+50667: 			num = 436;
+50668: 			goto IL_4703;
+50669: 			IL_46bb:
+50670: 			_0089_0089_0091.Size = new Size(79, 15);
+50671: 			num = 202;
+50672: 			goto IL_46d8;
+50673: 			IL_4600:
+50674: 			_0089_0089_0090.Name = "cbWindSpeed" /* string-offset:5880 */;
+50675: 			_0089_0089_0090.Size = new Size(85, 15);
+50676: 			num = 177;
+50677: 			goto IL_4632;
+50678: 			IL_0244:
+50679: 			base.Load += _0088_009A_0093;
+50680: 			num = 327;
+50681: 			if (!_0088_0094())
+50682: 			{
+50683: 				goto IL_0269;
+50684: 			}
+50685: 			goto IL_4600;
+50686: 			IL_4632:
+50687: 			_0089_0089_0090.TabIndex = 74;
+50688: 			_0089_0089_0090.Text = "风速(km/h)" /* string-offset:3300 */;
+50689: 			_0089_0089_0090.TextAlign = ContentAlignment.MiddleCenter;
+50690: 			_0089_0089_0091.AutoSize = true;
+50691: 			_0089_0089_0091.Cursor = Cursors.Hand;
+50692: 			_0089_0089_0091._008D_0089 = false;
+50693: 			_0089_0089_0091.Location = new Point(14, 29);
+50694: 			_0089_0089_0091.Name = "cbIAS" /* string-offset:5884 */;
+50695: 			num = 612;
+50696: 			goto IL_46bb;
+50697: 			IL_0209:
+50698: 			base.Name = "FormApvEvl" /* string-offset:408 */;
+50699: 			Text = "RNP APCH评估" /* string-offset:6008 */;
+50700: 			base.FormClosed += _0088_009A_0094;
+50701: 			num = 429;
+50702: 			goto IL_0244;
+50703: 			IL_01ef:
+50704: 			base.Controls.Add(_0089_0086_0092);
+50705: 			num = 325;
+50706: 			goto IL_0209;
+50707: 			IL_01d5:
+50708: 			base.Controls.Add(_0089_0086_0093);
+50709: 			num = 605;
+50710: 			goto IL_01ef;
+50711: 			IL_01aa:
+50712: 			base.Controls.Add(_0088_009D_0092);
+50713: 			base.Controls.Add(_0088_009D_008C);
+50714: 			num = 250;
+50715: 			goto IL_01d5;
+50716: 			IL_017f:
+50717: 			base.Controls.Add(_0088_009D_0090);
+50718: 			base.Controls.Add(_0088_009D_0091);
+50719: 			num = 636;
+50720: 			goto IL_01aa;
+50721: 			IL_0126:
+50722: 			base.ClientSize = new Size(728, 600);
+50723: 			base.Controls.Add(_0089_0089_008F);
+50724: 			base.Controls.Add(_0088_009E_008A);
+50725: 			base.Controls.Add(_0088_009D_008E);
+50726: 			base.Controls.Add(_0088_009D_008F);
+50727: 			goto IL_017f;
+50728: 			IL_011f:
+50729: 			base.AutoScaleMode = AutoScaleMode.Font;
+50730: 			goto IL_0126;
+50731: 			IL_0101:
+50732: 			base.AutoScaleDimensions = new SizeF(7f, 14f);
+50733: 			num = 231;
+50734: 			goto IL_011f;
+50735: 			IL_00e1:
+50736: 			_0089_0089_008F.Click += _0088_009B_0092;
+50737: 			num = 548;
+50738: 			goto IL_0101;
+50739: 			IL_3057:
+50740: 			_0089_0087_0098.Location = new Point(16, 91);
+50741: 			_0089_0087_0098.Name = "label33" /* string-offset:2456 */;
+50742: 			_0089_0087_0098.Size = new Size(91, 15);
+50743: 			num = 342;
+50744: 			goto IL_0a9a;
+50745: 			IL_3042:
+50746: 			_0089_0087_0098.AutoSize = true;
+50747: 			num = 142;
+50748: 			goto IL_3057;
+50749: 			IL_2fed:
+50750: 			_0089_0087_0097.Size = new Size(70, 23);
+50751: 			_0089_0087_0097.TabIndex = 1;
+50752: 			_0089_0087_0097.Text = "300" /* string-offset:2180 */;
+50753: 			_0089_0087_0097.TextChanged += _0088_009C_008F;
+50754: 			num = 97;
+50755: 			goto IL_3042;
+50756: 			IL_1697:
+50757: 			_0088_009E_0091.TabIndex = 16;
+50758: 			num = 117;
+50759: 			goto IL_16ad;
+50760: 			IL_2f85:
+50761: 			_0089_0087_0096.Text = "100" /* string-offset:540 */;
+50762: 			_0089_0087_0096.TextChanged += _0088_009C_008E;
+50763: 			_0089_0087_0097.Location = new Point(115, 56);
+50764: 			_0089_0087_0097.Name = "textBoxMEnd" /* string-offset:2564 */;
+50765: 			num = 596;
+50766: 			if (!_0088_0093())
+50767: 			{
+50768: 				goto IL_0377;
+50769: 			}
+50770: 			goto IL_2fed;
+50771: 			IL_2f50:
+50772: 			_0089_0087_0096.Name = "textBoxMStart" /* string-offset:2560 */;
+50773: 			_0089_0087_0096.Size = new Size(70, 23);
+50774: 			_0089_0087_0096.TabIndex = 0;
+50775: 			goto IL_2f85;
+50776: 			IL_2f3c:
+50777: 			_0089_0087_0096.Location = new Point(115, 25);
+50778: 			goto IL_2f50;
+50779: 			IL_2ede:
+50780: 			_0089_0087_0095.Location = new Point(16, 60);
+50781: 			_0089_0087_0095.Name = "label32" /* string-offset:5872 */;
+50782: 			_0089_0087_0095.Size = new Size(91, 15);
+50783: 			_0089_0087_0095.TabIndex = 2;
+50784: 			_0089_0087_0095.Text = "转弯高度(m)" /* string-offset:2552 */;
+50785: 			goto IL_2f3c;
+50786: 			IL_2ec9:
+50787: 			_0089_0087_0095.AutoSize = true;
+50788: 			num = 609;
+50789: 			goto IL_2ede;
+50790: 			IL_2eb4:
+50791: 			_0089_0087_0094.Text = "SOC高度(m)" /* string-offset:2544 */;
+50792: 			goto IL_2ec9;
+50793: 			IL_2e9f:
+50794: 			_0089_0087_0094.TabIndex = 2;
+50795: 			num = 486;
+50796: 			goto IL_2eb4;
+50797: 			IL_2e76:
+50798: 			_0089_0087_0094.Name = "label31" /* string-offset:2432 */;
+50799: 			_0089_0087_0094.Size = new Size(85, 15);
+50800: 			goto IL_2e9f;
+50801: 			IL_2e59:
+50802: 			_0089_0087_0094.Location = new Point(16, 29);
+50803: 			num = 156;
+50804: 			goto IL_2e76;
+50805: 			IL_5be0:
+50806: 			_0089_0087_0093.Text = "SOC-TP(m)" /* string-offset:2536 */;
+50807: 			_0089_0087_0094.AutoSize = true;
+50808: 			goto IL_2e59;
+50809: 			IL_1f11:
+50810: 			_0088_009E_0086.Size = new Size(53, 15);
+50811: 			_0088_009E_0086.TabIndex = 2;
+50812: 			num = 108;
+50813: 			goto IL_1f3a;
+50814: 			IL_1edf:
+50815: 			_0088_009E_0086.Margin = new Padding(4, 0, 4, 0);
+50816: 			_0088_009E_0086.Name = "label9" /* string-offset:2940 */;
+50817: 			num = 448;
+50818: 			goto IL_1f11;
+50819: 			IL_1eb6:
+50820: 			_0088_009E_0086.AutoSize = true;
+50821: 			_0088_009E_0086.Location = new Point(17, 94);
+50822: 			num = 245;
+50823: 			goto IL_1edf;
+50824: 			IL_1e9f:
+50825: 			_0088_009D_009E.TextChanged += _0088_009B_0097;
+50826: 			goto IL_1eb6;
+50827: 			IL_5bad:
+50828: 			_0089_0087_0093.Size = new Size(79, 15);
+50829: 			_0089_0087_0093.TabIndex = 2;
+50830: 			num = 349;
+50831: 			if (!_0088_0093())
+50832: 			{
+50833: 				goto IL_1e9f;
+50834: 			}
+50835: 			goto IL_5be0;
+50836: 			IL_5b98:
+50837: 			_0089_0087_0093.Name = "label28" /* string-offset:2612 */;
+50838: 			goto IL_5bad;
+50839: 			IL_5b84:
+50840: 			_0089_0087_0093.Location = new Point(16, 122);
+50841: 			goto IL_5b98;
+50842: 			IL_5b6f:
+50843: 			_0089_0087_0093.AutoSize = true;
+50844: 			num = 458;
+50845: 			goto IL_5b84;
+50846: 			IL_67bf:
+50847: 			_0088_009E_009D.TabIndex = 61;
+50848: 			num = 247;
+50849: 			goto IL_67d5;
+50850: 			IL_5d88:
+50851: 			_0089_0087_0092.TextChanged += _0088_009C_0091;
+50852: 			goto IL_5b6f;
+50853: 			IL_16ad:
+50854: 			_0088_009E_0091.Text = "3.0" /* string-offset:2376 */;
+50855: 			goto IL_16c2;
+50856: 			IL_1665:
+50857: 			_0088_009E_0091.Name = "comboBoxVPA" /* string-offset:5832 */;
+50858: 			_0088_009E_0091.Size = new Size(60, 22);
+50859: 			num = 455;
+50860: 			goto IL_1697;
+50861: 			IL_1648:
+50862: 			_0088_009E_0091.Location = new Point(106, 56);
+50863: 			num = 196;
+50864: 			goto IL_1665;
+50865: 			IL_161f:
+50866: 			_0089_0086_008F.Controls.Add(_0088_009E_0096);
+50867: 			num = 103;
+50868: 			if (!_0088_0093())
+50869: 			{
+50870: 				goto IL_1648;
+50871: 			}
+50872: 			goto IL_689c;
+50873: 			IL_1609:
+50874: 			_0089_0086_008F.Controls.Add(_0088_009E_0095);
+50875: 			goto IL_161f;
+50876: 			IL_674a:
+50877: 			_0088_009D_008E.Name = "button8" /* string-offset:3468 */;
+50878: 			num = 323;
+50879: 			goto IL_04ba;
+50880: 			IL_6674:
+50881: 			_0088_009D_008C.Name = "statusStrip1" /* string-offset:2836 */;
+50882: 			_0088_009D_008C.Size = new Size(728, 26);
+50883: 			_0088_009D_008C.TabIndex = 0;
+50884: 			_0088_009D_008C.Text = "statusStrip1" /* string-offset:2836 */;
+50885: 			_0088_009D_008D.Name = "toolStripStatusLabel1" /* string-offset:2840 */;
+50886: 			_0088_009D_008D.Size = new Size(84, 20);
+50887: 			_0088_009D_008D.Text = "软件已就绪" /* string-offset:3612 */;
+50888: 			_0089_0086_009C.Name = "toolStripStatusLabel2" /* string-offset:3616 */;
+50889: 			_0089_0086_009C.Size = new Size(0, 20);
+50890: 			_0088_009D_008E.Location = new Point(351, 223);
+50891: 			num = 384;
+50892: 			goto IL_674a;
+50893: 			IL_15e0:
+50894: 			_0088_009D_008C.Location = new Point(0, 574);
+50895: 			num = 586;
+50896: 			if (_0088_0094())
+50897: 			{
+50898: 				goto IL_1609;
+50899: 			}
+50900: 			goto IL_6674;
+50901: 			IL_159b:
+50902: 			_0088_009D_008C.ImageScalingSize = new Size(19, 19);
+50903: 			_0088_009D_008C.Items.AddRange(new ToolStripItem[2] { _0088_009D_008D, _0089_0086_009C });
+50904: 			num = 453;
+50905: 			goto IL_15e0;
+50906: 			IL_158c:
+50907: 			SuspendLayout();
+50908: 			num = 575;
+50909: 			goto IL_159b;
+50910: 			IL_3155:
+50911: 			_0089_0088_0086.SuspendLayout();
+50912: 			num = 334;
+50913: 			goto IL_158c;
+50914: 			IL_314a:
+50915: 			_0089_0086_009A.SuspendLayout();
+50916: 			goto IL_3155;
+50917: 			IL_312b:
+50918: 			_0089_0088_0099.SuspendLayout();
+50919: 			_0089_0086_0091.SuspendLayout();
+50920: 			num = 545;
+50921: 			goto IL_314a;
+50922: 			IL_3117:
+50923: 			_0089_0088_0090.SuspendLayout();
+50924: 			num = 252;
+50925: 			goto IL_312b;
+50926: 			IL_310c:
+50927: 			_0089_0087_009E.SuspendLayout();
+50928: 			goto IL_3117;
+50929: 			IL_30f6:
+50930: 			_0089_0087_0091.SuspendLayout();
+50931: 			_0089_0086_009D.SuspendLayout();
+50932: 			goto IL_310c;
+50933: 			IL_30e2:
+50934: 			_0089_0086_0097.SuspendLayout();
+50935: 			num = 346;
+50936: 			goto IL_30f6;
+50937: 			IL_30c1:
+50938: 			_0089_0086_0087.SuspendLayout();
+50939: 			_0089_0086_008C.SuspendLayout();
+50940: 			_0089_0086_008F.SuspendLayout();
+50941: 			goto IL_30e2;
+50942: 			IL_30a2:
+50943: 			_0088_009E_0097.SuspendLayout();
+50944: 			_0088_009E_008C.SuspendLayout();
+50945: 			num = 130;
+50946: 			goto IL_30c1;
+50947: 			IL_3e37:
+50948: 			_0088_009E_008B.SuspendLayout();
+50949: 			num = 672;
+50950: 			goto IL_30a2;
+50951: 			IL_3e0d:
+50952: 			_0088_009D_0093.SuspendLayout();
+50953: 			_0088_009D_009B.SuspendLayout();
+50954: 			_0088_009E_008A.SuspendLayout();
+50955: 			num = 230;
+50956: 			goto IL_3e37;
+50957: 			IL_3f86:
+50958: 			((ISupportInitialize)_0088_009D_0090).BeginInit();
+50959: 			num = 652;
+50960: 			goto IL_3e0d;
+50961: 			IL_3f72:
+50962: 			_0088_009D_008C.SuspendLayout();
+50963: 			num = 163;
+50964: 			goto IL_3f86;
+50965: 			IL_3f5e:
+50966: 			_0089_0089_008F = new Button();
+50967: 			num = 58;
+50968: 			goto IL_3f72;
+50969: 			IL_3f44:
+50970: 			_0089_0086_0095 = new ToolTip(_0088_009D_008B);
+50971: 			num = 630;
+50972: 			goto IL_3f5e;
+50973: 			IL_3f30:
+50974: 			_0089_0086_0093 = new Button();
+50975: 			num = 447;
+50976: 			goto IL_3f44;
+50977: 			IL_5d60:
+50978: 			_0089_0087_0092.Text = "8000" /* string-offset:5768 */;
+50979: 			num = 409;
+50980: 			if (_0088_0094())
+50981: 			{
+50982: 				goto IL_3f30;
+50983: 			}
+50984: 			goto IL_5d88;
+50985: 			IL_5d41:
+50986: 			_0089_0087_0092.TabIndex = 4;
+50987: 			num = 124;
+50988: 			if (_0088_0094())
+50989: 			{
+50990: 				goto IL_0d02;
+50991: 			}
+50992: 			goto IL_5d60;
+50993: 			IL_67d5:
+50994: 			_0088_009E_009D.Text = "灯光长度(m)" /* string-offset:5732 */;
+50995: 			num = 465;
+50996: 			goto IL_03b6;
+50997: 			IL_00aa:
+50998: 			_0089_0087_0092.Size = new Size(70, 23);
+50999: 			_0088_0094();
+51000: 			if (!_0088_0093())
+51001: 			{
+51002: 				num = 500;
+51003: 				if (!_0088_0094())
+51004: 				{
+51005: 					goto IL_00e1;
+51006: 				}
+51007: 				goto IL_5b6f;
+51008: 			}
+51009: 			num = 425;
+51010: 			if (_0088_0094())
+51011: 			{
+51012: 				goto IL_0830;
+51013: 			}
+51014: 			goto IL_5d41;
+51015: 			IL_0078:
+51016: 			_0089_0087_0092.Location = new Point(115, 118);
+51017: 			_0089_0087_0092.Name = "textBoxMDist" /* string-offset:2524 */;
+51018: 			num = 639;
+51019: 			goto IL_00aa;
+51020: 			IL_0055:
+51021: 			_0089_0087_009D.Click += _0088_009B_008E;
+51022: 			_0089_0087_0092.Enabled = false;
+51023: 			goto IL_0078;
+51024: 			IL_0049:
+51025: 			_0089_0087_009D.UseVisualStyleBackColor = true;
+51026: 			goto IL_0055;
+51027: 			IL_0018:
+51028: 			_0089_0087_009D.TabIndex = 73;
+51029: 			_0089_0086_0095.SetToolTip(_0089_0087_009D, "复制计算结果" /* string-offset:5868 */);
+51030: 			num = 505;
+51031: 			goto IL_0049;
+51032: 			IL_733e:
+51033: 			_0089_0087_008D.AutoSize = true;
+51034: 			_0089_0087_008D.Location = new Point(19, 91);
+51035: 			_0089_0087_008D.Name = "label24" /* string-offset:2120 */;
+51036: 			_0089_0087_008D.Size = new Size(68, 15);
+51037: 			num = 414;
+51038: 			if (!_0088_0093())
+51039: 			{
+51040: 				goto IL_0018;
+51041: 			}
+51042: 			goto IL_689c;
+51043: 			IL_739f:
+51044: 			_0089_0087_008C.Text = "THR-SOC(m)" /* string-offset:2436 */;
+51045: 			num = 77;
+51046: 			goto IL_733e;
+51047: 			IL_73c2:
+51048: 			_0089_0087_008C.Name = "label23" /* string-offset:2112 */;
+51049: 			_0089_0087_008C.Size = new Size(87, 15);
+51050: 			_0089_0087_008C.TabIndex = 37;
+51051: 			goto IL_739f;
+51052: 			IL_73fa:
+51053: 			_0089_0087_008C.AutoSize = true;
+51054: 			_0089_0087_008C.Location = new Point(197, 60);
+51055: 			num = 534;
+51056: 			goto IL_73c2;
+51057: 			IL_7428:
+51058: 			_0089_0089_008D.TabIndex = 37;
+51059: 			num = 84;
+51060: 			goto IL_73fa;
+51061: 			IL_7440:
+51062: 			_0089_0089_008D.Size = new Size(0, 15);
+51063: 			num = 656;
+51064: 			goto IL_7428;
+51065: 			IL_745e:
+51066: 			_0089_0089_008D.AutoSize = true;
+51067: 			_0089_0089_008D.Location = new Point(192, 84);
+51068: 			_0089_0089_008D.Name = "label43" /* string-offset:5912 */;
+51069: 			goto IL_7440;
+51070: 			IL_7498:
+51071: 			_0089_0087_008B.TextChanged += _0088_009C_0092;
+51072: 			goto IL_745e;
+51073: 			IL_74b1:
+51074: 			_0089_0087_008B.Size = new Size(70, 23);
+51075: 			_0089_0087_008B.TabIndex = 34;
+51076: 			_0089_0087_008B.Text = "18" /* string-offset:2256 */;
+51077: 			num = 462;
+51078: 			if (_0088_0094())
+51079: 			{
+51080: 				goto IL_18c9;
+51081: 			}
+51082: 			goto IL_7498;
+51083: 			IL_74fc:
+51084: 			_0089_0087_008B.Name = "textBoxNTime" /* string-offset:2252 */;
+51085: 			goto IL_74b1;
+51086: 			IL_7513:
+51087: 			_0089_0087_008B.Margin = new Padding(3, 2, 3, 2);
+51088: 			goto IL_74fc;
+51089: 			IL_7529:
+51090: 			_0089_0087_008A.TabIndex = 1;
+51091: 			_0089_0087_008A.Text = "15" /* string-offset:1964 */;
+51092: 			_0089_0087_008A.TextChanged += _0088_009C_008C;
+51093: 			_0089_0087_008B.Location = new Point(300, 24);
+51094: 			goto IL_7513;
+51095: 			IL_757a:
+51096: 			_0089_0087_008A.Size = new Size(70, 23);
+51097: 			num = 450;
+51098: 			goto IL_7529;
+51099: 			IL_7599:
+51100: 			_0089_0087_008A.Name = "textBoxNTemp" /* string-offset:5908 */;
+51101: 			goto IL_757a;
+51102: 			IL_75b0:
+51103: 			_0089_0087_008A.Location = new Point(106, 87);
+51104: 			_0089_0087_008A.Margin = new Padding(3, 2, 3, 2);
+51105: 			goto IL_7599;
+51106: 			IL_75da:
+51107: 			_0089_0087_0089.TextChanged += _0088_009C_0093;
+51108: 			goto IL_75b0;
+51109: 			IL_2e2b:
+51110: 			_0088_009D_009B.Controls.Add(_0088_009E_0086);
+51111: 			num = 549;
+51112: 			if (_0088_0093())
+51113: 			{
+51114: 				goto IL_689c;
+51115: 			}
+51116: 			goto IL_75da;
+51117: 			IL_2de0:
+51118: 			_0088_009D_009B.Controls.Add(_0088_009D_009C);
+51119: 			_0088_009D_009B.Controls.Add(_0088_009D_009D);
+51120: 			_0088_009D_009B.Controls.Add(_0088_009D_009E);
+51121: 			num = 573;
+51122: 			goto IL_2e2b;
+51123: 			IL_2dc1:
+51124: 			_0088_009D_009B.Controls.Add(_0089_0089_008E);
+51125: 			num = 18;
+51126: 			goto IL_2de0;
+51127: 			IL_2dac:
+51128: 			_0088_009D_009A.Text = "X（m）" /* string-offset:2876 */;
+51129: 			goto IL_2dc1;
+51130: 			IL_2d77:
+51131: 			_0088_009D_009A.Name = "label1" /* string-offset:1832 */;
+51132: 			_0088_009D_009A.Size = new Size(53, 15);
+51133: 			_0088_009D_009A.TabIndex = 2;
+51134: 			goto IL_2dac;
+51135: 			IL_0f32:
+51136: 			_0089_0087_009E.PerformLayout();
+51137: 			num = 562;
+51138: 			if (_0088_0093())
+51139: 			{
+51140: 				goto IL_0f50;
+51141: 			}
+51142: 			goto IL_2d77;
+51143: 			IL_0f1d:
+51144: 			_0089_0087_009E.ResumeLayout(performLayout: false);
+51145: 			num = 376;
+51146: 			goto IL_0f32;
+51147: 			IL_0efd:
+51148: 			_0089_0086_009D.ResumeLayout(performLayout: false);
+51149: 			_0089_0086_009D.PerformLayout();
+51150: 			num = 340;
+51151: 			goto IL_0f1d;
+51152: 			IL_0ef2:
+51153: 			_0089_0087_0091.PerformLayout();
+51154: 			goto IL_0efd;
+51155: 			IL_0eca:
+51156: 			_0089_0088_008F.Name = "button16" /* string-offset:3520 */;
+51157: 			num = 444;
+51158: 			if (_0088_0094())
+51159: 			{
+51160: 				goto IL_0ef2;
+51161: 			}
+51162: 			goto IL_21a9;
+51163: 			IL_0e7e:
+51164: 			_0089_0088_008F.BackgroundImage = (Image)componentResourceManager.GetObject("button16.BackgroundImage" /* string-offset:5928 */);
+51165: 			_0089_0088_008F.BackgroundImageLayout = ImageLayout.Center;
+51166: 			_0089_0088_008F.Location = new Point(543, 123);
+51167: 			num = 148;
+51168: 			goto IL_0eca;
+51169: 			IL_7788:
+51170: 			_0089_0087_0088.Margin = new Padding(3, 2, 3, 2);
+51171: 			_0089_0087_0088.Name = "textBoxNWind" /* string-offset:5896 */;
+51172: 			_0089_0087_0088.Size = new Size(70, 23);
+51173: 			num = 64;
+51174: 			goto IL_76b3;
+51175: 			IL_76b3:
+51176: 			_0089_0087_0088.TabIndex = 1;
+51177: 			_0089_0087_0088.Text = "19" /* string-offset:1968 */;
+51178: 			_0089_0087_0088.TextChanged += _0088_009C_008D;
+51179: 			num = 551;
+51180: 			if (_0088_0094())
+51181: 			{
+51182: 				goto IL_5df1;
+51183: 			}
+51184: 			goto IL_76a5;
+51185: 			IL_76a5:
+51186: 			_0089_0087_0089.Enabled = false;
+51187: 			goto IL_765a;
+51188: 			IL_765a:
+51189: 			_0089_0087_0089.Location = new Point(300, 56);
+51190: 			_0089_0087_0089.Margin = new Padding(3, 2, 3, 2);
+51191: 			_0089_0087_0089.Name = "textBoxNDist" /* string-offset:2244 */;
+51192: 			num = 172;
+51193: 			goto IL_762e;
+51194: 			IL_5df1:
+51195: 			_0089_0089_008C.Text = "49" /* string-offset:2340 */;
+51196: 			_0089_0089_008C.TextChanged += _0088_009C_0098;
+51197: 			num = 251;
+51198: 			goto IL_5e26;
+51199: 			IL_5e26:
+51200: 			_0089_0086_0091.Controls.Add(_0089_0086_009A);
+51201: 			num = 623;
+51202: 			goto IL_2295;
+51203: 			IL_0e48:
+51204: 			_0089_0087_009E.TabIndex = 4;
+51205: 			_0089_0087_009E.Text = "APV复飞计算" /* string-offset:5924 */;
+51206: 			_0089_0087_009E.UseVisualStyleBackColor = true;
+51207: 			num = 540;
+51208: 			goto IL_0e7e;
+51209: 			IL_0e25:
+51210: 			_0089_0087_009E.Size = new Size(720, 176);
+51211: 			num = 204;
+51212: 			goto IL_0e48;
+51213: 			IL_0df4:
+51214: 			_0089_0087_009E.Location = new Point(4, 34);
+51215: 			_0089_0087_009E.Name = "tabPage5" /* string-offset:2664 */;
+51216: 			num = 528;
+51217: 			goto IL_0e25;
+51218: 			IL_11e4:
+51219: 			_0088_009E_0097.Size = new Size(210, 157);
+51220: 			num = 89;
+51221: 			goto IL_187d;
+51222: 			IL_11b8:
+51223: 			_0088_009E_0097.Location = new Point(470, 12);
+51224: 			_0088_009E_0097.Name = "groupBox3" /* string-offset:1708 */;
+51225: 			goto IL_11e4;
+51226: 			IL_0db5:
+51227: 			_0088_009E_0097.Controls.Add(_0088_009E_009E);
+51228: 			_0088_009E_0097.Controls.Add(_0089_0086_0086);
+51229: 			num = 441;
+51230: 			if (!_0088_0093())
+51231: 			{
+51232: 				goto IL_0df4;
+51233: 			}
+51234: 			goto IL_11b8;
+51235: 			IL_1343:
+51236: 			_0089_0089_0088.Size = new Size(47, 15);
+51237: 			goto IL_27d8;
+51238: 			IL_12d3:
+51239: 			_0089_0089_0087.Text = "49" /* string-offset:2340 */;
+51240: 			_0089_0089_0087.TextChanged += _0088_009C_009A;
+51241: 			_0089_0089_0088.AutoSize = true;
+51242: 			_0089_0089_0088.Location = new Point(437, 131);
+51243: 			_0089_0089_0088.Name = "label39" /* string-offset:5968 */;
+51244: 			num = 150;
+51245: 			goto IL_1343;
+51246: 			IL_12aa:
+51247: 			_0089_0089_0087.Size = new Size(39, 23);
+51248: 			_0089_0089_0087.TabIndex = 1;
+51249: 			num = 224;
+51250: 			goto IL_12d3;
+51251: 			IL_124a:
+51252: 			_0089_0089_0086.TextChanged += _0088_009C_0096;
+51253: 			_0089_0089_0087.Location = new Point(498, 127);
+51254: 			_0089_0089_0087.Margin = new Padding(3, 2, 3, 2);
+51255: 			_0089_0089_0087.Name = "textBoxHL" /* string-offset:5964 */;
+51256: 			num = 604;
+51257: 			goto IL_12aa;
+51258: 			IL_120c:
+51259: 			_0089_0089_0086.Size = new Size(75, 23);
+51260: 			_0089_0089_0086.TabIndex = 4;
+51261: 			_0089_0089_0086.Text = "52.12" /* string-offset:2364 */;
+51262: 			num = 341;
+51263: 			goto IL_124a;
+51264: 			IL_0d8d:
+51265: 			_0089_0089_0086.Name = "textBox2" /* string-offset:1768 */;
+51266: 			num = 302;
+51267: 			if (_0088_0094())
+51268: 			{
+51269: 				goto IL_0db5;
+51270: 			}
+51271: 			goto IL_120c;
+51272: 			IL_0a73:
+51273: 			_0089_0089_0086.Margin = new Padding(3, 2, 3, 2);
+51274: 			num = 398;
+51275: 			if (_0088_0094())
+51276: 			{
+51277: 				goto IL_0a9a;
+51278: 			}
+51279: 			goto IL_0d8d;
+51280: 			IL_0a5f:
+51281: 			_0089_0089_0086.Location = new Point(104, 55);
+51282: 			goto IL_0a73;
+51283: 			IL_0a35:
+51284: 			_0089_0088_009E.Text = "HL修正(m)" /* string-offset:2300 */;
+51285: 			_0089_0089_0086.Enabled = false;
+51286: 			num = 140;
+51287: 			goto IL_0a5f;
+51288: 			IL_0a0b:
+51289: 			_0089_0088_009E.Size = new Size(77, 15);
+51290: 			_0089_0088_009E.TabIndex = 9;
+51291: 			num = 310;
+51292: 			goto IL_0a35;
+51293: 			IL_09ed:
+51294: 			_0089_0088_009E.Name = "label34" /* string-offset:2464 */;
+51295: 			num = 82;
+51296: 			goto IL_0a0b;
+51297: 			IL_09d0:
+51298: 			_0089_0088_009E.Location = new Point(13, 59);
+51299: 			num = 387;
+51300: 			goto IL_09ed;
+51301: 			IL_29a6:
+51302: 			_0089_0088_009E.AutoSize = true;
+51303: 			num = 259;
+51304: 			goto IL_09d0;
+51305: 			IL_09ac:
+51306: 			_0089_0088_008C.TabIndex = 4;
+51307: 			num = 127;
+51308: 			if (!_0088_0093())
+51309: 			{
+51310: 				goto IL_29a6;
+51311: 			}
+51312: 			goto IL_689c;
+51313: 			IL_095b:
+51314: 			_0089_0088_008C.Location = new Point(95, 119);
+51315: 			_0089_0088_008C.Margin = new Padding(3, 2, 3, 2);
+51316: 			_0089_0088_008C.Name = "textBoxHLcor" /* string-offset:2360 */;
+51317: 			_0089_0088_008C.Size = new Size(60, 23);
+51318: 			goto IL_09ac;
+51319: 			IL_0795:
+51320: 			_0089_0088_008B.TabIndex = 9;
+51321: 			_0089_0088_008B.Text = "HLm(m)" /* string-offset:2308 */;
+51322: 			_0089_0088_008C.Enabled = false;
+51323: 			num = 666;
+51324: 			if (_0088_0094())
+51325: 			{
+51326: 				goto IL_07d6;
+51327: 			}
+51328: 			goto IL_095b;
+51329: 			IL_0763:
+51330: 			_0089_0088_008B.Name = "label30" /* string-offset:2304 */;
+51331: 			_0089_0088_008B.Size = new Size(55, 15);
+51332: 			num = 5;
+51333: 			goto IL_0795;
+51334: 			IL_0725:
+51335: 			_0089_0088_008A.Text = "HLr(m)" /* string-offset:2292 */;
+51336: 			_0089_0088_008B.AutoSize = true;
+51337: 			_0089_0088_008B.Location = new Point(14, 59);
+51338: 			num = 469;
+51339: 			goto IL_0763;
+51340: 			IL_070f:
+51341: 			_0089_0088_008A.TabIndex = 9;
+51342: 			num = 78;
+51343: 			goto IL_0725;
+51344: 			IL_06c9:
+51345: 			_0089_0088_008A.Location = new Point(14, 91);
+51346: 			_0089_0088_008A.Name = "label29" /* string-offset:2288 */;
+51347: 			_0089_0088_008A.Size = new Size(55, 15);
+51348: 			num = 182;
+51349: 			goto IL_070f;
+51350: 			IL_06bd:
+51351: 			_0089_0088_008A.AutoSize = true;
+51352: 			goto IL_06c9;
+51353: 			IL_069f:
+51354: 			_0089_0088_0089.Text = "HL修正(m)" /* string-offset:2300 */;
+51355: 			num = 401;
+51356: 			goto IL_06bd;
+51357: 			IL_061e:
+51358: 			_0089_0088_0088.TabIndex = 9;
+51359: 			_0089_0088_0088.Text = "机型分类" /* string-offset:5716 */;
+51360: 			_0089_0088_0089.AutoSize = true;
+51361: 			_0089_0088_0089.Location = new Point(14, 123);
+51362: 			_0089_0088_0089.Name = "label20" /* string-offset:2296 */;
+51363: 			_0089_0088_0089.Size = new Size(77, 15);
+51364: 			_0089_0088_0089.TabIndex = 9;
+51365: 			num = 72;
+51366: 			goto IL_069f;
+51367: 			IL_0601:
+51368: 			_0089_0088_0088.Size = new Size(67, 15);
+51369: 			num = 291;
+51370: 			goto IL_061e;
+51371: 			IL_05ec:
+51372: 			_0089_0088_0088.Name = "label19" /* string-offset:2352 */;
+51373: 			goto IL_0601;
+51374: 			IL_2bf7:
+51375: 			_0089_0088_0086.Text = "HL修正" /* string-offset:5996 */;
+51376: 			_0089_0088_0087.FormattingEnabled = true;
+51377: 			_0089_0088_0087.Items.AddRange(new object[5]
+51378: 			{
+51379: 				"H" /* string-offset:2320 */,
+51380: 				"A" /* string-offset:2324 */,
+51381: 				"B" /* string-offset:2328 */,
+51382: 				"C" /* string-offset:2084 */,
+51383: 				"D" /* string-offset:1644 */
+51384: 			});
+51385: 			_0089_0088_0087.Location = new Point(95, 24);
+51386: 			_0089_0088_0087.Name = "comboCat" /* string-offset:2332 */;
+51387: 			_0089_0088_0087.Size = new Size(60, 22);
+51388: 			_0089_0088_0087.TabIndex = 10;
+51389: 			_0089_0088_0087.Text = "D" /* string-offset:1644 */;
+51390: 			_0089_0088_0088.AutoSize = true;
+51391: 			_0089_0088_0088.Location = new Point(14, 28);
+51392: 			num = 538;
+51393: 			goto IL_05ec;
+51394: 			IL_05db:
+51395: 			_0089_0088_0086.TabStop = false;
+51396: 			goto IL_2bf7;
+51397: 			IL_05ce:
+51398: 			_0089_0088_0086.TabIndex = 69;
+51399: 			goto IL_05db;
+51400: 			IL_05a0:
+51401: 			_0089_0088_0086.Padding = new Padding(3, 2, 3, 2);
+51402: 			_0089_0088_0086.Size = new Size(172, 156);
+51403: 			goto IL_05ce;
+51404: 			IL_2b73:
+51405: 			_0089_0088_0086.Controls.Add(_0089_0088_008C);
+51406: 			_0089_0088_0086.Controls.Add(_0089_0088_008D);
+51407: 			_0089_0088_0086.Controls.Add(_0089_0088_008E);
+51408: 			_0089_0088_0086.Location = new Point(10, 11);
+51409: 			_0089_0088_0086.Margin = new Padding(3, 2, 3, 2);
+51410: 			_0089_0088_0086.Name = "groupBox11" /* string-offset:2284 */;
+51411: 			goto IL_05a0;
+51412: 			IL_2b5d:
+51413: 			_0089_0088_0086.Controls.Add(_0089_0088_008B);
+51414: 			goto IL_2b73;
+51415: 			IL_2b2a:
+51416: 			_0089_0088_0093.AutoSize = true;
+51417: 			_0089_0088_0093.Location = new Point(14, 28);
+51418: 			num = 34;
+51419: 			if (_0088_0094())
+51420: 			{
+51421: 				goto IL_2b5d;
+51422: 			}
+51423: 			goto IL_689c;
+51424: 			IL_2aff:
+51425: 			_0089_0088_0092.TabIndex = 10;
+51426: 			_0089_0088_0092.Text = "D" /* string-offset:1644 */;
+51427: 			num = 125;
+51428: 			goto IL_2b2a;
+51429: 			IL_2ad6:
+51430: 			_0089_0087_0091.Controls.Add(_0089_0087_0092);
+51431: 			num = 416;
+51432: 			if (!_0088_0093())
+51433: 			{
+51434: 				goto IL_2aff;
+51435: 			}
+51436: 			goto IL_689c;
+51437: 			IL_2aaa:
+51438: 			_0089_0087_0091.Controls.Add(_0089_0087_009C);
+51439: 			_0089_0087_0091.Controls.Add(_0089_0087_009D);
+51440: 			goto IL_2ad6;
+51441: 			IL_2a9e:
+51442: 			_0089_0086_0097.UseVisualStyleBackColor = true;
+51443: 			goto IL_2aaa;
+51444: 			IL_2a80:
+51445: 			_0089_0086_0097.Text = "LNAV复飞计算" /* string-offset:5856 */;
+51446: 			num = 508;
+51447: 			goto IL_2a9e;
+51448: 			IL_2a51:
+51449: 			_0089_0086_0097.Size = new Size(720, 176);
+51450: 			_0089_0086_0097.TabIndex = 3;
+51451: 			num = 638;
+51452: 			goto IL_2a80;
+51453: 			IL_2a33:
+51454: 			_0089_0086_0097.Name = "tabPage4" /* string-offset:2500 */;
+51455: 			num = 385;
+51456: 			goto IL_2a51;
+51457: 			IL_2a17:
+51458: 			_0089_0086_0097.Location = new Point(4, 34);
+51459: 			num = 74;
+51460: 			goto IL_2a33;
+51461: 			IL_2a01:
+51462: 			_0089_0086_0097.Controls.Add(_0089_0086_009D);
+51463: 			goto IL_2a17;
+51464: 			IL_29c0:
+51465: 			_0088_009E_0094.TabIndex = 61;
+51466: 			_0088_009E_0094.Text = "FAF高度(m)" /* string-offset:2116 */;
+51467: 			_0089_0086_0097.Controls.Add(_0089_0087_0091);
+51468: 			num = 93;
+51469: 			goto IL_2a01;
+51470: 			IL_2512:
+51471: 			_0088_009E_0094.Size = new Size(85, 15);
+51472: 			num = 397;
+51473: 			if (!_0088_0093())
+51474: 			{
+51475: 				goto IL_2539;
+51476: 			}
+51477: 			goto IL_29c0;
+51478: 			IL_24f4:
+51479: 			_0088_009E_0094.Name = "label12" /* string-offset:3428 */;
+51480: 			num = 87;
+51481: 			goto IL_2512;
+51482: 			IL_24d7:
+51483: 			_0088_009E_0094.Location = new Point(14, 28);
+51484: 			num = 219;
+51485: 			goto IL_24f4;
+51486: 			IL_24c2:
+51487: 			_0088_009E_0094.AutoSize = true;
+51488: 			num = 255;
+51489: 			goto IL_24d7;
+51490: 			IL_2639:
+51491: 			_0088_009E_008E.Text = "保存" /* string-offset:5800 */;
+51492: 			goto IL_264e;
+51493: 			IL_2497:
+51494: 			_0088_009E_008F.TabIndex = 24;
+51495: 			_0088_009E_008F.Text = "Hi(m)" /* string-offset:5852 */;
+51496: 			num = 91;
+51497: 			goto IL_24c2;
+51498: 			IL_238f:
+51499: 			_0088_009E_008F.Name = "label21" /* string-offset:2344 */;
+51500: 			_0088_009E_008F.Size = new Size(47, 15);
+51501: 			num = 145;
+51502: 			if (_0088_0094())
+51503: 			{
+51504: 				goto IL_23cb;
+51505: 			}
+51506: 			goto IL_2497;
+51507: 			IL_2366:
+51508: 			_0088_009E_008F.AutoSize = true;
+51509: 			_0088_009E_008F.Location = new Point(33, 124);
+51510: 			num = 210;
+51511: 			goto IL_238f;
+51512: 			IL_2351:
+51513: 			_0088_009E_0096.Text = "TCH(m)" /* string-offset:5848 */;
+51514: 			goto IL_2366;
+51515: 			IL_2344:
+51516: 			_0088_009E_0096.TabIndex = 24;
+51517: 			goto IL_2351;
+51518: 			IL_2327:
+51519: 			_0088_009E_0096.Size = new Size(55, 15);
+51520: 			num = 308;
+51521: 			goto IL_2344;
+51522: 			IL_2308:
+51523: 			_0089_0086_0091.TabIndex = 2;
+51524: 			num = 561;
+51525: 			if (_0088_0094())
+51526: 			{
+51527: 				goto IL_2327;
+51528: 			}
+51529: 			goto IL_689c;
+51530: 			IL_22ee:
+51531: 			_0089_0086_0091.Size = new Size(720, 176);
+51532: 			goto IL_2308;
+51533: 			IL_2d43:
+51534: 			_0088_009D_009A.AutoSize = true;
+51535: 			goto IL_2d4f;
+51536: 			IL_2d25:
+51537: 			_0088_009D_0099.Text = "Y（m）" /* string-offset:2868 */;
+51538: 			num = 431;
+51539: 			goto IL_2d43;
+51540: 			IL_2cfc:
+51541: 			_0088_009D_0099.Size = new Size(53, 15);
+51542: 			_0088_009D_0099.TabIndex = 2;
+51543: 			num = 35;
+51544: 			goto IL_2d25;
+51545: 			IL_1e10:
+51546: 			_0088_009D_0099.Margin = new Padding(4, 0, 4, 0);
+51547: 			_0088_009D_0099.Name = "Start" /* string-offset:2864 */;
+51548: 			num = 149;
+51549: 			if (_0088_0094())
+51550: 			{
+51551: 				goto IL_1e4c;
+51552: 			}
+51553: 			goto IL_2cfc;
+51554: 			IL_1df3:
+51555: 			_0088_009D_0099.Location = new Point(16, 61);
+51556: 			num = 30;
+51557: 			goto IL_1e10;
+51558: 			IL_1dc7:
+51559: 			_0088_009D_0098.Click += _0088_009A_0098;
+51560: 			_0088_009D_0099.AutoSize = true;
+51561: 			num = 418;
+51562: 			goto IL_1df3;
+51563: 			IL_1d92:
+51564: 			_0088_009D_0098.Size = new Size(24, 24);
+51565: 			_0088_009D_0098.TabIndex = 3;
+51566: 			_0088_009D_0098.UseVisualStyleBackColor = true;
+51567: 			num = 434;
+51568: 			goto IL_1dc7;
+51569: 			IL_1d7d:
+51570: 			_0088_009D_0098.Name = "button5" /* string-offset:1912 */;
+51571: 			goto IL_1d92;
+51572: 			IL_1d5d:
+51573: 			_0088_009D_0098.Location = new Point(169, 122);
+51574: 			num = 209;
+51575: 			goto IL_1d7d;
+51576: 			IL_1d13:
+51577: 			_0088_009D_0097.Text = "入口标高(m)" /* string-offset:2124 */;
+51578: 			_0088_009D_0098.BackgroundImage = (Image)componentResourceManager.GetObject("button5.BackgroundImage" /* string-offset:2852 */);
+51579: 			_0088_009D_0098.BackgroundImageLayout = ImageLayout.Zoom;
+51580: 			num = 525;
+51581: 			goto IL_1d5d;
+51582: 			IL_1cde:
+51583: 			_0088_009D_0097.Name = "label2" /* string-offset:1860 */;
+51584: 			_0088_009D_0097.Size = new Size(91, 15);
+51585: 			_0088_009D_0097.TabIndex = 2;
+51586: 			goto IL_1d13;
+51587: 			IL_1cc1:
+51588: 			_0088_009D_0097.Margin = new Padding(4, 0, 4, 0);
+51589: 			num = 536;
+51590: 			goto IL_1cde;
+51591: 			IL_1b96:
+51592: 			_0088_009D_0096.Margin = new Padding(4, 3, 4, 3);
+51593: 			_0088_009D_0096.Name = "textBoxLon1" /* string-offset:2856 */;
+51594: 			_0088_009D_0096.Size = new Size(116, 23);
+51595: 			_0088_009D_0096.TabIndex = 0;
+51596: 			_0088_009D_0096.Text = " " /* string-offset:584 */;
+51597: 			_0088_009D_0096.TextChanged += _0088_009B_0093;
+51598: 			_0088_009D_0097.AutoSize = true;
+51599: 			_0088_009D_0097.Location = new Point(16, 94);
+51600: 			num = 216;
+51601: 			if (!_0088_0093())
+51602: 			{
+51603: 				goto IL_1c3e;
+51604: 			}
+51605: 			goto IL_1cc1;
+51606: 			IL_2447:
+51607: 			_0088_009D_0096.Location = new Point(77, 24);
+51608: 			num = 106;
+51609: 			goto IL_1b96;
+51610: 			IL_22d0:
+51611: 			_0089_0086_0091.Name = "tabPage3" /* string-offset:2268 */;
+51612: 			num = 270;
+51613: 			goto IL_22ee;
+51614: 			IL_22b4:
+51615: 			_0089_0086_0091.Location = new Point(4, 34);
+51616: 			num = 594;
+51617: 			goto IL_22d0;
+51618: 			IL_264e:
+51619: 			_0088_009E_008E.UseVisualStyleBackColor = true;
+51620: 			num = 522;
+51621: 			if (!_0088_0093())
+51622: 			{
+51623: 				goto IL_2685;
+51624: 			}
+51625: 			goto IL_689c;
+51626: 			IL_262c:
+51627: 			_0088_009E_008E.TabIndex = 24;
+51628: 			goto IL_2639;
+51629: 			IL_2605:
+51630: 			_0088_009E_008E.Size = new Size(75, 30);
+51631: 			num = 482;
+51632: 			if (!_0088_0093())
+51633: 			{
+51634: 				goto IL_161f;
+51635: 			}
+51636: 			goto IL_262c;
+51637: 			IL_259a:
+51638: 			_0089_0086_008E.Size = new Size(91, 15);
+51639: 			_0089_0086_008E.TabIndex = 24;
+51640: 			_0089_0086_008E.Text = "航段长度(m)" /* string-offset:5796 */;
+51641: 			_0088_009E_008E.Location = new Point(602, 122);
+51642: 			_0088_009E_008E.Name = "button1" /* string-offset:1692 */;
+51643: 			num = 589;
+51644: 			goto IL_2605;
+51645: 			IL_255c:
+51646: 			_0089_0086_008E.AutoSize = true;
+51647: 			_0089_0086_008E.Location = new Point(11, 29);
+51648: 			_0089_0086_008E.Name = "label5" /* string-offset:2712 */;
+51649: 			num = 357;
+51650: 			goto IL_259a;
+51651: 			IL_1c7d:
+51652: 			_0089_0086_008D.Text = "10000" /* string-offset:2132 */;
+51653: 			_0089_0086_008D.TextChanged += _0088_009B_009C;
+51654: 			num = 115;
+51655: 			if (!_0088_0093())
+51656: 			{
+51657: 				goto IL_22b4;
+51658: 			}
+51659: 			goto IL_255c;
+51660: 			IL_1c3e:
+51661: 			_0089_0086_008D.Name = "textBoxIfSegLen" /* string-offset:5792 */;
+51662: 			_0089_0086_008D.Size = new Size(60, 23);
+51663: 			_0089_0086_008D.TabIndex = 18;
+51664: 			num = 442;
+51665: 			goto IL_1c7d;
+51666: 			IL_1e4c:
+51667: 			_0088_009D_009E.Name = "textBoxLat2" /* string-offset:2892 */;
+51668: 			_0088_009D_009E.Size = new Size(116, 23);
+51669: 			_0088_009D_009E.TabIndex = 1;
+51670: 			_0088_009D_009E.Text = " " /* string-offset:584 */;
+51671: 			num = 166;
+51672: 			goto IL_1e9f;
+51673: 			IL_2d4f:
+51674: 			_0088_009D_009A.Location = new Point(16, 28);
+51675: 			_0088_009D_009A.Margin = new Padding(4, 0, 4, 0);
+51676: 			goto IL_2d77;
+51677: 			IL_2744:
+51678: 			_0089_0087_008E.Size = new Size(70, 23);
+51679: 			_0089_0087_008E.TabIndex = 1;
+51680: 			num = 558;
+51681: 			goto IL_276d;
+51682: 			IL_16c2:
+51683: 			_0088_009E_0093.Location = new Point(106, 24);
+51684: 			num = 661;
+51685: 			goto IL_16df;
+51686: 			IL_16df:
+51687: 			_0088_009E_0093.Name = "textBoxFafAlti" /* string-offset:5836 */;
+51688: 			_0088_009E_0093.Size = new Size(60, 23);
+51689: 			_0088_009E_0093.TabIndex = 62;
+51690: 			num = 240;
+51691: 			if (!_0088_0093())
+51692: 			{
+51693: 				goto IL_1728;
+51694: 			}
+51695: 			goto IL_689c;
+51696: 			IL_1728:
+51697: 			_0089_0087_0086.Size = new Size(34, 34);
+51698: 			_0089_0087_0086.TabIndex = 71;
+51699: 			num = 261;
+51700: 			goto IL_1752;
+51701: 			IL_1752:
+51702: 			_0089_0086_0095.SetToolTip(_0089_0087_0086, "复制计算结果" /* string-offset:5868 */);
+51703: 			num = 355;
+51704: 			if (!_0088_0093())
+51705: 			{
+51706: 				goto IL_1780;
+51707: 			}
+51708: 			goto IL_689c;
+51709: 			IL_1780:
+51710: 			_0089_0086_0099.TabIndex = 18;
+51711: 			num = 227;
+51712: 			goto IL_1796;
+51713: 			IL_1796:
+51714: 			_0089_0086_0099.Text = "2000" /* string-offset:3836 */;
+51715: 			goto IL_17ab;
+51716: 			IL_17ab:
+51717: 			_0089_0086_0095.SetToolTip(_0089_0086_0099, "SOC至入口的距离" /* string-offset:5776 */);
+51718: 			num = 317;
+51719: 			if (!_0088_0093())
+51720: 			{
+51721: 				goto IL_27d8;
+51722: 			}
+51723: 			goto IL_689c;
+51724: 			IL_27d8:
+51725: 			_0089_0089_0088.TabIndex = 0;
+51726: 			num = 572;
+51727: 			if (!_0088_0094())
+51728: 			{
+51729: 				goto IL_135c;
+51730: 			}
+51731: 			goto IL_17de;
+51732: 			IL_135c:
+51733: 			_0089_0089_0088.Text = "HL(m)" /* string-offset:5652 */;
+51734: 			_0089_0089_0089.AutoSize = true;
+51735: 			_0089_0089_0089.Location = new Point(434, 68);
+51736: 			num = 435;
+51737: 			goto IL_139d;
+51738: 			IL_139d:
+51739: 			_0089_0089_0089.Name = "label36" /* string-offset:5972 */;
+51740: 			goto IL_13b2;
+51741: 			IL_13b2:
+51742: 			_0089_0089_0089.Size = new Size(55, 15);
+51743: 			num = 642;
+51744: 			goto IL_13cf;
+51745: 			IL_13cf:
+51746: 			_0089_0089_0089.TabIndex = 9;
+51747: 			_0089_0089_0089.Text = "HLr(m)" /* string-offset:2292 */;
+51748: 			goto IL_13f1;
+51749: 			IL_13f1:
+51750: 			_0089_0089_008A.AutoSize = true;
+51751: 			num = 557;
+51752: 			goto IL_1406;
+51753: 			IL_1406:
+51754: 			_0089_0089_008A.Location = new Point(437, 37);
+51755: 			num = 59;
+51756: 			goto IL_1426;
+51757: 			IL_1426:
+51758: 			_0089_0089_008A.Name = "label37" /* string-offset:5976 */;
+51759: 			num = 645;
+51760: 			goto IL_1444;
+51761: 			IL_1444:
+51762: 			_0089_0089_008A.Size = new Size(55, 15);
+51763: 			goto IL_1458;
+51764: 			IL_1458:
+51765: 			_0089_0089_008A.TabIndex = 9;
+51766: 			_0089_0089_008A.Text = "HLm(m)" /* string-offset:2308 */;
+51767: 			num = 378;
+51768: 			goto IL_1483;
+51769: 			IL_1483:
+51770: 			_0089_0089_008B.Enabled = false;
+51771: 			_0089_0089_008B.Location = new Point(498, 62);
+51772: 			_0089_0089_008B.Margin = new Padding(3, 2, 3, 2);
+51773: 			_0089_0089_008B.Name = "textBox3" /* string-offset:5980 */;
+51774: 			_0089_0089_008B.Size = new Size(75, 23);
+51775: 			num = 537;
+51776: 			goto IL_14ec;
+51777: 			IL_14ec:
+51778: 			_0089_0089_008B.TabIndex = 4;
+51779: 			_0089_0089_008B.Text = "26" /* string-offset:2316 */;
+51780: 			goto IL_150d;
+51781: 			IL_150d:
+51782: 			_0089_0089_008B.TextChanged += _0088_009C_0099;
+51783: 			num = 188;
+51784: 			goto IL_152d;
+51785: 			IL_152d:
+51786: 			_0089_0089_008C.Enabled = false;
+51787: 			_0089_0089_008C.Location = new Point(498, 29);
+51788: 			_0089_0089_008C.Margin = new Padding(3, 2, 3, 2);
+51789: 			_0089_0089_008C.Name = "textBox4" /* string-offset:5984 */;
+51790: 			num = 95;
+51791: 			if (!_0088_0093())
+51792: 			{
+51793: 				goto IL_158c;
+51794: 			}
+51795: 			goto IL_689c;
+51796: 			IL_17de:
+51797: 			_0089_0089_008F.Name = "button18" /* string-offset:3312 */;
+51798: 			num = 111;
+51799: 			goto IL_17fc;
+51800: 			IL_17fc:
+51801: 			_0089_0089_008F.Size = new Size(49, 40);
+51802: 			_0089_0089_008F.TabIndex = 78;
+51803: 			_0089_0089_008F.Text = "标记" /* string-offset:2972 */;
+51804: 			num = 274;
+51805: 			if (!_0088_0093())
+51806: 			{
+51807: 				goto IL_27b6;
+51808: 			}
+51809: 			goto IL_67f8;
+51810: 			IL_67f8:
+51811: 			_0089_0089_008F.UseVisualStyleBackColor = true;
+51812: 			goto IL_00e1;
+51813: 			IL_27b6:
+51814: 			_0089_0087_008F.Margin = new Padding(3, 2, 3, 2);
+51815: 			num = 246;
+51816: 			goto IL_2539;
+51817: 			IL_2539:
+51818: 			_0089_0087_008F.Name = "textBoxNAlt" /* string-offset:5920 */;
+51819: 			num = 565;
+51820: 			goto IL_184a;
+51821: 			IL_184a:
+51822: 			_0089_0087_008F.Size = new Size(70, 23);
+51823: 			_0089_0087_008F.TabIndex = 1;
+51824: 			num = 147;
+51825: 			if (!_0088_0093())
+51826: 			{
+51827: 				goto IL_187d;
+51828: 			}
+51829: 			goto IL_689c;
+51830: 			IL_187d:
+51831: 			_0088_009E_0097.TabIndex = 67;
+51832: 			_0088_009E_0097.TabStop = false;
+51833: 			num = 535;
+51834: 			goto IL_189f;
+51835: 			IL_189f:
+51836: 			_0088_009E_0097.Text = "基础数据" /* string-offset:5712 */;
+51837: 			_0088_009E_0098.FormattingEnabled = true;
+51838: 			num = 412;
+51839: 			goto IL_18c9;
+51840: 			IL_18c9:
+51841: 			_0088_009E_0098.Items.AddRange(new object[4]
+51842: 			{
+51843: 				"A" /* string-offset:2324 */,
+51844: 				"B" /* string-offset:2328 */,
+51845: 				"C" /* string-offset:2084 */,
+51846: 				"D" /* string-offset:1644 */
+51847: 			});
+51848: 			num = 253;
+51849: 			goto IL_191c;
+51850: 			IL_191c:
+51851: 			_0088_009E_0098.Location = new Point(116, 24);
+51852: 			_0088_009E_0098.Name = "comboBoxCat" /* string-offset:4212 */;
+51853: 			num = 608;
+51854: 			goto IL_194e;
+51855: 			IL_194e:
+51856: 			_0088_009E_0098.Size = new Size(75, 22);
+51857: 			num = 402;
+51858: 			goto IL_196b;
+51859: 			IL_196b:
+51860: 			_0088_009E_0098.TabIndex = 65;
+51861: 			num = 480;
+51862: 			goto IL_1981;
+51863: 			IL_1981:
+51864: 			_0088_009E_0098.Text = "D" /* string-offset:1644 */;
+51865: 			_0088_009E_0099.AutoSize = true;
+51866: 			num = 159;
+51867: 			goto IL_19ab;
+51868: 			IL_19ab:
+51869: 			_0088_009E_0099.Location = new Point(12, 28);
+51870: 			_0088_009E_0099.Name = "label11" /* string-offset:2912 */;
+51871: 			_0088_009E_0099.Size = new Size(67, 15);
+51872: 			_0088_009E_0099.TabIndex = 66;
+51873: 			_0088_009E_0099.Text = "机型分类" /* string-offset:5716 */;
+51874: 			_0088_009E_009A.Location = new Point(116, 123);
+51875: 			num = 21;
+51876: 			goto IL_2469;
+51877: 			IL_2469:
+51878: 			_0088_009E_009A.Name = "textBoxLGT" /* string-offset:5720 */;
+51879: 			_0088_009E_009A.Size = new Size(75, 23);
+51880: 			goto IL_1a2c;
+51881: 			IL_1a2c:
+51882: 			_0088_009E_009A.TabIndex = 64;
+51883: 			_0088_009E_009A.Text = "900" /* string-offset:2156 */;
+51884: 			_0088_009E_009A.TextChanged += _0088_009B_009B;
+51885: 			goto IL_1a65;
+51886: 			IL_1a65:
+51887: 			_0088_009E_009B.Location = new Point(116, 90);
+51888: 			num = 452;
+51889: 			goto IL_1a82;
+51890: 			IL_1a82:
+51891: 			_0088_009E_009B.Name = "textBoxTemp" /* string-offset:3320 */;
+51892: 			num = 19;
+51893: 			goto IL_1aa0;
+51894: 			IL_1aa0:
+51895: 			_0088_009E_009B.Size = new Size(75, 23);
+51896: 			num = 27;
+51897: 			goto IL_1abd;
+51898: 			IL_1abd:
+51899: 			_0088_009E_009B.TabIndex = 62;
+51900: 			_0088_009E_009B.Text = "-20" /* string-offset:5724 */;
+51901: 			num = 235;
+51902: 			goto IL_1ae8;
+51903: 			IL_1ae8:
+51904: 			_0088_009E_009B.TextChanged += _0088_009B_009A;
+51905: 			goto IL_1aff;
+51906: 			IL_1aff:
+51907: 			_0088_009E_009C.Location = new Point(116, 57);
+51908: 			_0088_009E_009C.Name = "textBoxAdElev" /* string-offset:5728 */;
+51909: 			num = 634;
+51910: 			goto IL_1b31;
+51911: 			IL_1b31:
+51912: 			_0088_009E_009C.Size = new Size(75, 23);
+51913: 			_0088_009E_009C.TabIndex = 62;
+51914: 			_0088_009E_009C.Text = "0" /* string-offset:560 */;
+51915: 			goto IL_1b67;
+51916: 			IL_1b67:
+51917: 			_0088_009E_009C.TextChanged += _0088_009B_0099;
+51918: 			num = 567;
+51919: 			if (_0088_0094())
+51920: 			{
+51921: 				goto IL_2447;
+51922: 			}
+51923: 			goto IL_676d;
+51924: 			IL_676d:
+51925: 			_0088_009E_009D.AutoSize = true;
+51926: 			_0088_009E_009D.Location = new Point(12, 127);
+51927: 			_0088_009E_009D.Name = "label6" /* string-offset:2696 */;
+51928: 			_0088_009E_009D.Size = new Size(91, 15);
+51929: 			num = 217;
+51930: 			goto IL_67bf;
+51931: 		}
+51932: 
+51933: 		private void _0088_009C_009C(object P_0, EventArgs P_1)
+51934: 		{
+51935: 		}
+51936: 
+51937: 		private void _0088_009C_009D(object P_0, EventArgs P_1)
+51938: 		{
+51939: 			MessageBox.Show("基础版不支持此功能。" /* string-offset:5640 */);
+51940: 		}
+51941: 
+51942: 		private void _0088_009C_009E(List<_008A_008B> P_0)
+51943: 		{
+51944: 			if (false /* original-file-bool-offset:936 */)
+51945: 			{
+51946: 				return;
+51947: 			}
+51948: 			DataTable dataTable = new DataTable();
+51949: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+51950: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+51951: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+51952: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+51953: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+51954: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+51955: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+51956: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+51957: 			dataTable.Columns.Add("OCH(m)" /* string-offset:5660 */, typeof(double));
+51958: 			dataTable.Columns.Add("MDA(m)" /* string-offset:5672 */, typeof(double));
+51959: 			dataTable.Columns.Add("MDH(m)" /* string-offset:5676 */, typeof(double));
+51960: 			dataTable.Columns.Add("VIS(m)" /* string-offset:5680 */, typeof(double));
+51961: 			foreach (_008A_008B item in P_0)
+51962: 			{
+51963: 				dataTable.Rows.Add(item.ID, item.Name, Math.Round(item.X, 2), Math.Round(item.Y, 2), Math.Round(item.Z, 2), item._0088_008F_009C, Math.Round(item._0088_008F_009D, 2), Math.Round(item._0088_008F_009E, 2), Math.Round(item._0088_0090_0086, 2), Math.Round(item._0088_0090_0087), Math.Round(item._0088_0090_0088), Math.Round(item._0088_0090_0089));
+51964: 			}
+51965: 			_0088_009D_0090.DataSource = dataTable;
+51966: 			_0088_009D_0090.Columns[1].Frozen = true;
+51967: 		}
+51968: 
+51969: 		private void _0088_009D_0086(ref _008A_008B P_0, double P_1, double P_2, double P_3, double P_4, string P_5)
+51970: 		{
+51971: 			int num = 1;
+51972: 			double val;
+51973: 			while (true)
+51974: 			{
+51975: 				if (!false /* original-file-bool-offset:940 */)
+51976: 				{
+51977: 					if (P_0._0088_0090_0087 - P_1 < 90.0)
+51978: 					{
+51979: 						P_0._0088_0090_0088 = 90.0;
+51980: 						goto IL_01f8;
+51981: 					}
+51982: 					P_0._0088_0090_0088 = Math.Round(P_0._0088_0090_0087 - P_1);
+51983: 					goto IL_004c;
+51984: 				}
+51985: 				return;
+51986: 				IL_01e6:
+51987: 				val = Math.Max(val, 1600.0);
+51988: 				goto IL_01d5;
+51989: 				IL_01d5:
+51990: 				if (!(P_2 > 3000.0))
+51991: 				{
+51992: 					val = Math.Min(val, 5000.0);
+51993: 					num = 11;
+51994: 					if (!_0088_0094())
+51995: 					{
+51996: 						goto IL_00b4;
+51997: 					}
+51998: 					goto IL_01c5;
+51999: 				}
+52000: 				val = Math.Min(val, 8000.0);
+52001: 				num = 9;
+52002: 				break;
+52003: 				IL_019e:
+52004: 				double num2;
+52005: 				val = num2;
+52006: 				goto IL_01d5;
+52007: 				IL_004c:
+52008: 				val = P_0._0088_0090_0088 / Math.Tan(P_4 * Math.PI / 180.0) - P_3;
+52009: 				_0088_0094();
+52010: 				if (!_0088_0093())
+52011: 				{
+52012: 					num = 2;
+52013: 					goto IL_01e6;
+52014: 				}
+52015: 				num = 4;
+52016: 				if (_0088_0093())
+52017: 				{
+52018: 					goto IL_00b4;
+52019: 				}
+52020: 				goto IL_0100;
+52021: 				IL_01c5:
+52022: 				double num3 = Math.Max(val, 800.0);
+52023: 				goto IL_01d4;
+52024: 				IL_00b4:
+52025: 				switch (num)
+52026: 				{
+52027: 				default:
+52028: 					num = 8;
+52029: 					goto IL_016b;
+52030: 				case 3:
+52031: 				case 4:
+52032: 					break;
+52033: 				case 10:
+52034: 					goto IL_0133;
+52035: 				case 8:
+52036: 					goto IL_016b;
+52037: 				case 7:
+52038: 					goto IL_017e;
+52039: 				case 0:
+52040: 					goto IL_01c5;
+52041: 				case 2:
+52042: 				case 5:
+52043: 					goto IL_01e6;
+52044: 				case 12:
+52045: 					goto IL_01f8;
+52046: 				case 1:
+52047: 					continue;
+52048: 				case 9:
+52049: 				case 11:
+52050: 					goto end_IL_0228;
+52051: 				case 6:
+52052: 				case 13:
+52053: 					return;
+52054: 				}
+52055: 				goto IL_0100;
+52056: 				IL_0100:
+52057: 				if (!(val < 5000.0))
+52058: 				{
+52059: 					num = 10;
+52060: 					goto IL_0133;
+52061: 				}
+52062: 				double num4 = Math.Ceiling(val / 100.0) * 100.0;
+52063: 				goto IL_014d;
+52064: 				IL_01f8:
+52065: 				P_0._0088_0090_0087 = P_1 + 90.0;
+52066: 				goto IL_004c;
+52067: 				IL_0133:
+52068: 				num4 = Math.Ceiling(val / 1000.0) * 1000.0;
+52069: 				goto IL_014d;
+52070: 				IL_014d:
+52071: 				val = num4;
+52072: 				if (P_3 >= 420.0)
+52073: 				{
+52074: 					if (P_3 < 720.0)
+52075: 					{
+52076: 						goto IL_016b;
+52077: 					}
+52078: 					if (!("D" /* string-offset:1644 */ == P_5))
+52079: 					{
+52080: 						goto IL_01c5;
+52081: 					}
+52082: 					num3 = Math.Max(val, 1600.0);
+52083: 					goto IL_01d4;
+52084: 				}
+52085: 				goto IL_01e6;
+52086: 				IL_016b:
+52087: 				if (!("D" /* string-offset:1644 */ == P_5))
+52088: 				{
+52089: 					goto IL_017e;
+52090: 				}
+52091: 				num2 = Math.Max(val, 1600.0);
+52092: 				goto IL_019e;
+52093: 				IL_017e:
+52094: 				num2 = Math.Max(val, 1200.0);
+52095: 				goto IL_019e;
+52096: 				IL_01d4:
+52097: 				val = num3;
+52098: 				goto IL_01d5;
+52099: 				continue;
+52100: 				end_IL_0228:
+52101: 				break;
+52102: 			}
+52103: 			P_0._0088_0090_0089 = val;
+52104: 		}
+52105: 
+52106: 		static _008B_008C()
+52107: 		{
+52108: 			LicenseManager.Validate(typeof(_008B_008C));
+52109: 		}
+52110: 
+52111: 		internal static bool _0088_0093()
+52112: 		{
+52113: 			return true;
+52114: 		}
+52115: 
+52116: 		internal static bool _0088_0094()
+52117: 		{
+52118: 			return false;
+52119: 		}
+52120: 	}

@@ -1,0 +1,112 @@
+METHOD 0600031D \x89\x8d.\x89\x8c::\x87\x92\x8c RVA=37CDC file=35EDC
+IL_0000: nop 
+IL_0001: br.s 37
+IL_0003: newobj 0x0A00018C System.Windows.Forms.OpenFileDialog::.ctor
+IL_0008: stloc.0 
+IL_0009: ldc.i4.0 
+IL_000A: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_000F: brtrue.s 54
+IL_0011: pop 
+IL_0012: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_0017: brfalse.s 101
+IL_0019: ldc.i4 500
+IL_001E: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0023: brfalse.s 15
+IL_0025: br 370
+IL_002A: pop 
+IL_002B: ldloc.0 
+IL_002C: ldc.i4 4056
+IL_0031: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0036: callvirt 0x0A000185 System.Windows.Forms.FileDialog::set_Filter
+IL_003B: ldloc.0 
+IL_003C: ldc.i4.1 
+IL_003D: callvirt 0x0A000304 System.Windows.Forms.FileDialog::set_FilterIndex
+IL_0042: ldloc.0 
+IL_0043: ldc.i4.1 
+IL_0044: callvirt 0x0A0002E7 System.Windows.Forms.FileDialog::set_RestoreDirectory
+IL_0049: ldloc.0 
+IL_004A: ldc.i4 4076
+IL_004F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0054: callvirt 0x0A000186 System.Windows.Forms.FileDialog::set_Title
+IL_0059: ldloc.0 
+IL_005A: callvirt 0x0A000188 System.Windows.Forms.CommonDialog::ShowDialog
+IL_005F: ldc.i4.1 
+IL_0060: bne.un 370
+IL_0065: nop 
+IL_0066: ldloc.0 
+IL_0067: callvirt 0x0A000189 System.Windows.Forms.FileDialog::get_FileName
+IL_006C: call 0x0A000306 System.Text.Encoding::get_UTF8
+IL_0071: call 0x0A000308 System.IO.File::ReadAllText
+IL_0076: stloc.1 
+IL_0077: ldloc.1 
+IL_0078: call 0x0A000134 System.String::IsNullOrEmpty
+IL_007D: brfalse.s 196
+IL_007F: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_0084: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_0089: brfalse.s 154
+IL_008B: pop 
+IL_008C: br.s 162
+IL_008E: pop 
+IL_008F: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_0094: brtrue.s 213
+IL_0096: ldc.i4 4080
+IL_009B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00A0: ldc.i4 340
+IL_00A5: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00AA: ldc.i4.0 
+IL_00AB: ldc.i4.s 48
+IL_00AD: call 0x0A000058 System.Windows.Forms.MessageBox::Show
+IL_00B2: pop 
+IL_00B3: leave 370
+IL_00B8: ldarg.0 
+IL_00B9: ldc.i4 4084
+IL_00BE: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00C3: call 0x0600031B \x89\x8d.\x89\x8c::\x87\x92\x8a
+IL_00C8: stloc.2 
+IL_00C9: ldarg.0 
+IL_00CA: ldloc.1 
+IL_00CB: ldloc.2 
+IL_00CC: call 0x0600031A \x89\x8d.\x89\x8c::\x87\x92\x89
+IL_00D1: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_00D6: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_00DB: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_00E0: ldc.i4 4088
+IL_00E5: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00EA: ldloc.0 
+IL_00EB: callvirt 0x0A000189 System.Windows.Forms.FileDialog::get_FileName
+IL_00F0: call 0x0A00008B System.String::Concat
+IL_00F5: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_00FA: ldloc.2 
+IL_00FB: brtrue.s 277
+IL_00FD: ldc.i4 4092
+IL_0102: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0107: br.s 287
+IL_0109: ldc.i4 4096
+IL_010E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0113: stloc.3 
+IL_0114: ldc.i4 4100
+IL_0119: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_011E: ldloc.3 
+IL_011F: call 0x0A00008B System.String::Concat
+IL_0124: ldc.i4 4104
+IL_0129: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_012E: ldc.i4.0 
+IL_012F: ldc.i4.s 64
+IL_0131: call 0x0A000058 System.Windows.Forms.MessageBox::Show
+IL_0136: pop 
+IL_0137: leave.s 370
+IL_0139: stloc.s local(0x0004)
+IL_013B: ldc.i4 4108
+IL_0140: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0145: ldloc.s local(0x0004)
+IL_0147: callvirt 0x0A000055 System.Exception::get_Message
+IL_014C: call 0x0A00008B System.String::Concat
+IL_0151: ldc.i4 340
+IL_0156: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_015B: ldc.i4.0 
+IL_015C: ldc.i4.s 16
+IL_015E: call 0x0A000058 System.Windows.Forms.MessageBox::Show
+IL_0163: pop 
+IL_0164: leave.s 370
+IL_0166: ret 
+

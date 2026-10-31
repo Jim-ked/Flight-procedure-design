@@ -1,0 +1,27 @@
+METHOD 06000562 \x8b\x97.\x8b\x96::\x89\x96\x87 RVA=4F36 file=3136
+IL_0000: ldc.i4.1 
+IL_0001: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_0006: brtrue.s 26
+IL_0008: pop 
+IL_0009: ldarg.2 
+IL_000A: ldarg.1 
+IL_000B: ldc.i4.1 
+IL_000C: ldelem.ref 
+IL_000D: callvirt 0x0A000094 System.String::Trim
+IL_0012: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0017: br.s 27
+IL_0019: pop 
+IL_001A: ldarg.3 
+IL_001B: ldarg.1 
+IL_001C: ldc.i4.2 
+IL_001D: ldelem.ref 
+IL_001E: callvirt 0x0A000094 System.String::Trim
+IL_0023: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0028: ldarg.s argument(0x0004)
+IL_002A: ldarg.1 
+IL_002B: ldc.i4.3 
+IL_002C: ldelem.ref 
+IL_002D: callvirt 0x0A000094 System.String::Trim
+IL_0032: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0037: ret 
+

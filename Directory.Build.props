@@ -1,0 +1,19 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <!-- The repository currently has no SDK. This compatibility props file keeps
+       the old MSBuild bootstrap deterministic until a portable SDK is selected. -->
+  <PropertyGroup>
+    <LangVersion>5</LangVersion>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <Platform Condition="'$(Platform)' == ''">AnyCPU</Platform>
+    <Configuration Condition="'$(Configuration)' == ''">Debug</Configuration>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <OutputPath>bin\Debug\</OutputPath>
+    <IntermediateOutputPath>obj\Debug\</IntermediateOutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <OutputPath>bin\Release\</OutputPath>
+    <IntermediateOutputPath>obj\Release\</IntermediateOutputPath>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,73 @@
+METHOD 0600041F \x8a\x96.\x8a\x95::.ctor RVA=53210 file=51410
+IL_0000: ldc.i4 9
+IL_0005: stloc local(0x0000)
+IL_0009: call 0x06000424 \x8a\x96.\x8a\x95::\x87x
+IL_000E: brfalse 289
+IL_0013: br.s 82
+IL_0015: ldarg.0 
+IL_0016: ldc.r8 150.0
+IL_001F: stfld 0x040003A2 \x8a\x96.\x8a\x95::\x88\x92\x87
+IL_0024: ldarg.0 
+IL_0025: ldc.r8 600.0
+IL_002E: stfld 0x040003A3 \x8a\x96.\x8a\x95::\x88\x92\x88
+IL_0033: ldc.i4 0
+IL_0038: stloc local(0x0000)
+IL_003C: call 0x06000424 \x8a\x96.\x8a\x95::\x87x
+IL_0041: brfalse 385
+IL_0046: ldloc local(0x0000)
+IL_004A: switch [137, 166, 289, 385, 224, 289, 327, 327, 48, 33, 400]
+IL_007B: br.s 262
+IL_007D: ldarg.0 
+IL_007E: ldc.r8 0.2617993877991494
+IL_0087: call 0x0A000275 System.Math::Tan
+IL_008C: stfld 0x040003A4 \x8a\x96.\x8a\x95::\x88\x92\x89
+IL_0091: ldc.i4 1
+IL_0096: stloc local(0x0000)
+IL_009A: ldarg.0 
+IL_009B: ldc.r8 0.5235987755982988
+IL_00A4: call 0x0A000275 System.Math::Tan
+IL_00A9: stfld 0x040003A5 \x8a\x96.\x8a\x95::\x88\x92\x8a
+IL_00AE: ldarg.0 
+IL_00AF: ldc.r8 1.0
+IL_00B8: ldc.r8 1.0
+IL_00C1: ldc.r8 1.0
+IL_00CA: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_00CF: stfld 0x040003B3 \x8a\x96.\x8a\x95::\x88\x92\x98
+IL_00D4: ldarg.0 
+IL_00D5: ldc.r8 1.0
+IL_00DE: ldc.r8 1.0
+IL_00E7: ldc.r8 1.0
+IL_00F0: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_00F5: stfld 0x040003B4 \x8a\x96.\x8a\x95::\x88\x92\x99
+IL_00FA: call 0x06000425 \x8a\x96.\x8a\x95::\x87y
+IL_00FF: call 0x06000424 \x8a\x96.\x8a\x95::\x87x
+IL_0104: brfalse.s 277
+IL_0106: pop 
+IL_0107: br.s 289
+IL_0109: pop 
+IL_010A: ldc.i4 7
+IL_010F: stloc local(0x0000)
+IL_0113: br.s 327
+IL_0115: ldarg.0 
+IL_0116: ldc.r8 1.0
+IL_011F: ldc.r8 1.0
+IL_0128: ldc.r8 1.0
+IL_0131: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_0136: stfld 0x040003B5 \x8a\x96.\x8a\x95::\x88\x92\x9a
+IL_013B: ldarg.0 
+IL_013C: ldc.r8 1.0
+IL_0145: ldc.r8 1.0
+IL_014E: ldc.r8 1.0
+IL_0157: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_015C: stfld 0x040003B6 \x8a\x96.\x8a\x95::\x88\x92\x9b
+IL_0161: ldarg.0 
+IL_0162: newobj 0x0A0001D5 0x1B000001::.ctor
+IL_0167: stfld 0x040003B7 \x8a\x96.\x8a\x95::\x88\x92\x9c
+IL_016C: ldc.i4 3
+IL_0171: stloc local(0x0000)
+IL_0175: ldarg.0 
+IL_0176: call 0x0A00002C System.Object::.ctor
+IL_017B: ldc.i4 10
+IL_0180: stloc local(0x0000)
+IL_0184: ret 
+

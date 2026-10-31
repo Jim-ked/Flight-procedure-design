@@ -1,0 +1,47 @@
+METHOD 060007AE \x8f\x87.\x8f\x86::\x8a\x9e\x9c RVA=905D4 file=8E7D4
+IL_0000: call 0x060007B4 \x8f\x87.\x8f\x86::\x89l
+IL_0005: brfalse.s 84
+IL_0007: ldarg.1 
+IL_0008: call 0x060007A2 \x8f\x87.\x8f\x86::\x8a\x9e\x90
+IL_000D: stloc.1 
+IL_000E: ldarg.2 
+IL_000F: call 0x060007A2 \x8f\x87.\x8f\x86::\x8a\x9e\x90
+IL_0014: stloc.0 
+IL_0015: call 0x060007B4 \x8f\x87.\x8f\x86::\x89l
+IL_001A: call 0x060007B5 \x8f\x87.\x8f\x86::\x89m
+IL_001F: brtrue.s 83
+IL_0021: pop 
+IL_0022: ldarg.3 
+IL_0023: ldc.r8 0.0
+IL_002C: bgt.un.s 84
+IL_002E: ldloc.0 
+IL_002F: ldloc.1 
+IL_0030: blt.s 75
+IL_0032: ldloc.0 
+IL_0033: ldc.r8 6.283185307179586
+IL_003C: sub 
+IL_003D: br.s 76
+IL_003F: ldloc.0 
+IL_0040: stloc.0 
+IL_0041: ldloc.1 
+IL_0042: ldloc.0 
+IL_0043: sub 
+IL_0044: stloc.2 
+IL_0045: br.s 107
+IL_0047: pop 
+IL_0048: ldloc.0 
+IL_0049: ldloc.1 
+IL_004A: blt.s 91
+IL_004C: ldloc.0 
+IL_004D: br.s 102
+IL_004F: ldloc.0 
+IL_0050: ldc.r8 6.283185307179586
+IL_0059: add 
+IL_005A: stloc.0 
+IL_005B: ldloc.0 
+IL_005C: ldloc.1 
+IL_005D: sub 
+IL_005E: stloc.2 
+IL_005F: ldloc.2 
+IL_0060: ret 
+

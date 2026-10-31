@@ -1,0 +1,15 @@
+METHOD 060007E5 \x8f\x8d.\x8f\x8c::\x8b\x88\x8c RVA=5FEB file=41EB
+IL_0000: ldarg.0 
+IL_0001: ldarg.0 
+IL_0002: ldfld 0x04000775 \x8f\x8d.\x8f\x8c::\x8b\x88\x9d
+IL_0007: neg 
+IL_0008: ldarg.0 
+IL_0009: ldfld 0x04000774 \x8f\x8d.\x8f\x8c::\x8b\x88\x9c
+IL_000E: ldarg.1 
+IL_000F: mul 
+IL_0010: sub 
+IL_0011: ldarg.0 
+IL_0012: ldfld 0x04000773 \x8f\x8d.\x8f\x8c::\x8b\x88\x9b
+IL_0017: call 0x060007EA \x8f\x8d.\x8f\x8c::\x8b\x88\x91
+IL_001C: ret 
+

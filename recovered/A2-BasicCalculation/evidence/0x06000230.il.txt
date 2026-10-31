@@ -1,0 +1,14 @@
+METHOD 06000230 \x88\x9c.\x88\x9b::\x97\x9c RVA=3B9D file=1D9D
+IL_0000: ldarg.0 
+IL_0001: ldc.r8 -1.5707963267948966
+IL_000A: blt.s 27
+IL_000C: ldarg.0 
+IL_000D: ldc.r8 1.5707963267948966
+IL_0016: bgt.un.s 27
+IL_0018: ldarg.0 
+IL_0019: ret 
+IL_001A: ldarg.0 
+IL_001B: ldc.r8 3.141592653589793
+IL_0024: add 
+IL_0025: ret 
+

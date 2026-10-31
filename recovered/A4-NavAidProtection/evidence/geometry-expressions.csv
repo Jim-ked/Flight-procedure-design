@@ -1,0 +1,145 @@
+﻿method,source
+P2F7,22684: 			_ = 1;
+P2F7,22685: 			if (!_0087_009E())
+P2F7,"22687: 				_0087_0090_009C.Text = ""1.0 nm"" /* string-offset:3680 */;"
+P2F7,"22688: 				_0087_0090_009B.Text = ""2.0 nm"" /* string-offset:3684 */;"
+P2F7,"22690: 			_0087_0091_0087.Text = ""7.8"" /* string-offset:3688 */;"
+P2F8,22695: 			_ = 0;
+P2F8,22696: 			if (_0087_009D())
+P2F8,"22698: 				_0087_0090_009C.Text = ""1.25 nm"" /* string-offset:3692 */;"
+P2F8,"22702: 				_0087_0090_009B.Text = ""2.5 nm"" /* string-offset:3696 */;"
+P2F8,"22703: 				_0087_0091_0087.Text = ""10.3"" /* string-offset:3700 */;"
+P2F9,22720: 			_008F_008E obj = default(_008F_008E);
+P2F9,22721: 			_008F_008E obj2 = default(_008F_008E);
+P2F9,22722: 			_008F_008E obj3 = default(_008F_008E);
+P2F9,22723: 			List<List<_008F_008E>> list2 = default(List<List<_008F_008E>>);
+P2F9,22724: 			List<_008F_008E> list = default(List<_008F_008E>);
+P2F9,22725: 			_008F_008E obj4 = default(_008F_008E);
+P2F9,22726: 			_008F_008E obj5 = default(_008F_008E);
+P2F9,22727: 			_008F_008E obj6 = default(_008F_008E);
+P2F9,22728: 			double num2 = default(double);
+P2F9,22729: 			double num3 = default(double);
+P2F9,22730: 			_008F_008E obj7 = default(_008F_008E);
+P2F9,22731: 			double num4 = default(double);
+P2F9,22732: 			double num5 = default(double);
+P2F9,22733: 			double a = default(double);
+P2F9,22734: 			string[] array = default(string[]);
+P2F9,22735: 			_008F_008E obj8 = default(_008F_008E);
+P2F9,22736: 			_008F_008E obj9 = default(_008F_008E);
+P2F9,22737: 			_008F_008E obj10 = default(_008F_008E);
+P2F9,22738: 			_008F_008C obj11 = default(_008F_008C);
+P2F9,22739: 			_008F_008C obj15 = default(_008F_008C);
+P2F9,22744: 				base.Visible = false;
+P2F9,"22747: 					Point3d val = _009D._008B_008D(""请输入保护区起点"" /* string-offset:3704 */);"
+P2F9,22749: 					if (!(val == Point3d.Origin))
+P2F9,"22751: 						val2 = _009D._008B_008D(""请指定保护区终点"" /* string-offset:3708 */);"
+P2F9,22753: 						if (_0087_009D())
+P2F9,22755: 							num = 26;
+P2F9,22758: 						num = 29;
+P2F9,22759: 						if (!_0087_009E())
+P2F9,22765: 					num = 37;
+P2F9,22768: 					list = new List<_008F_008E>();
+P2F9,22769: 					list.Add(obj);
+P2F9,22770: 					list.Add(obj2);
+P2F9,22771: 					list.Add(obj3);
+P2F9,22772: 					list2.Add(list);
+P2F9,22775: 					list = new List<_008F_008E>();
+P2F9,22776: 					list.Add(obj4);
+P2F9,22777: 					num = 40;
+P2F9,22780: 					list.Add(obj5);
+P2F9,22781: 					list2.Add(list);
+P2F9,22782: 					num = 25;
+P2F9,22785: 					if (_0087_0090_0099.Checked)
+P2F9,"22787: 						obj6 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(num2, num3 - Math.PI / 2.0));"
+P2F9,22788: 						num = 6;
+P2F9,22789: 						if (_0087_009E())
+P2F9,22797: 					list.Add(obj7);
+P2F9,22798: 					list2.Add(list);
+P2F9,22801: 					list = new List<_008F_008E>();
+P2F9,22802: 					list.Add(obj);
+P2F9,22803: 					num = 22;
+P2F9,22806: 					list.Add(obj6);
+P2F9,22807: 					num = 27;
+P2F9,22808: 					if (_0087_009E())
+P2F9,22814: 					num4 = 4.71238898038469 - num3;
+P2F9,22815: 					num = 23;
+P2F9,22818: 					num4 = ((num4 >= 0.0) ? num4 : (Math.PI * 2.0 + num4));
+P2F9,22819: 					num4 = ((num4 > Math.PI * 2.0) ? (num4 - Math.PI * 2.0) : num4);
+P2F9,"22820: 					num5 = Math.Sqrt(Math.Pow(((Point3d)(ref val)).Y - ((Point3d)(ref val2)).Y, 2.0) + Math.Pow(((Point3d)(ref val)).X - ((Point3d)(ref val2)).X, 2.0));"
+P2F9,22821: 					a = _0087_0090_0090(_0087_0091_0087.Text) * _0087_0090_0094;
+P2F9,22822: 					if (_0087_0090_009C.Checked)
+P2F9,22824: 						array = _0087_0090_009C.Text.Trim().Split('n');
+P2F9,22825: 						num = 17;
+P2F9,22829: 						array = _0087_0090_009B.Text.Trim().Split('n');
+P2F9,22856: 						list.Add(obj7);
+P2F9,22857: 						list2.Add(list);
+P2F9,22858: 						list = new List<_008F_008E>();
+P2F9,22859: 						num = 16;
+P2F9,22860: 						if (_0087_009E())
+P2F9,"22895: 						obj8 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(num2 / 2.0, num3 - Math.PI / 2.0));"
+P2F9,"22896: 						obj7 = _008F_008E._008B_0089_0088(obj9, _008F_008E._008B_0089_0087(num5 * Math.Tan(a) + num2, num3 - Math.PI / 2.0));"
+P2F9,"22900: 						obj10 = _008F_008E._008B_0089_0088(obj9, _008F_008E._008B_0089_0087((num5 * Math.Tan(a) + num2) / 2.0, num3 - Math.PI / 2.0));"
+P2F9,22901: 						if (!_0087_0090_0098.Checked)
+P2F9,22907: 						obj11 = new _008F_008C();
+P2F9,22908: 						num = 11;
+P2F9,22912: 						_008F_008C obj12 = new _008F_008C();
+P2F9,22915: 						_008F_008C obj13 = new _008F_008C();
+P2F9,22917: 						obj10 = obj11._008B_0088_0093(obj13);
+P2F9,22918: 						obj7 = obj12._008B_0088_0093(obj13);
+P2F9,22919: 						num = 0;
+P2F9,22923: 						list = new List<_008F_008E>();
+P2F9,22924: 						num = 39;
+P2F9,22927: 						list.Add(obj9);
+P2F9,22928: 						num = 32;
+P2F9,22937: 						list.Add(obj8);
+P2F9,22938: 						num = 1;
+P2F9,22941: 						list.Add(obj10);
+P2F9,22942: 						num = 10;
+P2F9,22945: 						list2.Add(list);
+P2F9,22961: 					base.Visible = true;
+P2F9,22962: 					num = 38;
+P2F9,22965: 					list.Add(obj3);
+P2F9,22966: 					num = 42;
+P2F9,22969: 					list2.Add(list);
+P2F9,22975: 					if (!(val2 == Point3d.Origin))
+P2F9,22977: 						base.Visible = true;
+P2F9,"22978: 						num3 = Math.Atan2(((Point3d)(ref val)).Y - ((Point3d)(ref val2)).Y, ((Point3d)(ref val)).X - ((Point3d)(ref val2)).X);"
+P2F9,22981: 					num = 35;
+P2F9,22984: 					base.Visible = true;
+P2F9,22987: 					_008F_008C obj14 = new _008F_008C();
+P2F9,22990: 					_008F_008C obj16 = new _008F_008C();
+P2F9,22992: 					obj5 = obj15._008B_0088_0093(obj16);
+P2F9,22993: 					obj3 = obj14._008B_0088_0093(obj16);
+P2F9,"22996: 					num2 = _008F_008A._008B_0087_009D(array[0], ""输入数据有误，请检查。"" /* string-offset:1984 */) * 1852.0;"
+P2F9,22997: 					num = 9;
+P2F9,23000: 					obj = val._008B_009C();
+P2F9,23001: 					num = 20;
+P2F9,23004: 					obj9 = val2._008B_009C();
+P2F9,23005: 					num = 7;
+P2F9,23008: 					list2 = new List<List<_008F_008E>>();
+P2F9,23009: 					if (!_0087_0090_0097.Checked)
+P2F9,23015: 					list = new List<_008F_008E>();
+P2F9,23016: 					num = 3;
+P2F9,23019: 					list.Add(obj);
+P2F9,23020: 					num = 28;
+P2F9,23023: 					list.Add(obj9);
+P2F9,23024: 					num = 43;
+P2F9,23025: 					if (_0087_009E())
+P2F9,23031: 					list2.Add(list);
+P2F9,23032: 					num = 36;
+P2F9,23033: 					if (!_0087_009E())
+P2F9,23039: 					if (!_0087_0090_0096.Checked)
+P2F9,23043: 					num = 14;
+P2F9,23046: 					list = new List<_008F_008E>();
+P2F9,"23049: 					obj2 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(num2, num3 + Math.PI / 2.0));"
+P2F9,"23050: 					obj4 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(num2 / 2.0, num3 + Math.PI / 2.0));"
+P2F9,23051: 					num = 8;
+P2F9,"23054: 					obj3 = _008F_008E._008B_0089_0088(obj9, _008F_008E._008B_0089_0087(num5 * Math.Tan(a) + num2, num3 + Math.PI / 2.0));"
+P2F9,"23055: 					obj5 = _008F_008E._008B_0089_0088(obj9, _008F_008E._008B_0089_0087((num5 * Math.Tan(a) + num2) / 2.0, num3 + Math.PI / 2.0));"
+P2F9,23056: 					num = 2;
+P2F9,23059: 					if (_0087_0090_0098.Checked)
+P2F9,23061: 						obj15 = new _008F_008C();
+P2F9,23062: 						num = 18;
+P2F9,23067: 					list.Add(obj9);
+P2F9,23068: 					num = 41;
+P2F9,23075: 			num = 13;

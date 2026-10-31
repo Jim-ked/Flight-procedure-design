@@ -1,0 +1,51 @@
+METHOD 0600048B \x8b\x8d.\x8b\x8c::\x88\x9b\x91 RVA=5B0A8 file=592A8
+IL_0000: ldc.i4.1 
+IL_0001: call 0x060004B6 \x8b\x8d.\x8b\x8c::\x88\x94
+IL_0006: brtrue.s 35
+IL_0008: pop 
+IL_0009: ldarg.0 
+IL_000A: ldfld 0x04000457 \x8b\x8d.\x8b\x8c::\x88\x9d\x96
+IL_000F: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0014: stloc.0 
+IL_0015: br.s 36
+IL_0017: pop 
+IL_0018: ldarg.0 
+IL_0019: ldfld 0x04000457 \x8b\x8d.\x8b\x8c::\x88\x9d\x96
+IL_001E: ldarg.0 
+IL_001F: ldfld 0x04000461 \x8b\x8d.\x8b\x8c::\x88\x9e\x87
+IL_0024: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0029: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_002E: ldarg.0 
+IL_002F: ldfld 0x04000461 \x8b\x8d.\x8b\x8c::\x88\x9e\x87
+IL_0034: ldloc.0 
+IL_0035: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_003A: ldarg.0 
+IL_003B: ldfld 0x04000456 \x8b\x8d.\x8b\x8c::\x88\x9d\x95
+IL_0040: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0045: stloc.0 
+IL_0046: ldarg.0 
+IL_0047: ldfld 0x04000456 \x8b\x8d.\x8b\x8c::\x88\x9d\x95
+IL_004C: ldarg.0 
+IL_004D: ldfld 0x0400045F \x8b\x8d.\x8b\x8c::\x88\x9d\x9e
+IL_0052: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0057: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_005C: ldarg.0 
+IL_005D: ldfld 0x0400045F \x8b\x8d.\x8b\x8c::\x88\x9d\x9e
+IL_0062: ldloc.0 
+IL_0063: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0068: ldarg.0 
+IL_0069: ldfld 0x04000455 \x8b\x8d.\x8b\x8c::\x88\x9d\x94
+IL_006E: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0073: stloc.0 
+IL_0074: ldarg.0 
+IL_0075: ldfld 0x04000455 \x8b\x8d.\x8b\x8c::\x88\x9d\x94
+IL_007A: ldarg.0 
+IL_007B: ldfld 0x0400045E \x8b\x8d.\x8b\x8c::\x88\x9d\x9d
+IL_0080: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0085: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_008A: ldarg.0 
+IL_008B: ldfld 0x0400045E \x8b\x8d.\x8b\x8c::\x88\x9d\x9d
+IL_0090: ldloc.0 
+IL_0091: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0096: ret 
+

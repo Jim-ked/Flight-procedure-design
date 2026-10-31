@@ -1,0 +1,177 @@
+METHOD 060004C5 \x8b\x8f.\x8b\x8e::\x89\x89\x99 RVA=63204 file=61404
+IL_0000: ldc.i4.0 
+IL_0001: call 0x060004CB \x8b\x8f.\x8b\x8e::\x88\x95
+IL_0006: brfalse 614
+IL_000B: pop 
+IL_000C: ldc.i4 948
+IL_0011: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0016: brtrue 615
+IL_001B: newobj 0x060004CD .\x90\x92::.ctor
+IL_0020: stloc.0 
+IL_0021: ldloc.0 
+IL_0022: ldarg.1 
+IL_0023: stfld 0x040004EE .\x90\x92::targetTextBox
+IL_0028: newobj 0x0A000371 System.Windows.Forms.ContextMenu::.ctor
+IL_002D: ldc.i4 6036
+IL_0032: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0037: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_003C: stloc.1 
+IL_003D: ldc.i4 6040
+IL_0042: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0047: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_004C: stloc.2 
+IL_004D: ldc.i4 6044
+IL_0052: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0057: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_005C: stloc.3 
+IL_005D: ldc.i4 6048
+IL_0062: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0067: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_006C: stloc.s local(0x0004)
+IL_006E: ldc.i4 6052
+IL_0073: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0078: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_007D: stloc.s local(0x0005)
+IL_007F: ldc.i4 6056
+IL_0084: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0089: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_008E: stloc.s local(0x0006)
+IL_0090: ldc.i4 6060
+IL_0095: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_009A: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_009F: stloc.s local(0x0007)
+IL_00A1: ldc.i4 6052
+IL_00A6: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00AB: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_00B0: stloc.s local(0x0008)
+IL_00B2: ldc.i4 6064
+IL_00B7: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00BC: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_00C1: stloc.s local(0x0009)
+IL_00C3: ldc.i4 6052
+IL_00C8: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00CD: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_00D2: stloc.s local(0x000A)
+IL_00D4: ldc.i4 6068
+IL_00D9: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00DE: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_00E3: stloc.s local(0x000B)
+IL_00E5: ldc.i4 6064
+IL_00EA: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00EF: newobj 0x0A000372 System.Windows.Forms.MenuItem::.ctor
+IL_00F4: stloc.s local(0x000C)
+IL_00F6: ldloc.s local(0x0004)
+IL_00F8: ldloc.0 
+IL_00F9: ldftn 0x060004CE .\x90\x92::\x8b\x8e\x91
+IL_00FF: newobj 0x0A000150 System.EventHandler::.ctor
+IL_0104: callvirt 0x0A000373 System.Windows.Forms.MenuItem::add_Click
+IL_0109: ldloc.s local(0x0005)
+IL_010B: ldloc.0 
+IL_010C: ldftn 0x060004CF .\x90\x92::\x8b\x8e\x92
+IL_0112: newobj 0x0A000150 System.EventHandler::.ctor
+IL_0117: callvirt 0x0A000373 System.Windows.Forms.MenuItem::add_Click
+IL_011C: ldloc.s local(0x0006)
+IL_011E: ldloc.0 
+IL_011F: ldftn 0x060004D0 .\x90\x92::\x8b\x8e\x93
+IL_0125: newobj 0x0A000150 System.EventHandler::.ctor
+IL_012A: callvirt 0x0A000373 System.Windows.Forms.MenuItem::add_Click
+IL_012F: ldloc.s local(0x0007)
+IL_0131: ldloc.0 
+IL_0132: ldftn 0x060004D1 .\x90\x92::\x8b\x8e\x94
+IL_0138: newobj 0x0A000150 System.EventHandler::.ctor
+IL_013D: callvirt 0x0A000373 System.Windows.Forms.MenuItem::add_Click
+IL_0142: ldloc.s local(0x0008)
+IL_0144: ldloc.0 
+IL_0145: ldftn 0x060004D2 .\x90\x92::\x8b\x8e\x95
+IL_014B: newobj 0x0A000150 System.EventHandler::.ctor
+IL_0150: callvirt 0x0A000373 System.Windows.Forms.MenuItem::add_Click
+IL_0155: ldloc.s local(0x0009)
+IL_0157: ldloc.0 
+IL_0158: ldftn 0x060004D3 .\x90\x92::\x8b\x8e\x96
+IL_015E: newobj 0x0A000150 System.EventHandler::.ctor
+IL_0163: callvirt 0x0A000373 System.Windows.Forms.MenuItem::add_Click
+IL_0168: ldloc.s local(0x000A)
+IL_016A: ldloc.0 
+IL_016B: ldftn 0x060004D4 .\x90\x92::\x8b\x8e\x97
+IL_0171: newobj 0x0A000150 System.EventHandler::.ctor
+IL_0176: callvirt 0x0A000373 System.Windows.Forms.MenuItem::add_Click
+IL_017B: ldloc.s local(0x000C)
+IL_017D: ldloc.0 
+IL_017E: ldftn 0x060004D5 .\x90\x92::\x8b\x8e\x98
+IL_0184: newobj 0x0A000150 System.EventHandler::.ctor
+IL_0189: callvirt 0x0A000373 System.Windows.Forms.MenuItem::add_Click
+IL_018E: ldloc.s local(0x000B)
+IL_0190: ldloc.0 
+IL_0191: ldftn 0x060004D6 .\x90\x92::\x8b\x8e\x99
+IL_0197: newobj 0x0A000150 System.EventHandler::.ctor
+IL_019C: callvirt 0x0A000373 System.Windows.Forms.MenuItem::add_Click
+IL_01A1: ldloc.1 
+IL_01A2: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_01A7: ldloc.s local(0x0004)
+IL_01A9: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_01AE: pop 
+IL_01AF: ldloc.1 
+IL_01B0: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_01B5: ldloc.s local(0x0005)
+IL_01B7: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_01BC: pop 
+IL_01BD: ldloc.1 
+IL_01BE: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_01C3: ldloc.s local(0x0006)
+IL_01C5: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_01CA: pop 
+IL_01CB: ldloc.2 
+IL_01CC: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_01D1: ldloc.s local(0x0007)
+IL_01D3: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_01D8: pop 
+IL_01D9: ldloc.2 
+IL_01DA: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_01DF: ldloc.s local(0x0008)
+IL_01E1: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_01E6: pop 
+IL_01E7: ldloc.2 
+IL_01E8: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_01ED: ldloc.s local(0x0009)
+IL_01EF: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_01F4: pop 
+IL_01F5: ldloc.3 
+IL_01F6: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_01FB: ldloc.s local(0x000A)
+IL_01FD: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_0202: pop 
+IL_0203: ldloc.3 
+IL_0204: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_0209: ldloc.s local(0x000B)
+IL_020B: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_0210: pop 
+IL_0211: ldloc.3 
+IL_0212: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_0217: ldloc.s local(0x000C)
+IL_0219: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_021E: pop 
+IL_021F: dup 
+IL_0220: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_0225: ldloc.1 
+IL_0226: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_022B: pop 
+IL_022C: dup 
+IL_022D: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_0232: ldloc.2 
+IL_0233: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_0238: pop 
+IL_0239: dup 
+IL_023A: callvirt 0x0A000374 System.Windows.Forms.Menu::get_MenuItems
+IL_023F: ldloc.3 
+IL_0240: callvirt 0x0A000375 .MenuItemCollection::Add
+IL_0245: pop 
+IL_0246: ldarg.2 
+IL_0247: ldc.i4.0 
+IL_0248: ldarg.2 
+IL_0249: callvirt 0x0A000176 System.Windows.Forms.Control::get_Height
+IL_024E: newobj 0x0A000241 System.Drawing.Point::.ctor
+IL_0253: callvirt 0x0A000376 System.Windows.Forms.ContextMenu::Show
+IL_0258: br.s 615
+IL_025A: pop 
+IL_025B: ret 
+

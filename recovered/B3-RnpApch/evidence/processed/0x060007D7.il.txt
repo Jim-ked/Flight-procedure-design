@@ -1,0 +1,22 @@
+METHOD 060007D7 \x8f\x8b.\x8f\x8a::\x8b\x88\x87 RVA=91EA0 file=900A0
+IL_0000: ldc.i4.0 
+IL_0001: call 0x060007DE \x8f\x8b.\x8f\x8a::\x89p
+IL_0006: brfalse.s 49
+IL_0008: pop 
+IL_0009: ldarg.0 
+IL_000A: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_000F: ldloca.s local(0x0000)
+IL_0011: call 0x0A0002E9 System.Double::TryParse
+IL_0016: brfalse.s 50
+IL_0018: ldarg.0 
+IL_0019: call 0x0A00020C System.Drawing.Color::get_White
+IL_001E: callvirt 0x0A0001EC System.Windows.Forms.Control::set_BackColor
+IL_0023: ldc.i4.1 
+IL_0024: ret 
+IL_0025: pop 
+IL_0026: ldarg.0 
+IL_0027: call 0x0A000346 System.Drawing.Color::get_LightCoral
+IL_002C: callvirt 0x0A0001EC System.Windows.Forms.Control::set_BackColor
+IL_0031: ldc.i4.0 
+IL_0032: ret 
+

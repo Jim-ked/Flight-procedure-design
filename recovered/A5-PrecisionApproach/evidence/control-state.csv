@@ -1,0 +1,372 @@
+﻿line,field,property,value
+23923,_0087_0093_0091,SelectedIndex,0
+23926,_0087_0093_0089,SelectedIndex,3
+23930,_0087_0093_0090,SelectedIndex,5
+23931,_0087_0092_009D,SelectedIndex,3
+24236,_0087_0096_0089,Visible,true
+24240,_0087_0096_0089,Visible,false
+24253,_0087_0093_009C,Visible,false
+24261,_0087_0093_009C,Visible,true
+24262,_0087_0094_0087,Visible,true
+24268,_0087_0094_008C,Visible,true
+24272,_0087_0092_0097,Enabled,false
+24273,_0087_0092_0096,Enabled,false
+24274,_0087_0092_009A,Enabled,false
+24278,_0087_0092_0094,Enabled,false
+24292,_0087_0092_009A,Enabled,true
+24295,_0087_0092_0094,Enabled,true
+24296,_0087_0092_009B,Enabled,true
+24300,_0087_0096_008A,Visible,false
+24324,_0087_0094_0087,Visible,false
+24325,_0087_0094_008C,Visible,false
+24335,_0087_0092_0095,Checked,true
+24341,_0087_0092_0097,Enabled,true
+24342,_0087_0092_0096,Enabled,true
+24348,_0087_0096_008A,Visible,true
+24352,_0087_0092_009B,Enabled,false
+24369,_0087_0093_008C,Text,"""2000"" /* string-offset:3836 */"
+24380,_0087_0093_008C,Text,"""4500"" /* string-offset:3844 */"
+24433,_0087_0093_0098,Text,"P_0._0088_0091_0096._008B_008B_0092.ToString(""F6"" /* string-offset:3848 */)"
+24447,_0087_0093_0095,Text,"P_0._0088_0091_009A._008B_008B_0092.ToString(""F6"" /* string-offset:3848 */)"
+24450,_0087_0093_0094,Text,"P_0._0088_0091_009A._008B_008B_0093.ToString(""F6"" /* string-offset:3848 */)"
+24451,_0087_0093_0093,Text,"P_0._0088_0091_009A._008B_008B_0094.ToString(""F2"" /* string-offset:3236 */)"
+24454,_0087_0093_009E,Text,"P_0._0088_0091_0096._008B_008B_0093.ToString(""F6"" /* string-offset:3848 */)"
+24457,_0087_0094_008A,Text,"P_0._0088_0091_0096._008B_008B_0094.ToString(""F2"" /* string-offset:3236 */)"
+24460,_0087_0093_009C,Text,"P_0._0088_0091_0097._008B_008B_0092.ToString(""F6"" /* string-offset:3848 */)"
+24461,_0087_0094_0087,Text,"P_0._0088_0091_0097._008B_008B_0093.ToString(""F6"" /* string-offset:3848 */)"
+24462,_0087_0094_008C,Text,"P_0._0088_0091_0097._008B_008B_0094.ToString(""F2"" /* string-offset:3236 */)"
+24490,_0087_0094_008B,Text,"P_0._0088_0091_0098._008B_008B_0092.ToString(""F6"" /* string-offset:3848 */)"
+24493,_0087_0094_0089,Text,"P_0._0088_0091_0098._008B_008B_0093.ToString(""F6"" /* string-offset:3848 */)"
+24509,_0087_0094_0088,Text,"P_0._0088_0091_0098._008B_008B_0094.ToString(""F2"" /* string-offset:3236 */)"
+24513,_0087_0093_009D,Text,"P_0._0088_0091_0099._008B_008B_0092.ToString(""F6"" /* string-offset:3848 */)"
+24514,_0087_0093_009B,Text,"P_0._0088_0091_0099._008B_008B_0093.ToString(""F6"" /* string-offset:3848 */)"
+24515,_0087_0093_0099,Text,"P_0._0088_0091_0099._008B_008B_0094.ToString(""F2"" /* string-offset:3236 */)"
+24579,_0087_0093_0087,Text,num.ToString()
+24580,_0087_0093_008B,Text,num2.ToString()
+24592,_0087_0095_0091,Text,"num.ToString(""f4"" /* string-offset:3856 */)"
+24627,_0087_0094_0099,Text,_0087_0095_008B.Text
+24632,_0087_0094_0097,Text,_0087_0095_0088.Text
+24633,_0087_0095_0088,Text,text
+24640,_0087_0095_008B,Text,text
+24645,_0087_0094_0098,Text,_0087_0095_0089.Text
+24646,_0087_0095_0089,Text,text
+24667,_0087_0094_0099,Text,"Math.Round(((Point3d)(ref val)).X, 2).ToString()"
+24668,_0087_0094_0098,Text,"Math.Round(((Point3d)(ref val)).Y, 2).ToString()"
+24669,_0087_0094_0097,Text,((Point3d)(ref val)).Z.ToString()
+24686,_0087_0095_008B,Text,"Math.Round(((Point3d)(ref val)).X, 2).ToString()"
+24687,_0087_0095_0089,Text,"Math.Round(((Point3d)(ref val)).Y, 2).ToString()"
+24688,_0087_0095_0088,Text,((Point3d)(ref val)).Z.ToString()
+24721,_0087_0095_009B,Text,"num.ToString(""F2"" /* string-offset:3236 */)"
+24744,_0087_0095_009D,Text,"num.ToString(""F2"" /* string-offset:3236 */)"
+25038,_0087_0093_0087,Text,"Convert.ToDouble(dictionary4[""WingSpan"" /* string-offset:3944 */]).ToString(""F2"" /* string-offset:3236 */)"
+25072,_0087_0093_0094,Text,"Convert.ToDouble(dictionary6[""b"" /* string-offset:3972 */]).ToString(""F6"" /* string-offset:3848 */)"
+25076,_0087_0093_008B,Text,"Convert.ToDouble(dictionary4[""WheelBase"" /* string-offset:3948 */]).ToString(""F2"" /* string-offset:3236 */)"
+25081,_0087_0096_0087,Text,"Convert.ToDouble(dictionary4[""FAF_Height"" /* string-offset:3952 */]).ToString(""F2"" /* string-offset:3236 */)"
+25090,_0087_0093_0099,Text,"Convert.ToDouble(dictionary3[""c"" /* string-offset:3976 */]).ToString(""F2"" /* string-offset:3236 */)"
+25101,_0087_0093_009D,Text,"Convert.ToDouble(dictionary3[""a"" /* string-offset:3968 */]).ToString(""F6"" /* string-offset:3848 */)"
+25102,_0087_0093_009B,Text,"Convert.ToDouble(dictionary3[""b"" /* string-offset:3972 */]).ToString(""F6"" /* string-offset:3848 */)"
+25134,_0087_0095_009B,Text,"Convert.ToDouble(dictionary4[""IF_Length"" /* string-offset:3956 */]).ToString(""F2"" /* string-offset:3236 */)"
+25248,_0087_0093_0098,Text,"Convert.ToDouble(dictionary7[""a"" /* string-offset:3968 */]).ToString(""F6"" /* string-offset:3848 */)"
+25249,_0087_0093_009E,Text,"Convert.ToDouble(dictionary7[""b"" /* string-offset:3972 */]).ToString(""F6"" /* string-offset:3848 */)"
+25292,_0087_0094_0099,Text,"Convert.ToDouble(dictionary8[""X"" /* string-offset:3904 */]).ToString(""F2"" /* string-offset:3236 */)"
+25296,_0087_0094_0098,Text,"Convert.ToDouble(dictionary8[""Y"" /* string-offset:3908 */]).ToString(""F2"" /* string-offset:3236 */)"
+25297,_0087_0094_0097,Text,"Convert.ToDouble(dictionary8[""Z"" /* string-offset:3912 */]).ToString(""F2"" /* string-offset:3236 */)"
+25308,_0087_0093_0093,Text,"Convert.ToDouble(dictionary6[""c"" /* string-offset:3976 */]).ToString(""F2"" /* string-offset:3236 */)"
+25311,_0087_0095_008B,Text,"Convert.ToDouble(dictionary9[""X"" /* string-offset:3904 */]).ToString(""F2"" /* string-offset:3236 */)"
+25312,_0087_0095_0089,Text,"Convert.ToDouble(dictionary9[""Y"" /* string-offset:3908 */]).ToString(""F2"" /* string-offset:3236 */)"
+25316,_0087_0095_0088,Text,"Convert.ToDouble(dictionary9[""Z"" /* string-offset:3912 */]).ToString(""F2"" /* string-offset:3236 */)"
+25319,_0087_0094_008A,Text,"Convert.ToDouble(dictionary7[""c"" /* string-offset:3976 */]).ToString(""F2"" /* string-offset:3236 */)"
+25323,_0087_0092_009D,Text,"dictionary4[""MissedCG"" /* string-offset:3932 */].ToString()"
+25335,_0087_0095_009D,Text,"Convert.ToDouble(dictionary4[""FAF_Tolerance"" /* string-offset:3960 */]).ToString(""F2"" /* string-offset:3236 */)"
+25339,_0087_0095_0091,Text,"Convert.ToDouble(dictionary11[""a"" /* string-offset:3968 */]).ToString(""F4"" /* string-offset:4028 */)"
+25342,_0087_0095_0093,Text,"Convert.ToDouble(dictionary11[""b"" /* string-offset:3972 */]).ToString(""F4"" /* string-offset:4028 */)"
+25343,_0087_0095_0094,Text,"Convert.ToDouble(dictionary11[""c"" /* string-offset:3976 */]).ToString(""F2"" /* string-offset:3236 */)"
+25361,_0087_0095_0096,Text,"Convert.ToDouble(dictionary12[""a"" /* string-offset:3968 */]).ToString(""F4"" /* string-offset:4028 */)"
+25364,_0087_0095_0098,Text,"Convert.ToDouble(dictionary12[""b"" /* string-offset:3972 */]).ToString(""F4"" /* string-offset:4028 */)"
+25368,_0087_0095_0097,Text,"Convert.ToDouble(dictionary12[""c"" /* string-offset:3976 */]).ToString(""F2"" /* string-offset:3236 */)"
+25396,_0087_0093_009C,Text,"Convert.ToDouble(dictionary13[""a"" /* string-offset:3968 */]).ToString(""F6"" /* string-offset:3848 */)"
+25400,_0087_0093_0091,Text,"dictionary4[""AppType"" /* string-offset:3920 */].ToString()"
+25414,_0087_0093_0089,Text,"dictionary4[""CAT"" /* string-offset:3924 */].ToString()"
+25420,_0087_0093_0090,Text,"dictionary4[""GP"" /* string-offset:3928 */].ToString()"
+25425,_0087_0094_0087,Text,"Convert.ToDouble(dictionary13[""b"" /* string-offset:3972 */]).ToString(""F6"" /* string-offset:3848 */)"
+25426,_0087_0094_008C,Text,"Convert.ToDouble(dictionary13[""c"" /* string-offset:3976 */]).ToString(""F2"" /* string-offset:3236 */)"
+25443,_0087_0094_008B,Text,"Convert.ToDouble(dictionary14[""a"" /* string-offset:3968 */]).ToString(""F6"" /* string-offset:3848 */)"
+25444,_0087_0094_0089,Text,"Convert.ToDouble(dictionary14[""b"" /* string-offset:3972 */]).ToString(""F6"" /* string-offset:3848 */)"
+25451,_0087_0093_008C,Text,"dictionary4[""LocDistance"" /* string-offset:3936 */].ToString()"
+25456,_0087_0093_0095,Text,"Convert.ToDouble(dictionary6[""a"" /* string-offset:3968 */]).ToString(""F6"" /* string-offset:3848 */)"
+25461,_0087_0093_0088,Text,"Convert.ToDouble(dictionary4[""RDH"" /* string-offset:3940 */]).ToString(""F2"" /* string-offset:3236 */)"
+25466,_0087_0094_0088,Text,"Convert.ToDouble(dictionary14[""c"" /* string-offset:3976 */]).ToString(""F2"" /* string-offset:3236 */)"
+25650,_0087_0093_008C,Name,"""LocDistance"" /* string-offset:3936 */"
+25663,_0087_0092_009B,Name,"""radioButtonPsRight"" /* string-offset:4124 */"
+25668,_0087_0092_009B,TabIndex,4
+25671,_0087_0092_009B,Text,"""PAOAS右"" /* string-offset:4128 */"
+25688,_0087_0095_0090,TabIndex,3
+25696,_0087_0095_0090,Text,"""保护区类型"" /* string-offset:3768 */"
+25698,_0087_0096_008A,Enabled,false
+25714,_0087_0096_008A,Name,"""textBox1"" /* string-offset:1784 */"
+25721,_0087_0096_008A,TabIndex,85
+25724,_0087_0096_008A,Text,"""II类精密进近参数仅用于OAS面绘制"" /* string-offset:4392 */"
+25765,_0087_0092_009E,Name,"""label18"" /* string-offset:2568 */"
+25770,_0087_0092_009E,TabIndex,78
+25771,_0087_0092_009E,Text,"""半翼展(m)"" /* string-offset:4200 */"
+25779,_0087_0093_0086,Name,"""label24"" /* string-offset:2120 */"
+25787,_0087_0093_0086,TabIndex,77
+25791,_0087_0093_0086,Text,"""RDH(m)"" /* string-offset:2148 */"
+25793,_0087_0093_0087,Name,"""textBoxWing"" /* string-offset:4204 */"
+25800,_0087_0093_0087,TabIndex,76
+25804,_0087_0093_0087,Text,"""30"" /* string-offset:4208 */"
+26121,_0087_0094_0096,TabIndex,57
+26125,_0087_0094_0096,Text,"""入口坐标"" /* string-offset:4356 */"
+26236,_0087_0094_0092,TabIndex,7
+26237,_0087_0094_0092,Text,"""拾取参数"" /* string-offset:4344 */"
+26272,_0087_0094_009D,TabIndex,2
+26273,_0087_0094_009D,Text,"""X（m）"" /* string-offset:2876 */"
+26314,_0087_0093_008D,Name,"""label19"" /* string-offset:2352 */"
+26318,_0087_0093_008D,TabIndex,70
+26319,_0087_0093_008D,Text,"""Dist(m)"" /* string-offset:4224 */"
+26372,_0087_0093_008E,Name,"""label21"" /* string-offset:2344 */"
+26379,_0087_0093_008E,TabIndex,72
+26382,_0087_0093_008E,Text,"""MCG(%)"" /* string-offset:2768 */"
+26418,_0087_0092_0098,Name,"""buttonDraw"" /* string-offset:4168 */"
+26424,_0087_0092_0098,TabIndex,5
+26425,_0087_0092_0098,Text,"""CAD"" /* string-offset:1696 */"
+26438,_0087_0096_0087,Name,"""textBoxFAF"" /* string-offset:2152 */"
+26445,_0087_0096_0087,TabIndex,66
+26446,_0087_0096_0087,Text,"""900"" /* string-offset:2156 */"
+26462,_0087_0095_009B,Name,"""textBoxIF"" /* string-offset:4176 */"
+26481,_0087_0094_0086,Name,"""label25"" /* string-offset:2136 */"
+26486,_0087_0094_0086,TabIndex,60
+26487,_0087_0094_0086,Text,"""Y"" /* string-offset:3908 */"
+26506,_0087_0094_0092,Name,"""button3"" /* string-offset:1936 */"
+26527,_0087_0095_008D,Text,"""X（m）"" /* string-offset:2876 */"
+26548,_0087_0093_009E,TabIndex,45
+26576,_0087_0095_0088,Text,""" 0"" /* string-offset:4364 */"
+26579,_0087_0095_0089,Name,"""textBoxLat2"" /* string-offset:2892 */"
+26585,_0087_0095_0089,TabIndex,1
+26586,_0087_0095_0089,Text,""" 0"" /* string-offset:4364 */"
+26598,_0087_0093_0090,TabIndex,66
+26602,_0087_0092_0097,TabIndex,0
+26604,_0087_0092_0097,Text,"""PA with FAP"" /* string-offset:4164 */"
+26621,_0087_0094_0087,Name,"""textBoxWsB"" /* string-offset:4316 */"
+26623,_0087_0094_0087,TabIndex,49
+26624,_0087_0094_0087,Text,"""0.001"" /* string-offset:4276 */"
+26625,_0087_0094_0087,Visible,false
+26633,_0087_0093_0096,Name,"""label27"" /* string-offset:2160 */"
+26635,_0087_0093_0096,TabIndex,48
+26639,_0087_0094_008D,TabIndex,54
+26643,_0087_0094_008D,Text,"""X"" /* string-offset:3904 */"
+26651,_0087_0094_0091,Name,"""button5"" /* string-offset:1912 */"
+26653,_0087_0094_0091,TabIndex,7
+26654,_0087_0094_0091,Text,"""参数导出"" /* string-offset:4340 */"
+26658,_0087_0095_008B,Name,"""textBoxLon2"" /* string-offset:2896 */"
+26660,_0087_0095_008B,TabIndex,0
+26661,_0087_0095_008B,Text,""" -3000"" /* string-offset:4376 */"
+26673,_0087_0095_008C,Name,"""label7"" /* string-offset:2236 */"
+26677,_0087_0095_008C,TabIndex,2
+26678,_0087_0095_008C,Text,"""Y（m）"" /* string-offset:2868 */"
+26687,_0087_0094_0096,Name,"""groupBox6"" /* string-offset:1796 */"
+26695,_0087_0093_0092,TabIndex,64
+26696,_0087_0093_0092,Text,"""进近类型"" /* string-offset:4268 */"
+26701,_0087_0095_008A,Name,"""label6"" /* string-offset:2696 */"
+26703,_0087_0095_008A,TabIndex,2
+26704,_0087_0095_008A,Text,"""Z（m）"" /* string-offset:2872 */"
+26711,_0087_0094_009B,Name,"""button4"" /* string-offset:1928 */"
+26716,_0087_0094_009B,TabIndex,3
+26727,_0087_0095_0086,Name,"""button10"" /* string-offset:3476 */"
+26729,_0087_0095_0086,TabIndex,66
+26741,_0087_0095_0087,Name,"""button6"" /* string-offset:1920 */"
+26749,_0087_0095_0087,TabIndex,3
+26806,_0087_0093_0095,Name,"""textBoxZA"" /* string-offset:4284 */"
+26814,_0087_0095_009A,Name,"""button2"" /* string-offset:1816 */"
+26819,_0087_0095_009A,TabIndex,72
+26872,_0087_0093_0092,Name,"""label23"" /* string-offset:2112 */"
+26915,_0087_0094_0089,Name,"""textBoxXB"" /* string-offset:4324 */"
+26917,_0087_0094_0089,TabIndex,53
+26921,_0087_0094_0089,Text,"""0.001"" /* string-offset:4276 */"
+26931,_0087_0092_009D,Name,"""comboBoxMissCG"" /* string-offset:4264 */"
+26935,_0087_0095_008F,TabIndex,16
+26939,_0087_0095_008F,Text,"""c"" /* string-offset:3976 */"
+26946,_0087_0095_0088,TabIndex,2
+26950,_0087_0093_009E,Text,"""0.001"" /* string-offset:4276 */"
+26967,_0087_0092_0097,Checked,true
+26973,_0087_0092_0097,Name,"""radioButtonFAP"" /* string-offset:4160 */"
+26984,_0087_0095_008D,Name,"""label10"" /* string-offset:2952 */"
+26986,_0087_0095_008D,TabIndex,2
+26992,_0087_0093_009C,Name,"""textBoxWsA"" /* string-offset:4304 */"
+27001,_0087_0093_009B,TabIndex,57
+27002,_0087_0093_009B,Text,"""0.001"" /* string-offset:4276 */"
+27019,_0087_0095_0097,Enabled,false
+27024,_0087_0095_0093,Text,"""0.091"" /* string-offset:4412 */"
+27041,_0087_0094_0094,TabIndex,0
+27042,_0087_0094_0094,Text,"""跑道数据"" /* string-offset:3280 */"
+27048,_0087_0095_0093,TabIndex,20
+27053,_0087_0095_0099,Name,"""button1"" /* string-offset:1692 */"
+27062,_0087_0095_0099,TabIndex,73
+27091,_0087_0094_0088,Name,"""textBoxXC"" /* string-offset:4320 */"
+27093,_0087_0094_0088,TabIndex,55
+27094,_0087_0094_0088,Text,"""0.001"" /* string-offset:4276 */"
+27099,_0087_0093_008C,TabIndex,68
+27100,_0087_0093_008C,Text,"""3280"" /* string-offset:4220 */"
+27110,_0087_0094_009D,Name,"""label5"" /* string-offset:2712 */"
+27149,_0087_0093_0097,Name,"""label20"" /* string-offset:2296 */"
+27156,_0087_0093_0097,TabIndex,63
+27157,_0087_0093_0097,Text,"""Z"" /* string-offset:3912 */"
+27166,_0087_0093_0098,Name,"""textBoxWA"" /* string-offset:4288 */"
+27168,_0087_0093_0098,TabIndex,44
+27169,_0087_0093_0098,Text,"""0.001"" /* string-offset:4276 */"
+27190,_0087_0093_0091,Name,"""comboBoxAppType"" /* string-offset:4248 */"
+27243,_0087_0093_009D,TabIndex,56
+27247,_0087_0093_009D,Text,"""0.001"" /* string-offset:4276 */"
+27267,_0087_0094_008A,Name,"""textBoxWC"" /* string-offset:4328 */"
+27272,_0087_0094_008A,TabIndex,46
+27273,_0087_0094_008A,Text,"""0.001"" /* string-offset:4276 */"
+27282,_0087_0094_008B,Name,"""textBoxXA"" /* string-offset:4332 */"
+27311,_0087_0093_0088,Name,"""textBoxRDH"" /* string-offset:2192 */"
+27377,_0087_0093_009C,TabIndex,47
+27378,_0087_0093_009C,Text,"""0.001"" /* string-offset:4276 */"
+27379,_0087_0093_009C,Visible,false
+27385,_0087_0093_009D,Name,"""textBoxYA"" /* string-offset:4308 */"
+27393,_0087_0093_0088,TabIndex,75
+27397,_0087_0093_0088,Text,"""15"" /* string-offset:1964 */"
+27418,_0087_0093_0089,Name,"""comboBoxCat"" /* string-offset:4212 */"
+27425,_0087_0093_0089,TabIndex,67
+27433,_0087_0093_008A,Name,"""label13"" /* string-offset:3460 */"
+27437,_0087_0093_008A,TabIndex,74
+27440,_0087_0093_008A,Text,"""机型"" /* string-offset:2356 */"
+27448,_0087_0093_008B,Name,"""textBoxWheel"" /* string-offset:4216 */"
+27450,_0087_0093_008B,TabIndex,69
+27454,_0087_0093_008B,Text,"""6"" /* string-offset:2708 */"
+27471,_0087_0095_0090,Name,"""tabPage4"" /* string-offset:2500 */"
+27489,_0087_0095_009B,TabIndex,71
+27490,_0087_0095_009B,Text,"""10000"" /* string-offset:2132 */"
+27499,_0087_0095_009D,Name,"""textBoxFafFix"" /* string-offset:4184 */"
+27503,_0087_0096_0089,Name,"""groupBox2"" /* string-offset:1740 */"
+27508,_0087_0096_0089,TabIndex,66
+27513,_0087_0096_0089,Text,"""PAOAS参数"" /* string-offset:4396 */"
+27518,_0087_0095_0091,Name,"""textBoxP1A"" /* string-offset:4400 */"
+27527,_0087_0095_0097,Name,"""textBoxP2C"" /* string-offset:4420 */"
+27532,_0087_0095_0097,TabIndex,25
+27533,_0087_0095_0097,Text,"""15"" /* string-offset:1964 */"
+27537,_0087_0095_0094,Enabled,false
+27548,_0087_0095_0094,Name,"""textBoxP1C"" /* string-offset:4424 */"
+27556,_0087_0095_0094,TabIndex,21
+27557,_0087_0095_0094,Text,"""5"" /* string-offset:4428 */"
+27565,_0087_0095_0096,Enabled,false
+27576,_0087_0095_0096,Name,"""textBoxP2A"" /* string-offset:4432 */"
+27578,_0087_0095_0096,TabIndex,22
+27579,_0087_0095_0096,Text,"""0"" /* string-offset:560 */"
+27586,_0087_0095_0095,Name,"""label15"" /* string-offset:2532 */"
+27591,_0087_0095_0095,TabIndex,24
+27595,_0087_0095_0091,TabIndex,18
+27598,_0087_0095_0091,Text,"""0.0524"" /* string-offset:4404 */"
+27605,_0087_0095_0092,Name,"""label3"" /* string-offset:1876 */"
+27607,_0087_0095_0092,TabIndex,19
+27611,_0087_0095_0092,Text,"""P1"" /* string-offset:3964 */"
+27612,_0087_0095_0098,Enabled,false
+27615,_0087_0095_0098,Name,"""textBoxP2B"" /* string-offset:4408 */"
+27617,_0087_0095_0098,TabIndex,23
+27618,_0087_0095_0098,Text,"""0.091"" /* string-offset:4412 */"
+27619,_0087_0095_0093,Enabled,false
+27624,_0087_0095_0093,Name,"""textBoxP1B"" /* string-offset:4416 */"
+27632,_0087_0092_0094,Name,"""radioButtonPsLeft"" /* string-offset:4132 */"
+27640,_0087_0092_0094,TabIndex,4
+27641,_0087_0092_0094,Text,"""PAOAS左"" /* string-offset:4136 */"
+27649,_0087_0092_0095,Name,"""radioButtonOAS"" /* string-offset:4140 */"
+27653,_0087_0092_0095,TabIndex,3
+27657,_0087_0092_0095,Text,"""OAS面"" /* string-offset:4144 */"
+27664,_0087_0092_0096,Name,"""radioButtonFAF"" /* string-offset:4148 */"
+27668,_0087_0092_0096,TabIndex,1
+27672,_0087_0092_0096,Text,"""PA with FAF"" /* string-offset:4152 */"
+27731,_0087_0095_008E,Name,"""tabPage2"" /* string-offset:1788 */"
+27737,_0087_0095_008E,TabIndex,1
+27741,_0087_0095_008E,Text,"""OAS参数"" /* string-offset:4380 */"
+27747,_0087_0096_0088,Name,"""button7"" /* string-offset:1948 */"
+27755,_0087_0096_0088,TabIndex,7
+27756,_0087_0096_0088,Text,"""参数导入"" /* string-offset:4384 */"
+27783,_0087_0095_008F,Name,"""label44"" /* string-offset:4388 */"
+27796,_0087_0094_008B,TabIndex,52
+27797,_0087_0094_008B,Text,"""0.001"" /* string-offset:4276 */"
+27805,_0087_0094_008C,Name,"""textBoxWsC"" /* string-offset:4336 */"
+27813,_0087_0094_008C,TabIndex,51
+27817,_0087_0094_008C,Text,"""0.001"" /* string-offset:4276 */"
+27821,_0087_0094_008C,Visible,false
+27836,_0087_0094_008D,Name,"""label28"" /* string-offset:2612 */"
+27864,_0087_0092_0093,Text,"""保护区种类"" /* string-offset:4112 */"
+27879,_0087_0093_008F,Name,"""label22"" /* string-offset:2104 */"
+27886,_0087_0093_008F,TabIndex,73
+27887,_0087_0093_008F,Text,"""GP(°)"" /* string-offset:2476 */"
+27913,_0087_0093_0090,Name,"""comboBoxGP"" /* string-offset:2400 */"
+27929,_0087_0093_0096,Text,"""W"" /* string-offset:3984 */"
+27944,_0087_0092_009D,TabIndex,79
+27970,_0087_0093_0093,Name,"""textBoxZC"" /* string-offset:4272 */"
+27975,_0087_0093_0093,TabIndex,62
+27979,_0087_0093_0093,Text,"""0.001"" /* string-offset:4276 */"
+28000,_0087_0094_009E,Name,"""groupBox7"" /* string-offset:2604 */"
+28005,_0087_0094_009E,TabIndex,58
+28011,_0087_0094_009E,Text,"""末端坐标"" /* string-offset:4368 */"
+28020,_0087_0095_0088,Name,"""textBoxZ2"" /* string-offset:4372 */"
+28033,_0087_0093_0094,Name,"""textBoxZB"" /* string-offset:4280 */"
+28035,_0087_0093_0094,TabIndex,61
+28036,_0087_0093_0094,Text,"""0.001"" /* string-offset:4276 */"
+28128,_0087_0092_0093,Name,"""groupBox1"" /* string-offset:1664 */"
+28139,_0087_0092_0093,TabIndex,0
+28147,_0087_0095_0095,Text,"""P2"" /* string-offset:3980 */"
+28158,_0087_0093_0091,TabIndex,65
+28188,_0087_0093_0099,Name,"""textBoxYC"" /* string-offset:4292 */"
+28193,_0087_0093_0099,TabIndex,58
+28196,_0087_0093_0099,Text,"""0.001"" /* string-offset:4276 */"
+28203,_0087_0093_009A,Name,"""label26"" /* string-offset:2144 */"
+28208,_0087_0093_009A,TabIndex,50
+28212,_0087_0093_009A,Text,"""W*"" /* string-offset:4296 */"
+28220,_0087_0093_009B,Name,"""textBoxYB"" /* string-offset:4300 */"
+28242,_0087_0094_0093,Name,"""tabControl1"" /* string-offset:1756 */"
+28243,_0087_0094_0093,SelectedIndex,0
+28247,_0087_0094_0093,TabIndex,65
+28259,_0087_0094_0094,Name,"""tabPage1"" /* string-offset:1760 */"
+28283,_0087_0092_009A,Name,"""radioButtonGPINOP"" /* string-offset:4116 */"
+28291,_0087_0092_009A,TabIndex,2
+28292,_0087_0092_009A,Text,"""GP INOP"" /* string-offset:4120 */"
+28326,_0087_0094_0095,Name,"""groupBox3"" /* string-offset:1708 */"
+28331,_0087_0094_0095,TabIndex,65
+28342,_0087_0094_0097,Name,"""textBoxZ1"" /* string-offset:4360 */"
+28347,_0087_0094_0097,TabIndex,2
+28351,_0087_0094_0097,Text,""" 0"" /* string-offset:4364 */"
+28356,_0087_0094_0098,Name,"""textBoxLat1"" /* string-offset:2848 */"
+28358,_0087_0094_0098,TabIndex,1
+28361,_0087_0094_0098,Text,""" 0"" /* string-offset:4364 */"
+28370,_0087_0094_0099,Name,"""textBoxLon1"" /* string-offset:2856 */"
+28375,_0087_0094_0099,TabIndex,0
+28379,_0087_0094_0099,Text,""" 0"" /* string-offset:4364 */"
+28389,_0087_0094_009A,Name,"""label4"" /* string-offset:2904 */"
+28393,_0087_0094_009A,TabIndex,2
+28394,_0087_0094_009A,Text,"""Z（m）"" /* string-offset:2872 */"
+28404,_0087_0094_009C,Name,"""Start"" /* string-offset:2864 */"
+28406,_0087_0094_009C,TabIndex,2
+28409,_0087_0094_009C,Text,"""Y（m）"" /* string-offset:2868 */"
+28422,_0087_0095_009C,Text,"""FAF高度(m)"" /* string-offset:2116 */"
+28428,_0087_0095_009E,Name,"""label14"" /* string-offset:2260 */"
+28430,_0087_0095_009E,TabIndex,68
+28434,_0087_0095_009E,Text,"""FAF容差(m)"" /* string-offset:4352 */"
+28440,_0087_0096_0086,Name,"""label9"" /* string-offset:2940 */"
+28442,_0087_0096_0086,TabIndex,69
+28446,_0087_0096_0086,Text,"""中间段长度(m)"" /* string-offset:2108 */"
+28467,_0087_0093_0095,TabIndex,59
+28470,_0087_0093_0095,Text,"""0.001"" /* string-offset:4276 */"
+28530,_0087_0095_009D,TabIndex,70
+28533,_0087_0095_009D,Text,"""700"" /* string-offset:4188 */"
+28546,_0087_0094_008E,Name,"""label29"" /* string-offset:2288 */"
+28554,_0087_0094_008E,TabIndex,80
+28555,_0087_0094_008E,Text,"""a"" /* string-offset:3968 */"
+28569,_0087_0094_008F,Name,"""label30"" /* string-offset:2304 */"
+28574,_0087_0094_008F,TabIndex,81
+28575,_0087_0094_008F,Text,"""c"" /* string-offset:3976 */"
+28584,_0087_0094_0090,Name,"""label31"" /* string-offset:2432 */"
+28589,_0087_0094_0090,TabIndex,82
+28593,_0087_0094_0090,Text,"""b"" /* string-offset:3972 */"
+28601,_0087_0092_009C,Name,"""label17"" /* string-offset:2548 */"
+28603,_0087_0092_009C,TabIndex,71
+28604,_0087_0092_009C,Text,"""轮高(m)"" /* string-offset:4196 */"
+28627,_0087_0094_0095,Text,"""进近程序设置"" /* string-offset:4348 */"
+28633,_0087_0095_009C,Name,"""label8"" /* string-offset:2960 */"
+28641,_0087_0095_009C,TabIndex,67
+28650,_0087_0093_009E,Name,"""textBoxWB"" /* string-offset:4312 */"

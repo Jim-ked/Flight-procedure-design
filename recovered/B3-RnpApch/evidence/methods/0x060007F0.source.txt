@@ -1,0 +1,11 @@
+84055: 		public static double _008B_0088_0096(_008F_008E P_0, _008F_008E P_1, _008F_008E P_2)
+84056: 		{
+84057: 			_008F_0096 obj = P_1 - P_0;
+84058: 			double num = (P_2 - P_0)._008B_008B_0097(obj);
+84059: 			double num2 = obj._008B_008B_0097(obj);
+84060: 			if (Math.Abs(num2) < 1E-10)
+84061: 			{
+84062: 				throw new ArgumentException("线段长度不能为0" /* string-offset:7488 */);
+84063: 			}
+84064: 			return num / num2;
+84065: 		}

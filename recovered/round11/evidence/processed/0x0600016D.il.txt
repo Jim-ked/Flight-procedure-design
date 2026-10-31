@@ -1,0 +1,14 @@
+METHOD 0600016D \x87\x95.\x87\x94::\x8d\x90 RVA=1109C file=F29C
+IL_0000: newobj 0x06000177 .\x90\x89::.ctor
+IL_0005: stloc.0 
+IL_0006: ldloc.0 
+IL_0007: ldarg.1 
+IL_0008: stfld 0x04000023 .\x90\x89::control
+IL_000D: ldarg.0 
+IL_000E: ldfld 0x04000020 \x87\x95.\x87\x94::\x8d\x94
+IL_0013: ldloc.0 
+IL_0014: ldftn 0x06000178 .\x90\x89::\x8b\x8d\x9e
+IL_001A: newobj 0x0A0001FE 0x1B000024::.ctor
+IL_001F: call 0x2B00000E 
+IL_0024: ret 
+

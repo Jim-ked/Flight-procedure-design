@@ -1,0 +1,55 @@
+METHOD 060002E3 \x89\x89.\x89\x88::\x87\x8e\x92 RVA=3156C file=2F76C
+IL_0000: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0005: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000A: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_000F: pop 
+IL_0010: br.s 63
+IL_0012: ldarg.0 
+IL_0013: ldfld 0x040001B5 \x89\x89.\x89\x88::\x87\x8e\x9b
+IL_0018: callvirt 0x0A0001C3 0x1B00000A::get_Count
+IL_001D: brtrue.s 77
+IL_001F: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_0024: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0029: brtrue.s 74
+IL_002B: pop 
+IL_002C: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_0031: brtrue.s 73
+IL_0033: ldarg.0 
+IL_0034: ldfld 0x040001B5 \x89\x89.\x89\x88::\x87\x8e\x9b
+IL_0039: brtrue.s 30
+IL_003B: br.s 102
+IL_003D: ret 
+IL_003E: pop 
+IL_003F: br.s 86
+IL_0041: ldarg.2 
+IL_0042: callvirt 0x0A0002C5 System.Windows.Forms.DataGridViewCellEventArgs::get_ColumnIndex
+IL_0047: ldc.i4.0 
+IL_0048: blt.s 174
+IL_004A: ldarg.2 
+IL_004B: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_0050: ldc.i4.0 
+IL_0051: bge.s 103
+IL_0053: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0058: brfalse.s 174
+IL_005A: ret 
+IL_005B: ldarg.0 
+IL_005C: ldfld 0x040001B6 \x89\x89.\x89\x88::\x87\x8e\x9c
+IL_0061: ldarg.0 
+IL_0062: ldfld 0x040001D4 \x89\x89.\x89\x88::\x87\x90\x88
+IL_0067: callvirt 0x0A00016F System.Windows.Forms.DataGridView::get_Rows
+IL_006C: ldarg.2 
+IL_006D: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_0072: callvirt 0x0A0002C7 System.Windows.Forms.DataGridViewRowCollection::get_Item
+IL_0077: callvirt 0x0A000173 System.Windows.Forms.DataGridViewRow::get_Cells
+IL_007C: ldc.i4.0 
+IL_007D: callvirt 0x0A0002C8 System.Windows.Forms.DataGridViewCellCollection::get_Item
+IL_0082: callvirt 0x0A000175 System.Windows.Forms.DataGridViewCell::get_Value
+IL_0087: callvirt 0x0A000086 System.Object::ToString
+IL_008C: callvirt 0x0A0002C9 0x1B00000C::get_Item
+IL_0091: ldarg.0 
+IL_0092: ldfld 0x040001B5 \x89\x89.\x89\x88::\x87\x8e\x9b
+IL_0097: call 0x060000B0 \x8e.\x8d::\x89\x93
+IL_009C: call 0x060000AF \x8e.\x8d::\x89\x92
+IL_00A1: ret 
+IL_00A2: ret 
+

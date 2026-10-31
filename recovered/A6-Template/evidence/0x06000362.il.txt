@@ -1,0 +1,82 @@
+METHOD 06000362 \x89\x93.\x89\x92::\x87\x9a\x90 RVA=43414 file=41614
+IL_0000: ldc.i4 572
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse.s 48
+IL_000C: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_0011: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_0016: brfalse.s 42
+IL_0018: pop 
+IL_0019: br 292
+IL_001E: pop 
+IL_001F: br 265
+IL_0024: ldarg.0 
+IL_0025: call 0x06000356 \x89\x93.\x89\x92::\x87\x99\x9d
+IL_002A: ldarg.0 
+IL_002B: ldfld 0x040002A4 \x89\x93.\x89\x92::\x87\x9c\x94
+IL_0030: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0035: stloc.0 
+IL_0036: ldarg.0 
+IL_0037: ldfld 0x040002AB \x89\x93.\x89\x92::\x87\x9c\x9b
+IL_003C: ldc.i4 1984
+IL_0041: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0046: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_004B: stloc.1 
+IL_004C: ldarg.0 
+IL_004D: ldfld 0x040002A8 \x89\x93.\x89\x92::\x87\x9c\x98
+IL_0052: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0057: ldc.i4 4636
+IL_005C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0061: call 0x0A000108 System.String::op_Equality
+IL_0066: dup 
+IL_0067: stloc.2 
+IL_0068: brfalse.s 152
+IL_006A: ldc.r8 60.0
+IL_0073: ldarg.0 
+IL_0074: ldfld 0x040002A5 \x89\x93.\x89\x92::\x87\x9c\x95
+IL_0079: ldc.i4 1984
+IL_007E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0083: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_0088: mul 
+IL_0089: stloc.3 
+IL_008A: br.s 245
+IL_008C: ldarg.0 
+IL_008D: ldfld 0x040002B9 \x89\x93.\x89\x92::\x87\x9d\x90
+IL_0092: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_0097: brfalse.s 189
+IL_0099: ldarg.0 
+IL_009A: ldfld 0x040002A5 \x89\x93.\x89\x92::\x87\x9c\x95
+IL_009F: ldc.i4 1984
+IL_00A4: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00A9: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_00AE: stloc.3 
+IL_00AF: br.s 245
+IL_00B1: ldarg.0 
+IL_00B2: ldflda 0x04000289 \x89\x93.\x89\x92::\x87\x9b\x92
+IL_00B7: ldarg.0 
+IL_00B8: ldfld 0x0400028A \x89\x93.\x89\x92::\x87\x9b\x93
+IL_00BD: call 0x0A0001B9 Autodesk.AutoCAD.Geometry.Point3d::DistanceTo
+IL_00C2: ldc.r8 1852.0
+IL_00CB: div 
+IL_00CC: stloc.3 
+IL_00CD: ldarg.0 
+IL_00CE: ldfld 0x040002A5 \x89\x93.\x89\x92::\x87\x9c\x95
+IL_00D3: ldloca.s local(0x0003)
+IL_00D5: ldc.i4 4640
+IL_00DA: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00DF: call 0x0A000073 System.Double::ToString
+IL_00E4: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_00E9: ldloc.0 
+IL_00EA: ldloc.1 
+IL_00EB: ldloc.2 
+IL_00EC: ldloc.3 
+IL_00ED: ldc.r8 4600.0
+IL_00F6: newobj 0x060001ED \x88\x92.\x88\x91::.ctor
+IL_00FB: stloc.s local(0x0004)
+IL_00FD: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0102: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0107: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_010C: ldloc.s local(0x0004)
+IL_010E: callvirt 0x0A000086 System.Object::ToString
+IL_0113: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_0118: ret 
+

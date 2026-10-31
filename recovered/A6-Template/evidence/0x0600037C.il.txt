@@ -1,0 +1,7 @@
+METHOD 0600037C \x89\x93.\x89\x92::.cctor RVA=466A file=286A
+IL_0000: nop 
+IL_0001: ldtoken 0x0200003D \x89\x93.\x89\x92
+IL_0006: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_000B: call 0x0A000032 System.ComponentModel.LicenseManager::Validate
+IL_0010: ret 
+

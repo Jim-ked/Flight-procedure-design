@@ -1,0 +1,21 @@
+METHOD 060005CF \x8c\x92.\x8c\x91::.cctor RVA=81594 file=7F794
+IL_0000: ldc.i4.0 
+IL_0001: call 0x060005D0 \x8c\x92.\x8c\x91::\x88j
+IL_0006: brfalse.s 60
+IL_0008: pop 
+IL_0009: nop 
+IL_000A: ldtoken 0x02000067 \x8c\x92.\x8c\x91
+IL_000F: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_0014: call 0x0A000032 System.ComponentModel.LicenseManager::Validate
+IL_0019: call 0x060005D1 \x8c\x92.\x8c\x91::\x88k
+IL_001E: brfalse.s 44
+IL_0020: ldc.r8 0.2617993877991494
+IL_0029: stsfld 0x04000671 \x8c\x92.\x8c\x91::\x8a\x88\x86
+IL_002E: br.s 68
+IL_0030: pop 
+IL_0031: call 0x060005D1 \x8c\x92.\x8c\x91::\x88k
+IL_0036: brtrue.s 82
+IL_0038: ldc.r8 1.5707963267948966
+IL_0041: stsfld 0x04000672 \x8c\x92.\x8c\x91::\x8a\x88\x87
+IL_0046: ret 
+

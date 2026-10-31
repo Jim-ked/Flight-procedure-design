@@ -1,0 +1,66 @@
+METHOD 06000087 \x8c.\x8b::\x88\x8b RVA=87E0 file=69E0
+IL_0000: ldc.i4 44
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 189
+IL_000F: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0014: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0019: callvirt 0x0A00009A Autodesk.AutoCAD.ApplicationServices.Document::LockDocument
+IL_001E: stloc.0 
+IL_001F: ldarg.0 
+IL_0020: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_0025: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_002A: stloc.1 
+IL_002B: newobj 0x0A00009D Autodesk.AutoCAD.DatabaseServices.Group::.ctor
+IL_0030: stloc.2 
+IL_0031: ldarg.1 
+IL_0032: callvirt 0x0A00009E 0x1B000001::GetEnumerator
+IL_0037: stloc.3 
+IL_0038: nop 
+IL_0039: br.s 115
+IL_003B: ldloca.s local(0x0003)
+IL_003D: call 0x0A00009F 0x1B000002::get_Current
+IL_0042: stloc.s local(0x0004)
+IL_0044: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+IL_0049: dup 
+IL_004A: ldloc.s local(0x0004)
+IL_004C: call 0x0600012D \x87\x87.\x87\x86::\x8c\x8b
+IL_0051: call 0x06000134 \x87\x89.\x87\x88::\x8c\x8f
+IL_0056: ldarg.0 
+IL_0057: ldarg.2 
+IL_0058: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_005D: stloc.s local(0x0005)
+IL_005F: ldloc.2 
+IL_0060: ldloc.s local(0x0005)
+IL_0062: callvirt 0x0A0000A0 Autodesk.AutoCAD.DatabaseServices.Group::Append
+IL_0067: ldloca.s local(0x0003)
+IL_0069: call 0x0A0000A1 0x1B000002::MoveNext
+IL_006E: brtrue.s 71
+IL_0070: leave.s 140
+IL_0072: ldloca.s local(0x0003)
+IL_0074: constrained. 0x1B000002 
+IL_007A: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_007F: endfinally 
+IL_0080: ldarg.0 
+IL_0081: ldloc.2 
+IL_0082: callvirt 0x0A0000A2 Autodesk.AutoCAD.DatabaseServices.Database::AddDBObject
+IL_0087: pop 
+IL_0088: ldloc.1 
+IL_0089: ldloc.2 
+IL_008A: ldc.i4.1 
+IL_008B: callvirt 0x0A0000A3 Autodesk.AutoCAD.DatabaseServices.Transaction::AddNewlyCreatedDBObject
+IL_0090: ldloc.1 
+IL_0091: callvirt 0x0A0000A4 Autodesk.AutoCAD.DatabaseServices.Transaction::Commit
+IL_0096: call 0x0A0000A5 Autodesk.AutoCAD.ApplicationServices.Core.Application::UpdateScreen
+IL_009B: leave.s 189
+IL_009D: ldloc.1 
+IL_009E: brfalse.s 178
+IL_00A0: ldloc.1 
+IL_00A1: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00A6: endfinally 
+IL_00A7: ldloc.0 
+IL_00A8: brfalse.s 188
+IL_00AA: ldloc.0 
+IL_00AB: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00B0: endfinally 
+IL_00B1: ret 
+

@@ -1,0 +1,148 @@
+METHOD 06000115 \x9e.\x9d::\x8b\x8f RVA=D2D4 file=B4D4
+IL_0000: ldc.i4 168
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse 505
+IL_000F: call 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase
+IL_0014: stloc.0 
+IL_0015: call 0x06000123 \x9e.\x9d::2
+IL_001A: call 0x06000122 \x9e.\x9d::1
+IL_001F: brfalse 398
+IL_0024: pop 
+IL_0025: ldarg.s argument(0x0005)
+IL_0027: brfalse.s 82
+IL_0029: call 0x06000123 \x9e.\x9d::2
+IL_002E: brtrue 505
+IL_0033: ldarg.0 
+IL_0034: ldarg.1 
+IL_0035: newobj 0x0A000068 Autodesk.AutoCAD.DatabaseServices.Line::.ctor
+IL_003A: ldloc.0 
+IL_003B: ldstr ''
+IL_0040: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_0045: pop 
+IL_0046: ldloca.s local(0x0001)
+IL_0048: ldarga.s argument(0x0000)
+IL_004A: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_004F: ldarga.s argument(0x0001)
+IL_0051: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0056: add 
+IL_0057: ldc.r8 2.0
+IL_0060: div 
+IL_0061: ldarga.s argument(0x0000)
+IL_0063: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0068: ldarga.s argument(0x0001)
+IL_006A: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_006F: add 
+IL_0070: ldc.r8 2.0
+IL_0079: div 
+IL_007A: ldarga.s argument(0x0000)
+IL_007C: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0081: ldarga.s argument(0x0001)
+IL_0083: call 0x0A000077 Autodesk.AutoCAD.Geometry.Point3d::get_Z
+IL_0088: add 
+IL_0089: ldc.r8 2.0
+IL_0092: div 
+IL_0093: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_0098: ldarg.s argument(0x0004)
+IL_009A: call 0x0600011D \x9e.\x9d::\x8b\x97
+IL_009F: stloc.2 
+IL_00A0: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_00A5: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_00AA: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_00AF: stloc.3 
+IL_00B0: ldloc.3 
+IL_00B1: ldloc.2 
+IL_00B2: ldc.r8 180.0
+IL_00BB: mul 
+IL_00BC: ldc.r8 3.141592653589793
+IL_00C5: div 
+IL_00C6: stloc.s local(0x0004)
+IL_00C8: ldloca.s local(0x0004)
+IL_00CA: call 0x0A0001B7 System.Double::ToString
+IL_00CF: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_00D4: newobj 0x0A000071 Autodesk.AutoCAD.DatabaseServices.DBText::.ctor
+IL_00D9: dup 
+IL_00DA: ldc.r8 1600.0
+IL_00E3: callvirt 0x0A000072 Autodesk.AutoCAD.DatabaseServices.DBText::set_Height
+IL_00E8: dup 
+IL_00E9: ldarg.2 
+IL_00EA: ldc.r8 1852.0
+IL_00F3: div 
+IL_00F4: call 0x0A0001B8 System.Math::Round
+IL_00F9: stloc.s local(0x0004)
+IL_00FB: ldloca.s local(0x0004)
+IL_00FD: call 0x0A0001B7 System.Double::ToString
+IL_0102: ldc.i4 900
+IL_0107: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_010C: call 0x0A00008B System.String::Concat
+IL_0111: callvirt 0x0A000074 Autodesk.AutoCAD.DatabaseServices.DBText::set_TextString
+IL_0116: dup 
+IL_0117: ldc.i4.1 
+IL_0118: callvirt 0x0A000075 Autodesk.AutoCAD.DatabaseServices.DBText::set_HorizontalMode
+IL_011D: dup 
+IL_011E: ldc.i4.1 
+IL_011F: callvirt 0x0A000076 Autodesk.AutoCAD.DatabaseServices.DBText::set_VerticalMode
+IL_0124: dup 
+IL_0125: ldloc.1 
+IL_0126: callvirt 0x0A000078 Autodesk.AutoCAD.DatabaseServices.DBText::set_AlignmentPoint
+IL_012B: dup 
+IL_012C: ldloc.2 
+IL_012D: callvirt 0x0A0000D9 Autodesk.AutoCAD.DatabaseServices.DBText::set_Rotation
+IL_0132: ldloc.0 
+IL_0133: ldstr ''
+IL_0138: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_013D: pop 
+IL_013E: newobj 0x0A000071 Autodesk.AutoCAD.DatabaseServices.DBText::.ctor
+IL_0143: dup 
+IL_0144: ldc.r8 2000.0
+IL_014D: callvirt 0x0A000072 Autodesk.AutoCAD.DatabaseServices.DBText::set_Height
+IL_0152: dup 
+IL_0153: ldc.i4 584
+IL_0158: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_015D: ldarg.3 
+IL_015E: call 0x0600011E \x9e.\x9d::\x8b\x98
+IL_0163: ldc.i4 904
+IL_0168: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_016D: call 0x0A00003C System.String::Concat
+IL_0172: callvirt 0x0A000074 Autodesk.AutoCAD.DatabaseServices.DBText::set_TextString
+IL_0177: dup 
+IL_0178: ldloc.2 
+IL_0179: callvirt 0x0A0000D9 Autodesk.AutoCAD.DatabaseServices.DBText::set_Rotation
+IL_017E: stloc.s local(0x0005)
+IL_0180: br.s 399
+IL_0182: pop 
+IL_0183: ldarg.s argument(0x0004)
+IL_0185: ldc.r8 1.5707963267948966
+IL_018E: ble.s 467
+IL_0190: ldarg.s argument(0x0004)
+IL_0192: ldc.r8 4.71238898038469
+IL_019B: bge.un.s 467
+IL_019D: ldloc.3 
+IL_019E: ldc.i4 908
+IL_01A3: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_01A8: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_01AD: ldloc.s local(0x0005)
+IL_01AF: ldc.i4.2 
+IL_01B0: callvirt 0x0A000075 Autodesk.AutoCAD.DatabaseServices.DBText::set_HorizontalMode
+IL_01B5: ldloc.s local(0x0005)
+IL_01B7: ldc.i4.1 
+IL_01B8: callvirt 0x0A000076 Autodesk.AutoCAD.DatabaseServices.DBText::set_VerticalMode
+IL_01BD: ldloc.s local(0x0005)
+IL_01BF: ldarg.0 
+IL_01C0: callvirt 0x0A000078 Autodesk.AutoCAD.DatabaseServices.DBText::set_AlignmentPoint
+IL_01C5: br.s 491
+IL_01C7: ldloc.s local(0x0005)
+IL_01C9: ldc.i4.0 
+IL_01CA: callvirt 0x0A000075 Autodesk.AutoCAD.DatabaseServices.DBText::set_HorizontalMode
+IL_01CF: ldloc.s local(0x0005)
+IL_01D1: ldc.i4.1 
+IL_01D2: callvirt 0x0A000076 Autodesk.AutoCAD.DatabaseServices.DBText::set_VerticalMode
+IL_01D7: ldloc.s local(0x0005)
+IL_01D9: ldarg.0 
+IL_01DA: callvirt 0x0A000078 Autodesk.AutoCAD.DatabaseServices.DBText::set_AlignmentPoint
+IL_01DF: ldloc.s local(0x0005)
+IL_01E1: ldloc.0 
+IL_01E2: ldstr ''
+IL_01E7: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_01EC: pop 
+IL_01ED: ret 
+

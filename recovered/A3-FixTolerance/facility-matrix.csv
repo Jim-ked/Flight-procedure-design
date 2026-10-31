@@ -1,0 +1,10 @@
+﻿Facility,UI option,Default accuracy,Geometry branch,Dedicated MethodDef,Downstream use,Status,Evidence
+VOR,radioButtonVOR,"Guide=true 5.2°, false 4.5°",AccuracyDegrees→single-station wedge/KK/DME arc,P209/P20C; no dedicated solver,P20E,IMPLEMENTED,FixTolerance.Recovered.cs; events.csv
+NDB,radioButtonNDB,"Guide=true 6.9°, false 6.2°",AccuracyDegrees→single-station wedge/KK/DME arc,P20B/P212,P20E,IMPLEMENTED,FixTolerance.Recovered.cs; event-binding-final.md
+ILS,radioButtonILS,"Guide=true 2.4°, false 1.4°",AccuracyDegrees→same geometry,P20A,P20E,IMPLEMENTED,FixTolerance.Recovered.cs
+DME,checkBoxDme; specified distance,display r from picked distance; no angle default,r/early/nominal/late arcs,branch in P20E; no dedicated class,Arc Group+DBText,IMPLEMENTED,dme-final.md
+VOR/DME,VOR radio + DME checkbox,VOR accuracy + DME error,composed P20E branch,none,3 arcs/text+wedge,IMPLEMENTED,facility-matrix.csv
+NDB/DME,NDB radio + DME checkbox,NDB accuracy + DME error,composed P20E branch,none,3 arcs/text+wedge,IMPLEMENTED,facility-matrix.csv
+LOC,none,none,none,none,none,NOT_IMPLEMENTED_IN_BUILD,controls/events/methods search
+TACAN,none,none,none,none,none,NOT_IMPLEMENTED_IN_BUILD,controls/events/methods search
+GNSS,none,none,none,none,none,NOT_IMPLEMENTED_IN_BUILD,controls/events/methods search

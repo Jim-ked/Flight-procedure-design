@@ -1,0 +1,184 @@
+31055: 	public class _0089_0090 : Form
+31056: 	{
+31057: 		private IContainer _0087_0099_0089;
+31058: 
+31059: 		private Label _0087_0099_008A;
+31060: 
+31061: 		private TextBox _0087_0099_008B;
+31062: 
+31063: 		private TextBox _0087_0099_008C;
+31064: 
+31065: 		private TextBox _0087_0099_008D;
+31066: 
+31067: 		private Label _0087_0099_008E;
+31068: 
+31069: 		private Button _0087_0099_008F;
+31070: 
+31071: 		private Label _0087_0099_0090;
+31072: 
+31073: 		private Label _0087_0099_0091;
+31074: 
+31075: 		private ComboBox _0087_0099_0092;
+31076: 
+31077: 		private Label _0087_0099_0093;
+31078: 
+31079: 		private TextBox _0087_0099_0094;
+31080: 
+31081: 		private GroupBox _0087_0099_0095;
+31082: 
+31083: 		private CheckBox _0087_0099_0096;
+31084: 
+31085: 		private CheckBox _0087_0099_0097;
+31086: 
+31087: 		private GroupBox _0087_0099_0098;
+31088: 
+31089: 		private Button _0087_0099_0099;
+31090: 
+31091: 		public _0089_0090()
+31092: 		{
+31093: 			_0087_0099_0088();
+31094: 		}
+31095: 
+31096: 		[DllImport("user32.dll", EntryPoint = "SetFocus")]
+31097: 		public static extern int _0087_0098_009C(IntPtr P_0);
+31098: 
+31099: 		private void _0087_0098_009D(object P_0, EventArgs P_1)
+31100: 		{
+31101: 			//IL_017a: Unknown result type (might be due to invalid IL or missing references)
+31102: 			//IL_017f: Unknown result type (might be due to invalid IL or missing references)
+31103: 			//IL_0180: Unknown result type (might be due to invalid IL or missing references)
+31104: 			//IL_0193: Expected O, but got Unknown
+31105: 			//IL_018e: Unknown result type (might be due to invalid IL or missing references)
+31106: 			//IL_0193: Unknown result type (might be due to invalid IL or missing references)
+31107: 			//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+31108: 			//IL_0050: Unknown result type (might be due to invalid IL or missing references)
+31109: 			//IL_0051: Unknown result type (might be due to invalid IL or missing references)
+31110: 			//IL_0052: Unknown result type (might be due to invalid IL or missing references)
+31111: 			//IL_0208: Unknown result type (might be due to invalid IL or missing references)
+31112: 			//IL_020d: Unknown result type (might be due to invalid IL or missing references)
+31113: 			//IL_020e: Unknown result type (might be due to invalid IL or missing references)
+31114: 			//IL_0215: Unknown result type (might be due to invalid IL or missing references)
+31115: 			//IL_021d: Unknown result type (might be due to invalid IL or missing references)
+31116: 			//IL_0226: Unknown result type (might be due to invalid IL or missing references)
+31117: 			//IL_0239: Expected O, but got Unknown
+31118: 			//IL_0234: Unknown result type (might be due to invalid IL or missing references)
+31119: 			if (false /* original-file-bool-offset:548 */)
+31120: 			{
+31121: 				return;
+31122: 			}
+31123: 			Database workingDatabase = HostApplicationServices.WorkingDatabase;
+31124: 			_0087_0098_009C(Application.DocumentManager.MdiActiveDocument.Window.Handle);
+31125: 			if (_00874())
+31126: 			{
+31127: 				goto IL_0122;
+31128: 			}
+31129: 			base.Visible = false;
+31130: 			Point3d val = _009D._008B_008D("请指定中心点" /* string-offset:4544 */);
+31131: 			int num = default(int);
+31132: 			double num2 = default(double);
+31133: 			double num3 = default(double);
+31134: 			double num4 = default(double);
+31135: 			int num5 = default(int);
+31136: 			Random random = default(Random);
+31137: 			int num6 = default(int);
+31138: 			if (val == Point3d.Origin)
+31139: 			{
+31140: 				_ = 0;
+31141: 				if (_00873())
+31142: 				{
+31143: 					base.Visible = true;
+31144: 					return;
+31145: 				}
+31146: 			}
+31147: 			else
+31148: 			{
+31149: 				base.Visible = true;
+31150: 				num = Convert.ToInt32(_0087_0099_0094.Text);
+31151: 				num2 = _008F_008A._008B_0087_009D(_0087_0099_008B.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+31152: 				num3 = _008F_008A._008B_0087_009D(_0087_0099_008C.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+31153: 				num4 = 1000.0 * _008F_008A._008B_0087_009D(_0087_0099_0092.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+31154: 				num5 = Convert.ToInt32(_0087_0099_008D.Text);
+31155: 				if (!_00874())
+31156: 				{
+31157: 					random = new Random();
+31158: 					num6 = 0;
+31159: 					goto IL_0110;
+31160: 				}
+31161: 			}
+31162: 			goto IL_0245;
+31163: 			IL_0122:
+31164: 			double num7 = Math.PI * 2.0 * random.NextDouble();
+31165: 			double num8 = random.NextDouble();
+31166: 			double num9 = Math.Round((num3 - num2) * num8 + num2, 2);
+31167: 			Point3d val2 = default(Point3d);
+31168: 			double num10 = default(double);
+31169: 			((Point3d)(ref val2))._002Ector(num10 * Math.Cos(num7) + ((Point3d)(ref val)).X, num10 * Math.Sin(num7) + ((Point3d)(ref val)).Y, num9);
+31170: 			string text = ((object)_008B._0088_008D((Entity)new DBPoint
+31171: 			{
+31172: 				Position = val2
+31173: 			}, workingDatabase)/*cast due to .constrained prefix*/).ToString();
+31174: 			string text2 = "P" /* string-offset:984 */ + text.Substring(text.Length - 5, 4);
+31175: 			string text3 = "";
+31176: 			goto IL_0245;
+31177: 			IL_0245:
+31178: 			if (_0087_0099_0097.Checked)
+31179: 			{
+31180: 				text3 = text3 + text2 + "\n" /* string-offset:328 */;
+31181: 			}
+31182: 			if (_0087_0099_0096.Checked)
+31183: 			{
+31184: 				if (!_00873())
+31185: 				{
+31186: 				}
+31187: 				text3 += num9;
+31188: 			}
+31189: 			_008B._0088_008D((Entity)new MText
+31190: 			{
+31191: 				Location = val2,
+31192: 				Contents = text3,
+31193: 				TextHeight = num5,
+31194: 				Attachment = (AttachmentPoint)1
+31195: 			}, workingDatabase);
+31196: 			num6++;
+31197: 			goto IL_0110;
+31198: 			IL_0110:
+31199: 			if (num6 < num)
+31200: 			{
+31201: 				num10 = num4 * random.NextDouble();
+31202: 				goto IL_0122;
+31203: 			}
+31204: 		}
+31205: 
+31206: 		private void _0087_0098_009E(object P_0, EventArgs P_1)
+31207: 		{
+31208: 			_0097._008A_0093(this, "config.xml" /* string-offset:676 */, "RandomPoint" /* string-offset:4548 */);
+31209: 		}
+31210: 
+31211: 		private void _0087_0099_0086(object P_0, FormClosedEventArgs P_1)
+31212: 		{
+31213: 			_0097._008A_0091(this, "config.xml" /* string-offset:676 */, "RandomPoint" /* string-offset:4548 */);
+31214: 		}
+31215: 
+31216: 		private void _0087_0099_0087(object P_0, EventArgs P_1)
+31217: 		{
+31218: 			Close();
+31219: 		}
+31220: 
+31221: 		protected override void Dispose(bool P_0)
+31222: 		{
+31223: 			if (P_0)
+31224: 			{
+31225: 				_ = 1;
+31226: 				if (_00874() || _0087_0099_0089 != null)
+31227: 				{
+31228: 					_0087_0099_0089.Dispose();
+31229: 				}
+31230: 			}
+31231: 			base.Dispose(P_0);
+31232: 		}
+31233: 
+31234: 		private void _0087_0099_0088()
+31235: 		{
+31236: 			int num = 45;
+31237: 			while (true)
+31238: 			{

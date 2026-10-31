@@ -1,0 +1,11 @@
+530: 		public static XElement _008C_0098(string P_0, string P_1)
+531: 		{
+532: 			try
+533: 			{
+534: 				return XDocument.Load(P_0).XPathSelectElement(P_1);
+535: 			}
+536: 			catch (Exception innerException)
+537: 			{
+538: 				throw new Exception("获取XML节点失败: " /* string-offset:1000 */ + P_1, innerException);
+539: 			}
+540: 		}

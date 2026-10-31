@@ -1,0 +1,81 @@
+METHOD 0600056B \x8b\x97.\x8b\x96::\x89\x96\x90 RVA=725B0 file=707B0
+IL_0000: ldc.i4.1 
+IL_0001: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_0006: brtrue.s 102
+IL_0008: pop 
+IL_0009: ldc.i4 1072
+IL_000E: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0013: brfalse 253
+IL_0018: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_001D: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0022: dup 
+IL_0023: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_0028: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_002D: call 0x06000552 \x8b\x97.\x8b\x96::\x89\x95\x90
+IL_0032: pop 
+IL_0033: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0038: stloc.0 
+IL_0039: ldc.i4 6476
+IL_003E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0043: newobj 0x0A00007B Autodesk.AutoCAD.EditorInput.PromptEntityOptions::.ctor
+IL_0048: stloc.1 
+IL_0049: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_004E: brtrue.s 116
+IL_0050: ldloc.0 
+IL_0051: ldloc.1 
+IL_0052: callvirt 0x0A00007C Autodesk.AutoCAD.EditorInput.Editor::GetEntity
+IL_0057: stloc.2 
+IL_0058: br.s 103
+IL_005A: pop 
+IL_005B: ldloc.2 
+IL_005C: callvirt 0x0A00006D Autodesk.AutoCAD.EditorInput.PromptResult::get_Status
+IL_0061: ldc.i4 5100
+IL_0066: beq.s 117
+IL_0068: ret 
+IL_0069: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_006E: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0073: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_0078: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_007D: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_0082: stloc.3 
+IL_0083: ldloc.3 
+IL_0084: ldloc.2 
+IL_0085: callvirt 0x0A00007F Autodesk.AutoCAD.EditorInput.PromptEntityResult::get_ObjectId
+IL_008A: ldc.i4.0 
+IL_008B: callvirt 0x0A000080 Autodesk.AutoCAD.DatabaseServices.Transaction::GetObject
+IL_0090: castclass 0x01000010 Autodesk.AutoCAD.DatabaseServices.Entity
+IL_0095: callvirt 0x0A000081 Autodesk.AutoCAD.DatabaseServices.DBObject::get_XData
+IL_009A: stloc.s local(0x0004)
+IL_009C: ldc.i4.0 
+IL_009D: call 0x06000581 \x8b\x97.\x8b\x96::\x88\x9d
+IL_00A2: brfalse.s 216
+IL_00A4: pop 
+IL_00A5: ldloc.s local(0x0004)
+IL_00A7: ldnull 
+IL_00A8: call 0x0A000082 Autodesk.AutoCAD.DatabaseServices.ResultBuffer::op_Inequality
+IL_00AD: brfalse.s 198
+IL_00AF: ldloc.s local(0x0004)
+IL_00B1: callvirt 0x0A000083 Autodesk.AutoCAD.DatabaseServices.ResultBuffer::AsArray
+IL_00B6: stloc.s local(0x0005)
+IL_00B8: br.s 217
+IL_00BA: ldloc.0 
+IL_00BB: ldc.i4 6480
+IL_00C0: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00C5: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_00CA: leave.s 253
+IL_00CC: pop 
+IL_00CD: ldarg.0 
+IL_00CE: ldloc.s local(0x0005)
+IL_00D0: ldc.i4.1 
+IL_00D1: ldelema 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_00D6: call 0x0A000085 Autodesk.AutoCAD.DatabaseServices.TypedValue::get_Value
+IL_00DB: callvirt 0x0A000086 System.Object::ToString
+IL_00E0: call 0x06000561 \x8b\x97.\x8b\x96::\x89\x96\x86
+IL_00E5: leave.s 253
+IL_00E7: ldloc.3 
+IL_00E8: brfalse.s 252
+IL_00EA: ldloc.3 
+IL_00EB: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00F0: endfinally 
+IL_00F1: ret 
+

@@ -1,0 +1,17 @@
+﻿Module,Action,Prompt/Object,ManualInput,DownstreamUse,CanExistingDataDeriveIt,CodeAutomaticallyDerivesIt,Evidence
+A1,GetPoint x3,spiral points,YES,heading/offsets,Only if existing procedure points,NO,A1 overview.md
+A2,GetPoint x2/page,THR/DER/facility/track,YES,FAF/SOC/C/TP,No object handoff,NO,A2 cad-interactions.md
+A3,GetPoint facility+direction,facility/track,YES,tolerance/KK/overhead,No second-facility link,NO,A3 geometry-chain.md
+A4,GetPoint x2,facility candidate S/E,YES,length/bearing/boundaries,No association,NO,A4 input-frame.md
+A5,GetPoint/selection,runway/OAS anchors,YES,OAS/CAD,No procedure object,NO,A5 cad-interactions.md
+A6,GetPoint variants,template control points,YES,template geometry,No entity reuse,NO,A6 cad-interactions.md
+A7,GetPoint/selection,THR/DER/TP/KK/C,YES,frame/area/evaluator,Frame after picks,PARTIAL,A7 cad-interactions.md
+A8,GetPoint x2,KK/Ds points,YES,KK evaluation,No auto entity selection,NO,A8 event-map.md
+A9,GetPoint/selection,start/end/width,YES,PriSec/MOC,No cross-window association,NO,ObstacleData/pri-sec-evaluation.md
+A10,GetPoint x3,O/IF/IAF,YES,arcs/sectors,No nav lookup,NO,A10 input-points.md
+B1,GetPoint x3,start/turn/end,YES,turn geometry,No procedure object,NO,B1 input-frame.md
+B2,GetPoint x3,start/DF/end,YES,DF candidates,No procedure object,NO,B2 input-frame.md
+B3,GetPoint/selection,runway/obstacles/approach,YES,LNAV/APV,No MAPt auto derivation,PARTIAL,B3 cad-interactions.md
+B4,GetPoint/selection,runway/OAS/turn,YES,OAS/transition,No arbitrary TP,PARTIAL,B4 cad-interactions.md
+B5,GetPoint/selection,runway/turn/obstacle,YES,departure/evaluator,No UI evaluator dispatcher,PARTIAL,B5 cad-interactions.md
+Aux,GetEntity/GetSelection,entity for xInfo,YES,XData/utility,Command-specific,NO,doc/阶段8_人工交互矩阵.md

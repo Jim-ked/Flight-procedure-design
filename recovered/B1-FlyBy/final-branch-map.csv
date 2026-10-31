@@ -1,0 +1,9 @@
+﻿condition,method,point/list,CAD entity,business interpretation
+A <= 60°,_008C_0087::_0089_009D_0094 / _0089_009D_0095,main and companion boundary lists; sampled spiral/line candidates,four protection Polylines when boundary display is enabled,low-angle fly-by candidate branch; exact normative inner/outer label unresolved
+60° < A <= 90°,_008C_0087::_0089_009D_0094 / _0089_009D_0095,distance-selected candidate vertices and line carriers,same four protection Polylines; candidate points differ,"middle-angle branch, implementation behavior closed"
+A > 90°,_008C_0087::_0089_009D_0094 / _0089_009D_0095,wide-turn spiral/line candidates,same writer slots; no separate evaluator,"wide-angle branch, not a normative expansion label"
+A > 120°,_008C_0087 constructor/event warning branch,no substitute geometry formula proven,warning path; normal writer may still be reached by surrounding workflow,旁切转弯角度不得大于120度 warning; implementation limit
+15° connection,_0089_009D_0095 / candidate geometry,secondary carrier candidate and rotated point,BoundaryList04/02 Polyline slots,connection angle constant; not independently mapped to a standard width
+30° connection,_0089_009D_0094 / _0089_009D_0095,PI/6 candidate heading and distance selection,main/secondary boundary Polyline vertices,candidate connection branch; not a published protection angle
+checkBoxKK,writer P4,BoundaryList05 (two-point list),one open zero-bulge Polyline,UI identity KK′ closed; normative inner/outer meaning unresolved
+checkBoxNN,writer P5,BoundaryGroup02 (one or more three-point lists),Group of open zero-bulge Polylines,UI identity NN′ closed; normative primary/secondary meaning unresolved

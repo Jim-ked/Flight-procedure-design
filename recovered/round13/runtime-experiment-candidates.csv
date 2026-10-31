@@ -1,0 +1,11 @@
+﻿Module,Candidate,Purpose,Expected observation,E4 status
+A1,single spiral,verify one-point/heading path and endpoint,one sampled curve plus optional base circle/tangent list,DEFERRED
+A1,triple spiral,verify three manual origins and list concatenation,three component chains and optional third segment,DEFERRED
+A1,common-tangent checkbox,verify display list only,start/base-circle/spiral points; no solver prompt,DEFERRED
+A1,Polyline vs Spline,verify entity branch,open Polyline versus degree-4 Spline,DEFERRED
+B1,60° / 90°,exercise angle branch boundaries,different candidate list vertices in same writer slots,DEFERRED
+B1,SW1 != SW2,exercise independent descriptor widths,side/candidate selection changes without normative relabeling,DEFERRED
+B1,NN/KK visibility,verify list versus Group writer,"one Polyline for KK, Group for NN",DEFERRED
+B2,ATT=0,observe arithmetic degeneration,"ordinary writer path, no special dispatch",DEFERRED
+B2,normal ATT,compare earliest/latest scalar output,ATT and delay terms in center descriptor,DEFERRED
+B2,15° branch,observe connection candidate,candidate/SpiralGroup geometry changes,DEFERRED

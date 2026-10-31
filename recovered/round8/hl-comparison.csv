@@ -1,0 +1,6 @@
+﻿module,method,table,elevation,GP,rounding,provenance
+A5,none,none,none,none,none,P41B/P429 surface only; no HL/minima controls or event path
+B3 APV,P5F2,"H35/8,A40/13,B43/18,C46/22,D49/26",Elev>900: HLr*.02*Elev/300,GP>3.2: (GP-3.2)*HLr*.05,no round,frozen B3 hl-correction.md; different MethodDef
+B4 business,P55F,"A40/13,B43/18,C46/22,D49/26",Elev>900: HLr*.02*Elev/300,none,no round,SOC consumer; frozen B4
+B4 minima,P567,same four rows,same increment,none,round increment2,"orphan minima body, not A5"
+B4 display,P56A,HLm/r text,same increment,none,round total2,HLcor display not read by business

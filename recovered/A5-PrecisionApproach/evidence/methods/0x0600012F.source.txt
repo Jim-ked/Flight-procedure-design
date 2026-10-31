@@ -1,0 +1,54 @@
+239: 		public unsafe static _008F_008E _008C_008D(this DBPoint P_0, string P_1)
+240: 		{
+241: 			//IL_0008: Unknown result type (might be due to invalid IL or missing references)
+242: 			//IL_000d: Unknown result type (might be due to invalid IL or missing references)
+243: 			//IL_001c: Unknown result type (might be due to invalid IL or missing references)
+244: 			//IL_0021: Unknown result type (might be due to invalid IL or missing references)
+245: 			//IL_0030: Unknown result type (might be due to invalid IL or missing references)
+246: 			//IL_0035: Unknown result type (might be due to invalid IL or missing references)
+247: 			//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
+248: 			//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
+249: 			_008F_008E obj = new _008F_008E();
+250: 			Point3d position = P_0.Position;
+251: 			obj.X = ((Point3d)(ref position)).X;
+252: 			position = P_0.Position;
+253: 			obj.Y = ((Point3d)(ref position)).Y;
+254: 			position = P_0.Position;
+255: 			obj.Z = ((Point3d)(ref position)).Z;
+256: 			obj.ID = P_1;
+257: 			_ = 1;
+258: 			string text = default(string);
+259: 			if (!_4())
+260: 			{
+261: 				ObjectId objectId = default(ObjectId);
+262: 				if (_3())
+263: 				{
+264: 					obj.Name = "";
+265: 					try
+266: 					{
+267: 						_008E_008D obj2 = _008E_008D._008A_0099_0097((Entity)(object)P_0);
+268: 						_3();
+269: 						if ((_4() || obj2 != null) && !string.IsNullOrWhiteSpace(obj2.EntityName))
+270: 						{
+271: 							obj.Name = obj2.EntityName;
+272: 						}
+273: 					}
+274: 					catch
+275: 					{
+276: 					}
+277: 					if (!string.IsNullOrWhiteSpace(obj.Name))
+278: 					{
+279: 						goto IL_00f2;
+280: 					}
+281: 					objectId = ((DBObject)P_0).ObjectId;
+282: 				}
+283: 				text = ((object)(*(ObjectId*)(&objectId))/*cast due to .constrained prefix*/).ToString();
+284: 			}
+285: 			if (text.Length > 6)
+286: 			{
+287: 				obj.Name = "P" /* string-offset:984 */ + text.Substring(text.Length - 5, 4);
+288: 			}
+289: 			goto IL_00f2;
+290: 			IL_00f2:
+291: 			return obj;
+292: 		}

@@ -1,0 +1,21 @@
+METHOD 06000352 \x89\x93.\x89\x92::.ctor RVA=4515 file=2715
+IL_0000: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_0005: brtrue.s 47
+IL_0007: ldarg.0 
+IL_0008: ldc.r8 0.017453292519943295
+IL_0011: stfld 0x0400028C \x89\x93.\x89\x92::\x87\x9b\x95
+IL_0016: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_001B: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_0020: brtrue.s 38
+IL_0022: pop 
+IL_0023: br.s 41
+IL_0025: pop 
+IL_0026: br.s 47
+IL_0028: ldarg.0 
+IL_0029: call 0x0A000277 System.Windows.Forms.Form::.ctor
+IL_002E: ldarg.0 
+IL_002F: call 0x0600037B \x89\x93.\x89\x92::\x87\x9b\x8f
+IL_0034: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_0039: brfalse.s 41
+IL_003B: ret 
+

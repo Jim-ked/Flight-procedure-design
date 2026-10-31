@@ -1,0 +1,31 @@
+METHOD 06000864 \x8f\x99.\x8f\x98::\x8b\x8c\x9e RVA=9390C file=91B0C
+IL_0000: ldc.i4.1 
+IL_0001: call 0x0600086A \x8f\x99.\x8f\x98::\x8a\x8a
+IL_0006: brtrue.s 30
+IL_0008: pop 
+IL_0009: ldarg.0 
+IL_000A: ldfld 0x04000785 \x8f\x99.\x8f\x98::\x8b\x8d\x89
+IL_000F: stloc.0 
+IL_0010: br.s 33
+IL_0012: pop 
+IL_0013: br.s 55
+IL_0015: ldloc.0 
+IL_0016: stloc.2 
+IL_0017: call 0x06000869 \x8f\x99.\x8f\x98::\x8a\x89
+IL_001C: brtrue.s 42
+IL_001E: ldloc.2 
+IL_001F: ldarg.1 
+IL_0020: call 0x0A00039D System.Delegate::Remove
+IL_0025: castclass 0x0100001C System.EventHandler
+IL_002A: stloc.1 
+IL_002B: ldarg.0 
+IL_002C: ldflda 0x04000785 \x8f\x99.\x8f\x98::\x8b\x8d\x89
+IL_0031: ldloc.1 
+IL_0032: ldloc.2 
+IL_0033: call 0x2B00002F 
+IL_0038: stloc.0 
+IL_0039: ldloc.0 
+IL_003A: ldloc.2 
+IL_003B: bne.un.s 33
+IL_003D: ret 
+

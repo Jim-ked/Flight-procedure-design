@@ -1,0 +1,68 @@
+{
+  "layers": {
+    "formula": 854,
+    "geometry": 158,
+    "cross-module comparison": 4,
+    "surface-classification": 168,
+    "obstacle": 148,
+    "degenerate": 13,
+    "serialization": 6,
+    "KML": 1,
+    "event/reachability": 3
+  },
+  "static_assertions": 18,
+  "database_cases": 27,
+  "artifacts": [
+    {
+      "path": "assertions.csv",
+      "size": 74321,
+      "sha256": "aefcfbdb4b2671afb7cd644633bd8c4b5578da733acfd92d4f4c1ca95a006b08",
+      "role": "E3 input/output or original row fixture"
+    },
+    {
+      "path": "cad-lists.csv",
+      "size": 2777,
+      "sha256": "bed52a1317c54280861232bb1accd5bd90ca8ed10404d319c65fd9b9c0f137d1",
+      "role": "E3 input/output or original row fixture"
+    },
+    {
+      "path": "database-rows.tsv",
+      "size": 5171,
+      "sha256": "e9c740090e5c6f918be04530a06ae0849b46715cd2a5bd86cca8f2c5be7ebd7a",
+      "role": "E3 input/output or original row fixture"
+    },
+    {
+      "path": "failure.txt",
+      "size": 66,
+      "sha256": "ffe46447b0d1de3f604e1cbe8c64f34429edfd3066b66f7bad2d0492f20b2861",
+      "role": "historical corrected fixture expectation; not a current failure"
+    },
+    {
+      "path": "oas-state.txt",
+      "size": 193,
+      "sha256": "fb3fa5b370e17ba2c88159741bc43e6dea65870a5269793b295602ba934a4625",
+      "role": "E3 input/output or original row fixture"
+    },
+    {
+      "path": "surface-observed-labels.txt",
+      "size": 43,
+      "sha256": "efcddc16453ff99795fa9c9fe1d34722eafa2e5160013a10e742f2cc84b7487e",
+      "role": "E3 input/output or original row fixture"
+    },
+    {
+      "path": "transition-points.csv",
+      "size": 321,
+      "sha256": "5b48a43ed5761a23a6cecaa550edbab9e7027d3b87cc034bf36b2d17fdc4069b",
+      "role": "E3 input/output or original row fixture"
+    }
+  ],
+  "applicability": {
+    "arbitrary_left_right_turn": "N/A: no original controls/branch/geometry",
+    "small_large_turn_angles": "N/A: no original turn angle input",
+    "zero_configurable_width": "N/A: widths are literal1852/3704; zero plane B tested",
+    "KML_regions": "N/A: original handler nop/ret; no geometry exporter",
+    "original_runtime": "not performed",
+    "UI_bypass_sixth": "not established; only numeric method can receive arbitrary records"
+  },
+  "oracle": "independent recovered sources and algebra/reference branches, never original DLL"
+}

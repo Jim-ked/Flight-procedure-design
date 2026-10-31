@@ -1,0 +1,35 @@
+METHOD 06000419 \x8a\x94.\x8a\x93::\x88\x91\x86 RVA=52CC8 file=50EC8
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000395 \x8a\x94.\x8a\x93::\x88\x91\x91
+IL_0006: ldarg.1 
+IL_0007: neg 
+IL_0008: ldc.r8 -0.2617993877991494
+IL_0011: call 0x0A000064 System.Math::Cos
+IL_0016: mul 
+IL_0017: ldarg.1 
+IL_0018: neg 
+IL_0019: ldc.r8 -0.2617993877991494
+IL_0022: call 0x0A000065 System.Math::Sin
+IL_0027: mul 
+IL_0028: ldc.r8 0.0
+IL_0031: call 0x06000810 \x8f\x8f.\x8f\x8e::\x8b\x89\x8e
+IL_0036: stloc.0 
+IL_0037: newobj 0x0A000126 0x1B00000F::.ctor
+IL_003C: dup 
+IL_003D: ldloc.0 
+IL_003E: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0043: dup 
+IL_0044: ldarg.0 
+IL_0045: ldfld 0x04000395 \x8a\x94.\x8a\x93::\x88\x91\x91
+IL_004A: callvirt 0x0A00012A 0x1B00000F::Add
+IL_004F: dup 
+IL_0050: ldarg.0 
+IL_0051: ldfld 0x04000395 \x8a\x94.\x8a\x93::\x88\x91\x91
+IL_0056: call 0x0600080D \x8f\x8f.\x8f\x8e::\x8b\x89\x8b
+IL_005B: callvirt 0x0A00012A 0x1B00000F::Add
+IL_0060: dup 
+IL_0061: ldloc.0 
+IL_0062: call 0x0600080D \x8f\x8f.\x8f\x8e::\x8b\x89\x8b
+IL_0067: callvirt 0x0A00012A 0x1B00000F::Add
+IL_006C: ret 
+

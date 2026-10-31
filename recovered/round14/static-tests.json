@@ -1,0 +1,109 @@
+{
+  "scope": "Round14 additive A2/A9 static closure; no DLL/AutoCAD/E4 execution",
+  "tests": [
+    {
+      "layer": "formula",
+      "id": "a2-six",
+      "assertion": "FAF/NPA/PA/missed/departure/C formulas and units",
+      "result": "PASS"
+    },
+    {
+      "layer": "formula",
+      "id": "npa-time",
+      "assertion": "one seconds reader, default 18, no 3+15 split",
+      "result": "PASS"
+    },
+    {
+      "layer": "formula",
+      "id": "pa-hl",
+      "assertion": "HLcor/Xz formula, HLcor=0 and negative distance",
+      "result": "PASS"
+    },
+    {
+      "layer": "formula",
+      "id": "c-constant",
+      "assertion": "general seconds formula; default C path wind=56 and time=6",
+      "result": "PASS"
+    },
+    {
+      "layer": "event",
+      "id": "a2-cancel",
+      "assertion": "per-point Origin versus equality-only cancel differences",
+      "result": "PASS"
+    },
+    {
+      "layer": "event",
+      "id": "a2-bindings",
+      "assertion": "comboXz TabIndexChanged and elevation Validated bindings",
+      "result": "PASS"
+    },
+    {
+      "layer": "serialization",
+      "id": "wscalculine",
+      "assertion": "1001/1000 buffer, 10+28 members, endpoint overwrite",
+      "result": "PASS"
+    },
+    {
+      "layer": "classification",
+      "id": "a2-reachability",
+      "assertion": "six public buttons mapped to calculation/CAD handlers",
+      "result": "PASS"
+    },
+    {
+      "layer": "classification",
+      "id": "a9-reachability",
+      "assertion": "Screen/Evaluate/Mark chain mapped",
+      "result": "PASS"
+    },
+    {
+      "layer": "formula",
+      "id": "a9-normal",
+      "assertion": "strict interval, W1/2 primary end, MOC interpolation",
+      "result": "PASS"
+    },
+    {
+      "layer": "formula",
+      "id": "a9-if",
+      "assertion": "inclusive interval, W1 primary end, same outer",
+      "result": "PASS"
+    },
+    {
+      "layer": "formula",
+      "id": "a9-secondary",
+      "assertion": "outer-primary reduction and zero denominator fallback",
+      "result": "PASS"
+    },
+    {
+      "layer": "degenerate",
+      "id": "a9-boundaries",
+      "assertion": "start/end, exact primary/outer, zero width/length, negative localY",
+      "result": "PASS"
+    },
+    {
+      "layer": "cross-module",
+      "id": "a2-hl",
+      "assertion": "A2 versus B3/B4/A5 direct-reader comparison",
+      "result": "PASS"
+    },
+    {
+      "layer": "cross-module",
+      "id": "a9-evaluators",
+      "assertion": "A9 versus A8/A10/B3/A7 bounded caller comparison",
+      "result": "PASS"
+    },
+    {
+      "layer": "negative-evidence",
+      "id": "a9-cad",
+      "assertion": "no A9 protection Polyline/Line/Arc/Circle/Group writer",
+      "result": "PASS"
+    },
+    {
+      "layer": "negative-evidence",
+      "id": "wscalculine-readers",
+      "assertion": "no direct A7/A8/A9/A10/B3/B4/B5 reader",
+      "result": "PASS"
+    }
+  ],
+  "count": 17,
+  "all_pass": true
+}

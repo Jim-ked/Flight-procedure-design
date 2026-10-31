@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>导入图标库 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 辅助功能 / 导入图标库</div>
+        <h1>C1.导入图标库</h1>
+        <div class="cmd">命令：Y90_LoadBlock</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>辅助功能</h2>
+                <ul>
+                    <li><a href="FormBlockImport.html" class="active">C1.导入图标库</a></li>
+                    <li><a href="LayerFactoryForm.html">C2.批量添加图层</a></li>
+                    <li><a href="FormExLine.html">C3.绘制外扩线</a></li>
+                    <li><a href="FormRandPoint.html">C4.随机添加高度点</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">传统程序 / PBN 程序</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【导入图标库】从外部图库（DWG）文件中把<strong>自定义图块</strong>导入到当前图纸。打开图库后，用导入按钮在“图库图块”和“待导入”之间选择需要的图块，确认后一次性导入当前图纸。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormBlockImport.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormBlockImport.png" alt="FormBlockImport 界面截图" width="370"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>打开（按钮）</td><td>选择要读取的图库 DWG 文件。</td></tr>
+                        <tr><td>图块列表</td><td>显示图库中可用的图块。</td></tr>
+                        <tr><td>=&gt; / &lt;=（按钮）</td><td>图块全部移入/移出至列表中。</td></tr>
+                        <tr><td>-&gt / &lt;-（按钮）</td><td>图块单项移入/移出至列表中。</td></tr>
+                        <tr><td>确定（按钮）</td><td>把待导入的图块写入当前图纸。</td></tr>
+                        <tr><td>取消（按钮）</td><td>放弃导入并关闭窗口。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y90_LoadBlock</code> 打开窗口。</li>
+                    <li>点击【打开】，选择图库 DWG 文件，列表显示其中图块。</li>
+                    <li>用 <code>=&gt;</code> / <code>-&gt;</code> 把需要的图块移入待导入列表（<code>&lt;-</code> / <code>&lt;=</code> 可移出）。</li>
+                    <li>点击【确定】完成导入。</li>
+                </ul>
+                <div class="tip"><strong>提示：</strong>导入后的图块即成为当前图纸的块定义，可在后续作图中直接插入使用。</div>
+            </div>
+            <div class="pager">
+                <a href="FormPbnDepEvl.html">← 上一篇：B5.PBN 离场</a>
+                <a href="LayerFactoryForm.html">下一篇：C2.批量添加图层 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

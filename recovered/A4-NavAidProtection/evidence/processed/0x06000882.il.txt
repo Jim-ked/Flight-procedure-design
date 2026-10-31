@@ -1,0 +1,9 @@
+METHOD 06000882 \x90\x9c.\x90\x9b::\x8b\x8f\x96 RVA=66BE file=48BE
+IL_0000: ldsfld 0x040007A1 \x90\x9c.\x90\x9b::\x8b\x90\x9e
+IL_0005: brtrue.s 19
+IL_0007: call 0x06000883 \x90\x9c.\x90\x9b::\x8b\x8f\x97
+IL_000C: ldc.i4.1 
+IL_000D: stsfld 0x040007A1 \x90\x9c.\x90\x9b::\x8b\x90\x9e
+IL_0012: ldsfld 0x0400079B \x90\x9c.\x90\x9b::\x8b\x91\x86
+IL_0017: ret 
+

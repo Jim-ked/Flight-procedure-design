@@ -1,0 +1,12 @@
+METHOD 0600016F \x87\x95.\x87\x94::.cctor RVA=3524 file=1724
+IL_0000: nop 
+IL_0001: ldtoken 0x0200001D \x87\x95.\x87\x94
+IL_0006: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_000B: call 0x0A000032 System.ComponentModel.LicenseManager::Validate
+IL_0010: ldsfld 0x04000022 .\x90\x88::<>9
+IL_0015: ldftn 0x06000174 .\x90\x88::\x8b\x8d\x9d
+IL_001B: newobj 0x0A0001FF 0x1B000025::.ctor
+IL_0020: newobj 0x0A000200 0x1B000022::.ctor
+IL_0025: stsfld 0x04000021 \x87\x95.\x87\x94::\x8d\x95
+IL_002A: ret 
+

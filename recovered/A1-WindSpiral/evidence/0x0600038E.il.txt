@@ -1,0 +1,13 @@
+METHOD 0600038E \x89\x95.\x89\x94::\x87\x9e\x8b RVA=4A3B8 file=485B8
+IL_0000: ldarg.1 
+IL_0001: ldc.r8 180.0
+IL_000A: mul 
+IL_000B: ldc.r8 3.141592653589793
+IL_0014: div 
+IL_0015: ldc.i4.0 
+IL_0016: call 0x0A0001C8 System.Math::Round
+IL_001B: stloc.0 
+IL_001C: ldloca.s local(0x0000)
+IL_001E: call 0x0A0001B7 System.Double::ToString
+IL_0023: ret 
+

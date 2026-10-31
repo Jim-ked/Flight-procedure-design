@@ -1,0 +1,79 @@
+METHOD 060002DC \x89\x89.\x89\x88::\x87\x8e\x8b RVA=30380 file=2E580
+IL_0000: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_0005: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_000A: brtrue 185
+IL_000F: pop 
+IL_0010: ldc.i4 428
+IL_0015: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_001A: brtrue 186
+IL_001F: ldarg.0 
+IL_0020: ldc.r8 0.0
+IL_0029: blt.s 58
+IL_002B: ldarg.0 
+IL_002C: br.s 69
+IL_002E: ldarg.0 
+IL_002F: ldc.r8 6.283185307179586
+IL_0038: add 
+IL_0039: starg.s argument(0x0000)
+IL_003B: ldarg.1 
+IL_003C: ldc.r8 0.0
+IL_0045: blt.s 86
+IL_0047: ldarg.1 
+IL_0048: br.s 97
+IL_004A: ldarg.1 
+IL_004B: ldc.r8 6.283185307179586
+IL_0054: add 
+IL_0055: starg.s argument(0x0001)
+IL_0057: ldc.r8 0.0
+IL_0060: stloc.0 
+IL_0061: ldarg.0 
+IL_0062: ldarg.1 
+IL_0063: bge.un.s 149
+IL_0065: ldarg.1 
+IL_0066: ldarg.0 
+IL_0067: sub 
+IL_0068: ldc.r8 3.141592653589793
+IL_0071: bgt.un.s 133
+IL_0073: ldarg.1 
+IL_0074: ldarg.0 
+IL_0075: sub 
+IL_0076: stloc.0 
+IL_0077: br.s 186
+IL_0079: ldc.r8 6.283185307179586
+IL_0082: ldarg.0 
+IL_0083: add 
+IL_0084: ldarg.1 
+IL_0085: sub 
+IL_0086: stloc.0 
+IL_0087: br.s 186
+IL_0089: ldarg.0 
+IL_008A: ldarg.1 
+IL_008B: sub 
+IL_008C: ldc.r8 3.141592653589793
+IL_0095: bgt.un.s 169
+IL_0097: ldarg.0 
+IL_0098: ldarg.1 
+IL_0099: sub 
+IL_009A: stloc.0 
+IL_009B: br.s 186
+IL_009D: ldc.r8 6.283185307179586
+IL_00A6: ldarg.1 
+IL_00A7: add 
+IL_00A8: ldarg.0 
+IL_00A9: sub 
+IL_00AA: stloc.0 
+IL_00AB: br.s 186
+IL_00AD: pop 
+IL_00AE: ldc.r8 1.0
+IL_00B7: ldloc.0 
+IL_00B8: ldc.r8 2.0
+IL_00C1: div 
+IL_00C2: call 0x0A000064 System.Math::Cos
+IL_00C7: sub 
+IL_00C8: ldloc.0 
+IL_00C9: ldc.r8 2.0
+IL_00D2: div 
+IL_00D3: call 0x0A000065 System.Math::Sin
+IL_00D8: div 
+IL_00D9: ret 
+

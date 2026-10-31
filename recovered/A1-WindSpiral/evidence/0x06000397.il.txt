@@ -1,0 +1,101 @@
+METHOD 06000397 \x89\x95.\x89\x94::\x87\x9e\x94 RVA=4A888 file=48A88
+IL_0000: nop 
+IL_0001: newobj 0x0A0002F6 0x1B000030::.ctor
+IL_0006: dup 
+IL_0007: ldc.i4 5068
+IL_000C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0011: newobj 0x0A0002F6 0x1B000030::.ctor
+IL_0016: dup 
+IL_0017: ldc.i4 5072
+IL_001C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0021: ldarg.0 
+IL_0022: ldfld 0x040002E3 \x89\x95.\x89\x94::\x88\x86\x9b
+IL_0027: ldfld 0x0400078F \x8f\x99.\x8f\x98::\x8b\x8d\x93
+IL_002C: ldc.i4 1984
+IL_0031: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0036: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_003B: box 0x010000D2 System.Double
+IL_0040: callvirt 0x0A0002F9 0x1B000030::set_Item
+IL_0045: dup 
+IL_0046: ldc.i4 536
+IL_004B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0050: ldarg.0 
+IL_0051: ldfld 0x040002E3 \x89\x95.\x89\x94::\x88\x86\x9b
+IL_0056: ldfld 0x04000790 \x8f\x99.\x8f\x98::\x8b\x8d\x94
+IL_005B: ldc.i4 1984
+IL_0060: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0065: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_006A: box 0x010000D2 System.Double
+IL_006F: callvirt 0x0A0002F9 0x1B000030::set_Item
+IL_0074: dup 
+IL_0075: ldc.i4 5076
+IL_007A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_007F: ldarg.0 
+IL_0080: ldfld 0x040002E3 \x89\x95.\x89\x94::\x88\x86\x9b
+IL_0085: ldfld 0x0400078D \x8f\x99.\x8f\x98::\x8b\x8d\x91
+IL_008A: ldc.i4 1984
+IL_008F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0094: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_0099: box 0x010000D2 System.Double
+IL_009E: callvirt 0x0A0002F9 0x1B000030::set_Item
+IL_00A3: dup 
+IL_00A4: ldc.i4 5080
+IL_00A9: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00AE: ldarg.0 
+IL_00AF: ldfld 0x040002E3 \x89\x95.\x89\x94::\x88\x86\x9b
+IL_00B4: ldfld 0x0400078B \x8f\x99.\x8f\x98::\x8b\x8d\x8f
+IL_00B9: ldc.i4 1984
+IL_00BE: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00C3: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_00C8: box 0x010000D2 System.Double
+IL_00CD: callvirt 0x0A0002F9 0x1B000030::set_Item
+IL_00D2: dup 
+IL_00D3: ldc.i4 5084
+IL_00D8: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00DD: ldarg.0 
+IL_00DE: ldfld 0x040002E3 \x89\x95.\x89\x94::\x88\x86\x9b
+IL_00E3: ldfld 0x0400078A \x8f\x99.\x8f\x98::\x8b\x8d\x8e
+IL_00E8: ldc.i4 1984
+IL_00ED: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00F2: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_00F7: box 0x010000D2 System.Double
+IL_00FC: callvirt 0x0A0002F9 0x1B000030::set_Item
+IL_0101: dup 
+IL_0102: ldc.i4 5088
+IL_0107: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_010C: ldarg.0 
+IL_010D: ldfld 0x040002E3 \x89\x95.\x89\x94::\x88\x86\x9b
+IL_0112: callvirt 0x06000857 \x8f\x99.\x8f\x98::\x8b\x8c\x96
+IL_0117: box 0x01000110 System.Boolean
+IL_011C: callvirt 0x0A0002F9 0x1B000030::set_Item
+IL_0121: dup 
+IL_0122: ldc.i4 5092
+IL_0127: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_012C: ldarg.0 
+IL_012D: ldfld 0x040002E3 \x89\x95.\x89\x94::\x88\x86\x9b
+IL_0132: callvirt 0x06000859 \x8f\x99.\x8f\x98::\x8b\x8c\x99
+IL_0137: box 0x01000110 System.Boolean
+IL_013C: callvirt 0x0A0002F9 0x1B000030::set_Item
+IL_0141: callvirt 0x0A0002F9 0x1B000030::set_Item
+IL_0146: stloc.0 
+IL_0147: newobj 0x0A0002FA System.Web.Script.Serialization.JavaScriptSerializer::.ctor
+IL_014C: ldloc.0 
+IL_014D: callvirt 0x0A0002FB System.Web.Script.Serialization.JavaScriptSerializer::Serialize
+IL_0152: stloc.1 
+IL_0153: leave.s 403
+IL_0155: stloc.2 
+IL_0156: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_015B: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0160: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0165: ldc.i4 5096
+IL_016A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_016F: ldloc.2 
+IL_0170: callvirt 0x0A000055 System.Exception::get_Message
+IL_0175: call 0x0A00008B System.String::Concat
+IL_017A: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_017F: ldstr ''
+IL_0184: stloc.1 
+IL_0185: leave.s 403
+IL_0187: ldloc.1 
+IL_0188: ret 
+

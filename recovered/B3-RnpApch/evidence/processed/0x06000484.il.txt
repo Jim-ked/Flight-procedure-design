@@ -1,0 +1,52 @@
+METHOD 06000484 \x8b\x8d.\x8b\x8c::\x88\x9b\x8a RVA=5AE3C file=5903C
+IL_0000: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0005: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000A: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_000F: pop 
+IL_0010: ldarg.0 
+IL_0011: ldfld 0x04000448 \x8b\x8d.\x8b\x8c::\x88\x9d\x87
+IL_0016: brtrue.s 50
+IL_0018: ldc.i4.0 
+IL_0019: call 0x060004B5 \x8b\x8d.\x8b\x8c::\x88\x93
+IL_001E: brfalse.s 47
+IL_0020: pop 
+IL_0021: br.s 89
+IL_0023: pop 
+IL_0024: br.s 63
+IL_0026: ldarg.0 
+IL_0027: ldfld 0x04000448 \x8b\x8d.\x8b\x8c::\x88\x9d\x87
+IL_002C: callvirt 0x0A0001C3 0x1B00000A::get_Count
+IL_0031: brtrue.s 64
+IL_0033: ret 
+IL_0034: ldarg.2 
+IL_0035: callvirt 0x0A0002C5 System.Windows.Forms.DataGridViewCellEventArgs::get_ColumnIndex
+IL_003A: ldc.i4.0 
+IL_003B: blt.s 161
+IL_003D: ldarg.2 
+IL_003E: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_0043: ldc.i4.0 
+IL_0044: bge.s 90
+IL_0046: call 0x060004B6 \x8b\x8d.\x8b\x8c::\x88\x94
+IL_004B: brfalse.s 161
+IL_004D: ret 
+IL_004E: ldarg.0 
+IL_004F: ldfld 0x04000449 \x8b\x8d.\x8b\x8c::\x88\x9d\x88
+IL_0054: ldarg.0 
+IL_0055: ldfld 0x04000451 \x8b\x8d.\x8b\x8c::\x88\x9d\x90
+IL_005A: callvirt 0x0A00016F System.Windows.Forms.DataGridView::get_Rows
+IL_005F: ldarg.2 
+IL_0060: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_0065: callvirt 0x0A0002C7 System.Windows.Forms.DataGridViewRowCollection::get_Item
+IL_006A: callvirt 0x0A000173 System.Windows.Forms.DataGridViewRow::get_Cells
+IL_006F: ldc.i4.0 
+IL_0070: callvirt 0x0A0002C8 System.Windows.Forms.DataGridViewCellCollection::get_Item
+IL_0075: callvirt 0x0A000175 System.Windows.Forms.DataGridViewCell::get_Value
+IL_007A: callvirt 0x0A000086 System.Object::ToString
+IL_007F: callvirt 0x0A0002C9 0x1B00000C::get_Item
+IL_0084: ldarg.0 
+IL_0085: ldfld 0x04000448 \x8b\x8d.\x8b\x8c::\x88\x9d\x87
+IL_008A: call 0x060000B0 \x8e.\x8d::\x89\x93
+IL_008F: call 0x060000AF \x8e.\x8d::\x89\x92
+IL_0094: ret 
+IL_0095: ret 
+

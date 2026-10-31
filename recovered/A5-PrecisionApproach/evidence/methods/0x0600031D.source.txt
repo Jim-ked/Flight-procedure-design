@@ -1,0 +1,53 @@
+25533: 		private void _0087_0092_008C(object P_0, EventArgs P_1)
+25534: 		{
+25535: 			OpenFileDialog openFileDialog;
+25536: 			do
+25537: 			{
+25538: 				if (!false /* original-file-bool-offset:500 */)
+25539: 				{
+25540: 					openFileDialog = new OpenFileDialog();
+25541: 					_ = 0;
+25542: 					if (_0087_009F())
+25543: 					{
+25544: 						openFileDialog.Filter = "JSON文件 (*.json)|*.json|文本文件 (*.txt)|*.txt" /* string-offset:4056 */;
+25545: 						openFileDialog.FilterIndex = 1;
+25546: 						openFileDialog.RestoreDirectory = true;
+25547: 						openFileDialog.Title = "导入OAS参数文件" /* string-offset:4076 */;
+25548: 						break;
+25549: 					}
+25550: 					continue;
+25551: 				}
+25552: 				return;
+25553: 			}
+25554: 			while (_00870());
+25555: 			if (openFileDialog.ShowDialog() != DialogResult.OK)
+25556: 			{
+25557: 				return;
+25558: 			}
+25559: 			try
+25560: 			{
+25561: 				string text = File.ReadAllText(openFileDialog.FileName, Encoding.UTF8);
+25562: 				bool flag = default(bool);
+25563: 				if (string.IsNullOrEmpty(text))
+25564: 				{
+25565: 					_00870();
+25566: 					if (_0087_009F() || !_0087_009F())
+25567: 					{
+25568: 						MessageBox.Show("文件内容为空。" /* string-offset:4080 */, "错误" /* string-offset:340 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+25569: 						return;
+25570: 					}
+25571: 				}
+25572: 				else
+25573: 				{
+25574: 					flag = _0087_0092_008A("JSON 文件" /* string-offset:4084 */);
+25575: 				}
+25576: 				_0087_0092_0089(text, flag);
+25577: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\nOAS参数已从文件导入：" /* string-offset:4088 */ + openFileDialog.FileName);
+25578: 				string text2 = (flag ? "全部参数" /* string-offset:4096 */ : "仅 OAS 面参数" /* string-offset:4092 */);
+25579: 				MessageBox.Show("OAS参数导入成功！\n导入模式：" /* string-offset:4100 */ + text2, "成功" /* string-offset:4104 */, MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
+25580: 			}
+25581: 			catch (Exception ex)
+25582: 			{
+25583: 				MessageBox.Show("导入失败：" /* string-offset:4108 */ + ex.Message, "错误" /* string-offset:340 */, MessageBoxButtons.OK, MessageBoxIcon.Hand);
+25584: 			}
+25585: 		}

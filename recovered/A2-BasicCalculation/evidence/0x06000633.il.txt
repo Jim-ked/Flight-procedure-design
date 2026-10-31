@@ -1,0 +1,43 @@
+METHOD 06000633 \x8d\x89.\x8d\x88::\x8a\x90\x8d RVA=8834C file=8654C
+IL_0000: nop 
+IL_0001: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0006: dup 
+IL_0007: brtrue.s 100
+IL_0009: pop 
+IL_000A: call 0x06000636 \x8d\x89.\x8d\x88::\x89\x86
+IL_000F: call 0x06000635 \x8d\x89.\x8d\x88::\x88z
+IL_0014: brfalse.s 53
+IL_0016: pop 
+IL_0017: ldc.i4 2
+IL_001C: stloc local(0x0001)
+IL_0020: call 0x06000636 \x8d\x89.\x8d\x88::\x89\x86
+IL_0025: brtrue.s 115
+IL_0027: br.s 70
+IL_0029: pop 
+IL_002A: ldc.i4 3
+IL_002F: stloc local(0x0001)
+IL_0033: call 0x06000635 \x8d\x89.\x8d\x88::\x88z
+IL_0038: brfalse.s 115
+IL_003A: ldloc local(0x0001)
+IL_003E: switch [97, 115, 97, 115]
+IL_0053: br.s 115
+IL_0055: ldnull 
+IL_0056: br.s 105
+IL_0058: call 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_005D: stloc.0 
+IL_005E: ldloc.0 
+IL_005F: ldnull 
+IL_0060: call 0x0A000054 Autodesk.AutoCAD.Runtime.DisposableWrapper::op_Inequality
+IL_0065: brfalse.s 142
+IL_0067: ldloc.0 
+IL_0068: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_006D: ldc.i4 328
+IL_0072: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0077: ldarg.0 
+IL_0078: call 0x0A00008B System.String::Concat
+IL_007D: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_0082: leave.s 147
+IL_0084: pop 
+IL_0085: leave.s 147
+IL_0087: ret 
+

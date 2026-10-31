@@ -1,0 +1,52 @@
+METHOD 06000476 \x8b\x8d.\x8b\x8c::\x88\x9a\x95 RVA=5A2BC file=584BC
+IL_0000: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0005: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000A: dup 
+IL_000B: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0010: pop 
+IL_0011: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_0016: stloc.0 
+IL_0017: ldc.i4.0 
+IL_0018: call 0x060004B5 \x8b\x8d.\x8b\x8c::\x88\x93
+IL_001D: brfalse.s 65
+IL_001F: pop 
+IL_0020: call 0x060004B5 \x8b\x8d.\x8b\x8c::\x88\x93
+IL_0025: brfalse.s 51
+IL_0027: ldloc.0 
+IL_0028: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_002D: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_0032: stloc.1 
+IL_0033: br.s 66
+IL_0035: pop 
+IL_0036: ldarg.0 
+IL_0037: ldloc.0 
+IL_0038: ldc.i4.0 
+IL_0039: ldc.i4.0 
+IL_003A: call 0x2B00000D 
+IL_003F: stfld 0x04000448 \x8b\x8d.\x8b\x8c::\x88\x9d\x87
+IL_0044: leave.s 92
+IL_0046: ldloc.1 
+IL_0047: brfalse.s 91
+IL_0049: ldloc.1 
+IL_004A: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_004F: endfinally 
+IL_0050: ldarg.0 
+IL_0051: ldfld 0x0400044E \x8b\x8d.\x8b\x8c::\x88\x9d\x8d
+IL_0056: ldc.i4 2720
+IL_005B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0060: ldarg.0 
+IL_0061: ldfld 0x04000448 \x8b\x8d.\x8b\x8c::\x88\x9d\x87
+IL_0066: callvirt 0x0A0001C3 0x1B00000A::get_Count
+IL_006B: stloc.2 
+IL_006C: ldloca.s local(0x0002)
+IL_006E: call 0x0A0001C4 System.Int32::ToString
+IL_0073: ldc.i4 936
+IL_0078: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_007D: call 0x0A00003C System.String::Concat
+IL_0082: callvirt 0x0A0002BD System.Windows.Forms.ToolStripItem::set_Text
+IL_0087: ldarg.0 
+IL_0088: ldarg.0 
+IL_0089: ldfld 0x04000448 \x8b\x8d.\x8b\x8c::\x88\x9d\x87
+IL_008E: call 0x06000477 \x8b\x8d.\x8b\x8c::\x88\x9a\x96
+IL_0093: ret 
+

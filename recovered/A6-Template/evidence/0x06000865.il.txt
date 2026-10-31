@@ -1,0 +1,12 @@
+METHOD 06000865 \x8f\x99.\x8f\x98::yi RVA=6568 file=4768
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000785 \x8f\x99.\x8f\x98::\x8b\x8d\x89
+IL_0006: dup 
+IL_0007: brtrue.s 12
+IL_0009: pop 
+IL_000A: ret 
+IL_000B: ldarg.0 
+IL_000C: ldarg.1 
+IL_000D: callvirt 0x0A000415 System.EventHandler::Invoke
+IL_0012: ret 
+

@@ -1,0 +1,5 @@
+﻿Function,Help/UI identity,Code behavior,Consistency,Finding,Evidence
+Three-point FlyOver-DF,起点 → 转弯点 → 终点,P1/P2/P3 descriptors; center descriptor receives ATT,CONSISTENT,"P3 is a post-turn direction reference, not a next-fix position",B2 input-frame.md; overview.md
+ATT=0,help says same as fixed-altitude turn,"no ATT==0, epsilon or <=0 branch in class or direct public workflow",HELP_OVRSTATES_BUILD,"ATT=0 is ordinary arithmetic degeneration, not a special B2 branch.",B2 att-zero-search.txt; geometry.md
+15° / 12000 / 13000,DF construction controls/implicit constants,connection branch and fixed-distance SpiralGroup child paths,CONSISTENT,internal geometry roles recovered; not normative widths,B2 geometry.md; boundary-vertices.csv
+Obstacle evaluator,fly-over DF boundary drawing,no obstacle input/evaluator call in B2 class/writer,CONSISTENT,B2 is a geometry construction tool in this build.,B2 cad-writer.md; Round 10 residual extract

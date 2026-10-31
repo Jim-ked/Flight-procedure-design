@@ -1,0 +1,72 @@
+2730: 		public static void _0089_0088(string P_0)
+2731: 		{
+2732: 			//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+2733: 			//IL_0066: Expected O, but got Unknown
+2734: 			//IL_0078: Unknown result type (might be due to invalid IL or missing references)
+2735: 			//IL_007f: Expected O, but got Unknown
+2736: 			//IL_0093: Unknown result type (might be due to invalid IL or missing references)
+2737: 			//IL_009f: Unknown result type (might be due to invalid IL or missing references)
+2738: 			//IL_00a6: Expected O, but got Unknown
+2739: 			//IL_00e0: Unknown result type (might be due to invalid IL or missing references)
+2740: 			//IL_0100: Unknown result type (might be due to invalid IL or missing references)
+2741: 			//IL_0107: Expected O, but got Unknown
+2742: 			//IL_0113: Unknown result type (might be due to invalid IL or missing references)
+2743: 			_008F();
+2744: 			if (_0090() || false /* original-file-bool-offset:64 */)
+2745: 			{
+2746: 				return;
+2747: 			}
+2748: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+2749: 			string[] files = Directory.GetFiles(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "WsSymbol*.dwg" /* string-offset:588 */);
+2750: 			if (files.Length == 0)
+2751: 			{
+2752: 				return;
+2753: 			}
+2754: 			string text = files[0];
+2755: 			if (!File.Exists(text))
+2756: 			{
+2757: 				return;
+2758: 			}
+2759: 			try
+2760: 			{
+2761: 				Database val = new Database(false, true);
+2762: 				TransactionManager transactionManager = val.TransactionManager;
+2763: 				val.ReadDwgFile(text, FileShare.Read, true, (string)null);
+2764: 				ObjectIdCollection val2 = new ObjectIdCollection();
+2765: 				DocumentLock val3 = mdiActiveDocument.LockDocument();
+2766: 				try
+2767: 				{
+2768: 					Transaction val4 = transactionManager.StartTransaction();
+2769: 					try
+2770: 					{
+2771: 						BlockTable val5 = (BlockTable)transactionManager.GetObject(val.BlockTableId, (OpenMode)0, false);
+2772: 						_ = 0;
+2773: 						if (_008F() && !((SymbolTable)val5).Has(P_0))
+2774: 						{
+2775: 							Application.ShowAlertDialog("图块 " /* string-offset:592 */ + P_0 + " 未找到，请检查图库是否正确。" /* string-offset:596 */);
+2776: 						}
+2777: 						else
+2778: 						{
+2779: 							val2.Add(((SymbolTable)val5)[P_0]);
+2780: 						}
+2781: 						((DisposableWrapper)val5).Dispose();
+2782: 					}
+2783: 					finally
+2784: 					{
+2785: 						((IDisposable)val4)?.Dispose();
+2786: 					}
+2787: 					IdMapping val6 = new IdMapping();
+2788: 					Database workingDatabase = HostApplicationServices.WorkingDatabase;
+2789: 					val.WblockCloneObjects(val2, workingDatabase.BlockTableId, val6, (DuplicateRecordCloning)2, false);
+2790: 					((DisposableWrapper)val).Dispose();
+2791: 				}
+2792: 				finally
+2793: 				{
+2794: 					((IDisposable)val3)?.Dispose();
+2795: 				}
+2796: 			}
+2797: 			catch (Exception ex)
+2798: 			{
+2799: 				Application.ShowAlertDialog("复制错误：" /* string-offset:600 */ + ex.Message);
+2800: 			}
+2801: 		}

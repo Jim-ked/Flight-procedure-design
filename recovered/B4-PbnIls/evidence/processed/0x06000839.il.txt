@@ -1,0 +1,12 @@
+METHOD 06000839 \x8f\x93.\x8f\x92::\x8b\x8b\x8e RVA=63DC file=45DC
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400077C \x8f\x93.\x8f\x92::\x8b\x8b\x92
+IL_0006: ldarg.0 
+IL_0007: ldfld 0x0400077D \x8f\x93.\x8f\x92::\x8b\x8b\x93
+IL_000C: ldarg.0 
+IL_000D: ldfld 0x0400077E \x8f\x93.\x8f\x92::\x8b\x8b\x94
+IL_0012: ldarg.1 
+IL_0013: sub 
+IL_0014: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_0019: ret 
+

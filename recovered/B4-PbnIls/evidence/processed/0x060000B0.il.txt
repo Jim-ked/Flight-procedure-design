@@ -1,0 +1,20 @@
+METHOD 060000B0 \x8e.\x8d::\x89\x93 RVA=A91C file=8B1C
+IL_0000: ldarg.0 
+IL_0001: callvirt 0x0A00011B 0x1B00000A::GetEnumerator
+IL_0006: stloc.0 
+IL_0007: nop 
+IL_0008: br.s 34
+IL_000A: ldloca.s local(0x0000)
+IL_000C: call 0x0A00011C 0x1B00000B::get_Current
+IL_0011: callvirt 0x0A00011D Autodesk.AutoCAD.DatabaseServices.Entity::Unhighlight
+IL_0016: ldloca.s local(0x0000)
+IL_0018: call 0x0A00011E 0x1B00000B::MoveNext
+IL_001D: brtrue.s 22
+IL_001F: leave.s 59
+IL_0021: ldloca.s local(0x0000)
+IL_0023: constrained. 0x1B00000B 
+IL_0029: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_002E: endfinally 
+IL_002F: call 0x0A0000A5 Autodesk.AutoCAD.ApplicationServices.Core.Application::UpdateScreen
+IL_0034: ret 
+

@@ -1,0 +1,94 @@
+METHOD 06000376 \x89\x93.\x89\x92::\x87\x9b\x8b RVA=451D8 file=433D8
+IL_0000: ldc.i4 612
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse 309
+IL_000F: ldarg.0 
+IL_0010: call 0x06000356 \x89\x93.\x89\x92::\x87\x99\x9d
+IL_0015: stloc.1 
+IL_0016: br.s 66
+IL_0018: ldarg.0 
+IL_0019: ldloc.0 
+IL_001A: ldfld 0x04000364 \x89\x9d.\x89\x9c::\x88\x8d\x91
+IL_001F: call 0x06000828 \x8f\x91.\x8f\x90::\x8b\x8a\x9b
+IL_0024: ldloc.1 
+IL_0025: callvirt 0x0A000086 System.Object::ToString
+IL_002A: call 0x06000359 \x89\x93.\x89\x92::\x87\x9a\x87
+IL_002F: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_0034: brfalse.s 193
+IL_0036: ldarg.0 
+IL_0037: call 0x06000358 \x89\x93.\x89\x92::\x87\x9a\x86
+IL_003C: pop 
+IL_003D: ldarg.0 
+IL_003E: ldfld 0x040002A4 \x89\x93.\x89\x92::\x87\x9c\x94
+IL_0043: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0048: pop 
+IL_0049: ldarg.0 
+IL_004A: ldfld 0x04000297 \x89\x93.\x89\x92::\x87\x9c\x87
+IL_004F: ldc.i4 1984
+IL_0054: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0059: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_005E: stloc.2 
+IL_005F: ldarg.0 
+IL_0060: ldfld 0x040002AB \x89\x93.\x89\x92::\x87\x9c\x9b
+IL_0065: ldc.i4 1984
+IL_006A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_006F: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_0074: pop 
+IL_0075: ldloc.1 
+IL_0076: ldloc.2 
+IL_0077: newobj 0x060003C9 \x89\x9d.\x89\x9c::.ctor
+IL_007C: stloc.0 
+IL_007D: ldarg.0 
+IL_007E: ldfld 0x04000296 \x89\x93.\x89\x92::\x87\x9c\x86
+IL_0083: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0088: ldc.i4 4676
+IL_008D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0092: call 0x0A000108 System.String::op_Equality
+IL_0097: brtrue 36
+IL_009C: ldarg.0 
+IL_009D: ldloc.0 
+IL_009E: ldfld 0x04000364 \x89\x9d.\x89\x9c::\x88\x8d\x91
+IL_00A3: ldloc.1 
+IL_00A4: callvirt 0x0A000086 System.Object::ToString
+IL_00A9: call 0x06000359 \x89\x93.\x89\x92::\x87\x9a\x87
+IL_00AE: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_00B3: brfalse.s 257
+IL_00B5: ldarg.0 
+IL_00B6: ldloc.0 
+IL_00B7: ldfld 0x04000362 \x89\x9d.\x89\x9c::\x88\x8d\x8f
+IL_00BC: call 0x06000828 \x8f\x91.\x8f\x90::\x8b\x8a\x9b
+IL_00C1: ldloc.1 
+IL_00C2: callvirt 0x0A000086 System.Object::ToString
+IL_00C7: call 0x06000359 \x89\x93.\x89\x92::\x87\x9a\x87
+IL_00CC: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_00D1: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_00D6: brfalse.s 254
+IL_00D8: pop 
+IL_00D9: ldarg.0 
+IL_00DA: ldloc.0 
+IL_00DB: ldfld 0x04000363 \x89\x9d.\x89\x9c::\x88\x8d\x90
+IL_00E0: call 0x06000828 \x8f\x91.\x8f\x90::\x8b\x8a\x9b
+IL_00E5: ldloc.1 
+IL_00E6: callvirt 0x0A000086 System.Object::ToString
+IL_00EB: call 0x06000359 \x89\x93.\x89\x92::\x87\x9a\x87
+IL_00F0: br.s 293
+IL_00F2: pop 
+IL_00F3: br.s 293
+IL_00F5: ldarg.0 
+IL_00F6: ldloc.0 
+IL_00F7: ldfld 0x04000362 \x89\x9d.\x89\x9c::\x88\x8d\x8f
+IL_00FC: ldloc.1 
+IL_00FD: callvirt 0x0A000086 System.Object::ToString
+IL_0102: call 0x06000359 \x89\x93.\x89\x92::\x87\x9a\x87
+IL_0107: ldarg.0 
+IL_0108: ldloc.0 
+IL_0109: ldfld 0x04000363 \x89\x9d.\x89\x9c::\x88\x8d\x90
+IL_010E: ldloc.1 
+IL_010F: callvirt 0x0A000086 System.Object::ToString
+IL_0114: call 0x06000359 \x89\x93.\x89\x92::\x87\x9a\x87
+IL_0119: ldarg.0 
+IL_011A: ldc.i4 4736
+IL_011F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0124: call 0x06000357 \x89\x93.\x89\x92::\x87\x99\x9e
+IL_0129: ret 
+

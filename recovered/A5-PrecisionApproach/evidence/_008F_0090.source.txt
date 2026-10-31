@@ -1,0 +1,408 @@
+84380: 	public class _008F_0090
+84381: 	{
+84382: 		public static List<_008F_008E> _008B_008A_008C(List<_008F_008E> P_0, double P_1)
+84383: 		{
+84384: 			if (false /* original-file-bool-offset:1444 */)
+84385: 			{
+84386: 				goto IL_0082;
+84387: 			}
+84388: 			List<_008F_008E> list = default(List<_008F_008E>);
+84389: 			int num2 = default(int);
+84390: 			_008F_008E obj;
+84391: 			_008F_008E obj2;
+84392: 			double num;
+84393: 			if (P_0 != null && P_0.Count >= 2)
+84394: 			{
+84395: 				list = new List<_008F_008E>();
+84396: 				obj = P_0[0];
+84397: 				obj2 = P_0[1];
+84398: 				num = _008F_008E._008B_0089_0086(obj, obj2);
+84399: 				list.Add(new _008F_008E(obj.X - P_1 * Math.Sin(num), obj.Y + P_1 * Math.Cos(num)));
+84400: 				num2 = 1;
+84401: 				goto IL_00fc;
+84402: 			}
+84403: 			throw new ArgumentException("点集必须包含至少两个点" /* string-offset:7492 */);
+84404: 			IL_0082:
+84405: 			_008F_008E obj3 = P_0[num2];
+84406: 			_008F_008E obj4 = P_0[num2 + 1];
+84407: 			_008F_008E obj5 = default(_008F_008E);
+84408: 			double num3 = _008F_008E._008B_0089_0086(obj3, obj5);
+84409: 			double num4 = _008F_008E._008B_0089_0086(obj3, obj4);
+84410: 			double num5 = (num3 + num4) / 2.0;
+84411: 			double num6 = obj3.X - P_1 * Math.Sin(num5);
+84412: 			double num7 = obj3.Y + P_1 * Math.Cos(num5);
+84413: 			list.Add(new _008F_008E(num6, num7));
+84414: 			num2++;
+84415: 			goto IL_00fc;
+84416: 			IL_00fc:
+84417: 			if (num2 < P_0.Count - 1)
+84418: 			{
+84419: 				obj5 = P_0[num2 - 1];
+84420: 				goto IL_0082;
+84421: 			}
+84422: 			obj = P_0[P_0.Count - 2];
+84423: 			obj2 = P_0[P_0.Count - 1];
+84424: 			num = _008F_008E._008B_0089_0086(obj, obj2);
+84425: 			list.Add(new _008F_008E(obj2.X - P_1 * Math.Sin(num), obj2.Y + P_1 * Math.Cos(num)));
+84426: 			return list;
+84427: 		}
+84428: 
+84429: 		public static List<_008F_008E> _008B_008A_008D(List<List<_008F_008E>> P_0)
+84430: 		{
+84431: 			List<_008F_008E> list = new List<_008F_008E>();
+84432: 			foreach (List<_008F_008E> item in P_0)
+84433: 			{
+84434: 				foreach (_008F_008E item2 in item)
+84435: 				{
+84436: 					list.Add(item2);
+84437: 				}
+84438: 			}
+84439: 			return list;
+84440: 		}
+84441: 
+84442: 		public static List<_008F_008E> _008B_008A_008E(List<_008F_008E> P_0, List<_008F_008E> P_1)
+84443: 		{
+84444: 			List<_008F_008E> list = new List<_008F_008E>();
+84445: 			foreach (_008F_008E item in P_0)
+84446: 			{
+84447: 				list.Add(item);
+84448: 			}
+84449: 			foreach (_008F_008E item2 in P_1)
+84450: 			{
+84451: 				list.Add(item2);
+84452: 			}
+84453: 			return list;
+84454: 		}
+84455: 
+84456: 		public static List<List<_008F_008E>> _008B_008A_008F(_008F_008E P_0, _008F_008E P_1)
+84457: 		{
+84458: 			return new List<List<_008F_008E>>
+84459: 			{
+84460: 				_008B_008A_0092(P_0, P_1),
+84461: 				_008B_008A_0092(_008F_008E._008B_0089_0090(P_0, 1.0, 0.5), _008F_008E._008B_0089_0090(P_1, 1.0, 0.5))
+84462: 			};
+84463: 		}
+84464: 
+84465: 		public static List<_008F_008E> _008B_008A_0090(_008F_008E P_0, _008F_008E P_1)
+84466: 		{
+84467: 			return new List<_008F_008E>
+84468: 			{
+84469: 				P_0,
+84470: 				P_1,
+84471: 				new _008F_008E(P_1.X, 0.0, P_1.Z),
+84472: 				new _008F_008E(P_0.X, 0.0, P_0.Z),
+84473: 				P_0
+84474: 			};
+84475: 		}
+84476: 
+84477: 		public static List<_008F_008E> _008B_008A_0091(_008F_008E P_0, _008F_008E P_1)
+84478: 		{
+84479: 			return new List<_008F_008E>
+84480: 			{
+84481: 				_008F_008E._008B_0089_008B(P_0),
+84482: 				_008F_008E._008B_0089_008B(P_1),
+84483: 				new _008F_008E(P_1.X, 0.0, P_1.Z),
+84484: 				new _008F_008E(P_0.X, 0.0, P_0.Z),
+84485: 				_008F_008E._008B_0089_008B(P_0)
+84486: 			};
+84487: 		}
+84488: 
+84489: 		public static List<_008F_008E> _008B_008A_0092(_008F_008E P_0, _008F_008E P_1)
+84490: 		{
+84491: 			return new List<_008F_008E>
+84492: 			{
+84493: 				P_0,
+84494: 				P_1,
+84495: 				_008F_008E._008B_0089_008B(P_1),
+84496: 				_008F_008E._008B_0089_008B(P_0),
+84497: 				P_0
+84498: 			};
+84499: 		}
+84500: 
+84501: 		public static List<_008F_008E> _008B_008A_0093(_008F_008E P_0, _008F_008E P_1, _008F_008E P_2)
+84502: 		{
+84503: 			return new List<_008F_008E>
+84504: 			{
+84505: 				P_1,
+84506: 				P_0,
+84507: 				_008F_008E._008B_0089_008B(P_0),
+84508: 				_008F_008E._008B_0089_008B(P_1),
+84509: 				_008F_008E._008B_0089_008B(P_2),
+84510: 				P_2,
+84511: 				P_1
+84512: 			};
+84513: 		}
+84514: 
+84515: 		public static List<List<_008F_008E>> _008B_008A_0094(List<List<_008F_008E>> P_0, _008F_008E P_1, double P_2)
+84516: 		{
+84517: 			if (P_0 != null && P_0.Count != 0)
+84518: 			{
+84519: 				List<List<_008F_008E>> list = new List<List<_008F_008E>>();
+84520: 				{
+84521: 					foreach (List<_008F_008E> item in P_0)
+84522: 					{
+84523: 						list.Add(_008B_008A_0095(item, P_1, P_2));
+84524: 					}
+84525: 					return list;
+84526: 				}
+84527: 			}
+84528: 			return null;
+84529: 		}
+84530: 
+84531: 		public static List<_008F_008E> _008B_008A_0095(List<_008F_008E> P_0, _008F_008E P_1, double P_2)
+84532: 		{
+84533: 			if (P_0 != null && P_0.Count != 0)
+84534: 			{
+84535: 				List<_008F_008E> list = new List<_008F_008E>();
+84536: 				{
+84537: 					foreach (_008F_008E item in P_0)
+84538: 					{
+84539: 						list.Add(_008F_008E._008B_0089_008D(P_1, item, P_2));
+84540: 					}
+84541: 					return list;
+84542: 				}
+84543: 			}
+84544: 			return null;
+84545: 		}
+84546: 
+84547: 		public static List<List<_008F_008E>> _008B_008A_0096(List<List<_008F_008E>> P_0, _008F_008E P_1)
+84548: 		{
+84549: 			if (P_0 != null && P_0.Count != 0)
+84550: 			{
+84551: 				List<List<_008F_008E>> list = new List<List<_008F_008E>>();
+84552: 				{
+84553: 					foreach (List<_008F_008E> item in P_0)
+84554: 					{
+84555: 						list.Add(_008B_008A_0098(item, P_1));
+84556: 					}
+84557: 					return list;
+84558: 				}
+84559: 			}
+84560: 			return null;
+84561: 		}
+84562: 
+84563: 		public static List<_008F_008E> _008B_008A_0097(List<_008F_008E> P_0, _008F_008E P_1)
+84564: 		{
+84565: 			if (P_0 != null && P_0.Count != 0)
+84566: 			{
+84567: 				List<_008F_008E> list = new List<_008F_008E>();
+84568: 				{
+84569: 					foreach (_008F_008E item in P_0)
+84570: 					{
+84571: 						list.Add(_008F_008E._008B_0089_0091(item, P_1));
+84572: 					}
+84573: 					return list;
+84574: 				}
+84575: 			}
+84576: 			return null;
+84577: 		}
+84578: 
+84579: 		public static List<_008F_008E> _008B_008A_0098(List<_008F_008E> P_0, _008F_008E P_1)
+84580: 		{
+84581: 			if (P_0 != null && P_0.Count != 0)
+84582: 			{
+84583: 				List<_008F_008E> list = new List<_008F_008E>();
+84584: 				{
+84585: 					foreach (_008F_008E item in P_0)
+84586: 					{
+84587: 						list.Add(_008F_008E._008B_0089_008F(item, P_1));
+84588: 					}
+84589: 					return list;
+84590: 				}
+84591: 			}
+84592: 			return null;
+84593: 		}
+84594: 
+84595: 		public static List<_008F_008E> _008B_008A_0099(List<_008F_008E> P_0)
+84596: 		{
+84597: 			if (P_0 != null && P_0.Count != 0)
+84598: 			{
+84599: 				List<_008F_008E> list = new List<_008F_008E>();
+84600: 				{
+84601: 					foreach (_008F_008E item in P_0)
+84602: 					{
+84603: 						list.Add(_008F_008E._008B_0089_008C(item));
+84604: 					}
+84605: 					return list;
+84606: 				}
+84607: 			}
+84608: 			return null;
+84609: 		}
+84610: 
+84611: 		public static List<List<_008F_008E>> _008B_008A_009A(List<List<_008F_008E>> P_0)
+84612: 		{
+84613: 			if (P_0 != null && P_0.Count != 0)
+84614: 			{
+84615: 				List<List<_008F_008E>> list = new List<List<_008F_008E>>();
+84616: 				{
+84617: 					foreach (List<_008F_008E> item in P_0)
+84618: 					{
+84619: 						list.Add(_008B_008A_0099(item));
+84620: 					}
+84621: 					return list;
+84622: 				}
+84623: 			}
+84624: 			return null;
+84625: 		}
+84626: 
+84627: 		public static List<List<_008F_008E>> _008B_008A_009B(List<List<_008F_008E>> P_0)
+84628: 		{
+84629: 			if (P_0 != null && P_0.Count != 0)
+84630: 			{
+84631: 				List<List<_008F_008E>> list = new List<List<_008F_008E>>();
+84632: 				{
+84633: 					foreach (List<_008F_008E> item in P_0)
+84634: 					{
+84635: 						list.Add(_008B_008A_009C(item));
+84636: 					}
+84637: 					return list;
+84638: 				}
+84639: 			}
+84640: 			return null;
+84641: 		}
+84642: 
+84643: 		public static List<_008F_008E> _008B_008A_009C(List<_008F_008E> P_0)
+84644: 		{
+84645: 			if (P_0 != null && P_0.Count != 0)
+84646: 			{
+84647: 				List<_008F_008E> list = new List<_008F_008E>();
+84648: 				{
+84649: 					foreach (_008F_008E item in P_0)
+84650: 					{
+84651: 						list.Add(_008F_008E._008B_0089_008B(item));
+84652: 					}
+84653: 					return list;
+84654: 				}
+84655: 			}
+84656: 			return null;
+84657: 		}
+84658: 
+84659: 		public static List<_008F_008E> _008B_008A_009D(_008F_008E P_0, _008F_008E P_1, int P_2 = 10)
+84660: 		{
+84661: 			double num = default(double);
+84662: 			double num2 = default(double);
+84663: 			double num3 = default(double);
+84664: 			List<_008F_008E> list = default(List<_008F_008E>);
+84665: 			if (!false /* original-file-bool-offset:1448 */)
+84666: 			{
+84667: 				if (P_2 == 0)
+84668: 				{
+84669: 					return null;
+84670: 				}
+84671: 				num = (P_1.X - P_0.X) / (double)P_2;
+84672: 				num2 = (P_1.Y - P_0.Y) / (double)P_2;
+84673: 				num3 = (P_1.Z - P_0.Z) / (double)P_2;
+84674: 				list = new List<_008F_008E>();
+84675: 				list.Add(P_0);
+84676: 			}
+84677: 			for (int i = 1; i < P_2; i++)
+84678: 			{
+84679: 				list.Add(_008F_008E._008B_0089_008E(P_0, num * (double)i, num2 * (double)i, num3 * (double)i));
+84680: 			}
+84681: 			list.Add(P_1);
+84682: 			return list;
+84683: 		}
+84684: 
+84685: 		public static List<List<_008F_008E>> _008B_008A_009E(List<_008F_008E> P_0, List<_008F_008E> P_1)
+84686: 		{
+84687: 			if (false /* original-file-bool-offset:1452 */)
+84688: 			{
+84689: 				goto IL_0073;
+84690: 			}
+84691: 			List<List<_008F_008E>> list = default(List<List<_008F_008E>>);
+84692: 			int num = default(int);
+84693: 			if (P_0 != null && P_0.Count != 0 && P_1 != null && P_1.Count != 0)
+84694: 			{
+84695: 				if (P_0.Count != P_1.Count)
+84696: 				{
+84697: 					return null;
+84698: 				}
+84699: 				list = new List<List<_008F_008E>>();
+84700: 				num = 1;
+84701: 				goto IL_00db;
+84702: 			}
+84703: 			return null;
+84704: 			IL_00db:
+84705: 			List<_008F_008E> list2 = default(List<_008F_008E>);
+84706: 			List<_008F_008E> list3 = default(List<_008F_008E>);
+84707: 			if (num < P_0.Count)
+84708: 			{
+84709: 				list2 = new List<_008F_008E>();
+84710: 				list3 = new List<_008F_008E>();
+84711: 				list2.Add(P_0[num - 1]);
+84712: 				list2.Add(P_0[num]);
+84713: 				goto IL_0073;
+84714: 			}
+84715: 			return list;
+84716: 			IL_0073:
+84717: 			list2.Add(P_1[num - 1]);
+84718: 			list2.Add(P_0[num - 1]);
+84719: 			list.Add(list2);
+84720: 			list3.Add(P_1[num - 1]);
+84721: 			list3.Add(P_1[num]);
+84722: 			list3.Add(P_0[num]);
+84723: 			list3.Add(P_1[num - 1]);
+84724: 			list.Add(list3);
+84725: 			num++;
+84726: 			goto IL_00db;
+84727: 		}
+84728: 
+84729: 		public static void _008B_008B_0086(ref List<List<_008F_008E>> P_0, List<List<_008F_008E>> P_1)
+84730: 		{
+84731: 			if (P_1 == null)
+84732: 			{
+84733: 				return;
+84734: 			}
+84735: 			foreach (List<_008F_008E> item in P_1)
+84736: 			{
+84737: 				P_0.Add(item);
+84738: 			}
+84739: 		}
+84740: 
+84741: 		public static void _008B_008B_0087(ref List<_008F_008E> P_0, List<_008F_008E> P_1)
+84742: 		{
+84743: 			if (P_1 == null)
+84744: 			{
+84745: 				return;
+84746: 			}
+84747: 			foreach (_008F_008E item in P_1)
+84748: 			{
+84749: 				P_0.Add(item);
+84750: 			}
+84751: 		}
+84752: 
+84753: 		public static string _008B_008B_0088(List<List<_008F_008E>> P_0)
+84754: 		{
+84755: 			string text = "";
+84756: 			foreach (List<_008F_008E> item in P_0)
+84757: 			{
+84758: 				text += _008B_008B_0089(item);
+84759: 			}
+84760: 			return text;
+84761: 		}
+84762: 
+84763: 		public static string _008B_008B_0089(List<_008F_008E> P_0)
+84764: 		{
+84765: 			string text = "";
+84766: 			foreach (_008F_008E item in P_0)
+84767: 			{
+84768: 				text = text + item.ToString() + "\n" /* string-offset:328 */;
+84769: 			}
+84770: 			return text;
+84771: 		}
+84772: 
+84773: 		static _008F_0090()
+84774: 		{
+84775: 			LicenseManager.Validate(typeof(_008F_0090));
+84776: 		}
+84777: 
+84778: 		internal static bool _0089v()
+84779: 		{
+84780: 			return true;
+84781: 		}
+84782: 
+84783: 		internal static bool _0089w()
+84784: 		{
+84785: 			return false;
+84786: 		}
+84787: 	}

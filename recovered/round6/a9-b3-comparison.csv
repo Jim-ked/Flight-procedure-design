@@ -1,0 +1,6 @@
+﻿item,B3,other,classification,evidence
+geometry,P595 lines W/2 to W; APV P5EF numeric interpolation,A9 P330(IF)/P331(normal) PriSec helpers,Different implementation,No B3 call to A9; own token source/IL
+secondary MOC,P595 M*(outer-y)/(outer-inner),A9 same linear taper family,Copied formula family; different MethodDef,B3 P595 != A9; compare frozen ObstacleData/pri-sec-evaluation.md
+segment inclusion,P595 -L<x<=0 and absY<maxW,A9 P331 normal -L<x<0; P330 IF inclusive endpoints,Different implementation,Endpoint conditions explicitly recovered
+terminal primary width,P595 ending W1/2; APV w/2,A9 IF ending W1 rather than half,Different implementation,Do not import IF endpoint behavior
+APV surface,P5EF inclusive X ends; secondary adds MOC to Z surface,A9 MOC output,Different implementation,P5EF/5F0; not interchangeable

@@ -1,0 +1,30 @@
+METHOD 0600005A \x8a.\x89::\x98 RVA=7908 file=5B08
+IL_0000: call 0x0600007E \x8a.\x89::\x8e
+IL_0005: call 0x0600007D \x8a.\x89::\x8d
+IL_000A: brfalse.s 46
+IL_000C: pop 
+IL_000D: call 0x0600007D \x8a.\x89::\x8d
+IL_0012: brfalse.s 32
+IL_0014: call 0x0A000059 System.Windows.Forms.Application::get_OpenForms
+IL_0019: ldarg.1 
+IL_001A: callvirt 0x0A00005A System.Windows.Forms.FormCollection::get_Item
+IL_001F: stloc.0 
+IL_0020: br.s 47
+IL_0022: pop 
+IL_0023: ldloc.0 
+IL_0024: brfalse.s 79
+IL_0026: ldloc.0 
+IL_0027: callvirt 0x0A00005B System.Windows.Forms.Control::get_IsDisposed
+IL_002C: brtrue.s 79
+IL_002E: ldloc.0 
+IL_002F: ldc.i4.0 
+IL_0030: callvirt 0x0A00005C System.Windows.Forms.Form::set_WindowState
+IL_0035: ldloc.0 
+IL_0036: callvirt 0x0A00005D System.Windows.Forms.Form::Activate
+IL_003B: ldloc.0 
+IL_003C: callvirt 0x0A00005E System.Windows.Forms.Control::Show
+IL_0041: ldc.i4.1 
+IL_0042: ret 
+IL_0043: ldc.i4.0 
+IL_0044: ret 
+

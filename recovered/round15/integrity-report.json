@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "Entire workspace; .git excluded; additions allowed only under Round15 two directories",
+  "frozen_file_count": 7654,
+  "snapshot_declared_count": 7654,
+  "frozen_snapshot_sha256": "6928501937fe185407c7dbf51a60fa5a2add2d0d612833f2f38a75d13c7304cc",
+  "mismatch_count": 0,
+  "mismatches": [],
+  "unauthorized_new_files": [],
+  "required_baseline_deliverables": 22,
+  "actual_baseline_files": 24,
+  "module_count": 15,
+  "final_status_counts": {
+    "COMPLETE_STATIC": 11,
+    "NOT_PUBLIC_BUSINESS_FUNCTION": 0,
+    "PARTIAL_STATIC_BUILD_LIMITED": 4,
+    "PARTIAL_STATIC_OTHER_BUILD_REQUIRED": 0
+  },
+  "csv_records_checked": 1500,
+  "source_index_count": 1185,
+  "cs_assets_checked": 109,
+  "markdown_links_checked": 72,
+  "validation_errors": [],
+  "business_tests_run_in_round15": false,
+  "target_dll_executed_in_round15": false,
+  "E4_business_validation": "NOT_COMPLETED_ALL_MODULES",
+  "historical_statuses_preserved": true,
+  "manifest_rule": "output-manifest.json excludes its own file; all other Round15 outputs are hashed"
+}

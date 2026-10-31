@@ -1,0 +1,11 @@
+﻿Pair,Aspect,Classification,Conclusion,Evidence
+B1 vs B2,P793/Spiral86/CAD,SAME_METHODDEF,同一底层成员复用,recovered/round13/shared-final.csv
+B1 vs B2,carrier/candidate业务结构,COPIED_IMPLEMENTATION,结构模式重复；FlyBy与DF公式/分支不同，不是同完整业务方法,recovered/B1-FlyBy/final-static-closure.md;recovered/B2-FlyOverDF/final-static-closure.md
+A7 vs B5,frame/P793/parser/Mark,SAME_METHODDEF,实际底层调用复用,recovered/round5/a7-b5-shared-identities.csv
+A7 vs B5,离场业务构造器,BUSINESS_SIMILAR_ONLY,三模式镜像/圆与Spiral86/Hull/TurnEnd不同,recovered/A7-Departure/final-static-closure.md;recovered/B5-PbnDeparture/protection-connections.md
+A9 vs B3,障碍物公共层,SAME_METHODDEF,共享导入/解析及基础工具,recovered/A9-PriSec/final-static-closure.md;recovered/B3-RnpApch/overview.md
+A9 vs B3,主副区线性评价,SIMILAR_MATH,P330/P331与P595/P5EF不同；边界纳入条件不同,recovered/A9-PriSec/final-static-closure.md;recovered/B3-RnpApch/obstacle-evaluation.md
+A5 vs B4,OasModel/Plane/writer,SAME_METHODDEF,共享系数/面/交点及图元writer,recovered/A5-PrecisionApproach/class-map.md
+A5 vs B4,DB loader/decoder/尺寸/RDH,COPIED_IMPLEMENTATION,P409–P40C与P571–P574独立成员；同schema/key/解码,recovered/A5-PrecisionApproach/oas-parameter-model.md
+B3 vs B4 HL,高损修正,SIMILAR_MATH,B3有GP>3.2项且不Round；B4无GP项、三分支独立舍入,recovered/B3-RnpApch/hl-correction.md;recovered/B4-PbnIls/hl-correction.md
+A5 vs B3/B4 HL,A5自有HL,NO_RELATION,未发现A5自有HL公式/表/消费者，不能借用补齐,recovered/A5-PrecisionApproach/hl-correction.md

@@ -1,0 +1,101 @@
+METHOD 06000079 \x8a.\x89::\x87\x9e RVA=84B4 file=66B4
+IL_0000: ldc.i4 36
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 170
+IL_000F: ldarg.1 
+IL_0010: ldarg.1 
+IL_0011: ldind.i4 
+IL_0012: ldc.i4.1 
+IL_0013: add 
+IL_0014: stind.i4 
+IL_0015: newobj 0x0A000091 System.Text.StringBuilder::.ctor
+IL_001A: stloc.3 
+IL_001B: br 189
+IL_0020: ldarg.0 
+IL_0021: ldarg.1 
+IL_0022: ldarg.1 
+IL_0023: ldind.i4 
+IL_0024: stloc.0 
+IL_0025: ldloc.0 
+IL_0026: ldc.i4.1 
+IL_0027: add 
+IL_0028: stind.i4 
+IL_0029: ldloc.0 
+IL_002A: callvirt 0x0A00008E System.String::get_Chars
+IL_002F: stloc.1 
+IL_0030: call 0x0600007E \x8a.\x89::\x8e
+IL_0035: call 0x0600007D \x8a.\x89::\x8d
+IL_003A: brfalse.s 169
+IL_003C: pop 
+IL_003D: ldloc.1 
+IL_003E: ldc.i4.s 92
+IL_0040: bne.un.s 154
+IL_0042: ldarg.1 
+IL_0043: ldind.i4 
+IL_0044: ldarg.0 
+IL_0045: callvirt 0x0A00008C System.String::get_Length
+IL_004A: bge.s 154
+IL_004C: ldarg.0 
+IL_004D: ldarg.1 
+IL_004E: ldarg.1 
+IL_004F: ldind.i4 
+IL_0050: stloc.0 
+IL_0051: ldloc.0 
+IL_0052: ldc.i4.1 
+IL_0053: add 
+IL_0054: stind.i4 
+IL_0055: ldloc.0 
+IL_0056: callvirt 0x0A00008E System.String::get_Chars
+IL_005B: stloc.2 
+IL_005C: ldloc.2 
+IL_005D: ldc.i4.s 110
+IL_005F: beq.s 143
+IL_0061: ldloc.2 
+IL_0062: ldc.i4.s 114
+IL_0064: beq.s 132
+IL_0066: ldloc.2 
+IL_0067: ldc.i4.s 116
+IL_0069: beq.s 121
+IL_006B: br.s 170
+IL_006D: ldloc.3 
+IL_006E: ldc.i4.s 9
+IL_0070: callvirt 0x0A000092 System.Text.StringBuilder::Append
+IL_0075: pop 
+IL_0076: br.s 189
+IL_0078: ldloc.3 
+IL_0079: ldc.i4.s 13
+IL_007B: callvirt 0x0A000092 System.Text.StringBuilder::Append
+IL_0080: pop 
+IL_0081: br.s 189
+IL_0083: ldloc.3 
+IL_0084: ldc.i4.s 10
+IL_0086: callvirt 0x0A000092 System.Text.StringBuilder::Append
+IL_008B: pop 
+IL_008C: br.s 189
+IL_008E: ldloc.1 
+IL_008F: ldc.i4.s 34
+IL_0091: beq.s 204
+IL_0093: ldloc.3 
+IL_0094: ldloc.1 
+IL_0095: callvirt 0x0A000092 System.Text.StringBuilder::Append
+IL_009A: pop 
+IL_009B: br.s 189
+IL_009D: pop 
+IL_009E: ldloc.3 
+IL_009F: ldloc.2 
+IL_00A0: callvirt 0x0A000092 System.Text.StringBuilder::Append
+IL_00A5: pop 
+IL_00A6: br.s 189
+IL_00A8: call 0x0600007D \x8a.\x89::\x8d
+IL_00AD: brfalse.s 170
+IL_00AF: br.s 204
+IL_00B1: ldarg.1 
+IL_00B2: ldind.i4 
+IL_00B3: ldarg.0 
+IL_00B4: callvirt 0x0A00008C System.String::get_Length
+IL_00B9: blt 44
+IL_00BE: br.s 180
+IL_00C0: ldloc.3 
+IL_00C1: callvirt 0x0A000086 System.Object::ToString
+IL_00C6: ret 
+

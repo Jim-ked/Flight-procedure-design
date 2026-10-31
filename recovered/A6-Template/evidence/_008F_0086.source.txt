@@ -1,0 +1,841 @@
+81950: 	public class _008F_0086
+81951: 	{
+81952: 		public double _008B_0086_0088;
+81953: 
+81954: 		private double _008B_0086_0089;
+81955: 
+81956: 		public _008F_008E _008B_0086_008A;
+81957: 
+81958: 		public double _008B_0086_008B;
+81959: 
+81960: 		public double _008B_0086_008C;
+81961: 
+81962: 		public double _008B_0086_008D;
+81963: 
+81964: 		public double _008B_0086_008E;
+81965: 
+81966: 		public double _008B_0086_008F;
+81967: 
+81968: 		private int _008B_0086_0090;
+81969: 
+81970: 		public double _008B_0086_0091;
+81971: 
+81972: 		private static double _008B_0086_0092;
+81973: 
+81974: 		public _008F_0086()
+81975: 		{
+81976: 			_008B_0086_0091 = Math.PI / 180.0;
+81977: 			base._002Ector();
+81978: 		}
+81979: 
+81980: 		public _008F_0086(_008E_009B P_0, _008F_008E P_1, double P_2 = 0.0, double P_3 = 0.0, bool P_4 = true)
+81981: 		{
+81982: 			int num = 8;
+81983: 			while (true)
+81984: 			{
+81985: 				_008B_0086_0091 = Math.PI / 180.0;
+81986: 				_0089l();
+81987: 				if (_0089m())
+81988: 				{
+81989: 					num = 7;
+81990: 					goto IL_0102;
+81991: 				}
+81992: 				num = 5;
+81993: 				if (!_0089m())
+81994: 				{
+81995: 					goto IL_0036;
+81996: 				}
+81997: 				goto IL_0092;
+81998: 				IL_00ae:
+81999: 				base._002Ector();
+82000: 				_008B_0086_008B = P_0._008A_009D_009E;
+82001: 				num = 9;
+82002: 				goto IL_00c9;
+82003: 				IL_00c9:
+82004: 				_008B_0086_008C = P_0._008A_009D_009D;
+82005: 				num = 4;
+82006: 				goto IL_0092;
+82007: 				IL_0092:
+82008: 				_008B_0086_008D = P_0._008A_009E_0086;
+82009: 				num = 3;
+82010: 				if (!_0089l())
+82011: 				{
+82012: 					goto IL_00ae;
+82013: 				}
+82014: 				goto IL_00e0;
+82015: 				IL_00e0:
+82016: 				_008B_0086_008E = Math.Cos(_008B_0086_008D);
+82017: 				goto IL_00f1;
+82018: 				IL_00f1:
+82019: 				_008B_0086_008F = Math.Sin(_008B_0086_008D);
+82020: 				goto IL_0102;
+82021: 				IL_0102:
+82022: 				_008B_0086_008A = P_1;
+82023: 				_008B_0086_0088 = _008A_009E_0090(P_2);
+82024: 				num = 2;
+82025: 				goto IL_006d;
+82026: 				IL_006d:
+82027: 				_008B_0086_0089 = P_3;
+82028: 				num = 10;
+82029: 				if (_0089l())
+82030: 				{
+82031: 					goto IL_0036;
+82032: 				}
+82033: 				goto IL_00c9;
+82034: 				IL_0036:
+82035: 				switch (num)
+82036: 				{
+82037: 				case 8:
+82038: 					break;
+82039: 				case 2:
+82040: 					goto IL_006d;
+82041: 				default:
+82042: 					num = 0;
+82043: 					goto IL_00f1;
+82044: 				case 4:
+82045: 					goto IL_0092;
+82046: 				case 1:
+82047: 				case 5:
+82048: 					goto IL_00ae;
+82049: 				case 9:
+82050: 					goto IL_00c9;
+82051: 				case 3:
+82052: 					goto IL_00e0;
+82053: 				case 0:
+82054: 					goto IL_00f1;
+82055: 				case 6:
+82056: 				case 7:
+82057: 					goto IL_0102;
+82058: 				case 10:
+82059: 					_008B_0086_0090 = (P_4 ? 1 : (-1));
+82060: 					return;
+82061: 				}
+82062: 			}
+82063: 		}
+82064: 
+82065: 		public static double _008A_009E_0090(double P_0)
+82066: 		{
+82067: 			while (true)
+82068: 			{
+82069: 				if (P_0 < 0.0)
+82070: 				{
+82071: 					P_0 += Math.PI * 2.0;
+82072: 					_0089m();
+82073: 					if (!_0089l())
+82074: 					{
+82075: 						break;
+82076: 					}
+82077: 				}
+82078: 				else if (_0089l())
+82079: 				{
+82080: 					break;
+82081: 				}
+82082: 			}
+82083: 			while (P_0 >= Math.PI * 2.0)
+82084: 			{
+82085: 				P_0 -= Math.PI * 2.0;
+82086: 			}
+82087: 			return P_0;
+82088: 		}
+82089: 
+82090: 		public List<_008F_008E> _008A_009E_0091(double P_0 = 0.0, double P_1 = Math.PI, double P_2 = 0.0, double P_3 = 1.0)
+82091: 		{
+82092: 			if (false /* original-file-bool-offset:1360 */)
+82093: 			{
+82094: 				goto IL_0022;
+82095: 			}
+82096: 			List<_008F_008E> list = new List<_008F_008E>();
+82097: 			double num = P_0;
+82098: 			double num2 = P_1;
+82099: 			double num3 = P_3 * _008B_0086_0091;
+82100: 			goto IL_002d;
+82101: 			IL_0022:
+82102: 			num += num3;
+82103: 			double num4;
+82104: 			double num5;
+82105: 			double num6;
+82106: 			double num7;
+82107: 			double num8;
+82108: 			if (num >= num2)
+82109: 			{
+82110: 				num4 = num2 * _008B_0086_008B + _008B_0086_0089 + P_2;
+82111: 				num5 = Math.Sqrt(_008B_0086_008C * _008B_0086_008C + num4 * num4 + 2.0 * _008B_0086_008C * num4 * _008B_0086_008E);
+82112: 				num6 = num2 - Math.Asin(num4 * _008B_0086_008F / num5);
+82113: 				num7 = num5 * Math.Cos((double)_008B_0086_0090 * num6 + _008B_0086_0088) + _008B_0086_008A.X;
+82114: 				num8 = num5 * Math.Sin((double)_008B_0086_0090 * num6 + _008B_0086_0088) + _008B_0086_008A.Y;
+82115: 				list.Add(new _008F_008E(num7, num8));
+82116: 				return list;
+82117: 			}
+82118: 			goto IL_002d;
+82119: 			IL_002d:
+82120: 			num4 = num * _008B_0086_008B + _008B_0086_0089 + P_2;
+82121: 			num5 = Math.Sqrt(_008B_0086_008C * _008B_0086_008C + num4 * num4 + 2.0 * _008B_0086_008C * num4 * _008B_0086_008E);
+82122: 			num6 = num - Math.Asin(num4 * _008B_0086_008F / num5);
+82123: 			num7 = num5 * Math.Cos((double)_008B_0086_0090 * num6 + _008B_0086_0088) + _008B_0086_008A.X;
+82124: 			num8 = num5 * Math.Sin((double)_008B_0086_0090 * num6 + _008B_0086_0088) + _008B_0086_008A.Y;
+82125: 			list.Add(new _008F_008E(num7, num8));
+82126: 			goto IL_0022;
+82127: 		}
+82128: 
+82129: 		public List<List<_008F_008E>> _008A_009E_0092(double P_0 = 0.0, double P_1 = Math.PI, double P_2 = 0.0, double P_3 = 1.0, double P_4 = 5.0)
+82130: 		{
+82131: 			if (false /* original-file-bool-offset:1364 */)
+82132: 			{
+82133: 				goto IL_0054;
+82134: 			}
+82135: 			List<List<_008F_008E>> list = new List<List<_008F_008E>>();
+82136: 			List<_008F_008E> list2 = new List<_008F_008E>();
+82137: 			double num = P_0;
+82138: 			double num2 = P_1;
+82139: 			double num3 = P_3 * _008B_0086_0091;
+82140: 			double num4 = 1.0;
+82141: 			bool flag = true;
+82142: 			goto IL_0094;
+82143: 			IL_006c:
+82144: 			num += num3;
+82145: 			double num5;
+82146: 			double num6;
+82147: 			double num7;
+82148: 			double num8;
+82149: 			double num9;
+82150: 			if (!(num < num2))
+82151: 			{
+82152: 				num5 = num2 * _008B_0086_008B + _008B_0086_0089 + P_2;
+82153: 				num6 = Math.Sqrt(_008B_0086_008C * _008B_0086_008C + num5 * num5 + 2.0 * _008B_0086_008C * num5 * _008B_0086_008E);
+82154: 				num7 = num2 - Math.Asin(num5 * _008B_0086_008F / num6);
+82155: 				num8 = num6 * Math.Cos((double)_008B_0086_0090 * num7 + _008B_0086_0088) + _008B_0086_008A.X;
+82156: 				num9 = num6 * Math.Sin((double)_008B_0086_0090 * num7 + _008B_0086_0088) + _008B_0086_008A.Y;
+82157: 				list2.Add(new _008F_008E(num8, num9));
+82158: 				list.Add(list2);
+82159: 				return list;
+82160: 			}
+82161: 			goto IL_0094;
+82162: 			IL_0094:
+82163: 			num5 = num * _008B_0086_008B + _008B_0086_0089 + P_2;
+82164: 			num6 = Math.Sqrt(_008B_0086_008C * _008B_0086_008C + num5 * num5 + 2.0 * _008B_0086_008C * num5 * _008B_0086_008E);
+82165: 			num7 = num - Math.Asin(num5 * _008B_0086_008F / num6);
+82166: 			num8 = num6 * Math.Cos((double)_008B_0086_0090 * num7 + _008B_0086_0088) + _008B_0086_008A.X;
+82167: 			num9 = num6 * Math.Sin((double)_008B_0086_0090 * num7 + _008B_0086_0088) + _008B_0086_008A.Y;
+82168: 			if (flag)
+82169: 			{
+82170: 				list2.Add(new _008F_008E(num8, num9));
+82171: 			}
+82172: 			if (num4++ % P_4 == 0.0)
+82173: 			{
+82174: 				goto IL_0054;
+82175: 			}
+82176: 			goto IL_006c;
+82177: 			IL_0054:
+82178: 			if (flag)
+82179: 			{
+82180: 				list.Add(list2);
+82181: 				list2 = new List<_008F_008E>();
+82182: 			}
+82183: 			flag = !flag;
+82184: 			goto IL_006c;
+82185: 		}
+82186: 
+82187: 		public _008F_008E _008A_009E_0093(double P_0, double P_1 = 0.0)
+82188: 		{
+82189: 			double num = default(double);
+82190: 			double num2 = default(double);
+82191: 			if (!false /* original-file-bool-offset:1368 */)
+82192: 			{
+82193: 				num = P_0 * _008B_0086_008B + _008B_0086_0089 + P_1;
+82194: 				_ = 0;
+82195: 				if (_0089l())
+82196: 				{
+82197: 					num2 = Math.Sqrt(_008B_0086_008C * _008B_0086_008C + num * num + 2.0 * _008B_0086_008C * num * _008B_0086_008E);
+82198: 				}
+82199: 			}
+82200: 			double num3 = P_0 - Math.Asin(num * _008B_0086_008F / num2);
+82201: 			double num4 = num2 * Math.Cos((double)_008B_0086_0090 * num3 + _008B_0086_0088) + _008B_0086_008A.X;
+82202: 			double num5 = num2 * Math.Sin((double)_008B_0086_0090 * num3 + _008B_0086_0088) + _008B_0086_008A.Y;
+82203: 			return new _008F_008E(num4, num5);
+82204: 		}
+82205: 
+82206: 		public _008F_008E _008A_009E_0094(double P_0, double P_1 = 0.0)
+82207: 		{
+82208: 			double num = _008B_0086_008C * Math.Cos((double)_008B_0086_0090 * P_0 + _008B_0086_0088) + _008B_0086_008A.X;
+82209: 			double num2 = _008B_0086_008C * Math.Sin((double)_008B_0086_0090 * P_0 + _008B_0086_0088) + _008B_0086_008A.Y;
+82210: 			return new _008F_008E(num, num2);
+82211: 		}
+82212: 
+82213: 		public double _008A_009E_0095(double P_0, double P_1 = 0.0)
+82214: 		{
+82215: 			double num = P_0 * _008B_0086_008B + _008B_0086_0089 + P_1;
+82216: 			return Math.Sqrt(_008B_0086_008C * _008B_0086_008C + num * num + 2.0 * _008B_0086_008C * num * _008B_0086_008E);
+82217: 		}
+82218: 
+82219: 		public double _008A_009E_0096(double P_0)
+82220: 		{
+82221: 			return _008A_009E_009C(_008B_0086_0088, P_0, _008B_0086_0090);
+82222: 		}
+82223: 
+82224: 		public double _008A_009E_0097(double P_0, double P_1 = 0.0)
+82225: 		{
+82226: 			double num = default(double);
+82227: 			int num2 = default(int);
+82228: 			if (!false /* original-file-bool-offset:1372 */)
+82229: 			{
+82230: 				P_0 = _008A_009E_0090(P_0);
+82231: 				_0089l();
+82232: 				if (_0089m())
+82233: 				{
+82234: 					goto IL_00b0;
+82235: 				}
+82236: 				if (_0089l())
+82237: 				{
+82238: 					num = P_0;
+82239: 					num2 = 0;
+82240: 					goto IL_0041;
+82241: 				}
+82242: 			}
+82243: 			goto IL_0097;
+82244: 			IL_0041:
+82245: 			double num3 = num * _008B_0086_008B + _008B_0086_0089 + P_1;
+82246: 			double num4 = Math.Sqrt(_008B_0086_008C * _008B_0086_008C + num3 * num3 + 2.0 * _008B_0086_008C * num3 * _008B_0086_008E);
+82247: 			double num5 = num - Math.Asin(num3 * _008B_0086_008F / num4);
+82248: 			goto IL_0097;
+82249: 			IL_0097:
+82250: 			double num6 = P_0 - num5;
+82251: 			num += num6;
+82252: 			num2++;
+82253: 			if (num2 <= 20)
+82254: 			{
+82255: 				if (num6 <= 1E-09)
+82256: 				{
+82257: 					return num;
+82258: 				}
+82259: 				goto IL_0041;
+82260: 			}
+82261: 			goto IL_00b0;
+82262: 			IL_00b0:
+82263: 			return num;
+82264: 		}
+82265: 
+82266: 		public void _008A_009E_0098(double P_0, double P_1, out double P_2, out double P_3)
+82267: 		{
+82268: 			double num = P_1;
+82269: 			while (true)
+82270: 			{
+82271: 				int num2 = 0;
+82272: 				while (true)
+82273: 				{
+82274: 					double num3 = _008A_009E_0097(P_0, num);
+82275: 					double num4 = _008A_009E_0095(num3, num) - P_1 - _008B_0086_008C;
+82276: 					num -= num4;
+82277: 					if (_0089m())
+82278: 					{
+82279: 						break;
+82280: 					}
+82281: 					num2++;
+82282: 					_0089l();
+82283: 					if ((!_0089m() && num2 > 5) || P_1 - num <= 1E-05)
+82284: 					{
+82285: 						P_2 = num3;
+82286: 						P_3 = num;
+82287: 						return;
+82288: 					}
+82289: 				}
+82290: 			}
+82291: 		}
+82292: 
+82293: 		public double _008A_009E_0099(_008F_008C P_0, double P_1 = 0.0, bool P_2 = true)
+82294: 		{
+82295: 			double num = default(double);
+82296: 			double num2 = default(double);
+82297: 			double num3 = default(double);
+82298: 			if (false /* original-file-bool-offset:1376 */)
+82299: 			{
+82300: 				if (_0089l())
+82301: 				{
+82302: 					goto IL_0084;
+82303: 				}
+82304: 			}
+82305: 			else
+82306: 			{
+82307: 				num = P_0._008B_0088_0094() + _008B_0086_0088 + _008B_0086_0092 + _008B_0086_008D;
+82308: 				if (_008B_0086_0090 > 0)
+82309: 				{
+82310: 					if (P_2)
+82311: 					{
+82312: 						num2 = 0.0;
+82313: 						num3 = num;
+82314: 					}
+82315: 					else
+82316: 					{
+82317: 						num2 = num;
+82318: 						num3 = num + _008B_0086_0092;
+82319: 					}
+82320: 				}
+82321: 				else
+82322: 				{
+82323: 					if (P_2)
+82324: 					{
+82325: 						_ = 0;
+82326: 						if (_0089l())
+82327: 						{
+82328: 							goto IL_011a;
+82329: 						}
+82330: 						goto IL_00a1;
+82331: 					}
+82332: 					num2 = 0.0;
+82333: 					num3 = num;
+82334: 				}
+82335: 			}
+82336: 			goto IL_0124;
+82337: 			IL_0084:
+82338: 			_008F_008C obj = default(_008F_008C);
+82339: 			_008F_008E obj2 = default(_008F_008E);
+82340: 			obj._008B_0088_008F(obj2, P_0._008B_0088_0094());
+82341: 			double num4 = P_0._008B_0088_0092(obj2);
+82342: 			int num5 = 0;
+82343: 			goto IL_0109;
+82344: 			IL_0124:
+82345: 			obj = new _008F_008C();
+82346: 			obj2 = _008A_009E_0093(num, P_1);
+82347: 			goto IL_0084;
+82348: 			IL_011a:
+82349: 			num2 = num;
+82350: 			num3 = num + _008B_0086_0092;
+82351: 			goto IL_0124;
+82352: 			IL_00a1:
+82353: 			double num6 = default(double);
+82354: 			obj2 = _008A_009E_0093(num6, P_1);
+82355: 			double num7 = obj._008B_0088_0092(obj2);
+82356: 			if (num7 > num4)
+82357: 			{
+82358: 				double num8;
+82359: 				if (!P_2)
+82360: 				{
+82361: 					if (_0089m())
+82362: 					{
+82363: 						goto IL_011a;
+82364: 					}
+82365: 					num8 = num2;
+82366: 				}
+82367: 				else
+82368: 				{
+82369: 					num8 = num6;
+82370: 				}
+82371: 				num2 = num8;
+82372: 				num3 = (P_2 ? num3 : num6);
+82373: 			}
+82374: 			else
+82375: 			{
+82376: 				num2 = (P_2 ? num2 : num6);
+82377: 				num3 = (P_2 ? num6 : num3);
+82378: 			}
+82379: 			if (num5++ <= 20)
+82380: 			{
+82381: 				if (Math.Abs(num7 - num4) <= 0.01)
+82382: 				{
+82383: 					return num6;
+82384: 				}
+82385: 				goto IL_0109;
+82386: 			}
+82387: 			return num6;
+82388: 			IL_0109:
+82389: 			num6 = (num2 + num3) / 2.0;
+82390: 			goto IL_00a1;
+82391: 		}
+82392: 
+82393: 		public double _008A_009E_009A(_008F_008C P_0, double P_1, double P_2, double P_3, double P_4 = 0.0, bool P_5 = true)
+82394: 		{
+82395: 			_0089l();
+82396: 			int num = default(int);
+82397: 			if (!_0089m())
+82398: 			{
+82399: 				if (!false /* original-file-bool-offset:1380 */)
+82400: 				{
+82401: 					Console.WriteLine("<<getIntersectSita>>\n search from: {0},\n  to {1}." /* string-offset:7452 */, P_2 / _008B_0086_0091, P_3 / _008B_0086_0091);
+82402: 					num = 0;
+82403: 					goto IL_006c;
+82404: 				}
+82405: 				goto IL_009c;
+82406: 			}
+82407: 			if (!_0089m())
+82408: 			{
+82409: 				goto IL_008c;
+82410: 			}
+82411: 			goto IL_00cb;
+82412: 			IL_00ad:
+82413: 			double num2 = default(double);
+82414: 			double num3 = default(double);
+82415: 			if (num++ <= 20)
+82416: 			{
+82417: 				if (Math.Abs(num2 - P_1) <= 0.01)
+82418: 				{
+82419: 					return num3;
+82420: 				}
+82421: 				goto IL_006c;
+82422: 			}
+82423: 			return num3;
+82424: 			IL_00cb:
+82425: 			double num4 = num3;
+82426: 			goto IL_00c3;
+82427: 			IL_00c3:
+82428: 			P_2 = num4;
+82429: 			P_3 = ((!P_5) ? P_3 : num3);
+82430: 			goto IL_00ad;
+82431: 			IL_006c:
+82432: 			num3 = (P_2 + P_3) / 2.0;
+82433: 			_008F_008E obj = default(_008F_008E);
+82434: 			if (_0089l())
+82435: 			{
+82436: 				obj = _008A_009E_0093(num3, P_4);
+82437: 				goto IL_008c;
+82438: 			}
+82439: 			goto IL_009c;
+82440: 			IL_00a0:
+82441: 			double num5;
+82442: 			P_2 = num5;
+82443: 			P_3 = (P_5 ? P_3 : num3);
+82444: 			goto IL_00ad;
+82445: 			IL_008c:
+82446: 			num2 = P_0._008B_0088_0092(obj);
+82447: 			if (num2 > P_1)
+82448: 			{
+82449: 				if (!P_5)
+82450: 				{
+82451: 					goto IL_009c;
+82452: 				}
+82453: 				num5 = num3;
+82454: 				goto IL_00a0;
+82455: 			}
+82456: 			if (P_5)
+82457: 			{
+82458: 				num4 = P_2;
+82459: 				goto IL_00c3;
+82460: 			}
+82461: 			goto IL_00cb;
+82462: 			IL_009c:
+82463: 			num5 = P_2;
+82464: 			goto IL_00a0;
+82465: 		}
+82466: 
+82467: 		public double _008A_009E_009B(_008F_008E P_0, double P_1 = 0.0)
+82468: 		{
+82469: 			int num = 24;
+82470: 			double num5 = default(double);
+82471: 			if (!_0089m())
+82472: 			{
+82473: 				_008F_008E obj3 = default(_008F_008E);
+82474: 				_008F_008E obj4 = default(_008F_008E);
+82475: 				_008E_009D obj5 = default(_008E_009D);
+82476: 				int num6 = default(int);
+82477: 				int num14 = default(int);
+82478: 				int num15 = default(int);
+82479: 				int num16 = default(int);
+82480: 				_008F_008E obj = default(_008F_008E);
+82481: 				double num10 = default(double);
+82482: 				double num13 = default(double);
+82483: 				double num17 = default(double);
+82484: 				double num9 = default(double);
+82485: 				double num11 = default(double);
+82486: 				double num8 = default(double);
+82487: 				double num7 = default(double);
+82488: 				double num2 = default(double);
+82489: 				_008F_008E obj2 = default(_008F_008E);
+82490: 				double num3 = default(double);
+82491: 				double num4 = default(double);
+82492: 				while (true)
+82493: 				{
+82494: 					switch (num)
+82495: 					{
+82496: 					case 25:
+82497: 						obj3 = _008A_009E_0093(0.0);
+82498: 						obj4 = _008A_009E_0093(Math.PI * 2.0);
+82499: 						obj5 = new _008E_009D(obj3.X, obj3.Y, _008B_0086_0090, _008B_0086_0088);
+82500: 						goto case 7;
+82501: 					case 1:
+82502: 						num6 = 0;
+82503: 						if (num14 == 1 && num15 == 2)
+82504: 						{
+82505: 							num = 12;
+82506: 							if (!_0089m())
+82507: 							{
+82508: 								goto case 12;
+82509: 							}
+82510: 							goto case 17;
+82511: 						}
+82512: 						if (num15 == 1 && num16 == 2)
+82513: 						{
+82514: 							num = 9;
+82515: 							goto case 9;
+82516: 						}
+82517: 						goto case 11;
+82518: 					case 12:
+82519: 						obj = _008A_009E_0094(num5);
+82520: 						num = 16;
+82521: 						if (!_0089l())
+82522: 						{
+82523: 							goto case 2;
+82524: 						}
+82525: 						goto case 16;
+82526: 					case 2:
+82527: 					case 21:
+82528: 					{
+82529: 						num10 = Math.Atan2(P_0.Y - _008B_0086_008A.Y, P_0.X - _008B_0086_008A.X);
+82530: 						double num12 = _008A_009E_009C(_008B_0086_0088, num10, _008B_0086_0090);
+82531: 						num13 = _008A_009E_0097(num12, P_1);
+82532: 						num17 = _008A_009E_0095(num13, P_1);
+82533: 						num = 6;
+82534: 						if (!_0089m())
+82535: 						{
+82536: 							goto case 6;
+82537: 						}
+82538: 						goto case 16;
+82539: 					}
+82540: 					case 6:
+82541: 						if (num9 >= num17)
+82542: 						{
+82543: 							num11 = Math.Acos(_008B_0086_008C / num9);
+82544: 							num = 17;
+82545: 							goto case 17;
+82546: 						}
+82547: 						goto case 19;
+82548: 					case 17:
+82549: 						num5 = _008A_009E_009C(_008B_0086_0088, num10 - (double)_008B_0086_0090 * num11, _008B_0086_0090);
+82550: 						goto case 25;
+82551: 					case 7:
+82552: 					case 20:
+82553: 					{
+82554: 						_008E_009D obj6 = new _008E_009D(obj3.X, obj3.Y, _008B_0086_0090, _008B_0086_0088 - (double)_008B_0086_0090 * _008B_0086_008D);
+82555: 						_008E_009D obj7 = new _008E_009D(obj4.X, obj4.Y, _008B_0086_0090, _008B_0086_0088 - (double)_008B_0086_0090 * _008B_0086_008D);
+82556: 						num14 = obj5._008A_009E_0088(P_0.X, P_0.Y);
+82557: 						num15 = obj6._008A_009E_0088(P_0.X, P_0.Y);
+82558: 						num16 = obj7._008A_009E_0088(P_0.X, P_0.Y);
+82559: 						num = 1;
+82560: 						goto case 1;
+82561: 					}
+82562: 					case 16:
+82563: 						num8 = _008B_0086_0088 - (double)_008B_0086_0090 * _008B_0086_008D + (double)_008B_0086_0090 * Math.PI / 2.0;
+82564: 						num = 14;
+82565: 						goto case 14;
+82566: 					case 14:
+82567: 						num7 = Math.Atan2(P_0.Y - obj.Y, P_0.X - obj.X);
+82568: 						goto case 3;
+82569: 					case 3:
+82570: 					case 23:
+82571: 						num2 = _008A_009E_009C(num8, num7, _008B_0086_0090);
+82572: 						num5 = num2;
+82573: 						goto case 11;
+82574: 					case 9:
+82575: 					{
+82576: 						double num12 = Math.PI * 2.0 + _008A_009E_009C(_008B_0086_0088, num10, _008B_0086_0090);
+82577: 						num13 = Math.PI * 2.0 + _008A_009E_0097(num12, P_1);
+82578: 						num = 10;
+82579: 						goto case 10;
+82580: 					}
+82581: 					case 10:
+82582: 						num17 = _008A_009E_0095(num13, P_1);
+82583: 						if (num9 >= num17)
+82584: 						{
+82585: 							num5 = Math.PI * 2.0;
+82586: 							goto case 11;
+82587: 						}
+82588: 						num = 15;
+82589: 						goto case 15;
+82590: 					case 13:
+82591: 						obj2 = _008A_009E_0093(num5);
+82592: 						goto case 4;
+82593: 					case 4:
+82594: 						num3 = Math.Atan2(P_0.Y - obj2.Y, P_0.X - obj2.X);
+82595: 						num4 = Math.Atan2(obj.Y - obj2.Y, obj.X - obj2.X);
+82596: 						num = 5;
+82597: 						if (_0089l())
+82598: 						{
+82599: 							continue;
+82600: 						}
+82601: 						goto case 11;
+82602: 					case 11:
+82603: 					case 22:
+82604: 						obj = _008A_009E_0094(num5);
+82605: 						goto case 13;
+82606: 					case 24:
+82607: 						if (false /* original-file-bool-offset:1384 */)
+82608: 						{
+82609: 							num = 3;
+82610: 							if (_0089l())
+82611: 							{
+82612: 								continue;
+82613: 							}
+82614: 							goto case 17;
+82615: 						}
+82616: 						num9 = _008F_008E._008B_0088_009E(P_0, _008B_0086_008A);
+82617: 						_ = 1;
+82618: 						if (!_0089m())
+82619: 						{
+82620: 							num = 21;
+82621: 							goto case 2;
+82622: 						}
+82623: 						num = 20;
+82624: 						goto case 7;
+82625: 					case 18:
+82626: 						num6++;
+82627: 						if (num6 <= 10)
+82628: 						{
+82629: 							if (num2 > 1E-07)
+82630: 							{
+82631: 								goto case 11;
+82632: 							}
+82633: 							goto case 26;
+82634: 						}
+82635: 						num = 0;
+82636: 						break;
+82637: 					case 8:
+82638: 						num5 += num2;
+82639: 						num = 18;
+82640: 						goto case 18;
+82641: 					case 5:
+82642: 						num2 = Math.PI / 2.0 - _008A_009E_009C(num3, num4, _008B_0086_0090);
+82643: 						goto case 8;
+82644: 					default:
+82645: 						num = 22;
+82646: 						goto case 11;
+82647: 					case 19:
+82648: 						return num13;
+82649: 					case 15:
+82650: 						return num13;
+82651: 					case 26:
+82652: 						return num5;
+82653: 					case 0:
+82654: 						break;
+82655: 					}
+82656: 					break;
+82657: 				}
+82658: 			}
+82659: 			return num5;
+82660: 		}
+82661: 
+82662: 		private double _008A_009E_009C(double P_0, double P_1, double P_2 = 1.0)
+82663: 		{
+82664: 			double num = default(double);
+82665: 			double num2 = default(double);
+82666: 			if (_0089l())
+82667: 			{
+82668: 				num = _008A_009E_0090(P_0);
+82669: 				num2 = _008A_009E_0090(P_1);
+82670: 				_0089l();
+82671: 				if (!_0089m() && P_2 <= 0.0)
+82672: 				{
+82673: 					num2 = ((num2 < num) ? num2 : (num2 - Math.PI * 2.0));
+82674: 					return num - num2;
+82675: 				}
+82676: 			}
+82677: 			num2 = ((num2 < num) ? (num2 + Math.PI * 2.0) : num2);
+82678: 			return num2 - num;
+82679: 		}
+82680: 
+82681: 		public double _008A_009E_009D(_008F_0086 P_0)
+82682: 		{
+82683: 			double num = Math.Atan2(P_0._008B_0086_008A.Y - _008B_0086_008A.Y, P_0._008B_0086_008A.X - _008B_0086_008A.X);
+82684: 			double num2 = _008F_008E._008B_0088_009E(_008B_0086_008A, P_0._008B_0086_008A);
+82685: 			double num3 = Math.Asin((P_0._008B_0086_0089 - _008B_0086_0089 + (_008B_0086_0088 - P_0._008B_0086_0088) * _008B_0086_008B) / num2);
+82686: 			double num4 = num - num3 - Math.PI / 2.0 + _008B_0086_008D;
+82687: 			return num4 + ((num4 < 0.0) ? (Math.PI * 2.0) : 0.0);
+82688: 		}
+82689: 
+82690: 		public List<_008F_008E> _008A_009E_009E(double P_0 = 0.0, double P_1 = Math.PI, double P_2 = 0.0, double P_3 = 1.0, bool P_4 = false, bool P_5 = false)
+82691: 		{
+82692: 			if (false /* original-file-bool-offset:1388 */)
+82693: 			{
+82694: 				goto IL_0080;
+82695: 			}
+82696: 			List<_008F_008E> list = new List<_008F_008E>();
+82697: 			if (P_4)
+82698: 			{
+82699: 				list.Add(_008B_0086_008A);
+82700: 				list.Add(_008F_008E._008B_0089_008E(_008B_0086_008A, _008B_0086_008C * Math.Cos(P_0 + _008B_0086_0088), _008B_0086_008C * Math.Sin(P_0 + _008B_0086_0088)));
+82701: 			}
+82702: 			double num = Math.Min(P_0, P_1);
+82703: 			double num2 = Math.Max(P_0, P_1);
+82704: 			double num3 = num;
+82705: 			double num4 = P_3 * _008B_0086_0091;
+82706: 			goto IL_008b;
+82707: 			IL_008b:
+82708: 			double num5 = num3 * _008B_0086_008B + _008B_0086_0089 + P_2;
+82709: 			double num6 = Math.Sqrt(_008B_0086_008C * _008B_0086_008C + num5 * num5 + 2.0 * _008B_0086_008C * num5 * _008B_0086_008E);
+82710: 			double num7 = num3 - Math.Asin(num5 * _008B_0086_008F / num6);
+82711: 			double num8 = num6 * Math.Cos(num7 + _008B_0086_0088) + _008B_0086_008A.X;
+82712: 			double num9 = num6 * Math.Sin(num7 + _008B_0086_0088) + _008B_0086_008A.Y;
+82713: 			list.Add(new _008F_008E(num8, num9));
+82714: 			goto IL_0080;
+82715: 			IL_0080:
+82716: 			num3 += num4;
+82717: 			if (num3 >= num2)
+82718: 			{
+82719: 				num5 = num2 * _008B_0086_008B + _008B_0086_0089 + P_2;
+82720: 				num6 = Math.Sqrt(_008B_0086_008C * _008B_0086_008C + num5 * num5 + 2.0 * _008B_0086_008C * num5 * _008B_0086_008E);
+82721: 				num7 = num2 - Math.Asin(num5 * _008B_0086_008F / num6);
+82722: 				num8 = num6 * Math.Cos(num7 + _008B_0086_0088) + _008B_0086_008A.X;
+82723: 				num9 = num6 * Math.Sin(num7 + _008B_0086_0088) + _008B_0086_008A.Y;
+82724: 				list.Add(new _008F_008E(num8, num9));
+82725: 				if (P_5)
+82726: 				{
+82727: 					list.Add(new _008F_008E(_008B_0086_008C * Math.Cos(num2 + _008B_0086_0088) + _008B_0086_008A.X, _008B_0086_008C * Math.Sin(num2 + _008B_0086_0088) + _008B_0086_008A.Y));
+82728: 					list.Add(_008B_0086_008A);
+82729: 				}
+82730: 				return list;
+82731: 			}
+82732: 			goto IL_008b;
+82733: 		}
+82734: 
+82735: 		public double _008B_0086_0086(_008F_008E P_0, double P_1 = 0.0)
+82736: 		{
+82737: 			double num = default(double);
+82738: 			double num2 = default(double);
+82739: 			if (false /* original-file-bool-offset:1392 */)
+82740: 			{
+82741: 				_ = 1;
+82742: 				if (_0089m())
+82743: 				{
+82744: 					goto IL_005f;
+82745: 				}
+82746: 			}
+82747: 			else
+82748: 			{
+82749: 				num = _008A_009E_0090(Math.Atan2(P_0.Y - _008B_0086_008A.Y, P_0.X - _008B_0086_008A.X));
+82750: 				num2 = 0.0;
+82751: 				if (_008B_0086_0090 > 0)
+82752: 				{
+82753: 					goto IL_005f;
+82754: 				}
+82755: 				num2 = ((!(num > _008B_0086_0088)) ? (_008B_0086_0088 - num) : (Math.PI * 2.0 + _008B_0086_0088 - num));
+82756: 			}
+82757: 			goto IL_00af;
+82758: 			IL_005f:
+82759: 			num2 = ((!(num < _008B_0086_0088)) ? (num - _008B_0086_0088) : (Math.PI * 2.0 + num - _008B_0086_0088));
+82760: 			goto IL_00af;
+82761: 			IL_00af:
+82762: 			double num3 = _008A_009E_0097(num2, P_1);
+82763: 			if (_008F_008E._008B_0088_009E(_008A_009E_0093(num3, P_1), _008B_0086_008A) > _008F_008E._008B_0088_009E(P_0, _008B_0086_008A))
+82764: 			{
+82765: 				return num3;
+82766: 			}
+82767: 			return -1.0;
+82768: 		}
+82769: 
+82770: 		private void _008B_0086_0087(string P_0, double P_1)
+82771: 		{
+82772: 			MessageBox.Show(P_0 + ": " /* string-offset:964 */ + P_1 / _008B_0086_0091);
+82773: 		}
+82774: 
+82775: 		static _008F_0086()
+82776: 		{
+82777: 			LicenseManager.Validate(typeof(_008F_0086));
+82778: 			_008B_0086_0092 = Math.PI / 2.0;
+82779: 		}
+82780: 
+82781: 		internal static bool _0089l()
+82782: 		{
+82783: 			return true;
+82784: 		}
+82785: 
+82786: 		internal static bool _0089m()
+82787: 		{
+82788: 			return false;
+82789: 		}
+82790: 	}

@@ -1,0 +1,12 @@
+METHOD 0600084E \x8f\x97.\x8f\x96::op_Multiply RVA=64E3 file=46E3
+IL_0000: ldarga.s argument(0x0000)
+IL_0002: call 0x06000845 \x8f\x97.\x8f\x96::\x8b\x8b\x99
+IL_0007: ldarg.1 
+IL_0008: mul 
+IL_0009: ldarga.s argument(0x0000)
+IL_000B: call 0x06000847 \x8f\x97.\x8f\x96::\x8b\x8b\x9b
+IL_0010: ldarg.1 
+IL_0011: mul 
+IL_0012: newobj 0x06000849 \x8f\x97.\x8f\x96::.ctor
+IL_0017: ret 
+

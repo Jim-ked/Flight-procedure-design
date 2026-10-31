@@ -1,0 +1,27 @@
+METHOD 06000807 \x8f\x8f.\x8f\x8e::\x8b\x88\x9e RVA=6132 file=4332
+IL_0000: ldarg.0 
+IL_0001: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0006: ldarg.1 
+IL_0007: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_000C: sub 
+IL_000D: ldarg.0 
+IL_000E: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0013: ldarg.1 
+IL_0014: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0019: sub 
+IL_001A: mul 
+IL_001B: ldarg.0 
+IL_001C: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0021: ldarg.1 
+IL_0022: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0027: sub 
+IL_0028: ldarg.0 
+IL_0029: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_002E: ldarg.1 
+IL_002F: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0034: sub 
+IL_0035: mul 
+IL_0036: add 
+IL_0037: call 0x0A00002D System.Math::Sqrt
+IL_003C: ret 
+

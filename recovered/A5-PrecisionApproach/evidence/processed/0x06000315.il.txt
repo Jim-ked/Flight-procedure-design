@@ -1,0 +1,53 @@
+METHOD 06000315 \x89\x8d.\x89\x8c::\x87\x91\x9d RVA=36240 file=34440
+IL_0000: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0005: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000A: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_000F: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_0014: call 0x06000305 \x89\x8d.\x89\x8c::\x87\x91\x8d
+IL_0019: pop 
+IL_001A: ldc.i4.1 
+IL_001B: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_0020: brtrue.s 56
+IL_0022: pop 
+IL_0023: ldarg.0 
+IL_0024: ldc.i4.0 
+IL_0025: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_002A: br.s 57
+IL_002C: pop 
+IL_002D: ldc.i4 428
+IL_0032: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0037: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_003C: stloc.0 
+IL_003D: ldarg.0 
+IL_003E: ldc.i4.1 
+IL_003F: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0044: ldarg.0 
+IL_0045: ldfld 0x04000232 \x89\x8d.\x89\x8c::\x87\x95\x8b
+IL_004A: ldloca.s local(0x0000)
+IL_004C: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0051: ldc.i4.2 
+IL_0052: call 0x0A0001C8 System.Math::Round
+IL_0057: stloc.1 
+IL_0058: ldloca.s local(0x0001)
+IL_005A: call 0x0A0001B7 System.Double::ToString
+IL_005F: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0064: ldarg.0 
+IL_0065: ldfld 0x04000230 \x89\x8d.\x89\x8c::\x87\x95\x89
+IL_006A: ldloca.s local(0x0000)
+IL_006C: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0071: ldc.i4.2 
+IL_0072: call 0x0A0001C8 System.Math::Round
+IL_0077: stloc.1 
+IL_0078: ldloca.s local(0x0001)
+IL_007A: call 0x0A0001B7 System.Double::ToString
+IL_007F: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0084: ldarg.0 
+IL_0085: ldfld 0x0400022F \x89\x8d.\x89\x8c::\x87\x95\x88
+IL_008A: ldloca.s local(0x0000)
+IL_008C: call 0x0A000077 Autodesk.AutoCAD.Geometry.Point3d::get_Z
+IL_0091: stloc.1 
+IL_0092: ldloca.s local(0x0001)
+IL_0094: call 0x0A0001B7 System.Double::ToString
+IL_0099: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_009E: ret 
+

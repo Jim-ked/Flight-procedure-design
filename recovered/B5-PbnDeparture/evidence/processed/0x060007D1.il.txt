@@ -1,0 +1,8 @@
+METHOD 060007D1 \x8f\x8b.\x8f\x8a::\x8b\x87\x9a RVA=5F5F file=415F
+IL_0000: ldarg.0 
+IL_0001: ldc.r8 3.141592653589793
+IL_000A: mul 
+IL_000B: ldc.r8 180.0
+IL_0014: div 
+IL_0015: ret 
+

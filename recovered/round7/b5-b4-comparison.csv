@@ -1,0 +1,8 @@
+﻿topic,classification,B4,other,evidence
+P793,Different implementation,no call/reachability,B5 real turn parameter constructor calls,B4 direct-calls plus event-reachability
+Spiral86,Different implementation,no call,B5 directly uses P7A1 Spiral86 and methods,frozen B5 overview and round5 b2-b5-comparison.csv; B4 negative search
+turn points,Different implementation,THR/end only; no third point,B5 DER/THR/TurnEnd+TP station,P55B/P55C vs frozen B5 runway-frame.md
+primary-secondary,Different implementation,fixed1852/3704 and outward30m surface,B5 per-turn boundary/evaluator chain,P5DF/P5E0 vs frozen B5 reports
+Take5,Copied formula,P555 after SelectAll before parser,B5 ScreenData same truncation arithmetic distinct event,Round1 screen-data.md and IL
+Mark,Same MethodDef,P09C/P09E obst Altitude=originalZ,same common helpers,P57D actual direct calls
+runway frame,Same MethodDef,"P0AC THR,end","P0AC DER,THR reversed roles",frozen B5 runway-frame.md

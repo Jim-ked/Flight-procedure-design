@@ -1,0 +1,13 @@
+﻿topic,code_fact,standard,classification,difference_or_limit,evidence
+CAT I/II cap,P411/P412 300/150m,PDF275 OAS height domains,Matches,cap alone does not prove complete standard-compliant geometry,E1/E2 code; N mapping; 实现依据待确认
+AUTO W/W*,P307/P412 combine W and Wstar; distinct DB key,PDF276 AUTO additional Wstar/X changes,Matches,table provenance/version not established,E1/E2 code; N mapping; 实现依据待确认
+dimensions/RDH,P40B/P40C copied corrections,PDF276 s/t/RDH corrections,Matches,numeric model verified; full table authorship unresolved,E1/E2 code; N mapping; 实现依据待确认
+PAOAS P1/P2,"P1=(Round(tanGP,4),.091,5), P2=(0,.091,15)","PDF318-320 appendix D, table D-1",Matches,UI allows arbitrary coefficients; rounded tan,E1/E2 code; N mapping; 实现依据待确认
+PAOAS terminal,P428 fixed 600m,PDF318-320 terminal relative to radar minimum altitude minus300,Differs,no minimum radar altitude reader; Implementation basis unresolved,E1/E2 code; N mapping; 实现依据待确认
+GPINOP,current OAS seam + fix/IF projection; no force3deg; no invoked P3A7,PDF270 1.1.7 NPA/LOC-only treatment,Implementation basis unresolved,incomplete LOC-only relationship; no reached evaluation,E1/E2 code; N mapping; 实现依据待确认
+FAP nominal station,(F-THR.Z)/tanGP; no RDH/curvature,PDF272 1.4.2; PDF316-317 distance tables,Differs,Author simplification candidate; not corrected,E1/E2 code; N mapping; 实现依据待确认
+FAF tolerance,single early x+T; default700; no900 check,PDF272 1.4.3 max +/-0.9km candidate,Differs,negative/oversized T not guarded; terminology mapping conditional,E1/E2 code; N mapping; 实现依据待确认
+FAF descent plane,.15 slope via 1000/150 point delta,PDF272 1.4.3 15 percent plane,Matches,matching slope does not establish full method equivalence,E1/E2 code; N mapping; 实现依据待确认
+intermediate segment,"IF=fix.x+L, inner4630 outer9260, H-150/H",PDF272 intermediate/FAP connection context,Implementation basis unresolved,no facility/tolerance derivation for fixed widths in this path,E1/E2 code; N mapping; 实现依据待确认
+HL/minima,no A5 implementation or event chain,"PDF277-278,286 OCA/HL and correction tables",Missing,do not insert B3/B4 formulas,E1/E2 code; N mapping; 实现依据待确认
+OAS truncation,P437/P443 numerical intersections + IF clamp,PDF272 descent-fix/FAP candidate,Implementation basis unresolved,unadded local triangles retained; no claim of full compliance,E1/E2 code; N mapping; 实现依据待确认

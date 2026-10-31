@@ -1,0 +1,11 @@
+METHOD 0600080D \x8f\x8f.\x8f\x8e::\x8b\x89\x8b RVA=620F file=440F
+IL_0000: ldarg.0 
+IL_0001: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0006: ldarg.0 
+IL_0007: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_000C: neg 
+IL_000D: ldarg.0 
+IL_000E: callvirt 0x06000800 \x8f\x8f.\x8f\x8e::\x8b\x89\x9a
+IL_0013: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_0018: ret 
+

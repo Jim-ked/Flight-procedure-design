@@ -1,0 +1,103 @@
+{
+  "scope": "Round13 additive static closure; no DLL/AutoCAD/E4 execution",
+  "tests": [
+    {
+      "layer": "formula",
+      "id": "a1-wind-model",
+      "assertion": "WindRadius/Drift/q formula and listed degenerates",
+      "result": "PASS"
+    },
+    {
+      "layer": "formula",
+      "id": "b1-att",
+      "assertion": "earliest/latest with ATT+n and delay",
+      "result": "PASS"
+    },
+    {
+      "layer": "formula",
+      "id": "b2-att",
+      "assertion": "earliest/latest with ATT and negative delay",
+      "result": "PASS"
+    },
+    {
+      "layer": "geometry",
+      "id": "a1-input-semantics",
+      "assertion": "manual origins, heading and triple point",
+      "result": "PASS"
+    },
+    {
+      "layer": "geometry",
+      "id": "b1-three-points",
+      "assertion": "P1/P2/P3 references and descriptor use",
+      "result": "PASS"
+    },
+    {
+      "layer": "geometry",
+      "id": "b2-third-point",
+      "assertion": "P3 bearing-only direction reference",
+      "result": "PASS"
+    },
+    {
+      "layer": "branch",
+      "id": "b1-branch-writer",
+      "assertion": "60/90/>90, >120, 15/30 to list/writer slots",
+      "result": "PASS"
+    },
+    {
+      "layer": "branch",
+      "id": "b2-branch-writer",
+      "assertion": "15°, 12000, 13000 and candidate selection to CAD",
+      "result": "PASS"
+    },
+    {
+      "layer": "writer",
+      "id": "a1-cad",
+      "assertion": "Polyline/Spline/Circle order and metadata limits",
+      "result": "PASS"
+    },
+    {
+      "layer": "writer",
+      "id": "b1-cad",
+      "assertion": "nominal, four boundaries, KK, NN, spiral, tolerance",
+      "result": "PASS"
+    },
+    {
+      "layer": "writer",
+      "id": "b2-cad",
+      "assertion": "nominal, primary/secondary, spiral, tolerance",
+      "result": "PASS"
+    },
+    {
+      "layer": "negative-evidence",
+      "id": "tangent-solver",
+      "assertion": "no standalone two-spiral/circle tangent MethodDef",
+      "result": "PASS"
+    },
+    {
+      "layer": "negative-evidence",
+      "id": "b1-evaluator",
+      "assertion": "no B1 obstacle evaluator",
+      "result": "PASS"
+    },
+    {
+      "layer": "negative-evidence",
+      "id": "b2-att-zero",
+      "assertion": "no ATT=0 special branch or direct wrapper",
+      "result": "PASS"
+    },
+    {
+      "layer": "cross-module",
+      "id": "shared-copied",
+      "assertion": "shared primitives and copied boundary classes mapped",
+      "result": "PASS"
+    },
+    {
+      "layer": "help-ui-code",
+      "id": "identities",
+      "assertion": "A1/B1/B2 final classifications emitted",
+      "result": "PASS"
+    }
+  ],
+  "count": 16,
+  "all_pass": true
+}

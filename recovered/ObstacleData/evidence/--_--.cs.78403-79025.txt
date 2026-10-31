@@ -1,0 +1,623 @@
+78403: 	public class _008E_008D : INotifyPropertyChanged
+78404: 	{
+78405: 		[CompilerGenerated]
+78406: 		private PropertyChangedEventHandler _008A_009A_008D;
+78407: 
+78408: 		[DataMember]
+78409: 		private string _008A_009A_008E;
+78410: 
+78411: 		[DataMember]
+78412: 		private _008E_008F _008A_009A_008F;
+78413: 
+78414: 		[CompilerGenerated]
+78415: 		private Dictionary<string, object> _008A_009A_0090;
+78416: 
+78417: 		[DisplayName("\t\t实体名称")]
+78418: 		[Category("\t基础属性")]
+78419: 		public string EntityName
+78420: 		{
+78421: 			get
+78422: 			{
+78423: 				return _008A_009A_008E;
+78424: 			}
+78425: 			set
+78426: 			{
+78427: 				if (_008A_009A_008E != text)
+78428: 				{
+78429: 					_ = 1;
+78430: 					if (!_00894())
+78431: 					{
+78432: 						goto IL_001c;
+78433: 					}
+78434: 					goto IL_0023;
+78435: 				}
+78436: 				return;
+78437: 				IL_0023:
+78438: 				_008A_0099_008C("EntityName" /* string-offset:6888 */);
+78439: 				if (!_00894())
+78440: 				{
+78441: 					return;
+78442: 				}
+78443: 				goto IL_001c;
+78444: 				IL_001c:
+78445: 				_008A_009A_008E = text;
+78446: 				goto IL_0023;
+78447: 			}
+78448: 		}
+78449: 
+78450: 		[Category("\t基础属性")]
+78451: 		[DisplayName("实体类型")]
+78452: 		public _008E_008F EntityType
+78453: 		{
+78454: 			get
+78455: 			{
+78456: 				return _008A_009A_008F;
+78457: 			}
+78458: 			set
+78459: 			{
+78460: 				_ = 1;
+78461: 				if (_00894() || _008A_009A_008F != obj)
+78462: 				{
+78463: 					_008A_009A_008F = obj;
+78464: 					_008A_0099_008C("EntityType" /* string-offset:6892 */);
+78465: 				}
+78466: 			}
+78467: 		}
+78468: 
+78469: 		[DisplayName("附加属性")]
+78470: 		[TypeConverter(typeof(_008E_0091))]
+78471: 		[DataMember]
+78472: 		[Category("附加属性")]
+78473: 		public Dictionary<string, object> Properties
+78474: 		{
+78475: 			[CompilerGenerated]
+78476: 			get
+78477: 			{
+78478: 				return _008A_009A_0090;
+78479: 			}
+78480: 			[CompilerGenerated]
+78481: 			set
+78482: 			{
+78483: 				_008A_009A_0090 = dictionary;
+78484: 			}
+78485: 		}
+78486: 
+78487: 		public event PropertyChangedEventHandler PropertyChanged
+78488: 		{
+78489: 			[CompilerGenerated]
+78490: 			add
+78491: 			{
+78492: 				PropertyChangedEventHandler propertyChangedEventHandler = _008A_009A_008D;
+78493: 				PropertyChangedEventHandler propertyChangedEventHandler2;
+78494: 				PropertyChangedEventHandler value2 = default(PropertyChangedEventHandler);
+78495: 				do
+78496: 				{
+78497: 					propertyChangedEventHandler2 = propertyChangedEventHandler;
+78498: 					_00893();
+78499: 					if (!_00894())
+78500: 					{
+78501: 						value2 = (PropertyChangedEventHandler)Delegate.Combine(propertyChangedEventHandler2, b);
+78502: 					}
+78503: 					propertyChangedEventHandler = Interlocked.CompareExchange(ref _008A_009A_008D, value2, propertyChangedEventHandler2);
+78504: 				}
+78505: 				while ((object)propertyChangedEventHandler != propertyChangedEventHandler2);
+78506: 			}
+78507: 			[CompilerGenerated]
+78508: 			remove
+78509: 			{
+78510: 				PropertyChangedEventHandler propertyChangedEventHandler = _008A_009A_008D;
+78511: 				_00894();
+78512: 				if (_00893())
+78513: 				{
+78514: 					goto IL_0019;
+78515: 				}
+78516: 				goto IL_0031;
+78517: 				IL_0019:
+78518: 				PropertyChangedEventHandler propertyChangedEventHandler2 = propertyChangedEventHandler;
+78519: 				PropertyChangedEventHandler value2 = (PropertyChangedEventHandler)Delegate.Remove(propertyChangedEventHandler2, value3);
+78520: 				goto IL_0031;
+78521: 				IL_0031:
+78522: 				while (true)
+78523: 				{
+78524: 					propertyChangedEventHandler = Interlocked.CompareExchange(ref _008A_009A_008D, value2, propertyChangedEventHandler2);
+78525: 					if ((object)propertyChangedEventHandler != propertyChangedEventHandler2)
+78526: 					{
+78527: 						break;
+78528: 					}
+78529: 					if (!_00894())
+78530: 					{
+78531: 						return;
+78532: 					}
+78533: 				}
+78534: 				goto IL_0019;
+78535: 			}
+78536: 		}
+78537: 
+78538: 		public void _008A_0099_008C(string P_0)
+78539: 		{
+78540: 			_008A_009A_008D?.Invoke(this, new PropertyChangedEventArgs(P_0));
+78541: 		}
+78542: 
+78543: 		public T _008A_0099_008D<T>(string P_0, T defaultValue = default(T))
+78544: 		{
+78545: 			if (P_0 == "Name" /* string-offset:616 */)
+78546: 			{
+78547: 				string text = EntityName;
+78548: 				if (text is T)
+78549: 				{
+78550: 					return (T)(object)((text is T) ? text : null);
+78551: 				}
+78552: 				return defaultValue;
+78553: 			}
+78554: 			if (Properties.ContainsKey(P_0))
+78555: 			{
+78556: 				object obj = Properties[P_0];
+78557: 				if (obj is T)
+78558: 				{
+78559: 					return (T)obj;
+78560: 				}
+78561: 				try
+78562: 				{
+78563: 					return (T)Convert.ChangeType(obj, typeof(T));
+78564: 				}
+78565: 				catch
+78566: 				{
+78567: 				}
+78568: 			}
+78569: 			return defaultValue;
+78570: 		}
+78571: 
+78572: 		public void _008A_0099_008E<T>(string P_0, T value)
+78573: 		{
+78574: 			if (!true /* original-file-bool-offset:1320 */)
+78575: 			{
+78576: 				return;
+78577: 			}
+78578: 			if (P_0 == "Name" /* string-offset:616 */)
+78579: 			{
+78580: 				if (value is string text)
+78581: 				{
+78582: 					EntityName = text;
+78583: 				}
+78584: 				_008A_0099_008C("Properties" /* string-offset:6896 */);
+78585: 				_008A_0099_008C("Properties[" /* string-offset:6900 */ + P_0 + "]" /* string-offset:6904 */);
+78586: 			}
+78587: 			else
+78588: 			{
+78589: 				if (Properties.ContainsKey(P_0))
+78590: 				{
+78591: 					Properties[P_0] = value;
+78592: 				}
+78593: 				else
+78594: 				{
+78595: 					Properties.Add(P_0, value);
+78596: 				}
+78597: 				_008A_0099_008C("Properties" /* string-offset:6896 */);
+78598: 				_008A_0099_008C("Properties[" /* string-offset:6900 */ + P_0 + "]" /* string-offset:6904 */);
+78599: 			}
+78600: 		}
+78601: 
+78602: 		public bool _008A_0099_008F(string P_0)
+78603: 		{
+78604: 			if (Properties.ContainsKey(P_0))
+78605: 			{
+78606: 				_ = 1;
+78607: 				if (!_00894())
+78608: 				{
+78609: 					Properties.Remove(P_0);
+78610: 				}
+78611: 				_008A_0099_008C("Properties" /* string-offset:6896 */);
+78612: 				return true;
+78613: 			}
+78614: 			return false;
+78615: 		}
+78616: 
+78617: 		public string _008A_0099_0090()
+78618: 		{
+78619: 			try
+78620: 			{
+78621: 				DataContractJsonSerializer dataContractJsonSerializer = new DataContractJsonSerializer(typeof(_008E_008D));
+78622: 				using MemoryStream memoryStream = new MemoryStream();
+78623: 				dataContractJsonSerializer.WriteObject(memoryStream, this);
+78624: 				_00893();
+78625: 				byte[] array = default(byte[]);
+78626: 				if (!_00894())
+78627: 				{
+78628: 					array = memoryStream.ToArray();
+78629: 				}
+78630: 				if (array.Length > 16384)
+78631: 				{
+78632: 					_008D_0088._008A_0090_008D(string.Format("警告：XData 数据大小超过 16KB ({0} bytes)，可能导致保存失败" /* string-offset:6768 */, array.Length));
+78633: 				}
+78634: 				return Encoding.UTF8.GetString(array, 0, array.Length);
+78635: 			}
+78636: 			catch (Exception ex)
+78637: 			{
+78638: 				_008D_0088._008A_0090_008D("序列化失败: " /* string-offset:6772 */ + ex.Message);
+78639: 				return "";
+78640: 			}
+78641: 		}
+78642: 
+78643: 		public static _008E_008D _008A_0099_0091(string P_0)
+78644: 		{
+78645: 			_ = 0;
+78646: 			if (_00893() && !string.IsNullOrEmpty(P_0))
+78647: 			{
+78648: 				try
+78649: 				{
+78650: 					DataContractJsonSerializer dataContractJsonSerializer = new DataContractJsonSerializer(typeof(_008E_008D));
+78651: 					using MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(P_0));
+78652: 					return (_008E_008D)dataContractJsonSerializer.ReadObject(stream);
+78653: 				}
+78654: 				catch (Exception ex)
+78655: 				{
+78656: 					_008D_0088._008A_0090_008D("反序列化失败: " /* string-offset:6776 */ + ex.Message);
+78657: 					return new _008E_008D();
+78658: 				}
+78659: 			}
+78660: 			_008D_0088._008A_0090_008D("反序列化失败: JSON 字符串为空" /* string-offset:6908 */);
+78661: 			return new _008E_008D();
+78662: 		}
+78663: 
+78664: 		public ResultBuffer _008A_0099_0092()
+78665: 		{
+78666: 			//IL_0024: Unknown result type (might be due to invalid IL or missing references)
+78667: 			//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+78668: 			//IL_0039: Unknown result type (might be due to invalid IL or missing references)
+78669: 			//IL_0043: Unknown result type (might be due to invalid IL or missing references)
+78670: 			//IL_0058: Unknown result type (might be due to invalid IL or missing references)
+78671: 			//IL_0062: Unknown result type (might be due to invalid IL or missing references)
+78672: 			//IL_0071: Unknown result type (might be due to invalid IL or missing references)
+78673: 			//IL_007c: Expected O, but got Unknown
+78674: 			//IL_00a1: Unknown result type (might be due to invalid IL or missing references)
+78675: 			string text = default(string);
+78676: 			if (false /* original-file-bool-offset:1324 */)
+78677: 			{
+78678: 				_ = 1;
+78679: 				if (!_00894())
+78680: 				{
+78681: 					goto IL_009a;
+78682: 				}
+78683: 			}
+78684: 			else
+78685: 			{
+78686: 				text = _008A_0099_0090();
+78687: 			}
+78688: 			goto IL_0024;
+78689: 			IL_00bd:
+78690: 			int num = default(int);
+78691: 			string text2 = default(string);
+78692: 			if (num < text.Length)
+78693: 			{
+78694: 				text2 = text.Substring(num, Math.Min(250, text.Length - num));
+78695: 				goto IL_009a;
+78696: 			}
+78697: 			ResultBuffer val = default(ResultBuffer);
+78698: 			return val;
+78699: 			IL_0024:
+78700: 			ResultBuffer val2 = new ResultBuffer();
+78701: 			val2.Add(new TypedValue(1001, (object)"WsEntityFrame" /* string-offset:940 */));
+78702: 			val2.Add(new TypedValue(1000, (object)((int)EntityType).ToString()));
+78703: 			val2.Add(new TypedValue(1000, (object)(EntityName ?? "")));
+78704: 			val = val2;
+78705: 			num = 0;
+78706: 			goto IL_00bd;
+78707: 			IL_009a:
+78708: 			val.Add(new TypedValue(1000, (object)text2));
+78709: 			if (_00894())
+78710: 			{
+78711: 				goto IL_0024;
+78712: 			}
+78713: 			num += 250;
+78714: 			goto IL_00bd;
+78715: 		}
+78716: 
+78717: 		public static _008E_008D _008A_0099_0093(ResultBuffer P_0)
+78718: 		{
+78719: 			_00894();
+78720: 			if (_00893() && !(P_0 == (ResultBuffer)null))
+78721: 			{
+78722: 				_008E_008D obj = new _008E_008D();
+78723: 				try
+78724: 				{
+78725: 					TypedValue[] array = P_0.AsArray();
+78726: 					if (array.Length >= 3)
+78727: 					{
+78728: 						if (int.TryParse(((TypedValue)(ref array[1])).Value?.ToString(), out var result))
+78729: 						{
+78730: 							obj.EntityType = (_008E_008F)result;
+78731: 						}
+78732: 						obj.EntityName = ((TypedValue)(ref array[2])).Value?.ToString();
+78733: 						if (array.Length >= 4)
+78734: 						{
+78735: 							StringBuilder stringBuilder = new StringBuilder();
+78736: 							for (int i = 3; i < array.Length; i++)
+78737: 							{
+78738: 								if (((TypedValue)(ref array[i])).Value != null)
+78739: 								{
+78740: 									stringBuilder.Append(((TypedValue)(ref array[i])).Value.ToString());
+78741: 								}
+78742: 							}
+78743: 							_008E_008D obj2 = _008A_0099_0091(stringBuilder.ToString());
+78744: 							if (obj2 != null)
+78745: 							{
+78746: 								if (!string.IsNullOrEmpty(obj2.EntityName))
+78747: 								{
+78748: 									obj.EntityName = obj2.EntityName;
+78749: 								}
+78750: 								obj.EntityType = obj2.EntityType;
+78751: 								foreach (KeyValuePair<string, object> item in obj2.Properties)
+78752: 								{
+78753: 									_ = 0;
+78754: 									if (_00893())
+78755: 									{
+78756: 										obj.Properties[item.Key] = item.Value;
+78757: 									}
+78758: 								}
+78759: 							}
+78760: 						}
+78761: 					}
+78762: 				}
+78763: 				catch (Exception ex)
+78764: 				{
+78765: 					_008D_0088._008A_0090_008D("解析XData失败: " /* string-offset:6784 */ + ex.Message);
+78766: 				}
+78767: 				return obj;
+78768: 			}
+78769: 			return null;
+78770: 		}
+78771: 
+78772: 		public _008E_008D _008A_0099_0094()
+78773: 		{
+78774: 			_ = 1;
+78775: 			_008E_008D obj = default(_008E_008D);
+78776: 			if (!_00894() && _00893())
+78777: 			{
+78778: 				obj = new _008E_008D
+78779: 				{
+78780: 					EntityType = EntityType,
+78781: 					EntityName = EntityName
+78782: 				};
+78783: 			}
+78784: 			foreach (KeyValuePair<string, object> item in Properties)
+78785: 			{
+78786: 				_00893();
+78787: 				if (!_00894())
+78788: 				{
+78789: 					obj.Properties[item.Key] = item.Value;
+78790: 				}
+78791: 			}
+78792: 			return obj;
+78793: 		}
+78794: 
+78795: 		public bool _008A_0099_0095(Entity P_0)
+78796: 		{
+78797: 			//IL_0031: Unknown result type (might be due to invalid IL or missing references)
+78798: 			if ((DisposableWrapper)(object)P_0 == (DisposableWrapper)null)
+78799: 			{
+78800: 				return false;
+78801: 			}
+78802: 			try
+78803: 			{
+78804: 				Database database = ((DBObject)P_0).Database;
+78805: 				DocumentLock val = Application.DocumentManager.MdiActiveDocument.LockDocument();
+78806: 				try
+78807: 				{
+78808: 					Transaction val2 = database.TransactionManager.StartTransaction();
+78809: 					try
+78810: 					{
+78811: 						DBObject obj = val2.GetObject(((DBObject)P_0).ObjectId, (OpenMode)1);
+78812: 						Entity val3 = (Entity)(object)((obj is Entity) ? obj : null);
+78813: 						if ((DisposableWrapper)(object)val3 != (DisposableWrapper)null)
+78814: 						{
+78815: 							_ = 1;
+78816: 							if (!_00894())
+78817: 							{
+78818: 								_008D_0088._008A_0090_008C(val2, database, "WsEntityFrame" /* string-offset:940 */);
+78819: 							}
+78820: 							ResultBuffer xData = _008A_0099_0092();
+78821: 							((DBObject)val3).XData = xData;
+78822: 							val2.Commit();
+78823: 							return true;
+78824: 						}
+78825: 						val2.Abort();
+78826: 						return false;
+78827: 					}
+78828: 					finally
+78829: 					{
+78830: 						((IDisposable)val2)?.Dispose();
+78831: 					}
+78832: 				}
+78833: 				finally
+78834: 				{
+78835: 					((IDisposable)val)?.Dispose();
+78836: 				}
+78837: 			}
+78838: 			catch (Exception ex)
+78839: 			{
+78840: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\nSaveToEntity 失败: " /* string-offset:6788 */ + ex.Message);
+78841: 				return false;
+78842: 			}
+78843: 		}
+78844: 
+78845: 		public bool _008A_0099_0096(ObjectId P_0)
+78846: 		{
+78847: 			//IL_004d: Unknown result type (might be due to invalid IL or missing references)
+78848: 			_ = 0;
+78849: 			if (_00893())
+78850: 			{
+78851: 				if (((ObjectId)(ref P_0)).IsNull)
+78852: 				{
+78853: 					goto IL_0025;
+78854: 				}
+78855: 			}
+78856: 			else if (!_00894())
+78857: 			{
+78858: 			}
+78859: 			if (((ObjectId)(ref P_0)).IsValid)
+78860: 			{
+78861: 				try
+78862: 				{
+78863: 					Database database = ((ObjectId)(ref P_0)).Database;
+78864: 					DocumentLock val = Application.DocumentManager.MdiActiveDocument.LockDocument();
+78865: 					try
+78866: 					{
+78867: 						Transaction val2 = database.TransactionManager.StartTransaction();
+78868: 						try
+78869: 						{
+78870: 							DBObject obj = val2.GetObject(P_0, (OpenMode)1);
+78871: 							Entity val3 = (Entity)(object)((obj is Entity) ? obj : null);
+78872: 							_00893();
+78873: 							if (!_00894())
+78874: 							{
+78875: 								if (!((DisposableWrapper)(object)val3 != (DisposableWrapper)null))
+78876: 								{
+78877: 									val2.Abort();
+78878: 									return false;
+78879: 								}
+78880: 								_008D_0088._008A_0090_008C(val2, database, "WsEntityFrame" /* string-offset:940 */);
+78881: 							}
+78882: 							else if (!_00893())
+78883: 							{
+78884: 								goto IL_00a6;
+78885: 							}
+78886: 							ResultBuffer xData = _008A_0099_0092();
+78887: 							((DBObject)val3).XData = xData;
+78888: 							goto IL_00a6;
+78889: 							IL_00a6:
+78890: 							val2.Commit();
+78891: 							return true;
+78892: 						}
+78893: 						finally
+78894: 						{
+78895: 							((IDisposable)val2)?.Dispose();
+78896: 						}
+78897: 					}
+78898: 					finally
+78899: 					{
+78900: 						((IDisposable)val)?.Dispose();
+78901: 					}
+78902: 				}
+78903: 				catch (Exception ex)
+78904: 				{
+78905: 					Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\nSaveToEntityById 失败: " /* string-offset:6792 */ + ex.Message);
+78906: 					return false;
+78907: 				}
+78908: 			}
+78909: 			goto IL_0025;
+78910: 			IL_0025:
+78911: 			return false;
+78912: 		}
+78913: 
+78914: 		public static _008E_008D _008A_0099_0097(Entity P_0)
+78915: 		{
+78916: 			//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+78917: 			try
+78918: 			{
+78919: 				if (!((DisposableWrapper)(object)P_0 == (DisposableWrapper)null))
+78920: 				{
+78921: 					Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+78922: 					Database database = ((DBObject)P_0).Database;
+78923: 					DocumentLock val = mdiActiveDocument.LockDocument();
+78924: 					try
+78925: 					{
+78926: 						Transaction val2 = database.TransactionManager.StartTransaction();
+78927: 						try
+78928: 						{
+78929: 							DBObject obj = val2.GetObject(((DBObject)P_0).ObjectId, (OpenMode)0);
+78930: 							Entity val3 = (Entity)(object)((obj is Entity) ? obj : null);
+78931: 							if ((DisposableWrapper)(object)val3 != (DisposableWrapper)null)
+78932: 							{
+78933: 								ResultBuffer xDataForApplication = ((DBObject)val3).GetXDataForApplication("WsEntityFrame" /* string-offset:940 */);
+78934: 								_ = 0;
+78935: 								if (!_00893() || xDataForApplication != (ResultBuffer)null)
+78936: 								{
+78937: 									_008E_008D result = _008A_0099_0093(xDataForApplication);
+78938: 									val2.Commit();
+78939: 									return result;
+78940: 								}
+78941: 							}
+78942: 							val2.Abort();
+78943: 							return null;
+78944: 						}
+78945: 						finally
+78946: 						{
+78947: 							((IDisposable)val2)?.Dispose();
+78948: 						}
+78949: 					}
+78950: 					finally
+78951: 					{
+78952: 						((IDisposable)val)?.Dispose();
+78953: 					}
+78954: 				}
+78955: 				return null;
+78956: 			}
+78957: 			catch (Exception ex)
+78958: 			{
+78959: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\n从实体加载数据失败: " /* string-offset:6796 */ + ex.Message);
+78960: 				return null;
+78961: 			}
+78962: 		}
+78963: 
+78964: 		public static _008E_008D _008A_0099_0098(string P_0, string P_1 = "", double P_2 = 1.0)
+78965: 		{
+78966: 			_008E_008D obj = new _008E_008D();
+78967: 			obj.EntityType = _008A_0099_0099(P_0);
+78968: 			obj.EntityName = (string.IsNullOrEmpty(P_1) ? P_0 : P_1);
+78969: 			obj._008A_0099_008E("BlockType" /* string-offset:6912 */, P_0);
+78970: 			obj._008A_0099_008E("Scale" /* string-offset:6916 */, P_2);
+78971: 			obj._008A_0099_008E("IsObstacle" /* string-offset:6920 */, value: true);
+78972: 			return obj;
+78973: 		}
+78974: 
+78975: 		private static _008E_008F _008A_0099_0099(string P_0)
+78976: 		{
+78977: 			int num = 16;
+78978: 			string text = default(string);
+78979: 			char c = default(char);
+78980: 			while (true)
+78981: 			{
+78982: 				IL_0183:
+78983: 				if (!false /* original-file-bool-offset:1328 */)
+78984: 				{
+78985: 					if (!string.IsNullOrEmpty(P_0))
+78986: 					{
+78987: 						text = P_0.ToLower();
+78988: 						num = 4;
+78989: 						while (text != null)
+78990: 						{
+78991: 							num = 6;
+78992: 							while (true)
+78993: 							{
+78994: 								switch (text.Length)
+78995: 								{
+78996: 								case 4:
+78997: 									break;
+78998: 								case 8:
+78999: 									goto end_IL_00fd;
+79000: 								default:
+79001: 									num = 18;
+79002: 									goto end_IL_0183;
+79003: 								case 5:
+79004: 									goto IL_0211;
+79005: 								case 6:
+79006: 									if (text == "bridge" /* string-offset:6960 */)
+79007: 									{
+79008: 										return (_008E_008F)9;
+79009: 									}
+79010: 									goto end_IL_0183;
+79011: 								case 7:
+79012: 									goto IL_0276;
+79013: 								case 13:
+79014: 									if (text == "obstwithlight" /* string-offset:6932 */)
+79015: 									{
+79016: 										return (_008E_008F)4;
+79017: 									}
+79018: 									goto end_IL_0183;
+79019: 								case 9:
+79020: 								case 10:
+79021: 								case 11:
+79022: 								case 12:
+79023: 									goto end_IL_0183;
+79024: 								}
+79025: 								c = text[0];

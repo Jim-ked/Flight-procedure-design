@@ -1,0 +1,9 @@
+METHOD 060007E9 \x8f\x8d.\x8f\x8c::\x8b\x88\x90 RVA=6027 file=4227
+IL_0000: ldarg.1 
+IL_0001: ldc.r8 0.0
+IL_000A: ble.un.s 23
+IL_000C: ldc.r8 1000000.0
+IL_0015: ret 
+IL_0016: ldc.r8 -1000000.0
+IL_001F: ret 
+

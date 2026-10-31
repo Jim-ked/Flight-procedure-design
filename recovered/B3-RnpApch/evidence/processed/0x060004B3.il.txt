@@ -1,0 +1,149 @@
+METHOD 060004B3 \x8b\x8d.\x8b\x8c::\x88\x9d\x86 RVA=62D34 file=60F34
+IL_0000: ldc.i4 1
+IL_0005: stloc local(0x0001)
+IL_0009: br 564
+IL_000E: ldarg.1 
+IL_000F: ldind.ref 
+IL_0010: ldfld 0x0400037F \x8a\x8c.\x8a\x8b::\x88\x90\x87
+IL_0015: ldarg.2 
+IL_0016: sub 
+IL_0017: ldc.r8 90.0
+IL_0020: bge.un.s 67
+IL_0022: ldarg.1 
+IL_0023: ldind.ref 
+IL_0024: ldc.r8 90.0
+IL_002D: stfld 0x04000380 \x8a\x8c.\x8a\x8b::\x88\x90\x88
+IL_0032: br 516
+IL_0037: ldarg.1 
+IL_0038: ldind.ref 
+IL_0039: ldarg.1 
+IL_003A: ldind.ref 
+IL_003B: ldfld 0x0400037F \x8a\x8c.\x8a\x8b::\x88\x90\x87
+IL_0040: ldarg.2 
+IL_0041: sub 
+IL_0042: call 0x0A0001B8 System.Math::Round
+IL_0047: stfld 0x04000380 \x8a\x8c.\x8a\x8b::\x88\x90\x88
+IL_004C: ldarg.1 
+IL_004D: ldind.ref 
+IL_004E: ldfld 0x04000380 \x8a\x8c.\x8a\x8b::\x88\x90\x88
+IL_0053: ldarg.s argument(0x0005)
+IL_0055: ldc.r8 3.141592653589793
+IL_005E: mul 
+IL_005F: ldc.r8 180.0
+IL_0068: div 
+IL_0069: call 0x0A000275 System.Math::Tan
+IL_006E: div 
+IL_006F: ldarg.s argument(0x0004)
+IL_0071: sub 
+IL_0072: stloc.0 
+IL_0073: call 0x060004B6 \x8b\x8d.\x8b\x8c::\x88\x94
+IL_0078: call 0x060004B5 \x8b\x8d.\x8b\x8c::\x88\x93
+IL_007D: brtrue 539
+IL_0082: pop 
+IL_0083: ldc.i4 2
+IL_0088: stloc local(0x0001)
+IL_008C: br 498
+IL_0091: ldloc.0 
+IL_0092: ldc.r8 5000.0
+IL_009B: call 0x0A000125 System.Math::Min
+IL_00A0: stloc.0 
+IL_00A1: ldc.i4 11
+IL_00A6: stloc local(0x0001)
+IL_00AA: call 0x060004B6 \x8b\x8d.\x8b\x8c::\x88\x94
+IL_00AF: brtrue 465
+IL_00B4: ldloc local(0x0001)
+IL_00B8: switch [465, 564, 498, 268, 268, 498, 614, 394, 375, 606, 319, 606, 516, 614]
+IL_00F5: ldc.i4 8
+IL_00FA: stloc local(0x0001)
+IL_00FE: br.s 375
+IL_0100: ldloc.0 
+IL_0101: ldc.r8 5000.0
+IL_010A: blt.s 291
+IL_010C: ldc.i4 10
+IL_0111: stloc local(0x0001)
+IL_0115: br.s 319
+IL_0117: ldloc.0 
+IL_0118: ldc.r8 100.0
+IL_0121: div 
+IL_0122: call 0x0A0002F0 System.Math::Ceiling
+IL_0127: ldc.r8 100.0
+IL_0130: mul 
+IL_0131: br.s 345
+IL_0133: ldloc.0 
+IL_0134: ldc.r8 1000.0
+IL_013D: div 
+IL_013E: call 0x0A0002F0 System.Math::Ceiling
+IL_0143: ldc.r8 1000.0
+IL_014C: mul 
+IL_014D: stloc.0 
+IL_014E: ldarg.s argument(0x0004)
+IL_0150: ldc.r8 420.0
+IL_0159: blt.un 498
+IL_015E: ldarg.s argument(0x0004)
+IL_0160: ldc.r8 720.0
+IL_0169: bge.un.s 429
+IL_016B: ldc.i4 1644
+IL_0170: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0175: ldarg.s argument(0x0006)
+IL_0177: call 0x0A000108 System.String::op_Equality
+IL_017C: brtrue.s 411
+IL_017E: ldloc.0 
+IL_017F: ldc.r8 1200.0
+IL_0188: call 0x0A00002F System.Math::Max
+IL_018D: br.s 426
+IL_018F: ldloc.0 
+IL_0190: ldc.r8 1600.0
+IL_0199: call 0x0A00002F System.Math::Max
+IL_019E: stloc.0 
+IL_019F: br.s 481
+IL_01A1: ldc.i4 1644
+IL_01A6: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_01AB: ldarg.s argument(0x0006)
+IL_01AD: call 0x0A000108 System.String::op_Equality
+IL_01B2: brfalse.s 465
+IL_01B4: ldloc.0 
+IL_01B5: ldc.r8 1600.0
+IL_01BE: call 0x0A00002F System.Math::Max
+IL_01C3: br.s 480
+IL_01C5: ldloc.0 
+IL_01C6: ldc.r8 800.0
+IL_01CF: call 0x0A00002F System.Math::Max
+IL_01D4: stloc.0 
+IL_01D5: ldarg.3 
+IL_01D6: ldc.r8 3000.0
+IL_01DF: ble.un 157
+IL_01E4: br.s 581
+IL_01E6: ldloc.0 
+IL_01E7: ldc.r8 1600.0
+IL_01F0: call 0x0A00002F System.Math::Max
+IL_01F5: stloc.0 
+IL_01F6: br.s 481
+IL_01F8: ldarg.1 
+IL_01F9: ldind.ref 
+IL_01FA: ldarg.2 
+IL_01FB: ldc.r8 90.0
+IL_0204: add 
+IL_0205: stfld 0x0400037F \x8a\x8c.\x8a\x8b::\x88\x90\x87
+IL_020A: br 88
+IL_020F: pop 
+IL_0210: ldc.i4 4
+IL_0215: stloc local(0x0001)
+IL_0219: call 0x060004B5 \x8b\x8d.\x8b\x8c::\x88\x93
+IL_021E: brfalse 268
+IL_0223: br 192
+IL_0228: ldc.i4 940
+IL_022D: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0232: brfalse 26
+IL_0237: br.s 614
+IL_0239: ldloc.0 
+IL_023A: ldc.r8 8000.0
+IL_0243: call 0x0A000125 System.Math::Min
+IL_0248: stloc.0 
+IL_0249: ldc.i4 9
+IL_024E: stloc local(0x0001)
+IL_0252: ldarg.1 
+IL_0253: ldind.ref 
+IL_0254: ldloc.0 
+IL_0255: stfld 0x04000381 \x8a\x8c.\x8a\x8b::\x88\x90\x89
+IL_025A: ret 
+

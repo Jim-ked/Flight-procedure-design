@@ -1,0 +1,1108 @@
+7508: 		private void _0097_0097(object P_0, EventArgs P_1)
+7509: 		{
+7510: 			if (true /* original-file-bool-offset:300 */)
+7511: 			{
+7512: 				_009C_0092._008B_008D_0093.Text = "345" /* string-offset:1960 */;
+7513: 				_009C_0092._008B_008D_0091.Text = "15" /* string-offset:1964 */;
+7514: 				_009C_0092._008B_008D_008E.Text = "19" /* string-offset:1968 */;
+7515: 				_ = 1;
+7516: 				if (!_0087_0096())
+7517: 				{
+7518: 					_009C_0092._008B_008D_0091.Enabled = false;
+7519: 				}
+7520: 				_009C_0092._008B_008D_008D.Visible = false;
+7521: 				_009C_0093._008B_008D_0091.Text = "15" /* string-offset:1964 */;
+7522: 				_009C_0093._008B_008D_0091.Enabled = false;
+7523: 				_009C_0093._008B_008D_008E.Text = "56" /* string-offset:1972 */;
+7524: 				_009C_0093._008B_008D_008D.Visible = false;
+7525: 				_0097._008A_0093(this, "config.xml" /* string-offset:676 */, "FormCalcu" /* string-offset:364 */);
+7526: 			}
+7527: 		}
+7528: 
+7529: 		private void _0097_0098(object P_0, FormClosedEventArgs P_1)
+7530: 		{
+7531: 			_0097._008A_0091(this, "config.xml" /* string-offset:676 */, "FormCalcu" /* string-offset:364 */);
+7532: 		}
+7533: 
+7534: 		private void _0097_0099(object P_0, EventArgs P_1)
+7535: 		{
+7536: 			//IL_005f: Unknown result type (might be due to invalid IL or missing references)
+7537: 			//IL_0064: Unknown result type (might be due to invalid IL or missing references)
+7538: 			//IL_0319: Unknown result type (might be due to invalid IL or missing references)
+7539: 			//IL_031e: Unknown result type (might be due to invalid IL or missing references)
+7540: 			//IL_02f7: Unknown result type (might be due to invalid IL or missing references)
+7541: 			//IL_02f9: Unknown result type (might be due to invalid IL or missing references)
+7542: 			//IL_0332: Unknown result type (might be due to invalid IL or missing references)
+7543: 			//IL_0337: Unknown result type (might be due to invalid IL or missing references)
+7544: 			//IL_0381: Unknown result type (might be due to invalid IL or missing references)
+7545: 			//IL_0386: Unknown result type (might be due to invalid IL or missing references)
+7546: 			//IL_0395: Unknown result type (might be due to invalid IL or missing references)
+7547: 			//IL_03cf: Unknown result type (might be due to invalid IL or missing references)
+7548: 			//IL_03d6: Unknown result type (might be due to invalid IL or missing references)
+7549: 			//IL_03dd: Unknown result type (might be due to invalid IL or missing references)
+7550: 			//IL_03de: Unknown result type (might be due to invalid IL or missing references)
+7551: 			//IL_03e5: Unknown result type (might be due to invalid IL or missing references)
+7552: 			//IL_03f9: Expected O, but got Unknown
+7553: 			//IL_03f4: Unknown result type (might be due to invalid IL or missing references)
+7554: 			//IL_03fa: Unknown result type (might be due to invalid IL or missing references)
+7555: 			//IL_03ff: Unknown result type (might be due to invalid IL or missing references)
+7556: 			//IL_040e: Unknown result type (might be due to invalid IL or missing references)
+7557: 			//IL_041e: Unknown result type (might be due to invalid IL or missing references)
+7558: 			//IL_041f: Unknown result type (might be due to invalid IL or missing references)
+7559: 			//IL_0432: Expected O, but got Unknown
+7560: 			//IL_042d: Unknown result type (might be due to invalid IL or missing references)
+7561: 			//IL_0075: Unknown result type (might be due to invalid IL or missing references)
+7562: 			//IL_007a: Unknown result type (might be due to invalid IL or missing references)
+7563: 			//IL_007c: Unknown result type (might be due to invalid IL or missing references)
+7564: 			//IL_007e: Unknown result type (might be due to invalid IL or missing references)
+7565: 			//IL_0436: Unknown result type (might be due to invalid IL or missing references)
+7566: 			//IL_043b: Unknown result type (might be due to invalid IL or missing references)
+7567: 			//IL_044a: Unknown result type (might be due to invalid IL or missing references)
+7568: 			//IL_0488: Unknown result type (might be due to invalid IL or missing references)
+7569: 			//IL_04aa: Unknown result type (might be due to invalid IL or missing references)
+7570: 			//IL_04c0: Expected O, but got Unknown
+7571: 			//IL_04bb: Unknown result type (might be due to invalid IL or missing references)
+7572: 			//IL_04c1: Unknown result type (might be due to invalid IL or missing references)
+7573: 			//IL_04c6: Unknown result type (might be due to invalid IL or missing references)
+7574: 			//IL_04d5: Unknown result type (might be due to invalid IL or missing references)
+7575: 			//IL_04e5: Unknown result type (might be due to invalid IL or missing references)
+7576: 			//IL_04e6: Unknown result type (might be due to invalid IL or missing references)
+7577: 			//IL_04f9: Expected O, but got Unknown
+7578: 			//IL_04f4: Unknown result type (might be due to invalid IL or missing references)
+7579: 			//IL_01fa: Unknown result type (might be due to invalid IL or missing references)
+7580: 			//IL_0200: Unknown result type (might be due to invalid IL or missing references)
+7581: 			//IL_0205: Unknown result type (might be due to invalid IL or missing references)
+7582: 			//IL_02b8: Unknown result type (might be due to invalid IL or missing references)
+7583: 			//IL_02be: Unknown result type (might be due to invalid IL or missing references)
+7584: 			//IL_02c3: Unknown result type (might be due to invalid IL or missing references)
+7585: 			_0087_0095();
+7586: 			Database workingDatabase;
+7587: 			Document mdiActiveDocument;
+7588: 			Point3d val = default(Point3d);
+7589: 			if (!_0087_0096() && !false /* original-file-bool-offset:304 */)
+7590: 			{
+7591: 				workingDatabase = HostApplicationServices.WorkingDatabase;
+7592: 				mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+7593: 				if (_0087_0096())
+7594: 				{
+7595: 					goto IL_02e7;
+7596: 				}
+7597: 				_0097_0096(mdiActiveDocument.Window.Handle);
+7598: 				base.Visible = false;
+7599: 				val = _009D._008B_008D("请选择跑道入口点" /* string-offset:1976 */);
+7600: 				goto IL_02f7;
+7601: 			}
+7602: 			return;
+7603: 			IL_02e7:
+7604: 			DocumentLock val2 = mdiActiveDocument.LockDocument();
+7605: 			_008F_008E obj = default(_008F_008E);
+7606: 			_008F_008E obj2 = default(_008F_008E);
+7607: 			double num = default(double);
+7608: 			double num2 = default(double);
+7609: 			if (!_0087_0096())
+7610: 			{
+7611: 				try
+7612: 				{
+7613: 					Point3d position = obj._008C_0089();
+7614: 					_0087_0095();
+7615: 					Point3d position2 = default(Point3d);
+7616: 					if (!_0087_0096())
+7617: 					{
+7618: 						position2 = obj2._008C_0089();
+7619: 						Point3d alignmentPoint = default(Point3d);
+7620: 						((Point3d)(ref alignmentPoint))._002Ector((((Point3d)(ref val)).X + obj.X) / 2.0, (((Point3d)(ref val)).Y + obj.Y) / 2.0, 0.0);
+7621: 						double rotation = _0097_009C(num);
+7622: 						_008B._0088_008D((Entity)new DBText
+7623: 						{
+7624: 							Height = 500.0,
+7625: 							TextString = "FAF-THR: " /* string-offset:1992 */ + Math.Round(num2 / 1000.0, 1) + "km" /* string-offset:1996 */,
+7626: 							HorizontalMode = (TextHorizontalMode)1,
+7627: 							VerticalMode = (TextVerticalMode)1,
+7628: 							AlignmentPoint = alignmentPoint,
+7629: 							Rotation = rotation
+7630: 						}, workingDatabase);
+7631: 						_008B._0088_008D((Entity)new DBText
+7632: 						{
+7633: 							Height = 1000.0,
+7634: 							TextString = "FAF" /* string-offset:2000 */,
+7635: 							Position = position
+7636: 						}, workingDatabase);
+7637: 					}
+7638: 					_008B._0088_008D((Entity)new DBText
+7639: 					{
+7640: 						Height = 1000.0,
+7641: 						TextString = _0099_009A.Text + "(" /* string-offset:2004 */ + Math.Round(_0097_009D()) + ")" /* string-offset:2008 */,
+7642: 						Position = new Point3d(((Point3d)(ref position)).X, ((Point3d)(ref position)).Y - 1000.0, 0.0)
+7643: 					}, workingDatabase);
+7644: 					_008B._0088_008D((Entity)new DBText
+7645: 					{
+7646: 						Height = 1000.0,
+7647: 						TextString = "IF" /* string-offset:1988 */,
+7648: 						Position = position2
+7649: 					}, workingDatabase);
+7650: 					return;
+7651: 				}
+7652: 				finally
+7653: 				{
+7654: 					((IDisposable)val2)?.Dispose();
+7655: 				}
+7656: 			}
+7657: 			goto IL_02f7;
+7658: 			IL_02f7:
+7659: 			if (!(val == Point3d.Origin))
+7660: 			{
+7661: 				Point3d val3 = _009D._008B_008D("请指定FAF方向" /* string-offset:1980 */);
+7662: 				if (!(val3 == Point3d.Origin))
+7663: 				{
+7664: 					base.Visible = true;
+7665: 					num = Math.Atan2(((Point3d)(ref val3)).Y - ((Point3d)(ref val)).Y, ((Point3d)(ref val3)).X - ((Point3d)(ref val)).X);
+7666: 					double num3 = _008F_008A._008B_0087_009E(_0099_0097, "输入数据有误，请检查。" /* string-offset:1984 */);
+7667: 					num2 = _0097_009B();
+7668: 					_008F_008E obj3 = new _008F_008E(((Point3d)(ref val)).X, ((Point3d)(ref val)).Y);
+7669: 					obj = _008F_008E._008B_0089_0088(obj3, _008F_008E._008B_0089_0087(num2, num));
+7670: 					obj2 = _008F_008E._008B_0089_0088(obj3, _008F_008E._008B_0089_0087(num2 + num3, num));
+7671: 					DocumentLock val4 = mdiActiveDocument.LockDocument();
+7672: 					try
+7673: 					{
+7674: 						_008F_008E obj4 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(10000.0, num + Math.PI / 2.0));
+7675: 						_008F_008E obj5 = _008F_008E._008B_0089_0088(obj, _008F_008E._008B_0089_0087(10000.0, num - Math.PI / 2.0));
+7676: 						_ = 0;
+7677: 						if (_0087_0095())
+7678: 						{
+7679: 							_008D_0090._008A_0096_0099(obj.X, obj.Y, num, num3, _008F_008A._008B_0087_009E(_0099_009A, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_0099_009D, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_0099_009C, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009A_0086, "输入数据有误，请检查。" /* string-offset:1984 */), num2)._008A_0097_0087(workingDatabase, obj4._008C_0089(), obj5._008C_0089());
+7680: 							obj4 = _008F_008E._008B_0089_0088(obj2, _008F_008E._008B_0089_0087(10000.0, num + Math.PI / 2.0));
+7681: 						}
+7682: 						do
+7683: 						{
+7684: 							obj5 = _008F_008E._008B_0089_0088(obj2, _008F_008E._008B_0089_0087(10000.0, num - Math.PI / 2.0));
+7685: 						}
+7686: 						while (!_0087_0095());
+7687: 						new _008D_008C
+7688: 						{
+7689: 							_008A_0090_0098 = (_008D_008A)2,
+7690: 							_008A_0090_009D = obj2.X,
+7691: 							_008A_0091_0087 = obj2.Y,
+7692: 							_008A_0091_008D = num,
+7693: 							_008A_0091_0090 = 20000.0,
+7694: 							_008A_0091_0093 = "IF" /* string-offset:1988 */
+7695: 						}._008A_0097_0087(workingDatabase, obj4._008C_0089(), obj5._008C_0089());
+7696: 					}
+7697: 					finally
+7698: 					{
+7699: 						((IDisposable)val4)?.Dispose();
+7700: 					}
+7701: 					if (!_0099_0091.Checked)
+7702: 					{
+7703: 						return;
+7704: 					}
+7705: 					goto IL_02e7;
+7706: 				}
+7707: 				base.Visible = true;
+7708: 				return;
+7709: 			}
+7710: 			base.Visible = true;
+7711: 		}
+7712: 
+7713: 		private void _0097_009A(object P_0, EventArgs P_1)
+7714: 		{
+7715: 			_0097_009B();
+7716: 		}
+7717: 
+7718: 		private double _0097_009B()
+7719: 		{
+7720: 			double num = _008F_008A._008B_0087_009E(_0099_009A, "输入数据有误，请检查。" /* string-offset:1984 */);
+7721: 			double num2 = _008F_008A._008B_0087_009E(_0099_009D, "输入数据有误，请检查。" /* string-offset:1984 */);
+7722: 			double num3 = Math.Tan(_008F_008A._008B_0087_009E(_0099_009C, "输入数据有误，请检查。" /* string-offset:1984 */) * Math.PI / 180.0);
+7723: 			double num4 = _008F_008A._008B_0087_009E(_009A_0086, "输入数据有误，请检查。" /* string-offset:1984 */);
+7724: 			double num5 = (num - num4 - num2) / num3;
+7725: 			_0099_009E.Text = Math.Round(num5).ToString();
+7726: 			return num5;
+7727: 		}
+7728: 
+7729: 		private static double _0097_009C(double P_0)
+7730: 		{
+7731: 			if (!(P_0 < -Math.PI / 2.0) && P_0 <= Math.PI / 2.0)
+7732: 			{
+7733: 				return P_0;
+7734: 			}
+7735: 			return P_0 + Math.PI;
+7736: 		}
+7737: 
+7738: 		private double _0097_009D()
+7739: 		{
+7740: 			double num = _008F_008A._008B_0087_009E(_0099_009A, "输入数据有误，请检查。" /* string-offset:1984 */);
+7741: 			double num2 = _008F_008A._008B_0087_009E(_0099_009D, "输入数据有误，请检查。" /* string-offset:1984 */);
+7742: 			return num - num2;
+7743: 		}
+7744: 
+7745: 		private void _0097_009E(object P_0, EventArgs P_1)
+7746: 		{
+7747: 			//IL_00d0: Unknown result type (might be due to invalid IL or missing references)
+7748: 			//IL_00d5: Unknown result type (might be due to invalid IL or missing references)
+7749: 			//IL_00e0: Unknown result type (might be due to invalid IL or missing references)
+7750: 			//IL_00e5: Unknown result type (might be due to invalid IL or missing references)
+7751: 			//IL_00ee: Unknown result type (might be due to invalid IL or missing references)
+7752: 			//IL_00ef: Unknown result type (might be due to invalid IL or missing references)
+7753: 			//IL_01eb: Unknown result type (might be due to invalid IL or missing references)
+7754: 			//IL_01ed: Unknown result type (might be due to invalid IL or missing references)
+7755: 			//IL_01ef: Unknown result type (might be due to invalid IL or missing references)
+7756: 			//IL_021e: Unknown result type (might be due to invalid IL or missing references)
+7757: 			//IL_0223: Unknown result type (might be due to invalid IL or missing references)
+7758: 			//IL_0232: Unknown result type (might be due to invalid IL or missing references)
+7759: 			//IL_023a: Unknown result type (might be due to invalid IL or missing references)
+7760: 			//IL_0241: Unknown result type (might be due to invalid IL or missing references)
+7761: 			//IL_0248: Unknown result type (might be due to invalid IL or missing references)
+7762: 			//IL_0249: Unknown result type (might be due to invalid IL or missing references)
+7763: 			//IL_0250: Unknown result type (might be due to invalid IL or missing references)
+7764: 			//IL_026e: Expected O, but got Unknown
+7765: 			//IL_0269: Unknown result type (might be due to invalid IL or missing references)
+7766: 			if (false /* original-file-bool-offset:308 */)
+7767: 			{
+7768: 				return;
+7769: 			}
+7770: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+7771: 			_ = mdiActiveDocument.Editor;
+7772: 			_0097_0096(mdiActiveDocument.Window.Handle);
+7773: 			_008E_009B obj;
+7774: 			double num;
+7775: 			double num2;
+7776: 			double num3;
+7777: 			double num4;
+7778: 			double num5;
+7779: 			Point3d val3 = default(Point3d);
+7780: 			Point3d val4 = default(Point3d);
+7781: 			while (true)
+7782: 			{
+7783: 				base.Visible = false;
+7784: 				Point3d val = _009D._008B_008D("\n请输入复飞最晚点" /* string-offset:2012 */);
+7785: 				Point3d val2 = _009D._008B_008D("\n请指定复飞方向" /* string-offset:2016 */);
+7786: 				base.Visible = true;
+7787: 				if (!(val == val2))
+7788: 				{
+7789: 					obj = _009C_0092._008B_008C_008A();
+7790: 					num = _008F_008A._008B_0087_009E(_0099_008A, "输入数据有误，请检查。" /* string-offset:1984 */);
+7791: 					num2 = _0098_0086();
+7792: 					num3 = Math.Atan2(((Point3d)(ref val2)).Y - ((Point3d)(ref val)).Y, ((Point3d)(ref val2)).X - ((Point3d)(ref val)).X);
+7793: 					num4 = num2 * Math.Cos(num3);
+7794: 					if (_0087_0095())
+7795: 					{
+7796: 						num5 = num2 * Math.Sin(num3);
+7797: 						_0087_0096();
+7798: 						if (!_0087_0095())
+7799: 						{
+7800: 							break;
+7801: 						}
+7802: 						if (_0087_0095())
+7803: 						{
+7804: 							((Point3d)(ref val3))._002Ector(((Point3d)(ref val)).X + num4, ((Point3d)(ref val)).Y + num5, 0.0);
+7805: 							num4 = 6000.0 * Math.Cos(num3 + Math.PI / 2.0);
+7806: 							num5 = 6000.0 * Math.Sin(num3 + Math.PI / 2.0);
+7807: 							((Point3d)(ref val4))._002Ector(((Point3d)(ref val3)).X + num4, ((Point3d)(ref val3)).Y + num5, 0.0);
+7808: 							break;
+7809: 						}
+7810: 						continue;
+7811: 					}
+7812: 					return;
+7813: 				}
+7814: 				return;
+7815: 			}
+7816: 			Point3d val5 = default(Point3d);
+7817: 			((Point3d)(ref val5))._002Ector(((Point3d)(ref val3)).X - num4, ((Point3d)(ref val3)).Y - num5, 0.0);
+7818: 			DocumentLock val6 = mdiActiveDocument.LockDocument();
+7819: 			try
+7820: 			{
+7821: 				Database workingDatabase = HostApplicationServices.WorkingDatabase;
+7822: 				_008D_0090._008A_0096_009A(((Point3d)(ref val3)).X, ((Point3d)(ref val3)).Y, num3, obj._008A_009D_009A, obj._008A_009D_0095, obj._008A_009D_0098, obj._008A_009D_0096, obj._008A_009D_0099, num, num2)._008A_0097_0087(workingDatabase, val4, val5);
+7823: 				_0087_0096();
+7824: 				if (!_0087_0095() || _009B_0087.Checked)
+7825: 				{
+7826: 					string textString = "SOC" /* string-offset:2020 */;
+7827: 					_008B._0088_008D((Entity)new DBText
+7828: 					{
+7829: 						Height = 500.0,
+7830: 						TextString = textString,
+7831: 						HorizontalMode = (TextHorizontalMode)1,
+7832: 						VerticalMode = (TextVerticalMode)1,
+7833: 						AlignmentPoint = val4,
+7834: 						Rotation = num3 - Math.PI / 2.0
+7835: 					}, workingDatabase);
+7836: 				}
+7837: 			}
+7838: 			finally
+7839: 			{
+7840: 				((IDisposable)val6)?.Dispose();
+7841: 			}
+7842: 		}
+7843: 
+7844: 		private double _0098_0086()
+7845: 		{
+7846: 			_ = 1;
+7847: 			_008E_009B obj = default(_008E_009B);
+7848: 			double num = default(double);
+7849: 			if (!_0087_0096())
+7850: 			{
+7851: 				obj = _009C_0092._008B_008C_008A();
+7852: 				num = _008F_008A._008B_0087_009E(_0099_008A, "输入数据有误，请检查。" /* string-offset:1984 */);
+7853: 			}
+7854: 			double num2 = (obj._008A_009D_009A + obj._008A_009D_0098) * num / 3.6;
+7855: 			_009C_0094.Text = Math.Round(num2).ToString();
+7856: 			return num2;
+7857: 		}
+7858: 
+7859: 		private void _0098_0087(object P_0, EventArgs P_1)
+7860: 		{
+7861: 			_0098_0086();
+7862: 		}
+7863: 
+7864: 		private void _0098_0088(object P_0, EventArgs P_1)
+7865: 		{
+7866: 			//IL_0065: Unknown result type (might be due to invalid IL or missing references)
+7867: 			//IL_006a: Unknown result type (might be due to invalid IL or missing references)
+7868: 			//IL_0072: Unknown result type (might be due to invalid IL or missing references)
+7869: 			//IL_0074: Unknown result type (might be due to invalid IL or missing references)
+7870: 			//IL_0054: Unknown result type (might be due to invalid IL or missing references)
+7871: 			//IL_0059: Unknown result type (might be due to invalid IL or missing references)
+7872: 			//IL_0247: Unknown result type (might be due to invalid IL or missing references)
+7873: 			//IL_0249: Unknown result type (might be due to invalid IL or missing references)
+7874: 			//IL_024b: Unknown result type (might be due to invalid IL or missing references)
+7875: 			//IL_0290: Unknown result type (might be due to invalid IL or missing references)
+7876: 			//IL_0295: Unknown result type (might be due to invalid IL or missing references)
+7877: 			//IL_02a4: Unknown result type (might be due to invalid IL or missing references)
+7878: 			//IL_02ac: Unknown result type (might be due to invalid IL or missing references)
+7879: 			//IL_02b3: Unknown result type (might be due to invalid IL or missing references)
+7880: 			//IL_02ba: Unknown result type (might be due to invalid IL or missing references)
+7881: 			//IL_02bb: Unknown result type (might be due to invalid IL or missing references)
+7882: 			//IL_02c2: Unknown result type (might be due to invalid IL or missing references)
+7883: 			//IL_02e0: Expected O, but got Unknown
+7884: 			//IL_02db: Unknown result type (might be due to invalid IL or missing references)
+7885: 			if (!true /* original-file-bool-offset:312 */)
+7886: 			{
+7887: 				return;
+7888: 			}
+7889: 			Document mdiActiveDocument = default(Document);
+7890: 			Point3d val = default(Point3d);
+7891: 			if (!_0087_0096())
+7892: 			{
+7893: 				mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+7894: 				_ = mdiActiveDocument.Editor;
+7895: 				_0097_0096(mdiActiveDocument.Window.Handle);
+7896: 				base.Visible = false;
+7897: 				if (!_0087_0095())
+7898: 				{
+7899: 					goto IL_0179;
+7900: 				}
+7901: 				val = _009D._008B_008D("\n请输入跑道入口THR" /* string-offset:2024 */);
+7902: 			}
+7903: 			Point3d val2 = _009D._008B_008D("\n请指定复飞方向" /* string-offset:2016 */);
+7904: 			base.Visible = true;
+7905: 			if (val == val2)
+7906: 			{
+7907: 				return;
+7908: 			}
+7909: 			double num = 0.0 - _0098_008A();
+7910: 			double num2 = Math.Atan2(((Point3d)(ref val2)).Y - ((Point3d)(ref val)).Y, ((Point3d)(ref val2)).X - ((Point3d)(ref val)).X);
+7911: 			double num3 = num * Math.Cos(num2);
+7912: 			double num4 = num * Math.Sin(num2);
+7913: 			_0087_0095();
+7914: 			Point3d val3 = default(Point3d);
+7915: 			Point3d val4 = default(Point3d);
+7916: 			Point3d val5 = default(Point3d);
+7917: 			if (!_0087_0096())
+7918: 			{
+7919: 				((Point3d)(ref val3))._002Ector(((Point3d)(ref val)).X + num3, ((Point3d)(ref val)).Y + num4, 0.0);
+7920: 				num3 = 6000.0 * Math.Cos(num2 + Math.PI / 2.0);
+7921: 				num4 = 6000.0 * Math.Sin(num2 + Math.PI / 2.0);
+7922: 				((Point3d)(ref val4))._002Ector(((Point3d)(ref val3)).X + num3, ((Point3d)(ref val3)).Y + num4, 0.0);
+7923: 				((Point3d)(ref val5))._002Ector(((Point3d)(ref val3)).X - num3, ((Point3d)(ref val3)).Y - num4, 0.0);
+7924: 			}
+7925: 			goto IL_0179;
+7926: 			IL_0179:
+7927: 			DocumentLock val6 = mdiActiveDocument.LockDocument();
+7928: 			try
+7929: 			{
+7930: 				Database workingDatabase = HostApplicationServices.WorkingDatabase;
+7931: 				_008D_0090._008A_0096_009B(((Point3d)(ref val3)).X, ((Point3d)(ref val3)).Y, num2, _009B_008F.Text, _008F_008A._008B_0087_009D(_009B_009A.Text, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009D(_009B_009B.Text, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009B_009E, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009B_0096, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009B_0098, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009B_0097, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009B_0095, "输入数据有误，请检查。" /* string-offset:1984 */), num)._008A_0097_0087(workingDatabase, val4, val5);
+7932: 				_ = 0;
+7933: 				if (!_0087_0095() || _009B_008D.Checked)
+7934: 				{
+7935: 					string textString = "CAT " /* string-offset:2028 */ + _009B_008F.Text + " SOC" /* string-offset:2032 */;
+7936: 					_008B._0088_008D((Entity)new DBText
+7937: 					{
+7938: 						Height = 500.0,
+7939: 						TextString = textString,
+7940: 						HorizontalMode = (TextHorizontalMode)1,
+7941: 						VerticalMode = (TextVerticalMode)1,
+7942: 						AlignmentPoint = val4,
+7943: 						Rotation = num2 - Math.PI / 2.0
+7944: 					}, workingDatabase);
+7945: 				}
+7946: 			}
+7947: 			finally
+7948: 			{
+7949: 				((IDisposable)val6)?.Dispose();
+7950: 			}
+7951: 		}
+7952: 
+7953: 		private void _0098_0089(object P_0, EventArgs P_1)
+7954: 		{
+7955: 			_0098_008A();
+7956: 		}
+7957: 
+7958: 		private double _0098_008A()
+7959: 		{
+7960: 			_ = 0;
+7961: 			int num;
+7962: 			if (_0087_0095())
+7963: 			{
+7964: 				num = 9;
+7965: 				goto IL_002d;
+7966: 			}
+7967: 			num = 8;
+7968: 			if (_0087_0095())
+7969: 			{
+7970: 				goto IL_00cf;
+7971: 			}
+7972: 			goto IL_017a;
+7973: 			IL_013b:
+7974: 			double result = default(double);
+7975: 			_009B_009C.Text = result.ToString();
+7976: 			goto IL_014d;
+7977: 			IL_00cf:
+7978: 			switch (num)
+7979: 			{
+7980: 			case 0:
+7981: 			case 9:
+7982: 				break;
+7983: 			case 3:
+7984: 				goto IL_0060;
+7985: 			case 6:
+7986: 				goto IL_0084;
+7987: 			case 4:
+7988: 				goto IL_013b;
+7989: 			case 2:
+7990: 				goto IL_014d;
+7991: 			case 10:
+7992: 				goto IL_0177;
+7993: 			case 1:
+7994: 			case 7:
+7995: 				goto IL_017a;
+7996: 			default:
+7997: 				goto IL_018a;
+7998: 			}
+7999: 			goto IL_002d;
+8000: 			IL_002d:
+8001: 			double num2 = default(double);
+8002: 			if (!false /* original-file-bool-offset:316 */)
+8003: 			{
+8004: 				num2 = _008F_008A._008B_0087_009D(_009B_009A.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+8005: 				num = 3;
+8006: 				goto IL_0060;
+8007: 			}
+8008: 			num = 1;
+8009: 			goto IL_017a;
+8010: 			IL_017a:
+8011: 			MessageBox.Show("HL不得为0，请检查数据。" /* string-offset:2036 */);
+8012: 			goto IL_018a;
+8013: 			IL_014d:
+8014: 			double num3 = default(double);
+8015: 			double num4 = default(double);
+8016: 			_009C_0096.Text = (num3 - num4).ToString("f1" /* string-offset:2040 */);
+8017: 			num = 10;
+8018: 			goto IL_0177;
+8019: 			IL_0060:
+8020: 			double num5 = _008F_008A._008B_0087_009D(_009B_009B.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+8021: 			num = 6;
+8022: 			goto IL_0084;
+8023: 			IL_0084:
+8024: 			num3 = _008F_008A._008B_0087_009E(_009B_009E, "输入数据有误，请检查。" /* string-offset:1984 */);
+8025: 			num4 = _008F_008A._008B_0087_009E(_009B_0095, "输入数据有误，请检查。" /* string-offset:1984 */);
+8026: 			if (num4 == 0.0)
+8027: 			{
+8028: 				num = 7;
+8029: 				if (_0087_0095())
+8030: 				{
+8031: 					goto IL_00cf;
+8032: 				}
+8033: 				goto IL_017a;
+8034: 			}
+8035: 			result = Math.Round((num3 - num4) / Math.Tan(num2 * Math.PI / 180.0) + num5);
+8036: 			goto IL_013b;
+8037: 			IL_018a:
+8038: 			return -1.0;
+8039: 			IL_0177:
+8040: 			return result;
+8041: 		}
+8042: 
+8043: 		private void _0098_008B(object P_0, EventArgs P_1)
+8044: 		{
+8045: 			_0087_0095();
+8046: 			if (!_0087_0096())
+8047: 			{
+8048: 				_009B_0098.Text = _0098_0097[_009B_008F.SelectedIndex, 0].ToString();
+8049: 				_009B_0097.Text = _0098_0097[_009B_008F.SelectedIndex, 1].ToString();
+8050: 			}
+8051: 			_0098_008C();
+8052: 			_0098_008A();
+8053: 		}
+8054: 
+8055: 		private void _0098_008C()
+8056: 		{
+8057: 			double num = _008F_008A._008B_0087_009E(_009B_0096, "输入数据有误，请检查。" /* string-offset:1984 */);
+8058: 			if (num > 900.0)
+8059: 			{
+8060: 				_ = 1;
+8061: 				if (!_0087_0096())
+8062: 				{
+8063: 					double num2 = _008F_008A._008B_0087_009E(_009B_0098, "输入数据有误，请检查。" /* string-offset:1984 */);
+8064: 					double num3 = _008F_008A._008B_0087_009E(_009B_0097, "输入数据有误，请检查。" /* string-offset:1984 */);
+8065: 					double value = Math.Round(num2 + num3 * 0.02 * num / 300.0, 2);
+8066: 					_009B_0095.Text = Math.Round(value, 1).ToString();
+8067: 				}
+8068: 			}
+8069: 			else
+8070: 			{
+8071: 				_009B_0095.Text = _009B_0098.Text;
+8072: 			}
+8073: 		}
+8074: 
+8075: 		private void _0098_008D(object P_0, EventArgs P_1)
+8076: 		{
+8077: 			//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+8078: 			//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+8079: 			//IL_005d: Unknown result type (might be due to invalid IL or missing references)
+8080: 			//IL_005e: Unknown result type (might be due to invalid IL or missing references)
+8081: 			//IL_007c: Unknown result type (might be due to invalid IL or missing references)
+8082: 			//IL_0081: Unknown result type (might be due to invalid IL or missing references)
+8083: 			//IL_0082: Unknown result type (might be due to invalid IL or missing references)
+8084: 			//IL_0083: Unknown result type (might be due to invalid IL or missing references)
+8085: 			//IL_01e0: Unknown result type (might be due to invalid IL or missing references)
+8086: 			//IL_01e2: Unknown result type (might be due to invalid IL or missing references)
+8087: 			//IL_01e4: Unknown result type (might be due to invalid IL or missing references)
+8088: 			//IL_0257: Unknown result type (might be due to invalid IL or missing references)
+8089: 			//IL_025c: Unknown result type (might be due to invalid IL or missing references)
+8090: 			//IL_026b: Unknown result type (might be due to invalid IL or missing references)
+8091: 			//IL_02a4: Unknown result type (might be due to invalid IL or missing references)
+8092: 			//IL_02ab: Unknown result type (might be due to invalid IL or missing references)
+8093: 			//IL_02b2: Unknown result type (might be due to invalid IL or missing references)
+8094: 			//IL_02b3: Unknown result type (might be due to invalid IL or missing references)
+8095: 			//IL_02ba: Unknown result type (might be due to invalid IL or missing references)
+8096: 			//IL_02ce: Expected O, but got Unknown
+8097: 			//IL_02c9: Unknown result type (might be due to invalid IL or missing references)
+8098: 			//IL_02cf: Unknown result type (might be due to invalid IL or missing references)
+8099: 			//IL_02d4: Unknown result type (might be due to invalid IL or missing references)
+8100: 			//IL_02e3: Unknown result type (might be due to invalid IL or missing references)
+8101: 			//IL_02f3: Unknown result type (might be due to invalid IL or missing references)
+8102: 			//IL_02fa: Unknown result type (might be due to invalid IL or missing references)
+8103: 			//IL_0301: Unknown result type (might be due to invalid IL or missing references)
+8104: 			//IL_0302: Unknown result type (might be due to invalid IL or missing references)
+8105: 			//IL_0309: Unknown result type (might be due to invalid IL or missing references)
+8106: 			//IL_0326: Expected O, but got Unknown
+8107: 			//IL_0321: Unknown result type (might be due to invalid IL or missing references)
+8108: 			if (false /* original-file-bool-offset:320 */)
+8109: 			{
+8110: 				_0087_0095();
+8111: 				if (_0087_0096())
+8112: 				{
+8113: 				}
+8114: 				return;
+8115: 			}
+8116: 			Database workingDatabase = HostApplicationServices.WorkingDatabase;
+8117: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+8118: 			_0097_0096(mdiActiveDocument.Window.Handle);
+8119: 			base.Visible = false;
+8120: 			Point3d val = _009D._008B_008D("请选择起点" /* string-offset:2044 */);
+8121: 			if (val == Point3d.Origin)
+8122: 			{
+8123: 				base.Visible = true;
+8124: 				return;
+8125: 			}
+8126: 			Point3d val2 = _009D._008B_008D("请指定复飞方向" /* string-offset:2048 */);
+8127: 			if (val2 == Point3d.Origin)
+8128: 			{
+8129: 				base.Visible = true;
+8130: 				return;
+8131: 			}
+8132: 			base.Visible = true;
+8133: 			double num = _0098_008E();
+8134: 			double num2 = Math.Atan2(((Point3d)(ref val2)).Y - ((Point3d)(ref val)).Y, ((Point3d)(ref val2)).X - ((Point3d)(ref val)).X);
+8135: 			double num3 = num * Math.Cos(num2);
+8136: 			double num4 = num * Math.Sin(num2);
+8137: 			Point3d val3 = default(Point3d);
+8138: 			((Point3d)(ref val3))._002Ector(((Point3d)(ref val)).X + num3, ((Point3d)(ref val)).Y + num4, 0.0);
+8139: 			num3 = 10000.0 * Math.Cos(num2 + Math.PI / 2.0);
+8140: 			num4 = 10000.0 * Math.Sin(num2 + Math.PI / 2.0);
+8141: 			Point3d val4 = default(Point3d);
+8142: 			((Point3d)(ref val4))._002Ector(((Point3d)(ref val3)).X + num3, ((Point3d)(ref val3)).Y + num4, 0.0);
+8143: 			Point3d val5 = default(Point3d);
+8144: 			((Point3d)(ref val5))._002Ector(((Point3d)(ref val3)).X - num3, ((Point3d)(ref val3)).Y - num4, 0.0);
+8145: 			DocumentLock val6 = mdiActiveDocument.LockDocument();
+8146: 			try
+8147: 			{
+8148: 				_008D_0090._008A_0096_009C(((Point3d)(ref val3)).X, ((Point3d)(ref val3)).Y, num2, _008F_008A._008B_0087_009E(_009A_009B, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009A_009C, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009A_009E, "输入数据有误，请检查。" /* string-offset:1984 */), num)._008A_0097_0087(workingDatabase, val4, val5);
+8149: 				_ = 1;
+8150: 				if (!_0087_0096())
+8151: 				{
+8152: 					if (!_009A_0094.Checked)
+8153: 					{
+8154: 						return;
+8155: 					}
+8156: 				}
+8157: 				else if (_0087_0096())
+8158: 				{
+8159: 				}
+8160: 				Point3d alignmentPoint = default(Point3d);
+8161: 				((Point3d)(ref alignmentPoint))._002Ector((((Point3d)(ref val)).X + ((Point3d)(ref val3)).X) / 2.0, (((Point3d)(ref val)).Y + ((Point3d)(ref val3)).Y) / 2.0, 0.0);
+8162: 				double rotation = _0097_009C(num2);
+8163: 				_008B._0088_008D((Entity)new DBText
+8164: 				{
+8165: 					Height = 500.0,
+8166: 					TextString = "SOC-TP:" /* string-offset:2052 */ + Math.Round(num / 1000.0, 1) + "km\n" /* string-offset:2056 */,
+8167: 					HorizontalMode = (TextHorizontalMode)1,
+8168: 					VerticalMode = (TextVerticalMode)1,
+8169: 					AlignmentPoint = alignmentPoint,
+8170: 					Rotation = rotation
+8171: 				}, workingDatabase);
+8172: 				_008B._0088_008D((Entity)new DBText
+8173: 				{
+8174: 					Height = 500.0,
+8175: 					TextString = "TP" /* string-offset:2060 */,
+8176: 					HorizontalMode = (TextHorizontalMode)1,
+8177: 					VerticalMode = (TextVerticalMode)1,
+8178: 					AlignmentPoint = val4,
+8179: 					Rotation = num2 - Math.PI / 2.0
+8180: 				}, workingDatabase);
+8181: 			}
+8182: 			finally
+8183: 			{
+8184: 				((IDisposable)val6)?.Dispose();
+8185: 			}
+8186: 		}
+8187: 
+8188: 		private double _0098_008E()
+8189: 		{
+8190: 			double num = _008F_008A._008B_0087_009E(_009A_009B, "输入数据有误，请检查。" /* string-offset:1984 */);
+8191: 			double num2 = _008F_008A._008B_0087_009E(_009A_009C, "输入数据有误，请检查。" /* string-offset:1984 */);
+8192: 			double num3 = _008F_008A._008B_0087_009E(_009A_009E, "输入数据有误，请检查。" /* string-offset:1984 */);
+8193: 			_0087_0095();
+8194: 			double num4 = default(double);
+8195: 			if (!_0087_0096())
+8196: 			{
+8197: 				if (_0087_0095())
+8198: 				{
+8199: 				}
+8200: 				num4 = 100.0 * (num2 - num) / num3;
+8201: 			}
+8202: 			_009A_0096.Text = Math.Round(num4).ToString();
+8203: 			return num4;
+8204: 		}
+8205: 
+8206: 		private void _0098_008F(object P_0, EventArgs P_1)
+8207: 		{
+8208: 			_0098_008E();
+8209: 		}
+8210: 
+8211: 		private void _0098_0090(object P_0, EventArgs P_1)
+8212: 		{
+8213: 			//IL_01bc: Unknown result type (might be due to invalid IL or missing references)
+8214: 			//IL_01c1: Unknown result type (might be due to invalid IL or missing references)
+8215: 			//IL_01c3: Unknown result type (might be due to invalid IL or missing references)
+8216: 			//IL_01c5: Unknown result type (might be due to invalid IL or missing references)
+8217: 			//IL_01de: Unknown result type (might be due to invalid IL or missing references)
+8218: 			//IL_01e3: Unknown result type (might be due to invalid IL or missing references)
+8219: 			//IL_01e5: Unknown result type (might be due to invalid IL or missing references)
+8220: 			//IL_01e7: Unknown result type (might be due to invalid IL or missing references)
+8221: 			//IL_02c1: Unknown result type (might be due to invalid IL or missing references)
+8222: 			//IL_02c2: Unknown result type (might be due to invalid IL or missing references)
+8223: 			//IL_02c4: Unknown result type (might be due to invalid IL or missing references)
+8224: 			//IL_0334: Unknown result type (might be due to invalid IL or missing references)
+8225: 			//IL_0339: Unknown result type (might be due to invalid IL or missing references)
+8226: 			//IL_0348: Unknown result type (might be due to invalid IL or missing references)
+8227: 			//IL_0382: Unknown result type (might be due to invalid IL or missing references)
+8228: 			//IL_0389: Unknown result type (might be due to invalid IL or missing references)
+8229: 			//IL_0390: Unknown result type (might be due to invalid IL or missing references)
+8230: 			//IL_0391: Unknown result type (might be due to invalid IL or missing references)
+8231: 			//IL_0398: Unknown result type (might be due to invalid IL or missing references)
+8232: 			//IL_03ac: Expected O, but got Unknown
+8233: 			//IL_03a7: Unknown result type (might be due to invalid IL or missing references)
+8234: 			//IL_03ad: Unknown result type (might be due to invalid IL or missing references)
+8235: 			//IL_03b2: Unknown result type (might be due to invalid IL or missing references)
+8236: 			//IL_03c1: Unknown result type (might be due to invalid IL or missing references)
+8237: 			//IL_03d1: Unknown result type (might be due to invalid IL or missing references)
+8238: 			//IL_03d8: Unknown result type (might be due to invalid IL or missing references)
+8239: 			//IL_03df: Unknown result type (might be due to invalid IL or missing references)
+8240: 			//IL_03e0: Unknown result type (might be due to invalid IL or missing references)
+8241: 			//IL_03e6: Unknown result type (might be due to invalid IL or missing references)
+8242: 			//IL_0403: Expected O, but got Unknown
+8243: 			//IL_03fe: Unknown result type (might be due to invalid IL or missing references)
+8244: 			int num = 13;
+8245: 			if (_0087_0095())
+8246: 			{
+8247: 				Point3d val = default(Point3d);
+8248: 				Point3d val2 = default(Point3d);
+8249: 				Point3d val3 = default(Point3d);
+8250: 				Point3d val4 = default(Point3d);
+8251: 				Point3d val5 = default(Point3d);
+8252: 				DocumentLock val6 = default(DocumentLock);
+8253: 				Point3d alignmentPoint = default(Point3d);
+8254: 				while (true)
+8255: 				{
+8256: 					IL_0237:
+8257: 					if (!false /* original-file-bool-offset:324 */)
+8258: 					{
+8259: 						Database workingDatabase = HostApplicationServices.WorkingDatabase;
+8260: 						Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+8261: 						num = 7;
+8262: 						while (true)
+8263: 						{
+8264: 							IL_002e:
+8265: 							_0097_0096(mdiActiveDocument.Window.Handle);
+8266: 							_0087_0096();
+8267: 							if (!_0087_0095())
+8268: 							{
+8269: 								num = 14;
+8270: 								goto IL_01fa;
+8271: 							}
+8272: 							goto IL_01ab;
+8273: 							IL_0413:
+8274: 							base.Visible = true;
+8275: 							num = 5;
+8276: 							return;
+8277: 							IL_01ab:
+8278: 							base.Visible = false;
+8279: 							val = _009D._008B_008D("请选择离场程序起点DER" /* string-offset:2064 */);
+8280: 							if (val == Point3d.Origin)
+8281: 							{
+8282: 								break;
+8283: 							}
+8284: 							val2 = _009D._008B_008D("请指定离场转弯点方向" /* string-offset:2068 */);
+8285: 							if (!(val2 == Point3d.Origin))
+8286: 							{
+8287: 								base.Visible = true;
+8288: 								goto IL_01fa;
+8289: 							}
+8290: 							num = 16;
+8291: 							goto IL_0413;
+8292: 							IL_01fa:
+8293: 							while (true)
+8294: 							{
+8295: 								IL_01fa_2:
+8296: 								double num2 = _0098_0091();
+8297: 								double num3 = Math.Atan2(((Point3d)(ref val2)).Y - ((Point3d)(ref val)).Y, ((Point3d)(ref val2)).X - ((Point3d)(ref val)).X);
+8298: 								num = 15;
+8299: 								while (true)
+8300: 								{
+8301: 									IL_018e:
+8302: 									double num4 = num2 * Math.Cos(num3);
+8303: 									double num5 = num2 * Math.Sin(num3);
+8304: 									num = 0;
+8305: 									while (true)
+8306: 									{
+8307: 										IL_0163:
+8308: 										((Point3d)(ref val3))._002Ector(((Point3d)(ref val)).X + num4, ((Point3d)(ref val)).Y + num5, 0.0);
+8309: 										num = 4;
+8310: 										while (true)
+8311: 										{
+8312: 											IL_0140:
+8313: 											num4 = 10000.0 * Math.Cos(num3 + Math.PI / 2.0);
+8314: 											num = 2;
+8315: 											while (true)
+8316: 											{
+8317: 												IL_0122:
+8318: 												num5 = 10000.0 * Math.Sin(num3 + Math.PI / 2.0);
+8319: 												while (true)
+8320: 												{
+8321: 													IL_00ea:
+8322: 													((Point3d)(ref val4))._002Ector(((Point3d)(ref val3)).X + num4, ((Point3d)(ref val3)).Y + num5, 0.0);
+8323: 													num = 1;
+8324: 													if (!_0087_0095())
+8325: 													{
+8326: 														break;
+8327: 													}
+8328: 													while (true)
+8329: 													{
+8330: 														switch (num)
+8331: 														{
+8332: 														case 7:
+8333: 															break;
+8334: 														case 1:
+8335: 															((Point3d)(ref val5))._002Ector(((Point3d)(ref val3)).X - num4, ((Point3d)(ref val3)).Y - num5, 0.0);
+8336: 															val6 = mdiActiveDocument.LockDocument();
+8337: 															num = 17;
+8338: 															if (!_0087_0096())
+8339: 															{
+8340: 																continue;
+8341: 															}
+8342: 															goto IL_0163;
+8343: 														case 9:
+8344: 															goto IL_00ea;
+8345: 														case 2:
+8346: 															goto IL_0122;
+8347: 														case 4:
+8348: 															goto IL_0140;
+8349: 														case 0:
+8350: 															goto IL_0163;
+8351: 														case 15:
+8352: 															goto IL_018e;
+8353: 														case 3:
+8354: 														case 11:
+8355: 															goto IL_01ab;
+8356: 														default:
+8357: 															goto IL_01fa_2;
+8358: 														case 13:
+8359: 															goto IL_0237;
+8360: 														case 12:
+8361: 															goto end_IL_002e;
+8362: 														case 6:
+8363: 															return;
+8364: 														case 17:
+8365: 															try
+8366: 															{
+8367: 																_008D_0090._008A_0096_009D(((Point3d)(ref val3)).X, ((Point3d)(ref val3)).Y, num3, _008F_008A._008B_0087_009E(_009A_008F, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009A_0090, "输入数据有误，请检查。" /* string-offset:1984 */), _008F_008A._008B_0087_009E(_009A_0092, "输入数据有误，请检查。" /* string-offset:1984 */), num2)._008A_0097_0087(workingDatabase, val4, val5);
+8368: 																_0087_0096();
+8369: 																if (_0087_0095())
+8370: 																{
+8371: 																	if (!_009A_0088.Checked)
+8372: 																	{
+8373: 																		return;
+8374: 																	}
+8375: 																	((Point3d)(ref alignmentPoint))._002Ector((((Point3d)(ref val)).X + ((Point3d)(ref val3)).X) / 2.0, (((Point3d)(ref val)).Y + ((Point3d)(ref val3)).Y) / 2.0, 0.0);
+8376: 																}
+8377: 																double rotation = _0097_009C(num3);
+8378: 																_008B._0088_008D((Entity)new DBText
+8379: 																{
+8380: 																	Height = 500.0,
+8381: 																	TextString = "DER-TP:" /* string-offset:2072 */ + Math.Round(num2 / 1000.0, 1) + "km\n" /* string-offset:2056 */,
+8382: 																	HorizontalMode = (TextHorizontalMode)1,
+8383: 																	VerticalMode = (TextVerticalMode)1,
+8384: 																	AlignmentPoint = alignmentPoint,
+8385: 																	Rotation = rotation
+8386: 																}, workingDatabase);
+8387: 																_008B._0088_008D((Entity)new DBText
+8388: 																{
+8389: 																	Height = 500.0,
+8390: 																	TextString = "TP" /* string-offset:2060 */,
+8391: 																	HorizontalMode = (TextHorizontalMode)1,
+8392: 																	VerticalMode = (TextVerticalMode)1,
+8393: 																	AlignmentPoint = val4,
+8394: 																	Rotation = num3 - Math.PI / 2.0
+8395: 																}, workingDatabase);
+8396: 																return;
+8397: 															}
+8398: 															finally
+8399: 															{
+8400: 																((IDisposable)val6)?.Dispose();
+8401: 															}
+8402: 														case 10:
+8403: 															return;
+8404: 														case 16:
+8405: 															goto end_IL_00ea;
+8406: 														case 5:
+8407: 															return;
+8408: 														}
+8409: 														break;
+8410: 													}
+8411: 													goto IL_002e;
+8412: 													continue;
+8413: 													end_IL_00ea:
+8414: 													break;
+8415: 												}
+8416: 												break;
+8417: 											}
+8418: 											break;
+8419: 										}
+8420: 										break;
+8421: 									}
+8422: 									break;
+8423: 								}
+8424: 								break;
+8425: 							}
+8426: 							goto IL_0413;
+8427: 							continue;
+8428: 							end_IL_002e:
+8429: 							break;
+8430: 						}
+8431: 						break;
+8432: 					}
+8433: 					num = 10;
+8434: 					return;
+8435: 				}
+8436: 			}
+8437: 			base.Visible = true;
+8438: 			num = 6;
+8439: 		}
+8440: 
+8441: 		private double _0098_0091()
+8442: 		{
+8443: 			_ = 0;
+8444: 			if (_0087_0095())
+8445: 			{
+8446: 				if (!_0087_0095())
+8447: 				{
+8448: 					goto IL_0030;
+8449: 				}
+8450: 			}
+8451: 			else if (_0087_0095())
+8452: 			{
+8453: 				goto IL_0063;
+8454: 			}
+8455: 			double num = _008F_008A._008B_0087_009E(_009A_008F, "输入数据有误，请检查。" /* string-offset:1984 */);
+8456: 			goto IL_0030;
+8457: 			IL_0063:
+8458: 			double num3 = default(double);
+8459: 			double num4 = default(double);
+8460: 			double num2 = 100.0 * (num3 - num - 5.0) / num4;
+8461: 			_009A_008A.Text = Math.Round(num2).ToString();
+8462: 			goto IL_0097;
+8463: 			IL_0097:
+8464: 			return num2;
+8465: 			IL_0030:
+8466: 			num3 = _008F_008A._008B_0087_009E(_009A_0090, "输入数据有误，请检查。" /* string-offset:1984 */);
+8467: 			if (_0087_0095())
+8468: 			{
+8469: 				num4 = _008F_008A._008B_0087_009E(_009A_0092, "输入数据有误，请检查。" /* string-offset:1984 */);
+8470: 				goto IL_0063;
+8471: 			}
+8472: 			goto IL_0097;
+8473: 		}
+8474: 
+8475: 		private void _0098_0092(object P_0, EventArgs P_1)
+8476: 		{
+8477: 			_0098_0091();
+8478: 		}
+8479: 
+8480: 		private void _0098_0093(object P_0, EventArgs P_1)
+8481: 		{
+8482: 			//IL_01c3: Unknown result type (might be due to invalid IL or missing references)
+8483: 			//IL_01c5: Unknown result type (might be due to invalid IL or missing references)
+8484: 			//IL_01c7: Unknown result type (might be due to invalid IL or missing references)
+8485: 			//IL_0066: Unknown result type (might be due to invalid IL or missing references)
+8486: 			//IL_006b: Unknown result type (might be due to invalid IL or missing references)
+8487: 			//IL_0076: Unknown result type (might be due to invalid IL or missing references)
+8488: 			//IL_007b: Unknown result type (might be due to invalid IL or missing references)
+8489: 			//IL_01f6: Unknown result type (might be due to invalid IL or missing references)
+8490: 			//IL_01fb: Unknown result type (might be due to invalid IL or missing references)
+8491: 			//IL_020a: Unknown result type (might be due to invalid IL or missing references)
+8492: 			//IL_0212: Unknown result type (might be due to invalid IL or missing references)
+8493: 			//IL_0219: Unknown result type (might be due to invalid IL or missing references)
+8494: 			//IL_0220: Unknown result type (might be due to invalid IL or missing references)
+8495: 			//IL_0221: Unknown result type (might be due to invalid IL or missing references)
+8496: 			//IL_0228: Unknown result type (might be due to invalid IL or missing references)
+8497: 			//IL_0245: Expected O, but got Unknown
+8498: 			//IL_0240: Unknown result type (might be due to invalid IL or missing references)
+8499: 			//IL_0085: Unknown result type (might be due to invalid IL or missing references)
+8500: 			//IL_0086: Unknown result type (might be due to invalid IL or missing references)
+8501: 			_0087_0095();
+8502: 			Document mdiActiveDocument = default(Document);
+8503: 			double num = default(double);
+8504: 			double num2 = default(double);
+8505: 			double num3 = default(double);
+8506: 			Point3d val3 = default(Point3d);
+8507: 			double num4 = default(double);
+8508: 			double num5;
+8509: 			if (!_0087_0096())
+8510: 			{
+8511: 				if (!true /* original-file-bool-offset:328 */)
+8512: 				{
+8513: 					return;
+8514: 				}
+8515: 				Point3d val;
+8516: 				Point3d val2;
+8517: 				while (true)
+8518: 				{
+8519: 					mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+8520: 					_ = mdiActiveDocument.Editor;
+8521: 					_0097_0096(mdiActiveDocument.Window.Handle);
+8522: 					base.Visible = false;
+8523: 					val = _009D._008B_008D("\n请输入起点" /* string-offset:2076 */);
+8524: 					val2 = _009D._008B_008D("\n请指定飞行方向" /* string-offset:2080 */);
+8525: 					if (!_0087_0095())
+8526: 					{
+8527: 						break;
+8528: 					}
+8529: 					base.Visible = true;
+8530: 					if (_0087_0095())
+8531: 					{
+8532: 						if (val == val2)
+8533: 						{
+8534: 							return;
+8535: 						}
+8536: 						_009C_0093._008B_008C_008A();
+8537: 						num = _008F_008A._008B_0087_009E(_0099_008D, "输入数据有误，请检查。" /* string-offset:1984 */);
+8538: 						break;
+8539: 					}
+8540: 				}
+8541: 				num2 = _0098_0094();
+8542: 				num3 = Math.Atan2(((Point3d)(ref val2)).Y - ((Point3d)(ref val)).Y, ((Point3d)(ref val2)).X - ((Point3d)(ref val)).X);
+8543: 				num4 = num2 * Math.Cos(num3);
+8544: 				num5 = num2 * Math.Sin(num3);
+8545: 				((Point3d)(ref val3))._002Ector(((Point3d)(ref val)).X + num4, ((Point3d)(ref val)).Y + num5, 0.0);
+8546: 				num4 = 6000.0 * Math.Cos(num3 + Math.PI / 2.0);
+8547: 			}
+8548: 			num5 = 6000.0 * Math.Sin(num3 + Math.PI / 2.0);
+8549: 			Point3d val4 = default(Point3d);
+8550: 			((Point3d)(ref val4))._002Ector(((Point3d)(ref val3)).X + num4, ((Point3d)(ref val3)).Y + num5, 0.0);
+8551: 			Point3d val5 = default(Point3d);
+8552: 			((Point3d)(ref val5))._002Ector(((Point3d)(ref val3)).X - num4, ((Point3d)(ref val3)).Y - num5, 0.0);
+8553: 			DocumentLock val6 = mdiActiveDocument.LockDocument();
+8554: 			try
+8555: 			{
+8556: 				Database workingDatabase = HostApplicationServices.WorkingDatabase;
+8557: 				_008D_0090._008A_0096_009E(((Point3d)(ref val3)).X, ((Point3d)(ref val3)).Y, num3, num, num2)._008A_0097_0087(workingDatabase, val4, val5);
+8558: 				_0087_0096();
+8559: 				if (!_0087_0095() || _009C_0090.Checked)
+8560: 				{
+8561: 					string textString = "C" /* string-offset:2084 */;
+8562: 					_008B._0088_008D((Entity)new DBText
+8563: 					{
+8564: 						Height = 500.0,
+8565: 						TextString = textString,
+8566: 						HorizontalMode = (TextHorizontalMode)1,
+8567: 						VerticalMode = (TextVerticalMode)1,
+8568: 						AlignmentPoint = val4,
+8569: 						Rotation = num3 - Math.PI / 2.0
+8570: 					}, workingDatabase);
+8571: 				}
+8572: 			}
+8573: 			finally
+8574: 			{
+8575: 				((IDisposable)val6)?.Dispose();
+8576: 			}
+8577: 		}
+8578: 
+8579: 		private double _0098_0094()
+8580: 		{
+8581: 			_0087_0095();
+8582: 			_008E_009B obj = default(_008E_009B);
+8583: 			if (!_0087_0096())
+8584: 			{
+8585: 				obj = _009C_0093._008B_008C_008A();
+8586: 			}
+8587: 			double num2 = default(double);
+8588: 			do
+8589: 			{
+8590: 				double num = _008F_008A._008B_0087_009E(_0099_008D, "输入数据有误，请检查。" /* string-offset:1984 */);
+8591: 				if (_0087_0095())
+8592: 				{
+8593: 					num2 = (obj._008A_009D_009A + obj._008A_009D_0098) * num / 3.6;
+8594: 				}
+8595: 				_0099_008C.Text = Math.Round(num2).ToString();
+8596: 			}
+8597: 			while (!_0087_0095());
+8598: 			return num2;
+8599: 		}
+8600: 
+8601: 		private void _0098_0095(object P_0, EventArgs P_1)
+8602: 		{
+8603: 			_0098_0094();
+8604: 		}
+8605: 
+8606: 		protected override void Dispose(bool P_0)
+8607: 		{
+8608: 			_ = 0;
+8609: 			if (!_0087_0095() || (P_0 && _0098_0098 != null))
+8610: 			{
+8611: 				_0098_0098.Dispose();
+8612: 			}
+8613: 			base.Dispose(P_0);
+8614: 		}
+8615: 

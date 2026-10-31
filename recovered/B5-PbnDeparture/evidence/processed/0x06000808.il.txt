@@ -1,0 +1,14 @@
+METHOD 06000808 \x8f\x8f.\x8f\x8e::\x8b\x89\x86 RVA=6170 file=4370
+IL_0000: ldarg.1 
+IL_0001: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0006: ldarg.0 
+IL_0007: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_000C: sub 
+IL_000D: ldarg.1 
+IL_000E: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0013: ldarg.0 
+IL_0014: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0019: sub 
+IL_001A: call 0x0A000063 System.Math::Atan2
+IL_001F: ret 
+

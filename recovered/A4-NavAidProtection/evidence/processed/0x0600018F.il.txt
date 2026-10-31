@@ -1,0 +1,7 @@
+METHOD 0600018F \x87\x9d.\x87\x9c::SetValue RVA=3641 file=1841
+IL_0000: ldarg.1 
+IL_0001: castclass 0x01000037 System.Windows.Forms.TextBox
+IL_0006: ldarg.2 
+IL_0007: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_000C: ret 
+

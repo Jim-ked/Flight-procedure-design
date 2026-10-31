@@ -1,0 +1,17 @@
+module,writer_branch,order,entity_or_group,helper,bulge,group_membership,xdata
+B1,showNominalTrack,1,NominalConnectionDescriptor,_008B._0088_008D,tan(delta/4) at vertex 1,false,WsObject=P9 when nonempty
+B1,showBoundary,2,BoundaryList03,_008B._0088_008A,0,false,WsObject=P9 when nonempty
+B1,showBoundary,3,BoundaryList01,_008B._0088_008A,0,false,WsObject=P9 when nonempty
+B1,showBoundary,4,BoundaryList04,_008B._0088_008A,0,false,WsObject=P9 when nonempty
+B1,showBoundary,5,BoundaryList02,_008B._0088_008A,0,false,WsObject=P9 when nonempty
+B1,checkBoxKK,6,BoundaryList05,_008B._0088_008A,0,false,WsObject=P9 when nonempty
+B1,checkBoxNN,7,BoundaryGroup02,_008B._0088_008B,0,true child polylines,WsObject=P9 on child polylines
+B1,showSpiral,8,SpiralGroup01,_008B._0088_008B,0,true child polylines,WsObject=P9 on child polylines
+B1,showTolerance,9,TolerancePolyline,_008B._0088_008A,0,false,none (metadata omitted)
+B2,showNominalTrack,1,NominalConnectionDescriptor,_008B._0088_008D,tan(delta/4) at vertex 1,false,WsObject=P8 when nonempty
+B2,showPriBoundary,2,BoundaryList03,_008B._0088_008A,0,false,WsObject=P8 when nonempty
+B2,showPriBoundary,3,BoundaryList01,_008B._0088_008A,0,false,WsObject=P8 when nonempty
+B2,showSecBoundary,4,BoundaryList04,_008B._0088_008A,0,false,WsObject=P8 when nonempty
+B2,showSecBoundary,5,BoundaryList02,_008B._0088_008A,0,false,WsObject=P8 when nonempty
+B2,showSpiral,6,SpiralGroup01,_008B._0088_008B,0,true child polylines,WsObject=P8 on child polylines
+B2,showTolerance,7,TolerancePolyline,_008B._0088_008A,0,false,none (metadata omitted)

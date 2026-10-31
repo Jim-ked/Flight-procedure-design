@@ -1,0 +1,44 @@
+METHOD 060003B1 \x89\x99.\x89\x98::\x88\x88\x86 RVA=4DFA0 file=4C1A0
+IL_0000: ldc.i4.0 
+IL_0001: call 0x060003BB \x89\x99.\x89\x98::\x87b
+IL_0006: brfalse.s 79
+IL_0008: pop 
+IL_0009: ldarg.1 
+IL_000A: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_000F: ldarg.0 
+IL_0010: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0015: sub 
+IL_0016: ldarg.2 
+IL_0017: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_001C: ldarg.1 
+IL_001D: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0022: sub 
+IL_0023: mul 
+IL_0024: ldarg.1 
+IL_0025: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_002A: ldarg.0 
+IL_002B: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0030: sub 
+IL_0031: ldarg.2 
+IL_0032: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0037: ldarg.1 
+IL_0038: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_003D: sub 
+IL_003E: mul 
+IL_003F: sub 
+IL_0040: stloc.0 
+IL_0041: br.s 80
+IL_0043: pop 
+IL_0044: ldloc.0 
+IL_0045: ldc.r8 0.0
+IL_004E: bne.un.s 94
+IL_0050: ldc.i4.0 
+IL_0051: ret 
+IL_0052: ldloc.0 
+IL_0053: ldc.r8 0.0
+IL_005C: bgt.s 108
+IL_005E: ldc.i4.2 
+IL_005F: ret 
+IL_0060: ldc.i4.1 
+IL_0061: ret 
+

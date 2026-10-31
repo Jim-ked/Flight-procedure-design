@@ -1,0 +1,15 @@
+84515: 		public static List<List<_008F_008E>> _008B_008A_0094(List<List<_008F_008E>> P_0, _008F_008E P_1, double P_2)
+84516: 		{
+84517: 			if (P_0 != null && P_0.Count != 0)
+84518: 			{
+84519: 				List<List<_008F_008E>> list = new List<List<_008F_008E>>();
+84520: 				{
+84521: 					foreach (List<_008F_008E> item in P_0)
+84522: 					{
+84523: 						list.Add(_008B_008A_0095(item, P_1, P_2));
+84524: 					}
+84525: 					return list;
+84526: 				}
+84527: 			}
+84528: 			return null;
+84529: 		}

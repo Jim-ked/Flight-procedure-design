@@ -1,0 +1,13 @@
+# A2 Basic Calculation — final static closure
+
+**A2: COMPLETE_STATIC.** The six public calculators, their event bindings, input units, CAD pick/output behavior, WsCalcuLine serialization, error paths and known abnormal bindings are closed from the existing L1/L2 evidence. Round 1 remains `PARTIALLY ACCEPTED` and is not modified.
+
+The six formulas are: FAF `(FAFalt-RDH-THRalt)/tan(GP)` with GP entered in degrees; NPA `(TAS+wind)*seconds/3.6` with one seconds field defaulting to 18; PA `Round((DH-HLcor)/tan(GP)+Xz)`; missed TP `100*(TurnAlt-SOCAlt)/gradientPercent`; departure TP `100*(TurnAlt-DER elevation-5)/PDGPercent`; and C `(TAS+wind)*seconds/3.6` with the default C path using seconds 6 and wind 56. The NPA code does not split 18 into 3+15, and C does not split 6 into 3+3. The 56 and 5 m values are fixed/default code inputs, not newly inferred normative constants.
+
+FAF altitude, RDH and threshold elevation are consumed as the numeric height fields supplied to the formula; the code does not apply an additional absolute/relative conversion. GP is converted from degrees to radians for `tan`. The FAF and IF line endpoints are computed from the picked entrance and direction; the line writer recomputes actual center, direction and length from CAD endpoints before writing metadata. No existing entity identity is inferred from the two picks.
+
+The cancellation difference is real: FAF, missed TP and departure TP check each Origin immediately; NPA, PA and C read both points and only perform an equality check. The latter can continue with one Origin sentinel and one non-Origin point. The NPA/C turn reader is called twice on the old path; fields are consumed by the calculator/CAD factory on the two calls, with no recovered side effect and no optimization applied. `comboXz.TabIndexChanged → PA CAD handler` and airport-elevation `Validated → category/HL fill` are genuine bindings retained as evidence.
+
+WsCalcuLine uses `1001 WsCalcuLine`, `1000 Kind`, and `1000 JSON` with the original Unicode DataMember keys, 10 line members and 28 parameter members. It is written after the Line transaction in a second transaction. The bounded direct-call audit found no automatic A7/A8/A9/A10/B3/B4/B5 semantic reader. Numeric parse errors return 0 after MessageBox/focus/LightCoral; turn-reader failure returns null; HLcor=0 alerts and returns -1; negative PA distances and zero-gradient numeric behavior are not clamped.
+
+No same-build static formula, event or metadata chain remains open. Remaining items are E4/API23.1 host execution, full Designer/config recreation, host compatibility and standards provenance.

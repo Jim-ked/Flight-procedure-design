@@ -1,0 +1,30 @@
+METHOD 0600038B \x89\x95.\x89\x94::\x87\x9e\x88 RVA=49D48 file=47F48
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x040002CD \x89\x95.\x89\x94::\x87\x9e\x9e
+IL_0006: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_000B: brfalse.s 62
+IL_000D: ldc.i4.0 
+IL_000E: call 0x0600039C \x89\x95.\x89\x94::\x877
+IL_0013: brfalse.s 48
+IL_0015: pop 
+IL_0016: ldarg.0 
+IL_0017: ldfld 0x040002D3 \x89\x95.\x89\x94::\x88\x86\x8b
+IL_001C: ldc.i4.0 
+IL_001D: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_0022: br.s 49
+IL_0024: pop 
+IL_0025: ldarg.0 
+IL_0026: ldfld 0x040002D1 \x89\x95.\x89\x94::\x88\x86\x89
+IL_002B: ldc.i4.0 
+IL_002C: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_0031: ret 
+IL_0032: ldarg.0 
+IL_0033: ldfld 0x040002D3 \x89\x95.\x89\x94::\x88\x86\x8b
+IL_0038: ldc.i4.1 
+IL_0039: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_003E: ldarg.0 
+IL_003F: ldfld 0x040002D1 \x89\x95.\x89\x94::\x88\x86\x89
+IL_0044: ldc.i4.1 
+IL_0045: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_004A: ret 
+

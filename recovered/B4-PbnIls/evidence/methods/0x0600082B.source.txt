@@ -1,0 +1,43 @@
+84685: 		public static List<List<_008F_008E>> _008B_008A_009E(List<_008F_008E> P_0, List<_008F_008E> P_1)
+84686: 		{
+84687: 			if (false /* original-file-bool-offset:1452 */)
+84688: 			{
+84689: 				goto IL_0073;
+84690: 			}
+84691: 			List<List<_008F_008E>> list = default(List<List<_008F_008E>>);
+84692: 			int num = default(int);
+84693: 			if (P_0 != null && P_0.Count != 0 && P_1 != null && P_1.Count != 0)
+84694: 			{
+84695: 				if (P_0.Count != P_1.Count)
+84696: 				{
+84697: 					return null;
+84698: 				}
+84699: 				list = new List<List<_008F_008E>>();
+84700: 				num = 1;
+84701: 				goto IL_00db;
+84702: 			}
+84703: 			return null;
+84704: 			IL_00db:
+84705: 			List<_008F_008E> list2 = default(List<_008F_008E>);
+84706: 			List<_008F_008E> list3 = default(List<_008F_008E>);
+84707: 			if (num < P_0.Count)
+84708: 			{
+84709: 				list2 = new List<_008F_008E>();
+84710: 				list3 = new List<_008F_008E>();
+84711: 				list2.Add(P_0[num - 1]);
+84712: 				list2.Add(P_0[num]);
+84713: 				goto IL_0073;
+84714: 			}
+84715: 			return list;
+84716: 			IL_0073:
+84717: 			list2.Add(P_1[num - 1]);
+84718: 			list2.Add(P_0[num - 1]);
+84719: 			list.Add(list2);
+84720: 			list3.Add(P_1[num - 1]);
+84721: 			list3.Add(P_1[num]);
+84722: 			list3.Add(P_0[num]);
+84723: 			list3.Add(P_1[num - 1]);
+84724: 			list.Add(list3);
+84725: 			num++;
+84726: 			goto IL_00db;
+84727: 		}

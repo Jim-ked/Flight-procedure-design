@@ -1,0 +1,7 @@
+METHOD 06000256 \x88\x9e.\x88\x9d::ShowMessage RVA=3CB1 file=1EB1
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x0400012B \x88\x9e.\x88\x9d::\x9e\x8b
+IL_0006: ldarg.1 
+IL_0007: callvirt 0x0A0002BD System.Windows.Forms.ToolStripItem::set_Text
+IL_000C: ret 
+

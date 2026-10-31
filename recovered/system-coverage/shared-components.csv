@@ -1,0 +1,13 @@
+﻿Component,MethodDef,KnownModules,DirectSharing,CopiedAlternatives,Purpose,Evidence
+P793/P854 turn parameters,P793/P854,"A1,A6,B1,B2,B5",SAME_METHODDEF in indexed callers,B5/A6 consume shared parameters,Turn input,A6/shared-turn-methods.md;B5 overview.md
+Spiral86/Spiral88,P86/P88,"A1,A6,B1,B2,B5",SHARED lower layer,B1/B2/B5 also copy branches,Spiral primitive,A1/spiral-model.md
+point/line primitives,P7E4/P7E7/P7E8/P7ED/P809/P80A,"A1-A10,B1-B5",SAME_METHODDEF where incoming recorded,Local boundary formulas remain,Geometry arithmetic,A4 evidence/cross-module-shared-calls.csv
+CAD writer,P087/P089/P134,"A1-A10,B1-B5",SAME_METHODDEF in many chains,Local wrappers vary,Polyline/group/XData,A4 cad-output-map.md
+SelectAll/DBPoint,ScreenData/PriSec helpers,"A7-A10,B3-B5",PARTIAL,B3 explicitly no Take5,Obstacle enumeration,A7 obstacle-evaluation.md;B3 obstacle-evaluation.md
+Obstacle parser,Take5/ScreenData,"A7,A8,A9,A10,B3,B4,B5",PARTIAL,B3 differs on Take5,Obstacle coordinates,module obstacle-evaluation.md
+Mark/Highlight,Mark/Highlight helpers,"A7,A8,A9,A10,B3,B4,B5",SHARED idiom,Result output differs,Visual output,A8 overview.md
+WsObject serializer,P089/XData,A1-A10/B1-B5,SHARED optional writer,Many calls pass empty metadata,XData,A4 xdata-schema.md
+WsCalcuLine,A2 line model,A2 and manual downstream,NO_UNIFIED_MODEL,Repick often required,Persisted calculation line,A2 WsCalcuLine-schema.md
+WsEntityFrame,frame helpers,A7/B3/B4/B5,SHARED/PARTIAL,No global procedure object,Local frame,A7 runway-coordinate.md
+OasModel/Plane,OAS classes,A5/B4,SAME_METHODDEF core,Wrappers/files differ,OAS surfaces,A5 class-map.md
+config/state serializer,P0F4/P0F6/P0F5/P0F7,A2-A5/B3-B5,SHARED infrastructure,Keys differ,UI state,A4 persistence.md

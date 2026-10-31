@@ -1,0 +1,26 @@
+METHOD 060005D2 \x8c\x94.\x8c\x93::.ctor RVA=815E8 file=7F7E8
+IL_0000: call 0x060005DC \x8c\x94.\x8c\x93::\x88m
+IL_0005: call 0x060005DB \x8c\x94.\x8c\x93::\x88l
+IL_000A: brfalse.s 65
+IL_000C: pop 
+IL_000D: ldarg.0 
+IL_000E: ldc.r8 1.0
+IL_0017: ldc.r8 1.0
+IL_0020: ldc.r8 1.0
+IL_0029: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_002E: stfld 0x04000694 \x8c\x94.\x8c\x93::\x8a\x89\x96
+IL_0033: br.s 66
+IL_0035: pop 
+IL_0036: ldarg.0 
+IL_0037: ldc.r8 1.0
+IL_0040: ldc.r8 1.0
+IL_0049: ldc.r8 1.0
+IL_0052: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_0057: stfld 0x04000695 \x8c\x94.\x8c\x93::\x8a\x89\x97
+IL_005C: ldarg.0 
+IL_005D: ldc.r8 1482.0
+IL_0066: stfld 0x04000697 \x8c\x94.\x8c\x93::\x8a\x89\x99
+IL_006B: ldarg.0 
+IL_006C: call 0x0A00002C System.Object::.ctor
+IL_0071: ret 
+

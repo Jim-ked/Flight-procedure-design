@@ -1,0 +1,4 @@
+25482: 		private bool _0087_0092_008A(string P_0)
+25483: 		{
+25484: 			return MessageBox.Show("从 " /* string-offset:4040 */ + P_0 + " 导入参数\n\n请选择导入模式：\n【是】- 导入全部参数（跑道+进近+PAOAS+OAS面）\n【否】- 仅导入 OAS 面参数" /* string-offset:4044 */, "导入选项" /* string-offset:4048 */, MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) == DialogResult.Yes;
+25485: 		}

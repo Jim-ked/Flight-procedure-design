@@ -1,0 +1,22 @@
+module,list,entity_kind,vertex_order,source_expression,branch_or_role,evidence
+B1,BoundaryList03,Polyline,0,_0089_009C_009A._008A_008D_008D,start edge of main boundary,_0089_009D_0094 line 66700
+B1,BoundaryList03,Polyline,1..n,_0089_009D_009B._008A_009E_0091(...) sampled spiral and candidate intersections,A<=60/A<=90/A>90 branches,_0089_009D_0094 lines 66711-67110
+B1,BoundaryList03,Polyline,last,_0089_009C_009C._008A_008D_008D,end edge,_0089_009D_0094 lines 66887/67121
+B1,BoundaryList01,Polyline,0,_0089_009C_009A._008A_008D_008C,start edge of paired main boundary,_0089_009D_0094 line 66701
+B1,BoundaryList01,Polyline,1..n,"_0089_009D_009B._008A_009E_0091(num6,A/...,SW1/2)",distance-selected spiral/line join,_0089_009D_0094 lines 66793-66800
+B1,BoundaryList01,Polyline,last,_0089_009C_009C._008A_008D_008C,end edge,_0089_009D_0094 lines 66748/66818/67118
+B1,BoundaryList04,Polyline,0,_0089_009C_009A._008A_008D_008F,start of secondary straight carrier,_0089_009D_0095 line 67158
+B1,BoundaryList04,Polyline,1,_0089_009D_009D,rotated point from incoming turn geometry,_0089_009D_0095 lines 67171/67185
+B1,BoundaryList04,Polyline,2,_0089_009E_0086,15-degree or A/2 candidate,_0089_009D_0095 lines 67197-67208
+B1,BoundaryList04,Polyline,last,_0089_009C_009C._008A_008D_008F,end carrier,_0089_009D_0095 line 67199
+B1,BoundaryList02,Polyline,0,_0089_009C_009A._008A_008D_008E,start of secondary paired carrier,_0089_009D_0095 line 67225
+B1,BoundaryList02,Polyline,1,_0089_009D_009E,rotated point from incoming turn geometry,_0089_009D_0095 line 67186
+B1,BoundaryList02,Polyline,2,_0089_009E_0087,15-degree or A/2 candidate,_0089_009D_0095 lines 67216-67224
+B1,BoundaryList02,Polyline,last,_0089_009C_009C._008A_008D_008E,end carrier,_0089_009D_0095 line 67226
+B1,BoundaryList05,Polyline,0,_0089_009D_009D,KK/NN semantic unresolved; two-point list,_0089_009D_0095 line 67185
+B1,BoundaryList05,Polyline,1,_0089_009D_009E,KK/NN semantic unresolved; two-point list,_0089_009D_0095 line 67186
+B1,BoundaryGroup02[0],Polyline,0,"_008F_008E(center,2*SW1,bearing)",three-point carrier list,_0089_009D_0096 lines 67303-67310
+B1,BoundaryGroup02[0],Polyline,1,_0089_009C_009B._008A_008C_009B,"centre point; three-point carrier list",_0089_009D_0096 line 67307
+B1,BoundaryGroup02[0],Polyline,2,"_008F_008E(center,2*SW2,bearing)",three-point carrier list,_0089_009D_0096 lines 67308-67310
+B1,SpiralGroup01[*],Polyline,0..n,_0089_009D_009B/_0089_009D_009C._008A_009E_0091(...),"sampled wind spiral segments; writer group child lists",_0089_009D_0094 lines 66707/66827
+B1,NominalConnectionDescriptor,Polyline,0..3,"_0089_009E_0091; _0089_009E_0092 (bulge=tan(delta/4)); _0089_009E_0095; _0089_009E_0096",nominal connection; exact four vertices,_008C_008B._0089_009E_0090 lines 68444-68461

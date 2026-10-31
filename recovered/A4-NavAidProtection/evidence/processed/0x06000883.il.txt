@@ -1,0 +1,23 @@
+METHOD 06000883 \x90\x9c.\x90\x9b::\x8b\x8f\x97 RVA=94BF8 file=92DF8
+IL_0000: nop 
+IL_0001: nop 
+IL_0002: ldtoken 0x0100019E System.Security.Cryptography.RijndaelManaged
+IL_0007: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_000C: callvirt 0x0A000033 System.Type::get_Assembly
+IL_0011: ldstr 'System.Security.Cryptography.CryptoConfig'
+IL_0016: ldc.i4.0 
+IL_0017: callvirt 0x0A00041A System.Reflection.Assembly::GetType
+IL_001C: ldstr 'get_AllowOnlyFipsAlgorithms'
+IL_0021: ldc.i4.s 24
+IL_0023: callvirt 0x0A00041B System.Type::GetMethod
+IL_0028: ldnull 
+IL_0029: ldc.i4.0 
+IL_002A: newarr 0x01000001 System.Object
+IL_002F: callvirt 0x0A00041C System.Reflection.MethodBase::Invoke
+IL_0034: unbox.any 0x01000110 System.Boolean
+IL_0039: stsfld 0x0400079B \x90\x9c.\x90\x9b::\x8b\x91\x86
+IL_003E: leave.s 79
+IL_0040: pop 
+IL_0041: leave.s 79
+IL_0043: ret 
+

@@ -1,0 +1,17 @@
+METHOD 060007B6 \x8f\x89.\x8f\x88::.ctor RVA=5EBE file=40BE
+IL_0000: call 0x060007C7 \x8f\x89.\x8f\x88::\x89o
+IL_0005: call 0x060007C6 \x8f\x89.\x8f\x88::\x89n
+IL_000A: brfalse.s 46
+IL_000C: pop 
+IL_000D: ldarg.0 
+IL_000E: ldc.r8 0.017453292519943295
+IL_0017: stfld 0x0400076F \x8f\x89.\x8f\x88::\x8b\x87\x8f
+IL_001C: ldarg.0 
+IL_001D: ldc.r8 1.5707963267948966
+IL_0026: stfld 0x04000770 \x8f\x89.\x8f\x88::\x8b\x87\x90
+IL_002B: br.s 47
+IL_002D: pop 
+IL_002E: ldarg.0 
+IL_002F: call 0x0A00002C System.Object::.ctor
+IL_0034: ret 
+

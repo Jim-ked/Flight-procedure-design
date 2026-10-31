@@ -1,0 +1,43 @@
+METHOD 060007F4 \x8f\x8d.\x8f\x8c::\x8b\x88\x9a RVA=92570 file=90770
+IL_0000: ldc.i4.0 
+IL_0001: call 0x060007F6 \x8f\x8d.\x8f\x8c::\x89r
+IL_0006: brfalse.s 32
+IL_0008: pop 
+IL_0009: ldarg.0 
+IL_000A: ldarg.1 
+IL_000B: ldarg.2 
+IL_000C: call 0x060007F0 \x8f\x8d.\x8f\x8c::\x8b\x88\x96
+IL_0011: stloc.0 
+IL_0012: br.s 33
+IL_0014: pop 
+IL_0015: ldloc.0 
+IL_0016: ldc.r8 0.0
+IL_001F: bge.un.s 53
+IL_0021: ldarg.2 
+IL_0022: ldarg.0 
+IL_0023: call 0x06000807 \x8f\x8f.\x8f\x8e::\x8b\x88\x9e
+IL_0028: ret 
+IL_0029: ldloc.0 
+IL_002A: ldc.r8 1.0
+IL_0033: ble.un.s 73
+IL_0035: ldarg.2 
+IL_0036: ldarg.1 
+IL_0037: call 0x06000807 \x8f\x8f.\x8f\x8e::\x8b\x88\x9e
+IL_003C: ret 
+IL_003D: ldarg.1 
+IL_003E: ldarg.0 
+IL_003F: call 0x06000814 \x8f\x8f.\x8f\x8e::op_Subtraction
+IL_0044: stloc.1 
+IL_0045: ldarg.2 
+IL_0046: ldarg.0 
+IL_0047: call 0x06000814 \x8f\x8f.\x8f\x8e::op_Subtraction
+IL_004C: stloc.2 
+IL_004D: ldloca.s local(0x0001)
+IL_004F: ldloc.2 
+IL_0050: call 0x0600084D \x8f\x97.\x8f\x96::\x8b\x8b\x98
+IL_0055: call 0x0A00002E System.Math::Abs
+IL_005A: ldloca.s local(0x0001)
+IL_005C: call 0x0600084A \x8f\x97.\x8f\x96::\x8b\x8b\x9d
+IL_0061: div 
+IL_0062: ret 
+

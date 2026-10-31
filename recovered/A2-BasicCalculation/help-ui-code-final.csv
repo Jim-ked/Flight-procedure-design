@@ -1,0 +1,6 @@
+﻿Function,Help/UI,Code,Classification,Finding,Evidence
+Six calculators,FAF/NPA/PA/missed TP/departure TP/C pages,six registered calculation and CAD handlers,CONSISTENT,all six public paths are statically reachable,ui-event-map.md; final-feature-matrix.csv
+NPA reaction + bank establishment,3 s + 15 s presentation in historical analysis,textBoxNTime is read as one seconds value; default 18; no 3+15 arithmetic,UNCERTAIN,UI wording and business reader are not separate in indexed formula; direct code uses 18,formulas.md; ui-event-map.md
+PA SOC / HL,precision/APV SOC and HL table,"HLcor/Xz/DH formula, HLcor=0 alert/return -1",CONSISTENT,negative distance and old return behavior retained,formulas.md
+C time,C page with 6 s default,general seconds reader; default path 6; no 3+3 branch,CONSISTENT,"56 is the default wind in the C turn control, not a derived constant",formulas.md; ui-event-map.md
+WsCalcuLine,saved construction line,"Kind + JSON XData, two transactions, endpoint overwrite",CONSISTENT,metadata exists without proven downstream semantic reuse,wscalculine-final.md

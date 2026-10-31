@@ -1,0 +1,15 @@
+METHOD 0600084A \x8f\x97.\x8f\x96::\x8b\x8b\x9d RVA=6466 file=4666
+IL_0000: ldarg.0 
+IL_0001: call 0x06000845 \x8f\x97.\x8f\x96::\x8b\x8b\x99
+IL_0006: ldarg.0 
+IL_0007: call 0x06000845 \x8f\x97.\x8f\x96::\x8b\x8b\x99
+IL_000C: mul 
+IL_000D: ldarg.0 
+IL_000E: call 0x06000847 \x8f\x97.\x8f\x96::\x8b\x8b\x9b
+IL_0013: ldarg.0 
+IL_0014: call 0x06000847 \x8f\x97.\x8f\x96::\x8b\x8b\x9b
+IL_0019: mul 
+IL_001A: add 
+IL_001B: call 0x0A00002D System.Math::Sqrt
+IL_0020: ret 
+

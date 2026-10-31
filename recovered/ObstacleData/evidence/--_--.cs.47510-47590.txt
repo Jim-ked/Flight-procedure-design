@@ -1,0 +1,81 @@
+47510: 		}
+47511: 
+47512: 		private void _0088_009B_0092(object P_0, EventArgs P_1)
+47513: 		{
+47514: 			//IL_0090: Unknown result type (might be due to invalid IL or missing references)
+47515: 			//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+47516: 			//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
+47517: 			//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
+47518: 			_ = 1;
+47519: 			if (!_0088_0094() && !true /* original-file-bool-offset:928 */)
+47520: 			{
+47521: 				return;
+47522: 			}
+47523: 			DBPoint val = default(DBPoint);
+47524: 			foreach (DataGridViewRow selectedRow in _0088_009D_0090.SelectedRows)
+47525: 			{
+47526: 				_0088_0093();
+47527: 				if (!_0088_0094())
+47528: 				{
+47529: 					val = _0088_009D_0088[_0088_009D_0090.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+47530: 				}
+47531: 				ObjectId val2 = _008B._0089_0087("obst" /* string-offset:2780 */, val.Position);
+47532: 				string obj = "Altitude" /* string-offset:536 */;
+47533: 				Point3d position = val.Position;
+47534: 				_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+47535: 			}
+47536: 		}
+47537: 
+47538: 		private void _0088_009B_0093(object P_0, EventArgs P_1)
+47539: 		{
+47540: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47541: 		}
+47542: 
+47543: 		private void _0088_009B_0094(object P_0, EventArgs P_1)
+47544: 		{
+47545: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47546: 		}
+47547: 
+47548: 		private void _0088_009B_0095(object P_0, EventArgs P_1)
+47549: 		{
+47550: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47551: 		}
+47552: 
+47553: 		private void _0088_009B_0096(object P_0, EventArgs P_1)
+47554: 		{
+47555: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47556: 		}
+47557: 
+47558: 		private void _0088_009B_0097(object P_0, EventArgs P_1)
+47559: 		{
+47560: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47561: 		}
+47562: 
+47563: 		private void _0088_009B_0098(object P_0, EventArgs P_1)
+47564: 		{
+47565: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47566: 		}
+47567: 
+47568: 		private void _0088_009B_0099(object P_0, EventArgs P_1)
+47569: 		{
+47570: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47571: 		}
+47572: 
+47573: 		private void _0088_009B_009A(object P_0, EventArgs P_1)
+47574: 		{
+47575: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47576: 		}
+47577: 
+47578: 		private void _0088_009B_009B(object P_0, EventArgs P_1)
+47579: 		{
+47580: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47581: 		}
+47582: 
+47583: 		private void _0088_009B_009C(object P_0, EventArgs P_1)
+47584: 		{
+47585: 			_008F_008A._008B_0088_0087(P_0 as TextBox);
+47586: 		}
+47587: 
+47588: 		private void _0088_009B_009D(object P_0, EventArgs P_1)
+47589: 		{
+47590: 			_008F_008A._008B_0088_0087(P_0 as TextBox);

@@ -1,0 +1,50 @@
+METHOD 0600007A \x8a.\x89::\x88\x86 RVA=8588 file=6788
+IL_0000: ldarg.1 
+IL_0001: ldind.i4 
+IL_0002: stloc.0 
+IL_0003: call 0x0600007D \x8a.\x89::\x8d
+IL_0008: call 0x0600007E \x8a.\x89::\x8e
+IL_000D: brtrue.s 30
+IL_000F: pop 
+IL_0010: br.s 39
+IL_0012: pop 
+IL_0013: br.s 73
+IL_0015: ldarg.1 
+IL_0016: ldarg.1 
+IL_0017: ldind.i4 
+IL_0018: ldc.i4.1 
+IL_0019: add 
+IL_001A: stind.i4 
+IL_001B: ldarg.1 
+IL_001C: ldind.i4 
+IL_001D: ldarg.0 
+IL_001E: callvirt 0x0A00008C System.String::get_Length
+IL_0023: bge.s 85
+IL_0025: ldarg.0 
+IL_0026: ldarg.1 
+IL_0027: ldind.i4 
+IL_0028: callvirt 0x0A00008E System.String::get_Chars
+IL_002D: ldc.i4.s 44
+IL_002F: beq.s 85
+IL_0031: ldarg.0 
+IL_0032: ldarg.1 
+IL_0033: ldind.i4 
+IL_0034: callvirt 0x0A00008E System.String::get_Chars
+IL_0039: ldc.i4.s 125
+IL_003B: beq.s 85
+IL_003D: ldarg.0 
+IL_003E: ldarg.1 
+IL_003F: ldind.i4 
+IL_0040: callvirt 0x0A00008E System.String::get_Chars
+IL_0045: ldc.i4.s 93
+IL_0047: bne.un.s 33
+IL_0049: ldarg.0 
+IL_004A: ldloc.0 
+IL_004B: ldarg.1 
+IL_004C: ldind.i4 
+IL_004D: ldloc.0 
+IL_004E: sub 
+IL_004F: callvirt 0x0A000093 System.String::Substring
+IL_0054: callvirt 0x0A000094 System.String::Trim
+IL_0059: ret 
+

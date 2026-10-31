@@ -1,0 +1,52 @@
+41552: 	public class _008A_008B : _008F_008E
+41553: 	{
+41554: 		public string _0088_008F_009C;
+41555: 
+41556: 		public double _0088_008F_009D;
+41557: 
+41558: 		public double _0088_008F_009E;
+41559: 
+41560: 		public double _0088_0090_0086;
+41561: 
+41562: 		public double _0088_0090_0087;
+41563: 
+41564: 		public double _0088_0090_0088;
+41565: 
+41566: 		public double _0088_0090_0089;
+41567: 
+41568: 		public _008A_008B()
+41569: 		{
+41570: 		}
+41571: 
+41572: 		public _008A_008B(_008F_008E P_0)
+41573: 		{
+41574: 			do
+41575: 			{
+41576: 				base.ID = P_0.ID;
+41577: 				_ = 1;
+41578: 				if (!_0087o())
+41579: 				{
+41580: 					base.Name = P_0.Name;
+41581: 					base.X = P_0.X;
+41582: 				}
+41583: 				base.Y = P_0.Y;
+41584: 			}
+41585: 			while (_0087o());
+41586: 			base.Z = P_0.Z;
+41587: 		}
+41588: 
+41589: 		static _008A_008B()
+41590: 		{
+41591: 			LicenseManager.Validate(typeof(_008A_008B));
+41592: 		}
+41593: 
+41594: 		internal static bool _0087n()
+41595: 		{
+41596: 			return true;
+41597: 		}
+41598: 
+41599: 		internal static bool _0087o()
+41600: 		{
+41601: 			return false;
+41602: 		}
+41603: 	}

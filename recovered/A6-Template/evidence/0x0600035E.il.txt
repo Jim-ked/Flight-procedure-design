@@ -1,0 +1,24 @@
+METHOD 0600035E \x89\x93.\x89\x92::\x87\x9a\x8c RVA=42F6C file=4116C
+IL_0000: ldarg.0 
+IL_0001: call 0x06000356 \x89\x93.\x89\x92::\x87\x99\x9d
+IL_0006: ldarg.0 
+IL_0007: ldfld 0x040002B3 \x89\x93.\x89\x92::\x87\x9d\x8a
+IL_000C: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0011: ldc.i4 1984
+IL_0016: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_001B: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_0020: stloc.0 
+IL_0021: ldloc.0 
+IL_0022: newobj 0x06000452 \x8b\x87.\x8b\x86::.ctor
+IL_0027: stloc.1 
+IL_0028: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_002D: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0032: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_0037: ldloc.1 
+IL_0038: callvirt 0x0A000086 System.Object::ToString
+IL_003D: ldc.i4 328
+IL_0042: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0047: call 0x0A00008B System.String::Concat
+IL_004C: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_0051: ret 
+

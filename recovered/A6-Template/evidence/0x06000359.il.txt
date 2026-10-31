@@ -1,0 +1,29 @@
+METHOD 06000359 \x89\x93.\x89\x92::\x87\x9a\x87 RVA=42930 file=40B30
+IL_0000: ldarg.1 
+IL_0001: brfalse.s 106
+IL_0003: ldarg.1 
+IL_0004: callvirt 0x0A0001D4 0x1B000001::get_Count
+IL_0009: brfalse.s 106
+IL_000B: call 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase
+IL_0010: ldarg.1 
+IL_0011: ldc.r8 0.0
+IL_001A: ldc.r8 0.0
+IL_0023: ldc.r8 0.0
+IL_002C: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_0031: ldarg.0 
+IL_0032: ldfld 0x0400028B \x89\x93.\x89\x92::\x87\x9b\x94
+IL_0037: call 0x06000821 \x8f\x91.\x8f\x90::\x8b\x8a\x94
+IL_003C: starg.s argument(0x0001)
+IL_003E: ldarg.1 
+IL_003F: call 0x06000827 \x8f\x91.\x8f\x90::\x8b\x8a\x9a
+IL_0044: ldarg.0 
+IL_0045: ldfld 0x04000289 \x89\x93.\x89\x92::\x87\x9b\x92
+IL_004A: call 0x06000129 \x87\x87.\x87\x86::\x8c\x87
+IL_004F: call 0x06000823 \x8f\x91.\x8f\x90::\x8b\x8a\x96
+IL_0054: starg.s argument(0x0001)
+IL_0056: ldarg.1 
+IL_0057: ldarg.2 
+IL_0058: call 0x06000087 \x8c.\x8b::\x88\x8b
+IL_005D: ret 
+IL_005E: ret 
+

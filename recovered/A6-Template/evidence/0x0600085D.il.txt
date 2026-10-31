@@ -1,0 +1,57 @@
+METHOD 0600085D \x8f\x99.\x8f\x98::\x8b\x8c\x8f RVA=93788 file=91988
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000789 \x8f\x99.\x8f\x98::\x8b\x8d\x8d
+IL_0006: call 0x0A00040D System.Drawing.SystemColors::get_Control
+IL_000B: callvirt 0x0A0001EC System.Windows.Forms.Control::set_BackColor
+IL_0010: ldarg.0 
+IL_0011: ldfld 0x04000789 \x8f\x99.\x8f\x98::\x8b\x8d\x8d
+IL_0016: ldc.i4.2 
+IL_0017: callvirt 0x0A00040E System.Windows.Forms.ButtonBase::set_FlatStyle
+IL_001C: call 0x06000869 \x8f\x99.\x8f\x98::\x8a\x89
+IL_0021: call 0x0600086A \x8f\x99.\x8f\x98::\x8a\x8a
+IL_0026: brtrue.s 72
+IL_0028: pop 
+IL_0029: ldarg.0 
+IL_002A: ldfld 0x04000789 \x8f\x99.\x8f\x98::\x8b\x8d\x8d
+IL_002F: callvirt 0x0A00040F System.Windows.Forms.ButtonBase::get_FlatAppearance
+IL_0034: ldc.i4.1 
+IL_0035: callvirt 0x0A000410 System.Windows.Forms.FlatButtonAppearance::set_BorderSize
+IL_003A: br.s 73
+IL_003C: pop 
+IL_003D: ldarg.0 
+IL_003E: ldfld 0x04000789 \x8f\x99.\x8f\x98::\x8b\x8d\x8d
+IL_0043: callvirt 0x0A00040F System.Windows.Forms.ButtonBase::get_FlatAppearance
+IL_0048: call 0x0A000411 System.Drawing.SystemColors::get_ControlDark
+IL_004D: callvirt 0x0A000412 System.Windows.Forms.FlatButtonAppearance::set_BorderColor
+IL_0052: ldarg.0 
+IL_0053: ldfld 0x04000790 \x8f\x99.\x8f\x98::\x8b\x8d\x94
+IL_0058: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_005D: ldc.i4 1984
+IL_0062: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0067: call 0x060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d
+IL_006C: ldc.r8 0.012
+IL_0075: mul 
+IL_0076: ldc.r8 87.0
+IL_007F: add 
+IL_0080: stloc.0 
+IL_0081: br.s 150
+IL_0083: call 0x06000869 \x8f\x99.\x8f\x98::\x8a\x89
+IL_0088: brtrue.s 165
+IL_008A: ldarg.0 
+IL_008B: ldfld 0x04000787 \x8f\x99.\x8f\x98::\x8b\x8d\x8b
+IL_0090: callvirt 0x06000149 \x87\x8d.\x87\x8c::\x8d\x87
+IL_0095: brfalse.s 177
+IL_0097: br.s 143
+IL_0099: ldloc.0 
+IL_009A: ldc.r8 0.539957
+IL_00A3: mul 
+IL_00A4: stloc.0 
+IL_00A5: ldarg.0 
+IL_00A6: ldfld 0x0400078A \x8f\x99.\x8f\x98::\x8b\x8d\x8e
+IL_00AB: ldloca.s local(0x0000)
+IL_00AD: ldc.i4 3236
+IL_00B2: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00B7: call 0x0A000073 System.Double::ToString
+IL_00BC: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_00C1: ret 
+

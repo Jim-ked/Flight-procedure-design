@@ -1,0 +1,51 @@
+METHOD 060004F9 \x8b\x95.\x8b\x94::\x89\x8e\x9c RVA=698C4 file=67AC4
+IL_0000: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0005: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000A: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_000F: pop 
+IL_0010: ldc.i4.1 
+IL_0011: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_0016: brtrue.s 78
+IL_0018: pop 
+IL_0019: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_001E: brtrue.s 44
+IL_0020: ldarg.0 
+IL_0021: ldfld 0x0400053C \x8b\x95.\x8b\x94::\x89\x91\x9d
+IL_0026: brtrue.s 53
+IL_0028: ret 
+IL_0029: ldarg.0 
+IL_002A: ldfld 0x0400053C \x8b\x95.\x8b\x94::\x89\x91\x9d
+IL_002F: callvirt 0x0A0001C3 0x1B00000A::get_Count
+IL_0034: brtrue.s 67
+IL_0036: ret 
+IL_0037: ldarg.2 
+IL_0038: callvirt 0x0A0002C5 System.Windows.Forms.DataGridViewCellEventArgs::get_ColumnIndex
+IL_003D: ldc.i4.0 
+IL_003E: blt.s 88
+IL_0040: br.s 79
+IL_0042: pop 
+IL_0043: ldarg.2 
+IL_0044: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_0049: ldc.i4.0 
+IL_004A: bge.s 89
+IL_004C: ret 
+IL_004D: ldarg.0 
+IL_004E: ldfld 0x0400053D \x8b\x95.\x8b\x94::\x89\x91\x9e
+IL_0053: ldarg.0 
+IL_0054: ldfld 0x04000547 \x8b\x95.\x8b\x94::\x89\x92\x8f
+IL_0059: callvirt 0x0A00016F System.Windows.Forms.DataGridView::get_Rows
+IL_005E: ldarg.2 
+IL_005F: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_0064: callvirt 0x0A0002C7 System.Windows.Forms.DataGridViewRowCollection::get_Item
+IL_0069: callvirt 0x0A000173 System.Windows.Forms.DataGridViewRow::get_Cells
+IL_006E: ldc.i4.0 
+IL_006F: callvirt 0x0A0002C8 System.Windows.Forms.DataGridViewCellCollection::get_Item
+IL_0074: callvirt 0x0A000175 System.Windows.Forms.DataGridViewCell::get_Value
+IL_0079: callvirt 0x0A000086 System.Object::ToString
+IL_007E: callvirt 0x0A0002C9 0x1B00000C::get_Item
+IL_0083: ldarg.0 
+IL_0084: ldfld 0x0400053C \x8b\x95.\x8b\x94::\x89\x91\x9d
+IL_0089: call 0x060000B0 \x8e.\x8d::\x89\x93
+IL_008E: call 0x060000AF \x8e.\x8d::\x89\x92
+IL_0093: ret 
+

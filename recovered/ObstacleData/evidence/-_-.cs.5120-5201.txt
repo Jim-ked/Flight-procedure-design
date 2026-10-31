@@ -1,0 +1,82 @@
+5120: 		public static List<T> _008B_008A<T>(this Database P_0, OpenMode P_1, bool P_2) where T : Entity
+5121: 		{
+5122: 			//IL_0044: Unknown result type (might be due to invalid IL or missing references)
+5123: 			//IL_0049: Unknown result type (might be due to invalid IL or missing references)
+5124: 			//IL_005f: Unknown result type (might be due to invalid IL or missing references)
+5125: 			//IL_0064: Unknown result type (might be due to invalid IL or missing references)
+5126: 			//IL_0069: Unknown result type (might be due to invalid IL or missing references)
+5127: 			//IL_006f: Expected O, but got Unknown
+5128: 			//IL_007a: Unknown result type (might be due to invalid IL or missing references)
+5129: 			//IL_0084: Invalid comparison between Unknown and I4
+5130: 			//IL_009d: Unknown result type (might be due to invalid IL or missing references)
+5131: 			//IL_00a2: Unknown result type (might be due to invalid IL or missing references)
+5132: 			//IL_00a6: Unknown result type (might be due to invalid IL or missing references)
+5133: 			List<T> list = default(List<T>);
+5134: 			ObjectId[] objectIds = default(ObjectId[]);
+5135: 			if (!false /* original-file-bool-offset:160 */)
+5136: 			{
+5137: 				Editor editor = Application.DocumentManager.MdiActiveDocument.Editor;
+5138: 				list = new List<T>();
+5139: 				string dxfName = RXObject.GetClass(typeof(T)).DxfName;
+5140: 				SelectionFilter val = new SelectionFilter((TypedValue[])(object)new TypedValue[2]
+5141: 				{
+5142: 					new TypedValue(0, (object)dxfName),
+5143: 					new TypedValue(410, (object)"Model" /* string-offset:884 */)
+5144: 				});
+5145: 				PromptSelectionResult val2 = editor.SelectAll(val);
+5146: 				if ((int)val2.Status != 5100)
+5147: 				{
+5148: 					goto IL_00ca;
+5149: 				}
+5150: 				objectIds = val2.Value.GetObjectIds();
+5151: 			}
+5152: 			for (int i = 0; i < objectIds.Length; i++)
+5153: 			{
+5154: 				ObjectId val3 = objectIds[i];
+5155: 				T item = (T)(object)((ObjectId)(ref val3)).GetObject(P_1, P_2);
+5156: 				list.Add(item);
+5157: 			}
+5158: 			goto IL_00ca;
+5159: 			IL_00ca:
+5160: 			return list;
+5161: 		}
+5162: 
+5163: 		public static List<T> _008B_008B<T>(this Database P_0, OpenMode P_1, bool P_2) where T : Entity
+5164: 		{
+5165: 			//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+5166: 			//IL_0046: Unknown result type (might be due to invalid IL or missing references)
+5167: 			//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+5168: 			//IL_0051: Expected O, but got Unknown
+5169: 			//IL_005c: Unknown result type (might be due to invalid IL or missing references)
+5170: 			//IL_0066: Invalid comparison between Unknown and I4
+5171: 			//IL_007f: Unknown result type (might be due to invalid IL or missing references)
+5172: 			//IL_0084: Unknown result type (might be due to invalid IL or missing references)
+5173: 			//IL_0088: Unknown result type (might be due to invalid IL or missing references)
+5174: 			List<T> list = default(List<T>);
+5175: 			ObjectId[] objectIds = default(ObjectId[]);
+5176: 			if (!false /* original-file-bool-offset:164 */)
+5177: 			{
+5178: 				Editor editor = Application.DocumentManager.MdiActiveDocument.Editor;
+5179: 				list = new List<T>();
+5180: 				string dxfName = RXObject.GetClass(typeof(T)).DxfName;
+5181: 				SelectionFilter val = new SelectionFilter((TypedValue[])(object)new TypedValue[1]
+5182: 				{
+5183: 					new TypedValue(0, (object)dxfName)
+5184: 				});
+5185: 				PromptSelectionResult selection = editor.GetSelection(val);
+5186: 				if ((int)selection.Status != 5100)
+5187: 				{
+5188: 					goto IL_00ac;
+5189: 				}
+5190: 				objectIds = selection.Value.GetObjectIds();
+5191: 			}
+5192: 			for (int i = 0; i < objectIds.Length; i++)
+5193: 			{
+5194: 				ObjectId val2 = objectIds[i];
+5195: 				T item = (T)(object)((ObjectId)(ref val2)).GetObject(P_1, P_2);
+5196: 				list.Add(item);
+5197: 			}
+5198: 			goto IL_00ac;
+5199: 			IL_00ac:
+5200: 			return list;
+5201: 		}

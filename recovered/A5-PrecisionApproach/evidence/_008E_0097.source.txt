@@ -1,0 +1,157 @@
+81513: 	public class _008E_0097 : _008F_008E
+81514: 	{
+81515: 		public double _008A_009D_0088;
+81516: 
+81517: 		public double _008A_009D_0089;
+81518: 
+81519: 		public double _008A_009D_008A;
+81520: 
+81521: 		[CompilerGenerated]
+81522: 		private double _008A_009D_008B;
+81523: 
+81524: 		[CompilerGenerated]
+81525: 		private double _008A_009D_008C;
+81526: 
+81527: 		[CompilerGenerated]
+81528: 		private double _008A_009D_008D;
+81529: 
+81530: 		[SpecialName]
+81531: 		[CompilerGenerated]
+81532: 		public double _008A_009C_0098()
+81533: 		{
+81534: 			return _008A_009D_008B;
+81535: 		}
+81536: 
+81537: 		[SpecialName]
+81538: 		[CompilerGenerated]
+81539: 		public void _008A_009C_0099(double P_0)
+81540: 		{
+81541: 			_008A_009D_008B = P_0;
+81542: 		}
+81543: 
+81544: 		[SpecialName]
+81545: 		[CompilerGenerated]
+81546: 		public double _008A_009C_009B()
+81547: 		{
+81548: 			return _008A_009D_008C;
+81549: 		}
+81550: 
+81551: 		[SpecialName]
+81552: 		[CompilerGenerated]
+81553: 		public void _008A_009C_009C(double P_0)
+81554: 		{
+81555: 			_008A_009D_008C = P_0;
+81556: 		}
+81557: 
+81558: 		[SpecialName]
+81559: 		[CompilerGenerated]
+81560: 		public double _008A_009C_009E()
+81561: 		{
+81562: 			return _008A_009D_008D;
+81563: 		}
+81564: 
+81565: 		[SpecialName]
+81566: 		[CompilerGenerated]
+81567: 		public void _008A_009D_0086(double P_0)
+81568: 		{
+81569: 			_008A_009D_008D = P_0;
+81570: 		}
+81571: 
+81572: 		public _008E_0097(string P_0, double P_1, double P_2, double P_3)
+81573: 		{
+81574: 			_0089d();
+81575: 			if (!_0089e())
+81576: 			{
+81577: 				base._002Ector();
+81578: 			}
+81579: 			base.Name = P_0;
+81580: 			_008A_009C_009C(P_1);
+81581: 			_008A_009C_0099(P_2);
+81582: 			_008A_009D_0086(P_3);
+81583: 		}
+81584: 
+81585: 		public _008E_0097(string P_0, double P_1, double P_2)
+81586: 		{
+81587: 			if (_0089d())
+81588: 			{
+81589: 				base.Name = P_0;
+81590: 				_ = 1;
+81591: 				if (!_0089e())
+81592: 				{
+81593: 					_008A_009C_009C(P_1);
+81594: 				}
+81595: 			}
+81596: 			_008A_009C_0099(P_2);
+81597: 		}
+81598: 
+81599: 		public _008E_0097()
+81600: 		{
+81601: 		}
+81602: 
+81603: 		public override string ToString()
+81604: 		{
+81605: 			return _008A_009C_009B() + "," /* string-offset:704 */ + _008A_009C_0098() + "," /* string-offset:704 */ + _008A_009C_009E() + " " /* string-offset:584 */;
+81606: 		}
+81607: 
+81608: 		public static string _008A_009C_0095(List<_008E_0097> P_0)
+81609: 		{
+81610: 			string text = "";
+81611: 			if (P_0 == null)
+81612: 			{
+81613: 				return text;
+81614: 			}
+81615: 			foreach (_008E_0097 item in P_0)
+81616: 			{
+81617: 				text += item.ToString();
+81618: 			}
+81619: 			return text;
+81620: 		}
+81621: 
+81622: 		public static List<_008F_008E> _008A_009C_0096(List<_008E_0097> P_0)
+81623: 		{
+81624: 			List<_008F_008E> list = new List<_008F_008E>();
+81625: 			if (P_0 == null)
+81626: 			{
+81627: 				return list;
+81628: 			}
+81629: 			foreach (_008E_0097 item in P_0)
+81630: 			{
+81631: 				list.Add(new _008F_008E(item.X, item.Y, item.Z));
+81632: 			}
+81633: 			return list;
+81634: 		}
+81635: 
+81636: 		public static List<_008E_0097> _008A_009C_0097(List<_008F_008E> P_0)
+81637: 		{
+81638: 			List<_008E_0097> list = new List<_008E_0097>();
+81639: 			if (P_0 == null)
+81640: 			{
+81641: 				return list;
+81642: 			}
+81643: 			foreach (_008F_008E item in P_0)
+81644: 			{
+81645: 				_008E_0097 obj = new _008E_0097();
+81646: 				obj.X = item.X;
+81647: 				obj.Y = item.Y;
+81648: 				obj.Z = item.Z;
+81649: 				obj.Name = item.Name;
+81650: 				list.Add(obj);
+81651: 			}
+81652: 			return list;
+81653: 		}
+81654: 
+81655: 		static _008E_0097()
+81656: 		{
+81657: 			LicenseManager.Validate(typeof(_008E_0097));
+81658: 		}
+81659: 
+81660: 		internal static bool _0089d()
+81661: 		{
+81662: 			return true;
+81663: 		}
+81664: 
+81665: 		internal static bool _0089e()
+81666: 		{
+81667: 			return false;
+81668: 		}
+81669: 	}

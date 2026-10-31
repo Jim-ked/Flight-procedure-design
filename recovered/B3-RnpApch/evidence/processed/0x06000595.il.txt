@@ -1,0 +1,160 @@
+METHOD 06000595 \x8b\x9d.\x8b\x9c::\x89\x9c\x87 RVA=7A4A0 file=786A0
+IL_0000: ldc.i4 1120
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 320
+IL_000F: ldarg.1 
+IL_0010: ldc.i4 1556
+IL_0015: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_001A: stfld 0x0400037B \x8a\x8c.\x8a\x8b::\x88\x8f\x9c
+IL_001F: ldc.r8 1.0
+IL_0028: ldc.r8 1.0
+IL_0031: ldc.r8 1.0
+IL_003A: ldstr ''
+IL_003F: newobj 0x06000834 \x8f\x93.\x8f\x92::.ctor
+IL_0044: pop 
+IL_0045: ldc.r8 1.0
+IL_004E: ldc.r8 1.0
+IL_0057: ldc.r8 1.0
+IL_0060: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_0065: stloc.s local(0x0006)
+IL_0067: ldc.r8 1.0
+IL_0070: ldc.r8 1.0
+IL_0079: ldc.r8 1.0
+IL_0082: newobj 0x060007E4 \x8f\x8d.\x8f\x8c::.ctor
+IL_0087: stloc.s local(0x0007)
+IL_0089: ldc.r8 0.0
+IL_0092: ldarg.2 
+IL_0093: ldc.r8 2.0
+IL_009C: div 
+IL_009D: ldc.r8 0.0
+IL_00A6: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_00AB: stloc.s local(0x0008)
+IL_00AD: ldarg.s argument(0x0006)
+IL_00AF: neg 
+IL_00B0: ldarg.s argument(0x0004)
+IL_00B2: ldc.r8 2.0
+IL_00BB: div 
+IL_00BC: ldc.r8 0.0
+IL_00C5: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_00CA: stloc.s local(0x0009)
+IL_00CC: ldloc.s local(0x0006)
+IL_00CE: ldloc.s local(0x0008)
+IL_00D0: ldloc.s local(0x0009)
+IL_00D2: callvirt 0x060007E7 \x8f\x8d.\x8f\x8c::\x8b\x88\x8e
+IL_00D7: ldc.r8 0.0
+IL_00E0: ldarg.2 
+IL_00E1: ldc.r8 0.0
+IL_00EA: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_00EF: stloc.s local(0x000A)
+IL_00F1: call 0x06000597 \x8b\x9d.\x8b\x9c::\x883
+IL_00F6: brfalse.s 355
+IL_00F8: ldarg.s argument(0x0006)
+IL_00FA: neg 
+IL_00FB: ldarg.s argument(0x0004)
+IL_00FD: ldc.r8 0.0
+IL_0106: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_010B: stloc.0 
+IL_010C: br 481
+IL_0111: ldarg.2 
+IL_0112: stloc.s local(0x0005)
+IL_0114: ldarg.1 
+IL_0115: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_011A: call 0x0A00002E System.Math::Abs
+IL_011F: stloc.3 
+IL_0120: ldarg.1 
+IL_0121: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0126: ldc.r8 0.0
+IL_012F: bgt.un 542
+IL_0134: ldarg.1 
+IL_0135: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_013A: ldarg.s argument(0x0006)
+IL_013C: neg 
+IL_013D: ble.un 542
+IL_0142: ldloc.3 
+IL_0143: ldloc.s local(0x0005)
+IL_0145: bge.un 542
+IL_014A: call 0x06000598 \x8b\x9d.\x8b\x9c::\x884
+IL_014F: call 0x06000597 \x8b\x9d.\x8b\x9c::\x883
+IL_0154: brfalse.s 378
+IL_0156: pop 
+IL_0157: ldarg.s argument(0x0005)
+IL_0159: ldarg.3 
+IL_015A: ldarg.s argument(0x0005)
+IL_015C: sub 
+IL_015D: ldarg.s argument(0x0006)
+IL_015F: ldarg.1 
+IL_0160: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0165: add 
+IL_0166: mul 
+IL_0167: ldarg.s argument(0x0006)
+IL_0169: div 
+IL_016A: add 
+IL_016B: stloc.1 
+IL_016C: br.s 389
+IL_016E: pop 
+IL_016F: call 0x06000598 \x8b\x9d.\x8b\x9c::\x884
+IL_0174: brtrue 542
+IL_0179: ldloc.s local(0x0006)
+IL_017B: ldarg.1 
+IL_017C: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0181: callvirt 0x060007E6 \x8f\x8d.\x8f\x8c::\x8b\x88\x8d
+IL_0186: stloc.s local(0x0004)
+IL_0188: ldloc.s local(0x0007)
+IL_018A: ldarg.1 
+IL_018B: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0190: callvirt 0x060007E6 \x8f\x8d.\x8f\x8c::\x8b\x88\x8d
+IL_0195: stloc.2 
+IL_0196: ldloc.3 
+IL_0197: ldloc.s local(0x0004)
+IL_0199: ble.un.s 501
+IL_019B: ldloc.3 
+IL_019C: ldloc.2 
+IL_019D: bgt.un.s 542
+IL_019F: ldloc.2 
+IL_01A0: ldloc.s local(0x0004)
+IL_01A2: sub 
+IL_01A3: ldc.r8 0.0
+IL_01AC: beq.s 454
+IL_01AE: ldloc.1 
+IL_01AF: ldloc.2 
+IL_01B0: ldloc.3 
+IL_01B1: sub 
+IL_01B2: mul 
+IL_01B3: ldloc.2 
+IL_01B4: ldloc.s local(0x0004)
+IL_01B6: sub 
+IL_01B7: div 
+IL_01B8: br.s 455
+IL_01BA: ldloc.1 
+IL_01BB: stloc.s local(0x000B)
+IL_01BD: ldarg.1 
+IL_01BE: ldloc.s local(0x000B)
+IL_01C0: stfld 0x0400037C \x8a\x8c.\x8a\x8b::\x88\x8f\x9d
+IL_01C5: call 0x06000598 \x8b\x9d.\x8b\x9c::\x884
+IL_01CA: brfalse.s 526
+IL_01CC: br.s 481
+IL_01CE: ldarg.s argument(0x0004)
+IL_01D0: br 286
+IL_01D5: ldloc.s local(0x0007)
+IL_01D7: ldloc.s local(0x000A)
+IL_01D9: ldloc.0 
+IL_01DA: callvirt 0x060007E7 \x8f\x8d.\x8f\x8c::\x8b\x88\x8e
+IL_01DF: ldarg.2 
+IL_01E0: ldarg.s argument(0x0004)
+IL_01E2: bgt 285
+IL_01E7: br.s 474
+IL_01E9: ldarg.1 
+IL_01EA: ldloc.1 
+IL_01EB: stfld 0x0400037C \x8a\x8c.\x8a\x8b::\x88\x8f\x9d
+IL_01F0: ldarg.1 
+IL_01F1: ldc.i4 3596
+IL_01F6: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_01FB: stfld 0x0400037B \x8a\x8c.\x8a\x8b::\x88\x8f\x9c
+IL_0200: br.s 542
+IL_0202: ldarg.1 
+IL_0203: ldc.i4 3600
+IL_0208: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_020D: stfld 0x0400037B \x8a\x8c.\x8a\x8b::\x88\x8f\x9c
+IL_0212: ldarg.1 
+IL_0213: ret 
+

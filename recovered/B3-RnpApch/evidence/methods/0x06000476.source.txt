@@ -1,0 +1,25 @@
+47083: 		private void _0088_009A_0095(object P_0, EventArgs P_1)
+47084: 		{
+47085: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+47086: 			_ = mdiActiveDocument.Editor;
+47087: 			Database database = mdiActiveDocument.Database;
+47088: 			_ = 0;
+47089: 			Transaction val = default(Transaction);
+47090: 			if (_0088_0093())
+47091: 			{
+47092: 				if (_0088_0093())
+47093: 				{
+47094: 				}
+47095: 				val = database.TransactionManager.StartTransaction();
+47096: 			}
+47097: 			try
+47098: 			{
+47099: 				_0088_009D_0087 = database._008B_008A<DBPoint>((OpenMode)0, _0020: false);
+47100: 			}
+47101: 			finally
+47102: 			{
+47103: 				((IDisposable)val)?.Dispose();
+47104: 			}
+47105: 			_0088_009D_008D.Text = "已检测到 " /* string-offset:2720 */ + _0088_009D_0087.Count + " 个障碍物。" /* string-offset:936 */;
+47106: 			_0088_009A_0096(_0088_009D_0087);
+47107: 		}

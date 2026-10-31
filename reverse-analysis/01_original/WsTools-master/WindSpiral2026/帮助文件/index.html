@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindSpiralBasic 帮助文件中心</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb">WindSpiralBasic · 帮助文档</div>
+        <h1>风标设计2026【基础版】帮助文件中心</h1>
+        <div class="cmd">风螺旋标准飞行程序设计 · 软件使用说明</div>
+    </div>
+
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group">
+                <h2>导航</h2>
+                <ul>
+                    <li><a href="index.html" class="home active">首页 / 总览</a></li>
+                </ul>
+            </div>
+            <div class="nav-group">
+                <h2>传统程序</h2>
+                <ul>
+                    <li><a href="FormWindSpiral.html">A1.风螺旋</a></li>
+                    <li><a href="FormCalcu.html">A2.飞行程序基础计算</a></li>
+                    <li><a href="FixTolerance.html">A3.定位容差</a></li>
+                    <li><a href="FormNavAids.html">A4.非精密进近保护区</a></li>
+                    <li><a href="FormPA.html">A5.精密进近保护区</a></li>
+                    <li><a href="FormTemplate.html">A6.传统保护区模板</a></li>
+                    <li><a href="FormDepartureEvl.html">A7.离场越障评估</a></li>
+                    <li><a href="FormTurnAreaEvl.html">A8.复飞转弯区评估</a></li>
+                    <li><a href="FormPriSecEvl.html">A9.主副区评估</a></li>
+                    <li><a href="FormDmeEvl.html">A10.起始进近DME弧</a></li>
+                </ul>
+            </div>
+            <div class="nav-group">
+                <h2>PBN 程序</h2>
+                <ul>
+                    <li><a href="FormFlyBy.html">B1.旁切转弯</a></li>
+                    <li><a href="FormFlyOverDF.html">B2.飞越转弯</a></li>
+                    <li><a href="FormApvEvl.html">B3.RNP 进近</a></li>
+                    <li><a href="FormPbnIlsEvl.html">B4.PBN-ILS 进近</a></li>
+                    <li><a href="FormPbnDepEvl.html">B5.PBN 离场</a></li>
+                </ul>
+            </div>
+            <div class="nav-group">
+                <h2>辅助功能</h2>
+                <ul>
+                    <li><a href="FormBlockImport.html">C1.导入图标库</a></li>
+                    <li><a href="LayerFactoryForm.html">C2.批量添加图层</a></li>
+                    <li><a href="FormExLine.html">C3.绘制外扩线</a></li>
+                    <li><a href="FormRandPoint.html">C4.随机添加高度点</a></li>
+                </ul>
+            </div>            
+        </div>
+
+        <div class="content">
+            <div class="card">
+                <h2>关于本帮助中心</h2>
+                <p>
+                    本帮助中心提供<strong>风标设计 2026【基础版】（WindSpiralBasic）</strong>—— 飞行程序设计与净空评估软件的全部功能窗口使用说明，软件可运行于 AutoCAD、中望、浩辰等 CAD 平台。
+                </p>
+                <p> 
+                    各功能窗口支持两种打开方式：在<strong>CAD命令行</strong>输入对应命令，或在右侧<strong>WsTools功能面板</strong>点击相应按钮。该面板包含「传统程序」「PBN 程序」「辅助功能」三个选项卡，本帮助中心的文档按照这三个选项卡的顺序排列。
+                </p>
+                <div class="tip">
+                    <strong>面板提示：</strong>命令行输入 <code>WsTools</code> 可重新显示 / 唤起功能面板；面板停靠在 CAD 右侧。
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>模块概览</h2>
+                <table>
+                    <thead>
+                        <tr><th>模块</th><th>窗口数</th><th>说明</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>传统程序</td><td class="center">10</td><td>风螺旋、基础计算、容差区、非精密 / 精密进近保护区、传统模板、离场 / 复飞 / 主副区评估、DME 弧。</td></tr>
+                        <tr><td>PBN 程序</td><td class="center">5</td><td>基于性能的导航：旁切 / 飞越转弯、RNP APCH、PBN-ILS、PBN 离场。</td></tr>
+                        <tr><td>辅助功能</td><td class="center">4</td><td>导入图库、批量图层、外扩线、随机高度点。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="card">
+                <h2>传统程序</h2>
+                <div class="grid">
+                    <div class="item"><h3><a href="FormWindSpiral.html">A1.风螺旋</a></h3><p class="desc">根据指定参数绘制风螺旋转弯轨迹。</p><div class="cmdline">Y01_风螺旋</div></div>
+                    <div class="item"><h3><a href="FormCalcu.html">A2.飞行程序基础计算</a></h3><p class="desc">FAF、SOC、C 容差、离场 / 复飞转弯点的距离计算。</p><div class="cmdline">Y02_基础计算</div></div>
+                    <div class="item"><h3><a href="FixTolerance.html">A3.定位容差</a></h3><p class="desc">绘制交叉定位的容差区及顶空盲区。</p><div class="cmdline">Y03_定位容差</div></div>
+                    <div class="item"><h3><a href="FormNavAids.html">A4.非精密进近保护区</a></h3><p class="desc">VOR、NDB 非精密进近保护区绘制。</p><div class="cmdline">Y04_导航设备保护区</div></div>
+                    <div class="item"><h3><a href="FormPA.html">A5.精密进近保护区</a></h3><p class="desc">精密进近、GP INOP、PAOAS 保护区绘制。</p><div class="cmdline">Y05_精密进近保护区</div></div>
+                    <div class="item"><h3><a href="FormTemplate.html">A6.传统保护区模板</a></h3><p class="desc">等待、基线转弯、程序转弯保护区绘制。</p><div class="cmdline">Y06_传统模板</div></div>
+                    <div class="item"><h3><a href="FormDepartureEvl.html">A7.离场越障评估</a></h3><p class="desc">指定离场参数，评估离场障碍物。</p><div class="cmdline">Y07_离场保护区</div></div>
+                    <div class="item"><h3><a href="FormTurnAreaEvl.html">A8.复飞转弯区评估</a></h3><p class="desc">指定 KK′ 线，评估复飞转弯区障碍物。</p><div class="cmdline">Y08_转弯区评估</div></div>
+                    <div class="item"><h3><a href="FormPriSecEvl.html">A9.主副区评估</a></h3><p class="desc">指定起点、终点、保护区半宽，评估主副区航段 OCA。</p><div class="cmdline">Y09_主副区评估</div></div>
+                    <div class="item"><h3><a href="FormDmeEvl.html">A10.起始进近DME弧</a></h3><p class="desc">指定导航台、IF 位置、IAF 方向，绘制起始进近 DME 弧保护区。</p><div class="cmdline">Y10_起始进近DME弧</div></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>PBN 程序</h2>
+                <div class="grid">
+                    <div class="item"><h3><a href="FormFlyBy.html">B1.旁切转弯</a></h3><p class="desc">指定转弯参数，绘制旁切转弯保护区。</p><div class="cmdline">Y51_FlyBy</div></div>
+                    <div class="item"><h3><a href="FormFlyOverDF.html">B2.飞越转弯</a></h3><p class="desc">指定转弯参数，绘制飞越转弯保护区。</p><div class="cmdline">Y52_FlyOver</div></div>
+                    <div class="item"><h3><a href="FormApvEvl.html">B3.RNP 进近</a></h3><p class="desc">指定程序参数，绘制 RNP APCH 进近保护区。</p><div class="cmdline">Y53_RNP_APCH</div></div>
+                    <div class="item"><h3><a href="FormPbnIlsEvl.html">B4.PBN-ILS 进近</a></h3><p class="desc">指定 OAS 参数，绘制 PBN-ILS 进近复飞保护区。</p><div class="cmdline">Y54_PBN_ILS</div></div>
+                    <div class="item"><h3><a href="FormPbnDepEvl.html">B5.PBN 离场</a></h3><p class="desc">根据离场参数，绘制 PBN 离场保护区。</p><div class="cmdline">Y55_PBN_Departure</div></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>辅助功能</h2>
+                <div class="grid">
+                    <div class="item"><h3><a href="FormBlockImport.html">C1.导入图标库</a></h3><p class="desc">导入外部 CAD 文件中的自定义图块。</p><div class="cmdline">Y90_LoadBlock</div></div>
+                    <div class="item"><h3><a href="LayerFactoryForm.html">C2.批量添加图层</a></h3><p class="desc">按照指定格式批量添加图层。</p><div class="cmdline">Y91_CreateLayer</div></div>
+                    <div class="item"><h3><a href="FormExLine.html">C3.绘制外扩线</a></h3><p class="desc">添加指定角度的外扩线。</p><div class="cmdline">exline</div></div>
+                    <div class="item"><h3><a href="FormRandPoint.html">C4.随机添加高度点</a></h3><p class="desc">指定中心点、高度范围、半径大小，批量添加随机点。</p><div class="cmdline">Y92_RandomPoint</div></div>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>命令行工具（无窗口）</h2>
+                <p>以下为“辅助功能”面板中直接执行、<strong>不弹出独立窗口</strong>的绘图命令，一并列出以便查阅：</p>
+                <table>
+                    <thead>
+                        <tr><th>命令</th><th>功能</th><th>说明</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>RCL</code></td><td>绘制跑道中线延长线</td><td>拾取跑道入口与末端，向两端各延伸 40 km 中心线。</td></tr>
+                        <tr><td><code>NMCIRCLE</code></td><td>添加海里单位的圆</td><td>指定圆心后连续输入半径（nm）绘制带标注的圆。</td></tr>
+                        <tr><td><code>rectLine</code></td><td>添加矩形框</td><td>指定宽度与起终点，绘制闭合矩形框。</td></tr>
+                        <tr><td><code>Arc2</code></td><td>添加圆弧</td><td>指定圆心与圆弧点，绘制左右 30° 的圆弧。</td></tr>
+                        <tr><td><code>xInfo</code></td><td>查看扩展数据</td><td>选择实体，在命令行按层级展开输出其 XData（JSON）。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="card">
+                <h2>命令速查表</h2>
+                <table>
+                    <thead>
+                        <tr><th>命令</th><th>窗口</th><th>模块</th></tr>
+                    </thead>
+                    <tbody>
+                        <tr><td><code>Y01_风螺旋</code></td><td>风螺旋</td><td>传统程序</td></tr>
+                        <tr><td><code>Y02_基础计算</code></td><td>飞行程序基础计算</td><td>传统程序</td></tr>
+                        <tr><td><code>Y03_定位容差</code></td><td>定位容差</td><td>传统程序</td></tr>
+                        <tr><td><code>Y04_导航设备保护区</code></td><td>非精密进近保护区</td><td>传统程序</td></tr>
+                        <tr><td><code>Y05_精密进近保护区</code></td><td>精密进近保护区</td><td>传统程序</td></tr>
+                        <tr><td><code>Y06_传统模板</code></td><td>传统保护区模板</td><td>传统程序</td></tr>
+                        <tr><td><code>Y07_离场保护区</code></td><td>离场越障评估</td><td>传统程序</td></tr>
+                        <tr><td><code>Y08_转弯区评估</code></td><td>复飞转弯区评估</td><td>传统程序</td></tr>
+                        <tr><td><code>Y09_主副区评估</code></td><td>主副区评估</td><td>传统程序</td></tr>
+                        <tr><td><code>Y10_起始进近DME弧</code></td><td>起始进近DME弧</td><td>传统程序</td></tr>
+                        <tr><td><code>Y51_FlyBy</code></td><td>旁切转弯</td><td>PBN</td></tr>
+                        <tr><td><code>Y52_FlyOver</code></td><td>飞越转弯</td><td>PBN</td></tr>
+                        <tr><td><code>Y53_RNP_APCH</code></td><td>RNP 进近</td><td>PBN</td></tr>
+                        <tr><td><code>Y54_PBN_ILS</code></td><td>PBN-ILS 进近</td><td>PBN</td></tr>
+                        <tr><td><code>Y55_PBN_Departure</code></td><td>PBN 离场</td><td>PBN</td></tr>
+                        <tr><td><code>Y90_LoadBlock</code></td><td>导入图标库</td><td>辅助功能</td></tr>
+                        <tr><td><code>Y91_CreateLayer</code></td><td>批量添加图层</td><td>辅助功能</td></tr>
+                        <tr><td><code>exline</code></td><td>绘制外扩线</td><td>辅助功能</td></tr>
+                        <tr><td><code>Y92_RandomPoint</code></td><td>随机添加高度点</td><td>辅助功能</td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="footer">风标设计2026【基础版】（WindSpiralBasic）· 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

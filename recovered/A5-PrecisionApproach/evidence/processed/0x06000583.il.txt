@@ -1,0 +1,9 @@
+METHOD 06000583 .\x90\x94::.cctor RVA=4FF4 file=31F4
+IL_0000: nop 
+IL_0001: ldtoken 0x0200005D .\x90\x94
+IL_0006: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_000B: call 0x0A000032 System.ComponentModel.LicenseManager::Validate
+IL_0010: newobj 0x06000584 .\x90\x94::.ctor
+IL_0015: stsfld 0x040005FA .\x90\x94::<>9
+IL_001A: ret 
+

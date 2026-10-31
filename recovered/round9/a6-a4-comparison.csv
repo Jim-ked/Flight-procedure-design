@@ -1,0 +1,7 @@
+﻿component,A6,A4,classification,evidence
+VOR,P1EE BaseTurn5.2deg,P2F7 UI7.8deg,Different concept,different MethodDef and consumers
+NDB,P1EE BaseTurn6.5deg,P2F8 UI10.3deg,Different concept,do not substitute6.9 or6.5
+15deg,"BaseTurn additional tolerance15 VOR/25 NDB, separate model",fixed15 both facilities; cap intersections,Different concept,no BaseTurn constructor/algorithm dispatch
+point primitive,BaseTurn P809/P80A,P809/P80A,Same MethodDef,exact call offsets in cross-module-shared-calls.csv
+line primitive,BaseTurn P1F0 calls P7E8,A4 P2F9 calls P7E8,Same MethodDef,point-angle line only; no direct shared P7E7/P7ED evidence in selected BaseTurn methods
+business model,P1ED/P1EE/P1EF/P1F0,none called,No relation,A4 event closure excludes A6 business

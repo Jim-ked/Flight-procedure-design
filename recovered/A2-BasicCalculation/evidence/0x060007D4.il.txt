@@ -1,0 +1,24 @@
+METHOD 060007D4 \x8f\x8b.\x8f\x8a::\x8b\x87\x9d RVA=91CF8 file=8FEF8
+IL_0000: nop 
+IL_0001: ldarg.0 
+IL_0002: call 0x0A00027B System.Convert::ToDouble
+IL_0007: stloc.0 
+IL_0008: leave.s 71
+IL_000A: pop 
+IL_000B: ldarg.0 
+IL_000C: ldc.i4 584
+IL_0011: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0016: ldarg.1 
+IL_0017: call 0x0A00003C System.String::Concat
+IL_001C: ldc.i4 4984
+IL_0021: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0026: ldc.i4.0 
+IL_0027: ldc.i4.s 48
+IL_0029: call 0x0A000058 System.Windows.Forms.MessageBox::Show
+IL_002E: pop 
+IL_002F: ldc.r8 0.0
+IL_0038: stloc.0 
+IL_0039: leave.s 71
+IL_003B: ldloc.0 
+IL_003C: ret 
+

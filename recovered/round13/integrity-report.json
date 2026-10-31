@@ -1,0 +1,27 @@
+{
+  "scope": "Round13 A1/B1/B2 additive static closure integrity",
+  "frozen_count": 7598,
+  "frozen_missing": [],
+  "frozen_mismatch": [],
+  "unexpected_files_outside_round13_or_declared_final_reports": [],
+  "feature_matrix_checks": [
+    {
+      "path": "recovered/A1-WindSpiral/final-input-semantics.csv",
+      "columns_ok": true
+    },
+    {
+      "path": "recovered/A1-WindSpiral/cad-output-final.csv",
+      "columns_ok": true
+    },
+    {
+      "path": "recovered/B1-FlyBy/final-branch-map.csv",
+      "columns_ok": true
+    },
+    {
+      "path": "recovered/B2-FlyOverDF/final-branch-map.csv",
+      "columns_ok": true
+    }
+  ],
+  "static_tests_all_pass": true,
+  "status": "PASS"
+}

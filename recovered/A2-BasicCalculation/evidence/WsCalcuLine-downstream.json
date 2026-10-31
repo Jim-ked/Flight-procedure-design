@@ -1,0 +1,51 @@
+{
+  "scope": "Existing processed static-sites direct call/callvirt index; no claim to rule out reflection or external assembly callers",
+  "index_sha256": "fbf26ab91d9bfd4aac8afa44ab1910118e859f1d89dc78658e38fa95e89320e3",
+  "reader": {
+    "processed_token": "0x06000655",
+    "original_token": "0x06000656",
+    "original_rva": "0xB8D34",
+    "source_line": 75103
+  },
+  "wrapper": {
+    "processed_token": "0x060006AB",
+    "original_token": "0x060006AC",
+    "source_line": 76214
+  },
+  "incoming_edges": {
+    "0x06000655": [
+      {
+        "caller": "0x060006AB",
+        "caller_name": "\\x8d\\x95.\\x8d\\x94::\\x8a\\x97\\x8c",
+        "il_offset": "IL_0002",
+        "opcode": "call",
+        "target": "0x06000655",
+        "target_name": "\\x8d\\x8d.\\x8d\\x8c::\\x8a\\x90\\x95"
+      }
+    ],
+    "0x060006AB": []
+  },
+  "source_literal_search": [
+    {
+      "path": "annotated-strings/--/--.cs",
+      "line": 74917,
+      "role": "ResultBuffer app name"
+    },
+    {
+      "path": "annotated-strings/--/--.cs",
+      "line": 75010,
+      "role": "Save registration"
+    },
+    {
+      "path": "annotated-strings/--/--.cs",
+      "line": 75075,
+      "role": "SaveById registration"
+    },
+    {
+      "path": "annotated-strings/--/--.cs",
+      "line": 75128,
+      "role": "Load GetXDataForApplication"
+    }
+  ],
+  "conclusion": "metadata exists, but no evidence of automatic downstream semantic reuse."
+}

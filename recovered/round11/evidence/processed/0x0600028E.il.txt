@@ -1,0 +1,19 @@
+METHOD 0600028E \x89\x87.\x89\x86::\x87\x87\x97 RVA=26F1C file=2511C
+IL_0000: ldarga.s argument(0x0002)
+IL_0002: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0007: ldarga.s argument(0x0001)
+IL_0009: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_000E: sub 
+IL_000F: ldc.r8 2.0
+IL_0018: call 0x0A000112 System.Math::Pow
+IL_001D: ldarga.s argument(0x0002)
+IL_001F: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0024: ldarga.s argument(0x0001)
+IL_0026: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_002B: sub 
+IL_002C: ldc.r8 2.0
+IL_0035: call 0x0A000112 System.Math::Pow
+IL_003A: add 
+IL_003B: call 0x0A00002D System.Math::Sqrt
+IL_0040: ret 
+

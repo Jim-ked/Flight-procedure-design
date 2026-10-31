@@ -1,0 +1,96 @@
+61987: 		private _008A_0093 _0089_0096_0096(string P_0, _008A_008F P_1, string P_2, string P_3)
+61988: 		{
+61989: 			//IL_009b: Unknown result type (might be due to invalid IL or missing references)
+61990: 			//IL_00a2: Expected O, but got Unknown
+61991: 			//IL_00c1: Unknown result type (might be due to invalid IL or missing references)
+61992: 			//IL_00c8: Expected O, but got Unknown
+61993: 			//IL_0249: Unknown result type (might be due to invalid IL or missing references)
+61994: 			//IL_0250: Expected O, but got Unknown
+61995: 			if (!_0088_009E())
+61996: 			{
+61997: 				string text = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\oas.db" /* string-offset:5444 */;
+61998: 				if (File.Exists(text))
+61999: 				{
+62000: 					string obj = "Data Source=" /* string-offset:5452 */ + text + ";Version=3;" /* string-offset:5456 */;
+62001: 					_008A_0093 obj2 = new _008A_0093(P_1);
+62002: 					int num = (int)P_1;
+62003: 					string text2 = (P_0 + num + P_2).Replace("." /* string-offset:700 */, "");
+62004: 					int num2 = (int)Math.Round(Convert.ToDouble(P_3), 0);
+62005: 					SQLiteConnection val = new SQLiteConnection(obj);
+62006: 					try
+62007: 					{
+62008: 						((DbConnection)(object)val).Open();
+62009: 						string obj3 = "SELECT Value FROM PartA WHERE ID = @id" /* string-offset:5460 */;
+62010: 						string text3 = "SELECT Value FROM PartB WHERE ID = @id" /* string-offset:5464 */;
+62011: 						SQLiteCommand val2 = new SQLiteCommand(obj3, val);
+62012: 						try
+62013: 						{
+62014: 							val2.Parameters.AddWithValue("@id" /* string-offset:5468 */, (object)text2);
+62015: 							string text4;
+62016: 							while (true)
+62017: 							{
+62018: 								text4 = ((DbCommand)(object)val2).ExecuteScalar().ToString();
+62019: 								obj2._0088_0091_009A._008B_008B_0092 = (double)Convert.ToInt32(text2.Substring(3, 2)) * -0.001;
+62020: 								_0088_009D();
+62021: 								if (_0088_009E())
+62022: 								{
+62023: 									break;
+62024: 								}
+62025: 								if (!_0088_009E())
+62026: 								{
+62027: 									obj2._0088_0091_009A._008B_008B_0093 = 0.0;
+62028: 									obj2._0088_0091_009A._008B_008B_0094 = (double)Convert.ToInt32(_0089_0096_0097(text4.Substring(0, 4))) * -0.01;
+62029: 									obj2._0088_0091_0096._008B_008B_0092 = (double)Convert.ToInt32(_0089_0096_0097(text4.Substring(4, 5))) * 1E-06;
+62030: 									obj2._0088_0091_0096._008B_008B_0093 = 0.0;
+62031: 									obj2._0088_0091_0096._008B_008B_0094 = (double)Convert.ToInt32(_0089_0096_0097(text4.Substring(9, 3))) * -0.01;
+62032: 									break;
+62033: 								}
+62034: 							}
+62035: 							obj2._0088_0091_0097._008B_008B_0092 = (double)Convert.ToInt32(_0089_0096_0097(text4.Substring(12, 5))) * 1E-06;
+62036: 							obj2._0088_0091_0097._008B_008B_0093 = 0.0;
+62037: 							obj2._0088_0091_0097._008B_008B_0094 = (double)Convert.ToInt32(_0089_0096_0097(text4.Substring(17, 4))) * -0.01;
+62038: 						}
+62039: 						finally
+62040: 						{
+62041: 							((IDisposable)val2)?.Dispose();
+62042: 						}
+62043: 						SQLiteCommand val3 = new SQLiteCommand(text3, val);
+62044: 						try
+62045: 						{
+62046: 							val3.Parameters.AddWithValue("@id" /* string-offset:5468 */, (object)(text2 + num2));
+62047: 							_ = 0;
+62048: 							string text5 = default(string);
+62049: 							if (_0088_009D())
+62050: 							{
+62051: 								text5 = _0089_0096_0097(((DbCommand)(object)val3).ExecuteScalar().ToString());
+62052: 								obj2._0088_0091_0098._008B_008B_0092 = (double)Convert.ToInt32(text5.Substring(0, 5)) * 1E-06;
+62053: 								obj2._0088_0091_0098._008B_008B_0093 = (double)Convert.ToInt32(text5.Substring(5, 6)) * 1E-06;
+62054: 								obj2._0088_0091_0098._008B_008B_0094 = (double)Convert.ToInt32(text5.Substring(11, 4)) * -0.01;
+62055: 							}
+62056: 							obj2._0088_0091_0099._008B_008B_0092 = (double)Convert.ToInt32(text5.Substring(15, 5)) * 1E-06;
+62057: 							obj2._0088_0091_0099._008B_008B_0093 = (double)Convert.ToInt32(text5.Substring(20, 6)) * 1E-06;
+62058: 							obj2._0088_0091_0099._008B_008B_0094 = (double)Convert.ToInt32(text5.Substring(26, 4)) * -0.01;
+62059: 						}
+62060: 						finally
+62061: 						{
+62062: 							((IDisposable)val3)?.Dispose();
+62063: 						}
+62064: 						((DbConnection)(object)val).Close();
+62065: 						return obj2;
+62066: 					}
+62067: 					finally
+62068: 					{
+62069: 						((IDisposable)val)?.Dispose();
+62070: 					}
+62071: 				}
+62072: 				_ = 1;
+62073: 				if (_0088_009E())
+62074: 				{
+62075: 					goto IL_03a7;
+62076: 				}
+62077: 			}
+62078: 			MessageBox.Show("参数文件不存在。" /* string-offset:5448 */);
+62079: 			goto IL_03a7;
+62080: 			IL_03a7:
+62081: 			return null;
+62082: 		}

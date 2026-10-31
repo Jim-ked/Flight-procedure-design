@@ -1,0 +1,6 @@
+﻿Module,Function,Help/UI,Code,Classification,Evidence
+A2,six calculators,six calculation tabs/buttons,six formula and CAD event chains,CONSISTENT,A2-BasicCalculation/help-ui-code-final.csv
+A2,NPA 3+15/18,historical reaction/bank wording may suggest components,"one reader value, default 18, no split",UNCERTAIN,A2-BasicCalculation/formulas.md
+A2,WsCalcuLine downstream,saved construction line may imply reuse,metadata writer exists; no indexed downstream caller,UNCERTAIN,A2-BasicCalculation/wscalculine-final.md
+A9,primary/secondary evaluation,Evaluate/Mark,full bounded event chain to grid and original-point Mark,CONSISTENT,A9-PriSec/final-static-closure.md
+A9,protection-area construction,no indexed public drawing function,no protection writer,CONSISTENT,A9-PriSec/final-static-closure.md

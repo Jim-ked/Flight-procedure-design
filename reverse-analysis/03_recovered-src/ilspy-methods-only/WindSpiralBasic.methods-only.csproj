@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+  <PropertyGroup>
+    <AssemblyName>WindSpiralBasic</AssemblyName>
+    <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+    <UseWindowsForms>True</UseWindowsForms>
+    <TargetFramework>net48</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <LangVersion>12.0</LangVersion>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>app.ico</ApplicationIcon>
+    <RootNamespace />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Remove="32fb24f5-4b3e-4200-b3b5-924b56e966e2" />
+    <None Remove="e37314dd-2d8d-4978-b3e1-cc9fed1a5d44" />
+    <None Remove="f40ad091-f861-47e8-92dd-16688a8bb9a5" />
+    <None Remove="867cf343-c42d-4756-bcac-bef7f44beea9" />
+    <EmbeddedResource Include="32fb24f5-4b3e-4200-b3b5-924b56e966e2" LogicalName="32fb24f5-4b3e-4200-b3b5-924b56e966e2" />
+    <EmbeddedResource Include="e37314dd-2d8d-4978-b3e1-cc9fed1a5d44" LogicalName="e37314dd-2d8d-4978-b3e1-cc9fed1a5d44" />
+    <EmbeddedResource Include="f40ad091-f861-47e8-92dd-16688a8bb9a5" LogicalName="f40ad091-f861-47e8-92dd-16688a8bb9a5" />
+    <EmbeddedResource Include="867cf343-c42d-4756-bcac-bef7f44beea9" LogicalName="867cf343-c42d-4756-bcac-bef7f44beea9" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Acdbmgd" />
+    <Reference Include="acmgd" />
+    <Reference Include="accoremgd" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Data.SQLite" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,517 @@
+24964: 		private void _0087_0092_0089(string P_0, bool P_1 = true)
+24965: 		{
+24966: 			if (false /* original-file-bool-offset:492 */)
+24967: 			{
+24968: 				return;
+24969: 			}
+24970: 			try
+24971: 			{
+24972: 				int num;
+24973: 				if (string.IsNullOrEmpty(P_0))
+24974: 				{
+24975: 					num = 8;
+24976: 				}
+24977: 				else
+24978: 				{
+24979: 					JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
+24980: 					num = 47;
+24981: 					int num2 = default(int);
+24982: 					int num3 = default(int);
+24983: 					string text = default(string);
+24984: 					Dictionary<string, object> dictionary2 = default(Dictionary<string, object>);
+24985: 					Dictionary<string, object> dictionary3 = default(Dictionary<string, object>);
+24986: 					Dictionary<string, object> dictionary4 = default(Dictionary<string, object>);
+24987: 					Dictionary<string, object> dictionary5 = default(Dictionary<string, object>);
+24988: 					Dictionary<string, object> dictionary6 = default(Dictionary<string, object>);
+24989: 					Dictionary<string, object> dictionary7 = default(Dictionary<string, object>);
+24990: 					Dictionary<string, object> dictionary8 = default(Dictionary<string, object>);
+24991: 					Dictionary<string, object> dictionary9 = default(Dictionary<string, object>);
+24992: 					Dictionary<string, object> dictionary10 = default(Dictionary<string, object>);
+24993: 					Dictionary<string, object> dictionary11 = default(Dictionary<string, object>);
+24994: 					Dictionary<string, object> dictionary12 = default(Dictionary<string, object>);
+24995: 					Dictionary<string, object> dictionary13 = default(Dictionary<string, object>);
+24996: 					Dictionary<string, object> dictionary14 = default(Dictionary<string, object>);
+24997: 					while (true)
+24998: 					{
+24999: 						IL_09e6:
+25000: 						string[] array = P_0.Split('|');
+25001: 						Dictionary<string, string> dictionary = new Dictionary<string, string>();
+25002: 						string[] array2 = array;
+25003: 						num = 7;
+25004: 						if (_00870())
+25005: 						{
+25006: 							goto IL_052d;
+25007: 						}
+25008: 						goto IL_09cf;
+25009: 						IL_09cf:
+25010: 						num2 = 0;
+25011: 						num = 50;
+25012: 						if (_0087_009F())
+25013: 						{
+25014: 							goto IL_0228;
+25015: 						}
+25016: 						goto IL_09c5;
+25017: 						IL_09c5:
+25018: 						if (num3 > 0)
+25019: 						{
+25020: 							string key = text.Substring(0, num3);
+25021: 							string value = text.Substring(num3 + 1);
+25022: 							dictionary[key] = value;
+25023: 						}
+25024: 						num2++;
+25025: 						num = 32;
+25026: 						goto IL_0970;
+25027: 						IL_0c93:
+25028: 						if (dictionary2.ContainsKey("Y" /* string-offset:3908 */))
+25029: 						{
+25030: 							dictionary3 = (Dictionary<string, object>)dictionary2["Y" /* string-offset:3908 */];
+25031: 							num = 20;
+25032: 							goto IL_0cca;
+25033: 						}
+25034: 						goto IL_0d6f;
+25035: 						IL_05db:
+25036: 						if (dictionary4.ContainsKey("WingSpan" /* string-offset:3944 */))
+25037: 						{
+25038: 							_0087_0093_0087.Text = Convert.ToDouble(dictionary4["WingSpan" /* string-offset:3944 */]).ToString("F2" /* string-offset:3236 */);
+25039: 							num = 13;
+25040: 						}
+25041: 						goto IL_062b;
+25042: 						IL_0970:
+25043: 						if (num2 >= array2.Length)
+25044: 						{
+25045: 							if (P_1 && dictionary.ContainsKey("RUNWAY" /* string-offset:4016 */))
+25046: 							{
+25047: 								dictionary5 = javaScriptSerializer.Deserialize<Dictionary<string, object>>(dictionary["RUNWAY" /* string-offset:4016 */]);
+25048: 								if (dictionary5.ContainsKey("THR" /* string-offset:3900 */))
+25049: 								{
+25050: 									num = 27;
+25051: 									goto IL_07ac;
+25052: 								}
+25053: 								goto IL_087c;
+25054: 							}
+25055: 							goto IL_0968;
+25056: 						}
+25057: 						text = array2[num2];
+25058: 						num = 3;
+25059: 						goto IL_0987;
+25060: 						IL_062b:
+25061: 						if (!dictionary4.ContainsKey("WheelBase" /* string-offset:3948 */))
+25062: 						{
+25063: 							goto IL_0685;
+25064: 						}
+25065: 						num = 18;
+25066: 						if (_0087_009F())
+25067: 						{
+25068: 							goto IL_0651;
+25069: 						}
+25070: 						goto IL_0b24;
+25071: 						IL_0dda:
+25072: 						_0087_0093_0094.Text = Convert.ToDouble(dictionary6["b" /* string-offset:3972 */]).ToString("F6" /* string-offset:3848 */);
+25073: 						num = 54;
+25074: 						goto IL_0e17;
+25075: 						IL_0651:
+25076: 						_0087_0093_008B.Text = Convert.ToDouble(dictionary4["WheelBase" /* string-offset:3948 */]).ToString("F2" /* string-offset:3236 */);
+25077: 						goto IL_0685;
+25078: 						IL_0685:
+25079: 						if (dictionary4.ContainsKey("FAF_Height" /* string-offset:3952 */))
+25080: 						{
+25081: 							_0087_0096_0087.Text = Convert.ToDouble(dictionary4["FAF_Height" /* string-offset:3952 */]).ToString("F2" /* string-offset:3236 */);
+25082: 						}
+25083: 						if (dictionary4.ContainsKey("IF_Length" /* string-offset:3956 */))
+25084: 						{
+25085: 							num = 14;
+25086: 							goto IL_06e8;
+25087: 						}
+25088: 						goto IL_0725;
+25089: 						IL_0d32:
+25090: 						_0087_0093_0099.Text = Convert.ToDouble(dictionary3["c" /* string-offset:3976 */]).ToString("F2" /* string-offset:3236 */);
+25091: 						num = 40;
+25092: 						goto IL_0d6f;
+25093: 						IL_0968:
+25094: 						if (P_1)
+25095: 						{
+25096: 							num = 25;
+25097: 							goto IL_01f5;
+25098: 						}
+25099: 						goto IL_07a4;
+25100: 						IL_0cca:
+25101: 						_0087_0093_009D.Text = Convert.ToDouble(dictionary3["a" /* string-offset:3968 */]).ToString("F6" /* string-offset:3848 */);
+25102: 						_0087_0093_009B.Text = Convert.ToDouble(dictionary3["b" /* string-offset:3972 */]).ToString("F6" /* string-offset:3848 */);
+25103: 						goto IL_0d32;
+25104: 						IL_07a4:
+25105: 						if (!P_1 || !dictionary.ContainsKey("PAOAS" /* string-offset:4024 */))
+25106: 						{
+25107: 							goto IL_0513;
+25108: 						}
+25109: 						num = 24;
+25110: 						if (_0087_009F())
+25111: 						{
+25112: 							goto IL_0345;
+25113: 						}
+25114: 						goto IL_0aed;
+25115: 						IL_0d6f:
+25116: 						if (dictionary2.ContainsKey("Z" /* string-offset:3912 */))
+25117: 						{
+25118: 							num = 9;
+25119: 							goto IL_0d8e;
+25120: 						}
+25121: 						return;
+25122: 						IL_0987:
+25123: 						num3 = text.IndexOf(':');
+25124: 						num = 38;
+25125: 						goto IL_09c5;
+25126: 						IL_0513:
+25127: 						if (dictionary.ContainsKey("OAS" /* string-offset:4032 */))
+25128: 						{
+25129: 							num = 22;
+25130: 							goto IL_0312;
+25131: 						}
+25132: 						return;
+25133: 						IL_06e8:
+25134: 						_0087_0095_009B.Text = Convert.ToDouble(dictionary4["IF_Length" /* string-offset:3956 */]).ToString("F2" /* string-offset:3236 */);
+25135: 						num = 5;
+25136: 						goto IL_0725;
+25137: 						IL_0312:
+25138: 						dictionary2 = javaScriptSerializer.Deserialize<Dictionary<string, object>>(dictionary["OAS" /* string-offset:4032 */]);
+25139: 						if (dictionary2.ContainsKey("W" /* string-offset:3984 */))
+25140: 						{
+25141: 							dictionary7 = (Dictionary<string, object>)dictionary2["W" /* string-offset:3984 */];
+25142: 							num = 44;
+25143: 							if (!_00870())
+25144: 							{
+25145: 								goto IL_0228;
+25146: 							}
+25147: 							goto IL_06e8;
+25148: 						}
+25149: 						goto IL_0aed;
+25150: 						IL_0725:
+25151: 						if (dictionary4.ContainsKey("FAF_Tolerance" /* string-offset:3960 */))
+25152: 						{
+25153: 							num = 37;
+25154: 							goto IL_0741;
+25155: 						}
+25156: 						goto IL_07a4;
+25157: 						IL_0228:
+25158: 						while (true)
+25159: 						{
+25160: 							switch (num)
+25161: 							{
+25162: 							case 53:
+25163: 								break;
+25164: 							case 41:
+25165: 								goto IL_0114;
+25166: 							case 45:
+25167: 								goto IL_0127;
+25168: 							case 39:
+25169: 								goto IL_0151;
+25170: 							case 23:
+25171: 								goto IL_018e;
+25172: 							case 49:
+25173: 								goto IL_01b9;
+25174: 							case 25:
+25175: 								goto IL_01f5;
+25176: 							default:
+25177: 								num = 46;
+25178: 								if (_0087_009F())
+25179: 								{
+25180: 									continue;
+25181: 								}
+25182: 								goto IL_0127;
+25183: 							case 22:
+25184: 								goto IL_0312;
+25185: 							case 24:
+25186: 								goto IL_0345;
+25187: 							case 29:
+25188: 								goto IL_037c;
+25189: 							case 31:
+25190: 								goto IL_03c8;
+25191: 							case 43:
+25192: 								goto IL_0430;
+25193: 							case 48:
+25194: 								goto IL_0446;
+25195: 							case 15:
+25196: 							case 35:
+25197: 								goto IL_046e;
+25198: 							case 21:
+25199: 								goto IL_04a2;
+25200: 							case 6:
+25201: 								goto IL_04df;
+25202: 							case 30:
+25203: 								goto IL_052d;
+25204: 							case 28:
+25205: 								goto IL_0557;
+25206: 							case 26:
+25207: 								goto IL_058b;
+25208: 							case 2:
+25209: 								goto IL_05db;
+25210: 							case 13:
+25211: 								goto IL_062b;
+25212: 							case 18:
+25213: 								goto IL_0651;
+25214: 							case 46:
+25215: 								goto IL_0685;
+25216: 							case 14:
+25217: 								goto IL_06e8;
+25218: 							case 5:
+25219: 								goto IL_0725;
+25220: 							case 37:
+25221: 								goto IL_0741;
+25222: 							case 27:
+25223: 								goto IL_07ac;
+25224: 							case 11:
+25225: 								goto IL_07d7;
+25226: 							case 17:
+25227: 								goto IL_0814;
+25228: 							case 51:
+25229: 								goto IL_08b3;
+25230: 							case 10:
+25231: 								goto IL_0924;
+25232: 							case 32:
+25233: 							case 50:
+25234: 								goto IL_0970;
+25235: 							case 3:
+25236: 								goto IL_0987;
+25237: 							case 38:
+25238: 								goto IL_09c5;
+25239: 							case 7:
+25240: 								goto IL_09cf;
+25241: 							case 47:
+25242: 								goto IL_09e6;
+25243: 							case 8:
+25244: 								goto end_IL_09e6;
+25245: 							case 16:
+25246: 								return;
+25247: 							case 44:
+25248: 								_0087_0093_0098.Text = Convert.ToDouble(dictionary7["a" /* string-offset:3968 */]).ToString("F6" /* string-offset:3848 */);
+25249: 								_0087_0093_009E.Text = Convert.ToDouble(dictionary7["b" /* string-offset:3972 */]).ToString("F6" /* string-offset:3848 */);
+25250: 								num = 52;
+25251: 								goto IL_0ab0;
+25252: 							case 52:
+25253: 								goto IL_0ab0;
+25254: 							case 34:
+25255: 								goto IL_0aed;
+25256: 							case 0:
+25257: 							case 42:
+25258: 								goto IL_0b03;
+25259: 							case 33:
+25260: 								goto IL_0b24;
+25261: 							case 12:
+25262: 								goto IL_0b61;
+25263: 							case 36:
+25264: 								goto IL_0bc9;
+25265: 							case 1:
+25266: 								goto IL_0c5f;
+25267: 							case 20:
+25268: 								goto IL_0cca;
+25269: 							case 19:
+25270: 								goto IL_0d32;
+25271: 							case 40:
+25272: 								goto IL_0d6f;
+25273: 							case 9:
+25274: 								goto IL_0d8e;
+25275: 							case 4:
+25276: 								goto IL_0dda;
+25277: 							case 54:
+25278: 								goto IL_0e17;
+25279: 							}
+25280: 							break;
+25281: 						}
+25282: 						goto IL_00e0;
+25283: 						IL_07ac:
+25284: 						dictionary8 = (Dictionary<string, object>)dictionary5["THR" /* string-offset:3900 */];
+25285: 						num = 11;
+25286: 						if (!_00870())
+25287: 						{
+25288: 							goto IL_07d7;
+25289: 						}
+25290: 						goto IL_0ab0;
+25291: 						IL_07d7:
+25292: 						_0087_0094_0099.Text = Convert.ToDouble(dictionary8["X" /* string-offset:3904 */]).ToString("F2" /* string-offset:3236 */);
+25293: 						num = 17;
+25294: 						goto IL_0814;
+25295: 						IL_0814:
+25296: 						_0087_0094_0098.Text = Convert.ToDouble(dictionary8["Y" /* string-offset:3908 */]).ToString("F2" /* string-offset:3236 */);
+25297: 						_0087_0094_0097.Text = Convert.ToDouble(dictionary8["Z" /* string-offset:3912 */]).ToString("F2" /* string-offset:3236 */);
+25298: 						goto IL_087c;
+25299: 						IL_087c:
+25300: 						if (dictionary5.ContainsKey("DER" /* string-offset:3916 */))
+25301: 						{
+25302: 							dictionary9 = (Dictionary<string, object>)dictionary5["DER" /* string-offset:3916 */];
+25303: 							num = 51;
+25304: 							goto IL_08b3;
+25305: 						}
+25306: 						goto IL_0968;
+25307: 						IL_0e17:
+25308: 						_0087_0093_0093.Text = Convert.ToDouble(dictionary6["c" /* string-offset:3976 */]).ToString("F2" /* string-offset:3236 */);
+25309: 						return;
+25310: 						IL_08b3:
+25311: 						_0087_0095_008B.Text = Convert.ToDouble(dictionary9["X" /* string-offset:3904 */]).ToString("F2" /* string-offset:3236 */);
+25312: 						_0087_0095_0089.Text = Convert.ToDouble(dictionary9["Y" /* string-offset:3908 */]).ToString("F2" /* string-offset:3236 */);
+25313: 						num = 10;
+25314: 						goto IL_0924;
+25315: 						IL_0924:
+25316: 						_0087_0095_0088.Text = Convert.ToDouble(dictionary9["Z" /* string-offset:3912 */]).ToString("F2" /* string-offset:3236 */);
+25317: 						goto IL_0968;
+25318: 						IL_0ab0:
+25319: 						_0087_0094_008A.Text = Convert.ToDouble(dictionary7["c" /* string-offset:3976 */]).ToString("F2" /* string-offset:3236 */);
+25320: 						num = 34;
+25321: 						goto IL_0aed;
+25322: 						IL_052d:
+25323: 						_0087_0092_009D.Text = dictionary4["MissedCG" /* string-offset:3932 */].ToString();
+25324: 						num = 28;
+25325: 						goto IL_0557;
+25326: 						IL_0345:
+25327: 						dictionary10 = javaScriptSerializer.Deserialize<Dictionary<string, object>>(dictionary["PAOAS" /* string-offset:4024 */]);
+25328: 						if (dictionary10.ContainsKey("P1" /* string-offset:3964 */))
+25329: 						{
+25330: 							num = 29;
+25331: 							goto IL_037c;
+25332: 						}
+25333: 						goto IL_0430;
+25334: 						IL_0741:
+25335: 						_0087_0095_009D.Text = Convert.ToDouble(dictionary4["FAF_Tolerance" /* string-offset:3960 */]).ToString("F2" /* string-offset:3236 */);
+25336: 						goto IL_07a4;
+25337: 						IL_037c:
+25338: 						dictionary11 = (Dictionary<string, object>)dictionary10["P1" /* string-offset:3964 */];
+25339: 						_0087_0095_0091.Text = Convert.ToDouble(dictionary11["a" /* string-offset:3968 */]).ToString("F4" /* string-offset:4028 */);
+25340: 						goto IL_03c8;
+25341: 						IL_03c8:
+25342: 						_0087_0095_0093.Text = Convert.ToDouble(dictionary11["b" /* string-offset:3972 */]).ToString("F4" /* string-offset:4028 */);
+25343: 						_0087_0095_0094.Text = Convert.ToDouble(dictionary11["c" /* string-offset:3976 */]).ToString("F2" /* string-offset:3236 */);
+25344: 						goto IL_0430;
+25345: 						IL_0430:
+25346: 						if (dictionary10.ContainsKey("P2" /* string-offset:3980 */))
+25347: 						{
+25348: 							goto IL_0446;
+25349: 						}
+25350: 						goto IL_0513;
+25351: 						IL_0446:
+25352: 						dictionary12 = (Dictionary<string, object>)dictionary10["P2" /* string-offset:3980 */];
+25353: 						_0087_009F();
+25354: 						if (!_00870())
+25355: 						{
+25356: 							goto IL_046e;
+25357: 						}
+25358: 						num = 0;
+25359: 						goto IL_0b03;
+25360: 						IL_046e:
+25361: 						_0087_0095_0096.Text = Convert.ToDouble(dictionary12["a" /* string-offset:3968 */]).ToString("F4" /* string-offset:4028 */);
+25362: 						goto IL_04a2;
+25363: 						IL_04a2:
+25364: 						_0087_0095_0098.Text = Convert.ToDouble(dictionary12["b" /* string-offset:3972 */]).ToString("F4" /* string-offset:4028 */);
+25365: 						num = 6;
+25366: 						goto IL_04df;
+25367: 						IL_04df:
+25368: 						_0087_0095_0097.Text = Convert.ToDouble(dictionary12["c" /* string-offset:3976 */]).ToString("F2" /* string-offset:3236 */);
+25369: 						goto IL_0513;
+25370: 						IL_0aed:
+25371: 						if (dictionary2.ContainsKey("Ws" /* string-offset:3988 */))
+25372: 						{
+25373: 							goto IL_0b03;
+25374: 						}
+25375: 						goto IL_0bc9;
+25376: 						IL_01f5:
+25377: 						if (dictionary.ContainsKey("APPROACH" /* string-offset:4020 */))
+25378: 						{
+25379: 							num = 49;
+25380: 							goto IL_01b9;
+25381: 						}
+25382: 						goto IL_07a4;
+25383: 						IL_0b03:
+25384: 						dictionary13 = (Dictionary<string, object>)dictionary2["Ws" /* string-offset:3988 */];
+25385: 						num = 33;
+25386: 						goto IL_0b24;
+25387: 						IL_01b9:
+25388: 						dictionary4 = javaScriptSerializer.Deserialize<Dictionary<string, object>>(dictionary["APPROACH" /* string-offset:4020 */]);
+25389: 						if (dictionary4.ContainsKey("AppType" /* string-offset:3920 */))
+25390: 						{
+25391: 							num = 53;
+25392: 							goto IL_00e0;
+25393: 						}
+25394: 						goto IL_0114;
+25395: 						IL_0b24:
+25396: 						_0087_0093_009C.Text = Convert.ToDouble(dictionary13["a" /* string-offset:3968 */]).ToString("F6" /* string-offset:3848 */);
+25397: 						num = 12;
+25398: 						goto IL_0b61;
+25399: 						IL_00e0:
+25400: 						_0087_0093_0091.Text = dictionary4["AppType" /* string-offset:3920 */].ToString();
+25401: 						num = 41;
+25402: 						if (_0087_009F())
+25403: 						{
+25404: 							goto IL_0114;
+25405: 						}
+25406: 						goto IL_0987;
+25407: 						IL_0114:
+25408: 						if (dictionary4.ContainsKey("CAT" /* string-offset:3924 */))
+25409: 						{
+25410: 							goto IL_0127;
+25411: 						}
+25412: 						goto IL_0151;
+25413: 						IL_0127:
+25414: 						_0087_0093_0089.Text = dictionary4["CAT" /* string-offset:3924 */].ToString();
+25415: 						num = 39;
+25416: 						goto IL_0151;
+25417: 						IL_0151:
+25418: 						if (dictionary4.ContainsKey("GP" /* string-offset:3928 */))
+25419: 						{
+25420: 							_0087_0093_0090.Text = dictionary4["GP" /* string-offset:3928 */].ToString();
+25421: 							num = 23;
+25422: 						}
+25423: 						goto IL_018e;
+25424: 						IL_0b61:
+25425: 						_0087_0094_0087.Text = Convert.ToDouble(dictionary13["b" /* string-offset:3972 */]).ToString("F6" /* string-offset:3848 */);
+25426: 						_0087_0094_008C.Text = Convert.ToDouble(dictionary13["c" /* string-offset:3976 */]).ToString("F2" /* string-offset:3236 */);
+25427: 						goto IL_0bc9;
+25428: 						IL_018e:
+25429: 						if (!dictionary4.ContainsKey("MissedCG" /* string-offset:3932 */))
+25430: 						{
+25431: 							goto IL_0557;
+25432: 						}
+25433: 						num = 30;
+25434: 						if (_0087_009F())
+25435: 						{
+25436: 							goto IL_0228;
+25437: 						}
+25438: 						goto IL_0970;
+25439: 						IL_0bc9:
+25440: 						if (dictionary2.ContainsKey("X" /* string-offset:3904 */))
+25441: 						{
+25442: 							dictionary14 = (Dictionary<string, object>)dictionary2["X" /* string-offset:3904 */];
+25443: 							_0087_0094_008B.Text = Convert.ToDouble(dictionary14["a" /* string-offset:3968 */]).ToString("F6" /* string-offset:3848 */);
+25444: 							_0087_0094_0089.Text = Convert.ToDouble(dictionary14["b" /* string-offset:3972 */]).ToString("F6" /* string-offset:3848 */);
+25445: 							goto IL_0c5f;
+25446: 						}
+25447: 						goto IL_0c93;
+25448: 						IL_0557:
+25449: 						if (dictionary4.ContainsKey("LocDistance" /* string-offset:3936 */))
+25450: 						{
+25451: 							_0087_0093_008C.Text = dictionary4["LocDistance" /* string-offset:3936 */].ToString();
+25452: 						}
+25453: 						goto IL_058b;
+25454: 						IL_0d8e:
+25455: 						dictionary6 = (Dictionary<string, object>)dictionary2["Z" /* string-offset:3912 */];
+25456: 						_0087_0093_0095.Text = Convert.ToDouble(dictionary6["a" /* string-offset:3968 */]).ToString("F6" /* string-offset:3848 */);
+25457: 						goto IL_0dda;
+25458: 						IL_058b:
+25459: 						if (dictionary4.ContainsKey("RDH" /* string-offset:3940 */))
+25460: 						{
+25461: 							_0087_0093_0088.Text = Convert.ToDouble(dictionary4["RDH" /* string-offset:3940 */]).ToString("F2" /* string-offset:3236 */);
+25462: 							num = 2;
+25463: 						}
+25464: 						goto IL_05db;
+25465: 						IL_0c5f:
+25466: 						_0087_0094_0088.Text = Convert.ToDouble(dictionary14["c" /* string-offset:3976 */]).ToString("F2" /* string-offset:3236 */);
+25467: 						goto IL_0c93;
+25468: 						continue;
+25469: 						end_IL_09e6:
+25470: 						break;
+25471: 					}
+25472: 				}
+25473: 				MessageBox.Show("JSON数据为空。" /* string-offset:4012 */);
+25474: 				num = 16;
+25475: 			}
+25476: 			catch (Exception ex)
+25477: 			{
+25478: 				MessageBox.Show("读取OAS参数失败：" /* string-offset:4036 */ + ex.Message);
+25479: 			}
+25480: 		}

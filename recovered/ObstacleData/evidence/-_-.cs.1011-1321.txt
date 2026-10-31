@@ -1,0 +1,311 @@
+1011: 		[CommandMethod("xInfo")]
+1012: 		public void _0087_0099()
+1013: 		{
+1014: 			//IL_0029: Unknown result type (might be due to invalid IL or missing references)
+1015: 			//IL_002f: Expected O, but got Unknown
+1016: 			//IL_0052: Unknown result type (might be due to invalid IL or missing references)
+1017: 			//IL_005c: Invalid comparison between Unknown and I4
+1018: 			//IL_007f: Unknown result type (might be due to invalid IL or missing references)
+1019: 			//IL_008a: Unknown result type (might be due to invalid IL or missing references)
+1020: 			//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
+1021: 			//IL_00c8: Unknown result type (might be due to invalid IL or missing references)
+1022: 			if (false /* original-file-bool-offset:28 */)
+1023: 			{
+1024: 				return;
+1025: 			}
+1026: 			Editor editor = Application.DocumentManager.MdiActiveDocument.Editor;
+1027: 			PromptEntityOptions val = new PromptEntityOptions("请选择实体对象" /* string-offset:488 */);
+1028: 			if (!_008D())
+1029: 			{
+1030: 				return;
+1031: 			}
+1032: 			PromptEntityResult entity = editor.GetEntity(val);
+1033: 			_008E();
+1034: 			if (!_008D() || (int)((PromptResult)entity).Status != 5100)
+1035: 			{
+1036: 				return;
+1037: 			}
+1038: 			Transaction val2 = Application.DocumentManager.MdiActiveDocument.Database.TransactionManager.StartTransaction();
+1039: 			try
+1040: 			{
+1041: 				ResultBuffer xData = ((DBObject)(Entity)val2.GetObject(entity.ObjectId, (OpenMode)0)).XData;
+1042: 				if (_008E() || xData != (ResultBuffer)null)
+1043: 				{
+1044: 					TypedValue[] array = xData.AsArray();
+1045: 					string text = "";
+1046: 					TypedValue[] array2 = array;
+1047: 					for (int i = 0; i < array2.Length; i++)
+1048: 					{
+1049: 						TypedValue val3 = array2[i];
+1050: 						if (((TypedValue)(ref val3)).TypeCode == 1001)
+1051: 						{
+1052: 							text = ((TypedValue)(ref val3)).Value.ToString();
+1053: 							continue;
+1054: 						}
+1055: 						string text3;
+1056: 						if (!(((TypedValue)(ref val3)).Value is string text2))
+1057: 						{
+1058: 							_ = 0;
+1059: 							if (!_008D())
+1060: 							{
+1061: 								continue;
+1062: 							}
+1063: 							text3 = ((TypedValue)(ref val3)).Value.ToString();
+1064: 						}
+1065: 						else
+1066: 						{
+1067: 							text3 = text2;
+1068: 						}
+1069: 						string text4 = text3;
+1070: 						_0087_009A(editor, text, text4);
+1071: 					}
+1072: 				}
+1073: 				else
+1074: 				{
+1075: 					editor.WriteMessage("Non-Information avaiable\n" /* string-offset:492 */);
+1076: 				}
+1077: 			}
+1078: 			finally
+1079: 			{
+1080: 				((IDisposable)val2)?.Dispose();
+1081: 			}
+1082: 		}
+1083: 
+1084: 		private static void _0087_009A(Editor P_0, string P_1, string P_2)
+1085: 		{
+1086: 			string text = P_2.TrimStart();
+1087: 			if (!text.StartsWith("{" /* string-offset:496 */) && !text.StartsWith("[" /* string-offset:500 */))
+1088: 			{
+1089: 				P_0.WriteMessage(P_1 + " = " /* string-offset:504 */ + P_2 + "\n" /* string-offset:328 */);
+1090: 				return;
+1091: 			}
+1092: 			P_0.WriteMessage(P_1 + "\n" /* string-offset:328 */);
+1093: 			int num = 0;
+1094: 			_008D();
+1095: 			if (!_008E())
+1096: 			{
+1097: 				_0087_009B(P_0, text, ref num, 1);
+1098: 			}
+1099: 		}
+1100: 
+1101: 		private static void _0087_009B(Editor P_0, string P_1, ref int P_2, int P_3)
+1102: 		{
+1103: 			if (!true /* original-file-bool-offset:32 */)
+1104: 			{
+1105: 				return;
+1106: 			}
+1107: 			_0087_009C(P_1, ref P_2);
+1108: 			if (P_2 >= P_1.Length)
+1109: 			{
+1110: 				return;
+1111: 			}
+1112: 			string text = new string(' ', P_3 * 2);
+1113: 			if (!_008D())
+1114: 			{
+1115: 				goto IL_00a0;
+1116: 			}
+1117: 			char c = P_1[P_2];
+1118: 			if (c == '{')
+1119: 			{
+1120: 				P_2++;
+1121: 				goto IL_0113;
+1122: 			}
+1123: 			if (c != '[')
+1124: 			{
+1125: 				if (c != '"')
+1126: 				{
+1127: 					P_0.WriteMessage(text + _0088_0086(P_1, ref P_2) + "\n" /* string-offset:328 */);
+1128: 					if (!_008E())
+1129: 					{
+1130: 						return;
+1131: 					}
+1132: 				}
+1133: 				P_0.WriteMessage(text + _0087_009E(P_1, ref P_2) + "\n" /* string-offset:328 */);
+1134: 				return;
+1135: 			}
+1136: 			goto IL_0152;
+1137: 			IL_00a0:
+1138: 			string text2 = default(string);
+1139: 			P_0.WriteMessage(text + text2 + " = " /* string-offset:504 */ + _0088_0086(P_1, ref P_2) + "\n" /* string-offset:328 */);
+1140: 			goto IL_00dd;
+1141: 			IL_0152:
+1142: 			P_2++;
+1143: 			while (true)
+1144: 			{
+1145: 				_0087_009C(P_1, ref P_2);
+1146: 				if (P_2 >= P_1.Length || P_1[P_2] != ']')
+1147: 				{
+1148: 					if (_0087_009D(P_1, P_2))
+1149: 					{
+1150: 						P_0.WriteMessage(text + "- " /* string-offset:508 */ + _0088_0086(P_1, ref P_2) + "\n" /* string-offset:328 */);
+1151: 					}
+1152: 					else
+1153: 					{
+1154: 						P_0.WriteMessage(text + "-\n" /* string-offset:512 */);
+1155: 						_0087_009B(P_0, P_1, ref P_2, P_3 + 1);
+1156: 					}
+1157: 					_0087_009C(P_1, ref P_2);
+1158: 					if (P_2 < P_1.Length && P_1[P_2] == ',')
+1159: 					{
+1160: 						P_2++;
+1161: 					}
+1162: 					continue;
+1163: 				}
+1164: 				break;
+1165: 			}
+1166: 			goto IL_01fd;
+1167: 			IL_0113:
+1168: 			_0087_009C(P_1, ref P_2);
+1169: 			if (P_2 >= P_1.Length || P_1[P_2] != '}')
+1170: 			{
+1171: 				text2 = _0087_009E(P_1, ref P_2);
+1172: 				_0087_009C(P_1, ref P_2);
+1173: 				if (!_008E())
+1174: 				{
+1175: 					P_2++;
+1176: 					_0087_009C(P_1, ref P_2);
+1177: 					if (!_0087_009D(P_1, P_2))
+1178: 					{
+1179: 						P_0.WriteMessage(text + text2 + "\n" /* string-offset:328 */);
+1180: 						_0087_009B(P_0, P_1, ref P_2, P_3 + 1);
+1181: 						goto IL_00dd;
+1182: 					}
+1183: 				}
+1184: 				goto IL_00a0;
+1185: 			}
+1186: 			if (!_008E())
+1187: 			{
+1188: 				P_2++;
+1189: 				_008D();
+1190: 				if (!_008E())
+1191: 				{
+1192: 					return;
+1193: 				}
+1194: 				goto IL_0152;
+1195: 			}
+1196: 			goto IL_01fd;
+1197: 			IL_00dd:
+1198: 			_0087_009C(P_1, ref P_2);
+1199: 			if (P_2 < P_1.Length && P_1[P_2] == ',')
+1200: 			{
+1201: 				P_2++;
+1202: 			}
+1203: 			goto IL_0113;
+1204: 			IL_01fd:
+1205: 			P_2++;
+1206: 		}
+1207: 
+1208: 		private static void _0087_009C(string P_0, ref int P_1)
+1209: 		{
+1210: 			while (P_1 < P_0.Length)
+1211: 			{
+1212: 				do
+1213: 				{
+1214: 					if (char.IsWhiteSpace(P_0[P_1]))
+1215: 					{
+1216: 						P_1++;
+1217: 						_008D();
+1218: 						continue;
+1219: 					}
+1220: 					return;
+1221: 				}
+1222: 				while (_008E());
+1223: 			}
+1224: 		}
+1225: 
+1226: 		private static bool _0087_009D(string P_0, int P_1)
+1227: 		{
+1228: 			if (P_1 < P_0.Length && P_0[P_1] != '{')
+1229: 			{
+1230: 				return P_0[P_1] != '[';
+1231: 			}
+1232: 			return false;
+1233: 		}
+1234: 
+1235: 		private static string _0087_009E(string P_0, ref int P_1)
+1236: 		{
+1237: 			if (false /* original-file-bool-offset:36 */)
+1238: 			{
+1239: 				goto IL_009e;
+1240: 			}
+1241: 			P_1++;
+1242: 			StringBuilder stringBuilder = new StringBuilder();
+1243: 			goto IL_00b1;
+1244: 			IL_009e:
+1245: 			char c = default(char);
+1246: 			stringBuilder.Append(c);
+1247: 			goto IL_00b1;
+1248: 			IL_00b1:
+1249: 			while (true)
+1250: 			{
+1251: 				if (P_1 < P_0.Length)
+1252: 				{
+1253: 					char c2 = P_0[P_1++];
+1254: 					_008E();
+1255: 					if (!_008D())
+1256: 					{
+1257: 						break;
+1258: 					}
+1259: 					if (c2 == '\\' && P_1 < P_0.Length)
+1260: 					{
+1261: 						c = P_0[P_1++];
+1262: 						switch (c)
+1263: 						{
+1264: 						case 't':
+1265: 							stringBuilder.Append('\t');
+1266: 							continue;
+1267: 						case 'r':
+1268: 							stringBuilder.Append('\r');
+1269: 							continue;
+1270: 						case 'n':
+1271: 							stringBuilder.Append('\n');
+1272: 							continue;
+1273: 						}
+1274: 						break;
+1275: 					}
+1276: 					if (c2 != '"')
+1277: 					{
+1278: 						stringBuilder.Append(c2);
+1279: 						continue;
+1280: 					}
+1281: 				}
+1282: 				else if (!_008D())
+1283: 				{
+1284: 					break;
+1285: 				}
+1286: 				return stringBuilder.ToString();
+1287: 			}
+1288: 			goto IL_009e;
+1289: 		}
+1290: 
+1291: 		private static string _0088_0086(string P_0, ref int P_1)
+1292: 		{
+1293: 			int num = P_1;
+1294: 			_008D();
+1295: 			if (!_008E())
+1296: 			{
+1297: 				goto IL_001b;
+1298: 			}
+1299: 			goto IL_003d;
+1300: 			IL_001b:
+1301: 			if (P_1 < P_0.Length && P_0[P_1] != ',' && P_0[P_1] != '}')
+1302: 			{
+1303: 				goto IL_003d;
+1304: 			}
+1305: 			goto IL_0049;
+1306: 			IL_003d:
+1307: 			if (P_0[P_1] != ']')
+1308: 			{
+1309: 				P_1++;
+1310: 				goto IL_001b;
+1311: 			}
+1312: 			goto IL_0049;
+1313: 			IL_0049:
+1314: 			return P_0.Substring(num, P_1 - num).Trim();
+1315: 		}
+1316: 
+1317: 		static _0089()
+1318: 		{
+1319: 			LicenseManager.Validate(typeof(_0089));
+1320: 		}
+1321: 

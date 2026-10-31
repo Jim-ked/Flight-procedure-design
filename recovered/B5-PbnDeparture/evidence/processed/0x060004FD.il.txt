@@ -1,0 +1,47 @@
+METHOD 060004FD \x8b\x95.\x8b\x94::\x89\x8f\x87 RVA=69D8C file=67F8C
+IL_0000: call 0x06000549 \x8b\x95.\x8b\x94::\x88\x9c
+IL_0005: brtrue.s 68
+IL_0007: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_000C: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0011: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_0016: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_001B: call 0x060004F0 \x8b\x95.\x8b\x94::\x89\x8e\x93
+IL_0020: pop 
+IL_0021: ldarg.0 
+IL_0022: ldc.i4.0 
+IL_0023: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0028: ldc.i4 6320
+IL_002D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0032: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0037: stloc.0 
+IL_0038: ldarg.0 
+IL_0039: ldc.i4.1 
+IL_003A: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_003F: ldc.i4.0 
+IL_0040: call 0x06000548 \x8b\x95.\x8b\x94::\x88\x9b
+IL_0045: brfalse.s 118
+IL_0047: pop 
+IL_0048: ldarg.0 
+IL_0049: ldfld 0x04000589 \x8b\x95.\x8b\x94::\x89\x95\x86
+IL_004E: ldloca.s local(0x0000)
+IL_0050: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0055: ldc.i4.2 
+IL_0056: call 0x0A0001C8 System.Math::Round
+IL_005B: stloc.1 
+IL_005C: ldloca.s local(0x0001)
+IL_005E: call 0x0A0001B7 System.Double::ToString
+IL_0063: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0068: br.s 119
+IL_006A: pop 
+IL_006B: ldarg.0 
+IL_006C: ldfld 0x04000588 \x8b\x95.\x8b\x94::\x89\x94\x9e
+IL_0071: ldloca.s local(0x0000)
+IL_0073: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0078: ldc.i4.2 
+IL_0079: call 0x0A0001C8 System.Math::Round
+IL_007E: stloc.1 
+IL_007F: ldloca.s local(0x0001)
+IL_0081: call 0x0A0001B7 System.Double::ToString
+IL_0086: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_008B: ret 
+

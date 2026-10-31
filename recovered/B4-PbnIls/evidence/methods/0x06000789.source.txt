@@ -1,0 +1,18 @@
+81636: 		public static List<_008E_0097> _008A_009C_0097(List<_008F_008E> P_0)
+81637: 		{
+81638: 			List<_008E_0097> list = new List<_008E_0097>();
+81639: 			if (P_0 == null)
+81640: 			{
+81641: 				return list;
+81642: 			}
+81643: 			foreach (_008F_008E item in P_0)
+81644: 			{
+81645: 				_008E_0097 obj = new _008E_0097();
+81646: 				obj.X = item.X;
+81647: 				obj.Y = item.Y;
+81648: 				obj.Z = item.Z;
+81649: 				obj.Name = item.Name;
+81650: 				list.Add(obj);
+81651: 			}
+81652: 			return list;
+81653: 		}

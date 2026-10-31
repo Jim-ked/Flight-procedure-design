@@ -1,0 +1,22 @@
+83681: 		public static double _008B_0087_009E(TextBox P_0, string P_1 = "输入数据有误，请检查。")
+83682: 		{
+83683: 			_ = 0;
+83684: 			double result = default(double);
+83685: 			if (_0089p())
+83686: 			{
+83687: 				if (double.TryParse(P_0.Text, out result))
+83688: 				{
+83689: 					goto IL_0034;
+83690: 				}
+83691: 				P_0.Focus();
+83692: 				P_0.BackColor = Color.LightCoral;
+83693: 			}
+83694: 			else if (!_0089q())
+83695: 			{
+83696: 				goto IL_0034;
+83697: 			}
+83698: 			MessageBox.Show(P_0.Text + " " /* string-offset:584 */ + P_1, "数据错误" /* string-offset:4984 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83699: 			return 0.0;
+83700: 			IL_0034:
+83701: 			return result;
+83702: 		}

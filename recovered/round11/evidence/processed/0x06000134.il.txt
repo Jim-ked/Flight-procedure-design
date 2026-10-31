@@ -1,0 +1,31 @@
+METHOD 06000134 \x87\x89.\x87\x88::\x8c\x8f RVA=107BC file=E9BC
+IL_0000: ldc.i4.0 
+IL_0001: stloc.0 
+IL_0002: call 0x0600013B \x87\x89.\x87\x88::5
+IL_0007: brfalse.s 84
+IL_0009: br.s 84
+IL_000B: ldarg.0 
+IL_000C: ldloc.0 
+IL_000D: ldarg.1 
+IL_000E: ldloc.0 
+IL_000F: callvirt 0x0A0001D0 Autodesk.AutoCAD.Geometry.Point2dCollection::get_Item
+IL_0014: ldc.r8 0.0
+IL_001D: ldc.r8 0.0
+IL_0026: ldc.r8 0.0
+IL_002F: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0034: call 0x0600013B \x87\x89.\x87\x88::5
+IL_0039: call 0x0600013C \x87\x89.\x87\x88::6
+IL_003E: brtrue.s 83
+IL_0040: pop 
+IL_0041: ldloc.0 
+IL_0042: ldc.i4.1 
+IL_0043: add 
+IL_0044: stloc.0 
+IL_0045: br.s 84
+IL_0047: pop 
+IL_0048: ldloc.0 
+IL_0049: ldarg.1 
+IL_004A: callvirt 0x0A0001D1 Autodesk.AutoCAD.Geometry.Point2dCollection::get_Count
+IL_004F: blt.s 23
+IL_0051: ret 
+

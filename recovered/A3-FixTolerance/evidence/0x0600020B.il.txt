@@ -1,0 +1,19 @@
+METHOD 0600020B \x88\x98.\x88\x97::\x94\x9c RVA=3A1E file=1C1E
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000098 \x88\x98.\x88\x97::\x95\x98
+IL_0006: callvirt 0x0A000201 System.Windows.Forms.RadioButton::get_Checked
+IL_000B: brfalse.s 60
+IL_000D: ldarg.0 
+IL_000E: ldfld 0x04000092 \x88\x98.\x88\x97::\x95\x92
+IL_0013: ldarg.0 
+IL_0014: ldfld 0x04000091 \x88\x98.\x88\x97::\x95\x91
+IL_0019: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_001E: brtrue.s 45
+IL_0020: ldc.i4 1612
+IL_0025: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_002A: br.s 55
+IL_002C: ldc.i4 1616
+IL_0031: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0036: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_003B: ret 
+

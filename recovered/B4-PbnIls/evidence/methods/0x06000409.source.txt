@@ -1,0 +1,137 @@
+41676: 		public static _008A_0093 _0088_0090_0094(string P_0, _008A_008F P_1, string P_2, string P_3)
+41677: 		{
+41678: 			//IL_009d: Unknown result type (might be due to invalid IL or missing references)
+41679: 			//IL_00a4: Expected O, but got Unknown
+41680: 			//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
+41681: 			//IL_00ca: Expected O, but got Unknown
+41682: 			//IL_02bd: Unknown result type (might be due to invalid IL or missing references)
+41683: 			//IL_02c4: Expected O, but got Unknown
+41684: 			string text = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\oas.db" /* string-offset:5444 */;
+41685: 			_ = 1;
+41686: 			if (!_0087u())
+41687: 			{
+41688: 				if (File.Exists(text))
+41689: 				{
+41690: 					string text2 = "Data Source=" /* string-offset:5452 */ + text + ";Version=3;" /* string-offset:5456 */;
+41691: 					_008A_0093 obj = new _008A_0093(P_1);
+41692: 					int num = (int)P_1;
+41693: 					string text3 = (P_0 + num + P_2).Replace("." /* string-offset:700 */, "");
+41694: 					int num2 = (int)Math.Round(Convert.ToDouble(P_3), 0);
+41695: 					SQLiteConnection val = new SQLiteConnection(text2);
+41696: 					try
+41697: 					{
+41698: 						((DbConnection)(object)val).Open();
+41699: 						string text4 = "SELECT Value FROM PartA WHERE ID = @id" /* string-offset:5460 */;
+41700: 						string text5 = "SELECT Value FROM PartB WHERE ID = @id" /* string-offset:5464 */;
+41701: 						SQLiteCommand val2 = new SQLiteCommand(text4, val);
+41702: 						try
+41703: 						{
+41704: 							val2.Parameters.AddWithValue("@id" /* string-offset:5468 */, (object)text3);
+41705: 							int num3 = 0;
+41706: 							string text6;
+41707: 							while (true)
+41708: 							{
+41709: 								text6 = ((DbCommand)(object)val2).ExecuteScalar().ToString();
+41710: 								num3 = 8;
+41711: 								if (!_0087u())
+41712: 								{
+41713: 									while (true)
+41714: 									{
+41715: 										switch (num3)
+41716: 										{
+41717: 										case 8:
+41718: 											obj._0088_0091_009A._008B_008B_0092 = (double)Convert.ToInt32(text3.Substring(3, 2)) * -0.001;
+41719: 											_ = 1;
+41720: 											if (!_0087u())
+41721: 											{
+41722: 												num3 = 5;
+41723: 												goto case 2;
+41724: 											}
+41725: 											num3 = 7;
+41726: 											goto default;
+41727: 										case 2:
+41728: 										case 5:
+41729: 											obj._0088_0091_009A._008B_008B_0093 = 0.0;
+41730: 											obj._0088_0091_009A._008B_008B_0094 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(0, 4))) * -0.01;
+41731: 											num3 = 6;
+41732: 											goto case 6;
+41733: 										case 6:
+41734: 											obj._0088_0091_0096._008B_008B_0092 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(4, 5))) * 1E-06;
+41735: 											goto default;
+41736: 										default:
+41737: 											obj._0088_0091_0096._008B_008B_0093 = 0.0;
+41738: 											num3 = 1;
+41739: 											if (_0087t())
+41740: 											{
+41741: 												continue;
+41742: 											}
+41743: 											goto case 6;
+41744: 										case 0:
+41745: 											break;
+41746: 										case 1:
+41747: 											obj._0088_0091_0096._008B_008B_0094 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(9, 3))) * -0.01;
+41748: 											num3 = 3;
+41749: 											goto IL_023c;
+41750: 										case 3:
+41751: 											goto IL_023c;
+41752: 										case 9:
+41753: 											goto end_IL_01ed;
+41754: 										}
+41755: 										break;
+41756: 									}
+41757: 									continue;
+41758: 								}
+41759: 								goto IL_023c;
+41760: 								IL_023c:
+41761: 								obj._0088_0091_0097._008B_008B_0092 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(12, 5))) * 1E-06;
+41762: 								obj._0088_0091_0097._008B_008B_0093 = 0.0;
+41763: 								num3 = 9;
+41764: 								break;
+41765: 								continue;
+41766: 								end_IL_01ed:
+41767: 								break;
+41768: 							}
+41769: 							obj._0088_0091_0097._008B_008B_0094 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(17, 4))) * -0.01;
+41770: 						}
+41771: 						finally
+41772: 						{
+41773: 							((IDisposable)val2)?.Dispose();
+41774: 						}
+41775: 						SQLiteCommand val3 = new SQLiteCommand(text5, val);
+41776: 						try
+41777: 						{
+41778: 							val3.Parameters.AddWithValue("@id" /* string-offset:5468 */, (object)(text3 + num2));
+41779: 							string text7 = _0088_0090_0095(((DbCommand)(object)val3).ExecuteScalar().ToString());
+41780: 							_0087t();
+41781: 							if (!_0087u())
+41782: 							{
+41783: 								obj._0088_0091_0098._008B_008B_0092 = (double)Convert.ToInt32(text7.Substring(0, 5)) * 1E-06;
+41784: 							}
+41785: 							else if (!_0087t())
+41786: 							{
+41787: 								goto IL_035a;
+41788: 							}
+41789: 							obj._0088_0091_0098._008B_008B_0093 = (double)Convert.ToInt32(text7.Substring(5, 6)) * 1E-06;
+41790: 							goto IL_035a;
+41791: 							IL_035a:
+41792: 							obj._0088_0091_0098._008B_008B_0094 = (double)Convert.ToInt32(text7.Substring(11, 4)) * -0.01;
+41793: 							obj._0088_0091_0099._008B_008B_0092 = (double)Convert.ToInt32(text7.Substring(15, 5)) * 1E-06;
+41794: 							obj._0088_0091_0099._008B_008B_0093 = (double)Convert.ToInt32(text7.Substring(20, 6)) * 1E-06;
+41795: 							obj._0088_0091_0099._008B_008B_0094 = (double)Convert.ToInt32(text7.Substring(26, 4)) * -0.01;
+41796: 						}
+41797: 						finally
+41798: 						{
+41799: 							((IDisposable)val3)?.Dispose();
+41800: 						}
+41801: 						((DbConnection)(object)val).Close();
+41802: 						return obj;
+41803: 					}
+41804: 					finally
+41805: 					{
+41806: 						((IDisposable)val)?.Dispose();
+41807: 					}
+41808: 				}
+41809: 				MessageBox.Show("参数文件不存在。" /* string-offset:5448 */);
+41810: 			}
+41811: 			return null;
+41812: 		}

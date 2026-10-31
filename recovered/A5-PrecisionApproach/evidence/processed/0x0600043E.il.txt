@@ -1,0 +1,14 @@
+METHOD 0600043E \x8a\x9a.\x8a\x99::\x88\x94\x9a RVA=567EC file=549EC
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x040003DC \x8a\x9a.\x8a\x99::\x88\x95\x8a
+IL_0006: ldarg.0 
+IL_0007: ldfld 0x040003D5 \x8a\x9a.\x8a\x99::\x88\x94\x9c
+IL_000C: ldfld 0x0400038D \x8a\x94.\x8a\x93::\x88\x91\x89
+IL_0011: call 0x0600081F \x8f\x91.\x8f\x90::\x8b\x8a\x92
+IL_0016: stloc.0 
+IL_0017: ldarg.0 
+IL_0018: ldfld 0x040003E2 \x8a\x9a.\x8a\x99::\x88\x95\x90
+IL_001D: ldloc.0 
+IL_001E: callvirt 0x0A0001D8 0x1B000001::Add
+IL_0023: ret 
+

@@ -1,0 +1,25 @@
+47512: 		private void _0088_009B_0092(object P_0, EventArgs P_1)
+47513: 		{
+47514: 			//IL_0090: Unknown result type (might be due to invalid IL or missing references)
+47515: 			//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+47516: 			//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
+47517: 			//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
+47518: 			_ = 1;
+47519: 			if (!_0088_0094() && !true /* original-file-bool-offset:928 */)
+47520: 			{
+47521: 				return;
+47522: 			}
+47523: 			DBPoint val = default(DBPoint);
+47524: 			foreach (DataGridViewRow selectedRow in _0088_009D_0090.SelectedRows)
+47525: 			{
+47526: 				_0088_0093();
+47527: 				if (!_0088_0094())
+47528: 				{
+47529: 					val = _0088_009D_0088[_0088_009D_0090.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+47530: 				}
+47531: 				ObjectId val2 = _008B._0089_0087("obst" /* string-offset:2780 */, val.Position);
+47532: 				string obj = "Altitude" /* string-offset:536 */;
+47533: 				Point3d position = val.Position;
+47534: 				_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+47535: 			}
+47536: 		}

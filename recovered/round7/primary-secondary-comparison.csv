@@ -1,0 +1,4 @@
+﻿topic,classification,B4,other,evidence
+B3 APV,Different implementation,"outward fraction max(0,(a-1852)/1852); +30 plane",B3 inward MOC factor and own interpolation,P5E0/P567 vs B3 apv-surfaces/evaluation
+B5 departure,Different implementation,fixed same-axis OAS transition,turn-specific region geometry/MOC; no B4 evaluator call,B4 direct-calls; frozen B5
+A9 PriSec,Different implementation,max surfaces and outward correction,MOC=m*(outer-a)/(outer-primary) with finite longitudinal gates,P5E0 vs frozen ObstacleData/pri-sec-evaluation.md

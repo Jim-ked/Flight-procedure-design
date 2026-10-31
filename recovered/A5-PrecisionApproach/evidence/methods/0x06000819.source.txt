@@ -1,0 +1,46 @@
+84382: 		public static List<_008F_008E> _008B_008A_008C(List<_008F_008E> P_0, double P_1)
+84383: 		{
+84384: 			if (false /* original-file-bool-offset:1444 */)
+84385: 			{
+84386: 				goto IL_0082;
+84387: 			}
+84388: 			List<_008F_008E> list = default(List<_008F_008E>);
+84389: 			int num2 = default(int);
+84390: 			_008F_008E obj;
+84391: 			_008F_008E obj2;
+84392: 			double num;
+84393: 			if (P_0 != null && P_0.Count >= 2)
+84394: 			{
+84395: 				list = new List<_008F_008E>();
+84396: 				obj = P_0[0];
+84397: 				obj2 = P_0[1];
+84398: 				num = _008F_008E._008B_0089_0086(obj, obj2);
+84399: 				list.Add(new _008F_008E(obj.X - P_1 * Math.Sin(num), obj.Y + P_1 * Math.Cos(num)));
+84400: 				num2 = 1;
+84401: 				goto IL_00fc;
+84402: 			}
+84403: 			throw new ArgumentException("点集必须包含至少两个点" /* string-offset:7492 */);
+84404: 			IL_0082:
+84405: 			_008F_008E obj3 = P_0[num2];
+84406: 			_008F_008E obj4 = P_0[num2 + 1];
+84407: 			_008F_008E obj5 = default(_008F_008E);
+84408: 			double num3 = _008F_008E._008B_0089_0086(obj3, obj5);
+84409: 			double num4 = _008F_008E._008B_0089_0086(obj3, obj4);
+84410: 			double num5 = (num3 + num4) / 2.0;
+84411: 			double num6 = obj3.X - P_1 * Math.Sin(num5);
+84412: 			double num7 = obj3.Y + P_1 * Math.Cos(num5);
+84413: 			list.Add(new _008F_008E(num6, num7));
+84414: 			num2++;
+84415: 			goto IL_00fc;
+84416: 			IL_00fc:
+84417: 			if (num2 < P_0.Count - 1)
+84418: 			{
+84419: 				obj5 = P_0[num2 - 1];
+84420: 				goto IL_0082;
+84421: 			}
+84422: 			obj = P_0[P_0.Count - 2];
+84423: 			obj2 = P_0[P_0.Count - 1];
+84424: 			num = _008F_008E._008B_0089_0086(obj, obj2);
+84425: 			list.Add(new _008F_008E(obj2.X - P_1 * Math.Sin(num), obj2.Y + P_1 * Math.Cos(num)));
+84426: 			return list;
+84427: 		}

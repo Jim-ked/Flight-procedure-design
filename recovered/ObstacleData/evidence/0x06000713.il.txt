@@ -1,0 +1,142 @@
+METHOD 06000713 \x8e\x8e.\x8e\x8d::\x8a\x99\x93 RVA=8B494 file=89694
+IL_0000: call 0x06000723 \x8e\x8e.\x8e\x8d::\x894
+IL_0005: call 0x06000722 \x8e\x8e.\x8e\x8d::\x893
+IL_000A: brfalse 388
+IL_000F: pop 
+IL_0010: ldarg.0 
+IL_0011: ldnull 
+IL_0012: call 0x0A0001C7 Autodesk.AutoCAD.DatabaseServices.ResultBuffer::op_Equality
+IL_0017: brtrue 389
+IL_001C: newobj 0x06000720 \x8e\x8e.\x8e\x8d::.ctor
+IL_0021: stloc.0 
+IL_0022: ldarg.0 
+IL_0023: callvirt 0x0A000083 Autodesk.AutoCAD.DatabaseServices.ResultBuffer::AsArray
+IL_0028: stloc.1 
+IL_0029: ldloc.1 
+IL_002A: ldlen 
+IL_002B: conv.i4 
+IL_002C: ldc.i4.3 
+IL_002D: blt 353
+IL_0032: ldloc.1 
+IL_0033: ldc.i4.1 
+IL_0034: ldelema 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_0039: call 0x0A000085 Autodesk.AutoCAD.DatabaseServices.TypedValue::get_Value
+IL_003E: dup 
+IL_003F: brtrue.s 81
+IL_0041: pop 
+IL_0042: ldnull 
+IL_0043: br.s 86
+IL_0045: callvirt 0x0A000086 System.Object::ToString
+IL_004A: ldloca.s local(0x0002)
+IL_004C: call 0x0A000350 System.Int32::TryParse
+IL_0051: brfalse.s 102
+IL_0053: ldloc.0 
+IL_0054: ldloc.2 
+IL_0055: callvirt 0x0600070A \x8e\x8e.\x8e\x8d::\x8a\x9a\x8a
+IL_005A: ldloc.0 
+IL_005B: ldloc.1 
+IL_005C: ldc.i4.2 
+IL_005D: ldelema 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_0062: call 0x0A000085 Autodesk.AutoCAD.DatabaseServices.TypedValue::get_Value
+IL_0067: dup 
+IL_0068: brtrue.s 122
+IL_006A: pop 
+IL_006B: ldnull 
+IL_006C: br.s 127
+IL_006E: callvirt 0x0A000086 System.Object::ToString
+IL_0073: callvirt 0x06000708 \x8e\x8e.\x8e\x8d::\x8a\x9a\x88
+IL_0078: ldloc.1 
+IL_0079: ldlen 
+IL_007A: conv.i4 
+IL_007B: ldc.i4.4 
+IL_007C: blt 353
+IL_0081: newobj 0x0A000091 System.Text.StringBuilder::.ctor
+IL_0086: stloc.3 
+IL_0087: ldc.i4.3 
+IL_0088: stloc.s local(0x0004)
+IL_008A: br.s 198
+IL_008C: ldloc.1 
+IL_008D: ldloc.s local(0x0004)
+IL_008F: ldelema 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_0094: call 0x0A000085 Autodesk.AutoCAD.DatabaseServices.TypedValue::get_Value
+IL_0099: brfalse.s 192
+IL_009B: ldloc.3 
+IL_009C: ldloc.1 
+IL_009D: ldloc.s local(0x0004)
+IL_009F: ldelema 0x010000D8 Autodesk.AutoCAD.DatabaseServices.TypedValue
+IL_00A4: call 0x0A000085 Autodesk.AutoCAD.DatabaseServices.TypedValue::get_Value
+IL_00A9: callvirt 0x0A000086 System.Object::ToString
+IL_00AE: callvirt 0x0A00018F System.Text.StringBuilder::Append
+IL_00B3: pop 
+IL_00B4: ldloc.s local(0x0004)
+IL_00B6: ldc.i4.1 
+IL_00B7: add 
+IL_00B8: stloc.s local(0x0004)
+IL_00BA: ldloc.s local(0x0004)
+IL_00BC: ldloc.1 
+IL_00BD: ldlen 
+IL_00BE: conv.i4 
+IL_00BF: blt.s 152
+IL_00C1: ldloc.3 
+IL_00C2: callvirt 0x0A000086 System.Object::ToString
+IL_00C7: call 0x06000711 \x8e\x8e.\x8e\x8d::\x8a\x99\x91
+IL_00CC: stloc.s local(0x0005)
+IL_00CE: ldloc.s local(0x0005)
+IL_00D0: brfalse 353
+IL_00D5: ldloc.s local(0x0005)
+IL_00D7: callvirt 0x06000707 \x8e\x8e.\x8e\x8d::\x8a\x9a\x87
+IL_00DC: call 0x0A000134 System.String::IsNullOrEmpty
+IL_00E1: brtrue.s 252
+IL_00E3: ldloc.0 
+IL_00E4: ldloc.s local(0x0005)
+IL_00E6: callvirt 0x06000707 \x8e\x8e.\x8e\x8d::\x8a\x9a\x87
+IL_00EB: callvirt 0x06000708 \x8e\x8e.\x8e\x8d::\x8a\x9a\x88
+IL_00F0: ldloc.0 
+IL_00F1: ldloc.s local(0x0005)
+IL_00F3: callvirt 0x06000709 \x8e\x8e.\x8e\x8d::\x8a\x9a\x89
+IL_00F8: callvirt 0x0600070A \x8e\x8e.\x8e\x8d::\x8a\x9a\x8a
+IL_00FD: ldloc.s local(0x0005)
+IL_00FF: callvirt 0x0600070B \x8e\x8e.\x8e\x8d::\x8a\x9a\x8b
+IL_0104: callvirt 0x0A000395 0x1B000030::GetEnumerator
+IL_0109: stloc.s local(0x0006)
+IL_010B: nop 
+IL_010C: br.s 328
+IL_010E: ldloca.s local(0x0006)
+IL_0110: call 0x0A000396 0x1B00003F::get_Current
+IL_0115: stloc.s local(0x0007)
+IL_0117: ldc.i4.0 
+IL_0118: call 0x06000722 \x8e\x8e.\x8e\x8d::\x893
+IL_011D: brfalse.s 327
+IL_011F: pop 
+IL_0120: ldloc.0 
+IL_0121: callvirt 0x0600070B \x8e\x8e.\x8e\x8d::\x8a\x9a\x8b
+IL_0126: ldloca.s local(0x0007)
+IL_0128: call 0x0A000397 0x1B000040::get_Key
+IL_012D: ldloca.s local(0x0007)
+IL_012F: call 0x0A000398 0x1B000040::get_Value
+IL_0134: callvirt 0x0A0002F9 0x1B000030::set_Item
+IL_0139: br.s 328
+IL_013B: pop 
+IL_013C: ldloca.s local(0x0006)
+IL_013E: call 0x0A00039A 0x1B00003F::MoveNext
+IL_0143: brtrue.s 282
+IL_0145: leave.s 353
+IL_0147: ldloca.s local(0x0006)
+IL_0149: constrained. 0x1B00003F 
+IL_014F: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0154: endfinally 
+IL_0155: leave.s 386
+IL_0157: stloc.s local(0x0008)
+IL_0159: ldc.i4 6784
+IL_015E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0163: ldloc.s local(0x0008)
+IL_0165: callvirt 0x0A000055 System.Exception::get_Message
+IL_016A: call 0x0A00008B System.String::Concat
+IL_016F: call 0x06000633 \x8d\x89.\x8d\x88::\x8a\x90\x8d
+IL_0174: leave.s 386
+IL_0176: ldloc.0 
+IL_0177: ret 
+IL_0178: pop 
+IL_0179: ldnull 
+IL_017A: ret 
+

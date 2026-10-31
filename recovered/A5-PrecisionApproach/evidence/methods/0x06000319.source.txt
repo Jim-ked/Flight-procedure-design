@@ -1,0 +1,155 @@
+24808: 		private string _0087_0092_0088()
+24809: 		{
+24810: 			try
+24811: 			{
+24812: 				Dictionary<string, object> obj = new Dictionary<string, object>
+24813: 				{
+24814: 					["THR" /* string-offset:3900 */] = new Dictionary<string, double>
+24815: 					{
+24816: 						["X" /* string-offset:3904 */] = _008F_008A._008B_0087_009E(_0087_0094_0099, "输入数据有误，请检查。" /* string-offset:1984 */),
+24817: 						["Y" /* string-offset:3908 */] = _008F_008A._008B_0087_009E(_0087_0094_0098, "输入数据有误，请检查。" /* string-offset:1984 */),
+24818: 						["Z" /* string-offset:3912 */] = _008F_008A._008B_0087_009E(_0087_0094_0097, "输入数据有误，请检查。" /* string-offset:1984 */)
+24819: 					},
+24820: 					["DER" /* string-offset:3916 */] = new Dictionary<string, double>
+24821: 					{
+24822: 						["X" /* string-offset:3904 */] = _008F_008A._008B_0087_009E(_0087_0095_008B, "输入数据有误，请检查。" /* string-offset:1984 */),
+24823: 						["Y" /* string-offset:3908 */] = _008F_008A._008B_0087_009E(_0087_0095_0089, "输入数据有误，请检查。" /* string-offset:1984 */),
+24824: 						["Z" /* string-offset:3912 */] = _008F_008A._008B_0087_009E(_0087_0095_0088, "输入数据有误，请检查。" /* string-offset:1984 */)
+24825: 					}
+24826: 				};
+24827: 				int num = 4;
+24828: 				string text = default(string);
+24829: 				string text2 = default(string);
+24830: 				string text3 = default(string);
+24831: 				string text4 = default(string);
+24832: 				Dictionary<string, object> obj4 = default(Dictionary<string, object>);
+24833: 				while (true)
+24834: 				{
+24835: 					Dictionary<string, object> obj2 = new Dictionary<string, object>
+24836: 					{
+24837: 						["AppType" /* string-offset:3920 */] = _0087_0093_0091.Text,
+24838: 						["CAT" /* string-offset:3924 */] = _0087_0093_0089.Text,
+24839: 						["GP" /* string-offset:3928 */] = _0087_0093_0090.Text,
+24840: 						["MissedCG" /* string-offset:3932 */] = _0087_0092_009D.Text,
+24841: 						["LocDistance" /* string-offset:3936 */] = _0087_0093_008C.Text,
+24842: 						["RDH" /* string-offset:3940 */] = _008F_008A._008B_0087_009E(_0087_0093_0088, "输入数据有误，请检查。" /* string-offset:1984 */),
+24843: 						["WingSpan" /* string-offset:3944 */] = _008F_008A._008B_0087_009E(_0087_0093_0087, "输入数据有误，请检查。" /* string-offset:1984 */),
+24844: 						["WheelBase" /* string-offset:3948 */] = _008F_008A._008B_0087_009E(_0087_0093_008B, "输入数据有误，请检查。" /* string-offset:1984 */),
+24845: 						["FAF_Height" /* string-offset:3952 */] = _008F_008A._008B_0087_009E(_0087_0096_0087, "输入数据有误，请检查。" /* string-offset:1984 */),
+24846: 						["IF_Length" /* string-offset:3956 */] = _008F_008A._008B_0087_009E(_0087_0095_009B, "输入数据有误，请检查。" /* string-offset:1984 */),
+24847: 						["FAF_Tolerance" /* string-offset:3960 */] = _008F_008A._008B_0087_009E(_0087_0095_009D, "输入数据有误，请检查。" /* string-offset:1984 */)
+24848: 					};
+24849: 					num = 5;
+24850: 					while (true)
+24851: 					{
+24852: 						Dictionary<string, object> obj3 = new Dictionary<string, object>
+24853: 						{
+24854: 							["P1" /* string-offset:3964 */] = new Dictionary<string, double>
+24855: 							{
+24856: 								["a" /* string-offset:3968 */] = _008F_008A._008B_0087_009E(_0087_0095_0091, "输入数据有误，请检查。" /* string-offset:1984 */),
+24857: 								["b" /* string-offset:3972 */] = _008F_008A._008B_0087_009E(_0087_0095_0093, "输入数据有误，请检查。" /* string-offset:1984 */),
+24858: 								["c" /* string-offset:3976 */] = _008F_008A._008B_0087_009E(_0087_0095_0094, "输入数据有误，请检查。" /* string-offset:1984 */)
+24859: 							},
+24860: 							["P2" /* string-offset:3980 */] = new Dictionary<string, double>
+24861: 							{
+24862: 								["a" /* string-offset:3968 */] = _008F_008A._008B_0087_009E(_0087_0095_0096, "输入数据有误，请检查。" /* string-offset:1984 */),
+24863: 								["b" /* string-offset:3972 */] = _008F_008A._008B_0087_009E(_0087_0095_0098, "输入数据有误，请检查。" /* string-offset:1984 */),
+24864: 								["c" /* string-offset:3976 */] = _008F_008A._008B_0087_009E(_0087_0095_0097, "输入数据有误，请检查。" /* string-offset:1984 */)
+24865: 							}
+24866: 						};
+24867: 						while (true)
+24868: 						{
+24869: 							_00870();
+24870: 							if (!_0087_009F())
+24871: 							{
+24872: 								num = 1;
+24873: 								if (_00870())
+24874: 								{
+24875: 									goto IL_041f;
+24876: 								}
+24877: 							}
+24878: 							else
+24879: 							{
+24880: 								num = 0;
+24881: 								if (!_0087_009F())
+24882: 								{
+24883: 									break;
+24884: 								}
+24885: 							}
+24886: 							switch (num)
+24887: 							{
+24888: 							case 5:
+24889: 								goto end_IL_011d;
+24890: 							case 4:
+24891: 								goto end_IL_0175;
+24892: 							case 0:
+24893: 							case 2:
+24894: 								goto IL_041f;
+24895: 							case 1:
+24896: 							case 3:
+24897: 								goto IL_06b9;
+24898: 							case 6:
+24899: 								goto IL_06ea;
+24900: 							}
+24901: 							continue;
+24902: 							IL_06b9:
+24903: 							JavaScriptSerializer javaScriptSerializer = new JavaScriptSerializer();
+24904: 							text = javaScriptSerializer.Serialize(obj);
+24905: 							text2 = javaScriptSerializer.Serialize(obj2);
+24906: 							text3 = javaScriptSerializer.Serialize(obj3);
+24907: 							text4 = javaScriptSerializer.Serialize(obj4);
+24908: 							num = 6;
+24909: 							goto IL_06ea;
+24910: 							IL_06ea:
+24911: 							return "RUNWAY:" /* string-offset:3992 */ + text + "|APPROACH:" /* string-offset:3996 */ + text2 + "|PAOAS:" /* string-offset:4000 */ + text3 + "|OAS:" /* string-offset:4004 */ + text4;
+24912: 							IL_041f:
+24913: 							obj4 = new Dictionary<string, object>
+24914: 							{
+24915: 								["W" /* string-offset:3984 */] = new Dictionary<string, double>
+24916: 								{
+24917: 									["a" /* string-offset:3968 */] = _008F_008A._008B_0087_009E(_0087_0093_0098, "输入数据有误，请检查。" /* string-offset:1984 */),
+24918: 									["b" /* string-offset:3972 */] = _008F_008A._008B_0087_009E(_0087_0093_009E, "输入数据有误，请检查。" /* string-offset:1984 */),
+24919: 									["c" /* string-offset:3976 */] = _008F_008A._008B_0087_009E(_0087_0094_008A, "输入数据有误，请检查。" /* string-offset:1984 */)
+24920: 								},
+24921: 								["Ws" /* string-offset:3988 */] = new Dictionary<string, double>
+24922: 								{
+24923: 									["a" /* string-offset:3968 */] = _008F_008A._008B_0087_009E(_0087_0093_009C, "输入数据有误，请检查。" /* string-offset:1984 */),
+24924: 									["b" /* string-offset:3972 */] = _008F_008A._008B_0087_009E(_0087_0094_0087, "输入数据有误，请检查。" /* string-offset:1984 */),
+24925: 									["c" /* string-offset:3976 */] = _008F_008A._008B_0087_009E(_0087_0094_008C, "输入数据有误，请检查。" /* string-offset:1984 */)
+24926: 								},
+24927: 								["X" /* string-offset:3904 */] = new Dictionary<string, double>
+24928: 								{
+24929: 									["a" /* string-offset:3968 */] = _008F_008A._008B_0087_009E(_0087_0094_008B, "输入数据有误，请检查。" /* string-offset:1984 */),
+24930: 									["b" /* string-offset:3972 */] = _008F_008A._008B_0087_009E(_0087_0094_0089, "输入数据有误，请检查。" /* string-offset:1984 */),
+24931: 									["c" /* string-offset:3976 */] = _008F_008A._008B_0087_009E(_0087_0094_0088, "输入数据有误，请检查。" /* string-offset:1984 */)
+24932: 								},
+24933: 								["Y" /* string-offset:3908 */] = new Dictionary<string, double>
+24934: 								{
+24935: 									["a" /* string-offset:3968 */] = _008F_008A._008B_0087_009E(_0087_0093_009D, "输入数据有误，请检查。" /* string-offset:1984 */),
+24936: 									["b" /* string-offset:3972 */] = _008F_008A._008B_0087_009E(_0087_0093_009B, "输入数据有误，请检查。" /* string-offset:1984 */),
+24937: 									["c" /* string-offset:3976 */] = _008F_008A._008B_0087_009E(_0087_0093_0099, "输入数据有误，请检查。" /* string-offset:1984 */)
+24938: 								},
+24939: 								["Z" /* string-offset:3912 */] = new Dictionary<string, double>
+24940: 								{
+24941: 									["a" /* string-offset:3968 */] = _008F_008A._008B_0087_009E(_0087_0093_0095, "输入数据有误，请检查。" /* string-offset:1984 */),
+24942: 									["b" /* string-offset:3972 */] = _008F_008A._008B_0087_009E(_0087_0093_0094, "输入数据有误，请检查。" /* string-offset:1984 */),
+24943: 									["c" /* string-offset:3976 */] = _008F_008A._008B_0087_009E(_0087_0093_0093, "输入数据有误，请检查。" /* string-offset:1984 */)
+24944: 								}
+24945: 							};
+24946: 							goto IL_06b9;
+24947: 							continue;
+24948: 							end_IL_011d:
+24949: 							break;
+24950: 						}
+24951: 						continue;
+24952: 						end_IL_0175:
+24953: 						break;
+24954: 					}
+24955: 				}
+24956: 			}
+24957: 			catch (Exception ex)
+24958: 			{
+24959: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\nOAS参数序列化失败: " /* string-offset:4008 */ + ex.Message);
+24960: 				return "";
+24961: 			}
+24962: 		}

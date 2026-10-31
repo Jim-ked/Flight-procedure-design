@@ -1,0 +1,42 @@
+METHOD 060002C0 \x89\x87.\x89\x86::\x87\x89\x96 RVA=2758C file=2578C
+IL_0000: call 0x060002C8 \x89\x87.\x89\x86::\x87\x9a
+IL_0005: call 0x060002C7 \x89\x87.\x89\x86::\x87\x99
+IL_000A: brfalse.s 47
+IL_000C: pop 
+IL_000D: ldarg.0 
+IL_000E: ldfld 0x0400018A \x89\x87.\x89\x86::\x87\x8c\x8b
+IL_0013: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_0018: ldloca.s local(0x0000)
+IL_001A: call 0x0A0002E9 System.Double::TryParse
+IL_001F: brfalse.s 142
+IL_0021: br.s 48
+IL_0023: pop 
+IL_0024: ldarg.0 
+IL_0025: ldfld 0x040001AE \x89\x87.\x89\x86::\x87\x8d\x96
+IL_002A: callvirt 0x06000149 \x87\x8d.\x87\x8c::\x8d\x87
+IL_002F: brfalse.s 102
+IL_0031: ldarg.0 
+IL_0032: ldfld 0x0400018A \x89\x87.\x89\x86::\x87\x8c\x8b
+IL_0037: ldloc.0 
+IL_0038: ldc.r8 1.852
+IL_0041: mul 
+IL_0042: stloc.1 
+IL_0043: ldloca.s local(0x0001)
+IL_0045: ldc.i4 3236
+IL_004A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_004F: call 0x0A000073 System.Double::ToString
+IL_0054: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0059: ret 
+IL_005A: ldarg.0 
+IL_005B: ldfld 0x0400018A \x89\x87.\x89\x86::\x87\x8c\x8b
+IL_0060: ldloc.0 
+IL_0061: ldc.r8 0.539957
+IL_006A: mul 
+IL_006B: stloc.1 
+IL_006C: ldloca.s local(0x0001)
+IL_006E: ldc.i4 3236
+IL_0073: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0078: call 0x0A000073 System.Double::ToString
+IL_007D: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0082: ret 
+

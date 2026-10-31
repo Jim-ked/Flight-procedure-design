@@ -1,0 +1,31 @@
+47109: 		private void _0088_009A_0096(List<DBPoint> P_0)
+47110: 		{
+47111: 			if (false /* original-file-bool-offset:912 */)
+47112: 			{
+47113: 				return;
+47114: 			}
+47115: 			_0088_009D_0088 = new Dictionary<string, DBPoint>();
+47116: 			DataTable dataTable = new DataTable();
+47117: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+47118: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+47119: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+47120: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+47121: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+47122: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+47123: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+47124: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+47125: 			dataTable.Columns.Add("OCH(m)" /* string-offset:5660 */, typeof(double));
+47126: 			dataTable.Columns.Add("MDA(m)" /* string-offset:5672 */, typeof(double));
+47127: 			dataTable.Columns.Add("MDH(m)" /* string-offset:5676 */, typeof(double));
+47128: 			dataTable.Columns.Add("VIS(m)" /* string-offset:5680 */, typeof(double));
+47129: 			int num = 1;
+47130: 			foreach (DBPoint item in P_0)
+47131: 			{
+47132: 				_008F_008E obj = item._008C_008D(num.ToString());
+47133: 				num++;
+47134: 				dataTable.Rows.Add(obj.ID, obj.Name, Math.Round(obj.X, 2), Math.Round(obj.Y, 2), Math.Round(obj.Z, 2));
+47135: 				_0088_009D_0088.Add(obj.ID, item);
+47136: 			}
+47137: 			_0088_009D_0090.DataSource = dataTable;
+47138: 			_0088_009D_0090.Columns[1].Frozen = true;
+47139: 		}

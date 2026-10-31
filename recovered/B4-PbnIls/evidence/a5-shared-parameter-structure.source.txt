@@ -1,0 +1,322 @@
+41674: 	public class _008A_0091
+41675: 	{
+41676: 		public static _008A_0093 _0088_0090_0094(string P_0, _008A_008F P_1, string P_2, string P_3)
+41677: 		{
+41678: 			//IL_009d: Unknown result type (might be due to invalid IL or missing references)
+41679: 			//IL_00a4: Expected O, but got Unknown
+41680: 			//IL_00c3: Unknown result type (might be due to invalid IL or missing references)
+41681: 			//IL_00ca: Expected O, but got Unknown
+41682: 			//IL_02bd: Unknown result type (might be due to invalid IL or missing references)
+41683: 			//IL_02c4: Expected O, but got Unknown
+41684: 			string text = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location) + "\\oas.db" /* string-offset:5444 */;
+41685: 			_ = 1;
+41686: 			if (!_0087u())
+41687: 			{
+41688: 				if (File.Exists(text))
+41689: 				{
+41690: 					string text2 = "Data Source=" /* string-offset:5452 */ + text + ";Version=3;" /* string-offset:5456 */;
+41691: 					_008A_0093 obj = new _008A_0093(P_1);
+41692: 					int num = (int)P_1;
+41693: 					string text3 = (P_0 + num + P_2).Replace("." /* string-offset:700 */, "");
+41694: 					int num2 = (int)Math.Round(Convert.ToDouble(P_3), 0);
+41695: 					SQLiteConnection val = new SQLiteConnection(text2);
+41696: 					try
+41697: 					{
+41698: 						((DbConnection)(object)val).Open();
+41699: 						string text4 = "SELECT Value FROM PartA WHERE ID = @id" /* string-offset:5460 */;
+41700: 						string text5 = "SELECT Value FROM PartB WHERE ID = @id" /* string-offset:5464 */;
+41701: 						SQLiteCommand val2 = new SQLiteCommand(text4, val);
+41702: 						try
+41703: 						{
+41704: 							val2.Parameters.AddWithValue("@id" /* string-offset:5468 */, (object)text3);
+41705: 							int num3 = 0;
+41706: 							string text6;
+41707: 							while (true)
+41708: 							{
+41709: 								text6 = ((DbCommand)(object)val2).ExecuteScalar().ToString();
+41710: 								num3 = 8;
+41711: 								if (!_0087u())
+41712: 								{
+41713: 									while (true)
+41714: 									{
+41715: 										switch (num3)
+41716: 										{
+41717: 										case 8:
+41718: 											obj._0088_0091_009A._008B_008B_0092 = (double)Convert.ToInt32(text3.Substring(3, 2)) * -0.001;
+41719: 											_ = 1;
+41720: 											if (!_0087u())
+41721: 											{
+41722: 												num3 = 5;
+41723: 												goto case 2;
+41724: 											}
+41725: 											num3 = 7;
+41726: 											goto default;
+41727: 										case 2:
+41728: 										case 5:
+41729: 											obj._0088_0091_009A._008B_008B_0093 = 0.0;
+41730: 											obj._0088_0091_009A._008B_008B_0094 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(0, 4))) * -0.01;
+41731: 											num3 = 6;
+41732: 											goto case 6;
+41733: 										case 6:
+41734: 											obj._0088_0091_0096._008B_008B_0092 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(4, 5))) * 1E-06;
+41735: 											goto default;
+41736: 										default:
+41737: 											obj._0088_0091_0096._008B_008B_0093 = 0.0;
+41738: 											num3 = 1;
+41739: 											if (_0087t())
+41740: 											{
+41741: 												continue;
+41742: 											}
+41743: 											goto case 6;
+41744: 										case 0:
+41745: 											break;
+41746: 										case 1:
+41747: 											obj._0088_0091_0096._008B_008B_0094 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(9, 3))) * -0.01;
+41748: 											num3 = 3;
+41749: 											goto IL_023c;
+41750: 										case 3:
+41751: 											goto IL_023c;
+41752: 										case 9:
+41753: 											goto end_IL_01ed;
+41754: 										}
+41755: 										break;
+41756: 									}
+41757: 									continue;
+41758: 								}
+41759: 								goto IL_023c;
+41760: 								IL_023c:
+41761: 								obj._0088_0091_0097._008B_008B_0092 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(12, 5))) * 1E-06;
+41762: 								obj._0088_0091_0097._008B_008B_0093 = 0.0;
+41763: 								num3 = 9;
+41764: 								break;
+41765: 								continue;
+41766: 								end_IL_01ed:
+41767: 								break;
+41768: 							}
+41769: 							obj._0088_0091_0097._008B_008B_0094 = (double)Convert.ToInt32(_0088_0090_0095(text6.Substring(17, 4))) * -0.01;
+41770: 						}
+41771: 						finally
+41772: 						{
+41773: 							((IDisposable)val2)?.Dispose();
+41774: 						}
+41775: 						SQLiteCommand val3 = new SQLiteCommand(text5, val);
+41776: 						try
+41777: 						{
+41778: 							val3.Parameters.AddWithValue("@id" /* string-offset:5468 */, (object)(text3 + num2));
+41779: 							string text7 = _0088_0090_0095(((DbCommand)(object)val3).ExecuteScalar().ToString());
+41780: 							_0087t();
+41781: 							if (!_0087u())
+41782: 							{
+41783: 								obj._0088_0091_0098._008B_008B_0092 = (double)Convert.ToInt32(text7.Substring(0, 5)) * 1E-06;
+41784: 							}
+41785: 							else if (!_0087t())
+41786: 							{
+41787: 								goto IL_035a;
+41788: 							}
+41789: 							obj._0088_0091_0098._008B_008B_0093 = (double)Convert.ToInt32(text7.Substring(5, 6)) * 1E-06;
+41790: 							goto IL_035a;
+41791: 							IL_035a:
+41792: 							obj._0088_0091_0098._008B_008B_0094 = (double)Convert.ToInt32(text7.Substring(11, 4)) * -0.01;
+41793: 							obj._0088_0091_0099._008B_008B_0092 = (double)Convert.ToInt32(text7.Substring(15, 5)) * 1E-06;
+41794: 							obj._0088_0091_0099._008B_008B_0093 = (double)Convert.ToInt32(text7.Substring(20, 6)) * 1E-06;
+41795: 							obj._0088_0091_0099._008B_008B_0094 = (double)Convert.ToInt32(text7.Substring(26, 4)) * -0.01;
+41796: 						}
+41797: 						finally
+41798: 						{
+41799: 							((IDisposable)val3)?.Dispose();
+41800: 						}
+41801: 						((DbConnection)(object)val).Close();
+41802: 						return obj;
+41803: 					}
+41804: 					finally
+41805: 					{
+41806: 						((IDisposable)val)?.Dispose();
+41807: 					}
+41808: 				}
+41809: 				MessageBox.Show("参数文件不存在。" /* string-offset:5448 */);
+41810: 			}
+41811: 			return null;
+41812: 		}
+41813: 
+41814: 		private static string _0088_0090_0095(string P_0)
+41815: 		{
+41816: 			if (false /* original-file-bool-offset:772 */)
+41817: 			{
+41818: 				_ = 0;
+41819: 				if (_0087t())
+41820: 				{
+41821: 					goto IL_006c;
+41822: 				}
+41823: 				goto IL_0050;
+41824: 			}
+41825: 			char[] array = P_0.ToCharArray();
+41826: 			int length = P_0.Length;
+41827: 			int num = 0;
+41828: 			goto IL_0072;
+41829: 			IL_0050:
+41830: 			int num2 = default(int);
+41831: 			if (num2 != 5)
+41832: 			{
+41833: 				array[num] = char.Parse((10 - num2).ToString());
+41834: 			}
+41835: 			goto IL_006c;
+41836: 			IL_0072:
+41837: 			do
+41838: 			{
+41839: 				if (num < length)
+41840: 				{
+41841: 					num2 = int.Parse(P_0[num].ToString());
+41842: 					continue;
+41843: 				}
+41844: 				for (int i = 0; i < length / 2; i++)
+41845: 				{
+41846: 					char c = array[i];
+41847: 					if (!_0087t())
+41848: 					{
+41849: 						break;
+41850: 					}
+41851: 					array[i] = array[length - 1 - i];
+41852: 					array[length - 1 - i] = c;
+41853: 				}
+41854: 				return new string(array);
+41855: 			}
+41856: 			while (_0087u());
+41857: 			if (num2 != 0)
+41858: 			{
+41859: 				goto IL_0050;
+41860: 			}
+41861: 			goto IL_006c;
+41862: 			IL_006c:
+41863: 			num++;
+41864: 			goto IL_0072;
+41865: 		}
+41866: 
+41867: 		public static void _0088_0090_0096(ref _008A_0093 P_0, double P_1, double P_2)
+41868: 		{
+41869: 			int num = 4;
+41870: 			if (_0087u())
+41871: 			{
+41872: 			}
+41873: 			double num2 = default(double);
+41874: 			double num3 = default(double);
+41875: 			while (true)
+41876: 			{
+41877: 				IL_0174:
+41878: 				if (!false /* original-file-bool-offset:776 */)
+41879: 				{
+41880: 					num2 = P_1;
+41881: 					num = 9;
+41882: 					goto IL_015c;
+41883: 				}
+41884: 				_ = 1;
+41885: 				if (!_0087u())
+41886: 				{
+41887: 					break;
+41888: 				}
+41889: 				num = 2;
+41890: 				goto IL_0133;
+41891: 				IL_015c:
+41892: 				num3 = P_2;
+41893: 				goto IL_0133;
+41894: 				IL_0133:
+41895: 				while (true)
+41896: 				{
+41897: 					IL_0133_2:
+41898: 					P_0._0088_0091_0096._008B_008B_0094 -= num3 - 6.0;
+41899: 					num = 6;
+41900: 					while (true)
+41901: 					{
+41902: 						IL_0113:
+41903: 						P_0._0088_0091_0097._008B_008B_0094 -= num3 - 6.0;
+41904: 						while (true)
+41905: 						{
+41906: 							IL_00f4:
+41907: 							double num4 = P_0._0088_0091_0098._008B_008B_0093;
+41908: 							double num5 = P_0._0088_0091_0099._008B_008B_0093;
+41909: 							while (true)
+41910: 							{
+41911: 								double num6 = Math.Max(num3 / num4, num2 + (num3 - 3.0) / num4) - Math.Max(6.0 / num4, 30.0 + 3.0 / num4);
+41912: 								P_0._0088_0091_0098._008B_008B_0094 -= num4 * num6;
+41913: 								num = 0;
+41914: 								if (_0087u())
+41915: 								{
+41916: 									break;
+41917: 								}
+41918: 								while (true)
+41919: 								{
+41920: 									switch (num)
+41921: 									{
+41922: 									case 0:
+41923: 										P_0._0088_0091_0099._008B_008B_0094 -= num5 * num6;
+41924: 										num = 10;
+41925: 										if (_0087t())
+41926: 										{
+41927: 											continue;
+41928: 										}
+41929: 										goto IL_00f4;
+41930: 									case 5:
+41931: 										break;
+41932: 									default:
+41933: 										goto IL_00f4;
+41934: 									case 6:
+41935: 										goto IL_0113;
+41936: 									case 2:
+41937: 									case 3:
+41938: 										goto IL_0133_2;
+41939: 									case 9:
+41940: 										goto end_IL_0089;
+41941: 									case 4:
+41942: 										goto IL_0174;
+41943: 									case 1:
+41944: 									case 8:
+41945: 									case 10:
+41946: 										return;
+41947: 									}
+41948: 									break;
+41949: 								}
+41950: 								continue;
+41951: 								end_IL_0089:
+41952: 								break;
+41953: 							}
+41954: 							break;
+41955: 						}
+41956: 						break;
+41957: 					}
+41958: 					break;
+41959: 				}
+41960: 				goto IL_015c;
+41961: 			}
+41962: 			num = 8;
+41963: 		}
+41964: 
+41965: 		public static void _0088_0090_0097(ref _008A_0093 P_0, double P_1)
+41966: 		{
+41967: 			double num = P_1 - 15.0;
+41968: 			if (!_0087u())
+41969: 			{
+41970: 				P_0._0088_0091_0096._008B_008B_0094 += num;
+41971: 				P_0._0088_0091_0097._008B_008B_0094 += num;
+41972: 				_ = 0;
+41973: 				if (_0087t())
+41974: 				{
+41975: 					P_0._0088_0091_0098._008B_008B_0094 += num;
+41976: 				}
+41977: 			}
+41978: 			P_0._0088_0091_0099._008B_008B_0094 += num;
+41979: 		}
+41980: 
+41981: 		static _008A_0091()
+41982: 		{
+41983: 			LicenseManager.Validate(typeof(_008A_0091));
+41984: 		}
+41985: 
+41986: 		internal static bool _0087t()
+41987: 		{
+41988: 			return true;
+41989: 		}
+41990: 
+41991: 		internal static bool _0087u()
+41992: 		{
+41993: 			return false;
+41994: 		}
+41995: 	}

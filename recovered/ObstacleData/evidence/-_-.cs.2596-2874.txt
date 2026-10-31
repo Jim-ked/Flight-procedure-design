@@ -1,0 +1,279 @@
+2596: 		public static ObjectId _0089_0087(string P_0, Point3d P_1, double P_2 = 1.0)
+2597: 		{
+2598: 			//IL_0024: Unknown result type (might be due to invalid IL or missing references)
+2599: 			//IL_004c: Unknown result type (might be due to invalid IL or missing references)
+2600: 			//IL_0057: Unknown result type (might be due to invalid IL or missing references)
+2601: 			//IL_00a2: Unknown result type (might be due to invalid IL or missing references)
+2602: 			//IL_00ad: Unknown result type (might be due to invalid IL or missing references)
+2603: 			//IL_00b4: Expected O, but got Unknown
+2604: 			//IL_00d5: Unknown result type (might be due to invalid IL or missing references)
+2605: 			//IL_00e0: Unknown result type (might be due to invalid IL or missing references)
+2606: 			//IL_00eb: Unknown result type (might be due to invalid IL or missing references)
+2607: 			//IL_00f0: Unknown result type (might be due to invalid IL or missing references)
+2608: 			//IL_00f4: Unknown result type (might be due to invalid IL or missing references)
+2609: 			//IL_00f9: Unknown result type (might be due to invalid IL or missing references)
+2610: 			//IL_0100: Expected O, but got Unknown
+2611: 			//IL_0101: Unknown result type (might be due to invalid IL or missing references)
+2612: 			//IL_0102: Unknown result type (might be due to invalid IL or missing references)
+2613: 			//IL_0107: Unknown result type (might be due to invalid IL or missing references)
+2614: 			//IL_010b: Unknown result type (might be due to invalid IL or missing references)
+2615: 			//IL_011b: Unknown result type (might be due to invalid IL or missing references)
+2616: 			//IL_0126: Unknown result type (might be due to invalid IL or missing references)
+2617: 			//IL_012d: Unknown result type (might be due to invalid IL or missing references)
+2618: 			//IL_0132: Unknown result type (might be due to invalid IL or missing references)
+2619: 			//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
+2620: 			//IL_00ce: Unknown result type (might be due to invalid IL or missing references)
+2621: 			//IL_01fb: Unknown result type (might be due to invalid IL or missing references)
+2622: 			//IL_0149: Unknown result type (might be due to invalid IL or missing references)
+2623: 			//IL_014e: Unknown result type (might be due to invalid IL or missing references)
+2624: 			//IL_015f: Unknown result type (might be due to invalid IL or missing references)
+2625: 			//IL_01a6: Unknown result type (might be due to invalid IL or missing references)
+2626: 			//IL_0172: Unknown result type (might be due to invalid IL or missing references)
+2627: 			//IL_0179: Expected O, but got Unknown
+2628: 			//IL_017f: Unknown result type (might be due to invalid IL or missing references)
+2629: 			//IL_01f9: Unknown result type (might be due to invalid IL or missing references)
+2630: 			_0090();
+2631: 			Document mdiActiveDocument = default(Document);
+2632: 			if (_008F())
+2633: 			{
+2634: 				mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+2635: 			}
+2636: 			Database database = mdiActiveDocument.Database;
+2637: 			ObjectId result = default(ObjectId);
+2638: 			bool flag = false;
+2639: 			DocumentLock val = default(DocumentLock);
+2640: 			if (_008F())
+2641: 			{
+2642: 				val = mdiActiveDocument.LockDocument();
+2643: 			}
+2644: 			try
+2645: 			{
+2646: 				Transaction val2 = database.TransactionManager.StartTransaction();
+2647: 				try
+2648: 				{
+2649: 					if (((SymbolTable)(BlockTable)val2.GetObject(database.BlockTableId, (OpenMode)0)).Has(P_0))
+2650: 					{
+2651: 						flag = true;
+2652: 					}
+2653: 				}
+2654: 				finally
+2655: 				{
+2656: 					((IDisposable)val2)?.Dispose();
+2657: 				}
+2658: 			}
+2659: 			finally
+2660: 			{
+2661: 				((IDisposable)val)?.Dispose();
+2662: 			}
+2663: 			if (!flag)
+2664: 			{
+2665: 				_0089_0088(P_0);
+2666: 			}
+2667: 			DocumentLock val3 = mdiActiveDocument.LockDocument();
+2668: 			try
+2669: 			{
+2670: 				Transaction val4 = database.TransactionManager.StartTransaction();
+2671: 				try
+2672: 				{
+2673: 					BlockTable val5 = (BlockTable)val4.GetObject(database.BlockTableId, (OpenMode)0);
+2674: 					if (!((SymbolTable)val5).Has(P_0))
+2675: 					{
+2676: 						Application.ShowAlertDialog("未找到指定图块，请通过辅助功能界面导入图块。" /* string-offset:580 */);
+2677: 						return result;
+2678: 					}
+2679: 					new BlockTableRecord();
+2680: 					BlockTableRecord val6 = (BlockTableRecord)val4.GetObject(((SymbolTable)val5)[P_0], (OpenMode)1);
+2681: 					BlockReference val7 = new BlockReference(P_1, ((SymbolTable)val5)[P_0]);
+2682: 					Matrix3d val8 = Matrix3d.Scaling(P_2, P_1);
+2683: 					((Entity)val7).TransformBy(val8);
+2684: 					result = ((BlockTableRecord)val4.GetObject(((SymbolTable)val5)[BlockTableRecord.ModelSpace], (OpenMode)1)).AppendEntity((Entity)(object)val7);
+2685: 					val4.AddNewlyCreatedDBObject((DBObject)(object)val7, true);
+2686: 					BlockTableRecordEnumerator enumerator = val6.GetEnumerator();
+2687: 					try
+2688: 					{
+2689: 						AttributeReference val10 = default(AttributeReference);
+2690: 						while (enumerator.MoveNext())
+2691: 						{
+2692: 							ObjectId current = enumerator.Current;
+2693: 							_008F();
+2694: 							if (!_0090())
+2695: 							{
+2696: 								DBObject obj = val4.GetObject(current, (OpenMode)0);
+2697: 								AttributeDefinition val9 = (AttributeDefinition)(object)((obj is AttributeDefinition) ? obj : null);
+2698: 								if (val9 == null)
+2699: 								{
+2700: 									continue;
+2701: 								}
+2702: 								val10 = new AttributeReference();
+2703: 								val10.SetAttributeFromBlock(val9, val7.BlockTransform);
+2704: 								((DBText)val10).TextString = " " /* string-offset:584 */;
+2705: 							}
+2706: 							val7.AttributeCollection.AppendAttribute(val10);
+2707: 							val4.AddNewlyCreatedDBObject((DBObject)(object)val10, true);
+2708: 						}
+2709: 					}
+2710: 					finally
+2711: 					{
+2712: 						((IDisposable)enumerator)?.Dispose();
+2713: 					}
+2714: 					((Entity)val7).RecordGraphicsModified(true);
+2715: 					val4.Commit();
+2716: 					Application.UpdateScreen();
+2717: 					return result;
+2718: 				}
+2719: 				finally
+2720: 				{
+2721: 					((IDisposable)val4)?.Dispose();
+2722: 				}
+2723: 			}
+2724: 			finally
+2725: 			{
+2726: 				((IDisposable)val3)?.Dispose();
+2727: 			}
+2728: 		}
+2729: 
+2730: 		public static void _0089_0088(string P_0)
+2731: 		{
+2732: 			//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+2733: 			//IL_0066: Expected O, but got Unknown
+2734: 			//IL_0078: Unknown result type (might be due to invalid IL or missing references)
+2735: 			//IL_007f: Expected O, but got Unknown
+2736: 			//IL_0093: Unknown result type (might be due to invalid IL or missing references)
+2737: 			//IL_009f: Unknown result type (might be due to invalid IL or missing references)
+2738: 			//IL_00a6: Expected O, but got Unknown
+2739: 			//IL_00e0: Unknown result type (might be due to invalid IL or missing references)
+2740: 			//IL_0100: Unknown result type (might be due to invalid IL or missing references)
+2741: 			//IL_0107: Expected O, but got Unknown
+2742: 			//IL_0113: Unknown result type (might be due to invalid IL or missing references)
+2743: 			_008F();
+2744: 			if (_0090() || false /* original-file-bool-offset:64 */)
+2745: 			{
+2746: 				return;
+2747: 			}
+2748: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+2749: 			string[] files = Directory.GetFiles(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location), "WsSymbol*.dwg" /* string-offset:588 */);
+2750: 			if (files.Length == 0)
+2751: 			{
+2752: 				return;
+2753: 			}
+2754: 			string text = files[0];
+2755: 			if (!File.Exists(text))
+2756: 			{
+2757: 				return;
+2758: 			}
+2759: 			try
+2760: 			{
+2761: 				Database val = new Database(false, true);
+2762: 				TransactionManager transactionManager = val.TransactionManager;
+2763: 				val.ReadDwgFile(text, FileShare.Read, true, (string)null);
+2764: 				ObjectIdCollection val2 = new ObjectIdCollection();
+2765: 				DocumentLock val3 = mdiActiveDocument.LockDocument();
+2766: 				try
+2767: 				{
+2768: 					Transaction val4 = transactionManager.StartTransaction();
+2769: 					try
+2770: 					{
+2771: 						BlockTable val5 = (BlockTable)transactionManager.GetObject(val.BlockTableId, (OpenMode)0, false);
+2772: 						_ = 0;
+2773: 						if (_008F() && !((SymbolTable)val5).Has(P_0))
+2774: 						{
+2775: 							Application.ShowAlertDialog("图块 " /* string-offset:592 */ + P_0 + " 未找到，请检查图库是否正确。" /* string-offset:596 */);
+2776: 						}
+2777: 						else
+2778: 						{
+2779: 							val2.Add(((SymbolTable)val5)[P_0]);
+2780: 						}
+2781: 						((DisposableWrapper)val5).Dispose();
+2782: 					}
+2783: 					finally
+2784: 					{
+2785: 						((IDisposable)val4)?.Dispose();
+2786: 					}
+2787: 					IdMapping val6 = new IdMapping();
+2788: 					Database workingDatabase = HostApplicationServices.WorkingDatabase;
+2789: 					val.WblockCloneObjects(val2, workingDatabase.BlockTableId, val6, (DuplicateRecordCloning)2, false);
+2790: 					((DisposableWrapper)val).Dispose();
+2791: 				}
+2792: 				finally
+2793: 				{
+2794: 					((IDisposable)val3)?.Dispose();
+2795: 				}
+2796: 			}
+2797: 			catch (Exception ex)
+2798: 			{
+2799: 				Application.ShowAlertDialog("复制错误：" /* string-offset:600 */ + ex.Message);
+2800: 			}
+2801: 		}
+2802: 
+2803: 		public static void _0089_0089(ObjectId P_0, string P_1, string P_2)
+2804: 		{
+2805: 			//IL_006f: Unknown result type (might be due to invalid IL or missing references)
+2806: 			//IL_008f: Unknown result type (might be due to invalid IL or missing references)
+2807: 			//IL_0094: Unknown result type (might be due to invalid IL or missing references)
+2808: 			//IL_0097: Unknown result type (might be due to invalid IL or missing references)
+2809: 			if (false /* original-file-bool-offset:68 */ || ((ObjectId)(ref P_0)).IsNull)
+2810: 			{
+2811: 				return;
+2812: 			}
+2813: 			if (!((ObjectId)(ref P_0)).IsValid)
+2814: 			{
+2815: 				if (!_008F())
+2816: 				{
+2817: 				}
+2818: 			}
+2819: 			else if (P_1 == null)
+2820: 			{
+2821: 				_0090();
+2822: 				if (!_008F())
+2823: 				{
+2824: 				}
+2825: 			}
+2826: 			else
+2827: 			{
+2828: 				if (P_2 == null)
+2829: 				{
+2830: 					return;
+2831: 				}
+2832: 				Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+2833: 				Database database = mdiActiveDocument.Database;
+2834: 				DocumentLock val = mdiActiveDocument.LockDocument();
+2835: 				try
+2836: 				{
+2837: 					Transaction val2 = database.TransactionManager.StartTransaction();
+2838: 					try
+2839: 					{
+2840: 						DBObject obj = val2.GetObject(P_0, (OpenMode)0);
+2841: 						foreach (ObjectId item in ((BlockReference)((obj is BlockReference) ? obj : null)).AttributeCollection)
+2842: 						{
+2843: 							DBObject obj2 = val2.GetObject(item, (OpenMode)1);
+2844: 							AttributeReference val4 = (AttributeReference)(object)((obj2 is AttributeReference) ? obj2 : null);
+2845: 							if ((DisposableWrapper)(object)val4 != (DisposableWrapper)null)
+2846: 							{
+2847: 								_008F();
+2848: 								if (_0090() || val4.Tag.ToUpper() == P_1.ToUpper())
+2849: 								{
+2850: 									((DBText)val4).TextString = P_2;
+2851: 								}
+2852: 							}
+2853: 						}
+2854: 						val2.Commit();
+2855: 						Application.UpdateScreen();
+2856: 					}
+2857: 					finally
+2858: 					{
+2859: 						((IDisposable)val2)?.Dispose();
+2860: 					}
+2861: 				}
+2862: 				finally
+2863: 				{
+2864: 					((IDisposable)val)?.Dispose();
+2865: 				}
+2866: 			}
+2867: 		}
+2868: 
+2869: 		public static void _0089_008A(ObjectId P_0, string P_1, double P_2)
+2870: 		{
+2871: 			//IL_0069: Unknown result type (might be due to invalid IL or missing references)
+2872: 			//IL_0089: Unknown result type (might be due to invalid IL or missing references)
+2873: 			//IL_0090: Expected O, but got Unknown
+2874: 			_008F();

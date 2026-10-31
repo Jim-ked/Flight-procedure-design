@@ -1,0 +1,116 @@
+24244: 		private void _0087_0091_0091(object P_0, EventArgs P_1)
+24245: 		{
+24246: 			int num = 15;
+24247: 			while (true)
+24248: 			{
+24249: 				if (!false /* original-file-bool-offset:472 */)
+24250: 				{
+24251: 					if (_0087_0093_0091.SelectedIndex == 0)
+24252: 					{
+24253: 						_0087_0093_009C.Visible = false;
+24254: 						num = 6;
+24255: 						if (!_0087_009F())
+24256: 						{
+24257: 							goto IL_003a;
+24258: 						}
+24259: 						goto IL_006d;
+24260: 					}
+24261: 					_0087_0093_009C.Visible = true;
+24262: 					_0087_0094_0087.Visible = true;
+24263: 					goto IL_016f;
+24264: 				}
+24265: 				num = 14;
+24266: 				return;
+24267: 				IL_016f:
+24268: 				_0087_0094_008C.Visible = true;
+24269: 				num = 13;
+24270: 				goto IL_0184;
+24271: 				IL_0184:
+24272: 				_0087_0092_0097.Enabled = false;
+24273: 				_0087_0092_0096.Enabled = false;
+24274: 				_0087_0092_009A.Enabled = false;
+24275: 				num = 9;
+24276: 				goto IL_01b1;
+24277: 				IL_01b1:
+24278: 				_0087_0092_0094.Enabled = false;
+24279: 				num = 5;
+24280: 				goto IL_01c6;
+24281: 				IL_006d:
+24282: 				switch (num)
+24283: 				{
+24284: 				case 6:
+24285: 					break;
+24286: 				case 3:
+24287: 				case 16:
+24288: 					goto IL_00c3;
+24289: 				case 15:
+24290: 					continue;
+24291: 				case 10:
+24292: 					_0087_0092_009A.Enabled = true;
+24293: 					goto case 11;
+24294: 				case 11:
+24295: 					_0087_0092_0094.Enabled = true;
+24296: 					_0087_0092_009B.Enabled = true;
+24297: 					num = 1;
+24298: 					goto case 1;
+24299: 				case 1:
+24300: 					_0087_0096_008A.Visible = false;
+24301: 					goto end_IL_00ed;
+24302: 				default:
+24303: 					goto IL_016f;
+24304: 				case 13:
+24305: 					goto IL_0184;
+24306: 				case 9:
+24307: 					goto IL_01b1;
+24308: 				case 5:
+24309: 					goto IL_01c6;
+24310: 				case 12:
+24311: 					goto IL_01d2;
+24312: 				case 0:
+24313: 					goto IL_01e7;
+24314: 				case 2:
+24315: 				case 4:
+24316: 				case 7:
+24317: 					goto end_IL_00ed;
+24318: 				case 14:
+24319: 				case 17:
+24320: 					return;
+24321: 				}
+24322: 				goto IL_003a;
+24323: 				IL_003a:
+24324: 				_0087_0094_0087.Visible = false;
+24325: 				_0087_0094_008C.Visible = false;
+24326: 				_0087_009F();
+24327: 				if (!_00870())
+24328: 				{
+24329: 					num = 16;
+24330: 					goto IL_00c3;
+24331: 				}
+24332: 				num = 2;
+24333: 				break;
+24334: 				IL_01d2:
+24335: 				_0087_0092_0095.Checked = true;
+24336: 				num = 0;
+24337: 				goto IL_01e7;
+24338: 				IL_00c3:
+24339: 				do
+24340: 				{
+24341: 					_0087_0092_0097.Enabled = true;
+24342: 					_0087_0092_0096.Enabled = true;
+24343: 					num = 10;
+24344: 				}
+24345: 				while (_00870());
+24346: 				goto IL_006d;
+24347: 				IL_01e7:
+24348: 				_0087_0096_008A.Visible = true;
+24349: 				num = 4;
+24350: 				break;
+24351: 				IL_01c6:
+24352: 				_0087_0092_009B.Enabled = false;
+24353: 				goto IL_01d2;
+24354: 				continue;
+24355: 				end_IL_00ed:
+24356: 				break;
+24357: 			}
+24358: 			_0087_0091_0092(null, null);
+24359: 		}

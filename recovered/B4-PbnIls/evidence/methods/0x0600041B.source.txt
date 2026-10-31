@@ -1,0 +1,236 @@
+42448: 		public _008F_008E _0088_0091_0088(_008F_008E P_0)
+42449: 		{
+42450: 			int num = 9;
+42451: 			double num2 = default(double);
+42452: 			string text = default(string);
+42453: 			double num3 = default(double);
+42454: 			double num4 = default(double);
+42455: 			double num5 = default(double);
+42456: 			double num6 = default(double);
+42457: 			double num7 = default(double);
+42458: 			_008F_008E obj = default(_008F_008E);
+42459: 			_008F_008C obj2 = default(_008F_008C);
+42460: 			double num8 = default(double);
+42461: 			while (true)
+42462: 			{
+42463: 				IL_03b3:
+42464: 				if (!false /* original-file-bool-offset:792 */)
+42465: 				{
+42466: 					num2 = ((P_0.Y > 0.0) ? P_0.Y : (0.0 - P_0.Y));
+42467: 					P_0.Name = "out" /* string-offset:1556 */;
+42468: 					num = 6;
+42469: 					goto IL_038f;
+42470: 				}
+42471: 				num = 2;
+42472: 				goto IL_0291;
+42473: 				IL_02f2:
+42474: 				text = "W面" /* string-offset:5476 */;
+42475: 				num3 = num4;
+42476: 				num = 23;
+42477: 				goto IL_0308;
+42478: 				IL_02d4:
+42479: 				text = "X面" /* string-offset:5480 */;
+42480: 				num = 1;
+42481: 				goto IL_02e8;
+42482: 				IL_02b2:
+42483: 				num3 = num5;
+42484: 				num = 4;
+42485: 				goto IL_02cd;
+42486: 				IL_025c:
+42487: 				_0087w();
+42488: 				if (_0087v())
+42489: 				{
+42490: 					num = 16;
+42491: 					goto IL_0275;
+42492: 				}
+42493: 				num = 12;
+42494: 				break;
+42495: 				IL_029e:
+42496: 				text = "Y面" /* string-offset:5484 */;
+42497: 				num = 17;
+42498: 				goto IL_02b2;
+42499: 				IL_038f:
+42500: 				text = "入口平面" /* string-offset:5472 */;
+42501: 				num = 7;
+42502: 				goto IL_0367;
+42503: 				IL_0367:
+42504: 				num3 = 0.0;
+42505: 				num4 = _0088_0091_0096._008B_008B_008A(P_0.X, num2);
+42506: 				num = 24;
+42507: 				goto IL_0320;
+42508: 				IL_0320:
+42509: 				num6 = _0088_0091_0098._008B_008B_008A(P_0.X, num2);
+42510: 				num5 = _0088_0091_0099._008B_008B_008A(P_0.X, num2);
+42511: 				num7 = _0088_0091_009A._008B_008B_008A(P_0.X, num2);
+42512: 				num = 25;
+42513: 				goto IL_031a;
+42514: 				IL_031a:
+42515: 				if (num3 < num4)
+42516: 				{
+42517: 					num = 3;
+42518: 					goto IL_02f2;
+42519: 				}
+42520: 				goto IL_0308;
+42521: 				IL_02e8:
+42522: 				num3 = num6;
+42523: 				goto IL_02eb;
+42524: 				IL_0308:
+42525: 				if (num3 < num6)
+42526: 				{
+42527: 					goto IL_02d4;
+42528: 				}
+42529: 				goto IL_02eb;
+42530: 				IL_02eb:
+42531: 				if (num3 < num5)
+42532: 				{
+42533: 					goto IL_029e;
+42534: 				}
+42535: 				goto IL_02cd;
+42536: 				IL_02cd:
+42537: 				if (num3 < num7)
+42538: 				{
+42539: 					text = "Z面" /* string-offset:5488 */;
+42540: 					goto IL_025c;
+42541: 				}
+42542: 				goto IL_0291;
+42543: 				IL_0275:
+42544: 				num3 = num7;
+42545: 				num = 14;
+42546: 				goto IL_0291;
+42547: 				IL_0291:
+42548: 				while (true)
+42549: 				{
+42550: 					if (_0088_0091_009B != 0)
+42551: 					{
+42552: 						if (_0088_0091_009B == (_008A_008F)1)
+42553: 						{
+42554: 							num = 5;
+42555: 							if (!_0087v())
+42556: 							{
+42557: 								break;
+42558: 							}
+42559: 							goto IL_01a9;
+42560: 						}
+42561: 						if (_0088_0091_009B != (_008A_008F)2)
+42562: 						{
+42563: 							goto end_IL_03b3;
+42564: 						}
+42565: 						goto IL_023d;
+42566: 					}
+42567: 					num = 10;
+42568: 					goto IL_010e;
+42569: 					IL_01a9:
+42570: 					switch (num)
+42571: 					{
+42572: 					case 11:
+42573: 						break;
+42574: 					case 10:
+42575: 						goto IL_010e;
+42576: 					case 0:
+42577: 						goto IL_018c;
+42578: 					case 21:
+42579: 						goto IL_0233;
+42580: 					case 19:
+42581: 						goto IL_023d;
+42582: 					default:
+42583: 						goto IL_025c;
+42584: 					case 13:
+42585: 					case 16:
+42586: 						goto IL_0275;
+42587: 					case 2:
+42588: 					case 14:
+42589: 						continue;
+42590: 					case 20:
+42591: 						goto end_IL_0291;
+42592: 					case 17:
+42593: 						goto IL_02b2;
+42594: 					case 4:
+42595: 						goto IL_02cd;
+42596: 					case 8:
+42597: 						goto IL_02d4;
+42598: 					case 1:
+42599: 						goto IL_02e8;
+42600: 					case 3:
+42601: 						goto IL_02f2;
+42602: 					case 23:
+42603: 						goto IL_0308;
+42604: 					case 25:
+42605: 						goto IL_031a;
+42606: 					case 24:
+42607: 						goto IL_0320;
+42608: 					case 7:
+42609: 						goto IL_0367;
+42610: 					case 6:
+42611: 						goto IL_038f;
+42612: 					case 9:
+42613: 						goto IL_03b3;
+42614: 					case 5:
+42615: 						P_0.Name = ((num3 > (double)_0088_0091_009C) ? "out" /* string-offset:1556 */ : text);
+42616: 						P_0.Z = num3;
+42617: 						goto end_IL_03b3;
+42618: 					case 12:
+42619: 					case 15:
+42620: 					case 18:
+42621: 					case 22:
+42622: 					case 26:
+42623: 						goto end_IL_03b3;
+42624: 					}
+42625: 					goto IL_00bb;
+42626: 					IL_010e:
+42627: 					if (P_0.X < _0088_0091_0091.X)
+42628: 					{
+42629: 						obj = _008F_008E._008B_0089_008E(_0088_0091_0091, -10000.0 * Math.Cos(-Math.PI / 12.0), -10000.0 * Math.Sin(-Math.PI / 12.0));
+42630: 						obj2 = new _008F_008C();
+42631: 						goto IL_018c;
+42632: 					}
+42633: 					P_0.Name = (((text == "Y面" /* string-offset:5484 */ || text == "Z面" /* string-offset:5488 */) && num3 > (double)_0088_0091_009C) ? "out" /* string-offset:1556 */ : text);
+42634: 					P_0.Z = num3;
+42635: 					num = 22;
+42636: 					goto end_IL_03b3;
+42637: 					IL_00bb:
+42638: 					if (num2 <= obj2._008B_0088_008D(P_0.X))
+42639: 					{
+42640: 						P_0.Name = "非精密延伸段" /* string-offset:5492 */;
+42641: 						P_0.Z = _0088_0091_009A._008B_008B_008A(P_0.X, num2);
+42642: 						num = 15;
+42643: 						if (!_0087w())
+42644: 						{
+42645: 							goto IL_01a9;
+42646: 						}
+42647: 						goto IL_02e8;
+42648: 					}
+42649: 					P_0.Name = "out" /* string-offset:1556 */;
+42650: 					goto end_IL_03b3;
+42651: 					IL_018c:
+42652: 					obj2._008B_0088_008E(_0088_0091_0091, obj);
+42653: 					num = 11;
+42654: 					goto IL_00bb;
+42655: 					IL_023d:
+42656: 					num8 = _0088_0091_0097._008B_008B_008A(P_0.X, num2);
+42657: 					num = 21;
+42658: 					goto IL_0233;
+42659: 					IL_0233:
+42660: 					if (num3 < num8)
+42661: 					{
+42662: 						text = "W*面" /* string-offset:5496 */;
+42663: 						num3 = num8;
+42664: 					}
+42665: 					P_0.Name = ((num3 > (double)_0088_0091_009C) ? "out" /* string-offset:1556 */ : text);
+42666: 					P_0.Z = num3;
+42667: 					num = 26;
+42668: 					if (_0087v())
+42669: 					{
+42670: 						goto IL_01a9;
+42671: 					}
+42672: 					goto IL_0320;
+42673: 					continue;
+42674: 					end_IL_0291:
+42675: 					break;
+42676: 				}
+42677: 				goto IL_029e;
+42678: 				continue;
+42679: 				end_IL_03b3:
+42680: 				break;
+42681: 			}
+42682: 			return P_0;
+42683: 		}

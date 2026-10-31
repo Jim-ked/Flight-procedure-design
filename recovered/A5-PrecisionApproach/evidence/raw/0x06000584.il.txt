@@ -1,0 +1,11 @@
+METHOD 06000584 .\x90\x94::.cctor RVA=CCB6C file=CAD6C
+IL_0000: call 0x0600088E \x90\x9c.\x90\x9b::\x8b\x90\x88
+IL_0005: ldc.i4 33554525
+IL_000A: call 0x060008B8 \x91\x8a.\x91\x89::e53w34m968awCm9P85taUZe
+IL_000F: call 0x0A000019 System.Type::GetTypeFromHandle
+IL_0014: call 0x0A00001A System.ComponentModel.LicenseManager::Validate
+IL_0019: nop 
+IL_001A: newobj 0x06000585 .\x90\x94::.ctor
+IL_001F: stsfld 0x040005FA .\x90\x94::<>9
+IL_0024: ret 
+

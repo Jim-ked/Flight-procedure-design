@@ -1,0 +1,54 @@
+24529: 		private void _0087_0091_0094(object P_0, EventArgs P_1)
+24530: 		{
+24531: 			if (false /* original-file-bool-offset:484 */)
+24532: 			{
+24533: 				return;
+24534: 			}
+24535: 			string text = _0087_0093_0089.Text;
+24536: 			double num;
+24537: 			double num2;
+24538: 			while (true)
+24539: 			{
+24540: 				num = 0.0;
+24541: 				num2 = 0.0;
+24542: 				if (!(text == "A" /* string-offset:2324 */) && !(text == "B" /* string-offset:2328 */))
+24543: 				{
+24544: 					if (!(text == "C" /* string-offset:2084 */))
+24545: 					{
+24546: 						_ = 1;
+24547: 						if (_00870())
+24548: 						{
+24549: 							if (!_00870())
+24550: 							{
+24551: 								break;
+24552: 							}
+24553: 							continue;
+24554: 						}
+24555: 						if (_00870())
+24556: 						{
+24557: 							goto IL_00e1;
+24558: 						}
+24559: 						if (!(text == "D" /* string-offset:1644 */))
+24560: 						{
+24561: 							if (text == "DL" /* string-offset:3852 */)
+24562: 							{
+24563: 								num = 40.0;
+24564: 								num2 = 8.0;
+24565: 							}
+24566: 							break;
+24567: 						}
+24568: 					}
+24569: 					num = 32.5;
+24570: 					num2 = 7.0;
+24571: 					break;
+24572: 				}
+24573: 				num = 30.0;
+24574: 				goto IL_00e1;
+24575: 				IL_00e1:
+24576: 				num2 = 6.0;
+24577: 				break;
+24578: 			}
+24579: 			_0087_0093_0087.Text = num.ToString();
+24580: 			_0087_0093_008B.Text = num2.ToString();
+24581: 			_0087_0091_0092(null, null);
+24582: 		}

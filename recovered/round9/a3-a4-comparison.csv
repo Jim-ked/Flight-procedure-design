@@ -1,0 +1,9 @@
+﻿component,A3,A4,classification,evidence
+VOR/NDB angles,A3 guide5.2/6.9 or no-guide4.5/6.2; ILS2.4/1.4,A4 outer divergence7.8/10.3,Different concept,A3 P209-P20C vs A4 P2F7/P2F8; different setters
+facility point,A3 first point station S,A4 generic start S / facility candidate,Different concept,"same P113 GetPoint, no shared facility object"
+track,A3 S/Q XY atan2 and distance,A4 S/E reverse atan2 and finite length,Copied formula,"same elementary operations, different MethodDef; Q is not only direction in A3 either"
+DME,"A3 .0125r+460, optional arcs/labels",none,No relation,No implementation evidence found in A4.
+KK,A3 early/late transverse lines,none,No relation,No A3 call from A4
+overhead,A3 altitude/cone blind zone,none,No relation,A4 no altitude/cone input
+CAD group,P087/P089,same P087/P089,Same MethodDef,A4 supplies empty metadata; A3 other entities are separate
+numeric point/polar,P809/P80A,same P809/P80A,Same MethodDef,"shared primitive, not shared facility accuracy algorithm"

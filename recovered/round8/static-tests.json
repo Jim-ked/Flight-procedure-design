@@ -1,0 +1,134 @@
+{
+  "layer": "event/reachability",
+  "checks": [
+    {
+      "name": "0x0600041B no global direct/MethodSpec incoming",
+      "passed": true
+    },
+    {
+      "name": "0x0600041B not event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000429 no global direct/MethodSpec incoming",
+      "passed": true
+    },
+    {
+      "name": "0x06000429 not event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x060003A7 no global direct/MethodSpec incoming",
+      "passed": true
+    },
+    {
+      "name": "0x060003A7 not event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000306 event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000307 event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000409 event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000412 event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x0600039E event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000427 event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000437 event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000443 event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000087 event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x06000319 event reachable",
+      "passed": true
+    },
+    {
+      "name": "0x0600031A event reachable",
+      "passed": true
+    },
+    {
+      "name": "No B4 extended geometry constructor reachable",
+      "passed": true
+    },
+    {
+      "name": "No B4 private loader reachable",
+      "passed": true
+    },
+    {
+      "name": "No process start reachable",
+      "passed": true
+    },
+    {
+      "name": "A5 six radio controls",
+      "passed": true
+    },
+    {
+      "name": "No evaluator controls",
+      "passed": true
+    },
+    {
+      "name": "A5 native activation import inspected",
+      "passed": true
+    },
+    {
+      "name": "All original event identities known",
+      "passed": true
+    },
+    {
+      "name": "Database fixture copied byte-identically",
+      "passed": true
+    },
+    {
+      "name": "All recovered methods with locals have InitLocals",
+      "passed": true
+    },
+    {
+      "name": "source 00319 RUNWAY:",
+      "passed": true
+    },
+    {
+      "name": "source 00319 |APPROACH:",
+      "passed": true
+    },
+    {
+      "name": "source 00319 |PAOAS:",
+      "passed": true
+    },
+    {
+      "name": "source 00319 |OAS:",
+      "passed": true
+    },
+    {
+      "name": "source 00307 (num2 - num4) / num3",
+      "passed": true
+    },
+    {
+      "name": "source 00307 _0087_0092_0090.X + num",
+      "passed": true
+    }
+  ],
+  "execution": "metadata/IL/source only; no target runtime"
+}

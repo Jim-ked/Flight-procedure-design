@@ -1,0 +1,346 @@
+﻿line,field,property,value
+60778,_0089_009A_0096,SelectedIndex,0
+60779,_0089_009A_008F,SelectedIndex,3
+60781,_0089_009A_0095,SelectedIndex,5
+60782,_0089_009A_009A,SelectedIndex,3
+60783,_0089_0098_0095,SelectedIndex,3
+60831,_0089_0097_0090,Text,"""已检测到 "" /* string-offset:2720 */ + _0089_0097_008B.Count + "" 个障碍物。"" /* string-offset:936 */"
+60981,_0089_0097_009A,Text,"Math.Round(((Point3d)(ref val)).X, 2).ToString()"
+60982,_0089_0097_0099,Text,"Math.Round(((Point3d)(ref val)).Y, 2).ToString()"
+60985,_0089_0097_0098,Text,((Point3d)(ref val)).Z.ToString()
+61004,_0089_0098_008B,Text,"Math.Round(((Point3d)(ref val)).X, 2).ToString()"
+61006,_0089_0098_0089,Text,"Math.Round(((Point3d)(ref val)).Y, 2).ToString()"
+61007,_0089_0098_0088,Text,((Point3d)(ref val)).Z.ToString()
+61053,_0089_0097_0090,Text,"""已转换"" /* string-offset:3032 */ + list.Count + ""个障碍物。"" /* string-offset:2816 */"
+61208,_0089_009A_008C,Text,array[1].Trim()
+61234,_0089_009A_008E,Text,array[1].Trim()
+61265,_0089_009A_0095,Text,array[1].Trim()
+61312,_0089_009A_008A,Text,array[1].Trim()
+61404,_0089_009A_0096,Text,array[1].Trim()
+61414,_0089_009A_008F,Text,array[1].Trim()
+61783,_0089_0098_009C,Text,"_0089_0097_008D[_0089_0098_0095.SelectedIndex, 0].ToString()"
+61785,_0089_0098_009B,Text,"_0089_0097_008D[_0089_0098_0095.SelectedIndex, 1].ToString()"
+61814,_0089_0098_009A,Text,_0089_0098_009C.Text
+61817,_0089_0098_009A,Text,num4.ToString()
+61881,_0089_0099_008F,Visible,true
+61882,_0089_0099_0091,Visible,true
+61883,_0089_0099_0095,Visible,true
+61884,_0089_0099_009A,Visible,true
+61887,_0089_0099_008F,Visible,false
+61888,_0089_0099_0091,Visible,false
+61892,_0089_009A_0086,Visible,"_0089_009A_0096.Text == ""CAT I"" /* string-offset:4236 */"
+61899,_0089_0099_0095,Visible,false
+61900,_0089_0099_009A,Visible,false
+61941,_0089_009A_0091,Text,"""2000"" /* string-offset:3836 */"
+61951,_0089_009A_0091,Text,"""4500"" /* string-offset:3844 */"
+62318,_0089_0099_008D,Text,"P_0._0088_0091_0096._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */)"
+62323,_0089_0099_0095,Text,"P_0._0088_0091_0097._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */)"
+62327,_0089_0099_009A,Text,"P_0._0088_0091_0097._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */)"
+62329,_0089_0099_0099,Text,"P_0._0088_0091_0098._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */)"
+62330,_0089_0099_0097,Text,"P_0._0088_0091_0098._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */)"
+62331,_0089_0099_0096,Text,"P_0._0088_0091_0098._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */)"
+62332,_0089_0099_0092,Text,"P_0._0088_0091_0099._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */)"
+62333,_0089_0099_0090,Text,"P_0._0088_0091_0099._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */)"
+62336,_0089_0099_008E,Text,"P_0._0088_0091_0099._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */)"
+62337,_0089_0099_008A,Text,"P_0._0088_0091_009A._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */)"
+62338,_0089_0099_0089,Text,"P_0._0088_0091_009A._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */)"
+62340,_0089_0099_0088,Text,"P_0._0088_0091_009A._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */)"
+62347,_0089_0099_0093,Text,"P_0._0088_0091_0096._008B_008B_0093.ToString(""f6"" /* string-offset:6484 */)"
+62348,_0089_0099_0098,Text,"P_0._0088_0091_0096._008B_008B_0094.ToString(""f2"" /* string-offset:4640 */)"
+62349,_0089_0099_0091,Text,"P_0._0088_0091_0097._008B_008B_0092.ToString(""f6"" /* string-offset:6484 */)"
+62360,_0089_0099_0091,Visible,true
+62361,_0089_0099_0095,Visible,true
+62362,_0089_0099_009A,Visible,true
+62367,_0089_0099_0091,Visible,false
+62370,_0089_0099_0095,Visible,false
+62380,_0089_0099_009A,Visible,false
+62512,_0089_009A_009C,Text,num2.ToString()
+62516,_0089_009A_009D,Text,num3.ToString()
+62549,_0089_0097_009A,Text,_0089_0098_008B.Text
+62550,_0089_0098_008B,Text,text
+62552,_0089_0097_0099,Text,_0089_0098_0089.Text
+62553,_0089_0098_0089,Text,text
+62558,_0089_0097_0098,Text,_0089_0098_0088.Text
+62560,_0089_0098_0088,Text,text
+62715,_0089_0098_0095,TabIndex,10
+62721,_0089_0098_0096,Name,"""label19"" /* string-offset:2352 */"
+62726,_0089_0098_0096,TabIndex,9
+62730,_0089_0098_0096,Text,"""机型分类"" /* string-offset:5716 */"
+62740,_0089_0099_0091,Visible,false
+63001,_0089_0098_008E,Name,"""tabControl1"" /* string-offset:1756 */"
+63005,_0089_0098_008E,SelectedIndex,0
+63012,_0089_0098_008E,TabIndex,64
+63022,_0089_0098_008F,Name,"""tabPage1"" /* string-offset:1760 */"
+63030,_0089_009A_009B,TabIndex,41
+63034,_0089_009A_009B,Text,"""半翼展(m)"" /* string-offset:4200 */"
+63038,_0089_009A_0098,Name,"""label24"" /* string-offset:2120 */"
+63040,_0089_009A_0098,TabIndex,41
+63044,_0089_009A_0098,Text,"""RDH(m)"" /* string-offset:2148 */"
+63048,_0089_009A_009C,Name,"""textBoxWing"" /* string-offset:4204 */"
+63050,_0089_009A_009C,TabIndex,40
+63051,_0089_009A_009C,Text,"""30"" /* string-offset:4208 */"
+63067,_0089_009A_0099,Name,"""textBoxRDH"" /* string-offset:2192 */"
+63074,_0089_009A_0099,TabIndex,40
+63075,_0089_009A_0099,Text,"""15"" /* string-offset:1964 */"
+63097,_0089_009A_008F,Name,"""comboBoxCat"" /* string-offset:4212 */"
+63101,_0089_009A_008F,TabIndex,32
+63117,_0089_009A_0090,Name,"""label11"" /* string-offset:2912 */"
+63119,_0089_009A_0090,TabIndex,38
+63123,_0089_009A_0090,Text,"""机型"" /* string-offset:2356 */"
+63131,_0089_009A_009D,Name,"""textBoxWheel"" /* string-offset:4216 */"
+63136,_0089_009A_009D,TabIndex,33
+63137,_0089_009A_009D,Text,"""6"" /* string-offset:2708 */"
+63147,_0089_009A_0091,Name,"""LocDistance"" /* string-offset:3936 */"
+63152,_0089_009A_0091,TabIndex,33
+63156,_0089_009A_0091,Text,"""3280"" /* string-offset:4220 */"
+63177,_0089_0097_009C,Name,"""button5"" /* string-offset:1912 */"
+63181,_0089_0097_009C,TabIndex,3
+63352,_0089_0098_008F,TabIndex,0
+63360,_0089_0098_008F,Text,"""跑道数据"" /* string-offset:3280 */"
+63406,_0089_0098_0087,TabIndex,3
+63419,_0089_0099_0090,Name,"""textBoxYB"" /* string-offset:4300 */"
+63424,_0089_0099_0090,TabIndex,10
+63427,_0089_0099_0090,Text,"""0.001"" /* string-offset:4276 */"
+63435,_0089_0099_0091,Name,"""textBoxWsA"" /* string-offset:4304 */"
+63440,_0089_0099_0091,TabIndex,3
+63441,_0089_0099_0091,Text,"""0.001"" /* string-offset:4276 */"
+63456,_0089_0098_009C,TabIndex,4
+63457,_0089_0098_009C,Text,"""49"" /* string-offset:2340 */"
+63465,_0089_009A_0086,Name,"""checkBoxShowOas"" /* string-offset:6504 */"
+63468,_0089_0099_0093,Text,"""0.001"" /* string-offset:4276 */"
+63495,_0089_0099_0094,Name,"""label10"" /* string-offset:2952 */"
+63497,_0089_0099_0094,TabIndex,12
+63501,_0089_0099_0094,Text,"""Y"" /* string-offset:3908 */"
+63510,_0089_0099_008D,TabIndex,0
+63513,_0089_0099_008D,Text,"""0.001"" /* string-offset:4276 */"
+63523,_0089_0099_008E,Name,"""textBoxYC"" /* string-offset:4292 */"
+63527,_0089_0099_008E,TabIndex,11
+63528,_0089_0099_008E,Text,"""0.001"" /* string-offset:4276 */"
+63535,_0089_0099_008F,Name,"""label26"" /* string-offset:2144 */"
+63540,_0089_0099_008F,TabIndex,4
+63541,_0089_0099_008F,Text,"""W*"" /* string-offset:4296 */"
+63557,_0089_0099_0098,Name,"""textBoxWC"" /* string-offset:4328 */"
+63559,_0089_0099_0098,TabIndex,2
+63562,_0089_0099_0098,Text,"""0.001"" /* string-offset:4276 */"
+63568,_0089_0099_0099,Name,"""textBoxXA"" /* string-offset:4332 */"
+63573,_0089_0099_0099,TabIndex,6
+63574,_0089_0099_0099,Text,"""0.001"" /* string-offset:4276 */"
+63582,_0089_0099_008A,Name,"""textBoxZA"" /* string-offset:4284 */"
+63584,_0089_0099_008A,TabIndex,12
+63588,_0089_0099_008A,Text,"""0.001"" /* string-offset:4276 */"
+63604,_0089_0099_008B,Name,"""label27"" /* string-offset:2160 */"
+63613,_0089_0099_0097,Name,"""textBoxXB"" /* string-offset:4324 */"
+63618,_0089_0099_0097,TabIndex,7
+63619,_0089_0099_0097,Text,"""0.001"" /* string-offset:4276 */"
+63631,_0089_0099_008B,TabIndex,4
+63634,_0089_0099_008B,Text,"""W"" /* string-offset:3984 */"
+63646,_0089_0099_008C,Name,"""label8"" /* string-offset:2960 */"
+63648,_0089_0099_008C,TabIndex,16
+63651,_0089_0099_008C,Text,"""Z"" /* string-offset:3912 */"
+63666,_0089_0099_008D,Name,"""textBoxWA"" /* string-offset:4288 */"
+63670,_0089_009B_0089,Text,"""DH(m)"" /* string-offset:2460 */"
+63678,_0089_009A_008C,Name,"""textBoxLGT"" /* string-offset:5720 */"
+63683,_0089_009A_008C,TabIndex,64
+63692,_0089_0098_0086,Text,"""末端坐标"" /* string-offset:4368 */"
+63696,_0089_009B_0086,Name,"""button10"" /* string-offset:3476 */"
+63700,_0089_009B_0086,TabIndex,66
+63716,_0089_0098_0087,Name,"""button4"" /* string-offset:1928 */"
+63762,_0089_0097_0099,Name,"""textBoxLat1"" /* string-offset:2848 */"
+63767,_0089_0097_0099,TabIndex,1
+63771,_0089_0097_0099,Text,""" 0"" /* string-offset:4364 */"
+63779,_0089_0097_009A,Name,"""textBoxLon1"" /* string-offset:2856 */"
+63784,_0089_0097_009A,TabIndex,0
+63792,_0089_0099_009E,Text,"""计算"" /* string-offset:4792 */"
+63803,_0089_0098_009C,Name,"""textBoxHLm"" /* string-offset:2336 */"
+63806,_0089_0098_008D,Text,"""X（m）"" /* string-offset:2876 */"
+63810,_0089_009A_008B,Name,"""label14"" /* string-offset:2260 */"
+63815,_0089_009A_008B,TabIndex,63
+63819,_0089_009A_008B,Text,"""机场标高(m)"" /* string-offset:5740 */"
+63827,_0089_009B_0088,Name,"""textBox1"" /* string-offset:1784 */"
+63833,_0089_009B_0088,TabIndex,64
+63836,_0089_009B_0088,Text,"""60"" /* string-offset:2452 */"
+63849,_0089_009B_0089,Name,"""label28"" /* string-offset:2612 */"
+63853,_0089_009B_0089,TabIndex,61
+63862,_0089_0099_0087,Name,"""buttonLoad"" /* string-offset:5380 */"
+63864,_0089_0099_0087,TabIndex,22
+63865,_0089_0099_0087,Text,"""加载"" /* string-offset:5808 */"
+63875,_0089_0098_008C,TabIndex,2
+63884,_0089_0098_008A,TabIndex,2
+63885,_0089_0098_008A,Text,"""Z（m）"" /* string-offset:2872 */"
+63893,_0089_0098_008B,Name,"""textBoxLon2"" /* string-offset:2896 */"
+63902,_0089_009A_009B,Name,"""label18"" /* string-offset:2568 */"
+63913,_0089_0098_008B,TabIndex,0
+63914,_0089_0098_008B,Text,""" -3000"" /* string-offset:4376 */"
+63924,_0089_0098_008C,Name,"""label4"" /* string-offset:2904 */"
+63928,_0089_0098_008C,Text,"""Y（m）"" /* string-offset:2868 */"
+63932,_0089_0098_008D,Name,"""label7"" /* string-offset:2236 */"
+63937,_0089_0098_008D,TabIndex,2
+64022,_0089_0099_0093,Name,"""textBoxWB"" /* string-offset:4312 */"
+64029,_0089_0099_0093,TabIndex,1
+64046,_0089_009B_0087,Text,"""标记"" /* string-offset:2972 */"
+64054,_0089_0098_009B,Name,"""textBoxHLr"" /* string-offset:2312 */"
+64062,_0089_0098_009B,TabIndex,4
+64066,_0089_0098_009B,Text,"""26"" /* string-offset:2316 */"
+64067,_0089_0098_009C,Enabled,false
+64109,_0089_0097_0094,Name,"""buttonAix"" /* string-offset:3284 */"
+64117,_0089_0097_0094,TabIndex,1
+64118,_0089_0097_0094,Text,"""入口坐标系"" /* string-offset:3288 */"
+64125,_0089_0098_009A,Text,"""52.12"" /* string-offset:2364 */"
+64126,_0089_0098_009B,Enabled,false
+64150,_0089_009A_009A,Name,"""comboBoxMissCG"" /* string-offset:4264 */"
+64152,_0089_009A_009A,TabIndex,43
+64161,_0089_0098_009A,Name,"""textBoxHLcor"" /* string-offset:2360 */"
+64166,_0089_0098_009A,TabIndex,4
+64186,_0089_0099_0086,Text,"""a"" /* string-offset:3968 */"
+64224,_0089_0097_009B,TabIndex,2
+64225,_0089_0097_009B,Text,"""入口标高(m)"" /* string-offset:2124 */"
+64231,_0089_0099_0095,Name,"""textBoxWsB"" /* string-offset:4316 */"
+64236,_0089_0099_0095,TabIndex,4
+64237,_0089_0099_0095,Text,"""0.001"" /* string-offset:4276 */"
+64238,_0089_0099_0095,Visible,false
+64254,_0089_0099_0096,Name,"""textBoxXC"" /* string-offset:4320 */"
+64259,_0089_0099_0096,TabIndex,8
+64260,_0089_0099_0096,Text,"""0.001"" /* string-offset:4276 */"
+64266,_0089_009A_008A,Name,"""textBoxFAF"" /* string-offset:2152 */"
+64271,_0089_009A_008A,TabIndex,60
+64272,_0089_009A_008A,Text,"""900"" /* string-offset:2156 */"
+64280,_0089_009A_008D,Name,"""label13"" /* string-offset:3460 */"
+64292,_0089_009A_008D,TabIndex,61
+64293,_0089_009A_008D,Text,"""灯光长度(m)"" /* string-offset:5732 */"
+64298,_0089_009A_008E,Name,"""textBoxAdElev"" /* string-offset:5728 */"
+64303,_0089_0097_0092,Text,"""CAD"" /* string-offset:1696 */"
+64307,_0089_009A_0089,Text,"""FAF高度(m)"" /* string-offset:2116 */"
+64353,_0089_0097_0092,Name,"""button6"" /* string-offset:1920 */"
+64355,_0089_0097_0092,TabIndex,2
+64372,_0089_0097_009A,Text,""" 0"" /* string-offset:4364 */"
+64379,_0089_0097_009B,Name,"""label2"" /* string-offset:1860 */"
+64390,_0089_0098_008A,Name,"""label9"" /* string-offset:2940 */"
+64401,_0089_0099_0086,Name,"""label6"" /* string-offset:2696 */"
+64403,_0089_0099_0086,TabIndex,16
+64411,_0089_0098_009A,Enabled,false
+64415,_0089_0099_009E,TabIndex,11
+64427,_0089_009A_0089,TabIndex,59
+64432,_0089_009A_0088,Text,"""附加参数"" /* string-offset:6492 */"
+64435,_0089_009A_0089,Name,"""label12"" /* string-offset:3428 */"
+64438,_0089_009A_008C,Text,"""900"" /* string-offset:2156 */"
+64477,_0089_009A_0092,Name,"""label16"" /* string-offset:2540 */"
+64485,_0089_0099_009A,Name,"""textBoxWsC"" /* string-offset:4336 */"
+64493,_0089_0099_009A,TabIndex,5
+64497,_0089_0099_009A,Text,"""0.001"" /* string-offset:4276 */"
+64501,_0089_0099_009A,Visible,false
+64510,_0089_0098_0090,Name,"""tabPage2"" /* string-offset:1788 */"
+64516,_0089_0098_0090,TabIndex,1
+64519,_0089_0098_0090,Text,"""OAS面参数"" /* string-offset:6496 */"
+64533,_0089_0098_0095,Name,"""comboCat"" /* string-offset:2332 */"
+64636,_0089_0099_0092,Name,"""textBoxYA"" /* string-offset:4308 */"
+64638,_0089_0099_0092,TabIndex,9
+64641,_0089_0099_0092,Text,"""0.001"" /* string-offset:4276 */"
+64658,_0089_0098_0088,Name,"""textBoxZ2"" /* string-offset:4372 */"
+64660,_0089_0098_0088,TabIndex,2
+64668,_0089_0098_0088,Text,""" 0"" /* string-offset:4364 */"
+64709,_0089_0097_009D,Name,"""Start"" /* string-offset:2864 */"
+64713,_0089_0097_009D,TabIndex,2
+64716,_0089_0097_009D,Text,"""Y（m）"" /* string-offset:2868 */"
+64733,_0089_0097_009E,Name,"""label1"" /* string-offset:1832 */"
+64740,_0089_0097_009E,TabIndex,2
+64743,_0089_0097_009E,Text,"""X（m）"" /* string-offset:2876 */"
+64759,_0089_0099_0088,Name,"""textBoxZC"" /* string-offset:4272 */"
+64766,_0089_0099_0088,TabIndex,14
+64767,_0089_0099_0088,Text,"""0.001"" /* string-offset:4276 */"
+64793,_0089_0099_0089,Name,"""textBoxZB"" /* string-offset:4280 */"
+64798,_0089_0099_0089,TabIndex,13
+64802,_0089_0099_0089,Text,"""0.001"" /* string-offset:4276 */"
+64817,_0089_009A_0088,TabIndex,65
+64829,_0089_009A_0086,TabIndex,65
+64830,_0089_009A_0086,Text,"""OAS"" /* string-offset:4032 */"
+64846,_0089_009B_0087,Name,"""button18"" /* string-offset:3312 */"
+64854,_0089_0098_0097,Name,"""label20"" /* string-offset:2296 */"
+64860,_0089_0098_0097,TabIndex,9
+64864,_0089_0098_0097,Text,"""HL修正(m)"" /* string-offset:2300 */"
+64870,_0089_0098_0092,Name,"""textBoxElev"" /* string-offset:2404 */"
+64874,_0089_0098_0092,TabIndex,2
+64875,_0089_0098_0092,Text,"""0"" /* string-offset:560 */"
+64886,_0089_0098_0098,Name,"""label29"" /* string-offset:2288 */"
+64888,_0089_0098_0098,TabIndex,9
+64892,_0089_0098_0098,Text,"""HLr(m)"" /* string-offset:2292 */"
+64895,_0089_0098_0099,Name,"""label30"" /* string-offset:2304 */"
+64897,_0089_0098_0099,TabIndex,9
+64898,_0089_0098_0099,Text,"""HLm(m)"" /* string-offset:2308 */"
+64914,_0089_0098_0093,Name,"""label15"" /* string-offset:2532 */"
+64919,_0089_0098_0093,TabIndex,0
+64923,_0089_0098_0093,Text,"""机场标高(m)"" /* string-offset:5740 */"
+64947,_0089_009A_009E,Name,"""label17"" /* string-offset:2548 */"
+64952,_0089_009A_009E,TabIndex,35
+64956,_0089_009A_009E,Text,"""轮高(m)"" /* string-offset:4196 */"
+64970,_0089_0098_009D,Name,"""label3"" /* string-offset:1876 */"
+64974,_0089_0098_009D,TabIndex,16
+64975,_0089_0098_009D,Text,"""c"" /* string-offset:3976 */"
+64991,_0089_0098_009E,Name,"""label5"" /* string-offset:2712 */"
+64993,_0089_0098_009E,TabIndex,16
+64997,_0089_0098_009E,Text,"""b"" /* string-offset:3972 */"
+65017,_0089_0099_009B,Name,"""label25"" /* string-offset:2136 */"
+65022,_0089_0099_009B,TabIndex,8
+65033,_0089_0097_008F,Name,"""statusStrip1"" /* string-offset:2836 */"
+65038,_0089_0097_008F,TabIndex,0
+65042,_0089_0097_008F,Text,"""statusStrip1"" /* string-offset:2836 */"
+65046,_0089_0097_0090,Name,"""toolStripStatusLabel1"" /* string-offset:2840 */"
+65048,_0089_0097_0090,Text,"""软件已就绪"" /* string-offset:3612 */"
+65052,_0089_0097_0091,Name,"""button8"" /* string-offset:3468 */"
+65060,_0089_0097_0091,TabIndex,3
+65063,_0089_0097_0091,Text,"""KML"" /* string-offset:3272 */"
+65065,_0089_0097_0091,Visible,false
+65106,_0089_009B_0087,TabIndex,79
+65120,_0089_0097_0093,TabIndex,61
+65155,_0089_0097_0093,Name,"""dataGridView1"" /* string-offset:2832 */"
+65158,_0089_0097_0093,ReadOnly,true
+65170,_0089_0097_0097,Name,"""groupBox1"" /* string-offset:1664 */"
+65175,_0089_0097_0097,TabIndex,57
+65182,_0089_0097_0097,Text,"""入口坐标"" /* string-offset:4356 */"
+65189,_0089_0097_0098,Name,"""textBoxZ1"" /* string-offset:4360 */"
+65191,_0089_0097_0098,TabIndex,2
+65195,_0089_0097_0098,Text,""" 0"" /* string-offset:4364 */"
+65214,_0089_0098_0086,Name,"""groupBox2"" /* string-offset:1740 */"
+65217,_0089_0098_0086,TabIndex,58
+65237,_0089_0099_009B,Text,"""X"" /* string-offset:3904 */"
+65242,_0089_0098_0091,Name,"""tabPage3"" /* string-offset:2268 */"
+65244,_0089_0098_0091,TabIndex,2
+65245,_0089_0098_0091,Text,"""HL检查"" /* string-offset:6500 */"
+65271,_0089_0098_0094,Name,"""groupBox11"" /* string-offset:2284 */"
+65278,_0089_0098_0094,TabIndex,67
+65283,_0089_0098_0094,Text,"""HL修正检查"" /* string-offset:5932 */"
+65292,_0089_0099_009E,Name,"""button7"" /* string-offset:1948 */"
+65303,_0089_0098_0089,Name,"""textBoxLat2"" /* string-offset:2892 */"
+65308,_0089_0098_0089,TabIndex,1
+65312,_0089_0098_0089,Text,""" 0"" /* string-offset:4364 */"
+65321,_0089_009A_0092,TabIndex,35
+65322,_0089_009A_0092,Text,"""Dist(m)"" /* string-offset:4224 */"
+65338,_0089_009A_0093,Name,"""label21"" /* string-offset:2344 */"
+65343,_0089_009A_0093,TabIndex,36
+65344,_0089_009A_0093,Text,"""MCG(%)"" /* string-offset:2768 */"
+65347,_0089_009A_0094,Name,"""label22"" /* string-offset:2104 */"
+65349,_0089_009A_0094,TabIndex,37
+65352,_0089_009A_0094,Text,"""GP(°)"" /* string-offset:2476 */"
+65376,_0089_009A_0095,Name,"""comboBoxGP"" /* string-offset:2400 */"
+65384,_0089_009A_0095,TabIndex,31
+65389,_0089_009A_0096,Enabled,false
+65401,_0089_009A_0096,Name,"""comboBoxAppType"" /* string-offset:4248 */"
+65406,_0089_009A_0096,TabIndex,30
+65413,_0089_009A_0097,Name,"""label23"" /* string-offset:2112 */"
+65415,_0089_009A_0097,TabIndex,29
+65416,_0089_009A_0097,Text,"""进近类型"" /* string-offset:4268 */"
+65418,_0089_0099_009C,Name,"""button1"" /* string-offset:1692 */"
+65423,_0089_0099_009C,TabIndex,24
+65426,_0089_0099_009C,Text,"""保存"" /* string-offset:5800 */"
+65439,_0089_0099_009D,Name,"""button2"" /* string-offset:1816 */"
+65446,_0089_0099_009D,TabIndex,23
+65447,_0089_0099_009D,Text,"""拾取"" /* string-offset:5804 */"
+65461,_0089_009A_008E,TabIndex,62
+65480,_0089_009A_008E,Text,"""0"" /* string-offset:560 */"
+65510,_0089_0097_0095,Name,"""button3"" /* string-offset:1936 */"
+65515,_0089_0097_0095,TabIndex,0
+65516,_0089_0097_0095,Text,"""屏幕数据"" /* string-offset:2988 */"
+65527,_0089_0097_0096,Name,"""buttonEvl"" /* string-offset:3260 */"
+65529,_0089_0097_0096,TabIndex,4
+65530,_0089_0097_0096,Text,"""一键评估"" /* string-offset:2980 */"
+65538,_0089_0097_0096,Visible,false
+65575,_0089_009A_0088,Name,"""groupBox3"" /* string-offset:1708 */"

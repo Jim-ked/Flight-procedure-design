@@ -1,0 +1,33 @@
+METHOD 0600014B \x87\x8d.\x87\x8c::.ctor RVA=10DBC file=EFBC
+IL_0000: ldarg.0 
+IL_0001: ldc.i4 1028
+IL_0006: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_000B: stfld 0x0400001E \x87\x8d.\x87\x8c::\x8d\x8d
+IL_0010: ldarg.0 
+IL_0011: ldc.i4 1032
+IL_0016: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_001B: stfld 0x0400001F \x87\x8d.\x87\x8c::\x8d\x8e
+IL_0020: ldarg.0 
+IL_0021: call 0x0A0001E4 System.Windows.Forms.Label::.ctor
+IL_0026: ldarg.0 
+IL_0027: ldarg.0 
+IL_0028: callvirt 0x0A0001E5 System.Windows.Forms.Label::get_BorderStyle
+IL_002D: stfld 0x0400001C \x87\x8d.\x87\x8c::\x8d\x8b
+IL_0032: ldc.i4.1 
+IL_0033: call 0x06000154 \x87\x8d.\x87\x8c::a
+IL_0038: brtrue.s 85
+IL_003A: pop 
+IL_003B: ldarg.0 
+IL_003C: ldarg.0 
+IL_003D: callvirt 0x0A0001E6 System.Windows.Forms.Control::get_BackColor
+IL_0042: stfld 0x0400001D \x87\x8d.\x87\x8c::\x8d\x8c
+IL_0047: br.s 86
+IL_0049: pop 
+IL_004A: ldarg.0 
+IL_004B: call 0x0A0001E7 System.Windows.Forms.Cursors::get_Hand
+IL_0050: callvirt 0x0A0001E8 System.Windows.Forms.Control::set_Cursor
+IL_0055: ldarg.0 
+IL_0056: ldc.i4.s 32
+IL_0058: callvirt 0x0A0001E9 System.Windows.Forms.Label::set_TextAlign
+IL_005D: ret 
+

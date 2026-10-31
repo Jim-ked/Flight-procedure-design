@@ -1,0 +1,23 @@
+84856: 		public void _008B_008B_008F(_008F_008E P_0, _008F_008E P_1, _008F_008E P_2)
+84857: 		{
+84858: 			if (!false /* original-file-bool-offset:1456 */)
+84859: 			{
+84860: 				double num = P_0.X - P_1.X;
+84861: 				_0089y();
+84862: 				double num2 = default(double);
+84863: 				if (_0089x())
+84864: 				{
+84865: 					num2 = P_0.X - P_2.X;
+84866: 				}
+84867: 				double num3 = P_0.Y - P_1.Y;
+84868: 				double num4 = P_0.Y - P_2.Y;
+84869: 				double num5 = P_0.Z - P_1.Z;
+84870: 				double num6 = P_0.Z - P_2.Z;
+84871: 				if (_0089x())
+84872: 				{
+84873: 					_008B_008B_0092 = _008B_008B_0091(num5 * num4 - num6 * num3, num * num4 - num2 * num3);
+84874: 					_008B_008B_0093 = _008B_008B_0091(num5 * num2 - num6 * num, num3 * num2 - num4 * num);
+84875: 					_008B_008B_0094 = P_0.Z - _008B_008B_0092 * P_0.X - _008B_008B_0093 * P_0.Y;
+84876: 				}
+84877: 			}
+84878: 		}

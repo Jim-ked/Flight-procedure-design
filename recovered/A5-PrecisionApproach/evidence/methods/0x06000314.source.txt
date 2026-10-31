@@ -1,0 +1,21 @@
+24652: 		private void _0087_0091_009C(object P_0, EventArgs P_1)
+24653: 		{
+24654: 			//IL_00a3: Unknown result type (might be due to invalid IL or missing references)
+24655: 			//IL_00a8: Unknown result type (might be due to invalid IL or missing references)
+24656: 			_0087_0091_008D(Application.DocumentManager.MdiActiveDocument.Window.Handle);
+24657: 			Point3d val = default(Point3d);
+24658: 			do
+24659: 			{
+24660: 				base.Visible = false;
+24661: 				_00870();
+24662: 				if (_0087_009F())
+24663: 				{
+24664: 					val = _009D._008B_008D("\n请选择跑道入口" /* string-offset:424 */);
+24665: 				}
+24666: 				base.Visible = true;
+24667: 				_0087_0094_0099.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();
+24668: 				_0087_0094_0098.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();
+24669: 				_0087_0094_0097.Text = ((Point3d)(ref val)).Z.ToString();
+24670: 			}
+24671: 			while (!_0087_009F());
+24672: 		}

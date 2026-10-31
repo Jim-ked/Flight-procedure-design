@@ -1,0 +1,25 @@
+METHOD 06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x97 RVA=CD7E4 file=CB9E4
+IL_0000: br 19
+IL_0005: pop 
+IL_0006: ldc.i4.0 
+IL_0007: ldc.i4 16777588
+IL_000C: call 0x060008B8 \x91\x8a.\x91\x89::e53w34m968awCm9P85taUZe
+IL_0011: call 0x0A000019 System.Type::GetTypeFromHandle
+IL_0016: callvirt 0x0A00001B System.Type::get_Assembly
+IL_001B: ldstr 'System.Security.Cryptography.CryptoConfig'
+IL_0020: ldc.i4.0 
+IL_0021: callvirt 0x0A000402 System.Reflection.Assembly::GetType
+IL_0026: ldstr 'get_AllowOnlyFipsAlgorithms'
+IL_002B: ldc.i4.s 24
+IL_002D: callvirt 0x0A000403 System.Type::GetMethod
+IL_0032: ldnull 
+IL_0033: ldc.i4.0 
+IL_0034: newarr 0x01000019 System.Object
+IL_0039: callvirt 0x0A000404 System.Reflection.MethodBase::Invoke
+IL_003E: unbox.any 0x01000005 System.Boolean
+IL_0043: stsfld 0x0400079B \x90\x9c.\x90\x9b::\x8b\x91\x86
+IL_0048: leave 95
+IL_004D: pop 
+IL_004E: leave 95
+IL_0053: ret 
+

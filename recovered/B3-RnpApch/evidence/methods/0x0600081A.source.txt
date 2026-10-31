@@ -1,0 +1,12 @@
+84429: 		public static List<_008F_008E> _008B_008A_008D(List<List<_008F_008E>> P_0)
+84430: 		{
+84431: 			List<_008F_008E> list = new List<_008F_008E>();
+84432: 			foreach (List<_008F_008E> item in P_0)
+84433: 			{
+84434: 				foreach (_008F_008E item2 in item)
+84435: 				{
+84436: 					list.Add(item2);
+84437: 				}
+84438: 			}
+84439: 			return list;
+84440: 		}

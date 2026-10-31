@@ -1,0 +1,13 @@
+Static search scope: reverse-analysis/03_recovered-src/ilspy-methods-only/--/--.cs, B2 `_008C_0089` source range 67449–68230, plus annotated B2 event source.
+
+Search terms:
+
+```text
+_008A_008C_009E ==
+_008A_008C_009E <=
+_008A_008C_009E >=
+ATT == 0
+ATT <= epsilon
+```
+
+Result: no matching equality, epsilon or non-positive ATT branch. The B2 class contains assignments and arithmetic using `_008A_008C_009E`, but no special ATT=0 dispatch. This is a static negative result; the help statement remains implementation basis to be confirmed.

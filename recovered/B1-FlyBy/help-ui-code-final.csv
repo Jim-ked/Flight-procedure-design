@@ -1,0 +1,6 @@
+﻿Function,Help/UI identity,Code behavior,Consistency,Finding,Evidence
+Three-point FlyBy,起点 → 转弯点 → 终点,P1/P2/P3 descriptors; headings from P1→P2 and P2→P3,CONSISTENT,"P1/P3 are direction references, not automatically named fixes",B1 input-frame.md; source 52290-52313
+ATT,ATT(m),user textBoxATT → middle descriptor; earliest/latest scalar formulas,CONSISTENT,user input in metres; not RNP-derived,B1 input-frame.md; geometry.md
+SW1 / SW2,two width fields,"SW1 on first/middle descriptors, SW2 on last descriptor; signed candidate selection",CONSISTENT,safe labels are first descriptor width / last descriptor width,B1 input-frame.md; geometry.md
+NN′ / KK′,two checkbox line controls,KK→BoundaryList05 Polyline; NN→BoundaryGroup02 Group,UNCERTAIN,"UI-semantic closed, normative interpretation unresolved",B1 nn-kk-semantic-proof.md; cad-writer.md
+Obstacle evaluator,fly-by boundary drawing,no obstacle input/evaluator call in B1 writer/class slice,CONSISTENT,B1 is a geometry construction tool in this build.,B1 cad-writer.md; Round 10 residual extract

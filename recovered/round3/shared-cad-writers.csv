@@ -1,0 +1,7 @@
+writer_method,processed/original,evidence,entity_behavior,transaction_behavior
+_0088_008A,shared helper 0x06000089/0x0600008A,annotated --/-.cs lines 1435-1467,one open zero-bulge Polyline via _008C_008F and _0088_008D,DocumentLock+transaction per call
+_0088_008B,shared helper 0x0600008B/0x0600008C,annotated --/-.cs lines 1468-1510,one zero-bulge Polyline per list plus Group,one transaction; group appended/committed
+_0088_008D,shared append helper 0x0600008A/0x0600008B,annotated --/-.cs lines 1578-1655,AppendEntity to ModelSpace and optional WsObject XData,RegAppTable registration; alert on exception
+_008C_008F,polyline extension,annotated --/--.cs lines 342-359,AddVertexAt bulge=0 for every point,sets no Closed=true
+_008C_008E,polyline extension,annotated --/--.cs lines 315-341,AddVertexAt bulge=index%2,not used by B1/B2 writer calls
+_008C_008B,descriptor writer,annotated --/--.cs lines 68440-68466,"four vertices; middle bulge=tan(turn-span/4); open",WsObject through _0088_008D

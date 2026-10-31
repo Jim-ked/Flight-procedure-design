@@ -1,0 +1,169 @@
+41377: 	public class _008A_0089 : _008F_008E
+41378: 	{
+41379: 		[CompilerGenerated]
+41380: 		private string _0088_008F_0094;
+41381: 
+41382: 		[CompilerGenerated]
+41383: 		private string _0088_008F_0095;
+41384: 
+41385: 		[CompilerGenerated]
+41386: 		private double _0088_008F_0096;
+41387: 
+41388: 		[CompilerGenerated]
+41389: 		private double _0088_008F_0097;
+41390: 
+41391: 		[CompilerGenerated]
+41392: 		private double _0088_008F_0098;
+41393: 
+41394: 		[CompilerGenerated]
+41395: 		private double _0088_008F_0099;
+41396: 
+41397: 		[CompilerGenerated]
+41398: 		private double _0088_008F_009A;
+41399: 
+41400: 		[CompilerGenerated]
+41401: 		private double _0088_008F_009B;
+41402: 
+41403: 		[SpecialName]
+41404: 		[CompilerGenerated]
+41405: 		public string _0088_008E_0095()
+41406: 		{
+41407: 			return _0088_008F_0094;
+41408: 		}
+41409: 
+41410: 		[SpecialName]
+41411: 		[CompilerGenerated]
+41412: 		public void _0088_008E_0096(string P_0)
+41413: 		{
+41414: 			_0088_008F_0094 = P_0;
+41415: 		}
+41416: 
+41417: 		[SpecialName]
+41418: 		[CompilerGenerated]
+41419: 		public string _0088_008E_0098()
+41420: 		{
+41421: 			return _0088_008F_0095;
+41422: 		}
+41423: 
+41424: 		[SpecialName]
+41425: 		[CompilerGenerated]
+41426: 		public void _0088_008E_0099(string P_0)
+41427: 		{
+41428: 			_0088_008F_0095 = P_0;
+41429: 		}
+41430: 
+41431: 		[SpecialName]
+41432: 		[CompilerGenerated]
+41433: 		public double _0088_008E_009B()
+41434: 		{
+41435: 			return _0088_008F_0096;
+41436: 		}
+41437: 
+41438: 		[SpecialName]
+41439: 		[CompilerGenerated]
+41440: 		public void _0088_008E_009C(double P_0)
+41441: 		{
+41442: 			_0088_008F_0096 = P_0;
+41443: 		}
+41444: 
+41445: 		[SpecialName]
+41446: 		[CompilerGenerated]
+41447: 		public double _0088_008E_009E()
+41448: 		{
+41449: 			return _0088_008F_0097;
+41450: 		}
+41451: 
+41452: 		[SpecialName]
+41453: 		[CompilerGenerated]
+41454: 		public void _0088_008F_0086(double P_0)
+41455: 		{
+41456: 			_0088_008F_0097 = P_0;
+41457: 		}
+41458: 
+41459: 		[SpecialName]
+41460: 		[CompilerGenerated]
+41461: 		public double _0088_008F_0088()
+41462: 		{
+41463: 			return _0088_008F_0098;
+41464: 		}
+41465: 
+41466: 		[SpecialName]
+41467: 		[CompilerGenerated]
+41468: 		public void _0088_008F_0089(double P_0)
+41469: 		{
+41470: 			_0088_008F_0098 = P_0;
+41471: 		}
+41472: 
+41473: 		[SpecialName]
+41474: 		[CompilerGenerated]
+41475: 		public double _0088_008F_008B()
+41476: 		{
+41477: 			return _0088_008F_0099;
+41478: 		}
+41479: 
+41480: 		[SpecialName]
+41481: 		[CompilerGenerated]
+41482: 		public void _0088_008F_008C(double P_0)
+41483: 		{
+41484: 			_0088_008F_0099 = P_0;
+41485: 		}
+41486: 
+41487: 		[SpecialName]
+41488: 		[CompilerGenerated]
+41489: 		public double _0088_008F_008E()
+41490: 		{
+41491: 			return _0088_008F_009A;
+41492: 		}
+41493: 
+41494: 		[SpecialName]
+41495: 		[CompilerGenerated]
+41496: 		public void _0088_008F_008F(double P_0)
+41497: 		{
+41498: 			_0088_008F_009A = P_0;
+41499: 		}
+41500: 
+41501: 		[SpecialName]
+41502: 		[CompilerGenerated]
+41503: 		public double _0088_008F_0091()
+41504: 		{
+41505: 			return _0088_008F_009B;
+41506: 		}
+41507: 
+41508: 		[SpecialName]
+41509: 		[CompilerGenerated]
+41510: 		public void _0088_008F_0092(double P_0)
+41511: 		{
+41512: 			_0088_008F_009B = P_0;
+41513: 		}
+41514: 
+41515: 		public override string ToString()
+41516: 		{
+41517: 			return string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(string.Concat(base.ToString() + "\nresult" /* string-offset:5412 */ + _0088_008E_0095(), "\nCategory" /* string-offset:5416 */, _0088_008E_0098()), "\nd0" /* string-offset:5420 */, _0088_008E_009B().ToString()), "\ndr" /* string-offset:5424 */, _0088_008E_009E().ToString()), "\nMOC" /* string-offset:5428 */, _0088_008F_0088().ToString()), "\nOCA" /* string-offset:5432 */, _0088_008F_008B().ToString()), "\nPDA" /* string-offset:5436 */, _0088_008F_008E().ToString()), "\nminPDG" /* string-offset:5440 */, _0088_008F_0091().ToString());
+41518: 		}
+41519: 
+41520: 		public _008A_0089(_008F_008E P_0)
+41521: 		{
+41522: 			base.ID = P_0.ID;
+41523: 			base.Name = P_0.Name;
+41524: 			base.X = P_0.X;
+41525: 			_0087m();
+41526: 			if (_0087l())
+41527: 			{
+41528: 				base.Y = P_0.Y;
+41529: 			}
+41530: 			base.Z = P_0.Z;
+41531: 		}
+41532: 
+41533: 		static _008A_0089()
+41534: 		{
+41535: 			LicenseManager.Validate(typeof(_008A_0089));
+41536: 		}
+41537: 
+41538: 		internal static bool _0087l()
+41539: 		{
+41540: 			return true;
+41541: 		}
+41542: 
+41543: 		internal static bool _0087m()
+41544: 		{
+41545: 			return false;

@@ -1,0 +1,91 @@
+28870: 			_ = 0;
+28871: 			Point3d val = default(Point3d);
+28872: 			if (_00871())
+28873: 			{
+28874: 				base.Visible = false;
+28875: 				val = _009D._008B_008D("\n请选择终点" /* string-offset:440 */);
+28876: 				base.Visible = true;
+28877: 				_0087_0098_008B.Text = Math.Round(((Point3d)(ref val)).X, 2).ToString();
+28878: 				_0087_0098_008A.Text = Math.Round(((Point3d)(ref val)).Y, 2).ToString();
+28879: 			}
+28880: 			_0087_0098_0098.Text = ((Point3d)(ref val)).Z.ToString();
+28881: 		}
+28882: 
+28883: 		private void _0087_0096_0090(object P_0, EventArgs P_1)
+28884: 		{
+28885: 			do
+28886: 			{
+28887: 				Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+28888: 				_ = mdiActiveDocument.Editor;
+28889: 				Database database = mdiActiveDocument.Database;
+28890: 				_00871();
+28891: 				if (!_00872())
+28892: 				{
+28893: 					Transaction val = database.TransactionManager.StartTransaction();
+28894: 					try
+28895: 					{
+28896: 						_0087_0097_008C = database._008B_008A<DBPoint>((OpenMode)0, _0020: false);
+28897: 					}
+28898: 					finally
+28899: 					{
+28900: 						((IDisposable)val)?.Dispose();
+28901: 					}
+28902: 					_0087_0097_009A.Text = "已检测到 " /* string-offset:2720 */ + _0087_0097_008C.Count + " 个障碍物。" /* string-offset:936 */;
+28903: 					break;
+28904: 				}
+28905: 			}
+28906: 			while (!_00871());
+28907: 			_0087_0096_0091(_0087_0097_008C);
+28908: 		}
+28909: 
+28910: 		private void _0087_0096_0091(List<DBPoint> P_0)
+28911: 		{
+28912: 			if (false /* original-file-bool-offset:508 */)
+28913: 			{
+28914: 				return;
+28915: 			}
+28916: 			_0087_0097_008D = new Dictionary<string, DBPoint>();
+28917: 			DataTable dataTable = new DataTable();
+28918: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+28919: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+28920: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+28921: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+28922: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+28923: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+28924: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+28925: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+28926: 			int num = 1;
+28927: 			foreach (DBPoint item in P_0)
+28928: 			{
+28929: 				_008F_008E obj = item._008C_008D(num.ToString());
+28930: 				num++;
+28931: 				dataTable.Rows.Add(obj.ID, obj.Name, Math.Round(obj.X, 2), Math.Round(obj.Y, 2), Math.Round(obj.Z, 2));
+28932: 				_0087_0097_008D.Add(obj.ID, item);
+28933: 			}
+28934: 			_0087_0097_0091.DataSource = dataTable;
+28935: 			_0087_0097_0091.Columns[1].Frozen = true;
+28936: 		}
+28937: 
+28938: 		private void _0087_0096_0092(List<_008A_008B> P_0)
+28939: 		{
+28940: 			if (!true /* original-file-bool-offset:512 */)
+28941: 			{
+28942: 				return;
+28943: 			}
+28944: 			DataTable dataTable = new DataTable();
+28945: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+28946: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+28947: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+28948: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+28949: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+28950: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+28951: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+28952: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+28953: 			foreach (_008A_008B item in P_0)
+28954: 			{
+28955: 				dataTable.Rows.Add(item.ID, item.Name, Math.Round(0.0 - item.X, 2), Math.Round(0.0 - item.Y, 2), Math.Round(item.Z, 2), item._0088_008F_009C, Math.Round(item._0088_008F_009D, 2), Math.Round(item._0088_008F_009E, 2));
+28956: 			}
+28957: 			_0087_0097_0091.DataSource = dataTable;
+28958: 			_0087_0097_0091.Columns[1].Frozen = true;
+28959: 		}
+28960: 

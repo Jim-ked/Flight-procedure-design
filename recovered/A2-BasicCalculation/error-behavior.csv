@@ -1,0 +1,10 @@
+﻿Case,Trigger,Observed legacy behavior,Handler outcome,CAD consequence,Evidence
+numeric parse failure,empty/invalid numeric TextBox,MessageBox; Number helper returns 0; TextBox path focuses control and sets LightCoral,calculation may continue with 0,drawing can proceed with zero-derived distance,formulas.md; CadInteraction.Recovered.cs
+turn-reader null,shared turn parameter parse/reader exception,reader shows MessageBox and returns null,caller does not uniformly null-check,downstream failure/exception remains possible,TurnParameterInput.Recovered.cs; formulas.md
+HLcor=0,precision SOC correction equals zero,"alert ""HL不得为0"" and calculation returns -1",handler returns -1,CAD takes negative result and continues with +1 distance behavior,BasicCalculationForm.Events.Recovered.cs; formulas.md
+negative PA distance,formula result negative (including HL/Xz combination),negative value retained in result and ThrSocDistance,no clamp/positive guard,line is still constructed from signed distance,cad-output-map.md; WsCalcuLine-schema.md
+zero gradient,gradient percent is zero,no explicit zero-domain guard in TP formula,runtime numeric division behavior remains old behavior,"if drawing continues, Infinity/NaN may enter line construction",formulas.md
+FAF/TP cancel,either GetPoint returns Origin,each pick is checked immediately,handler returns before later pick/drawing,no line for that path,cad-output-map.md
+NPA/PA/C cancel,"one pick Origin, other non-Origin",only equality of the two points is checked after both picks,can continue despite one cancel sentinel,line may be drawn from mixed sentinel/valid inputs,cad-output-map.md
+event binding,comboXz.TabIndexChanged,"bound to PA CAD drawing method, not only recalculation",real designer event binding retained,a tab-index change can enter a GetPoint path,ui-event-map.md
+airport elevation Validated,airport elevation validation,category/HL correction fill path updates HLcor,real validated event,later PA formula consumes updated HLcor,ui-event-map.md; formulas.md

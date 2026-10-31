@@ -1,0 +1,8 @@
+3186: 		public static void _0089_0093(List<DBPoint> P_0)
+3187: 		{
+3188: 			foreach (DBPoint item in P_0)
+3189: 			{
+3190: 				((Entity)item).Unhighlight();
+3191: 			}
+3192: 			Application.UpdateScreen();
+3193: 		}

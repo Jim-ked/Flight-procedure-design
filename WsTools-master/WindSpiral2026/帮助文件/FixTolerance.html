@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位容差 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 传统程序 / 定位容差</div>
+        <h1>A3.定位容差</h1>
+        <div class="cmd">命令：Y03_定位容差</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>传统程序</h2>
+                <ul>
+                    <li><a href="FormWindSpiral.html">A1.风螺旋</a></li>
+                    <li><a href="FormCalcu.html">A2.飞行程序基础计算</a></li>
+                    <li><a href="FixTolerance.html" class="active">A3.定位容差</a></li>
+                    <li><a href="FormNavAids.html">A4.非精密进近保护区</a></li>
+                    <li><a href="FormPA.html">A5.精密进近保护区</a></li>
+                    <li><a href="FormTemplate.html">A6.传统保护区模板</a></li>
+                    <li><a href="FormDepartureEvl.html">A7.离场越障评估</a></li>
+                    <li><a href="FormTurnAreaEvl.html">A8.复飞转弯区评估</a></li>
+                    <li><a href="FormPriSecEvl.html">A9.主副区评估</a></li>
+                    <li><a href="FormDmeEvl.html">A10.起始进近DME弧</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">PBN 程序 / 辅助功能</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【定位容差】用于绘制<strong>定位点容差区（Tolerance）</strong>。窗口分为“交叉定位”和“顶空盲区”两类计算，按导航设备类型、设备精度与飞行高度生成对应的容差区。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FixTolerance.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FixTolerance.png" alt="FixTolerance 界面截图" width="399"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>选项卡 / 控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>交叉定位（选项卡）</td><td>由两个方位 / 距离交叉确定定位点的容差区。</td></tr>
+                        <tr><td>顶空盲区（选项卡）</td><td>导航台正上方盲区（顶空盲区）范围计算。</td></tr>
+                        <tr><td>设备类型 / 设备精度（°）</td><td>选择导航设备类型并设置其精度。</td></tr>
+                        <tr><td>DME距离(nm) / 指定距离</td><td>使用DME设备，可指定DME距离。</td></tr>
+                        <tr><td>航迹引导 / 航迹线 / kk线 / 航迹容差</td><td>控制绘制内容的复选框。</td></tr>
+                        <tr><td> CAD（按钮）</td><td>绘制到CAD窗口中。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y03_定位容差</code> 打开窗口。</li>
+                    <li>切换到“交叉定位”或“顶空盲区”选项卡。</li>
+                    <li>选择设备类型、填写设备精度、选中 DME 设备、可指定距离。</li>
+                    <li>勾选需要绘制的内容（航迹线、kk 线、航迹容差等）。</li>
+                    <li>点击【CAD】绘制容差区。</li>
+                </ul>
+                <div class="tip"><strong>提示：</strong>不同设备类型（VOR / NDB / DME 等）对应不同的精度取值，直接影响容差区大小。</div>
+            </div>
+            <div class="pager">
+                <a href="FormCalcu.html">← 上一篇：A2.飞行程序基础计算</a>
+                <a href="FormNavAids.html">下一篇：A4.非精密进近保护区 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

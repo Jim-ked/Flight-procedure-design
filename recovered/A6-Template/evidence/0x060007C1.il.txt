@@ -1,0 +1,110 @@
+METHOD 060007C1 \x8f\x89.\x8f\x88::\x8b\x86\x9c RVA=91650 file=8F850
+IL_0000: ldc.i4 1420
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue.s 99
+IL_000C: ldarg.1 
+IL_000D: ldc.r8 12.566370614359172
+IL_0016: add 
+IL_0017: ldc.r8 6.283185307179586
+IL_0020: rem 
+IL_0021: starg.s argument(0x0001)
+IL_0023: ldarg.1 
+IL_0024: stloc.0 
+IL_0025: ldc.i4.0 
+IL_0026: stloc.3 
+IL_0027: br.s 138
+IL_0029: ldloc.0 
+IL_002A: ldloc.0 
+IL_002B: ldarg.0 
+IL_002C: ldfld 0x0400076A \x8f\x89.\x8f\x88::\x8b\x87\x8a
+IL_0031: mul 
+IL_0032: ldarg.0 
+IL_0033: ldfld 0x04000768 \x8f\x89.\x8f\x88::\x8b\x87\x88
+IL_0038: add 
+IL_0039: ldarg.2 
+IL_003A: add 
+IL_003B: ldarg.0 
+IL_003C: ldfld 0x0400076E \x8f\x89.\x8f\x88::\x8b\x87\x8e
+IL_0041: mul 
+IL_0042: ldloc.1 
+IL_0043: div 
+IL_0044: call 0x0A0001BA System.Math::Asin
+IL_0049: sub 
+IL_004A: stloc.2 
+IL_004B: call 0x060007C7 \x8f\x89.\x8f\x88::\x89o
+IL_0050: brtrue.s 53
+IL_0052: ldarg.1 
+IL_0053: ldloc.2 
+IL_0054: sub 
+IL_0055: stloc.s local(0x0004)
+IL_0057: ldloc.0 
+IL_0058: ldloc.s local(0x0004)
+IL_005A: add 
+IL_005B: stloc.0 
+IL_005C: ldc.i4.0 
+IL_005D: call 0x060007C6 \x8f\x89.\x8f\x88::\x89n
+IL_0062: brfalse.s 119
+IL_0064: pop 
+IL_0065: ldloc.3 
+IL_0066: ldc.i4.1 
+IL_0067: add 
+IL_0068: stloc.3 
+IL_0069: br.s 120
+IL_006B: pop 
+IL_006C: ldloc.3 
+IL_006D: ldc.i4.s 20
+IL_006F: bgt.s 240
+IL_0071: ldloc.s local(0x0004)
+IL_0073: ldc.r8 1e-09
+IL_007C: ble.s 242
+IL_007E: ldarg.0 
+IL_007F: ldfld 0x0400076B \x8f\x89.\x8f\x88::\x8b\x87\x8b
+IL_0084: ldarg.0 
+IL_0085: ldfld 0x0400076B \x8f\x89.\x8f\x88::\x8b\x87\x8b
+IL_008A: mul 
+IL_008B: ldloc.0 
+IL_008C: ldarg.0 
+IL_008D: ldfld 0x0400076A \x8f\x89.\x8f\x88::\x8b\x87\x8a
+IL_0092: mul 
+IL_0093: ldarg.0 
+IL_0094: ldfld 0x04000768 \x8f\x89.\x8f\x88::\x8b\x87\x88
+IL_0099: add 
+IL_009A: ldarg.2 
+IL_009B: add 
+IL_009C: ldloc.0 
+IL_009D: ldarg.0 
+IL_009E: ldfld 0x0400076A \x8f\x89.\x8f\x88::\x8b\x87\x8a
+IL_00A3: mul 
+IL_00A4: ldarg.0 
+IL_00A5: ldfld 0x04000768 \x8f\x89.\x8f\x88::\x8b\x87\x88
+IL_00AA: add 
+IL_00AB: ldarg.2 
+IL_00AC: add 
+IL_00AD: mul 
+IL_00AE: add 
+IL_00AF: ldc.r8 2.0
+IL_00B8: ldarg.0 
+IL_00B9: ldfld 0x0400076B \x8f\x89.\x8f\x88::\x8b\x87\x8b
+IL_00BE: mul 
+IL_00BF: ldloc.0 
+IL_00C0: ldarg.0 
+IL_00C1: ldfld 0x0400076A \x8f\x89.\x8f\x88::\x8b\x87\x8a
+IL_00C6: mul 
+IL_00C7: ldarg.0 
+IL_00C8: ldfld 0x04000768 \x8f\x89.\x8f\x88::\x8b\x87\x88
+IL_00CD: add 
+IL_00CE: ldarg.2 
+IL_00CF: add 
+IL_00D0: mul 
+IL_00D1: ldarg.0 
+IL_00D2: ldfld 0x0400076D \x8f\x89.\x8f\x88::\x8b\x87\x8d
+IL_00D7: mul 
+IL_00D8: add 
+IL_00D9: call 0x0A00002D System.Math::Sqrt
+IL_00DE: stloc.1 
+IL_00DF: br 53
+IL_00E4: ldloc.0 
+IL_00E5: ret 
+IL_00E6: ldloc.0 
+IL_00E7: ret 
+

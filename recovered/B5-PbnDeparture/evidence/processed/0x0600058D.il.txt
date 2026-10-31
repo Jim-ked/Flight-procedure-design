@@ -1,0 +1,8 @@
+METHOD 0600058D \x8b\x9b.\x8b\x9a::.ctor RVA=5043 file=3243
+IL_0000: ldarg.0 
+IL_0001: newobj 0x0A0001D5 0x1B000001::.ctor
+IL_0006: stfld 0x04000610 \x8b\x9b.\x8b\x9a::\x89\x9b\x9e
+IL_000B: ldarg.0 
+IL_000C: call 0x0A00002C System.Object::.ctor
+IL_0011: ret 
+

@@ -1,0 +1,47 @@
+METHOD 06000576 \x8b\x97.\x8b\x96::\x89\x96\x9b RVA=733E8 file=715E8
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x040005ED \x8b\x97.\x8b\x96::\x89\x9a\x96
+IL_0006: callvirt 0x0A0001F7 System.Windows.Forms.ListControl::get_SelectedIndex
+IL_000B: ldc.i4.2 
+IL_000C: bne.un.s 76
+IL_000E: ldc.i4.0 
+IL_000F: call 0x06000581 \x8b\x97.\x8b\x96::\x88\x9d
+IL_0014: brfalse.s 73
+IL_0016: pop 
+IL_0017: ldarg.0 
+IL_0018: ldfld 0x040005CF \x8b\x97.\x8b\x96::\x89\x99\x91
+IL_001D: ldc.i4.1 
+IL_001E: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0023: ldarg.0 
+IL_0024: ldfld 0x040005D3 \x8b\x97.\x8b\x96::\x89\x99\x95
+IL_0029: ldc.i4.1 
+IL_002A: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_002F: ldarg.0 
+IL_0030: ldfld 0x040005D8 \x8b\x97.\x8b\x96::\x89\x99\x9a
+IL_0035: ldc.i4.1 
+IL_0036: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_003B: br.s 102
+IL_003D: pop 
+IL_003E: br.s 90
+IL_0040: ldarg.0 
+IL_0041: ldfld 0x040005CF \x8b\x97.\x8b\x96::\x89\x99\x91
+IL_0046: ldc.i4.0 
+IL_0047: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_004C: br.s 117
+IL_004E: ldarg.0 
+IL_004F: ldfld 0x040005D8 \x8b\x97.\x8b\x96::\x89\x99\x9a
+IL_0054: ldc.i4.0 
+IL_0055: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_005A: ldarg.0 
+IL_005B: ldnull 
+IL_005C: ldnull 
+IL_005D: call 0x06000570 \x8b\x97.\x8b\x96::\x89\x96\x95
+IL_0062: call 0x06000582 \x8b\x97.\x8b\x96::\x88\x9e
+IL_0067: brfalse.s 131
+IL_0069: ldarg.0 
+IL_006A: ldfld 0x040005D3 \x8b\x97.\x8b\x96::\x89\x99\x95
+IL_006F: ldc.i4.0 
+IL_0070: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0075: br.s 90
+IL_0077: ret 
+

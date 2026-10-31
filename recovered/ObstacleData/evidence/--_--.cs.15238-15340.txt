@@ -1,0 +1,103 @@
+15238: 		private void _0087_0087_009C(object P_0, EventArgs P_1)
+15239: 		{
+15240: 			//IL_00cd: Unknown result type (might be due to invalid IL or missing references)
+15241: 			//IL_00db: Unknown result type (might be due to invalid IL or missing references)
+15242: 			//IL_00eb: Unknown result type (might be due to invalid IL or missing references)
+15243: 			//IL_00f0: Unknown result type (might be due to invalid IL or missing references)
+15244: 			_ = 1;
+15245: 			int num;
+15246: 			if (!_0087_009A())
+15247: 			{
+15248: 				num = 2;
+15249: 				if (_0087_009A())
+15250: 				{
+15251: 					return;
+15252: 				}
+15253: 			}
+15254: 			else
+15255: 			{
+15256: 				num = 3;
+15257: 				if (!_0087_0099())
+15258: 				{
+15259: 					return;
+15260: 				}
+15261: 			}
+15262: 			IEnumerator enumerator = default(IEnumerator);
+15263: 			switch (num)
+15264: 			{
+15265: 			case 0:
+15266: 			case 2:
+15267: 				if (!false /* original-file-bool-offset:408 */)
+15268: 				{
+15269: 					enumerator = _0087_008A_008C.SelectedRows.GetEnumerator();
+15270: 					goto default;
+15271: 				}
+15272: 				break;
+15273: 			default:
+15274: 				try
+15275: 				{
+15276: 					DBPoint val = default(DBPoint);
+15277: 					while (enumerator.MoveNext())
+15278: 					{
+15279: 						DataGridViewRow dataGridViewRow = (DataGridViewRow)enumerator.Current;
+15280: 						_0087_0099();
+15281: 						if (!_0087_009A())
+15282: 						{
+15283: 							val = _0087_0089_009C[_0087_008A_008C.Rows[dataGridViewRow.Index].Cells[0].Value.ToString()];
+15284: 						}
+15285: 						ObjectId val2 = _008B._0089_0087("obst" /* string-offset:2780 */, val.Position);
+15286: 						string obj = "Altitude" /* string-offset:536 */;
+15287: 						Point3d position = val.Position;
+15288: 						_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+15289: 					}
+15290: 					break;
+15291: 				}
+15292: 				finally
+15293: 				{
+15294: 					if (enumerator is IDisposable disposable)
+15295: 					{
+15296: 						disposable.Dispose();
+15297: 					}
+15298: 				}
+15299: 			case 1:
+15300: 			case 3:
+15301: 				break;
+15302: 			}
+15303: 		}
+15304: 
+15305: 		private void ShowMessage(string s)
+15306: 		{
+15307: 			_0087_008A_0092.Text = s;
+15308: 		}
+15309: 
+15310: 		private void _0087_0087_009D(object P_0, EventArgs P_1)
+15311: 		{
+15312: 			_0087_008A_0092.Text = "";
+15313: 		}
+15314: 
+15315: 		private void _0087_0087_009E(object P_0, EventArgs P_1)
+15316: 		{
+15317: 			ShowMessage("交换跑道方向" /* string-offset:3080 */);
+15318: 		}
+15319: 
+15320: 		private void _0087_0088_0086(object P_0, EventArgs P_1)
+15321: 		{
+15322: 			ShowMessage("在屏幕中指定起飞跑道末端位置" /* string-offset:3084 */);
+15323: 		}
+15324: 
+15325: 		private void _0087_0088_0087(object P_0, EventArgs P_1)
+15326: 		{
+15327: 			ShowMessage("在屏幕中指定跑道入口位置" /* string-offset:3088 */);
+15328: 		}
+15329: 
+15330: 		private void _0087_0088_0088(object P_0, EventArgs P_1)
+15331: 		{
+15332: 			ShowMessage("检索屏幕中全部的障碍物位置点" /* string-offset:2804 */);
+15333: 		}
+15334: 
+15335: 		private void _0087_0088_0089(object P_0, EventArgs P_1)
+15336: 		{
+15337: 			ShowMessage("将障碍物坐标转换为基于跑道入口的坐标系" /* string-offset:3092 */);
+15338: 		}
+15339: 
+15340: 		private void _0087_0088_008A(object P_0, EventArgs P_1)

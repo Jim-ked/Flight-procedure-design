@@ -1,0 +1,13 @@
+81608: 		public static string _008A_009C_0095(List<_008E_0097> P_0)
+81609: 		{
+81610: 			string text = "";
+81611: 			if (P_0 == null)
+81612: 			{
+81613: 				return text;
+81614: 			}
+81615: 			foreach (_008E_0097 item in P_0)
+81616: 			{
+81617: 				text += item.ToString();
+81618: 			}
+81619: 			return text;
+81620: 		}

@@ -1,0 +1,2488 @@
+METHOD 060002DB \x89\x89.\x89\x88::\x87\x8e\x8a RVA=2DF88 file=2C188
+IL_0000: ldc.i4 96
+IL_0005: stloc local(0x0048)
+IL_0009: br 8127
+IL_000E: ldloc.s local(0x000C)
+IL_0010: ldloc.s local(0x000D)
+IL_0012: ldelem 0x0200008F .\x90\x9a
+IL_0017: stloc.s local(0x000E)
+IL_0019: br 7886
+IL_001E: ldc.i4 105
+IL_0023: stloc local(0x0048)
+IL_0027: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_002C: brfalse 9203
+IL_0031: br 7850
+IL_0036: ldloc.3 
+IL_0037: ldc.r8 6.283185307179586
+IL_0040: add 
+IL_0041: stloc.3 
+IL_0042: ldloc.s local(0x0004)
+IL_0044: ldc.r8 0.0
+IL_004D: blt.s 105
+IL_004F: ldc.i4 66
+IL_0054: stloc local(0x0048)
+IL_0058: br 7587
+IL_005D: ldloc.s local(0x0004)
+IL_005F: ldc.r8 6.283185307179586
+IL_0068: add 
+IL_0069: br 7589
+IL_006E: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0073: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0078: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_007D: stloc.s local(0x0005)
+IL_007F: ldc.i4 50
+IL_0084: stloc local(0x0048)
+IL_0088: br 7556
+IL_008D: ldloc.3 
+IL_008E: ldloc.s local(0x0004)
+IL_0090: sub 
+IL_0091: ldc.r8 3.141592653589793
+IL_009A: bgt.un.s 182
+IL_009C: ldc.i4 78
+IL_00A1: stloc local(0x0048)
+IL_00A5: br 1882
+IL_00AA: ldloc.s local(0x000A)
+IL_00AC: ldloc.s local(0x0008)
+IL_00AE: ldloc.s local(0x000A)
+IL_00B0: add 
+IL_00B1: div 
+IL_00B2: call 0x0A0001BA System.Math::Asin
+IL_00B7: stloc.s local(0x003A)
+IL_00B9: ldloca.s local(0x003B)
+IL_00BB: ldloc.0 
+IL_00BC: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_00C1: ldloc.s local(0x0008)
+IL_00C3: ldloc.s local(0x000A)
+IL_00C5: add 
+IL_00C6: ldloc.3 
+IL_00C7: ldloc.s local(0x003A)
+IL_00C9: add 
+IL_00CA: call 0x0A000064 System.Math::Cos
+IL_00CF: mul 
+IL_00D0: add 
+IL_00D1: ldloc.0 
+IL_00D2: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_00D7: ldloc.s local(0x0008)
+IL_00D9: ldloc.s local(0x000A)
+IL_00DB: add 
+IL_00DC: ldloc.3 
+IL_00DD: ldloc.s local(0x003A)
+IL_00DF: add 
+IL_00E0: call 0x0A000065 System.Math::Sin
+IL_00E5: mul 
+IL_00E6: add 
+IL_00E7: ldc.r8 0.0
+IL_00F0: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_00F5: ldc.i4 49
+IL_00FA: stloc local(0x0048)
+IL_00FE: br 7340
+IL_0103: ldloc.s local(0x003B)
+IL_0105: ldloc.s local(0x000A)
+IL_0107: ldloc.s local(0x0040)
+IL_0109: conv.r8 
+IL_010A: sub 
+IL_010B: ldloc.s local(0x003C)
+IL_010D: ldloc.3 
+IL_010E: ldc.r8 1.5707963267948966
+IL_0117: sub 
+IL_0118: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_011D: stloc.s local(0x0041)
+IL_011F: ldc.i4 59
+IL_0124: stloc local(0x0048)
+IL_0128: br 7165
+IL_012D: ldloc.s local(0x0040)
+IL_012F: brtrue 643
+IL_0134: ldloc.s local(0x0044)
+IL_0136: ldc.i4.0 
+IL_0137: ldloc.s local(0x0041)
+IL_0139: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_013E: stloc.s local(0x001A)
+IL_0140: ldloca.s local(0x001A)
+IL_0142: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0147: ldloc.s local(0x0041)
+IL_0149: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_014E: stloc.s local(0x001A)
+IL_0150: ldloca.s local(0x001A)
+IL_0152: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0157: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_015C: ldloc.s local(0x0041)
+IL_015E: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0163: ldloc.s local(0x0041)
+IL_0165: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_016A: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_016F: neg 
+IL_0170: ldc.r8 0.0
+IL_0179: ldc.r8 0.0
+IL_0182: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0187: ldloc.s local(0x0044)
+IL_0189: ldc.i4.1 
+IL_018A: ldloc.s local(0x0041)
+IL_018C: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0191: stloc.s local(0x001A)
+IL_0193: ldloca.s local(0x001A)
+IL_0195: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_019A: ldloc.s local(0x0041)
+IL_019C: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_01A1: stloc.s local(0x001A)
+IL_01A3: ldloca.s local(0x001A)
+IL_01A5: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_01AA: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_01AF: ldc.r8 0.0
+IL_01B8: ldc.r8 0.0
+IL_01C1: ldc.r8 0.0
+IL_01CA: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_01CF: ldloc.s local(0x0044)
+IL_01D1: ldc.i4.2 
+IL_01D2: ldloc.s local(0x0043)
+IL_01D4: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_01D9: stloc.s local(0x001A)
+IL_01DB: ldloca.s local(0x001A)
+IL_01DD: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_01E2: ldloc.s local(0x0043)
+IL_01E4: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_01E9: stloc.s local(0x001A)
+IL_01EB: ldloca.s local(0x001A)
+IL_01ED: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_01F2: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_01F7: ldloc.s local(0x0043)
+IL_01F9: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_01FE: ldloc.s local(0x0043)
+IL_0200: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_0205: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_020A: ldc.r8 0.0
+IL_0213: ldc.r8 0.0
+IL_021C: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0221: ldloc.s local(0x0044)
+IL_0223: ldc.i4.3 
+IL_0224: ldloc.s local(0x0043)
+IL_0226: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_022B: stloc.s local(0x001A)
+IL_022D: ldloca.s local(0x001A)
+IL_022F: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0234: ldloc.s local(0x0043)
+IL_0236: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_023B: stloc.s local(0x001A)
+IL_023D: ldloca.s local(0x001A)
+IL_023F: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0244: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0249: ldc.r8 0.0
+IL_0252: ldc.r8 0.0
+IL_025B: ldc.r8 0.0
+IL_0264: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0269: ldc.i4 1
+IL_026E: stloc local(0x0048)
+IL_0272: br 6343
+IL_0277: ldloc.s local(0x0040)
+IL_0279: ldc.i4.0 
+IL_027A: ble 7083
+IL_027F: ldc.i4 12
+IL_0284: stloc local(0x0048)
+IL_0288: br 6430
+IL_028D: ldloc.s local(0x001F)
+IL_028F: ldloc.s local(0x000A)
+IL_0291: ldloc.s local(0x0024)
+IL_0293: conv.r8 
+IL_0294: sub 
+IL_0295: ldloc.3 
+IL_0296: ldc.r8 1.5707963267948966
+IL_029F: add 
+IL_02A0: ldloc.s local(0x0020)
+IL_02A2: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_02A7: stloc.s local(0x0025)
+IL_02A9: ldc.i4 94
+IL_02AE: stloc local(0x0048)
+IL_02B2: br 4840
+IL_02B7: ldloc.s local(0x0028)
+IL_02B9: ldc.i4.0 
+IL_02BA: ldloc.s local(0x0025)
+IL_02BC: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_02C1: stloc.s local(0x001A)
+IL_02C3: ldloca.s local(0x001A)
+IL_02C5: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_02CA: ldloc.s local(0x0025)
+IL_02CC: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_02D1: stloc.s local(0x001A)
+IL_02D3: ldloca.s local(0x001A)
+IL_02D5: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_02DA: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_02DF: ldloc.s local(0x0025)
+IL_02E1: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_02E6: ldloc.s local(0x0025)
+IL_02E8: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_02ED: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_02F2: ldc.r8 0.0
+IL_02FB: ldc.r8 0.0
+IL_0304: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0309: ldloc.s local(0x0028)
+IL_030B: ldc.i4.1 
+IL_030C: ldloc.s local(0x0025)
+IL_030E: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0313: stloc.s local(0x001A)
+IL_0315: ldloca.s local(0x001A)
+IL_0317: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_031C: ldloc.s local(0x0025)
+IL_031E: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0323: stloc.s local(0x001A)
+IL_0325: ldloca.s local(0x001A)
+IL_0327: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_032C: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0331: ldc.r8 0.0
+IL_033A: ldc.r8 0.0
+IL_0343: ldc.r8 0.0
+IL_034C: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0351: ldc.i4 25
+IL_0356: stloc local(0x0048)
+IL_035A: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_035F: brtrue 4612
+IL_0364: br 1384
+IL_0369: ldloc.s local(0x0019)
+IL_036B: ldc.i4.2 
+IL_036C: ldloc.s local(0x0018)
+IL_036E: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0373: stloc.s local(0x001A)
+IL_0375: ldloca.s local(0x001A)
+IL_0377: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_037C: ldloc.s local(0x0018)
+IL_037E: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0383: stloc.s local(0x001A)
+IL_0385: ldloca.s local(0x001A)
+IL_0387: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_038C: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0391: ldloc.s local(0x0018)
+IL_0393: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0398: ldloc.s local(0x0018)
+IL_039A: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_039F: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_03A4: ldc.r8 0.0
+IL_03AD: ldc.r8 0.0
+IL_03B6: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_03BB: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_03C0: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_03C5: brtrue 7063
+IL_03CA: pop 
+IL_03CB: ldc.i4 38
+IL_03D0: stloc local(0x0048)
+IL_03D4: br 4425
+IL_03D9: ldloc.s local(0x0010)
+IL_03DB: ldloc.s local(0x000A)
+IL_03DD: ldloc.s local(0x0015)
+IL_03DF: conv.r8 
+IL_03E0: sub 
+IL_03E1: ldloc.s local(0x0011)
+IL_03E3: ldloc.3 
+IL_03E4: ldc.r8 1.5707963267948966
+IL_03ED: sub 
+IL_03EE: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_03F3: stloc.s local(0x0016)
+IL_03F5: ldloc.s local(0x0013)
+IL_03F7: ldloc.s local(0x0009)
+IL_03F9: ldloc.s local(0x0015)
+IL_03FB: conv.r8 
+IL_03FC: add 
+IL_03FD: ldloc.s local(0x0014)
+IL_03FF: ldloc.s local(0x0004)
+IL_0401: ldc.r8 1.5707963267948966
+IL_040A: add 
+IL_040B: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_0410: stloc.s local(0x0017)
+IL_0412: ldc.i4 51
+IL_0417: stloc local(0x0048)
+IL_041B: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0420: brfalse 3399
+IL_0425: br 7932
+IL_042A: ldloc.s local(0x0015)
+IL_042C: brfalse 4593
+IL_0431: ldloc.s local(0x0015)
+IL_0433: ldc.i4.0 
+IL_0434: ble 4283
+IL_0439: ldc.i4 2
+IL_043E: stloc local(0x0048)
+IL_0442: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0447: brfalse 3948
+IL_044C: br 3156
+IL_0451: ldloc.s local(0x002D)
+IL_0453: ldloc.s local(0x000A)
+IL_0455: ldloc.s local(0x0032)
+IL_0457: conv.r8 
+IL_0458: sub 
+IL_0459: ldloc.3 
+IL_045A: ldc.r8 1.5707963267948966
+IL_0463: add 
+IL_0464: ldloc.s local(0x002E)
+IL_0466: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_046B: stloc.s local(0x0033)
+IL_046D: ldloc.s local(0x0030)
+IL_046F: ldloc.s local(0x0009)
+IL_0471: ldloc.s local(0x0032)
+IL_0473: conv.r8 
+IL_0474: add 
+IL_0475: ldloc.s local(0x0004)
+IL_0477: ldc.r8 1.5707963267948966
+IL_0480: sub 
+IL_0481: ldloc.s local(0x0031)
+IL_0483: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_0488: stloc.s local(0x0034)
+IL_048A: ldc.i4 95
+IL_048F: stloc local(0x0048)
+IL_0493: br 1834
+IL_0498: ldc.i4 52
+IL_049D: stloc local(0x0048)
+IL_04A1: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_04A6: brtrue 8834
+IL_04AB: br 1384
+IL_04B0: ldloc.s local(0x000A)
+IL_04B2: ldloc.s local(0x0008)
+IL_04B4: ldloc.s local(0x000A)
+IL_04B6: add 
+IL_04B7: div 
+IL_04B8: call 0x0A0001BA System.Math::Asin
+IL_04BD: stloc.s local(0x000F)
+IL_04BF: ldc.i4 11
+IL_04C4: stloc local(0x0048)
+IL_04C8: ldloca.s local(0x0010)
+IL_04CA: ldloc.0 
+IL_04CB: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_04D0: ldloc.s local(0x0008)
+IL_04D2: ldloc.s local(0x000A)
+IL_04D4: add 
+IL_04D5: ldloc.3 
+IL_04D6: ldloc.s local(0x000F)
+IL_04D8: add 
+IL_04D9: call 0x0A000064 System.Math::Cos
+IL_04DE: mul 
+IL_04DF: add 
+IL_04E0: ldloc.0 
+IL_04E1: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_04E6: ldloc.s local(0x0008)
+IL_04E8: ldloc.s local(0x000A)
+IL_04EA: add 
+IL_04EB: ldloc.3 
+IL_04EC: ldloc.s local(0x000F)
+IL_04EE: add 
+IL_04EF: call 0x0A000065 System.Math::Sin
+IL_04F4: mul 
+IL_04F5: add 
+IL_04F6: ldc.r8 0.0
+IL_04FF: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_0504: ldloc.0 
+IL_0505: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_050A: ldloca.s local(0x0010)
+IL_050C: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0511: sub 
+IL_0512: ldloc.0 
+IL_0513: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0518: ldloca.s local(0x0010)
+IL_051A: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_051F: sub 
+IL_0520: call 0x0A000063 System.Math::Atan2
+IL_0525: stloc.s local(0x0011)
+IL_0527: ldc.i4 22
+IL_052C: stloc local(0x0048)
+IL_0530: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_0535: brfalse 8346
+IL_053A: br.s 1384
+IL_053C: ldloc.s local(0x0004)
+IL_053E: ldloc.3 
+IL_053F: sub 
+IL_0540: ldc.r8 3.141592653589793
+IL_0549: bgt.un 4880
+IL_054E: ldc.i4 45
+IL_0553: stloc local(0x0048)
+IL_0557: br 1212
+IL_055C: ldloc local(0x0048)
+IL_0560: switch [6255, 6343, 3948, 3041, 5465, 8392, 2431, 6049, 2149, 6906, 5021, 1236, 6430, 6132, 8955, 2696, 2001, 2022, 3587, 7946, 8434, 8692, 3447, 3156, 3780, 5207, 7213, 2870, 8834, 7703, 4612, 7916, 4425, 3708, 2962, 1352, 6824, 6209, 4425, 1897, 7850, 4394, 5784, 3604, 7886, 1212, 7932, 5537, 885, 7340, 7556, 3399, 2176, 4320, 4914, 2267, 7806, 5885, 2524, 7165, 3468, 8955, 7083, 6584, 8286, 3073, 7587, 4794, 4283, 8644, 5133, 8246, 8345, 6989, 8346, 2132, 5383, 5863, 1882, 5149, 7434, 2615, 3580, 8980, 7120, 7547, 7610, 7083, 7736, 4039, 8367, 7196, 7083, 7660, 4840, 1834, 8127, 4283, 3041, 8637, 5166, 4120, 3041, 4781, 6752, 9203, 7791, 7413, 9204]
+IL_0719: br 5193
+IL_071E: ldloc.0 
+IL_071F: call 0x0600012B \x87\x87.\x87\x86::\x8c\x89
+IL_0724: ldloc.s local(0x0008)
+IL_0726: ldloc.s local(0x0032)
+IL_0728: conv.r8 
+IL_0729: add 
+IL_072A: ldloc.s local(0x0004)
+IL_072C: ldloc.s local(0x002F)
+IL_072E: add 
+IL_072F: ldloc.3 
+IL_0730: ldloc.s local(0x002C)
+IL_0732: sub 
+IL_0733: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_0738: stloc.s local(0x0035)
+IL_073A: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+IL_073F: stloc.s local(0x0036)
+IL_0741: ldloc.s local(0x0032)
+IL_0743: ldc.i4.0 
+IL_0744: bge 2508
+IL_0749: br 1188
+IL_074E: ldloc.s local(0x000A)
+IL_0750: ldloc.s local(0x0008)
+IL_0752: ldloc.s local(0x000A)
+IL_0754: add 
+IL_0755: div 
+IL_0756: call 0x0A0001BA System.Math::Asin
+IL_075B: stloc.s local(0x002C)
+IL_075D: ldloca.s local(0x002D)
+IL_075F: ldloc.0 
+IL_0760: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0765: ldloc.s local(0x0008)
+IL_0767: ldloc.s local(0x000A)
+IL_0769: add 
+IL_076A: ldloc.3 
+IL_076B: ldloc.s local(0x002C)
+IL_076D: sub 
+IL_076E: call 0x0A000064 System.Math::Cos
+IL_0773: mul 
+IL_0774: add 
+IL_0775: ldloc.0 
+IL_0776: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_077B: ldloc.s local(0x0008)
+IL_077D: ldloc.s local(0x000A)
+IL_077F: add 
+IL_0780: ldloc.3 
+IL_0781: ldloc.s local(0x002C)
+IL_0783: sub 
+IL_0784: call 0x0A000065 System.Math::Sin
+IL_0789: mul 
+IL_078A: add 
+IL_078B: ldc.r8 0.0
+IL_0794: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_0799: ldloc.0 
+IL_079A: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_079F: ldloca.s local(0x002D)
+IL_07A1: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_07A6: sub 
+IL_07A7: ldloc.0 
+IL_07A8: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_07AD: ldloca.s local(0x002D)
+IL_07AF: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_07B4: sub 
+IL_07B5: call 0x0A000063 System.Math::Atan2
+IL_07BA: stloc.s local(0x002E)
+IL_07BC: ldc.i4 16
+IL_07C1: stloc local(0x0048)
+IL_07C5: ldloc.s local(0x0009)
+IL_07C7: ldloc.s local(0x0006)
+IL_07C9: div 
+IL_07CA: call 0x0A0001C1 System.Math::Atan
+IL_07CF: stloc.s local(0x002F)
+IL_07D1: ldc.i4 17
+IL_07D6: stloc local(0x0048)
+IL_07DA: ldloca.s local(0x0030)
+IL_07DC: ldloc.0 
+IL_07DD: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_07E2: ldloc.s local(0x0006)
+IL_07E4: ldloc.s local(0x0007)
+IL_07E6: add 
+IL_07E7: ldloc.s local(0x0009)
+IL_07E9: sub 
+IL_07EA: ldloc.s local(0x0004)
+IL_07EC: ldloc.s local(0x002F)
+IL_07EE: add 
+IL_07EF: call 0x0A000064 System.Math::Cos
+IL_07F4: mul 
+IL_07F5: add 
+IL_07F6: ldloc.0 
+IL_07F7: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_07FC: ldloc.s local(0x0006)
+IL_07FE: ldloc.s local(0x0007)
+IL_0800: add 
+IL_0801: ldloc.s local(0x0009)
+IL_0803: sub 
+IL_0804: ldloc.s local(0x0004)
+IL_0806: ldloc.s local(0x002F)
+IL_0808: add 
+IL_0809: call 0x0A000065 System.Math::Sin
+IL_080E: mul 
+IL_080F: add 
+IL_0810: ldc.r8 0.0
+IL_0819: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_081E: ldloca.s local(0x0030)
+IL_0820: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0825: ldloc.0 
+IL_0826: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_082B: sub 
+IL_082C: ldloca.s local(0x0030)
+IL_082E: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0833: ldloc.0 
+IL_0834: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0839: sub 
+IL_083A: call 0x0A000063 System.Math::Atan2
+IL_083F: stloc.s local(0x0031)
+IL_0841: ldc.i4 -9260
+IL_0846: stloc.s local(0x0032)
+IL_0848: ldloc.s local(0x0032)
+IL_084A: ldc.i4 9260
+IL_084F: ble 1117
+IL_0854: br 8205
+IL_0859: ldloc.s local(0x0036)
+IL_085B: ldloc.s local(0x0005)
+IL_085D: ldstr ''
+IL_0862: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_0867: pop 
+IL_0868: ldloc.s local(0x0032)
+IL_086A: ldc.i4 4630
+IL_086F: add 
+IL_0870: stloc.s local(0x0032)
+IL_0872: br.s 2132
+IL_0874: ldloc.s local(0x0036)
+IL_0876: ldc.i4.0 
+IL_0877: ldloc.s local(0x0033)
+IL_0879: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_087E: stloc.s local(0x001A)
+IL_0880: ldloca.s local(0x001A)
+IL_0882: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0887: ldloc.s local(0x0033)
+IL_0889: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_088E: stloc.s local(0x001A)
+IL_0890: ldloca.s local(0x001A)
+IL_0892: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0897: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_089C: ldloc.s local(0x0033)
+IL_089E: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_08A3: ldloc.s local(0x0033)
+IL_08A5: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_08AA: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_08AF: ldc.r8 0.0
+IL_08B8: ldc.r8 0.0
+IL_08C1: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_08C6: ldc.i4 55
+IL_08CB: stloc local(0x0048)
+IL_08CF: ldloc.s local(0x0036)
+IL_08D1: ldc.i4.1 
+IL_08D2: ldloc.s local(0x0033)
+IL_08D4: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_08D9: stloc.s local(0x001A)
+IL_08DB: ldloca.s local(0x001A)
+IL_08DD: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_08E2: ldloc.s local(0x0033)
+IL_08E4: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_08E9: stloc.s local(0x001A)
+IL_08EB: ldloca.s local(0x001A)
+IL_08ED: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_08F2: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_08F7: ldc.r8 0.0
+IL_0900: ldc.r8 0.0
+IL_0909: ldc.r8 0.0
+IL_0912: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0917: ldloc.s local(0x0036)
+IL_0919: ldc.i4.2 
+IL_091A: ldloc.s local(0x0035)
+IL_091C: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0921: stloc.s local(0x001A)
+IL_0923: ldloca.s local(0x001A)
+IL_0925: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_092A: ldloc.s local(0x0035)
+IL_092C: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0931: stloc.s local(0x001A)
+IL_0933: ldloca.s local(0x001A)
+IL_0935: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_093A: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_093F: ldloc.s local(0x0035)
+IL_0941: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0946: ldloc.s local(0x0035)
+IL_0948: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_094D: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_0952: neg 
+IL_0953: ldc.r8 0.0
+IL_095C: ldc.r8 0.0
+IL_0965: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_096A: ldc.i4 6
+IL_096F: stloc local(0x0048)
+IL_0973: ldloc.s local(0x0036)
+IL_0975: ldc.i4.3 
+IL_0976: ldloc.s local(0x0035)
+IL_0978: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_097D: stloc.s local(0x001A)
+IL_097F: ldloca.s local(0x001A)
+IL_0981: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0986: ldloc.s local(0x0035)
+IL_0988: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_098D: stloc.s local(0x001A)
+IL_098F: ldloca.s local(0x001A)
+IL_0991: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0996: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_099B: ldc.r8 0.0
+IL_09A4: ldc.r8 0.0
+IL_09AD: ldc.r8 0.0
+IL_09B6: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_09BB: br 3041
+IL_09C0: ldloc.s local(0x0032)
+IL_09C2: brtrue 3036
+IL_09C7: ldc.i4 58
+IL_09CC: stloc local(0x0048)
+IL_09D0: ldloc.s local(0x0036)
+IL_09D2: ldc.i4.0 
+IL_09D3: ldloc.s local(0x0033)
+IL_09D5: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_09DA: stloc.s local(0x001A)
+IL_09DC: ldloca.s local(0x001A)
+IL_09DE: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_09E3: ldloc.s local(0x0033)
+IL_09E5: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_09EA: stloc.s local(0x001A)
+IL_09EC: ldloca.s local(0x001A)
+IL_09EE: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_09F3: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_09F8: ldloc.s local(0x0033)
+IL_09FA: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_09FF: ldloc.s local(0x0033)
+IL_0A01: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_0A06: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_0A0B: ldc.r8 0.0
+IL_0A14: ldc.r8 0.0
+IL_0A1D: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0A22: ldc.i4 81
+IL_0A27: stloc local(0x0048)
+IL_0A2B: ldloc.s local(0x0036)
+IL_0A2D: ldc.i4.1 
+IL_0A2E: ldloc.s local(0x0033)
+IL_0A30: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0A35: stloc.s local(0x001A)
+IL_0A37: ldloca.s local(0x001A)
+IL_0A39: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0A3E: ldloc.s local(0x0033)
+IL_0A40: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0A45: stloc.s local(0x001A)
+IL_0A47: ldloca.s local(0x001A)
+IL_0A49: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0A4E: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0A53: ldc.r8 0.0
+IL_0A5C: ldc.r8 0.0
+IL_0A65: ldc.r8 0.0
+IL_0A6E: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0A73: ldc.i4 15
+IL_0A78: stloc local(0x0048)
+IL_0A7C: ldloc.s local(0x0036)
+IL_0A7E: ldc.i4.2 
+IL_0A7F: ldloc.s local(0x0035)
+IL_0A81: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0A86: stloc.s local(0x001A)
+IL_0A88: ldloca.s local(0x001A)
+IL_0A8A: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0A8F: ldloc.s local(0x0035)
+IL_0A91: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0A96: stloc.s local(0x001A)
+IL_0A98: ldloca.s local(0x001A)
+IL_0A9A: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0A9F: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0AA4: ldloc.s local(0x0035)
+IL_0AA6: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0AAB: ldloc.s local(0x0035)
+IL_0AAD: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_0AB2: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_0AB7: neg 
+IL_0AB8: ldc.r8 0.0
+IL_0AC1: ldc.r8 0.0
+IL_0ACA: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0ACF: ldloc.s local(0x0036)
+IL_0AD1: ldc.i4.3 
+IL_0AD2: ldloc.s local(0x0035)
+IL_0AD4: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0AD9: stloc.s local(0x001A)
+IL_0ADB: ldloca.s local(0x001A)
+IL_0ADD: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0AE2: ldloc.s local(0x0035)
+IL_0AE4: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0AE9: stloc.s local(0x001A)
+IL_0AEB: ldloca.s local(0x001A)
+IL_0AED: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0AF2: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0AF7: ldc.r8 0.0
+IL_0B00: ldc.r8 0.0
+IL_0B09: ldc.r8 0.0
+IL_0B12: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0B17: ldc.i4 27
+IL_0B1C: stloc local(0x0048)
+IL_0B20: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0B25: brtrue 6989
+IL_0B2A: ldloc.s local(0x0036)
+IL_0B2C: ldc.i4.4 
+IL_0B2D: ldloc.s local(0x0034)
+IL_0B2F: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0B34: stloc.s local(0x001A)
+IL_0B36: ldloca.s local(0x001A)
+IL_0B38: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0B3D: ldloc.s local(0x0034)
+IL_0B3F: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0B44: stloc.s local(0x001A)
+IL_0B46: ldloca.s local(0x001A)
+IL_0B48: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0B4D: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0B52: ldloc.s local(0x0034)
+IL_0B54: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0B59: ldloc.s local(0x0034)
+IL_0B5B: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_0B60: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_0B65: neg 
+IL_0B66: ldc.r8 0.0
+IL_0B6F: ldc.r8 0.0
+IL_0B78: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0B7D: ldc.i4 34
+IL_0B82: stloc local(0x0048)
+IL_0B86: ldloc.s local(0x0036)
+IL_0B88: ldc.i4.5 
+IL_0B89: ldloc.s local(0x0034)
+IL_0B8B: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0B90: stloc.s local(0x001A)
+IL_0B92: ldloca.s local(0x001A)
+IL_0B94: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0B99: ldloc.s local(0x0034)
+IL_0B9B: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0BA0: stloc.s local(0x001A)
+IL_0BA2: ldloca.s local(0x001A)
+IL_0BA4: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0BA9: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0BAE: ldc.r8 0.0
+IL_0BB7: ldc.r8 0.0
+IL_0BC0: ldc.r8 0.0
+IL_0BC9: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0BCE: br.s 3041
+IL_0BD0: ldloc.s local(0x0032)
+IL_0BD2: ldc.i4.0 
+IL_0BD3: bgt.s 3156
+IL_0BD5: ldloc.s local(0x0036)
+IL_0BD7: ldc.i4.0 
+IL_0BD8: callvirt 0x0A0001C0 Autodesk.AutoCAD.DatabaseServices.Polyline::set_Closed
+IL_0BDD: ldc.i4 8
+IL_0BE2: stloc local(0x0048)
+IL_0BE6: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0BEB: brfalse 2149
+IL_0BF0: br 6906
+IL_0BF5: ldloc.s local(0x0036)
+IL_0BF7: ldc.i4.3 
+IL_0BF8: ldloc.s local(0x0034)
+IL_0BFA: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0BFF: stloc.s local(0x001A)
+IL_0C01: ldloca.s local(0x001A)
+IL_0C03: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0C08: ldloc.s local(0x0034)
+IL_0C0A: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0C0F: stloc.s local(0x001A)
+IL_0C11: ldloca.s local(0x001A)
+IL_0C13: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0C18: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0C1D: ldc.r8 0.0
+IL_0C26: ldc.r8 0.0
+IL_0C2F: ldc.r8 0.0
+IL_0C38: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0C3D: ldc.i4 3
+IL_0C42: stloc local(0x0048)
+IL_0C46: br.s 3041
+IL_0C48: ldloc.s local(0x0036)
+IL_0C4A: ldc.i4.0 
+IL_0C4B: ldloc.s local(0x0035)
+IL_0C4D: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0C52: stloc.s local(0x001A)
+IL_0C54: ldloca.s local(0x001A)
+IL_0C56: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0C5B: ldloc.s local(0x0035)
+IL_0C5D: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0C62: stloc.s local(0x001A)
+IL_0C64: ldloca.s local(0x001A)
+IL_0C66: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0C6B: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0C70: ldloc.s local(0x0035)
+IL_0C72: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0C77: ldloc.s local(0x0035)
+IL_0C79: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_0C7E: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_0C83: neg 
+IL_0C84: ldc.r8 0.0
+IL_0C8D: ldc.r8 0.0
+IL_0C96: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0C9B: ldloc.s local(0x0036)
+IL_0C9D: ldc.i4.1 
+IL_0C9E: ldloc.s local(0x0035)
+IL_0CA0: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0CA5: stloc.s local(0x001A)
+IL_0CA7: ldloca.s local(0x001A)
+IL_0CA9: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0CAE: ldloc.s local(0x0035)
+IL_0CB0: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0CB5: stloc.s local(0x001A)
+IL_0CB7: ldloca.s local(0x001A)
+IL_0CB9: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0CBE: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0CC3: ldc.r8 0.0
+IL_0CCC: ldc.r8 0.0
+IL_0CD5: ldc.r8 0.0
+IL_0CDE: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0CE3: ldloc.s local(0x0036)
+IL_0CE5: ldc.i4.2 
+IL_0CE6: ldloc.s local(0x0034)
+IL_0CE8: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0CED: stloc.s local(0x001A)
+IL_0CEF: ldloca.s local(0x001A)
+IL_0CF1: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0CF6: ldloc.s local(0x0034)
+IL_0CF8: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0CFD: stloc.s local(0x001A)
+IL_0CFF: ldloca.s local(0x001A)
+IL_0D01: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0D06: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0D0B: ldloc.s local(0x0034)
+IL_0D0D: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0D12: ldloc.s local(0x0034)
+IL_0D14: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_0D19: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_0D1E: neg 
+IL_0D1F: ldc.r8 0.0
+IL_0D28: ldc.r8 0.0
+IL_0D31: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0D36: br 3073
+IL_0D3B: ldloc.0 
+IL_0D3C: call 0x0600012B \x87\x87.\x87\x86::\x8c\x89
+IL_0D41: ldloc.s local(0x0008)
+IL_0D43: ldloc.s local(0x0015)
+IL_0D45: conv.r8 
+IL_0D46: add 
+IL_0D47: ldloc.3 
+IL_0D48: ldloc.s local(0x000F)
+IL_0D4A: add 
+IL_0D4B: ldloc.s local(0x0004)
+IL_0D4D: ldloc.s local(0x0012)
+IL_0D4F: sub 
+IL_0D50: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_0D55: stloc.s local(0x0018)
+IL_0D57: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+IL_0D5C: stloc.s local(0x0019)
+IL_0D5E: ldloc.s local(0x0015)
+IL_0D60: ldc.i4.0 
+IL_0D61: bge 1078
+IL_0D66: br 3616
+IL_0D6B: ldloc.s local(0x0009)
+IL_0D6D: ldloc.s local(0x0006)
+IL_0D6F: div 
+IL_0D70: call 0x0A0001C1 System.Math::Atan
+IL_0D75: stloc.s local(0x0012)
+IL_0D77: ldc.i4 60
+IL_0D7C: stloc local(0x0048)
+IL_0D80: ldloca.s local(0x0013)
+IL_0D82: ldloc.0 
+IL_0D83: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0D88: ldloc.s local(0x0006)
+IL_0D8A: ldloc.s local(0x0007)
+IL_0D8C: add 
+IL_0D8D: ldloc.s local(0x0009)
+IL_0D8F: sub 
+IL_0D90: ldloc.s local(0x0004)
+IL_0D92: ldloc.s local(0x0012)
+IL_0D94: sub 
+IL_0D95: call 0x0A000064 System.Math::Cos
+IL_0D9A: mul 
+IL_0D9B: add 
+IL_0D9C: ldloc.0 
+IL_0D9D: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0DA2: ldloc.s local(0x0006)
+IL_0DA4: ldloc.s local(0x0007)
+IL_0DA6: add 
+IL_0DA7: ldloc.s local(0x0009)
+IL_0DA9: sub 
+IL_0DAA: ldloc.s local(0x0004)
+IL_0DAC: ldloc.s local(0x0012)
+IL_0DAE: sub 
+IL_0DAF: call 0x0A000065 System.Math::Sin
+IL_0DB4: mul 
+IL_0DB5: add 
+IL_0DB6: ldc.r8 0.0
+IL_0DBF: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_0DC4: ldloca.s local(0x0013)
+IL_0DC6: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0DCB: ldloc.0 
+IL_0DCC: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_0DD1: sub 
+IL_0DD2: ldloca.s local(0x0013)
+IL_0DD4: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0DD9: ldloc.0 
+IL_0DDA: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_0DDF: sub 
+IL_0DE0: call 0x0A000063 System.Math::Atan2
+IL_0DE5: stloc.s local(0x0014)
+IL_0DE7: ldc.i4 82
+IL_0DEC: stloc local(0x0048)
+IL_0DF0: ldc.i4 -9260
+IL_0DF5: stloc.s local(0x0015)
+IL_0DF7: ldloc.s local(0x0015)
+IL_0DF9: ldc.i4 9260
+IL_0DFE: ble 997
+IL_0E03: br 8175
+IL_0E08: ldloc.s local(0x0015)
+IL_0E0A: ldc.i4 4630
+IL_0E0F: add 
+IL_0E10: stloc.s local(0x0015)
+IL_0E12: br.s 3587
+IL_0E14: ldloc.s local(0x0019)
+IL_0E16: ldc.i4.0 
+IL_0E17: ldloc.s local(0x0016)
+IL_0E19: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0E1E: stloc.s local(0x001A)
+IL_0E20: ldloca.s local(0x001A)
+IL_0E22: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0E27: ldloc.s local(0x0016)
+IL_0E29: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0E2E: stloc.s local(0x001A)
+IL_0E30: ldloca.s local(0x001A)
+IL_0E32: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0E37: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0E3C: ldloc.s local(0x0016)
+IL_0E3E: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0E43: ldloc.s local(0x0016)
+IL_0E45: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_0E4A: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_0E4F: neg 
+IL_0E50: ldc.r8 0.0
+IL_0E59: ldc.r8 0.0
+IL_0E62: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0E67: ldc.i4 33
+IL_0E6C: stloc local(0x0048)
+IL_0E70: ldloc.s local(0x0019)
+IL_0E72: ldc.i4.1 
+IL_0E73: ldloc.s local(0x0016)
+IL_0E75: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0E7A: stloc.s local(0x001A)
+IL_0E7C: ldloca.s local(0x001A)
+IL_0E7E: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0E83: ldloc.s local(0x0016)
+IL_0E85: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0E8A: stloc.s local(0x001A)
+IL_0E8C: ldloca.s local(0x001A)
+IL_0E8E: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0E93: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0E98: ldc.r8 0.0
+IL_0EA1: ldc.r8 0.0
+IL_0EAA: ldc.r8 0.0
+IL_0EB3: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0EB8: ldloc.s local(0x0019)
+IL_0EBA: ldc.i4.2 
+IL_0EBB: ldloc.s local(0x0018)
+IL_0EBD: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0EC2: stloc.s local(0x001A)
+IL_0EC4: ldloca.s local(0x001A)
+IL_0EC6: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0ECB: ldloc.s local(0x0018)
+IL_0ECD: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0ED2: stloc.s local(0x001A)
+IL_0ED4: ldloca.s local(0x001A)
+IL_0ED6: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0EDB: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0EE0: ldloc.s local(0x0018)
+IL_0EE2: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0EE7: ldloc.s local(0x0018)
+IL_0EE9: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_0EEE: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_0EF3: ldc.r8 0.0
+IL_0EFC: ldc.r8 0.0
+IL_0F05: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0F0A: ldloc.s local(0x0019)
+IL_0F0C: ldc.i4.3 
+IL_0F0D: ldloc.s local(0x0018)
+IL_0F0F: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0F14: stloc.s local(0x001A)
+IL_0F16: ldloca.s local(0x001A)
+IL_0F18: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0F1D: ldloc.s local(0x0018)
+IL_0F1F: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0F24: stloc.s local(0x001A)
+IL_0F26: ldloca.s local(0x001A)
+IL_0F28: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0F2D: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0F32: ldc.r8 0.0
+IL_0F3B: ldc.r8 0.0
+IL_0F44: ldc.r8 0.0
+IL_0F4D: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0F52: ldc.i4 68
+IL_0F57: stloc local(0x0048)
+IL_0F5B: br 4283
+IL_0F60: ldloc.s local(0x0019)
+IL_0F62: ldc.i4.0 
+IL_0F63: ldloc.s local(0x0018)
+IL_0F65: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0F6A: stloc.s local(0x001A)
+IL_0F6C: ldloca.s local(0x001A)
+IL_0F6E: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0F73: ldloc.s local(0x0018)
+IL_0F75: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_0F7A: stloc.s local(0x001A)
+IL_0F7C: ldloca.s local(0x001A)
+IL_0F7E: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0F83: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0F88: ldloc.s local(0x0018)
+IL_0F8A: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_0F8F: ldloc.s local(0x0018)
+IL_0F91: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_0F96: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_0F9B: ldc.r8 0.0
+IL_0FA4: ldc.r8 0.0
+IL_0FAD: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_0FB2: ldc.i4 89
+IL_0FB7: stloc local(0x0048)
+IL_0FBB: ldloc.s local(0x0019)
+IL_0FBD: ldc.i4.1 
+IL_0FBE: ldloc.s local(0x0018)
+IL_0FC0: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0FC5: stloc.s local(0x001A)
+IL_0FC7: ldloca.s local(0x001A)
+IL_0FC9: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0FCE: ldloc.s local(0x0018)
+IL_0FD0: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_0FD5: stloc.s local(0x001A)
+IL_0FD7: ldloca.s local(0x001A)
+IL_0FD9: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0FDE: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_0FE3: ldc.r8 0.0
+IL_0FEC: ldc.r8 0.0
+IL_0FF5: ldc.r8 0.0
+IL_0FFE: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1003: ldc.i4 101
+IL_1008: stloc local(0x0048)
+IL_100C: ldloc.s local(0x0019)
+IL_100E: ldc.i4.2 
+IL_100F: ldloc.s local(0x0017)
+IL_1011: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1016: stloc.s local(0x001A)
+IL_1018: ldloca.s local(0x001A)
+IL_101A: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_101F: ldloc.s local(0x0017)
+IL_1021: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1026: stloc.s local(0x001A)
+IL_1028: ldloca.s local(0x001A)
+IL_102A: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_102F: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1034: ldloc.s local(0x0017)
+IL_1036: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_103B: ldloc.s local(0x0017)
+IL_103D: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_1042: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_1047: ldc.r8 0.0
+IL_1050: ldc.r8 0.0
+IL_1059: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_105E: ldloc.s local(0x0019)
+IL_1060: ldc.i4.3 
+IL_1061: ldloc.s local(0x0017)
+IL_1063: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1068: stloc.s local(0x001A)
+IL_106A: ldloca.s local(0x001A)
+IL_106C: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1071: ldloc.s local(0x0017)
+IL_1073: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1078: stloc.s local(0x001A)
+IL_107A: ldloca.s local(0x001A)
+IL_107C: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1081: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1086: ldc.r8 0.0
+IL_108F: ldc.r8 0.0
+IL_1098: ldc.r8 0.0
+IL_10A1: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_10A6: ldc.i4 97
+IL_10AB: stloc local(0x0048)
+IL_10AF: ldloc.s local(0x0019)
+IL_10B1: ldc.i4.0 
+IL_10B2: callvirt 0x0A0001C0 Autodesk.AutoCAD.DatabaseServices.Polyline::set_Closed
+IL_10B7: ldloc.s local(0x0019)
+IL_10B9: ldloc.s local(0x0005)
+IL_10BB: ldstr ''
+IL_10C0: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_10C5: pop 
+IL_10C6: ldc.i4 43
+IL_10CB: stloc local(0x0048)
+IL_10CF: br 3604
+IL_10D4: ldloc.s local(0x0019)
+IL_10D6: ldc.i4.5 
+IL_10D7: ldloc.s local(0x0017)
+IL_10D9: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_10DE: stloc.s local(0x001A)
+IL_10E0: ldloca.s local(0x001A)
+IL_10E2: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_10E7: ldloc.s local(0x0017)
+IL_10E9: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_10EE: stloc.s local(0x001A)
+IL_10F0: ldloca.s local(0x001A)
+IL_10F2: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_10F7: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_10FC: ldc.r8 0.0
+IL_1105: ldc.r8 0.0
+IL_110E: ldc.r8 0.0
+IL_1117: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_111C: br.s 4283
+IL_111E: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_1123: stloc.0 
+IL_1124: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_1129: stloc.1 
+IL_112A: ldc.i4 106
+IL_112F: stloc local(0x0048)
+IL_1133: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_1138: brtrue 7791
+IL_113D: ldloc.s local(0x0019)
+IL_113F: ldc.i4.3 
+IL_1140: ldloc.s local(0x0018)
+IL_1142: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1147: stloc.s local(0x001A)
+IL_1149: ldloca.s local(0x001A)
+IL_114B: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1150: ldloc.s local(0x0018)
+IL_1152: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1157: stloc.s local(0x001A)
+IL_1159: ldloca.s local(0x001A)
+IL_115B: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1160: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1165: ldc.r8 0.0
+IL_116E: ldc.r8 0.0
+IL_1177: ldc.r8 0.0
+IL_1180: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1185: ldloc.s local(0x0019)
+IL_1187: ldc.i4.4 
+IL_1188: ldloc.s local(0x0017)
+IL_118A: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_118F: stloc.s local(0x001A)
+IL_1191: ldloca.s local(0x001A)
+IL_1193: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1198: ldloc.s local(0x0017)
+IL_119A: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_119F: stloc.s local(0x001A)
+IL_11A1: ldloca.s local(0x001A)
+IL_11A3: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_11A8: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_11AD: ldloc.s local(0x0017)
+IL_11AF: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_11B4: ldloc.s local(0x0017)
+IL_11B6: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_11BB: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_11C0: ldc.r8 0.0
+IL_11C9: ldc.r8 0.0
+IL_11D2: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_11D7: ldc.i4 53
+IL_11DC: stloc local(0x0048)
+IL_11E0: br 4320
+IL_11E5: ldc.i4 30
+IL_11EA: stloc local(0x0048)
+IL_11EE: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_11F3: brtrue 6209
+IL_11F8: ldloc.s local(0x0019)
+IL_11FA: ldc.i4.0 
+IL_11FB: ldloc.s local(0x0016)
+IL_11FD: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1202: stloc.s local(0x001A)
+IL_1204: ldloca.s local(0x001A)
+IL_1206: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_120B: ldloc.s local(0x0016)
+IL_120D: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1212: stloc.s local(0x001A)
+IL_1214: ldloca.s local(0x001A)
+IL_1216: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_121B: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1220: ldloc.s local(0x0016)
+IL_1222: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_1227: ldloc.s local(0x0016)
+IL_1229: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_122E: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_1233: neg 
+IL_1234: ldc.r8 0.0
+IL_123D: ldc.r8 0.0
+IL_1246: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_124B: ldloc.s local(0x0019)
+IL_124D: ldc.i4.1 
+IL_124E: ldloc.s local(0x0016)
+IL_1250: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1255: stloc.s local(0x001A)
+IL_1257: ldloca.s local(0x001A)
+IL_1259: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_125E: ldloc.s local(0x0016)
+IL_1260: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1265: stloc.s local(0x001A)
+IL_1267: ldloca.s local(0x001A)
+IL_1269: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_126E: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1273: ldc.r8 0.0
+IL_127C: ldc.r8 0.0
+IL_1285: ldc.r8 0.0
+IL_128E: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1293: ldc.i4 48
+IL_1298: stloc local(0x0048)
+IL_129C: br 885
+IL_12A1: ldloc.s local(0x0024)
+IL_12A3: ldc.i4.0 
+IL_12A4: bge 5367
+IL_12A9: br 707
+IL_12AE: ldloc.0 
+IL_12AF: call 0x0600012B \x87\x87.\x87\x86::\x8c\x89
+IL_12B4: ldloc.s local(0x0008)
+IL_12B6: ldloc.s local(0x0024)
+IL_12B8: conv.r8 
+IL_12B9: add 
+IL_12BA: ldloc.s local(0x0004)
+IL_12BC: ldloc.s local(0x0021)
+IL_12BE: add 
+IL_12BF: ldloc.3 
+IL_12C0: ldloc.s local(0x001E)
+IL_12C2: sub 
+IL_12C3: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_12C8: stloc.s local(0x0027)
+IL_12CA: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+IL_12CF: stloc.s local(0x0028)
+IL_12D1: ldc.i4 103
+IL_12D6: stloc local(0x0048)
+IL_12DA: br.s 4781
+IL_12DC: ldloc.s local(0x0022)
+IL_12DE: ldloc.s local(0x0009)
+IL_12E0: ldloc.s local(0x0024)
+IL_12E2: conv.r8 
+IL_12E3: add 
+IL_12E4: ldloc.s local(0x0004)
+IL_12E6: ldc.r8 1.5707963267948966
+IL_12EF: sub 
+IL_12F0: ldloc.s local(0x0023)
+IL_12F2: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_12F7: stloc.s local(0x0026)
+IL_12F9: ldc.i4 67
+IL_12FE: stloc local(0x0048)
+IL_1302: br.s 4794
+IL_1304: ldloc.s local(0x000A)
+IL_1306: ldloc.s local(0x0008)
+IL_1308: ldloc.s local(0x000A)
+IL_130A: add 
+IL_130B: div 
+IL_130C: call 0x0A0001BA System.Math::Asin
+IL_1311: stloc.s local(0x001E)
+IL_1313: ldc.i4 54
+IL_1318: stloc local(0x0048)
+IL_131C: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_1321: brfalse 8392
+IL_1326: ldloca.s local(0x001F)
+IL_1328: ldloc.0 
+IL_1329: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_132E: ldloc.s local(0x0008)
+IL_1330: ldloc.s local(0x000A)
+IL_1332: add 
+IL_1333: ldloc.3 
+IL_1334: ldloc.s local(0x001E)
+IL_1336: sub 
+IL_1337: call 0x0A000064 System.Math::Cos
+IL_133C: mul 
+IL_133D: add 
+IL_133E: ldloc.0 
+IL_133F: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_1344: ldloc.s local(0x0008)
+IL_1346: ldloc.s local(0x000A)
+IL_1348: add 
+IL_1349: ldloc.3 
+IL_134A: ldloc.s local(0x001E)
+IL_134C: sub 
+IL_134D: call 0x0A000065 System.Math::Sin
+IL_1352: mul 
+IL_1353: add 
+IL_1354: ldc.r8 0.0
+IL_135D: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_1362: ldloc.0 
+IL_1363: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_1368: ldloca.s local(0x001F)
+IL_136A: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_136F: sub 
+IL_1370: ldloc.0 
+IL_1371: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_1376: ldloca.s local(0x001F)
+IL_1378: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_137D: sub 
+IL_137E: call 0x0A000063 System.Math::Atan2
+IL_1383: stloc.s local(0x0020)
+IL_1385: ldloc.s local(0x0009)
+IL_1387: ldloc.s local(0x0006)
+IL_1389: div 
+IL_138A: call 0x0A0001C1 System.Math::Atan
+IL_138F: stloc.s local(0x0021)
+IL_1391: ldloca.s local(0x0022)
+IL_1393: ldloc.0 
+IL_1394: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_1399: ldloc.s local(0x0006)
+IL_139B: ldloc.s local(0x0007)
+IL_139D: add 
+IL_139E: ldloc.s local(0x0009)
+IL_13A0: sub 
+IL_13A1: ldloc.s local(0x0004)
+IL_13A3: ldloc.s local(0x0021)
+IL_13A5: add 
+IL_13A6: call 0x0A000064 System.Math::Cos
+IL_13AB: mul 
+IL_13AC: add 
+IL_13AD: ldloc.0 
+IL_13AE: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_13B3: ldloc.s local(0x0006)
+IL_13B5: ldloc.s local(0x0007)
+IL_13B7: add 
+IL_13B8: ldloc.s local(0x0009)
+IL_13BA: sub 
+IL_13BB: ldloc.s local(0x0004)
+IL_13BD: ldloc.s local(0x0021)
+IL_13BF: add 
+IL_13C0: call 0x0A000065 System.Math::Sin
+IL_13C5: mul 
+IL_13C6: add 
+IL_13C7: ldc.r8 0.0
+IL_13D0: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_13D5: ldloca.s local(0x0022)
+IL_13D7: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_13DC: ldloc.0 
+IL_13DD: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_13E2: sub 
+IL_13E3: ldloca.s local(0x0022)
+IL_13E5: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_13EA: ldloc.0 
+IL_13EB: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_13F0: sub 
+IL_13F1: call 0x0A000063 System.Math::Atan2
+IL_13F6: stloc.s local(0x0023)
+IL_13F8: ldc.i4 70
+IL_13FD: stloc local(0x0048)
+IL_1401: ldc.i4 -9260
+IL_1406: stloc.s local(0x0024)
+IL_1408: ldc.i4 79
+IL_140D: stloc local(0x0048)
+IL_1411: ldloc.s local(0x0024)
+IL_1413: ldc.i4 9260
+IL_1418: ble 665
+IL_141D: br 8955
+IL_1422: ldloc.s local(0x0028)
+IL_1424: ldloc.s local(0x0005)
+IL_1426: ldstr ''
+IL_142B: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_1430: pop 
+IL_1431: ldloc.s local(0x0024)
+IL_1433: ldc.i4 4630
+IL_1438: add 
+IL_1439: stloc.s local(0x0024)
+IL_143B: br.s 5149
+IL_143D: ldc.i4 4
+IL_1442: stloc local(0x0048)
+IL_1446: br 5465
+IL_144B: ldloc.s local(0x0028)
+IL_144D: ldc.i4.2 
+IL_144E: ldloc.s local(0x0027)
+IL_1450: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1455: stloc.s local(0x001A)
+IL_1457: ldloca.s local(0x001A)
+IL_1459: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_145E: ldloc.s local(0x0027)
+IL_1460: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1465: stloc.s local(0x001A)
+IL_1467: ldloca.s local(0x001A)
+IL_1469: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_146E: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1473: ldloc.s local(0x0027)
+IL_1475: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_147A: ldloc.s local(0x0027)
+IL_147C: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_1481: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_1486: neg 
+IL_1487: ldc.r8 0.0
+IL_1490: ldc.r8 0.0
+IL_1499: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_149E: ldloc.s local(0x0028)
+IL_14A0: ldc.i4.3 
+IL_14A1: ldloc.s local(0x0027)
+IL_14A3: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_14A8: stloc.s local(0x001A)
+IL_14AA: ldloca.s local(0x001A)
+IL_14AC: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_14B1: ldloc.s local(0x0027)
+IL_14B3: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_14B8: stloc.s local(0x001A)
+IL_14BA: ldloca.s local(0x001A)
+IL_14BC: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_14C1: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_14C6: ldc.r8 0.0
+IL_14CF: ldc.r8 0.0
+IL_14D8: ldc.r8 0.0
+IL_14E1: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_14E6: br 5863
+IL_14EB: ldloc.s local(0x0024)
+IL_14ED: brtrue 5858
+IL_14F2: ldc.i4 76
+IL_14F7: stloc local(0x0048)
+IL_14FB: ldloc.s local(0x0028)
+IL_14FD: ldc.i4.0 
+IL_14FE: ldloc.s local(0x0025)
+IL_1500: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1505: stloc.s local(0x001A)
+IL_1507: ldloca.s local(0x001A)
+IL_1509: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_150E: ldloc.s local(0x0025)
+IL_1510: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1515: stloc.s local(0x001A)
+IL_1517: ldloca.s local(0x001A)
+IL_1519: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_151E: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1523: ldloc.s local(0x0025)
+IL_1525: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_152A: ldloc.s local(0x0025)
+IL_152C: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_1531: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_1536: ldc.r8 0.0
+IL_153F: ldc.r8 0.0
+IL_1548: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_154D: ldloc.s local(0x0028)
+IL_154F: ldc.i4.1 
+IL_1550: ldloc.s local(0x0025)
+IL_1552: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1557: stloc.s local(0x001A)
+IL_1559: ldloca.s local(0x001A)
+IL_155B: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1560: ldloc.s local(0x0025)
+IL_1562: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1567: stloc.s local(0x001A)
+IL_1569: ldloca.s local(0x001A)
+IL_156B: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1570: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1575: ldc.r8 0.0
+IL_157E: ldc.r8 0.0
+IL_1587: ldc.r8 0.0
+IL_1590: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1595: ldloc.s local(0x0028)
+IL_1597: ldc.i4.2 
+IL_1598: ldloc.s local(0x0027)
+IL_159A: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_159F: stloc.s local(0x001A)
+IL_15A1: ldloca.s local(0x001A)
+IL_15A3: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_15A8: ldloc.s local(0x0027)
+IL_15AA: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_15AF: stloc.s local(0x001A)
+IL_15B1: ldloca.s local(0x001A)
+IL_15B3: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_15B8: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_15BD: ldloc.s local(0x0027)
+IL_15BF: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_15C4: ldloc.s local(0x0027)
+IL_15C6: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_15CB: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_15D0: neg 
+IL_15D1: ldc.r8 0.0
+IL_15DA: ldc.r8 0.0
+IL_15E3: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_15E8: ldloc.s local(0x0028)
+IL_15EA: ldc.i4.3 
+IL_15EB: ldloc.s local(0x0027)
+IL_15ED: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_15F2: stloc.s local(0x001A)
+IL_15F4: ldloca.s local(0x001A)
+IL_15F6: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_15FB: ldloc.s local(0x0027)
+IL_15FD: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1602: stloc.s local(0x001A)
+IL_1604: ldloca.s local(0x001A)
+IL_1606: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_160B: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1610: ldc.r8 0.0
+IL_1619: ldc.r8 0.0
+IL_1622: ldc.r8 0.0
+IL_162B: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1630: ldloc.s local(0x0028)
+IL_1632: ldc.i4.4 
+IL_1633: ldloc.s local(0x0026)
+IL_1635: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_163A: stloc.s local(0x001A)
+IL_163C: ldloca.s local(0x001A)
+IL_163E: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1643: ldloc.s local(0x0026)
+IL_1645: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_164A: stloc.s local(0x001A)
+IL_164C: ldloca.s local(0x001A)
+IL_164E: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1653: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1658: ldloc.s local(0x0026)
+IL_165A: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_165F: ldloc.s local(0x0026)
+IL_1661: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_1666: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_166B: neg 
+IL_166C: ldc.r8 0.0
+IL_1675: ldc.r8 0.0
+IL_167E: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1683: ldc.i4 42
+IL_1688: stloc local(0x0048)
+IL_168C: ldloc.s local(0x0028)
+IL_168E: ldc.i4.5 
+IL_168F: ldloc.s local(0x0026)
+IL_1691: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1696: stloc.s local(0x001A)
+IL_1698: ldloca.s local(0x001A)
+IL_169A: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_169F: ldloc.s local(0x0026)
+IL_16A1: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_16A6: stloc.s local(0x001A)
+IL_16A8: ldloca.s local(0x001A)
+IL_16AA: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_16AF: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_16B4: ldc.r8 0.0
+IL_16BD: ldc.r8 0.0
+IL_16C6: ldc.r8 0.0
+IL_16CF: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_16D4: br.s 5863
+IL_16D6: ldloc.s local(0x0024)
+IL_16D8: ldc.i4.0 
+IL_16D9: bgt.s 5885
+IL_16DB: ldloc.s local(0x0028)
+IL_16DD: ldc.i4.0 
+IL_16DE: callvirt 0x0A0001C0 Autodesk.AutoCAD.DatabaseServices.Polyline::set_Closed
+IL_16E3: ldc.i4 100
+IL_16E8: stloc local(0x0048)
+IL_16EC: br 5166
+IL_16F1: ldloc.s local(0x0028)
+IL_16F3: ldc.i4.0 
+IL_16F4: ldloc.s local(0x0027)
+IL_16F6: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_16FB: stloc.s local(0x001A)
+IL_16FD: ldloca.s local(0x001A)
+IL_16FF: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1704: ldloc.s local(0x0027)
+IL_1706: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_170B: stloc.s local(0x001A)
+IL_170D: ldloca.s local(0x001A)
+IL_170F: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1714: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1719: ldloc.s local(0x0027)
+IL_171B: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_1720: ldloc.s local(0x0027)
+IL_1722: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_1727: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_172C: neg 
+IL_172D: ldc.r8 0.0
+IL_1736: ldc.r8 0.0
+IL_173F: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1744: ldloc.s local(0x0028)
+IL_1746: ldc.i4.1 
+IL_1747: ldloc.s local(0x0027)
+IL_1749: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_174E: stloc.s local(0x001A)
+IL_1750: ldloca.s local(0x001A)
+IL_1752: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1757: ldloc.s local(0x0027)
+IL_1759: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_175E: stloc.s local(0x001A)
+IL_1760: ldloca.s local(0x001A)
+IL_1762: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1767: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_176C: ldc.r8 0.0
+IL_1775: ldc.r8 0.0
+IL_177E: ldc.r8 0.0
+IL_1787: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_178C: ldc.i4 7
+IL_1791: stloc local(0x0048)
+IL_1795: ldloc.s local(0x0028)
+IL_1797: ldc.i4.2 
+IL_1798: ldloc.s local(0x0026)
+IL_179A: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_179F: stloc.s local(0x001A)
+IL_17A1: ldloca.s local(0x001A)
+IL_17A3: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_17A8: ldloc.s local(0x0026)
+IL_17AA: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_17AF: stloc.s local(0x001A)
+IL_17B1: ldloca.s local(0x001A)
+IL_17B3: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_17B8: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_17BD: ldloc.s local(0x0026)
+IL_17BF: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_17C4: ldloc.s local(0x0026)
+IL_17C6: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_17CB: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_17D0: neg 
+IL_17D1: ldc.r8 0.0
+IL_17DA: ldc.r8 0.0
+IL_17E3: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_17E8: ldloc.s local(0x0028)
+IL_17EA: ldc.i4.3 
+IL_17EB: ldloc.s local(0x0026)
+IL_17ED: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_17F2: stloc.s local(0x001A)
+IL_17F4: ldloca.s local(0x001A)
+IL_17F6: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_17FB: ldloc.s local(0x0026)
+IL_17FD: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1802: stloc.s local(0x001A)
+IL_1804: ldloca.s local(0x001A)
+IL_1806: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_180B: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1810: ldc.r8 0.0
+IL_1819: ldc.r8 0.0
+IL_1822: ldc.r8 0.0
+IL_182B: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1830: br 5863
+IL_1835: ldloc.s local(0x0044)
+IL_1837: ldloc.s local(0x0005)
+IL_1839: ldstr ''
+IL_183E: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_1843: pop 
+IL_1844: ldloc.s local(0x0040)
+IL_1846: ldc.i4 4630
+IL_184B: add 
+IL_184C: stloc.s local(0x0040)
+IL_184E: ldc.i4 91
+IL_1853: stloc local(0x0048)
+IL_1857: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_185C: brfalse 7196
+IL_1861: br.s 6132
+IL_1863: ldloc.s local(0x0044)
+IL_1865: ldc.i4.0 
+IL_1866: ldloc.s local(0x0041)
+IL_1868: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_186D: stloc.s local(0x001A)
+IL_186F: ldloca.s local(0x001A)
+IL_1871: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1876: ldloc.s local(0x0041)
+IL_1878: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_187D: stloc.s local(0x001A)
+IL_187F: ldloca.s local(0x001A)
+IL_1881: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1886: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_188B: ldloc.s local(0x0041)
+IL_188D: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_1892: ldloc.s local(0x0041)
+IL_1894: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_1899: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_189E: neg 
+IL_189F: ldc.r8 0.0
+IL_18A8: ldc.r8 0.0
+IL_18B1: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_18B6: br 6752
+IL_18BB: ldloc.s local(0x0044)
+IL_18BD: ldc.i4.4 
+IL_18BE: ldloc.s local(0x0042)
+IL_18C0: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_18C5: stloc.s local(0x001A)
+IL_18C7: ldloca.s local(0x001A)
+IL_18C9: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_18CE: ldloc.s local(0x0042)
+IL_18D0: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_18D5: stloc.s local(0x001A)
+IL_18D7: ldloca.s local(0x001A)
+IL_18D9: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_18DE: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_18E3: ldloc.s local(0x0042)
+IL_18E5: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_18EA: ldloc.s local(0x0042)
+IL_18EC: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_18F1: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_18F6: ldc.r8 0.0
+IL_18FF: ldc.r8 0.0
+IL_1908: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_190D: br 6989
+IL_1912: ldloc.s local(0x0044)
+IL_1914: ldc.i4.0 
+IL_1915: ldloc.s local(0x0043)
+IL_1917: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_191C: stloc.s local(0x001A)
+IL_191E: ldloca.s local(0x001A)
+IL_1920: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1925: ldloc.s local(0x0043)
+IL_1927: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_192C: stloc.s local(0x001A)
+IL_192E: ldloca.s local(0x001A)
+IL_1930: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1935: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_193A: ldloc.s local(0x0043)
+IL_193C: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_1941: ldloc.s local(0x0043)
+IL_1943: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_1948: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_194D: ldc.r8 0.0
+IL_1956: ldc.r8 0.0
+IL_195F: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1964: ldloc.s local(0x0044)
+IL_1966: ldc.i4.1 
+IL_1967: ldloc.s local(0x0043)
+IL_1969: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_196E: stloc.s local(0x001A)
+IL_1970: ldloca.s local(0x001A)
+IL_1972: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1977: ldloc.s local(0x0043)
+IL_1979: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_197E: stloc.s local(0x001A)
+IL_1980: ldloca.s local(0x001A)
+IL_1982: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1987: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_198C: ldc.r8 0.0
+IL_1995: ldc.r8 0.0
+IL_199E: ldc.r8 0.0
+IL_19A7: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_19AC: ldloc.s local(0x0044)
+IL_19AE: ldc.i4.2 
+IL_19AF: ldloc.s local(0x0042)
+IL_19B1: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_19B6: stloc.s local(0x001A)
+IL_19B8: ldloca.s local(0x001A)
+IL_19BA: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_19BF: ldloc.s local(0x0042)
+IL_19C1: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_19C6: stloc.s local(0x001A)
+IL_19C8: ldloca.s local(0x001A)
+IL_19CA: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_19CF: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_19D4: ldloc.s local(0x0042)
+IL_19D6: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_19DB: ldloc.s local(0x0042)
+IL_19DD: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_19E2: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_19E7: ldc.r8 0.0
+IL_19F0: ldc.r8 0.0
+IL_19F9: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_19FE: ldloc.s local(0x0044)
+IL_1A00: ldc.i4.3 
+IL_1A01: ldloc.s local(0x0042)
+IL_1A03: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1A08: stloc.s local(0x001A)
+IL_1A0A: ldloca.s local(0x001A)
+IL_1A0C: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1A11: ldloc.s local(0x0042)
+IL_1A13: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1A18: stloc.s local(0x001A)
+IL_1A1A: ldloca.s local(0x001A)
+IL_1A1C: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1A21: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1A26: ldc.r8 0.0
+IL_1A2F: ldc.r8 0.0
+IL_1A38: ldc.r8 0.0
+IL_1A41: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1A46: ldc.i4 87
+IL_1A4B: stloc local(0x0048)
+IL_1A4F: br 7083
+IL_1A54: ldloc.s local(0x0044)
+IL_1A56: ldc.i4.1 
+IL_1A57: ldloc.s local(0x0041)
+IL_1A59: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1A5E: stloc.s local(0x001A)
+IL_1A60: ldloca.s local(0x001A)
+IL_1A62: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1A67: ldloc.s local(0x0041)
+IL_1A69: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1A6E: stloc.s local(0x001A)
+IL_1A70: ldloca.s local(0x001A)
+IL_1A72: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1A77: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1A7C: ldc.r8 0.0
+IL_1A85: ldc.r8 0.0
+IL_1A8E: ldc.r8 0.0
+IL_1A97: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1A9C: ldloc.s local(0x0044)
+IL_1A9E: ldc.i4.2 
+IL_1A9F: ldloc.s local(0x0043)
+IL_1AA1: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1AA6: stloc.s local(0x001A)
+IL_1AA8: ldloca.s local(0x001A)
+IL_1AAA: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1AAF: ldloc.s local(0x0043)
+IL_1AB1: callvirt 0x0A0001BB Autodesk.AutoCAD.DatabaseServices.Curve::get_StartPoint
+IL_1AB6: stloc.s local(0x001A)
+IL_1AB8: ldloca.s local(0x001A)
+IL_1ABA: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1ABF: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1AC4: ldloc.s local(0x0043)
+IL_1AC6: callvirt 0x0A0001BD Autodesk.AutoCAD.DatabaseServices.Arc::get_StartAngle
+IL_1ACB: ldloc.s local(0x0043)
+IL_1ACD: callvirt 0x0A0001BE Autodesk.AutoCAD.DatabaseServices.Arc::get_EndAngle
+IL_1AD2: call 0x060002DC \x89\x89.\x89\x88::\x87\x8e\x8b
+IL_1AD7: ldc.r8 0.0
+IL_1AE0: ldc.r8 0.0
+IL_1AE9: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1AEE: ldloc.s local(0x0044)
+IL_1AF0: ldc.i4.3 
+IL_1AF1: ldloc.s local(0x0043)
+IL_1AF3: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1AF8: stloc.s local(0x001A)
+IL_1AFA: ldloca.s local(0x001A)
+IL_1AFC: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1B01: ldloc.s local(0x0043)
+IL_1B03: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1B08: stloc.s local(0x001A)
+IL_1B0A: ldloca.s local(0x001A)
+IL_1B0C: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1B11: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1B16: ldc.r8 0.0
+IL_1B1F: ldc.r8 0.0
+IL_1B28: ldc.r8 0.0
+IL_1B31: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1B36: ldc.i4 92
+IL_1B3B: stloc local(0x0048)
+IL_1B3F: br.s 7083
+IL_1B41: ldloc.s local(0x0044)
+IL_1B43: ldc.i4.5 
+IL_1B44: ldloc.s local(0x0042)
+IL_1B46: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1B4B: stloc.s local(0x001A)
+IL_1B4D: ldloca.s local(0x001A)
+IL_1B4F: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1B54: ldloc.s local(0x0042)
+IL_1B56: callvirt 0x0A0001BF Autodesk.AutoCAD.DatabaseServices.Curve::get_EndPoint
+IL_1B5B: stloc.s local(0x001A)
+IL_1B5D: ldloca.s local(0x001A)
+IL_1B5F: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1B64: newobj 0x0A000117 Autodesk.AutoCAD.Geometry.Point2d::.ctor
+IL_1B69: ldc.r8 0.0
+IL_1B72: ldc.r8 0.0
+IL_1B7B: ldc.r8 0.0
+IL_1B84: callvirt 0x0A0001BC Autodesk.AutoCAD.DatabaseServices.Polyline::AddVertexAt
+IL_1B89: br.s 7083
+IL_1B8B: pop 
+IL_1B8C: ldc.i4 14
+IL_1B91: stloc local(0x0048)
+IL_1B95: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_1B9A: brtrue 8955
+IL_1B9F: ldloc.s local(0x0044)
+IL_1BA1: ldc.i4.0 
+IL_1BA2: callvirt 0x0A0001C0 Autodesk.AutoCAD.DatabaseServices.Polyline::set_Closed
+IL_1BA7: br 6209
+IL_1BAC: ldc.i4 0
+IL_1BB1: stloc local(0x0048)
+IL_1BB5: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_1BBA: brfalse 6255
+IL_1BBF: br 3447
+IL_1BC4: ldloc.0 
+IL_1BC5: call 0x0600012B \x87\x87.\x87\x86::\x8c\x89
+IL_1BCA: ldloc.s local(0x0008)
+IL_1BCC: ldloc.s local(0x0040)
+IL_1BCE: conv.r8 
+IL_1BCF: add 
+IL_1BD0: ldloc.3 
+IL_1BD1: ldloc.s local(0x003A)
+IL_1BD3: add 
+IL_1BD4: ldloc.s local(0x0004)
+IL_1BD6: ldloc.s local(0x003D)
+IL_1BD8: sub 
+IL_1BD9: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_1BDE: stloc.s local(0x0043)
+IL_1BE0: newobj 0x0A00009B Autodesk.AutoCAD.DatabaseServices.Polyline::.ctor
+IL_1BE5: stloc.s local(0x0044)
+IL_1BE7: ldloc.s local(0x0040)
+IL_1BE9: ldc.i4.0 
+IL_1BEA: bge 313
+IL_1BEF: br.s 7096
+IL_1BF1: ldloc.s local(0x003E)
+IL_1BF3: ldloc.s local(0x0009)
+IL_1BF5: ldloc.s local(0x0040)
+IL_1BF7: conv.r8 
+IL_1BF8: add 
+IL_1BF9: ldloc.s local(0x003F)
+IL_1BFB: ldloc.s local(0x0004)
+IL_1BFD: ldc.r8 1.5707963267948966
+IL_1C06: add 
+IL_1C07: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_1C0C: stloc.s local(0x0042)
+IL_1C0E: br.s 7120
+IL_1C10: ldloc.s local(0x0040)
+IL_1C12: ldc.i4 9260
+IL_1C17: ble 271
+IL_1C1C: br 8161
+IL_1C21: ldloc.s local(0x0009)
+IL_1C23: ldloc.s local(0x0006)
+IL_1C25: div 
+IL_1C26: call 0x0A0001C1 System.Math::Atan
+IL_1C2B: stloc.s local(0x003D)
+IL_1C2D: ldloca.s local(0x003E)
+IL_1C2F: ldloc.0 
+IL_1C30: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_1C35: ldloc.s local(0x0006)
+IL_1C37: ldloc.s local(0x0007)
+IL_1C39: add 
+IL_1C3A: ldloc.s local(0x0009)
+IL_1C3C: sub 
+IL_1C3D: ldloc.s local(0x0004)
+IL_1C3F: ldloc.s local(0x003D)
+IL_1C41: sub 
+IL_1C42: call 0x0A000064 System.Math::Cos
+IL_1C47: mul 
+IL_1C48: add 
+IL_1C49: ldloc.0 
+IL_1C4A: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_1C4F: ldloc.s local(0x0006)
+IL_1C51: ldloc.s local(0x0007)
+IL_1C53: add 
+IL_1C54: ldloc.s local(0x0009)
+IL_1C56: sub 
+IL_1C57: ldloc.s local(0x0004)
+IL_1C59: ldloc.s local(0x003D)
+IL_1C5B: sub 
+IL_1C5C: call 0x0A000065 System.Math::Sin
+IL_1C61: mul 
+IL_1C62: add 
+IL_1C63: ldc.r8 0.0
+IL_1C6C: call 0x0A000067 Autodesk.AutoCAD.Geometry.Point3d::.ctor
+IL_1C71: ldloca.s local(0x003E)
+IL_1C73: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1C78: ldloc.0 
+IL_1C79: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_1C7E: sub 
+IL_1C7F: ldloca.s local(0x003E)
+IL_1C81: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1C86: ldloc.0 
+IL_1C87: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_1C8C: sub 
+IL_1C8D: call 0x0A000063 System.Math::Atan2
+IL_1C92: stloc.s local(0x003F)
+IL_1C94: ldc.i4 -9260
+IL_1C99: stloc.s local(0x0040)
+IL_1C9B: br 7196
+IL_1CA0: ldloc.0 
+IL_1CA1: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_1CA6: ldloca.s local(0x003B)
+IL_1CA8: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_1CAD: sub 
+IL_1CAE: ldloc.0 
+IL_1CAF: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_1CB4: ldloca.s local(0x003B)
+IL_1CB6: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_1CBB: sub 
+IL_1CBC: call 0x0A000063 System.Math::Atan2
+IL_1CC1: stloc.s local(0x003C)
+IL_1CC3: ldc.i4 26
+IL_1CC8: stloc local(0x0048)
+IL_1CCC: br 7213
+IL_1CD1: ldc.i4 35
+IL_1CD6: stloc local(0x0048)
+IL_1CDA: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_1CDF: brfalse 1352
+IL_1CE4: br 3780
+IL_1CE9: ldc.r8 1000.0
+IL_1CF2: stloc.s local(0x000B)
+IL_1CF4: ldloc.3 
+IL_1CF5: ldloc.s local(0x0004)
+IL_1CF7: bge.un 153
+IL_1CFC: br.s 7389
+IL_1CFE: ldc.r8 2.0
+IL_1D07: ldloc.s local(0x0006)
+IL_1D09: mul 
+IL_1D0A: ldloc.s local(0x0007)
+IL_1D0C: mul 
+IL_1D0D: ldloc.s local(0x0007)
+IL_1D0F: ldloc.s local(0x0007)
+IL_1D11: mul 
+IL_1D12: add 
+IL_1D13: ldc.r8 2.0
+IL_1D1C: ldloc.s local(0x0006)
+IL_1D1E: mul 
+IL_1D1F: ldc.r8 2.0
+IL_1D28: ldloc.s local(0x0007)
+IL_1D2A: mul 
+IL_1D2B: add 
+IL_1D2C: div 
+IL_1D2D: stloc.s local(0x0009)
+IL_1D2F: ldc.r8 2.0
+IL_1D38: ldloc.s local(0x0006)
+IL_1D3A: mul 
+IL_1D3B: ldloc.s local(0x0007)
+IL_1D3D: mul 
+IL_1D3E: ldc.r8 3.0
+IL_1D47: ldloc.s local(0x0007)
+IL_1D49: mul 
+IL_1D4A: ldloc.s local(0x0007)
+IL_1D4C: mul 
+IL_1D4D: add 
+IL_1D4E: ldc.r8 2.0
+IL_1D57: ldloc.s local(0x0006)
+IL_1D59: mul 
+IL_1D5A: ldc.r8 2.0
+IL_1D63: ldloc.s local(0x0007)
+IL_1D65: mul 
+IL_1D66: add 
+IL_1D67: div 
+IL_1D68: stloc.s local(0x000A)
+IL_1D6A: br 7413
+IL_1D6F: ldloc.s local(0x0006)
+IL_1D71: ldloc.s local(0x0007)
+IL_1D73: add 
+IL_1D74: stloc.s local(0x0008)
+IL_1D76: br.s 7434
+IL_1D78: ldloc.1 
+IL_1D79: ldloc.0 
+IL_1D7A: call 0x06000807 \x8f\x8f.\x8f\x8e::\x8b\x88\x9e
+IL_1D7F: stloc.s local(0x0006)
+IL_1D81: ldc.r8 3704.0
+IL_1D8A: stloc.s local(0x0007)
+IL_1D8C: ldc.i4 85
+IL_1D91: stloc local(0x0048)
+IL_1D95: br.s 7547
+IL_1D97: ldloc.s local(0x0004)
+IL_1D99: stloc.s local(0x0004)
+IL_1D9B: ldloc.3 
+IL_1D9C: ldloc.s local(0x0004)
+IL_1D9E: bne.un 122
+IL_1DA3: br 8147
+IL_1DA8: ldloc.3 
+IL_1DA9: br 77
+IL_1DAE: ldloc.1 
+IL_1DAF: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_1DB4: ldloc.0 
+IL_1DB5: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_1DBA: sub 
+IL_1DBB: ldloc.1 
+IL_1DBC: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_1DC1: ldloc.0 
+IL_1DC2: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_1DC7: sub 
+IL_1DC8: call 0x0A000063 System.Math::Atan2
+IL_1DCD: stloc.s local(0x0004)
+IL_1DCF: ldloc.3 
+IL_1DD0: ldc.r8 0.0
+IL_1DD9: blt 66
+IL_1DDE: br.s 7604
+IL_1DE0: ldloc.2 
+IL_1DE1: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_1DE6: ldloc.0 
+IL_1DE7: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_1DEC: sub 
+IL_1DED: ldloc.2 
+IL_1DEE: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_1DF3: ldloc.0 
+IL_1DF4: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_1DF9: sub 
+IL_1DFA: call 0x0A000063 System.Math::Atan2
+IL_1DFF: stloc.3 
+IL_1E00: ldc.i4 86
+IL_1E05: stloc local(0x0048)
+IL_1E09: br.s 7610
+IL_1E0B: ldloc.2 
+IL_1E0C: ldarg.0 
+IL_1E0D: ldfld 0x040001BF \x89\x89.\x89\x88::\x87\x8f\x8c
+IL_1E12: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_1E17: call 0x0A00027B System.Convert::ToDouble
+IL_1E1C: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_1E21: ldc.i4 93
+IL_1E26: stloc local(0x0048)
+IL_1E2A: br.s 7660
+IL_1E2C: ldloc.1 
+IL_1E2D: ldarg.0 
+IL_1E2E: ldfld 0x040001C7 \x89\x89.\x89\x88::\x87\x8f\x94
+IL_1E33: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_1E38: call 0x0A00027B System.Convert::ToDouble
+IL_1E3D: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_1E42: ldloc.2 
+IL_1E43: ldarg.0 
+IL_1E44: ldfld 0x040001C0 \x89\x89.\x89\x88::\x87\x8f\x8d
+IL_1E49: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_1E4E: call 0x0A00027B System.Convert::ToDouble
+IL_1E53: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_1E58: ldc.i4 29
+IL_1E5D: stloc local(0x0048)
+IL_1E61: br.s 7703
+IL_1E63: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_1E68: stloc.2 
+IL_1E69: ldc.i4 56
+IL_1E6E: stloc local(0x0048)
+IL_1E72: ldloc.0 
+IL_1E73: ldarg.0 
+IL_1E74: ldfld 0x040001CD \x89\x89.\x89\x88::\x87\x8f\x9a
+IL_1E79: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_1E7E: call 0x0A00027B System.Convert::ToDouble
+IL_1E83: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_1E88: ldloc.0 
+IL_1E89: ldarg.0 
+IL_1E8A: ldfld 0x040001CE \x89\x89.\x89\x88::\x87\x8f\x9b
+IL_1E8F: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_1E94: call 0x0A00027B System.Convert::ToDouble
+IL_1E99: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_1E9E: ldloc.1 
+IL_1E9F: ldarg.0 
+IL_1EA0: ldfld 0x040001C6 \x89\x89.\x89\x88::\x87\x8f\x93
+IL_1EA5: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_1EAA: call 0x0A00027B System.Convert::ToDouble
+IL_1EAF: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_1EB4: ldc.i4 88
+IL_1EB9: stloc local(0x0048)
+IL_1EBD: br 7736
+IL_1EC2: ldloc.s local(0x000E)
+IL_1EC4: ldfld 0x04000771 .\x90\x9a::\x8b\x8f\x8e
+IL_1EC9: ldloc.s local(0x000E)
+IL_1ECB: ldfld 0x04000772 .\x90\x9a::\x8b\x8f\x8f
+IL_1ED0: call 0x060007D6 \x8f\x8b.\x8f\x8a::\x8b\x88\x86
+IL_1ED5: brfalse 42
+IL_1EDA: ldloc.s local(0x000D)
+IL_1EDC: ldc.i4.1 
+IL_1EDD: add 
+IL_1EDE: stloc.s local(0x000D)
+IL_1EE0: ldloc.s local(0x000D)
+IL_1EE2: ldloc.s local(0x000C)
+IL_1EE4: ldlen 
+IL_1EE5: conv.i4 
+IL_1EE6: blt 26
+IL_1EEB: br 4394
+IL_1EF0: ldc.i4.0 
+IL_1EF1: stloc.s local(0x000D)
+IL_1EF3: ldc.i4 31
+IL_1EF8: stloc local(0x0048)
+IL_1EFC: br.s 7916
+IL_1EFE: ldc.i4.6 
+IL_1EFF: newarr 0x0200008F .\x90\x9a
+IL_1F04: dup 
+IL_1F05: ldc.i4.0 
+IL_1F06: ldarg.0 
+IL_1F07: ldfld 0x040001CD \x89\x89.\x89\x88::\x87\x8f\x9a
+IL_1F0C: ldc.i4 3552
+IL_1F11: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_1F16: newobj 0x060007E0 .\x90\x9a::.ctor
+IL_1F1B: stelem 0x0200008F .\x90\x9a
+IL_1F20: dup 
+IL_1F21: ldc.i4.1 
+IL_1F22: ldarg.0 
+IL_1F23: ldfld 0x040001CE \x89\x89.\x89\x88::\x87\x8f\x9b
+IL_1F28: ldc.i4 3556
+IL_1F2D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_1F32: newobj 0x060007E0 .\x90\x9a::.ctor
+IL_1F37: stelem 0x0200008F .\x90\x9a
+IL_1F3C: dup 
+IL_1F3D: ldc.i4.2 
+IL_1F3E: ldarg.0 
+IL_1F3F: ldfld 0x040001C6 \x89\x89.\x89\x88::\x87\x8f\x93
+IL_1F44: ldc.i4 3560
+IL_1F49: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_1F4E: newobj 0x060007E0 .\x90\x9a::.ctor
+IL_1F53: stelem 0x0200008F .\x90\x9a
+IL_1F58: dup 
+IL_1F59: ldc.i4.3 
+IL_1F5A: ldarg.0 
+IL_1F5B: ldfld 0x040001C7 \x89\x89.\x89\x88::\x87\x8f\x94
+IL_1F60: ldc.i4 3564
+IL_1F65: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_1F6A: newobj 0x060007E0 .\x90\x9a::.ctor
+IL_1F6F: stelem 0x0200008F .\x90\x9a
+IL_1F74: dup 
+IL_1F75: ldc.i4.4 
+IL_1F76: ldarg.0 
+IL_1F77: ldfld 0x040001C0 \x89\x89.\x89\x88::\x87\x8f\x8d
+IL_1F7C: ldc.i4 3568
+IL_1F81: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_1F86: newobj 0x060007E0 .\x90\x9a::.ctor
+IL_1F8B: stelem 0x0200008F .\x90\x9a
+IL_1F90: dup 
+IL_1F91: ldc.i4.5 
+IL_1F92: ldarg.0 
+IL_1F93: ldfld 0x040001BF \x89\x89.\x89\x88::\x87\x8f\x8c
+IL_1F98: ldc.i4 3572
+IL_1F9D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_1FA2: newobj 0x060007E0 .\x90\x9a::.ctor
+IL_1FA7: stelem 0x0200008F .\x90\x9a
+IL_1FAC: stloc.s local(0x000C)
+IL_1FAE: br 7932
+IL_1FB3: ldc.i4 424
+IL_1FB8: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_1FBD: brfalse 9204
+IL_1FC2: br 7946
+IL_1FC7: ldc.i4 72
+IL_1FCC: stloc local(0x0048)
+IL_1FD0: br 8345
+IL_1FD5: ldc.i4 90
+IL_1FDA: stloc local(0x0048)
+IL_1FDE: br 8367
+IL_1FE3: ldarg.0 
+IL_1FE4: ldfld 0x040001D5 \x89\x89.\x89\x88::\x87\x90\x89
+IL_1FE9: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_1FEE: brfalse 9204
+IL_1FF3: ldc.i4 74
+IL_1FF8: stloc local(0x0048)
+IL_1FFC: br 8346
+IL_2001: ldarg.0 
+IL_2002: ldfld 0x040001D5 \x89\x89.\x89\x88::\x87\x90\x89
+IL_2007: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_200C: brfalse 9204
+IL_2011: ldloc.s local(0x0004)
+IL_2013: ldloc.3 
+IL_2014: add 
+IL_2015: ldc.r8 2.0
+IL_201E: div 
+IL_201F: stloc.s local(0x0037)
+IL_2021: ldc.i4 71
+IL_2026: stloc local(0x0048)
+IL_202A: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_202F: stloc.s local(0x0038)
+IL_2031: ldloc.s local(0x0038)
+IL_2033: ldloc.0 
+IL_2034: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_2039: ldloc.s local(0x0008)
+IL_203B: ldloc.s local(0x0037)
+IL_203D: call 0x0A000064 System.Math::Cos
+IL_2042: mul 
+IL_2043: add 
+IL_2044: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_2049: ldc.i4 64
+IL_204E: stloc local(0x0048)
+IL_2052: ldloc.s local(0x0038)
+IL_2054: ldloc.0 
+IL_2055: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_205A: ldloc.s local(0x0008)
+IL_205C: ldloc.s local(0x0037)
+IL_205E: call 0x0A000065 System.Math::Sin
+IL_2063: mul 
+IL_2064: add 
+IL_2065: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_206A: ldloc.s local(0x0008)
+IL_206C: ldc.r8 1852.0
+IL_2075: div 
+IL_2076: ldc.i4.1 
+IL_2077: ldc.i4.1 
+IL_2078: call 0x0A0002EE System.Math::Round
+IL_207D: stloc.s local(0x0039)
+IL_207F: ldc.i4 28
+IL_2084: stloc local(0x0048)
+IL_2088: br 8834
+IL_208D: ret 
+IL_208E: ldloc.s local(0x0004)
+IL_2090: ldloc.3 
+IL_2091: add 
+IL_2092: ldc.r8 2.0
+IL_209B: div 
+IL_209C: stloc.s local(0x001B)
+IL_209E: br 8637
+IL_20A3: ldarg.0 
+IL_20A4: ldfld 0x040001D5 \x89\x89.\x89\x88::\x87\x90\x89
+IL_20A9: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_20AE: brfalse 9204
+IL_20B3: ldc.i4 5
+IL_20B8: stloc local(0x0048)
+IL_20BC: ldloc.s local(0x0004)
+IL_20BE: ldloc.3 
+IL_20BF: add 
+IL_20C0: ldc.r8 2.0
+IL_20C9: div 
+IL_20CA: ldc.r8 3.141592653589793
+IL_20D3: add 
+IL_20D4: stloc.s local(0x0045)
+IL_20D6: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_20DB: stloc.s local(0x0046)
+IL_20DD: ldc.i4 20
+IL_20E2: stloc local(0x0048)
+IL_20E6: ldloc.s local(0x0046)
+IL_20E8: ldloc.0 
+IL_20E9: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_20EE: ldloc.s local(0x0008)
+IL_20F0: ldloc.s local(0x0045)
+IL_20F2: call 0x0A000064 System.Math::Cos
+IL_20F7: mul 
+IL_20F8: add 
+IL_20F9: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_20FE: ldloc.s local(0x0046)
+IL_2100: ldloc.0 
+IL_2101: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_2106: ldloc.s local(0x0008)
+IL_2108: ldloc.s local(0x0045)
+IL_210A: call 0x0A000065 System.Math::Sin
+IL_210F: mul 
+IL_2110: add 
+IL_2111: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_2116: ldloc.s local(0x0008)
+IL_2118: ldc.r8 1852.0
+IL_2121: div 
+IL_2122: ldc.i4.1 
+IL_2123: ldc.i4.1 
+IL_2124: call 0x0A0002EE System.Math::Round
+IL_2129: stloc.s local(0x0047)
+IL_212B: newobj 0x0A000071 Autodesk.AutoCAD.DatabaseServices.DBText::.ctor
+IL_2130: dup 
+IL_2131: ldloc.s local(0x000B)
+IL_2133: callvirt 0x0A000072 Autodesk.AutoCAD.DatabaseServices.DBText::set_Height
+IL_2138: dup 
+IL_2139: ldc.i4 1644
+IL_213E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_2143: ldloca.s local(0x0047)
+IL_2145: ldc.i4 1636
+IL_214A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_214F: call 0x0A000073 System.Double::ToString
+IL_2154: ldarg.0 
+IL_2155: ldfld 0x040001D6 \x89\x89.\x89\x88::\x87\x90\x8a
+IL_215A: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_215F: call 0x0A00003C System.String::Concat
+IL_2164: callvirt 0x0A000074 Autodesk.AutoCAD.DatabaseServices.DBText::set_TextString
+IL_2169: dup 
+IL_216A: ldc.i4.1 
+IL_216B: callvirt 0x0A000075 Autodesk.AutoCAD.DatabaseServices.DBText::set_HorizontalMode
+IL_2170: dup 
+IL_2171: ldc.i4.1 
+IL_2172: callvirt 0x0A000076 Autodesk.AutoCAD.DatabaseServices.DBText::set_VerticalMode
+IL_2177: dup 
+IL_2178: ldloc.s local(0x0046)
+IL_217A: call 0x0600012B \x87\x87.\x87\x86::\x8c\x89
+IL_217F: callvirt 0x0A000078 Autodesk.AutoCAD.DatabaseServices.DBText::set_AlignmentPoint
+IL_2184: dup 
+IL_2185: ldloc.s local(0x0045)
+IL_2187: ldc.r8 1.5707963267948966
+IL_2190: sub 
+IL_2191: callvirt 0x0A0000D9 Autodesk.AutoCAD.DatabaseServices.DBText::set_Rotation
+IL_2196: ldloc.s local(0x0005)
+IL_2198: ldstr ''
+IL_219D: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_21A2: pop 
+IL_21A3: ldc.i4 108
+IL_21A8: stloc local(0x0048)
+IL_21AC: br 9204
+IL_21B1: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_21B6: stloc.s local(0x001C)
+IL_21B8: ldloc.s local(0x001C)
+IL_21BA: ldloc.0 
+IL_21BB: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_21C0: ldloc.s local(0x0008)
+IL_21C2: ldloc.s local(0x001B)
+IL_21C4: call 0x0A000064 System.Math::Cos
+IL_21C9: mul 
+IL_21CA: add 
+IL_21CB: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_21D0: ldloc.s local(0x001C)
+IL_21D2: ldloc.0 
+IL_21D3: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_21D8: ldloc.s local(0x0008)
+IL_21DA: ldloc.s local(0x001B)
+IL_21DC: call 0x0A000065 System.Math::Sin
+IL_21E1: mul 
+IL_21E2: add 
+IL_21E3: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_21E8: ldloc.s local(0x0008)
+IL_21EA: ldc.r8 1852.0
+IL_21F3: div 
+IL_21F4: ldc.i4.1 
+IL_21F5: ldc.i4.1 
+IL_21F6: call 0x0A0002EE System.Math::Round
+IL_21FB: stloc.s local(0x001D)
+IL_21FD: newobj 0x0A000071 Autodesk.AutoCAD.DatabaseServices.DBText::.ctor
+IL_2202: dup 
+IL_2203: ldloc.s local(0x000B)
+IL_2205: callvirt 0x0A000072 Autodesk.AutoCAD.DatabaseServices.DBText::set_Height
+IL_220A: dup 
+IL_220B: ldc.i4 1644
+IL_2210: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_2215: ldloca.s local(0x001D)
+IL_2217: ldc.i4 1636
+IL_221C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_2221: call 0x0A000073 System.Double::ToString
+IL_2226: ldarg.0 
+IL_2227: ldfld 0x040001D6 \x89\x89.\x89\x88::\x87\x90\x8a
+IL_222C: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_2231: call 0x0A00003C System.String::Concat
+IL_2236: callvirt 0x0A000074 Autodesk.AutoCAD.DatabaseServices.DBText::set_TextString
+IL_223B: dup 
+IL_223C: ldc.i4.1 
+IL_223D: callvirt 0x0A000075 Autodesk.AutoCAD.DatabaseServices.DBText::set_HorizontalMode
+IL_2242: dup 
+IL_2243: ldc.i4.1 
+IL_2244: callvirt 0x0A000076 Autodesk.AutoCAD.DatabaseServices.DBText::set_VerticalMode
+IL_2249: dup 
+IL_224A: ldloc.s local(0x001C)
+IL_224C: call 0x0600012B \x87\x87.\x87\x86::\x8c\x89
+IL_2251: callvirt 0x0A000078 Autodesk.AutoCAD.DatabaseServices.DBText::set_AlignmentPoint
+IL_2256: dup 
+IL_2257: ldloc.s local(0x001B)
+IL_2259: ldc.r8 1.5707963267948966
+IL_2262: sub 
+IL_2263: callvirt 0x0A0000D9 Autodesk.AutoCAD.DatabaseServices.DBText::set_Rotation
+IL_2268: ldloc.s local(0x0005)
+IL_226A: ldstr ''
+IL_226F: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_2274: pop 
+IL_2275: ret 
+IL_2276: newobj 0x0A000071 Autodesk.AutoCAD.DatabaseServices.DBText::.ctor
+IL_227B: dup 
+IL_227C: ldloc.s local(0x000B)
+IL_227E: callvirt 0x0A000072 Autodesk.AutoCAD.DatabaseServices.DBText::set_Height
+IL_2283: dup 
+IL_2284: ldc.i4 1644
+IL_2289: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_228E: ldloca.s local(0x0039)
+IL_2290: ldc.i4 1636
+IL_2295: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_229A: call 0x0A000073 System.Double::ToString
+IL_229F: ldarg.0 
+IL_22A0: ldfld 0x040001D6 \x89\x89.\x89\x88::\x87\x90\x8a
+IL_22A5: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_22AA: call 0x0A00003C System.String::Concat
+IL_22AF: callvirt 0x0A000074 Autodesk.AutoCAD.DatabaseServices.DBText::set_TextString
+IL_22B4: dup 
+IL_22B5: ldc.i4.1 
+IL_22B6: callvirt 0x0A000075 Autodesk.AutoCAD.DatabaseServices.DBText::set_HorizontalMode
+IL_22BB: dup 
+IL_22BC: ldc.i4.1 
+IL_22BD: callvirt 0x0A000076 Autodesk.AutoCAD.DatabaseServices.DBText::set_VerticalMode
+IL_22C2: dup 
+IL_22C3: ldloc.s local(0x0038)
+IL_22C5: call 0x0600012B \x87\x87.\x87\x86::\x8c\x89
+IL_22CA: callvirt 0x0A000078 Autodesk.AutoCAD.DatabaseServices.DBText::set_AlignmentPoint
+IL_22CF: dup 
+IL_22D0: ldloc.s local(0x0037)
+IL_22D2: ldc.r8 1.5707963267948966
+IL_22DB: sub 
+IL_22DC: callvirt 0x0A0000D9 Autodesk.AutoCAD.DatabaseServices.DBText::set_Rotation
+IL_22E1: ldloc.s local(0x0005)
+IL_22E3: ldstr ''
+IL_22E8: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_22ED: pop 
+IL_22EE: ret 
+IL_22EF: ldarg.0 
+IL_22F0: ldfld 0x040001D5 \x89\x89.\x89\x88::\x87\x90\x89
+IL_22F5: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_22FA: brfalse 9204
+IL_22FF: ldc.i4 83
+IL_2304: stloc local(0x0048)
+IL_2308: ldloc.s local(0x0004)
+IL_230A: ldloc.3 
+IL_230B: add 
+IL_230C: ldc.r8 2.0
+IL_2315: div 
+IL_2316: ldc.r8 3.141592653589793
+IL_231F: add 
+IL_2320: stloc.s local(0x0029)
+IL_2322: newobj 0x06000804 \x8f\x8f.\x8f\x8e::.ctor
+IL_2327: stloc.s local(0x002A)
+IL_2329: ldloc.s local(0x002A)
+IL_232B: ldloc.0 
+IL_232C: callvirt 0x060007FC \x8f\x8f.\x8f\x8e::\x8b\x89\x96
+IL_2331: ldloc.s local(0x0008)
+IL_2333: ldloc.s local(0x0029)
+IL_2335: call 0x0A000064 System.Math::Cos
+IL_233A: mul 
+IL_233B: add 
+IL_233C: callvirt 0x060007FD \x8f\x8f.\x8f\x8e::\x8b\x89\x97
+IL_2341: ldloc.s local(0x002A)
+IL_2343: ldloc.0 
+IL_2344: callvirt 0x060007FE \x8f\x8f.\x8f\x8e::\x8b\x89\x98
+IL_2349: ldloc.s local(0x0008)
+IL_234B: ldloc.s local(0x0029)
+IL_234D: call 0x0A000065 System.Math::Sin
+IL_2352: mul 
+IL_2353: add 
+IL_2354: callvirt 0x060007FF \x8f\x8f.\x8f\x8e::\x8b\x89\x99
+IL_2359: ldloc.s local(0x0008)
+IL_235B: ldc.r8 1852.0
+IL_2364: div 
+IL_2365: ldc.i4.1 
+IL_2366: ldc.i4.1 
+IL_2367: call 0x0A0002EE System.Math::Round
+IL_236C: stloc.s local(0x002B)
+IL_236E: newobj 0x0A000071 Autodesk.AutoCAD.DatabaseServices.DBText::.ctor
+IL_2373: dup 
+IL_2374: ldloc.s local(0x000B)
+IL_2376: callvirt 0x0A000072 Autodesk.AutoCAD.DatabaseServices.DBText::set_Height
+IL_237B: dup 
+IL_237C: ldc.i4 1644
+IL_2381: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_2386: ldloca.s local(0x002B)
+IL_2388: ldc.i4 1636
+IL_238D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_2392: call 0x0A000073 System.Double::ToString
+IL_2397: ldarg.0 
+IL_2398: ldfld 0x040001D6 \x89\x89.\x89\x88::\x87\x90\x8a
+IL_239D: callvirt 0x0A0001EE System.Windows.Forms.Control::get_Text
+IL_23A2: call 0x0A00003C System.String::Concat
+IL_23A7: callvirt 0x0A000074 Autodesk.AutoCAD.DatabaseServices.DBText::set_TextString
+IL_23AC: dup 
+IL_23AD: ldc.i4.1 
+IL_23AE: callvirt 0x0A000075 Autodesk.AutoCAD.DatabaseServices.DBText::set_HorizontalMode
+IL_23B3: dup 
+IL_23B4: ldc.i4.1 
+IL_23B5: callvirt 0x0A000076 Autodesk.AutoCAD.DatabaseServices.DBText::set_VerticalMode
+IL_23BA: dup 
+IL_23BB: ldloc.s local(0x002A)
+IL_23BD: call 0x0600012B \x87\x87.\x87\x86::\x8c\x89
+IL_23C2: callvirt 0x0A000078 Autodesk.AutoCAD.DatabaseServices.DBText::set_AlignmentPoint
+IL_23C7: dup 
+IL_23C8: ldloc.s local(0x0029)
+IL_23CA: ldc.r8 1.5707963267948966
+IL_23D3: sub 
+IL_23D4: callvirt 0x0A0000D9 Autodesk.AutoCAD.DatabaseServices.DBText::set_Rotation
+IL_23D9: ldloc.s local(0x0005)
+IL_23DB: ldstr ''
+IL_23E0: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_23E5: pop 
+IL_23E6: ret 
+IL_23E7: ret 
+IL_23E8: ret 
+

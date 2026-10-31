@@ -1,0 +1,8 @@
+﻿Feature,EntityType,Count,Group,Z handling,Layer,Color,Text,XData,Metadata
+KK early/late,Line,2,none,Z=0,not explicit,not explicit,none,empty/neutral,no WsObject/WsCalcuLine/WsEntityFrame
+Wedge tolerance,Polyline,1,Polyline Group,Z=0,not explicit,not explicit,none,empty/neutral,no semantic schema
+Track guidance,Polyline,0 or 1,same Group,Z=0,not explicit,not explicit,none,empty/neutral,reference line
+DME arcs,Arc,3 when DME checked,separate Group,center S retains S.Z,not explicit,not explicit,none,empty/neutral,r+e/r/r-e
+DME distance label,DBText,1 when DME checked,none,Q.Z unspecified; 0 specified,not explicit,not explicit,D...; Height500,empty/neutral,suffix uppercase
+Blind-track tolerance,Polyline,0 or 2,separate Group,Z=0,not explicit,not explicit,none,empty/neutral,VOR/NDB endpoint angles
+Blind-zone circle,Circle,1 when h>0 and no inbound cancel,none,center S retains S.Z,not explicit,not explicit,none,empty/neutral,h*tan(halfAngle)

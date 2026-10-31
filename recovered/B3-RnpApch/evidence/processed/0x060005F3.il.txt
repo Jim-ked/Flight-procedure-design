@@ -1,0 +1,30 @@
+METHOD 060005F3 \x8c\x98.\x8c\x97::\x8a\x8b\x9b RVA=86C20 file=84E20
+IL_0000: ldarg.1 
+IL_0001: ldc.r8 15.0
+IL_000A: sub 
+IL_000B: ldarg.0 
+IL_000C: ldc.r8 0.0065
+IL_0015: mul 
+IL_0016: add 
+IL_0017: ldc.r8 -0.0065
+IL_0020: stloc.0 
+IL_0021: ldc.r8 288.15
+IL_002A: stloc.1 
+IL_002B: ldloc.0 
+IL_002C: div 
+IL_002D: neg 
+IL_002E: ldc.r8 1.0
+IL_0037: ldloc.0 
+IL_0038: ldarg.2 
+IL_0039: mul 
+IL_003A: ldloc.1 
+IL_003B: ldloc.0 
+IL_003C: ldarg.0 
+IL_003D: mul 
+IL_003E: add 
+IL_003F: div 
+IL_0040: add 
+IL_0041: call 0x0A000384 System.Math::Log
+IL_0046: mul 
+IL_0047: ret 
+

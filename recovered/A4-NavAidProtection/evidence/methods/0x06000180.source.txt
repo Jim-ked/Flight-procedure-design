@@ -1,0 +1,8 @@
+1175: 		public string GetValue(Control P_0)
+1176: 		{
+1177: 			if (!((RadioButton)P_0).Checked)
+1178: 			{
+1179: 				return "False" /* string-offset:1036 */;
+1180: 			}
+1181: 			return "True" /* string-offset:1040 */;
+1182: 		}

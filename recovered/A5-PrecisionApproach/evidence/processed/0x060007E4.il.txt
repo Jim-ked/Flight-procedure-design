@@ -1,0 +1,22 @@
+METHOD 060007E4 \x8f\x8d.\x8f\x8c::.ctor RVA=5FB7 file=41B7
+IL_0000: call 0x060007F6 \x8f\x8d.\x8f\x8c::\x89r
+IL_0005: brfalse.s 27
+IL_0007: ldarg.0 
+IL_0008: call 0x0A00002C System.Object::.ctor
+IL_000D: call 0x060007F7 \x8f\x8d.\x8f\x8c::\x89s
+IL_0012: call 0x060007F6 \x8f\x8d.\x8f\x8c::\x89r
+IL_0017: brfalse.s 36
+IL_0019: pop 
+IL_001A: ldarg.0 
+IL_001B: ldarg.1 
+IL_001C: stfld 0x04000773 \x8f\x8d.\x8f\x8c::\x8b\x88\x9b
+IL_0021: br.s 37
+IL_0023: pop 
+IL_0024: ldarg.0 
+IL_0025: ldarg.2 
+IL_0026: stfld 0x04000774 \x8f\x8d.\x8f\x8c::\x8b\x88\x9c
+IL_002B: ldarg.0 
+IL_002C: ldarg.3 
+IL_002D: stfld 0x04000775 \x8f\x8d.\x8f\x8c::\x8b\x88\x9d
+IL_0032: ret 
+

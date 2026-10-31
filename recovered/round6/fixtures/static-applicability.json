@@ -1,0 +1,12 @@
+{
+  "DH_values": [
+    30,
+    60,
+    120
+  ],
+  "DH_effect": "No factory reader; static only",
+  "LNAV_categories": "A/B/C/D not consumed by LNAV factory",
+  "left_right_turn": "Not implemented: no branch/turn geometry; no synthetic fixture",
+  "APV_SOC": "No DH-HL pipeline; caller-specified length only",
+  "source": "static-tests.json, control-references.csv, direct-calls.csv"
+}

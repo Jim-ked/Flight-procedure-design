@@ -1,0 +1,91 @@
+62560: 			_0089_0098_0088.Text = text;
+62561: 		}
+62562: 
+62563: 		private void _0089_0097_0089(object P_0, EventArgs P_1)
+62564: 		{
+62565: 			//IL_0090: Unknown result type (might be due to invalid IL or missing references)
+62566: 			//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+62567: 			//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
+62568: 			//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
+62569: 			_ = 0;
+62570: 			if (!_0088_009D() || false /* original-file-bool-offset:1096 */)
+62571: 			{
+62572: 				return;
+62573: 			}
+62574: 			DBPoint val = default(DBPoint);
+62575: 			foreach (DataGridViewRow selectedRow in _0089_0097_0093.SelectedRows)
+62576: 			{
+62577: 				_0088_009E();
+62578: 				if (_0088_009D())
+62579: 				{
+62580: 					val = _0089_0097_008C[_0089_0097_0093.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+62581: 				}
+62582: 				do
+62583: 				{
+62584: 					ObjectId val2 = _008B._0089_0087("obst" /* string-offset:2780 */, val.Position);
+62585: 					string obj = "Altitude" /* string-offset:536 */;
+62586: 					Point3d position = val.Position;
+62587: 					_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+62588: 				}
+62589: 				while (_0088_009E());
+62590: 			}
+62591: 		}
+62592: 
+62593: 		protected override void Dispose(bool P_0)
+62594: 		{
+62595: 			_0088_009E();
+62596: 			if (_0088_009D() && (!P_0 || _0089_0097_008E == null))
+62597: 			{
+62598: 				goto IL_001d;
+62599: 			}
+62600: 			goto IL_002b;
+62601: 			IL_002b:
+62602: 			_0089_0097_008E.Dispose();
+62603: 			goto IL_001d;
+62604: 			IL_001d:
+62605: 			base.Dispose(P_0);
+62606: 			if (_0088_009D())
+62607: 			{
+62608: 				return;
+62609: 			}
+62610: 			goto IL_002b;
+62611: 		}
+62612: 
+62613: 		private void _0089_0097_008A()
+62614: 		{
+62615: 			int num = 420;
+62616: 			while (true /* original-file-bool-offset:1100 */)
+62617: 			{
+62618: 				while (true)
+62619: 				{
+62620: 					_0089_0097_008E = new Container();
+62621: 					num = 9;
+62622: 					while (true)
+62623: 					{
+62624: 						ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(_008B_0096));
+62625: 						while (true)
+62626: 						{
+62627: 							_0089_0097_008F = new StatusStrip();
+62628: 							while (true)
+62629: 							{
+62630: 								_0089_0097_0090 = new ToolStripStatusLabel();
+62631: 								_0089_0097_0091 = new Button();
+62632: 								num = 319;
+62633: 								while (true)
+62634: 								{
+62635: 									_0089_0097_0092 = new Button();
+62636: 									num = 139;
+62637: 									while (true)
+62638: 									{
+62639: 										IL_54a8:
+62640: 										_0089_0097_0093 = new DataGridView();
+62641: 										_0089_0097_0094 = new Button();
+62642: 										_0089_0097_0095 = new Button();
+62643: 										_0089_0097_0096 = new Button();
+62644: 										_0089_0097_0097 = new GroupBox();
+62645: 										num = 470;
+62646: 										while (true)
+62647: 										{
+62648: 											IL_546f:
+62649: 											_0089_0097_0098 = new TextBox();
+62650: 											_0089_0097_0099 = new TextBox();

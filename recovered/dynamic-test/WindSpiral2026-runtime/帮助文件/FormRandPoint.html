@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>随机添加高度点 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 辅助功能 / 随机添加高度点</div>
+        <h1>C4.随机添加高度点</h1>
+        <div class="cmd">命令：Y92_RandomPoint</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>辅助功能</h2>
+                <ul>
+                    <li><a href="FormBlockImport.html">C1.导入图标库</a></li>
+                    <li><a href="LayerFactoryForm.html">C2.批量添加图层</a></li>
+                    <li><a href="FormExLine.html">C3.绘制外扩线</a></li>
+                    <li><a href="FormRandPoint.html" class="active">C4.随机添加高度点</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">传统程序 / PBN 程序</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【随机添加高度点】在指定中心点与半径范围内<strong>随机生成带高度的点</strong>（模拟障碍物点），常用于净空评估的测试与演示数据。可设置高度范围、数量与文字高度，并选择是否显示名称、高度。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormRandPoint.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormRandPoint.png" alt="FormRandPoint 界面截图" width="407"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>分区 / 控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>高度范围(m)</td><td>随机点高度的起止范围（默认 0 ~ 900 m）。</td></tr>
+                        <tr><td>文字高度(m)</td><td>点旁标注文字的高度（默认 200 m）。</td></tr>
+                        <tr><td>半径范围(km)</td><td>以拾取中心点为圆心、随机布点的半径（默认 5 km）。</td></tr>
+                        <tr><td>数量(个)</td><td>生成的随机点数量（默认 10 个）。</td></tr>
+                        <tr><td>显示内容 · 名称 / 高度（复选框）</td><td>是否在点旁标注名称、高度值。</td></tr>
+                        <tr><td>CAD（按钮）</td><td>按提示在图面拾取中心点后生成随机点。</td></tr>
+                        <tr><td>取消（按钮）</td><td>关闭窗口。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y92_RandomPoint</code> 打开窗口。</li>
+                    <li>设置高度范围、半径范围与数量，并勾选需要的显示内容（名称 / 高度）。</li>
+                    <li>点击【CAD】，按提示拾取中心点，程序在半径范围内随机布点。</li>
+                </ul>
+                <div class="tip"><strong>提示：</strong>生成的随机点可用于后续净空 / 越障评估窗口的障碍物穿透检查演示。</div>
+            </div>
+            <div class="pager">
+                <a href="FormExLine.html">← 上一篇：C3.绘制外扩线</a>
+                <a href="index.html">返回帮助首页 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

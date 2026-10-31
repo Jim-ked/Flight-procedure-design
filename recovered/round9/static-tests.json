@@ -1,0 +1,155 @@
+{
+  "checks": [
+    {
+      "layer": "event/reachability",
+      "name": "all five event roots reached",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "native SetFocus not stub",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "0x060002F7 reachable",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "0x060002F8 reachable",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "0x060002F9 reachable",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "0x06000087 reachable",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "0x060007ED reachable",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "0x06000113 reachable",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "no A9 PriSec dispatch",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "no A3 Form dispatch",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "no A6 BaseTurn dispatch",
+      "passed": true
+    },
+    {
+      "layer": "event/reachability",
+      "name": "core has no evaluation/grid/obstacle control",
+      "passed": true
+    },
+    {
+      "layer": "CAD writer",
+      "name": "draw supplies literal empty metadata",
+      "passed": true
+    },
+    {
+      "layer": "CAD writer",
+      "name": "writer optional XData gate",
+      "passed": true
+    },
+    {
+      "layer": "CAD writer",
+      "name": "2D zero-bulge writer",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "Load invokes P0F6",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "Closed invokes P0F4",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "return P_0 is TextBox",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "return P_0 is RadioButton",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "return P_0 is CheckBox",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "return ((TextBox)P_0).Text",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "((RadioButton)P_0).Checked = P_1 == \"True\"",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "((CheckBox)P_0).Checked = P_1 == \"True\"",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "no original NavAids config node",
+      "passed": true
+    },
+    {
+      "layer": "serialization",
+      "name": "config does not persist radio labels",
+      "passed": true
+    },
+    {
+      "layer": "cross-module",
+      "name": "0x06000087 exact shared MethodDef",
+      "passed": true
+    },
+    {
+      "layer": "cross-module",
+      "name": "0x060007E7 exact shared MethodDef",
+      "passed": true
+    },
+    {
+      "layer": "cross-module",
+      "name": "0x06000809 exact shared MethodDef",
+      "passed": true
+    },
+    {
+      "layer": "cross-module",
+      "name": "P7ED not assumed shared by A3/A6-base/A9 without incoming",
+      "passed": true
+    },
+    {
+      "layer": "formula",
+      "name": "P2FF degrees conversion retained",
+      "passed": true
+    }
+  ],
+  "no_target_execution": true
+}

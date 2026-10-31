@@ -1,0 +1,16 @@
+﻿Module,Classification,Operation,CodeDefinedScope,ManualScope,Evidence
+A1,point-list concatenation,start/base-circle/spiral列表拼接；标签common tangent,点列已编码；非独立通用solver,双/三起点与可选终点人工,recovered/A1-WindSpiral/final-static-closure.md
+A3→A7,manual repick,KK画出后A7重新拾点,无语义自动接续,KK位置/业务角色由设计者认定,recovered/A3-FixTolerance/final-static-closure.md;recovered/A7-Departure/final-static-closure.md
+A4,line intersection,15°无限线与内外边求交后替换末端,局部交点/端点替换已编码,阶段与相邻程序适用性人工,recovered/A4-NavAidProtection/15-degree-line.md
+A5,line intersection,面/平面交点与IF/FAF/FAP截限轮廓,各模式数学交点/夹限已编码,输入点及相邻段非自动拓扑,recovered/A5-PrecisionApproach/cad-output-map.md;recovered/A5-PrecisionApproach/class-map.md
+A6,Hull,Envelope选择Polyline/Line及模板gift-wrap,选定点集Hull已编码；绑定Envelope非Region Union,选择哪些图元和是否合适仍人工,recovered/A6-Template/shared-geometry.md;recovered/A6-Template/cad-output-map.md
+A6,candidate comparison,P7AF/P7C2两spiral角度；P7BE或自有P463迭代,具体模板成员已编码,不能推广任意保护区共同切线,recovered/A6-Template/shared-geometry.md
+A7,shared vertex,三模式阶段共用顶点与镜像边界,共享点/阶段点列已编码,TP/KK/C与上游区关系人工,recovered/A7-Departure/final-static-closure.md
+A7,line carrier,直线/转弯区边界与全向圆载体,无IntersectWith/Offset/Hull/裁剪/删除重建,图面相接性仍由设计者判断,recovered/A7-Departure/final-static-closure.md
+A8/A9,manual repick,A8 KK重拾；A9数值框架/宽度,不读现有区边界拓扑，不构造保护区,业务区/坐标含义人工指定,recovered/A9-PriSec/final-static-closure.md;recovered/A8-TurnArea/overview.md
+A10,line carrier,O/IF/IAF自建弧扇区/辅助连接,局部几何已编码；无自动FAF/IF直线延续,后续保护区连接人工,recovered/A10-DmeArc/cad-output-map.md
+B1,candidate comparison,角度候选/侧方比较→四条边界列表,业务内候选比较已编码，无CAD实体布尔裁剪,三点/宽度/与外部区相接人工,recovered/B1-FlyBy/final-static-closure.md
+B2,candidate comparison,角度候选/侧方比较→四条边界列表,业务内候选比较已编码，无CAD实体布尔裁剪,三点/宽度/与外部区相接人工,recovered/B2-FlyOverDF/final-static-closure.md
+B3,shared vertex,LNAV直线扩张/复飞共享分段点,可达绘图已编码；APV厂/评价孤立,无左右任意转弯/KK/C自动接续,recovered/B3-RnpApch/overview.md
+B4,line intersection,OAS E/Y/Z与15°线、1852/3704带/副面相接,同轴点线/面交点已编码,不是任意PBN后续转弯,recovered/B4-PbnIls/oas-pbn-connection.md
+B5,Hull,Spiral86/候选子集Hull/TurnEnd后续区,局部候选与包络已编码；无端到端区合并评价,TurnEnd/相邻保护区人工,recovered/B5-PbnDeparture/protection-connections.md

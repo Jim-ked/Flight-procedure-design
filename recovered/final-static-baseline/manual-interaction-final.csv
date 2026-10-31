@@ -1,0 +1,24 @@
+﻿Module,Input,GetPoint/GetEntity/GetSelection,AutomaticallyRecoverable,ActuallyRecoveredAutomatically,ManualJudgementRequired,WhyManual,CalculationConsumer,Evidence
+A1,spiral start/track/third origin/optional turn end,GetPoint,已有程序对象不足；若另有路线数据可另行推导，当前未证,NO,YES third origin and curve connection,仅坐标拾取，无路线对象ID,heading/shifted origin/list assembly,recovered/A1-WindSpiral/final-static-closure.md
+A1,existing state-bearing entity,GetEntity,选中payload可恢复状态；选择与当前程序的关联未编码,STATE RESTORE ONLY,YES selected snapshot,没有自动选择对象或保护区语义匹配,XData第二项→Form/config state,recovered/A1-WindSpiral/final-static-closure.md;recovered/A1-WindSpiral/cad-output-final.csv
+A2,THR/DER/SOC and track direction,GetPoint,本窗无上游入口/路线语义；不能保证自动可恢复,NO,YES reference and bearing,公式数值不含图上身份,line endpoints/WsCalcuLine；取消差异见closure,recovered/A2-BasicCalculation/final-static-closure.md
+A3,facility S/track Q/DME range,GetPoint,若有设施库可推导；当前代码不接库,NO,YES station and direction,无设施对象语义查询,precision wedge/KK/3 DME Arc/overhead,recovered/A3-FixTolerance/final-static-closure.md
+A4,"facility/track S,E",GetPoint,仅两点；无已存路线关联,NO,YES phase/selected segment,缺适用阶段和前后段模型,width expansion/15° endpoint replacement,recovered/round9/closure.md
+A5,THR/runway/FAF-FAP/IF parameters,GetPoint + numeric UI,部分坐标若另有程序数据可推导；本构建未关联,NO,YES reference semantics,状态快照无段间拓扑,runway frame/mode contours,recovered/round8/closure.md
+A5,existing parameter-bearing entity,GetEntity,payload存在时可恢复参数；选择哪条仍人工,PARAMETER RESTORE ONLY,YES entity and snapshot appropriateness,没有自动匹配当前程序/区的键,P318 XData[1]→parameter import,recovered/A5-PrecisionApproach/xdata-schema.md
+A6,template anchors/track,GetPoint,无统一程序锚点来源,NO,YES anchors,模板拥有自己的输入状态,Holding/Base/45/80 construction,recovered/A6-Template/overview.md
+A6,existing Polyline/Line for Envelope,GetSelection,存在几何点，但缺哪些区应合并的业务规则,POINT EXTRACTION/HULL AFTER SELECTION,YES selection and envelope meaning,实体不携带统一区拓扑/主副区角色,selected vertices→Hull/Envelope,recovered/A6-Template/cad-output-map.md
+A7,DER/THR,GetPoint,A2/A3部分几何已有；缺业务关联键，不能保证唯一推导,NO,YES coordinate/object role,不读WsCalcuLine/KK Group语义,runway frame,recovered/A7-Departure/final-static-closure.md
+A7,TP,GetPoint,A2/A3部分几何已有；缺业务关联键，不能保证唯一推导,NO,YES coordinate/object role,不读WsCalcuLine/KK Group语义,distance/height,recovered/A7-Departure/final-static-closure.md
+A7,KK,GetPoint,A2/A3部分几何已有；缺业务关联键，不能保证唯一推导,NO,YES coordinate/object role,不读WsCalcuLine/KK Group语义,early/latest distance,recovered/A7-Departure/final-static-closure.md
+A7,C,GetPoint,A2/A3部分几何已有；缺业务关联键，不能保证唯一推导,NO,YES coordinate/object role,不读WsCalcuLine/KK Group语义,delay/end distance,recovered/A7-Departure/final-static-closure.md
+A8,KK endpoints/Ds,GetPoint,图元坐标可候选提取；无KK语义配对键,NO,YES KK endpoints/Ds reference,不会自动解析上游区,KK local frame and Ds distance,recovered/A8-TurnArea/overview.md
+A9,start/end/width/MOC,numeric UI; GetPoint not asserted,数值已有即可计算；没有可识别保护区实体对象,NUMERIC TRANSFORM ONLY,YES numeric business region,无现有Polyline reader,Normal/IF classification,recovered/A9-PriSec/final-static-closure.md
+A10,O/IF/IAF,GetPoint,A3 DME无业务reader；现有点不保证唯一,NO,YES facility/fixes/connection,自建扇区，不继承A3,Arc/sector/evaluator,recovered/A10-DmeArc/overview.md
+B1,P1/P2/P3 track/waypoint,GetPoint,另有路线对象才可推导；当前无模型,NO,YES which waypoint and directions,P1/P3只提供方向，不带leg长度语义,descriptor/angle/candidates,recovered/B1-FlyBy/final-static-closure.md
+B2,P1/P2/P3 track/waypoint,GetPoint,另有路线对象才可推导；当前无模型,NO,YES which waypoint and directions,P1/P3只提供方向，不带leg长度语义,descriptor/angle/candidates,recovered/B2-FlyOverDF/final-static-closure.md
+B3,runway/FAF/APV parameters,GetPoint + numeric UI,部分可由外部程序数据提供；本构建不自动关联,NO,YES datum/fix/parameters,各窗独立状态,LNAV geometry/APV numerical inputs,recovered/B3-RnpApch/overview.md
+B3,existing state entity,GetEntity,已有payload可读但实体选择需人工,STATE RESTORE ONLY,YES selected snapshot,缺严格RegApp/schema/程序关联验证,P483 XData[1]→control restore,recovered/B3-RnpApch/xdata-schema.md
+B4,runway/OAS parameters or existing entity,GetPoint/GetEntity,可恢复选中payload；不自动识别区角色,STATE RESTORE ONLY,YES snapshot/runway,单纯参数文本不含面身份,P56B XData[1]→old OAS text,recovered/B4-PbnIls/xdata-schema.md
+B5,DER/THR/TP/turn end,GetPoint,现有参数不足以唯一确定TurnEnd及后续区,NO,YES turn end and adjacent area,无全局路线拓扑,Spiral86/Hull/post area,recovered/B5-PbnDeparture/protection-connections.md
+A7/A8/A9/A10/B3/B4/B5,obstacles,SelectAll (not manual GetSelection),YES Model DBPoint filter,YES; B4/B5 first5,YES drawings/point eligibility; no arbitrary shape selection,业务筛选由后续分类器；前5截取不是保护区筛选,parser→ID dictionary→table→Mark/Highlight,recovered/ObstacleData/WsEntityFrame-schema.md;recovered/B4-PbnIls/obstacle-evaluation.md

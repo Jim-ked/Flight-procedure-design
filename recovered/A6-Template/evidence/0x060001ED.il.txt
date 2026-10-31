@@ -1,0 +1,49 @@
+METHOD 060001ED \x88\x92.\x88\x91::.ctor RVA=12430 file=10630
+IL_0000: ldarg.0 
+IL_0001: ldc.r8 4600.0
+IL_000A: stfld 0x04000041 \x88\x92.\x88\x91::\x91\x93
+IL_000F: ldc.i4.1 
+IL_0010: call 0x060001F9 \x88\x92.\x88\x91::\x87\x8a
+IL_0015: brtrue.s 112
+IL_0017: pop 
+IL_0018: ldarg.0 
+IL_0019: ldc.r8 0.017453292519943295
+IL_0022: stfld 0x0400004A \x88\x92.\x88\x91::\x91\x9c
+IL_0027: ldarg.0 
+IL_0028: ldc.r8 0.5235987755982988
+IL_0031: stfld 0x0400004B \x88\x92.\x88\x91::\x91\x9d
+IL_0036: ldarg.0 
+IL_0037: ldc.r8 0.8726646259971648
+IL_0040: stfld 0x0400004C \x88\x92.\x88\x91::\x91\x9e
+IL_0045: ldarg.0 
+IL_0046: ldc.r8 1.5707963267948966
+IL_004F: stfld 0x0400004D \x88\x92.\x88\x91::\x92\x86
+IL_0054: call 0x060001F9 \x88\x92.\x88\x91::\x87\x8a
+IL_0059: brfalse.s 103
+IL_005B: ldarg.0 
+IL_005C: ldc.i4.1 
+IL_005D: stfld 0x0400004E \x88\x92.\x88\x91::\x92\x87
+IL_0062: br.s 113
+IL_0064: pop 
+IL_0065: ldarg.0 
+IL_0066: newobj 0x0A000273 System.Collections.ArrayList::.ctor
+IL_006B: stfld 0x0400006C \x88\x92.\x88\x91::\x93\x8c
+IL_0070: ldarg.0 
+IL_0071: call 0x0A00002C System.Object::.ctor
+IL_0076: ldarg.0 
+IL_0077: ldarg.1 
+IL_0078: stfld 0x0400003B \x88\x92.\x88\x91::\x91\x8d
+IL_007D: ldarg.0 
+IL_007E: ldarg.2 
+IL_007F: ldarg.3 
+IL_0080: ldarg.s argument(0x0004)
+IL_0082: ldarg.s argument(0x0005)
+IL_0084: call 0x060001EE \x88\x92.\x88\x91::\x90\x9e
+IL_0089: ldarg.0 
+IL_008A: ldarg.s argument(0x0004)
+IL_008C: stfld 0x0400004F \x88\x92.\x88\x91::\x92\x88
+IL_0091: ldarg.0 
+IL_0092: ldarg.s argument(0x0006)
+IL_0094: stfld 0x04000041 \x88\x92.\x88\x91::\x91\x93
+IL_0099: ret 
+

@@ -1,0 +1,1711 @@
+86155: 		static bool _008B_008F_009A(int P_0)
+86156: 		{
+86157: 			int num = 138;
+86158: 			if (_0087())
+86159: 			{
+86160: 				byte[] array2 = default(byte[]);
+86161: 				int num3 = default(int);
+86162: 				byte[] array = default(byte[]);
+86163: 				int num2 = default(int);
+86164: 				byte[] array4 = default(byte[]);
+86165: 				byte[] publicKeyToken = default(byte[]);
+86166: 				byte[] rgbKey = default(byte[]);
+86167: 				BinaryReader binaryReader = default(BinaryReader);
+86168: 				byte[] array3 = default(byte[]);
+86169: 				SymmetricAlgorithm symmetricAlgorithm = default(SymmetricAlgorithm);
+86170: 				ICryptoTransform transform = default(ICryptoTransform);
+86171: 				MemoryStream memoryStream = default(MemoryStream);
+86172: 				CryptoStream cryptoStream = default(CryptoStream);
+86173: 				while (true)
+86174: 				{
+86175: 					switch (num)
+86176: 					{
+86177: 					case 378:
+86178: 						array2[11] = 126;
+86179: 						goto case 144;
+86180: 					case 144:
+86181: 						array2[12] = 93;
+86182: 						num = 326;
+86183: 						goto case 326;
+86184: 					case 326:
+86185: 						array2[12] = 112;
+86186: 						goto case 241;
+86187: 					case 241:
+86188: 						num3 = 98;
+86189: 						goto case 106;
+86190: 					case 106:
+86191: 						array2[12] = (byte)num3;
+86192: 						num = 173;
+86193: 						goto case 173;
+86194: 					case 173:
+86195: 						array2[12] = 21;
+86196: 						goto case 228;
+86197: 					case 228:
+86198: 						array2[12] = 102;
+86199: 						goto case 124;
+86200: 					case 124:
+86201: 						array2[12] = 177;
+86202: 						num = 13;
+86203: 						if (!_0088())
+86204: 						{
+86205: 							goto case 13;
+86206: 						}
+86207: 						goto case 102;
+86208: 					case 13:
+86209: 						array2[13] = 196;
+86210: 						num = 104;
+86211: 						goto case 104;
+86212: 					case 104:
+86213: 						num3 = 119;
+86214: 						num = 247;
+86215: 						if (_0087())
+86216: 						{
+86217: 							goto case 247;
+86218: 						}
+86219: 						goto case 278;
+86220: 					case 247:
+86221: 						array2[13] = (byte)num3;
+86222: 						goto case 248;
+86223: 					case 248:
+86224: 						num3 = 123;
+86225: 						num = 324;
+86226: 						goto case 324;
+86227: 					case 324:
+86228: 						array2[13] = (byte)num3;
+86229: 						num = 86;
+86230: 						goto case 86;
+86231: 					case 86:
+86232: 						array2[13] = 104;
+86233: 						goto case 234;
+86234: 					case 234:
+86235: 						array2[13] = 160;
+86236: 						num = 190;
+86237: 						goto case 190;
+86238: 					case 190:
+86239: 						array2[13] = 251;
+86240: 						num = 276;
+86241: 						goto case 276;
+86242: 					case 276:
+86243: 						array2[14] = 183;
+86244: 						goto case 249;
+86245: 					case 249:
+86246: 						num3 = 91;
+86247: 						goto case 263;
+86248: 					case 263:
+86249: 						array2[14] = (byte)num3;
+86250: 						num = 67;
+86251: 						goto case 67;
+86252: 					case 67:
+86253: 						array2[14] = 128;
+86254: 						goto case 126;
+86255: 					case 126:
+86256: 						num3 = 29;
+86257: 						num = 158;
+86258: 						goto case 158;
+86259: 					case 158:
+86260: 						array2[14] = (byte)num3;
+86261: 						num = 76;
+86262: 						goto case 76;
+86263: 					case 76:
+86264: 						array2[15] = 146;
+86265: 						num = 140;
+86266: 						if (_0088())
+86267: 						{
+86268: 							goto case 338;
+86269: 						}
+86270: 						goto case 140;
+86271: 					case 338:
+86272: 						array2[8] = 165;
+86273: 						num = 146;
+86274: 						goto case 146;
+86275: 					case 146:
+86276: 						array2[8] = 168;
+86277: 						num = 294;
+86278: 						goto case 294;
+86279: 					case 294:
+86280: 						num3 = 213;
+86281: 						num = 312;
+86282: 						goto case 312;
+86283: 					case 312:
+86284: 						array2[8] = (byte)num3;
+86285: 						goto case 332;
+86286: 					case 332:
+86287: 						array2[9] = 161;
+86288: 						num = 335;
+86289: 						goto case 335;
+86290: 					case 335:
+86291: 						num3 = 115;
+86292: 						goto case 188;
+86293: 					case 188:
+86294: 						array2[9] = (byte)num3;
+86295: 						num = 80;
+86296: 						goto case 80;
+86297: 					case 80:
+86298: 						num3 = 103;
+86299: 						num = 25;
+86300: 						goto case 25;
+86301: 					case 25:
+86302: 						array2[9] = (byte)num3;
+86303: 						num = 159;
+86304: 						goto case 159;
+86305: 					case 159:
+86306: 						array2[9] = 156;
+86307: 						num = 296;
+86308: 						if (_0088())
+86309: 						{
+86310: 							goto case 44;
+86311: 						}
+86312: 						goto case 296;
+86313: 					case 44:
+86314: 						array[1] = (byte)num2;
+86315: 						num = 194;
+86316: 						goto case 194;
+86317: 					case 194:
+86318: 						num2 = 78;
+86319: 						num = 43;
+86320: 						goto case 43;
+86321: 					case 43:
+86322: 						array[1] = (byte)num2;
+86323: 						goto case 330;
+86324: 					case 330:
+86325: 						num2 = 154;
+86326: 						num = 370;
+86327: 						goto case 370;
+86328: 					case 370:
+86329: 						array[2] = (byte)num2;
+86330: 						num = 58;
+86331: 						goto case 58;
+86332: 					case 58:
+86333: 						num2 = 119;
+86334: 						goto case 368;
+86335: 					case 368:
+86336: 						array[2] = (byte)num2;
+86337: 						num = 55;
+86338: 						goto case 55;
+86339: 					case 55:
+86340: 						array[2] = 155;
+86341: 						goto case 85;
+86342: 					case 85:
+86343: 						num2 = 148;
+86344: 						goto case 167;
+86345: 					case 167:
+86346: 						array[2] = (byte)num2;
+86347: 						num = 171;
+86348: 						goto case 171;
+86349: 					case 140:
+86350: 						num3 = 102;
+86351: 						num = 134;
+86352: 						if (_0088())
+86353: 						{
+86354: 							goto case 375;
+86355: 						}
+86356: 						goto case 134;
+86357: 					case 375:
+86358: 						array[0] = (byte)num2;
+86359: 						goto case 91;
+86360: 					case 91:
+86361: 						array[0] = 158;
+86362: 						goto case 231;
+86363: 					case 231:
+86364: 						num2 = 116;
+86365: 						num = 198;
+86366: 						if (!_0088())
+86367: 						{
+86368: 							goto case 198;
+86369: 						}
+86370: 						goto case 133;
+86371: 					case 198:
+86372: 						array[0] = (byte)num2;
+86373: 						num = 339;
+86374: 						goto case 339;
+86375: 					case 339:
+86376: 						array[1] = 117;
+86377: 						num = 328;
+86378: 						if (_0087())
+86379: 						{
+86380: 							continue;
+86381: 						}
+86382: 						goto case 141;
+86383: 					case 134:
+86384: 						array2[15] = (byte)num3;
+86385: 						goto case 141;
+86386: 					case 141:
+86387: 						num3 = 92;
+86388: 						num = 212;
+86389: 						goto case 212;
+86390: 					case 212:
+86391: 						array2[15] = (byte)num3;
+86392: 						goto case 284;
+86393: 					case 284:
+86394: 						array2[15] = 114;
+86395: 						num = 327;
+86396: 						goto case 327;
+86397: 					case 327:
+86398: 						num3 = 148;
+86399: 						goto case 71;
+86400: 					case 71:
+86401: 						array2[15] = (byte)num3;
+86402: 						num = 262;
+86403: 						goto case 262;
+86404: 					case 262:
+86405: 						array4 = array2;
+86406: 						num = 285;
+86407: 						goto case 285;
+86408: 					case 285:
+86409: 						publicKeyToken = typeof(_0090_009B).Assembly.GetName().GetPublicKeyToken();
+86410: 						num = 109;
+86411: 						goto case 109;
+86412: 					case 109:
+86413: 						if (publicKeyToken != null)
+86414: 						{
+86415: 							goto case 245;
+86416: 						}
+86417: 						goto case 207;
+86418: 					case 245:
+86419: 						if (publicKeyToken.Length > 0)
+86420: 						{
+86421: 							num = 70;
+86422: 							goto case 70;
+86423: 						}
+86424: 						goto case 207;
+86425: 					case 70:
+86426: 						array4[1] = publicKeyToken[0];
+86427: 						num = 92;
+86428: 						if (_0088())
+86429: 						{
+86430: 							goto case 171;
+86431: 						}
+86432: 						goto case 92;
+86433: 					case 171:
+86434: 						array[2] = 2;
+86435: 						num = 46;
+86436: 						goto case 46;
+86437: 					case 46:
+86438: 						num2 = 71;
+86439: 						num = 238;
+86440: 						if (!_0087())
+86441: 						{
+86442: 							goto case 346;
+86443: 						}
+86444: 						goto case 238;
+86445: 					case 19:
+86446: 						array[18] = (byte)num2;
+86447: 						num = 184;
+86448: 						goto case 184;
+86449: 					case 184:
+86450: 						array[18] = 119;
+86451: 						num = 5;
+86452: 						goto case 5;
+86453: 					case 5:
+86454: 						array[19] = 83;
+86455: 						goto case 6;
+86456: 					case 6:
+86457: 						num2 = 87;
+86458: 						num = 206;
+86459: 						if (_0088())
+86460: 						{
+86461: 							goto case 319;
+86462: 						}
+86463: 						goto case 206;
+86464: 					case 319:
+86465: 						num2 = 166;
+86466: 						num = 307;
+86467: 						goto case 307;
+86468: 					case 307:
+86469: 						array[12] = (byte)num2;
+86470: 						num = 128;
+86471: 						goto case 128;
+86472: 					case 128:
+86473: 						array[12] = 95;
+86474: 						goto case 342;
+86475: 					case 342:
+86476: 						num2 = 159;
+86477: 						num = 358;
+86478: 						goto case 358;
+86479: 					case 358:
+86480: 						array[12] = (byte)num2;
+86481: 						num = 79;
+86482: 						goto case 79;
+86483: 					case 79:
+86484: 						array[12] = 210;
+86485: 						num = 84;
+86486: 						goto case 84;
+86487: 					case 84:
+86488: 						array[13] = 112;
+86489: 						num = 367;
+86490: 						goto case 367;
+86491: 					case 367:
+86492: 						num2 = 98;
+86493: 						num = 356;
+86494: 						goto case 356;
+86495: 					case 356:
+86496: 						array[13] = (byte)num2;
+86497: 						num = 115;
+86498: 						if (!_0088())
+86499: 						{
+86500: 							continue;
+86501: 						}
+86502: 						goto case 104;
+86503: 					case 133:
+86504: 						array2[11] = 119;
+86505: 						num = 378;
+86506: 						goto case 378;
+86507: 					case 346:
+86508: 						num2 = 130;
+86509: 						num = 19;
+86510: 						goto case 19;
+86511: 					case 296:
+86512: 						num3 = 101;
+86513: 						goto case 156;
+86514: 					case 156:
+86515: 						array2[9] = (byte)num3;
+86516: 						goto case 355;
+86517: 					case 355:
+86518: 						array2[10] = 199;
+86519: 						num = 266;
+86520: 						goto case 266;
+86521: 					case 266:
+86522: 						array2[10] = 124;
+86523: 						num = 282;
+86524: 						goto case 282;
+86525: 					case 282:
+86526: 						array2[10] = 180;
+86527: 						num = 359;
+86528: 						goto case 359;
+86529: 					case 359:
+86530: 						num3 = 170;
+86531: 						num = 236;
+86532: 						if (!_0088())
+86533: 						{
+86534: 							continue;
+86535: 						}
+86536: 						goto case 145;
+86537: 					case 145:
+86538: 						array[25] = (byte)num2;
+86539: 						goto case 225;
+86540: 					case 225:
+86541: 						array[25] = 65;
+86542: 						goto case 96;
+86543: 					case 96:
+86544: 						array[25] = 153;
+86545: 						goto case 240;
+86546: 					case 240:
+86547: 						num2 = 191;
+86548: 						num = 344;
+86549: 						goto case 344;
+86550: 					case 344:
+86551: 						array[25] = (byte)num2;
+86552: 						num = 36;
+86553: 						goto case 36;
+86554: 					case 36:
+86555: 						num2 = 106;
+86556: 						goto case 270;
+86557: 					case 270:
+86558: 						array[25] = (byte)num2;
+86559: 						goto default;
+86560: 					default:
+86561: 						num2 = 70;
+86562: 						goto case 164;
+86563: 					case 164:
+86564: 						array[25] = (byte)num2;
+86565: 						goto case 38;
+86566: 					case 38:
+86567: 						array[26] = 130;
+86568: 						num = 325;
+86569: 						goto case 325;
+86570: 					case 325:
+86571: 						array[26] = 168;
+86572: 						num = 4;
+86573: 						goto case 4;
+86574: 					case 4:
+86575: 						num2 = 205;
+86576: 						goto case 183;
+86577: 					case 183:
+86578: 						array[26] = (byte)num2;
+86579: 						num = 26;
+86580: 						if (_0087())
+86581: 						{
+86582: 							continue;
+86583: 						}
+86584: 						goto case 298;
+86585: 					case 206:
+86586: 						array[19] = (byte)num2;
+86587: 						goto case 218;
+86588: 					case 218:
+86589: 						array[19] = 155;
+86590: 						num = 352;
+86591: 						goto case 352;
+86592: 					case 352:
+86593: 						num2 = 224;
+86594: 						num = 295;
+86595: 						if (!_0087())
+86596: 						{
+86597: 							goto case 259;
+86598: 						}
+86599: 						goto case 295;
+86600: 					case 259:
+86601: 						array[8] = (byte)num2;
+86602: 						goto case 23;
+86603: 					case 23:
+86604: 						num2 = 234;
+86605: 						num = 321;
+86606: 						goto case 321;
+86607: 					case 321:
+86608: 						array[8] = (byte)num2;
+86609: 						goto case 283;
+86610: 					case 283:
+86611: 						array[9] = 80;
+86612: 						goto case 161;
+86613: 					case 295:
+86614: 						array[19] = (byte)num2;
+86615: 						num = 310;
+86616: 						if (!_0088())
+86617: 						{
+86618: 							continue;
+86619: 						}
+86620: 						goto case 88;
+86621: 					case 238:
+86622: 						array[3] = (byte)num2;
+86623: 						goto case 256;
+86624: 					case 256:
+86625: 						array[3] = 166;
+86626: 						goto case 54;
+86627: 					case 54:
+86628: 						array[3] = 180;
+86629: 						num = 298;
+86630: 						goto case 298;
+86631: 					case 298:
+86632: 						array[4] = 132;
+86633: 						num = 376;
+86634: 						goto case 376;
+86635: 					case 376:
+86636: 						num2 = 97;
+86637: 						num = 239;
+86638: 						goto case 239;
+86639: 					case 239:
+86640: 						array[4] = (byte)num2;
+86641: 						num = 154;
+86642: 						goto case 154;
+86643: 					case 154:
+86644: 						num2 = 168;
+86645: 						num = 185;
+86646: 						goto case 185;
+86647: 					case 185:
+86648: 						array[4] = (byte)num2;
+86649: 						num = 203;
+86650: 						goto case 203;
+86651: 					case 203:
+86652: 						array[5] = 118;
+86653: 						num = 293;
+86654: 						goto case 293;
+86655: 					case 293:
+86656: 						num2 = 102;
+86657: 						num = 337;
+86658: 						goto case 337;
+86659: 					case 337:
+86660: 						array[5] = (byte)num2;
+86661: 						num = 93;
+86662: 						goto case 93;
+86663: 					case 93:
+86664: 						num2 = 121;
+86665: 						goto case 313;
+86666: 					case 313:
+86667: 						array[5] = (byte)num2;
+86668: 						num = 362;
+86669: 						goto case 362;
+86670: 					case 362:
+86671: 						num2 = 103;
+86672: 						num = 3;
+86673: 						goto case 3;
+86674: 					case 3:
+86675: 						array[5] = (byte)num2;
+86676: 						goto case 182;
+86677: 					case 182:
+86678: 						array[5] = 101;
+86679: 						num = 316;
+86680: 						goto case 316;
+86681: 					case 316:
+86682: 						array[5] = 42;
+86683: 						goto case 280;
+86684: 					case 280:
+86685: 						array[6] = 27;
+86686: 						num = 219;
+86687: 						goto case 219;
+86688: 					case 219:
+86689: 						array[6] = 126;
+86690: 						num = 347;
+86691: 						goto case 347;
+86692: 					case 347:
+86693: 						array[6] = 139;
+86694: 						num = 60;
+86695: 						if (!_0088())
+86696: 						{
+86697: 							continue;
+86698: 						}
+86699: 						goto case 29;
+86700: 					case 29:
+86701: 						array2[6] = (byte)num3;
+86702: 						num = 277;
+86703: 						goto case 277;
+86704: 					case 277:
+86705: 						num3 = 88;
+86706: 						num = 102;
+86707: 						goto case 102;
+86708: 					case 102:
+86709: 						array2[6] = (byte)num3;
+86710: 						num = 174;
+86711: 						if (_0088())
+86712: 						{
+86713: 							goto case 272;
+86714: 						}
+86715: 						goto case 174;
+86716: 					case 272:
+86717: 						num2 = 129;
+86718: 						num = 51;
+86719: 						goto case 51;
+86720: 					case 174:
+86721: 						num3 = 99;
+86722: 						goto case 187;
+86723: 					case 187:
+86724: 						array2[6] = (byte)num3;
+86725: 						num = 371;
+86726: 						if (!_0088())
+86727: 						{
+86728: 							goto case 371;
+86729: 						}
+86730: 						goto case 88;
+86731: 					case 371:
+86732: 						num3 = 97;
+86733: 						num = 290;
+86734: 						if (!_0088())
+86735: 						{
+86736: 							continue;
+86737: 						}
+86738: 						goto case 51;
+86739: 					case 51:
+86740: 						array[29] = (byte)num2;
+86741: 						num = 127;
+86742: 						goto case 127;
+86743: 					case 127:
+86744: 						array[29] = 186;
+86745: 						goto case 348;
+86746: 					case 348:
+86747: 						num2 = 134;
+86748: 						num = 11;
+86749: 						if (_0087())
+86750: 						{
+86751: 							goto case 11;
+86752: 						}
+86753: 						goto case 160;
+86754: 					case 11:
+86755: 						array[29] = (byte)num2;
+86756: 						goto case 89;
+86757: 					case 89:
+86758: 						num2 = 64;
+86759: 						num = 271;
+86760: 						goto case 271;
+86761: 					case 271:
+86762: 						array[30] = (byte)num2;
+86763: 						num = 235;
+86764: 						goto case 235;
+86765: 					case 235:
+86766: 						num2 = 128;
+86767: 						num = 72;
+86768: 						if (!_0087())
+86769: 						{
+86770: 							goto case 161;
+86771: 						}
+86772: 						goto case 72;
+86773: 					case 161:
+86774: 						num2 = 112;
+86775: 						num = 233;
+86776: 						goto case 233;
+86777: 					case 233:
+86778: 						array[9] = (byte)num2;
+86779: 						goto case 7;
+86780: 					case 7:
+86781: 						array[9] = 129;
+86782: 						goto case 18;
+86783: 					case 18:
+86784: 						num2 = 168;
+86785: 						goto case 244;
+86786: 					case 244:
+86787: 						array[10] = (byte)num2;
+86788: 						num = 88;
+86789: 						goto case 88;
+86790: 					case 88:
+86791: 						array[10] = 158;
+86792: 						num = 47;
+86793: 						goto case 47;
+86794: 					case 47:
+86795: 						num2 = 234;
+86796: 						num = 17;
+86797: 						goto case 17;
+86798: 					case 17:
+86799: 						array[10] = (byte)num2;
+86800: 						num = 105;
+86801: 						if (_0087())
+86802: 						{
+86803: 							continue;
+86804: 						}
+86805: 						goto case 329;
+86806: 					case 329:
+86807: 						num2 = 102;
+86808: 						goto case 90;
+86809: 					case 90:
+86810: 						array[18] = (byte)num2;
+86811: 						num = 255;
+86812: 						goto case 255;
+86813: 					case 255:
+86814: 						num2 = 160;
+86815: 						num = 349;
+86816: 						goto case 349;
+86817: 					case 72:
+86818: 						array[30] = (byte)num2;
+86819: 						goto case 82;
+86820: 					case 82:
+86821: 						array[30] = 149;
+86822: 						num = 287;
+86823: 						if (_0087())
+86824: 						{
+86825: 							continue;
+86826: 						}
+86827: 						goto case 349;
+86828: 					case 349:
+86829: 						array[18] = (byte)num2;
+86830: 						num = 264;
+86831: 						if (_0087())
+86832: 						{
+86833: 							continue;
+86834: 						}
+86835: 						goto case 246;
+86836: 					case 246:
+86837: 						array2 = new byte[16];
+86838: 						num = 216;
+86839: 						goto case 216;
+86840: 					case 216:
+86841: 						num3 = 96;
+86842: 						num = 41;
+86843: 						goto case 41;
+86844: 					case 41:
+86845: 						array2[0] = (byte)num3;
+86846: 						num = 94;
+86847: 						goto case 94;
+86848: 					case 94:
+86849: 						array2[0] = 168;
+86850: 						num = 107;
+86851: 						goto case 107;
+86852: 					case 107:
+86853: 						num3 = 111;
+86854: 						num = 286;
+86855: 						if (_0087())
+86856: 						{
+86857: 							goto case 286;
+86858: 						}
+86859: 						goto case 306;
+86860: 					case 286:
+86861: 						array2[0] = (byte)num3;
+86862: 						goto case 322;
+86863: 					case 322:
+86864: 						array2[0] = 39;
+86865: 						num = 226;
+86866: 						goto case 226;
+86867: 					case 226:
+86868: 						num3 = 117;
+86869: 						goto case 320;
+86870: 					case 320:
+86871: 						array2[1] = (byte)num3;
+86872: 						num = 9;
+86873: 						goto case 9;
+86874: 					case 9:
+86875: 						num3 = 121;
+86876: 						num = 148;
+86877: 						goto case 148;
+86878: 					case 148:
+86879: 						array2[1] = (byte)num3;
+86880: 						num = 315;
+86881: 						goto case 315;
+86882: 					case 315:
+86883: 						num3 = 132;
+86884: 						goto case 288;
+86885: 					case 288:
+86886: 						array2[1] = (byte)num3;
+86887: 						num = 278;
+86888: 						goto case 278;
+86889: 					case 278:
+86890: 						array2[1] = 101;
+86891: 						goto case 149;
+86892: 					case 149:
+86893: 					case 243:
+86894: 						num3 = 101;
+86895: 						num = 100;
+86896: 						goto case 100;
+86897: 					case 100:
+86898: 						array2[1] = (byte)num3;
+86899: 						goto case 299;
+86900: 					case 299:
+86901: 						num3 = 70;
+86902: 						goto case 22;
+86903: 					case 22:
+86904: 						array2[1] = (byte)num3;
+86905: 						num = 261;
+86906: 						goto case 261;
+86907: 					case 261:
+86908: 						num3 = 166;
+86909: 						goto case 205;
+86910: 					case 205:
+86911: 						array2[2] = (byte)num3;
+86912: 						num = 341;
+86913: 						goto case 341;
+86914: 					case 341:
+86915: 						num3 = 133;
+86916: 						goto case 361;
+86917: 					case 361:
+86918: 						array2[2] = (byte)num3;
+86919: 						num = 61;
+86920: 						goto case 61;
+86921: 					case 61:
+86922: 						num3 = 156;
+86923: 						num = 24;
+86924: 						goto case 24;
+86925: 					case 24:
+86926: 						array2[2] = (byte)num3;
+86927: 						goto case 63;
+86928: 					case 63:
+86929: 						num3 = 95;
+86930: 						num = 28;
+86931: 						goto case 28;
+86932: 					case 28:
+86933: 						array2[2] = (byte)num3;
+86934: 						goto case 12;
+86935: 					case 12:
+86936: 						array2[2] = 166;
+86937: 						goto case 56;
+86938: 					case 56:
+86939: 						array2[2] = 73;
+86940: 						goto case 175;
+86941: 					case 175:
+86942: 						num3 = 94;
+86943: 						num = 333;
+86944: 						goto case 333;
+86945: 					case 333:
+86946: 						array2[3] = (byte)num3;
+86947: 						num = 260;
+86948: 						goto case 260;
+86949: 					case 260:
+86950: 						num3 = 102;
+86951: 						num = 162;
+86952: 						goto case 162;
+86953: 					case 162:
+86954: 						array2[3] = (byte)num3;
+86955: 						num = 201;
+86956: 						goto case 201;
+86957: 					case 201:
+86958: 						num3 = 68;
+86959: 						num = 123;
+86960: 						goto case 123;
+86961: 					case 123:
+86962: 						array2[3] = (byte)num3;
+86963: 						num = 130;
+86964: 						goto case 130;
+86965: 					case 130:
+86966: 						num3 = 102;
+86967: 						goto case 302;
+86968: 					case 302:
+86969: 						array2[3] = (byte)num3;
+86970: 						num = 153;
+86971: 						goto case 153;
+86972: 					case 153:
+86973: 						num3 = 68;
+86974: 						num = 120;
+86975: 						goto case 120;
+86976: 					case 120:
+86977: 						array2[3] = (byte)num3;
+86978: 						num = 209;
+86979: 						goto case 209;
+86980: 					case 209:
+86981: 						num3 = 178;
+86982: 						num = 268;
+86983: 						goto case 268;
+86984: 					case 268:
+86985: 						array2[3] = (byte)num3;
+86986: 						num = 160;
+86987: 						goto case 160;
+86988: 					case 160:
+86989: 						array2[4] = 143;
+86990: 						num = 135;
+86991: 						goto case 135;
+86992: 					case 135:
+86993: 						num3 = 94;
+86994: 						num = 35;
+86995: 						goto case 35;
+86996: 					case 35:
+86997: 						array2[4] = (byte)num3;
+86998: 						num = 229;
+86999: 						goto case 229;
+87000: 					case 229:
+87001: 						num3 = 100;
+87002: 						num = 289;
+87003: 						goto case 289;
+87004: 					case 289:
+87005: 						array2[4] = (byte)num3;
+87006: 						num = 110;
+87007: 						goto case 110;
+87008: 					case 110:
+87009: 						num3 = 227;
+87010: 						goto case 118;
+87011: 					case 118:
+87012: 						array2[4] = (byte)num3;
+87013: 						num = 303;
+87014: 						if (!_0088())
+87015: 						{
+87016: 							continue;
+87017: 						}
+87018: 						goto case 306;
+87019: 					case 306:
+87020: 						array[16] = (byte)num2;
+87021: 						num = 112;
+87022: 						goto case 112;
+87023: 					case 34:
+87024: 						array[16] = (byte)num2;
+87025: 						num = 372;
+87026: 						goto case 372;
+87027: 					case 372:
+87028: 						num2 = 103;
+87029: 						num = 369;
+87030: 						goto case 369;
+87031: 					case 369:
+87032: 						array[16] = (byte)num2;
+87033: 						num = 364;
+87034: 						goto case 364;
+87035: 					case 364:
+87036: 						array[16] = 148;
+87037: 						num = 165;
+87038: 						goto case 165;
+87039: 					case 165:
+87040: 						num2 = 135;
+87041: 						num = 301;
+87042: 						goto case 301;
+87043: 					case 301:
+87044: 						array[16] = (byte)num2;
+87045: 						num = 308;
+87046: 						goto case 308;
+87047: 					case 308:
+87048: 						array[17] = 188;
+87049: 						num = 208;
+87050: 						goto case 208;
+87051: 					case 208:
+87052: 						num2 = 192;
+87053: 						num = 33;
+87054: 						goto case 33;
+87055: 					case 33:
+87056: 						array[17] = (byte)num2;
+87057: 						goto case 217;
+87058: 					case 217:
+87059: 						array[17] = 127;
+87060: 						num = 211;
+87061: 						if (!_0088())
+87062: 						{
+87063: 							continue;
+87064: 						}
+87065: 						goto case 112;
+87066: 					case 112:
+87067: 						num2 = 128;
+87068: 						num = 34;
+87069: 						goto case 34;
+87070: 					case 377:
+87071: 						num2 = 81;
+87072: 						num = 191;
+87073: 						goto case 191;
+87074: 					case 191:
+87075: 						array[24] = (byte)num2;
+87076: 						num = 273;
+87077: 						goto case 273;
+87078: 					case 273:
+87079: 						array[24] = 90;
+87080: 						num = 53;
+87081: 						if (!_0088())
+87082: 						{
+87083: 							continue;
+87084: 						}
+87085: 						goto case 60;
+87086: 					case 60:
+87087: 						array[6] = 114;
+87088: 						goto case 197;
+87089: 					case 197:
+87090: 						array[6] = 98;
+87091: 						num = 143;
+87092: 						goto case 143;
+87093: 					case 143:
+87094: 						num2 = 156;
+87095: 						num = 0;
+87096: 						goto case 0;
+87097: 					case 0:
+87098: 						array[7] = (byte)num2;
+87099: 						num = 108;
+87100: 						if (_0087())
+87101: 						{
+87102: 							continue;
+87103: 						}
+87104: 						goto case 346;
+87105: 					case 374:
+87106: 						array[14] = 190;
+87107: 						goto case 181;
+87108: 					case 181:
+87109: 						array[14] = 106;
+87110: 						num = 179;
+87111: 						goto case 179;
+87112: 					case 179:
+87113: 						array[14] = 201;
+87114: 						goto case 186;
+87115: 					case 186:
+87116: 						array[15] = 43;
+87117: 						num = 42;
+87118: 						goto case 42;
+87119: 					case 42:
+87120: 						array[15] = 160;
+87121: 						num = 69;
+87122: 						goto case 69;
+87123: 					case 69:
+87124: 						num2 = 51;
+87125: 						num = 75;
+87126: 						goto case 75;
+87127: 					case 75:
+87128: 						array[15] = (byte)num2;
+87129: 						num = 314;
+87130: 						goto case 314;
+87131: 					case 314:
+87132: 						num2 = 129;
+87133: 						num = 125;
+87134: 						goto case 125;
+87135: 					case 125:
+87136: 						array[16] = (byte)num2;
+87137: 						num = 220;
+87138: 						goto case 220;
+87139: 					case 220:
+87140: 						num2 = 91;
+87141: 						goto case 306;
+87142: 					case 373:
+87143: 						array[23] = (byte)num2;
+87144: 						num = 377;
+87145: 						goto case 377;
+87146: 					case 365:
+87147: 						array[10] = (byte)num2;
+87148: 						num = 65;
+87149: 						goto case 65;
+87150: 					case 65:
+87151: 						num2 = 122;
+87152: 						num = 350;
+87153: 						goto case 350;
+87154: 					case 350:
+87155: 						array[10] = (byte)num2;
+87156: 						goto case 200;
+87157: 					case 200:
+87158: 						num2 = 172;
+87159: 						num = 166;
+87160: 						if (!_0088())
+87161: 						{
+87162: 							continue;
+87163: 						}
+87164: 						goto case 158;
+87165: 					case 363:
+87166: 						array[7] = (byte)num2;
+87167: 						num = 16;
+87168: 						goto case 16;
+87169: 					case 16:
+87170: 						array[8] = 143;
+87171: 						goto case 68;
+87172: 					case 68:
+87173: 						num2 = 93;
+87174: 						goto case 15;
+87175: 					case 15:
+87176: 						array[8] = (byte)num2;
+87177: 						num = 292;
+87178: 						goto case 292;
+87179: 					case 292:
+87180: 						num2 = 100;
+87181: 						num = 297;
+87182: 						if (_0088())
+87183: 						{
+87184: 							goto case 101;
+87185: 						}
+87186: 						goto case 297;
+87187: 					case 101:
+87188: 						num2 = 116;
+87189: 						num = 204;
+87190: 						goto case 204;
+87191: 					case 204:
+87192: 						array[31] = (byte)num2;
+87193: 						_0087();
+87194: 						if (!_0088())
+87195: 						{
+87196: 							num = 291;
+87197: 							goto case 222;
+87198: 						}
+87199: 						num = 149;
+87200: 						goto case 149;
+87201: 					case 222:
+87202: 					case 291:
+87203: 						array[31] = 108;
+87204: 						num = 252;
+87205: 						goto case 252;
+87206: 					case 252:
+87207: 						array[31] = 171;
+87208: 						num = 214;
+87209: 						goto case 214;
+87210: 					case 214:
+87211: 						num2 = 83;
+87212: 						num = 62;
+87213: 						if (!_0087())
+87214: 						{
+87215: 							goto case 220;
+87216: 						}
+87217: 						goto case 62;
+87218: 					case 62:
+87219: 						array[31] = (byte)num2;
+87220: 						goto case 40;
+87221: 					case 40:
+87222: 						num2 = 180;
+87223: 						goto case 237;
+87224: 					case 237:
+87225: 						array[31] = (byte)num2;
+87226: 						num = 95;
+87227: 						goto case 95;
+87228: 					case 95:
+87229: 						rgbKey = array;
+87230: 						num = 246;
+87231: 						goto case 246;
+87232: 					case 297:
+87233: 						array[8] = (byte)num2;
+87234: 						num = 250;
+87235: 						goto case 250;
+87236: 					case 250:
+87237: 						num2 = 96;
+87238: 						num = 221;
+87239: 						if (_0087())
+87240: 						{
+87241: 							continue;
+87242: 						}
+87243: 						goto case 370;
+87244: 					case 360:
+87245: 						num2 = 192;
+87246: 						goto case 259;
+87247: 					case 357:
+87248: 						array2[5] = (byte)num3;
+87249: 						num = 242;
+87250: 						goto case 242;
+87251: 					case 242:
+87252: 						array2[5] = 118;
+87253: 						num = 147;
+87254: 						if (_0087())
+87255: 						{
+87256: 							continue;
+87257: 						}
+87258: 						goto case 37;
+87259: 					case 37:
+87260: 						array[21] = 105;
+87261: 						num = 119;
+87262: 						if (!_0088())
+87263: 						{
+87264: 							continue;
+87265: 						}
+87266: 						goto case 215;
+87267: 					case 215:
+87268: 						array[20] = (byte)num2;
+87269: 						num = 37;
+87270: 						goto case 37;
+87271: 					case 354:
+87272: 						array[31] = (byte)num2;
+87273: 						goto case 101;
+87274: 					case 353:
+87275: 						num2 = 128;
+87276: 						num = 155;
+87277: 						goto case 155;
+87278: 					case 155:
+87279: 						array[23] = (byte)num2;
+87280: 						num = 331;
+87281: 						goto case 331;
+87282: 					case 331:
+87283: 						num2 = 137;
+87284: 						goto case 48;
+87285: 					case 48:
+87286: 						array[23] = (byte)num2;
+87287: 						num = 281;
+87288: 						goto case 281;
+87289: 					case 281:
+87290: 						num2 = 148;
+87291: 						goto case 78;
+87292: 					case 78:
+87293: 						array[23] = (byte)num2;
+87294: 						num = 210;
+87295: 						goto case 210;
+87296: 					case 210:
+87297: 						array[23] = 116;
+87298: 						num = 251;
+87299: 						if (_0088())
+87300: 						{
+87301: 							goto case 169;
+87302: 						}
+87303: 						goto case 251;
+87304: 					case 169:
+87305: 						array2[8] = 162;
+87306: 						num = 338;
+87307: 						goto case 338;
+87308: 					case 251:
+87309: 						num2 = 235;
+87310: 						goto case 373;
+87311: 					case 345:
+87312: 						array[22] = 88;
+87313: 						num = 77;
+87314: 						goto case 77;
+87315: 					case 77:
+87316: 						num2 = 84;
+87317: 						num = 122;
+87318: 						if (_0087())
+87319: 						{
+87320: 							continue;
+87321: 						}
+87322: 						goto case 156;
+87323: 					case 340:
+87324: 						array[27] = (byte)num2;
+87325: 						num = 139;
+87326: 						goto case 139;
+87327: 					case 139:
+87328: 						array[27] = 119;
+87329: 						num = 142;
+87330: 						goto case 142;
+87331: 					case 142:
+87332: 						num2 = 45;
+87333: 						num = 32;
+87334: 						if (_0087())
+87335: 						{
+87336: 							continue;
+87337: 						}
+87338: 						goto case 204;
+87339: 					case 328:
+87340: 						num2 = 121;
+87341: 						num = 232;
+87342: 						goto case 232;
+87343: 					case 232:
+87344: 						array[1] = (byte)num2;
+87345: 						num = 31;
+87346: 						goto case 31;
+87347: 					case 31:
+87348: 						num2 = 132;
+87349: 						num = 267;
+87350: 						goto case 267;
+87351: 					case 267:
+87352: 						array[1] = (byte)num2;
+87353: 						num = 97;
+87354: 						goto case 97;
+87355: 					case 97:
+87356: 						num2 = 151;
+87357: 						num = 44;
+87358: 						goto case 44;
+87359: 					case 323:
+87360: 						array[20] = 84;
+87361: 						num = 170;
+87362: 						goto case 170;
+87363: 					case 170:
+87364: 						num2 = 163;
+87365: 						goto case 215;
+87366: 					case 318:
+87367: 						array = new byte[32];
+87368: 						num = 52;
+87369: 						if (!_0087())
+87370: 						{
+87371: 							goto case 344;
+87372: 						}
+87373: 						goto case 52;
+87374: 					case 52:
+87375: 						num2 = 102;
+87376: 						goto case 375;
+87377: 					case 317:
+87378: 						array[24] = 154;
+87379: 						num = 121;
+87380: 						goto case 121;
+87381: 					case 121:
+87382: 						num2 = 153;
+87383: 						num = 145;
+87384: 						goto case 145;
+87385: 					case 311:
+87386: 						array[12] = (byte)num2;
+87387: 						num = 319;
+87388: 						if (_0087())
+87389: 						{
+87390: 							goto case 319;
+87391: 						}
+87392: 						goto case 118;
+87393: 					case 310:
+87394: 						array[20] = 103;
+87395: 						num = 202;
+87396: 						goto case 202;
+87397: 					case 202:
+87398: 						num2 = 211;
+87399: 						goto case 300;
+87400: 					case 300:
+87401: 						array[20] = (byte)num2;
+87402: 						num = 323;
+87403: 						if (!_0088())
+87404: 						{
+87405: 							continue;
+87406: 						}
+87407: 						goto case 22;
+87408: 					case 305:
+87409: 						num2 = 135;
+87410: 						num = 223;
+87411: 						if (!_0088())
+87412: 						{
+87413: 							continue;
+87414: 						}
+87415: 						goto case 123;
+87416: 					case 304:
+87417: 						array[11] = 153;
+87418: 						num = 192;
+87419: 						goto case 192;
+87420: 					case 192:
+87421: 						array[11] = 118;
+87422: 						goto case 114;
+87423: 					case 114:
+87424: 						array[11] = 137;
+87425: 						num = 14;
+87426: 						if (_0087())
+87427: 						{
+87428: 							continue;
+87429: 						}
+87430: 						goto case 93;
+87431: 					case 303:
+87432: 						num3 = 139;
+87433: 						num = 163;
+87434: 						if (_0087())
+87435: 						{
+87436: 							continue;
+87437: 						}
+87438: 						goto case 46;
+87439: 					case 290:
+87440: 						array2[6] = (byte)num3;
+87441: 						num = 57;
+87442: 						goto case 57;
+87443: 					case 57:
+87444: 						array2[6] = 203;
+87445: 						goto case 275;
+87446: 					case 275:
+87447: 						num3 = 161;
+87448: 						num = 59;
+87449: 						goto case 59;
+87450: 					case 59:
+87451: 						array2[7] = (byte)num3;
+87452: 						num = 111;
+87453: 						goto case 111;
+87454: 					case 111:
+87455: 						array2[7] = 153;
+87456: 						num = 27;
+87457: 						if (!_0088())
+87458: 						{
+87459: 							continue;
+87460: 						}
+87461: 						goto case 20;
+87462: 					case 20:
+87463: 						array[22] = (byte)num2;
+87464: 						num = 345;
+87465: 						goto case 345;
+87466: 					case 287:
+87467: 						num2 = 158;
+87468: 						num = 354;
+87469: 						goto case 354;
+87470: 					case 279:
+87471: 						array2[7] = (byte)num3;
+87472: 						num = 169;
+87473: 						goto case 169;
+87474: 					case 274:
+87475: 						array[18] = (byte)num2;
+87476: 						num = 178;
+87477: 						goto case 178;
+87478: 					case 178:
+87479: 						num2 = 120;
+87480: 						num = 254;
+87481: 						goto case 254;
+87482: 					case 254:
+87483: 						array[18] = (byte)num2;
+87484: 						num = 346;
+87485: 						goto case 346;
+87486: 					case 269:
+87487: 						array[28] = 142;
+87488: 						goto case 8;
+87489: 					case 8:
+87490: 						num2 = 130;
+87491: 						num = 64;
+87492: 						if (!_0087())
+87493: 						{
+87494: 							goto case 263;
+87495: 						}
+87496: 						goto case 64;
+87497: 					case 64:
+87498: 						array[28] = (byte)num2;
+87499: 						num = 66;
+87500: 						goto case 66;
+87501: 					case 66:
+87502: 						array[28] = 121;
+87503: 						num = 272;
+87504: 						goto case 272;
+87505: 					case 265:
+87506: 						array[21] = 103;
+87507: 						num = 131;
+87508: 						goto case 131;
+87509: 					case 131:
+87510: 						num2 = 49;
+87511: 						num = 81;
+87512: 						goto case 81;
+87513: 					case 81:
+87514: 						array[21] = (byte)num2;
+87515: 						goto case 21;
+87516: 					case 21:
+87517: 						num2 = 16;
+87518: 						num = 136;
+87519: 						goto case 136;
+87520: 					case 136:
+87521: 						array[22] = (byte)num2;
+87522: 						goto case 196;
+87523: 					case 196:
+87524: 						num2 = 154;
+87525: 						goto case 20;
+87526: 					case 264:
+87527: 						num2 = 150;
+87528: 						goto case 274;
+87529: 					case 258:
+87530: 						num2 = 94;
+87531: 						num = 195;
+87532: 						if (!_0088())
+87533: 						{
+87534: 							continue;
+87535: 						}
+87536: 						goto case 29;
+87537: 					case 257:
+87538: 						num2 = 85;
+87539: 						num = 230;
+87540: 						goto case 230;
+87541: 					case 230:
+87542: 						array[7] = (byte)num2;
+87543: 						num = 172;
+87544: 						if (_0087())
+87545: 						{
+87546: 							continue;
+87547: 						}
+87548: 						goto case 206;
+87549: 					case 253:
+87550: 						num3 = 71;
+87551: 						num = 45;
+87552: 						goto case 45;
+87553: 					case 45:
+87554: 						array2[11] = (byte)num3;
+87555: 						num = 133;
+87556: 						goto case 133;
+87557: 					case 236:
+87558: 						array2[10] = (byte)num3;
+87559: 						num = 253;
+87560: 						goto case 253;
+87561: 					case 227:
+87562: 						array[11] = 90;
+87563: 						goto case 49;
+87564: 					case 49:
+87565: 						num2 = 145;
+87566: 						goto case 224;
+87567: 					case 224:
+87568: 						array[11] = (byte)num2;
+87569: 						goto case 199;
+87570: 					case 199:
+87571: 						num2 = 148;
+87572: 						num = 150;
+87573: 						goto case 150;
+87574: 					case 150:
+87575: 						array[11] = (byte)num2;
+87576: 						num = 304;
+87577: 						goto case 304;
+87578: 					case 223:
+87579: 						array[28] = (byte)num2;
+87580: 						num = 269;
+87581: 						if (_0088())
+87582: 						{
+87583: 							goto case 29;
+87584: 						}
+87585: 						goto case 269;
+87586: 					case 221:
+87587: 						array[8] = (byte)num2;
+87588: 						num = 360;
+87589: 						if (!_0088())
+87590: 						{
+87591: 							goto case 360;
+87592: 						}
+87593: 						goto case 343;
+87594: 					case 211:
+87595: 						array[17] = 204;
+87596: 						goto case 193;
+87597: 					case 193:
+87598: 						array[17] = 234;
+87599: 						goto case 329;
+87600: 					case 195:
+87601: 						array[14] = (byte)num2;
+87602: 						num = 177;
+87603: 						goto case 177;
+87604: 					case 177:
+87605: 						array[14] = 102;
+87606: 						num = 180;
+87607: 						goto case 180;
+87608: 					case 180:
+87609: 						array[14] = 94;
+87610: 						num = 374;
+87611: 						goto case 374;
+87612: 					case 189:
+87613: 						binaryReader = new BinaryReader(typeof(_0090_009B).Assembly.GetManifestResourceStream("f40ad091-f861-47e8-92dd-16688a8bb9a5"));
+87614: 						num = 116;
+87615: 						goto case 116;
+87616: 					case 116:
+87617: 						binaryReader.BaseStream.Position = 0L;
+87618: 						num = 152;
+87619: 						goto case 152;
+87620: 					case 152:
+87621: 						array3 = binaryReader.ReadBytes((int)binaryReader.BaseStream.Length);
+87622: 						num = 318;
+87623: 						if (_0087())
+87624: 						{
+87625: 							continue;
+87626: 						}
+87627: 						goto case 215;
+87628: 					case 176:
+87629: 						num3 = 56;
+87630: 						num = 132;
+87631: 						goto case 132;
+87632: 					case 132:
+87633: 						array2[5] = (byte)num3;
+87634: 						num = 39;
+87635: 						if (_0088())
+87636: 						{
+87637: 							goto case 317;
+87638: 						}
+87639: 						goto case 39;
+87640: 					case 39:
+87641: 						array2[6] = 132;
+87642: 						goto case 2;
+87643: 					case 2:
+87644: 						num3 = 135;
+87645: 						goto case 29;
+87646: 					case 172:
+87647: 						num2 = 183;
+87648: 						num = 363;
+87649: 						if (_0087())
+87650: 						{
+87651: 							goto case 363;
+87652: 						}
+87653: 						goto case 304;
+87654: 					case 166:
+87655: 						array[10] = (byte)num2;
+87656: 						num = 227;
+87657: 						goto case 227;
+87658: 					case 163:
+87659: 						array2[5] = (byte)num3;
+87660: 						num = 103;
+87661: 						goto case 103;
+87662: 					case 103:
+87663: 						num3 = 114;
+87664: 						num = 357;
+87665: 						goto case 357;
+87666: 					case 157:
+87667: 						array[26] = (byte)num2;
+87668: 						num = 1;
+87669: 						goto case 1;
+87670: 					case 1:
+87671: 						num2 = 130;
+87672: 						goto case 340;
+87673: 					case 151:
+87674: 						array[24] = (byte)num2;
+87675: 						goto case 317;
+87676: 					case 147:
+87677: 						num3 = 165;
+87678: 						num = 99;
+87679: 						goto case 99;
+87680: 					case 99:
+87681: 						array2[5] = (byte)num3;
+87682: 						num = 176;
+87683: 						goto case 176;
+87684: 					case 138:
+87685: 						if (_008B_0091_0088.Length != 0)
+87686: 						{
+87687: 							break;
+87688: 						}
+87689: 						goto case 189;
+87690: 					case 122:
+87691: 						array[23] = (byte)num2;
+87692: 						num = 353;
+87693: 						if (!_0088())
+87694: 						{
+87695: 							continue;
+87696: 						}
+87697: 						goto case 111;
+87698: 					case 119:
+87699: 						array[21] = 133;
+87700: 						num = 265;
+87701: 						if (!_0088())
+87702: 						{
+87703: 							continue;
+87704: 						}
+87705: 						goto case 47;
+87706: 					case 115:
+87707: 						array[13] = 184;
+87708: 						goto case 258;
+87709: 					case 108:
+87710: 						array[7] = 121;
+87711: 						num = 257;
+87712: 						goto case 257;
+87713: 					case 105:
+87714: 						num2 = 107;
+87715: 						num = 365;
+87716: 						goto case 365;
+87717: 					case 53:
+87718: 						num2 = 102;
+87719: 						num = 151;
+87720: 						goto case 151;
+87721: 					case 32:
+87722: 						array[27] = (byte)num2;
+87723: 						goto case 305;
+87724: 					case 27:
+87725: 						num3 = 27;
+87726: 						num = 279;
+87727: 						goto case 279;
+87728: 					case 26:
+87729: 						num2 = 4;
+87730: 						num = 157;
+87731: 						goto case 157;
+87732: 					case 14:
+87733: 						num2 = 133;
+87734: 						goto case 311;
+87735: 					case 92:
+87736: 						array4[3] = publicKeyToken[1];
+87737: 						goto case 83;
+87738: 					case 83:
+87739: 						array4[5] = publicKeyToken[2];
+87740: 						goto case 87;
+87741: 					case 87:
+87742: 						array4[7] = publicKeyToken[3];
+87743: 						goto case 309;
+87744: 					case 309:
+87745: 						array4[9] = publicKeyToken[4];
+87746: 						num = 343;
+87747: 						goto case 343;
+87748: 					case 343:
+87749: 						array4[11] = publicKeyToken[5];
+87750: 						num = 73;
+87751: 						goto case 73;
+87752: 					case 73:
+87753: 						array4[13] = publicKeyToken[6];
+87754: 						num = 334;
+87755: 						goto case 334;
+87756: 					case 334:
+87757: 						array4[15] = publicKeyToken[7];
+87758: 						num = 207;
+87759: 						goto case 207;
+87760: 					case 207:
+87761: 						symmetricAlgorithm = _008B_008F_0098();
+87762: 						num = 10;
+87763: 						goto case 10;
+87764: 					case 10:
+87765: 						symmetricAlgorithm.Mode = CipherMode.CBC;
+87766: 						num = 168;
+87767: 						goto case 168;
+87768: 					case 168:
+87769: 						transform = symmetricAlgorithm.CreateDecryptor(rgbKey, array4);
+87770: 						num = 129;
+87771: 						goto case 129;
+87772: 					case 129:
+87773: 						memoryStream = new MemoryStream();
+87774: 						num = 366;
+87775: 						goto case 366;
+87776: 					case 366:
+87777: 						cryptoStream = new CryptoStream(memoryStream, transform, CryptoStreamMode.Write);
+87778: 						num = 213;
+87779: 						goto case 213;
+87780: 					case 213:
+87781: 						cryptoStream.Write(array3, 0, array3.Length);
+87782: 						goto case 30;
+87783: 					case 30:
+87784: 						cryptoStream.FlushFinalBlock();
+87785: 						goto case 137;
+87786: 					case 137:
+87787: 						_008B_0091_0088 = memoryStream.ToArray();
+87788: 						num = 74;
+87789: 						goto case 74;
+87790: 					case 74:
+87791: 						memoryStream.Close();
+87792: 						goto case 117;
+87793: 					case 117:
+87794: 						cryptoStream.Close();
+87795: 						num = 98;
+87796: 						goto case 98;
+87797: 					case 98:
+87798: 						binaryReader.Close();
+87799: 						num = 50;
+87800: 						break;
+87801: 					case 50:
+87802: 						break;
+87803: 					case 336:
+87804: 						goto IL_1bac;
+87805: 					case 351:
+87806: 						goto IL_1bcf;
+87807: 					case 379:
+87808: 						goto IL_1bd8;
+87809: 					}
+87810: 					break;
+87811: 				}
+87812: 			}
+87813: 			if (_008B_0091_0087.Length == 0)
+87814: 			{
+87815: 				num = 336;
+87816: 				goto IL_1bac;
+87817: 			}
+87818: 			goto IL_1bcf;
+87819: 			IL_1bcf:
+87820: 			int num4 = 0;
+87821: 			num = 379;
+87822: 			goto IL_1bd8;
+87823: 			IL_1bd8:
+87824: 			try
+87825: 			{
+87826: 				byte[] array5 = new byte[4]
+87827: 				{
+87828: 					_008B_0091_0088[P_0],
+87829: 					0,
+87830: 					0,
+87831: 					0
+87832: 				};
+87833: 				_0088();
+87834: 				if (_0087())
+87835: 				{
+87836: 					array5[1] = _008B_0091_0088[P_0 + 1];
+87837: 					array5[2] = _008B_0091_0088[P_0 + 2];
+87838: 				}
+87839: 				array5[3] = _008B_0091_0088[P_0 + 3];
+87840: 				num4 = BitConverter.ToInt32(array5, 0);
+87841: 			}
+87842: 			catch
+87843: 			{
+87844: 			}
+87845: 			try
+87846: 			{
+87847: 				if (_008B_0091_0087[num4] == 128)
+87848: 				{
+87849: 					_ = 0;
+87850: 					if (_0087())
+87851: 					{
+87852: 						return true;
+87853: 					}
+87854: 					bool result = default(bool);
+87855: 					return result;
+87856: 				}
+87857: 			}
+87858: 			catch
+87859: 			{
+87860: 			}
+87861: 			return false;
+87862: 			IL_1bac:
+87863: 			_008B_0091_0087 = _008B_0090_008E(_008B_0090_0089(typeof(_0090_009B).Assembly).ToString());
+87864: 			goto IL_1bcf;
+87865: 		}

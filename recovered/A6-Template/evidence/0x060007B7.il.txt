@@ -1,0 +1,73 @@
+METHOD 060007B7 \x8f\x89.\x8f\x88::.ctor RVA=90A88 file=8EC88
+IL_0000: ldc.i4 9
+IL_0005: stloc local(0x0000)
+IL_0009: call 0x060007C6 \x8f\x89.\x8f\x88::\x89n
+IL_000E: brfalse 285
+IL_0013: br.s 152
+IL_0015: ldarg.0 
+IL_0016: ldc.r8 0.017453292519943295
+IL_001F: stfld 0x0400076F \x8f\x89.\x8f\x88::\x8b\x87\x8f
+IL_0024: ldc.i4 6
+IL_0029: stloc local(0x0000)
+IL_002D: ldarg.0 
+IL_002E: ldc.r8 1.5707963267948966
+IL_0037: stfld 0x04000770 \x8f\x89.\x8f\x88::\x8b\x87\x90
+IL_003C: ldc.i4 3
+IL_0041: stloc local(0x0000)
+IL_0045: call 0x060007C6 \x8f\x89.\x8f\x88::\x89n
+IL_004A: brfalse.s 88
+IL_004C: ldarg.0 
+IL_004D: call 0x0A00002C System.Object::.ctor
+IL_0052: ldarg.0 
+IL_0053: ldarg.1 
+IL_0054: ldfld 0x04000755 \x8e\x9c.\x8e\x9b::\x8a\x9d\x9e
+IL_0059: stfld 0x0400076A \x8f\x89.\x8f\x88::\x8b\x87\x8a
+IL_005E: ldc.i4 0
+IL_0063: stloc local(0x0000)
+IL_0067: ldarg.0 
+IL_0068: ldarg.1 
+IL_0069: ldfld 0x04000754 \x8e\x9c.\x8e\x9b::\x8a\x9d\x9d
+IL_006E: stfld 0x0400076B \x8f\x89.\x8f\x88::\x8b\x87\x8b
+IL_0073: ldc.i4.1 
+IL_0074: call 0x060007C7 \x8f\x89.\x8f\x88::\x89o
+IL_0079: brfalse.s 211
+IL_007B: pop 
+IL_007C: ldc.i4 7
+IL_0081: stloc local(0x0000)
+IL_0085: call 0x060007C7 \x8f\x89.\x8f\x88::\x89o
+IL_008A: brtrue.s 242
+IL_008C: ldloc local(0x0000)
+IL_0090: switch [115, 285, 221, 88, 94, 221, 57, 292, 292, 33, 242, 307]
+IL_00C5: br.s 127
+IL_00C7: pop 
+IL_00C8: ldc.i4 2
+IL_00CD: stloc local(0x0000)
+IL_00D1: ldarg.0 
+IL_00D2: ldarg.1 
+IL_00D3: ldfld 0x04000756 \x8e\x9c.\x8e\x9b::\x8a\x9e\x86
+IL_00D8: stfld 0x0400076C \x8f\x89.\x8f\x88::\x8b\x87\x8c
+IL_00DD: ldc.i4 10
+IL_00E2: stloc local(0x0000)
+IL_00E6: ldarg.0 
+IL_00E7: ldarg.0 
+IL_00E8: ldfld 0x0400076C \x8f\x89.\x8f\x88::\x8b\x87\x8c
+IL_00ED: call 0x0A000064 System.Math::Cos
+IL_00F2: stfld 0x0400076D \x8f\x89.\x8f\x88::\x8b\x87\x8d
+IL_00F7: ldarg.0 
+IL_00F8: ldarg.0 
+IL_00F9: ldfld 0x0400076C \x8f\x89.\x8f\x88::\x8b\x87\x8c
+IL_00FE: call 0x0A000065 System.Math::Sin
+IL_0103: stfld 0x0400076E \x8f\x89.\x8f\x88::\x8b\x87\x8e
+IL_0108: ldc.i4 1
+IL_010D: stloc local(0x0000)
+IL_0111: ldarg.0 
+IL_0112: ldarg.2 
+IL_0113: stfld 0x04000769 \x8f\x89.\x8f\x88::\x8b\x87\x89
+IL_0118: ldarg.0 
+IL_0119: ldarg.3 
+IL_011A: stfld 0x04000767 \x8f\x89.\x8f\x88::\x8b\x87\x87
+IL_011F: ldarg.0 
+IL_0120: ldarg.s argument(0x0004)
+IL_0122: stfld 0x04000768 \x8f\x89.\x8f\x88::\x8b\x87\x88
+IL_0127: ret 
+

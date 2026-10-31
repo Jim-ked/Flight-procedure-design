@@ -1,0 +1,16 @@
+﻿method,original_token,original_RVA,processed_RVA,inputs,outputs,branches,source_line,processed_IL
+P306,0x06000307,0x3FDF0,0x34FDC,all UI + prepared lists,one Group / per-list 2D Polyline,FAP > FAF > GPINOP > OAS > L > R; P307 unconditional,24016,processed/0x06000306.il.txt
+P307,0x06000308,0x401EC,0x3537C,"OAS, P1/P2, GP, F, THR.Z, IF length",OAS/PAOAS model + nominal fix + IF,Wstar only mode2; no RDH subtraction in fix,24174,processed/0x06000307.il.txt
+P30A,0x0600030B,0x40B18,0x35A60,"4 combos, dimensions, RDH, LOC",corrected/rounded coefficient texts,all SelectedIndex != -1; LOC 2000..4500,24361,processed/0x0600030A.il.txt
+P409,0x0600040A,0x63AE4,0x51B54,"GP text, enum mode, CG text, LOC text",OasModel raw coefficients,missing file null; missing row ToString failure,41676,processed/0x06000409.il.txt
+P412,0x06000413,0x647B4,0x523E0,five planes / mode / optional requested height,shared numeric lists,mode0/1/2 cap & Wstar; A5 default request0,42078,processed/0x06000412.il.txt
+P39E,0x0600039F,0x5CA54,0x4CA9C,shared OAS + IF + nominal fix,29 sample lists,no force GP/CAT; orphan extension excluded,38366,processed/0x0600039E.il.txt
+P428,0x06000429,0x672F4,0x549AC,WXYZ + P1/P2,left/right7 lists + seam points,300/600 construction; anomalous cross-point Z,43673,processed/0x06000428.il.txt
+P437,0x06000438,0x68AF8,0x55DA8,OAS + IF + fix + tolerance,PA-FAF12 sample lists,early+T; 15% plane; clipping,44470,processed/0x06000437.il.txt
+P443,0x06000444,0x699B8,0x56848,OAS + IF + fix,PA-FAP11 sample lists,H-150 intersections; clamp WX to IF,44929,processed/0x06000443.il.txt
+P41B,0x0600041C,0x65268,0x52DA4,local point / mode / shared planes,surface point/label,strict max; cap/extension; orphan,42448,processed/0x0600041B.il.txt
+P429,0x0600042A,0x679E0,0x55010,local point / PAOAS planes/seams,surface point/label,piecewise P1/P2; 600/out; orphan,43908,processed/0x06000429.il.txt
+P319,0x0600031A,0x41DD0,0x36594,form numeric/text state,four section JSON text,catch returns empty,24808,processed/0x06000319.il.txt
+P31A,0x0600031B,0x4259C,0x36D38,sectioned text + full bool,partially updated controls,case sensitive; no rollback,24964,processed/0x0600031A.il.txt
+P318,0x06000319,0x41B08,0x36418,selected Entity.XData[1],P31A import,nonOK return; null/empty prompt; no length/schema validation,24747,processed/0x06000318.il.txt
+P087,0x06000088,0x555C,0x87E0,paths + metadata text,2D Polylines + Group,loop ordering; no surface tags,1458,processed/0x06000087.il.txt

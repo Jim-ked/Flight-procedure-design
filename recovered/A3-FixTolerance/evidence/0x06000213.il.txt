@@ -1,0 +1,31 @@
+METHOD 06000213 \x88\x98.\x88\x97::\x95\x8b RVA=16C2C file=14E2C
+IL_0000: nop 
+IL_0001: br.s 52
+IL_0003: ldarg.0 
+IL_0004: ldfld 0x040000A7 \x88\x98.\x88\x97::\x96\x8e
+IL_0009: ldc.i4 1660
+IL_000E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0013: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0018: ldc.i4.1 
+IL_0019: call 0x0600021A \x88\x98.\x88\x97::\x87\x92
+IL_001E: brtrue.s 81
+IL_0020: pop 
+IL_0021: call 0x06000219 \x88\x98.\x88\x97::\x87\x91
+IL_0026: brtrue.s 67
+IL_0028: ldarg.0 
+IL_0029: ldfld 0x040000A6 \x88\x98.\x88\x97::\x96\x8d
+IL_002E: callvirt 0x0A000201 System.Windows.Forms.RadioButton::get_Checked
+IL_0033: brfalse.s 94
+IL_0035: br.s 15
+IL_0037: ldarg.0 
+IL_0038: ldfld 0x040000A1 \x88\x98.\x88\x97::\x96\x88
+IL_003D: ldc.i4.1 
+IL_003E: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0043: br.s 82
+IL_0045: pop 
+IL_0046: ldarg.0 
+IL_0047: ldfld 0x040000AC \x88\x98.\x88\x97::\x96\x93
+IL_004C: ldc.i4.0 
+IL_004D: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0052: ret 
+

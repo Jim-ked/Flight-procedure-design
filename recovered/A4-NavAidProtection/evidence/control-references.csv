@@ -1,0 +1,192 @@
+﻿field,control,method,line,expression
+_0087_0090_009E,radioButton2,declaration,22662,private RadioButton _0087_0090_009E;
+_0087_0090_009E,radioButton2,0x060002FE,23140,"_0087_0090_009E.Location = new Point(140, 36);"
+_0087_0090_009E,radioButton2,0x060002FE,23141,"_0087_0090_009E.Margin = new Padding(3, 2, 3, 2);"
+_0087_0090_009E,radioButton2,0x060002FE,23142,"_0087_0090_009E.Name = ""radioButton2"" /* string-offset:3772 */;"
+_0087_0090_009E,radioButton2,0x060002FE,23150,"_0087_0090_009E.Size = new Size(94, 19);"
+_0087_0090_009E,radioButton2,0x060002FE,23151,_0087_0090_009E.TabIndex = 1;
+_0087_0090_009E,radioButton2,0x060002FE,23152,"_0087_0090_009E.Text = ""NDB保护区"" /* string-offset:3776 */;"
+_0087_0090_009E,radioButton2,0x060002FE,23153,_0087_0090_009E.UseVisualStyleBackColor = true;
+_0087_0090_009E,radioButton2,0x060002FE,23154,_0087_0090_009E.CheckedChanged += _0087_0090_008E;
+_0087_0090_009E,radioButton2,0x060002FE,23341,_0087_0090_009E = new RadioButton();
+_0087_0090_009E,radioButton2,0x060002FE,23503,_0087_0090_009D.Controls.Add(_0087_0090_009E);
+_0087_0090_009E,radioButton2,0x060002FE,23574,_0087_0090_009E.AutoSize = true;
+_0087_0091_0086,radioButton1,declaration,22664,private RadioButton _0087_0091_0086;
+_0087_0091_0086,radioButton1,0x060002FE,23155,_0087_0091_0086.AutoSize = true;
+_0087_0091_0086,radioButton1,0x060002FE,23159,_0087_0091_0086.Checked = true;
+_0087_0091_0086,radioButton1,0x060002FE,23163,"_0087_0091_0086.Location = new Point(23, 36);"
+_0087_0091_0086,radioButton1,0x060002FE,23167,"_0087_0091_0086.Margin = new Padding(3, 2, 3, 2);"
+_0087_0091_0086,radioButton1,0x060002FE,23168,"_0087_0091_0086.Name = ""radioButton1"" /* string-offset:3780 */;"
+_0087_0091_0086,radioButton1,0x060002FE,23171,"_0087_0091_0086.Size = new Size(94, 19);"
+_0087_0091_0086,radioButton1,0x060002FE,23174,_0087_0091_0086.TabIndex = 1;
+_0087_0091_0086,radioButton1,0x060002FE,23177,_0087_0091_0086.TabStop = true;
+_0087_0091_0086,radioButton1,0x060002FE,23180,"_0087_0091_0086.Text = ""VOR保护区"" /* string-offset:3784 */;"
+_0087_0091_0086,radioButton1,0x060002FE,23181,_0087_0091_0086.UseVisualStyleBackColor = true;
+_0087_0091_0086,radioButton1,0x060002FE,23184,_0087_0091_0086.CheckedChanged += _0087_0090_008D;
+_0087_0091_0086,radioButton1,0x060002FE,23402,_0087_0091_0086 = new RadioButton();
+_0087_0091_0086,radioButton1,0x060002FE,23555,_0087_0090_009D.Controls.Add(_0087_0091_0086);
+_0087_0091_0087,textBoxExpAng,declaration,22666,private TextBox _0087_0091_0087;
+_0087_0091_0087,textBoxExpAng,0x060002F7,22690,"_0087_0091_0087.Text = ""7.8"" /* string-offset:3688 */;"
+_0087_0091_0087,textBoxExpAng,0x060002F8,22703,"_0087_0091_0087.Text = ""10.3"" /* string-offset:3700 */;"
+_0087_0091_0087,textBoxExpAng,0x060002F9,22821,a = _0087_0090_0090(_0087_0091_0087.Text) * _0087_0090_0094;
+_0087_0091_0087,textBoxExpAng,0x060002FE,23188,_0087_0091_0087.Enabled = false;
+_0087_0091_0087,textBoxExpAng,0x060002FE,23189,"_0087_0091_0087.Location = new Point(116, 34);"
+_0087_0091_0087,textBoxExpAng,0x060002FE,23190,"_0087_0091_0087.Margin = new Padding(3, 2, 3, 2);"
+_0087_0091_0087,textBoxExpAng,0x060002FE,23194,"_0087_0091_0087.Name = ""textBoxExpAng"" /* string-offset:3788 */;"
+_0087_0091_0087,textBoxExpAng,0x060002FE,23197,"_0087_0091_0087.Size = new Size(60, 23);"
+_0087_0091_0087,textBoxExpAng,0x060002FE,23406,_0087_0091_0087 = new TextBox();
+_0087_0091_0087,textBoxExpAng,0x060002FE,23468,_0087_0091_0087.TabIndex = 2;
+_0087_0091_0087,textBoxExpAng,0x060002FE,23472,"_0087_0091_0087.Text = ""7.8"" /* string-offset:3688 */;"
+_0087_0091_0087,textBoxExpAng,0x060002FE,23609,_0087_0091_008A.Controls.Add(_0087_0091_0087);
+_0087_0090_0097,checkBoxCenter,declaration,22648,private CheckBox _0087_0090_0097;
+_0087_0090_0097,checkBoxCenter,0x060002F9,23009,if (!_0087_0090_0097.Checked)
+_0087_0090_0097,checkBoxCenter,0x060002FE,23122,_0087_0090_0097 = new CheckBox();
+_0087_0090_0097,checkBoxCenter,0x060002FE,23205,_0087_0090_0097.Checked = true;
+_0087_0090_0097,checkBoxCenter,0x060002FE,23206,_0087_0090_0097.CheckState = CheckState.Checked;
+_0087_0090_0097,checkBoxCenter,0x060002FE,23209,"_0087_0090_0097.Location = new Point(27, 124);"
+_0087_0090_0097,checkBoxCenter,0x060002FE,23210,"_0087_0090_0097.Name = ""checkBoxCenter"" /* string-offset:3732 */;"
+_0087_0090_0097,checkBoxCenter,0x060002FE,23211,"_0087_0090_0097.Size = new Size(71, 19);"
+_0087_0090_0097,checkBoxCenter,0x060002FE,23215,_0087_0090_0097.TabIndex = 14;
+_0087_0090_0097,checkBoxCenter,0x060002FE,23216,"_0087_0090_0097.Text = ""中心线"" /* string-offset:3736 */;"
+_0087_0090_0097,checkBoxCenter,0x060002FE,23220,_0087_0090_0097.UseVisualStyleBackColor = true;
+_0087_0090_0097,checkBoxCenter,0x060002FE,23527,_0087_0090_0097.AutoSize = true;
+_0087_0090_0097,checkBoxCenter,0x060002FE,23613,_0087_0091_008A.Controls.Add(_0087_0090_0097);
+_0087_0090_0098,checkBoxExpand,declaration,22650,private CheckBox _0087_0090_0098;
+_0087_0090_0098,checkBoxExpand,0x060002F9,22901,if (!_0087_0090_0098.Checked)
+_0087_0090_0098,checkBoxExpand,0x060002F9,23059,if (_0087_0090_0098.Checked)
+_0087_0090_0098,checkBoxExpand,0x060002FE,23126,_0087_0090_0098 = new CheckBox();
+_0087_0090_0098,checkBoxExpand,0x060002FE,23224,_0087_0090_0098.AutoSize = true;
+_0087_0090_0098,checkBoxExpand,0x060002FE,23225,"_0087_0090_0098.Location = new Point(116, 122);"
+_0087_0090_0098,checkBoxExpand,0x060002FE,23226,"_0087_0090_0098.Name = ""checkBoxExpand"" /* string-offset:3740 */;"
+_0087_0090_0098,checkBoxExpand,0x060002FE,23227,"_0087_0090_0098.Size = new Size(102, 19);"
+_0087_0090_0098,checkBoxExpand,0x060002FE,23230,_0087_0090_0098.TabIndex = 15;
+_0087_0090_0098,checkBoxExpand,0x060002FE,23231,"_0087_0090_0098.Text = ""外扩15°线"" /* string-offset:3744 */;"
+_0087_0090_0098,checkBoxExpand,0x060002FE,23232,_0087_0090_0098.UseVisualStyleBackColor = true;
+_0087_0090_0098,checkBoxExpand,0x060002FE,23615,_0087_0091_008A.Controls.Add(_0087_0090_0098);
+_0087_0090_0099,checkBoxLeft,declaration,22652,private CheckBox _0087_0090_0099;
+_0087_0090_0099,checkBoxLeft,0x060002F9,22785,if (_0087_0090_0099.Checked)
+_0087_0090_0099,checkBoxLeft,0x060002FE,23127,_0087_0090_0099 = new CheckBox();
+_0087_0090_0099,checkBoxLeft,0x060002FE,23236,_0087_0090_0099.AutoSize = true;
+_0087_0090_0099,checkBoxLeft,0x060002FE,23239,_0087_0090_0099.Checked = true;
+_0087_0090_0099,checkBoxLeft,0x060002FE,23240,_0087_0090_0099.CheckState = CheckState.Checked;
+_0087_0090_0099,checkBoxLeft,0x060002FE,23244,"_0087_0090_0099.Location = new Point(27, 79);"
+_0087_0090_0099,checkBoxLeft,0x060002FE,23245,"_0087_0090_0099.Name = ""checkBoxLeft"" /* string-offset:3748 */;"
+_0087_0090_0099,checkBoxLeft,0x060002FE,23246,"_0087_0090_0099.Size = new Size(71, 19);"
+_0087_0090_0099,checkBoxLeft,0x060002FE,23250,_0087_0090_0099.TabIndex = 16;
+_0087_0090_0099,checkBoxLeft,0x060002FE,23251,"_0087_0090_0099.Text = ""左半区"" /* string-offset:3752 */;"
+_0087_0090_0099,checkBoxLeft,0x060002FE,23252,_0087_0090_0099.UseVisualStyleBackColor = true;
+_0087_0090_0099,checkBoxLeft,0x060002FE,23614,_0087_0091_008A.Controls.Add(_0087_0090_0099);
+_0087_0090_009A,groupBox2,declaration,22654,private GroupBox _0087_0090_009A;
+_0087_0090_009A,groupBox2,0x060002FE,23132,_0087_0090_009A = new GroupBox();
+_0087_0090_009A,groupBox2,0x060002FE,23256,_0087_0090_009A.Controls.Add(_0087_0090_009B);
+_0087_0090_009A,groupBox2,0x060002FE,23257,_0087_0090_009A.Controls.Add(_0087_0090_009C);
+_0087_0090_009A,groupBox2,0x060002FE,23258,"_0087_0090_009A.Location = new Point(12, 102);"
+_0087_0090_009A,groupBox2,0x060002FE,23262,"_0087_0090_009A.Margin = new Padding(3, 2, 3, 2);"
+_0087_0090_009A,groupBox2,0x060002FE,23263,"_0087_0090_009A.Name = ""groupBox2"" /* string-offset:1740 */;"
+_0087_0090_009A,groupBox2,0x060002FE,23267,"_0087_0090_009A.Padding = new Padding(3, 2, 3, 2);"
+_0087_0090_009A,groupBox2,0x060002FE,23268,"_0087_0090_009A.Size = new Size(249, 79);"
+_0087_0090_009A,groupBox2,0x060002FE,23272,_0087_0090_009A.TabIndex = 10;
+_0087_0090_009A,groupBox2,0x060002FE,23276,_0087_0090_009A.TabStop = false;
+_0087_0090_009A,groupBox2,0x060002FE,23279,"_0087_0090_009A.Text = ""初始半宽"" /* string-offset:3756 */;"
+_0087_0090_009A,groupBox2,0x060002FE,23421,_0087_0090_009A.SuspendLayout();
+_0087_0090_009A,groupBox2,0x060002FE,23638,base.Controls.Add(_0087_0090_009A);
+_0087_0090_009A,groupBox2,0x060002FE,23660,_0087_0090_009A.ResumeLayout(performLayout: false);
+_0087_0090_009A,groupBox2,0x060002FE,23661,_0087_0090_009A.PerformLayout();
+_0087_0090_009B,radioButtonW2,declaration,22656,private RadioButton _0087_0090_009B;
+_0087_0090_009B,radioButtonW2,0x060002F7,22688,"_0087_0090_009B.Text = ""2.0 nm"" /* string-offset:3684 */;"
+_0087_0090_009B,radioButtonW2,0x060002F8,22702,"_0087_0090_009B.Text = ""2.5 nm"" /* string-offset:3696 */;"
+_0087_0090_009B,radioButtonW2,0x060002F9,22829,array = _0087_0090_009B.Text.Trim().Split('n');
+_0087_0090_009B,radioButtonW2,0x060002FE,23256,_0087_0090_009A.Controls.Add(_0087_0090_009B);
+_0087_0090_009B,radioButtonW2,0x060002FE,23280,_0087_0090_009B.AutoSize = true;
+_0087_0090_009B,radioButtonW2,0x060002FE,23284,"_0087_0090_009B.Location = new Point(140, 33);"
+_0087_0090_009B,radioButtonW2,0x060002FE,23288,"_0087_0090_009B.Margin = new Padding(3, 2, 3, 2);"
+_0087_0090_009B,radioButtonW2,0x060002FE,23289,"_0087_0090_009B.Name = ""radioButtonW2"" /* string-offset:3760 */;"
+_0087_0090_009B,radioButtonW2,0x060002FE,23362,_0087_0090_009B.UseVisualStyleBackColor = true;
+_0087_0090_009B,radioButtonW2,0x060002FE,23440,_0087_0090_009B = new RadioButton();
+_0087_0090_009B,radioButtonW2,0x060002FE,23444,"_0087_0090_009B.Text = ""2.0 nm"" /* string-offset:3684 */;"
+_0087_0090_009B,radioButtonW2,0x060002FE,23448,_0087_0090_009B.TabIndex = 1;
+_0087_0090_009B,radioButtonW2,0x060002FE,23452,"_0087_0090_009B.Size = new Size(73, 19);"
+_0087_0090_009C,radioButtonW1,declaration,22658,private RadioButton _0087_0090_009C;
+_0087_0090_009C,radioButtonW1,0x060002F7,22687,"_0087_0090_009C.Text = ""1.0 nm"" /* string-offset:3680 */;"
+_0087_0090_009C,radioButtonW1,0x060002F8,22698,"_0087_0090_009C.Text = ""1.25 nm"" /* string-offset:3692 */;"
+_0087_0090_009C,radioButtonW1,0x060002F9,22822,if (_0087_0090_009C.Checked)
+_0087_0090_009C,radioButtonW1,0x060002F9,22824,array = _0087_0090_009C.Text.Trim().Split('n');
+_0087_0090_009C,radioButtonW1,0x060002FE,23257,_0087_0090_009A.Controls.Add(_0087_0090_009C);
+_0087_0090_009C,radioButtonW1,0x060002FE,23336,_0087_0090_009C = new RadioButton();
+_0087_0090_009C,radioButtonW1,0x060002FE,23363,_0087_0090_009C.AutoSize = true;
+_0087_0090_009C,radioButtonW1,0x060002FE,23366,_0087_0090_009C.Checked = true;
+_0087_0090_009C,radioButtonW1,0x060002FE,23367,"_0087_0090_009C.Location = new Point(23, 33);"
+_0087_0090_009C,radioButtonW1,0x060002FE,23375,"_0087_0090_009C.Margin = new Padding(3, 2, 3, 2);"
+_0087_0090_009C,radioButtonW1,0x060002FE,23376,"_0087_0090_009C.Name = ""radioButtonW1"" /* string-offset:3764 */;"
+_0087_0090_009C,radioButtonW1,0x060002FE,23380,"_0087_0090_009C.Size = new Size(73, 19);"
+_0087_0090_009C,radioButtonW1,0x060002FE,23383,_0087_0090_009C.TabIndex = 1;
+_0087_0090_009C,radioButtonW1,0x060002FE,23387,_0087_0090_009C.TabStop = true;
+_0087_0090_009C,radioButtonW1,0x060002FE,23390,"_0087_0090_009C.Text = ""1.0 nm"" /* string-offset:3680 */;"
+_0087_0090_009C,radioButtonW1,0x060002FE,23394,_0087_0090_009C.UseVisualStyleBackColor = true;
+_0087_0091_0088,label1,declaration,22668,private Label _0087_0091_0088;
+_0087_0091_0088,label1,0x060002FE,23414,_0087_0091_0088 = new Label();
+_0087_0091_0088,label1,0x060002FE,23473,_0087_0091_0088.AutoSize = true;
+_0087_0091_0088,label1,0x060002FE,23474,"_0087_0091_0088.Location = new Point(24, 38);"
+_0087_0091_0088,label1,0x060002FE,23478,"_0087_0091_0088.Name = ""label1"" /* string-offset:1832 */;"
+_0087_0091_0088,label1,0x060002FE,23479,"_0087_0091_0088.Size = new Size(83, 15);"
+_0087_0091_0088,label1,0x060002FE,23482,_0087_0091_0088.TabIndex = 0;
+_0087_0091_0088,label1,0x060002FE,23485,"_0087_0091_0088.Text = ""扩张角(°)"" /* string-offset:3792 */;"
+_0087_0091_0088,label1,0x060002FE,23604,_0087_0091_008A.Controls.Add(_0087_0091_0088);
+_0087_0090_0096,checkBoxRight,declaration,22646,private CheckBox _0087_0090_0096;
+_0087_0090_0096,checkBoxRight,0x060002F9,23039,if (!_0087_0090_0096.Checked)
+_0087_0090_0096,checkBoxRight,0x060002FE,23118,_0087_0090_0096 = new CheckBox();
+_0087_0090_0096,checkBoxRight,0x060002FE,23349,_0087_0090_0096.AutoSize = true;
+_0087_0090_0096,checkBoxRight,0x060002FE,23350,_0087_0090_0096.Checked = true;
+_0087_0090_0096,checkBoxRight,0x060002FE,23353,_0087_0090_0096.CheckState = CheckState.Checked;
+_0087_0090_0096,checkBoxRight,0x060002FE,23354,"_0087_0090_0096.Location = new Point(116, 79);"
+_0087_0090_0096,checkBoxRight,0x060002FE,23511,"_0087_0090_0096.Name = ""checkBoxRight"" /* string-offset:3724 */;"
+_0087_0090_0096,checkBoxRight,0x060002FE,23514,"_0087_0090_0096.Size = new Size(71, 19);"
+_0087_0090_0096,checkBoxRight,0x060002FE,23518,_0087_0090_0096.TabIndex = 13;
+_0087_0090_0096,checkBoxRight,0x060002FE,23522,"_0087_0090_0096.Text = ""右半区"" /* string-offset:3728 */;"
+_0087_0090_0096,checkBoxRight,0x060002FE,23523,_0087_0090_0096.UseVisualStyleBackColor = true;
+_0087_0090_0096,checkBoxRight,0x060002FE,23605,_0087_0091_008A.Controls.Add(_0087_0090_0096);
+_0087_0090_009D,groupBox1,declaration,22660,private GroupBox _0087_0090_009D;
+_0087_0090_009D,groupBox1,0x060002FE,23337,_0087_0090_009D = new GroupBox();
+_0087_0090_009D,groupBox1,0x060002FE,23429,_0087_0090_009D.SuspendLayout();
+_0087_0090_009D,groupBox1,0x060002FE,23503,_0087_0090_009D.Controls.Add(_0087_0090_009E);
+_0087_0090_009D,groupBox1,0x060002FE,23555,_0087_0090_009D.Controls.Add(_0087_0091_0086);
+_0087_0090_009D,groupBox1,0x060002FE,23559,"_0087_0090_009D.Location = new Point(12, 11);"
+_0087_0090_009D,groupBox1,0x060002FE,23560,"_0087_0090_009D.Margin = new Padding(3, 2, 3, 2);"
+_0087_0090_009D,groupBox1,0x060002FE,23563,"_0087_0090_009D.Name = ""groupBox1"" /* string-offset:1664 */;"
+_0087_0090_009D,groupBox1,0x060002FE,23564,"_0087_0090_009D.Padding = new Padding(3, 2, 3, 2);"
+_0087_0090_009D,groupBox1,0x060002FE,23565,"_0087_0090_009D.Size = new Size(249, 79);"
+_0087_0090_009D,groupBox1,0x060002FE,23566,_0087_0090_009D.TabIndex = 11;
+_0087_0090_009D,groupBox1,0x060002FE,23567,_0087_0090_009D.TabStop = false;
+_0087_0090_009D,groupBox1,0x060002FE,23570,"_0087_0090_009D.Text = ""保护区类型"" /* string-offset:3768 */;"
+_0087_0090_009D,groupBox1,0x060002FE,23639,base.Controls.Add(_0087_0090_009D);
+_0087_0090_009D,groupBox1,0x060002FE,23662,_0087_0090_009D.ResumeLayout(performLayout: false);
+_0087_0090_009D,groupBox1,0x060002FE,23665,_0087_0090_009D.PerformLayout();
+_0087_0091_0089,buttonNdb,declaration,22670,private Button _0087_0091_0089;
+_0087_0091_0089,buttonNdb,0x060002FE,23417,_0087_0091_0089 = new Button();
+_0087_0091_0089,buttonNdb,0x060002FE,23489,"_0087_0091_0089.Location = new Point(393, 195);"
+_0087_0091_0089,buttonNdb,0x060002FE,23493,"_0087_0091_0089.Margin = new Padding(3, 2, 3, 2);"
+_0087_0091_0089,buttonNdb,0x060002FE,23588,"_0087_0091_0089.Name = ""buttonNdb"" /* string-offset:3796 */;"
+_0087_0091_0089,buttonNdb,0x060002FE,23589,"_0087_0091_0089.Size = new Size(80, 40);"
+_0087_0091_0089,buttonNdb,0x060002FE,23593,_0087_0091_0089.TabIndex = 9;
+_0087_0091_0089,buttonNdb,0x060002FE,23594,"_0087_0091_0089.Text = ""CAD"" /* string-offset:1696 */;"
+_0087_0091_0089,buttonNdb,0x060002FE,23597,_0087_0091_0089.UseVisualStyleBackColor = true;
+_0087_0091_0089,buttonNdb,0x060002FE,23600,_0087_0091_0089.Click += _0087_0090_008F;
+_0087_0091_0089,buttonNdb,0x060002FE,23640,base.Controls.Add(_0087_0091_0089);
+_0087_0091_008A,groupBox3,declaration,22672,private GroupBox _0087_0091_008A;
+_0087_0091_008A,groupBox3,0x060002FE,23418,_0087_0091_008A = new GroupBox();
+_0087_0091_008A,groupBox3,0x060002FE,23433,_0087_0091_008A.SuspendLayout();
+_0087_0091_008A,groupBox3,0x060002FE,23604,_0087_0091_008A.Controls.Add(_0087_0091_0088);
+_0087_0091_008A,groupBox3,0x060002FE,23605,_0087_0091_008A.Controls.Add(_0087_0090_0096);
+_0087_0091_008A,groupBox3,0x060002FE,23609,_0087_0091_008A.Controls.Add(_0087_0091_0087);
+_0087_0091_008A,groupBox3,0x060002FE,23613,_0087_0091_008A.Controls.Add(_0087_0090_0097);
+_0087_0091_008A,groupBox3,0x060002FE,23614,_0087_0091_008A.Controls.Add(_0087_0090_0099);
+_0087_0091_008A,groupBox3,0x060002FE,23615,_0087_0091_008A.Controls.Add(_0087_0090_0098);
+_0087_0091_008A,groupBox3,0x060002FE,23616,"_0087_0091_008A.Location = new Point(277, 12);"
+_0087_0091_008A,groupBox3,0x060002FE,23617,"_0087_0091_008A.Name = ""groupBox3"" /* string-offset:1708 */;"
+_0087_0091_008A,groupBox3,0x060002FE,23620,"_0087_0091_008A.Size = new Size(225, 169);"
+_0087_0091_008A,groupBox3,0x060002FE,23621,_0087_0091_008A.TabIndex = 17;
+_0087_0091_008A,groupBox3,0x060002FE,23622,_0087_0091_008A.TabStop = false;
+_0087_0091_008A,groupBox3,0x060002FE,23625,"_0087_0091_008A.Text = ""绘图参数"" /* string-offset:3800 */;"
+_0087_0091_008A,groupBox3,0x060002FE,23635,base.Controls.Add(_0087_0091_008A);
+_0087_0091_008A,groupBox3,0x060002FE,23666,_0087_0091_008A.ResumeLayout(performLayout: false);
+_0087_0091_008A,groupBox3,0x060002FE,23667,_0087_0091_008A.PerformLayout();

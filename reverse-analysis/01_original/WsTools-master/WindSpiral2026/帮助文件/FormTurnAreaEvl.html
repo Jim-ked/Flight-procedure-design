@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>复飞转弯区评估 · WindSpiralBasic 帮助</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="crumb"><a href="index.html">帮助首页</a> / 传统程序 / 复飞转弯区评估</div>
+        <h1>A8.复飞转弯区评估</h1>
+        <div class="cmd">命令：Y08_转弯区评估</div>
+    </div>
+    <div class="layout">
+        <div class="sidebar">
+            <div class="nav-group"><h2>导航</h2><ul><li><a href="index.html">← 帮助首页</a></li></ul></div>
+            <div class="nav-group"><h2>传统程序</h2>
+                <ul>
+                    <li><a href="FormWindSpiral.html">A1.风螺旋</a></li>
+                    <li><a href="FormCalcu.html">A2.飞行程序基础计算</a></li>
+                    <li><a href="FixTolerance.html">A3.定位容差</a></li>
+                    <li><a href="FormNavAids.html">A4.非精密进近保护区</a></li>
+                    <li><a href="FormPA.html">A5.精密进近保护区</a></li>
+                    <li><a href="FormTemplate.html">A6.传统保护区模板</a></li>
+                    <li><a href="FormDepartureEvl.html">A7.离场越障评估</a></li>
+                    <li><a href="FormTurnAreaEvl.html" class="active">A8.复飞转弯区评估</a></li>
+                    <li><a href="FormPriSecEvl.html">A9.主副区评估</a></li>
+                    <li><a href="FormDmeEvl.html">A10.起始进近DME弧</a></li>
+                </ul>
+            </div>
+            <div class="nav-group"><h2>其它模块</h2><ul><li><a href="index.html">PBN 程序 / 辅助功能</a></li></ul></div>
+        </div>
+        <div class="content">
+            <div class="card">
+                <h2>功能简介</h2>
+                <p>【复飞转弯区评估】用于<strong>复飞转弯区的越障评估</strong>。以 KK′ 线（左 / 右侧边界）为基准，结合转弯方式与梯度参数构建转弯区并评估障碍物穿透。</p>
+            </div>
+            <div class="card">
+                <h2>界面预览</h2>
+                <!-- 界面截图：将 images/FormTurnAreaEvl.png 替换为实际窗口截图即可（保持文件名不变）。
+                     图片显示宽度通过下方 width 属性的数值（单位：像素）指定，高度自动等比缩放。 -->
+                  <img src="images/FormTurnAreaEvl.png" alt="FormTurnAreaEvl 界面截图" width="578"
+                     style="max-width:100%; height:auto; border:1px solid var(--border); border-radius:8px;">
+            </div>
+            <div class="card">
+                <h2>界面元素</h2>
+                <table>
+                    <thead><tr><th>分区 / 控件</th><th>说明</th></tr></thead>
+                    <tbody>
+                        <tr><td>KK′线左侧边界 / 右侧边界</td><td>分别输入两端点的 X / Y / Z（m）及经纬度、标高，定义 KK′ 线。</td></tr>
+                        <tr><td>转弯区参数（选项卡）</td><td>转弯方式（指定点等）、PDG（程序设计梯度）、Ds（SOC至转弯最早点的距离）、MOC、复飞梯度(%) 等参数。</td></tr>
+                        <tr><td>附加设置</td><td>转弯方式与其它评估选项。</td></tr>
+                        <tr><td>示意图（选项卡）</td><td>展示转弯区评估示例。</td></tr>
+                        <tr><td>一键评估 / 屏幕数据</td><td>评估障碍物、从图纸载入障碍物。</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="card">
+                <h2>操作步骤</h2>
+                <ul class="steps">
+                    <li>命令行输入 <code>Y08_转弯区评估</code> 打开窗口。</li>
+                    <li>填入 KK′ 线左侧 / 右侧边界坐标（可用【屏幕数据】拾取）。</li>
+                    <li>在“转弯区参数”“附加设置”中设置转弯方式、梯度、MOC 等参数。</li>
+                    <li>【屏幕数据】载入障碍物后点【一键评估】，查看结果并【标记】重要障碍物。</li>
+                </ul>
+                <div class="tip"><strong>联动：</strong>在障碍物列表中单击某行，图纸会自动高亮并居中显示该障碍物。</div>
+            </div>
+            <div class="pager">
+                <a href="FormDepartureEvl.html">← 上一篇：A7.离场越障评估</a>
+                <a href="FormPriSecEvl.html">下一篇：A9.主副区评估 →</a>
+            </div>
+            <div class="footer">WindSpiralBasic · 帮助文件中心</div>
+        </div>
+    </div>
+</body>
+</html>

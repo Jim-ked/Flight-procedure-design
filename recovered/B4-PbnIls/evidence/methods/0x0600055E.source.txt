@@ -1,0 +1,8 @@
+61122: 		private double _0089_0095_009C()
+61123: 		{
+61124: 			double num = _008F_008A._008B_0087_009D(_0089_009A_0095.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+61125: 			double num2 = -900.0;
+61126: 			double num3 = _008F_008A._008B_0087_009E(_0089_009B_0088, "输入数据有误，请检查。" /* string-offset:1984 */);
+61127: 			double num4 = _0089_0095_009D();
+61128: 			return Math.Round((num3 - num4) / Math.Tan(num * Math.PI / 180.0) + num2);
+61129: 		}

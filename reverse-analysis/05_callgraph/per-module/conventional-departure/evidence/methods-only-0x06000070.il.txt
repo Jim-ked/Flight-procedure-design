@@ -1,0 +1,102 @@
+METHOD 06000070 \x8a.\x89::\x87\x95 RVA=7EC8 file=60C8
+IL_0000: ldc.i4 4
+IL_0005: stloc local(0x0005)
+IL_0009: br 170
+IL_000E: ldc.i4 0
+IL_0013: stloc local(0x0005)
+IL_0017: call 0x0600007E \x8a.\x89::\x8e
+IL_001C: brtrue 333
+IL_0021: br.s 79
+IL_0023: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0028: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_002D: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_0032: stloc.0 
+IL_0033: ldc.i4 6
+IL_0038: stloc local(0x0005)
+IL_003C: call 0x0600007D \x8a.\x89::\x8d
+IL_0041: brfalse.s 47
+IL_0043: ldloc local(0x0005)
+IL_0047: switch [47, 211, 333, 211, 170, 333, 126, 296, 392]
+IL_0070: br.s 190
+IL_0072: ldc.i4 468
+IL_0077: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_007C: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0081: stloc.1 
+IL_0082: ldc.i4.1 
+IL_0083: call 0x0600007E \x8a.\x89::\x8e
+IL_0088: brfalse.s 201
+IL_008A: pop 
+IL_008B: ldc.i4 2
+IL_0090: stloc local(0x0005)
+IL_0094: call 0x0600007E \x8a.\x89::\x8e
+IL_0099: brfalse 333
+IL_009E: ldc.i4 24
+IL_00A3: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_00A8: brfalse 392
+IL_00AD: br 26
+IL_00B2: ldc.i4 7
+IL_00B7: stloc local(0x0005)
+IL_00BB: br.s 296
+IL_00BD: pop 
+IL_00BE: ldc.i4 1
+IL_00C3: stloc local(0x0005)
+IL_00C7: ldc.i4 472
+IL_00CC: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00D1: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_00D6: stloc.2 
+IL_00D7: ldloca.s local(0x0001)
+IL_00D9: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_00DE: ldloca.s local(0x0002)
+IL_00E0: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_00E5: sub 
+IL_00E6: ldloca.s local(0x0001)
+IL_00E8: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_00ED: ldloca.s local(0x0002)
+IL_00EF: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_00F4: sub 
+IL_00F5: mul 
+IL_00F6: ldloca.s local(0x0001)
+IL_00F8: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_00FD: ldloca.s local(0x0002)
+IL_00FF: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0104: sub 
+IL_0105: ldloca.s local(0x0001)
+IL_0107: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_010C: ldloca.s local(0x0002)
+IL_010E: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0113: sub 
+IL_0114: mul 
+IL_0115: add 
+IL_0116: call 0x0A00002D System.Math::Sqrt
+IL_011B: stloc.3 
+IL_011C: ldloca.s local(0x0002)
+IL_011E: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0123: ldloca.s local(0x0001)
+IL_0125: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_012A: sub 
+IL_012B: ldloca.s local(0x0002)
+IL_012D: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0132: ldloca.s local(0x0001)
+IL_0134: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0139: sub 
+IL_013A: call 0x0A000063 System.Math::Atan2
+IL_013F: stloc.s local(0x0004)
+IL_0141: ldloc.1 
+IL_0142: ldloc.3 
+IL_0143: ldloc.s local(0x0004)
+IL_0145: ldc.r8 1.0471975511965976
+IL_014E: sub 
+IL_014F: ldloc.s local(0x0004)
+IL_0151: ldc.r8 1.0471975511965976
+IL_015A: add 
+IL_015B: newobj 0x0A00007A Autodesk.AutoCAD.DatabaseServices.Arc::.ctor
+IL_0160: ldloc.0 
+IL_0161: ldstr ''
+IL_0166: call 0x06000089 \x8c.\x8b::\x88\x8d
+IL_016B: pop 
+IL_016C: ldc.i4 8
+IL_0171: stloc local(0x0005)
+IL_0175: call 0x0600007D \x8a.\x89::\x8d
+IL_017A: brfalse.s 296
+IL_017C: ret 
+

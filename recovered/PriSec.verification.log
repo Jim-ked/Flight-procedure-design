@@ -1,0 +1,17 @@
+2026-10-27 / recovered source only / no original or processed target DLL execution
+
+RED: csc compiled PriSec.Tests.cs alone; failed CS0246 for missing PriSecObstacleRecovered.
+First implementation run: exit 1; unhandled test exception could not print Exception.ToString.
+Review: zero-length station test wrongly expected one NaN-MOC row. Original line helper
+divides by zero with numerator zero -> -1000000, so nonnegative absY fails both bounds.
+Corrected test expectation to empty list; added catch printing failure label only.
+
+COMMAND (PowerShell, workspace root):
+& 'C:\Windows\Microsoft.NET\Framework64\v4.0.30319\csc.exe' /nologo /out:recovered\PriSec.Tests.exe recovered\PriSec.Tests.cs recovered\ObstacleData\PriSec.Recovered.cs
+if ($LASTEXITCODE -eq 0) { & .\recovered\PriSec.Tests.exe }
+
+GREEN / exit 0:
+PASS 19 primary/secondary checks; recovered source only, no target DLL execution.
+
+Compiler was run outside the restrictive compiler sandbox after automatic approval.
+This is not an AutoCAD or original-assembly equivalence result and is not L3 evidence.

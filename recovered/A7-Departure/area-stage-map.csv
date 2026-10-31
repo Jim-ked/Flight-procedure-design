@@ -1,0 +1,14 @@
+﻿Mode,Stage,Source method,Start control point,End control point,Boundary list,Evaluator,CAD entity,Connection/limit
+Altitude,Initial/Straight,P1FB/P1FD,S,K,"Sym(S,K)",P1FC,Polyline #1; Group,无独立直线工作流
+Altitude,Turn-initiation/delay,P1FB/P1FD,K,L,"Sym(K,L)",P1FC,Polyline #2; Group,e=(TAS+Wind)/.6
+Altitude,Early runway patch,P1FB/P1FD,S,E,"Sym(S,E)",P1FC,Polyline #3 when early,无union/trim
+Altitude,Turn,P1FB/P1FC,K/L,classifier,distance branches,P1FC,none,评估区标签非曲线航迹
+Altitude,Post-turn,—,—,—,none,none,none,未独立构造
+Point,Initial/Straight,P202/P204,S,TP,"Sym(S,TP)",P203,Polyline #1; Group,二检为评价分支
+Point,Turn-initiation,P202/P204,E,TP,"Sym(E,TP)",P203,Polyline #2; Group,E=TP-KK
+Point,Turn,P202/P204,TP,L=TP+C,"Sym(TP,L)",P203,Polyline #3; Group,线性边界
+Point,Post-turn/delay,P202/P204,L,D=L+delay,"Sym(L,D)",P203,Polyline #4; Group,无next-heading
+Omni,Initial/Straight,P420/P422,S,D,"Sym(S,D) when early",P421,Polyline optional,A7调用b=0
+Omni,Turn-initiation,P420/P422,D,K,"Sym(D,K)",P421,Polyline #1; Group,固定15度
+Omni,Turn,P420/P422,K,F,"Sym(K,F)",P421,Polyline #2; Group,固定30度；C1-C5
+Omni,Post-turn,P420/P422,F,circle carrier,circle,P421,Circle+Radius WsObject,非后航迹

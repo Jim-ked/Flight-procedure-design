@@ -1,0 +1,72 @@
+METHOD 060002E0 \x89\x89.\x89\x88::\x87\x8e\x8f RVA=311AC file=2F3AC
+IL_0000: ldc.i4 436
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 217
+IL_000F: ldc.r8 57.29577951308232
+IL_0018: stloc.0 
+IL_0019: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_001E: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0023: brtrue.s 153
+IL_0025: pop 
+IL_0026: ldc.i4 3580
+IL_002B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0030: ldarg.1 
+IL_0031: ldloc.0 
+IL_0032: mul 
+IL_0033: ldc.i4.0 
+IL_0034: call 0x0A0001C8 System.Math::Round
+IL_0039: stloc.1 
+IL_003A: ldloca.s local(0x0001)
+IL_003C: call 0x0A0001B7 System.Double::ToString
+IL_0041: call 0x0A00008B System.String::Concat
+IL_0046: stloc.2 
+IL_0047: ldloc.2 
+IL_0048: ldc.i4 3584
+IL_004D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0052: ldarg.2 
+IL_0053: ldloc.0 
+IL_0054: mul 
+IL_0055: ldc.i4.0 
+IL_0056: call 0x0A0001C8 System.Math::Round
+IL_005B: stloc.1 
+IL_005C: ldloca.s local(0x0001)
+IL_005E: call 0x0A0001B7 System.Double::ToString
+IL_0063: call 0x0A00003C System.String::Concat
+IL_0068: stloc.2 
+IL_0069: ldloc.2 
+IL_006A: ldc.i4 3588
+IL_006F: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0074: ldarg.3 
+IL_0075: ldloc.0 
+IL_0076: mul 
+IL_0077: ldc.i4.0 
+IL_0078: call 0x0A0001C8 System.Math::Round
+IL_007D: stloc.1 
+IL_007E: ldloca.s local(0x0001)
+IL_0080: call 0x0A0001B7 System.Double::ToString
+IL_0085: call 0x0A00003C System.String::Concat
+IL_008A: stloc.2 
+IL_008B: br.s 161
+IL_008D: pop 
+IL_008E: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0093: brtrue.s 161
+IL_0095: ldloc.2 
+IL_0096: ldc.i4 3592
+IL_009B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00A0: ldarg.s argument(0x0004)
+IL_00A2: ldloc.0 
+IL_00A3: mul 
+IL_00A4: ldc.i4.0 
+IL_00A5: call 0x0A0001C8 System.Math::Round
+IL_00AA: stloc.1 
+IL_00AB: ldloca.s local(0x0001)
+IL_00AD: call 0x0A0001B7 System.Double::ToString
+IL_00B2: call 0x0A00003C System.String::Concat
+IL_00B7: stloc.2 
+IL_00B8: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_00BD: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_00C2: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_00C7: ldloc.2 
+IL_00C8: callvirt 0x0A000041 Autodesk.AutoCAD.EditorInput.Editor::WriteMessage
+IL_00CD: ret 
+

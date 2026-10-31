@@ -1,0 +1,33 @@
+METHOD 060007BF \x8f\x89.\x8f\x88::\x8b\x86\x9a RVA=91584 file=8F784
+IL_0000: ldarg.1 
+IL_0001: ldc.r8 6.283185307179586
+IL_000A: add 
+IL_000B: ldc.r8 6.283185307179586
+IL_0014: rem 
+IL_0015: stloc.0 
+IL_0016: ldc.i4.1 
+IL_0017: call 0x060007C7 \x8f\x89.\x8f\x88::\x89o
+IL_001C: brtrue.s 67
+IL_001E: pop 
+IL_001F: ldarg.2 
+IL_0020: ldc.r8 6.283185307179586
+IL_0029: add 
+IL_002A: ldc.r8 6.283185307179586
+IL_0033: rem 
+IL_0034: stloc.1 
+IL_0035: br.s 68
+IL_0037: pop 
+IL_0038: ldloc.0 
+IL_0039: ldloc.1 
+IL_003A: bge.un.s 86
+IL_003C: ldloc.0 
+IL_003D: ldloc.1 
+IL_003E: sub 
+IL_003F: ldc.r8 6.283185307179586
+IL_0048: add 
+IL_0049: ret 
+IL_004A: ldloc.0 
+IL_004B: ldloc.1 
+IL_004C: sub 
+IL_004D: ret 
+

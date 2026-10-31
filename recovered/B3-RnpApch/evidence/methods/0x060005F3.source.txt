@@ -1,0 +1,7 @@
+73247: 		public static double _008A_008B_009B(double P_0, double P_1, double P_2)
+73248: 		{
+73249: 			double num = P_1 - 15.0 + P_0 * 0.0065;
+73250: 			double num2 = -0.0065;
+73251: 			double num3 = 288.15;
+73252: 			return (0.0 - num / num2) * Math.Log(1.0 + num2 * P_2 / (num3 + num2 * P_0));
+73253: 		}

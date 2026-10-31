@@ -1,0 +1,224 @@
+7283: 	public class _0088_009B : Form
+7284: 	{
+7285: 		private double[,] _0098_0097;
+7286: 
+7287: 		private IContainer _0098_0098;
+7288: 
+7289: 		private TabControl _0098_0099;
+7290: 
+7291: 		private TabPage _0098_009A;
+7292: 
+7293: 		private TabPage _0098_009B;
+7294: 
+7295: 		private TabPage _0098_009C;
+7296: 
+7297: 		private TabPage _0098_009D;
+7298: 
+7299: 		private TabPage _0098_009E;
+7300: 
+7301: 		private TabPage _0099_0086;
+7302: 
+7303: 		private GroupBox _0099_0087;
+7304: 
+7305: 		private Label _0099_0088;
+7306: 
+7307: 		private GroupBox _0099_0089;
+7308: 
+7309: 		private TextBox _0099_008A;
+7310: 
+7311: 		private Label _0099_008B;
+7312: 
+7313: 		private TextBox _0099_008C;
+7314: 
+7315: 		private TextBox _0099_008D;
+7316: 
+7317: 		private Label _0099_008E;
+7318: 
+7319: 		private GroupBox _0099_008F;
+7320: 
+7321: 		private PictureBox _0099_0090;
+7322: 
+7323: 		private CheckBox _0099_0091;
+7324: 
+7325: 		private GroupBox _0099_0092;
+7326: 
+7327: 		private GroupBox _0099_0093;
+7328: 
+7329: 		private Label _0099_0094;
+7330: 
+7331: 		private Label _0099_0095;
+7332: 
+7333: 		private Label _0099_0096;
+7334: 
+7335: 		private TextBox _0099_0097;
+7336: 
+7337: 		private Label _0099_0098;
+7338: 
+7339: 		private Label _0099_0099;
+7340: 
+7341: 		private TextBox _0099_009A;
+7342: 
+7343: 		private Label _0099_009B;
+7344: 
+7345: 		private TextBox _0099_009C;
+7346: 
+7347: 		private TextBox _0099_009D;
+7348: 
+7349: 		private TextBox _0099_009E;
+7350: 
+7351: 		private TextBox _009A_0086;
+7352: 
+7353: 		private Button _009A_0087;
+7354: 
+7355: 		private CheckBox _009A_0088;
+7356: 
+7357: 		private GroupBox _009A_0089;
+7358: 
+7359: 		private TextBox _009A_008A;
+7360: 
+7361: 		private Label _009A_008B;
+7362: 
+7363: 		private Label _009A_008C;
+7364: 
+7365: 		private Label _009A_008D;
+7366: 
+7367: 		private GroupBox _009A_008E;
+7368: 
+7369: 		private TextBox _009A_008F;
+7370: 
+7371: 		private TextBox _009A_0090;
+7372: 
+7373: 		private Label _009A_0091;
+7374: 
+7375: 		private TextBox _009A_0092;
+7376: 
+7377: 		private Button _009A_0093;
+7378: 
+7379: 		private CheckBox _009A_0094;
+7380: 
+7381: 		private GroupBox _009A_0095;
+7382: 
+7383: 		private TextBox _009A_0096;
+7384: 
+7385: 		private Label _009A_0097;
+7386: 
+7387: 		private Label _009A_0098;
+7388: 
+7389: 		private Label _009A_0099;
+7390: 
+7391: 		private GroupBox _009A_009A;
+7392: 
+7393: 		private TextBox _009A_009B;
+7394: 
+7395: 		private TextBox _009A_009C;
+7396: 
+7397: 		private Label _009A_009D;
+7398: 
+7399: 		private TextBox _009A_009E;
+7400: 
+7401: 		private Button _009B_0086;
+7402: 
+7403: 		private CheckBox _009B_0087;
+7404: 
+7405: 		private Button _009B_0088;
+7406: 
+7407: 		private GroupBox _009B_0089;
+7408: 
+7409: 		private PictureBox _009B_008A;
+7410: 
+7411: 		private GroupBox _009B_008B;
+7412: 
+7413: 		private PictureBox _009B_008C;
+7414: 
+7415: 		private CheckBox _009B_008D;
+7416: 
+7417: 		private Button _009B_008E;
+7418: 
+7419: 		private ComboBox _009B_008F;
+7420: 
+7421: 		private Label _009B_0090;
+7422: 
+7423: 		private Label _009B_0091;
+7424: 
+7425: 		private Label _009B_0092;
+7426: 
+7427: 		private Label _009B_0093;
+7428: 
+7429: 		private Label _009B_0094;
+7430: 
+7431: 		private TextBox _009B_0095;
+7432: 
+7433: 		private TextBox _009B_0096;
+7434: 
+7435: 		private TextBox _009B_0097;
+7436: 
+7437: 		private TextBox _009B_0098;
+7438: 
+7439: 		private GroupBox _009B_0099;
+7440: 
+7441: 		private ComboBox _009B_009A;
+7442: 
+7443: 		private ComboBox _009B_009B;
+7444: 
+7445: 		private TextBox _009B_009C;
+7446: 
+7447: 		private Label _009B_009D;
+7448: 
+7449: 		private TextBox _009B_009E;
+7450: 
+7451: 		private Label _009C_0086;
+7452: 
+7453: 		private Label _009C_0087;
+7454: 
+7455: 		private Label _009C_0088;
+7456: 
+7457: 		private GroupBox _009C_0089;
+7458: 
+7459: 		private PictureBox _009C_008A;
+7460: 
+7461: 		private GroupBox _009C_008B;
+7462: 
+7463: 		private PictureBox _009C_008C;
+7464: 
+7465: 		private GroupBox _009C_008D;
+7466: 
+7467: 		private PictureBox _009C_008E;
+7468: 
+7469: 		private Button _009C_008F;
+7470: 
+7471: 		private CheckBox _009C_0090;
+7472: 
+7473: 		private GroupBox _009C_0091;
+7474: 
+7475: 		private _008F_0098 _009C_0092;
+7476: 
+7477: 		private _008F_0098 _009C_0093;
+7478: 
+7479: 		private TextBox _009C_0094;
+7480: 
+7481: 		private Label _009C_0095;
+7482: 
+7483: 		private TextBox _009C_0096;
+7484: 
+7485: 		private Label _009C_0097;
+7486: 
+7487: 		public _0088_009B()
+7488: 		{
+7489: 			_ = 0;
+7490: 			if (_0087_0095())
+7491: 			{
+7492: 				_0098_0097 = new double[5, 2]
+7493: 				{
+7494: 					{ 35.0, 8.0 },
+7495: 					{ 40.0, 13.0 },
+7496: 					{ 43.0, 18.0 },
+7497: 					{ 46.0, 22.0 },
+7498: 					{ 49.0, 26.0 }
+7499: 				};
+7500: 			}
+7501: 			base._002Ector();
+7502: 			_0098_0096();
+7503: 		}
+7504: 
+7505: 		[DllImport("user32.dll", EntryPoint = "SetFocus")]
+7506: 		public static extern int _0097_0096(IntPtr P_0);

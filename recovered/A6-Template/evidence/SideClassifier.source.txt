@@ -1,0 +1,113 @@
+81833: 	public class _008E_009D
+81834: 	{
+81835: 		private double _008A_009E_008C;
+81836: 
+81837: 		private double _008A_009E_008D;
+81838: 
+81839: 		private int _008A_009E_008E;
+81840: 
+81841: 		[CompilerGenerated]
+81842: 		private double _008A_009E_008F;
+81843: 
+81844: 		[SpecialName]
+81845: 		[CompilerGenerated]
+81846: 		public double _008A_009E_0089()
+81847: 		{
+81848: 			return _008A_009E_008F;
+81849: 		}
+81850: 
+81851: 		[SpecialName]
+81852: 		[CompilerGenerated]
+81853: 		public void _008A_009E_008A(double P_0)
+81854: 		{
+81855: 			_008A_009E_008F = P_0;
+81856: 		}
+81857: 
+81858: 		public _008E_009D(double P_0, double P_1, int P_2 = 1, double P_3 = 0.0)
+81859: 		{
+81860: 			_008A_009E_008C = P_0;
+81861: 			_008A_009E_008D = P_1;
+81862: 			_ = 1;
+81863: 			if (!_0089k())
+81864: 			{
+81865: 				_008A_009E_008E = P_2;
+81866: 			}
+81867: 			_008A_009E_008A(P_3);
+81868: 		}
+81869: 
+81870: 		public int _008A_009E_0088(double P_0, double P_1)
+81871: 		{
+81872: 			double num = default(double);
+81873: 			if (!false /* original-file-bool-offset:1356 */)
+81874: 			{
+81875: 				double x = P_0 - _008A_009E_008C;
+81876: 				if (!_0089k())
+81877: 				{
+81878: 					num = Math.Atan2(P_1 - _008A_009E_008D, x);
+81879: 					num = _008F_008A._008B_0088_0088(num - _008A_009E_0089());
+81880: 					num *= (double)_008A_009E_008E;
+81881: 					_ = 0;
+81882: 					if (!_0089j())
+81883: 					{
+81884: 						goto IL_00a4;
+81885: 					}
+81886: 					if (!(num >= 0.0) || !(num < Math.PI / 2.0))
+81887: 					{
+81888: 						if (num >= Math.PI / 2.0)
+81889: 						{
+81890: 							goto IL_0072;
+81891: 						}
+81892: 						goto IL_0080;
+81893: 					}
+81894: 				}
+81895: 				return 1;
+81896: 			}
+81897: 			goto IL_0072;
+81898: 			IL_0091:
+81899: 			if (num >= -Math.PI / 2.0)
+81900: 			{
+81901: 				if (!_0089j())
+81902: 				{
+81903: 					goto IL_00a4;
+81904: 				}
+81905: 				if (num < 0.0)
+81906: 				{
+81907: 					return 4;
+81908: 				}
+81909: 			}
+81910: 			return 0;
+81911: 			IL_0080:
+81912: 			if (!(num >= -Math.PI))
+81913: 			{
+81914: 				goto IL_0091;
+81915: 			}
+81916: 			goto IL_00a4;
+81917: 			IL_00a4:
+81918: 			if (num < -Math.PI / 2.0)
+81919: 			{
+81920: 				return 3;
+81921: 			}
+81922: 			goto IL_0091;
+81923: 			IL_0072:
+81924: 			if (num < Math.PI)
+81925: 			{
+81926: 				return 2;
+81927: 			}
+81928: 			goto IL_0080;
+81929: 		}
+81930: 
+81931: 		static _008E_009D()
+81932: 		{
+81933: 			LicenseManager.Validate(typeof(_008E_009D));
+81934: 		}
+81935: 
+81936: 		internal static bool _0089j()
+81937: 		{
+81938: 			return true;
+81939: 		}
+81940: 
+81941: 		internal static bool _0089k()
+81942: 		{
+81943: 			return false;
+81944: 		}
+81945: 	}

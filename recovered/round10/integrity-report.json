@@ -1,0 +1,42 @@
+{
+  "status": "PASS",
+  "baseline_count": 7029,
+  "missing_frozen_files": [],
+  "changed_frozen_files": [],
+  "old_closure_modified": false,
+  "old_test_inputs_checked": true,
+  "target_runtime_executed": false,
+  "new_output_directories": [
+    "recovered/system-coverage",
+    "recovered/round10"
+  ],
+  "spot_checks": [
+    {
+      "reason": "34 CommandMethod classification",
+      "files_examined": [
+        "reverse-analysis/04_type-map/raw/commands.csv",
+        "reverse-analysis/03_recovered-src/ilspy-original/-/-.cs",
+        "WsTools-master/WindSpiral2026/帮助文件/index.html"
+      ],
+      "result": "34 rows classified without new module recovery"
+    },
+    {
+      "reason": "orphan incoming status",
+      "files_examined": [
+        "recovered/A5-PrecisionApproach/event-map.md",
+        "recovered/B3-RnpApch/overview.md",
+        "recovered/B4-PbnIls/overview.md",
+        "recovered/B5-PbnDeparture/overview.md"
+      ],
+      "result": "orphan/prompt-only status retained; no UI connection added"
+    },
+    {
+      "reason": "A4/A6 shared primitive wording",
+      "files_examined": [
+        "recovered/round9/a6-a4-comparison.csv",
+        "recovered/A4-NavAidProtection/evidence/cross-module-shared-calls.csv"
+      ],
+      "result": "method-specific sharing only"
+    }
+  ]
+}

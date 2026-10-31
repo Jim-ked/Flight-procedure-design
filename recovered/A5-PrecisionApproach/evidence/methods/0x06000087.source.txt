@@ -1,0 +1,45 @@
+1458: 		public static void _0088_008B(Database P_0, List<List<_008F_008E>> P_1, string P_2 = "")
+1459: 		{
+1460: 			//IL_002b: Unknown result type (might be due to invalid IL or missing references)
+1461: 			//IL_0031: Expected O, but got Unknown
+1462: 			//IL_0044: Unknown result type (might be due to invalid IL or missing references)
+1463: 			//IL_0049: Unknown result type (might be due to invalid IL or missing references)
+1464: 			//IL_0056: Expected O, but got Unknown
+1465: 			//IL_005d: Expected O, but got Unknown
+1466: 			//IL_0058: Unknown result type (might be due to invalid IL or missing references)
+1467: 			//IL_005d: Unknown result type (might be due to invalid IL or missing references)
+1468: 			//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+1469: 			//IL_0082: Unknown result type (might be due to invalid IL or missing references)
+1470: 			if (false /* original-file-bool-offset:44 */)
+1471: 			{
+1472: 				return;
+1473: 			}
+1474: 			DocumentLock val = Application.DocumentManager.MdiActiveDocument.LockDocument();
+1475: 			try
+1476: 			{
+1477: 				Transaction val2 = P_0.TransactionManager.StartTransaction();
+1478: 				try
+1479: 				{
+1480: 					Group val3 = new Group();
+1481: 					foreach (List<_008F_008E> item in P_1)
+1482: 					{
+1483: 						Polyline val4 = new Polyline();
+1484: 						_0087_0088._008C_008F(val4, item._008C_008B());
+1485: 						ObjectId val5 = _0088_008D((Entity)val4, P_0, P_2);
+1486: 						val3.Append(val5);
+1487: 					}
+1488: 					P_0.AddDBObject((DBObject)(object)val3);
+1489: 					val2.AddNewlyCreatedDBObject((DBObject)(object)val3, true);
+1490: 					val2.Commit();
+1491: 					Application.UpdateScreen();
+1492: 				}
+1493: 				finally
+1494: 				{
+1495: 					((IDisposable)val2)?.Dispose();
+1496: 				}
+1497: 			}
+1498: 			finally
+1499: 			{
+1500: 				((IDisposable)val)?.Dispose();
+1501: 			}
+1502: 		}

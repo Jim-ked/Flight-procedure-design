@@ -1,0 +1,7 @@
+﻿Function,HelpEvidence,UIEvidence,CodeEvidence,Consistency,Finding,Evidence
+Cross fix,Help says two bearings/distances,one station + direction point,P20E two GetPoint; no second facility,HELP_OVRSTATES_BUILD,Help overstates automatic cross-fix,FixTolerance.html; downstream-consumption.md
+DME,Help says DME/specified distance,DME/Distance/Suffix controls,"r/1852, .0125r+460, three Arc",CONSISTENT,DME branch exists,dme-final.md
+KK,Help lists KK line,checkBoxkk,"two transverse Lines, 9260 half-length",CONSISTENT,tolerance helper geometry,kk-final.md
+Overhead,Help describes blind zone,"VOR/NDB, Height, HalfAngle",Circle plus optional lines,CONSISTENT,formula and cancellation recovered,geometry-chain.md
+Track guidance,Help lists track line/tolerance,checkBoxTrack/checkBox2,reference or blind-track lines,CONSISTENT,"drawing aid, not full model",track-guidance.md
+Facility types,Help mentions VOR/NDB/DME,VOR/ILS/NDB plus DME checkbox,no LOC/TACAN/GNSS,HELP_OVRSTATES_BUILD,unsupported types absent,facility-matrix.csv

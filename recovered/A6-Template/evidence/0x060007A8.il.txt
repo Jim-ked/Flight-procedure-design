@@ -1,0 +1,11 @@
+METHOD 060007A8 \x8f\x87.\x8f\x86::\x8a\x9e\x96 RVA=5E88 file=4088
+IL_0000: ldarg.0 
+IL_0001: ldarg.0 
+IL_0002: ldfld 0x0400075C \x8f\x87.\x8f\x86::\x8b\x86\x88
+IL_0007: ldarg.1 
+IL_0008: ldarg.0 
+IL_0009: ldfld 0x04000764 \x8f\x87.\x8f\x86::\x8b\x86\x90
+IL_000E: conv.r8 
+IL_000F: call 0x060007AE \x8f\x87.\x8f\x86::\x8a\x9e\x9c
+IL_0014: ret 
+

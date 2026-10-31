@@ -1,0 +1,16 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildThisFileDirectory)..\..\Directory.Build.props" Condition="Exists('$(MSBuildThisFileDirectory)..\..\Directory.Build.props')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup><ProjectGuid>{F5DA6F19-53AB-4A1B-8E44-8E2B4AAB7507}</ProjectGuid><OutputType>Exe</OutputType><RootNamespace>Fpd.RuleConformance.Tests</RootNamespace><AssemblyName>Fpd.RuleConformance.Tests</AssemblyName><TargetFrameworkVersion>v4.0</TargetFrameworkVersion><OutputPath>bin\$(Configuration)\</OutputPath><IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath></PropertyGroup>
+  <ItemGroup><Reference Include="System" /><Reference Include="System.Core" /></ItemGroup>
+  <ItemGroup><Reference Include="Fpd.Domain"><HintPath>..\..\src\Fpd.Domain\bin\$(Configuration)\Fpd.Domain.dll</HintPath></Reference><Reference Include="Fpd.Engine"><HintPath>..\..\src\Fpd.Engine\bin\$(Configuration)\Fpd.Engine.dll</HintPath></Reference></ItemGroup>
+  <ItemGroup><Compile Include="**\*.cs" Exclude="bin\**;obj\**" /></ItemGroup>
+</Project>
+
+
+
+
+
+
+
+

@@ -1,0 +1,10 @@
+﻿Feature,B1,B2,Relationship,MethodDef evidence
+P793,shared turn-parameter reader/object,shared turn-parameter reader/object,SAME_METHODDEF,GeometryPrimitives/turn-parameter.md; shared-turn-spiral-calls.csv
+Spiral86,_008F_0086 point/sample/radius helpers,_008F_0086 point/sample/radius helpers,SAME_METHODDEF,common-tangent.md; shared-turn-spiral-calls.csv
+point-to-spiral,shared P7AD-family candidate/iteration,shared P7AD-family candidate/iteration,SAME_METHODDEF,common-tangent.md
+line carrier,private _008C_0087 line/candidate logic,private _008C_0089 line/candidate logic,COPIED_IMPLEMENTATION,B1 geometry.md; B2 geometry.md
+boundary class,_008C_0087,_008C_0089,DIFFERENT,B1/B2 overview.md; writer evidence
+writer,_0089_0089_009A; KK/NN branches,_0089_008B_008B; primary/secondary branches,DIFFERENT,B1/B2 cad-writer.md
+ATT,"middle descriptor, user ATT","center descriptor, user ATT",SIMILAR_MATH,B1/B2 input-frame.md
+earliest/latest,ATT+n; n-ATT-delay,ATT; -ATT-delay,DIFFERENT,B1/B2 geometry.md
+tolerance widths,SW1 and SW2 independent descriptors,common SW width from textBoxSW,DIFFERENT,B1/B2 input-frame.md

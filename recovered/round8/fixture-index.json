@@ -1,0 +1,65 @@
+{
+  "numeric_counts": {
+    "database": 406,
+    "cross-module": 810,
+    "formula": 437,
+    "surface": 311,
+    "geometry": 975,
+    "mode-dispatch": 15,
+    "serialization": 14,
+    "degenerate": 12
+  },
+  "numeric_total": 2980,
+  "static_layer": "event/reachability",
+  "static_count": 32,
+  "files": [
+    {
+      "path": "recovered\\round8\\fixtures\\a5-parameters.txt",
+      "size": 509,
+      "sha256": "c31faeb33ad4bce3f192c5572bacfd3f3ad6c1a063d84eeea63ce016a29a06dd",
+      "role": "independent source fixture/result; see verification.md"
+    },
+    {
+      "path": "recovered\\round8\\fixtures\\assertions.csv",
+      "size": 167997,
+      "sha256": "39452ab773a3027690c855ec5f1ab541f1883bcb5707210735a40850c5dd0473",
+      "role": "independent source fixture/result; see verification.md"
+    },
+    {
+      "path": "recovered\\round8\\fixtures\\auto-lists.json",
+      "size": 17,
+      "sha256": "0f673c34c265d45c75eafbc440cca1c19319c57fd031e201e884011ad14fc40f",
+      "role": "independent source fixture/result; see verification.md"
+    },
+    {
+      "path": "recovered\\round8\\fixtures\\database-rows.tsv",
+      "size": 5171,
+      "sha256": "e9c740090e5c6f918be04530a06ae0849b46715cd2a5bd86cca8f2c5be7ebd7a",
+      "role": "independent source fixture/result; see verification.md"
+    },
+    {
+      "path": "recovered\\round8\\fixtures\\geometry-points.csv",
+      "size": 18433,
+      "sha256": "39ea01a98901ac6db4440bd27c248ff049603bfa8e2dfcba1d52bbfd3e310788",
+      "role": "independent source fixture/result; see verification.md"
+    },
+    {
+      "path": "recovered\\round8\\fixtures\\historical-failure.txt",
+      "size": 200,
+      "sha256": "5abeb15f450b948806fcfefab5602c0141b7d10446bf1a0a6b2022ae274b5e27",
+      "role": "historical, superseded test expectation failure; current run passed"
+    },
+    {
+      "path": "recovered\\round8\\fixtures\\mode-lists.csv",
+      "size": 243,
+      "sha256": "51ef24c15676a59bf5964f07510105ccc7527913ceef2dbb7b0c68ff4ae6acb7",
+      "role": "independent source fixture/result; see verification.md"
+    },
+    {
+      "path": "recovered\\round8\\fixtures\\numeric-counts.json",
+      "size": 132,
+      "sha256": "d0961509704e31b19d008c47d976279fea96f88a27bd54fc3c63a3e5fb228867",
+      "role": "independent source fixture/result; see verification.md"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+METHOD 0600009F \x8c.\x8b::\x89\x8a RVA=A1F8 file=83F8
+IL_0000: call 0x060000A5 \x8c.\x8b::\x8f
+IL_0005: call 0x060000A6 \x8c.\x8b::\x90
+IL_000A: brtrue.s 42
+IL_000C: pop 
+IL_000D: ldc.i4 72
+IL_0012: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_0017: brfalse 254
+IL_001C: br.s 53
+IL_001E: pop 
+IL_001F: call 0x060000A5 \x8c.\x8b::\x8f
+IL_0024: brfalse 255
+IL_0029: ldarga.s argument(0x0000)
+IL_002B: call 0x0A000106 Autodesk.AutoCAD.DatabaseServices.ObjectId::get_IsNull
+IL_0030: brtrue 255
+IL_0035: ldarga.s argument(0x0000)
+IL_0037: call 0x0A000107 Autodesk.AutoCAD.DatabaseServices.ObjectId::get_IsValid
+IL_003C: brfalse 255
+IL_0041: ldarg.1 
+IL_0042: brtrue.s 81
+IL_0044: ret 
+IL_0045: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_004A: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_004F: dup 
+IL_0050: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_0055: stloc.0 
+IL_0056: callvirt 0x0A00009A Autodesk.AutoCAD.ApplicationServices.Document::LockDocument
+IL_005B: stloc.1 
+IL_005C: ldloc.0 
+IL_005D: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_0062: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_0067: stloc.2 
+IL_0068: ldloc.2 
+IL_0069: ldarg.0 
+IL_006A: ldc.i4.0 
+IL_006B: callvirt 0x0A000080 Autodesk.AutoCAD.DatabaseServices.Transaction::GetObject
+IL_0070: isinst 0x01000019 Autodesk.AutoCAD.DatabaseServices.BlockReference
+IL_0075: callvirt 0x0A000109 Autodesk.AutoCAD.DatabaseServices.BlockReference::get_DynamicBlockReferencePropertyCollection
+IL_007A: callvirt 0x0A00010A Autodesk.AutoCAD.DatabaseServices.DynamicBlockReferencePropertyCollection::GetEnumerator
+IL_007F: stloc.3 
+IL_0080: nop 
+IL_0081: br.s 180
+IL_0083: ldloc.3 
+IL_0084: callvirt 0x0A0000E4 System.Collections.IEnumerator::get_Current
+IL_0089: castclass 0x010000FD Autodesk.AutoCAD.DatabaseServices.DynamicBlockReferenceProperty
+IL_008E: stloc.s local(0x0004)
+IL_0090: ldc.i4.0 
+IL_0091: call 0x060000A5 \x8c.\x8b::\x8f
+IL_0096: brfalse.s 190
+IL_0098: pop 
+IL_0099: ldloc.s local(0x0004)
+IL_009B: callvirt 0x0A00010B Autodesk.AutoCAD.DatabaseServices.DynamicBlockReferenceProperty::get_PropertyName
+IL_00A0: ldarg.1 
+IL_00A1: call 0x0A000108 System.String::op_Equality
+IL_00A6: brtrue.s 191
+IL_00A8: ldloc.3 
+IL_00A9: callvirt 0x0A0000E6 System.Collections.IEnumerator::MoveNext
+IL_00AE: brtrue.s 143
+IL_00B0: leave.s 226
+IL_00B2: pop 
+IL_00B3: ldloc.s local(0x0004)
+IL_00B5: ldarg.2 
+IL_00B6: box 0x010000D2 System.Double
+IL_00BB: callvirt 0x0A00010C Autodesk.AutoCAD.DatabaseServices.DynamicBlockReferenceProperty::set_Value
+IL_00C0: leave.s 226
+IL_00C2: ldloc.3 
+IL_00C3: isinst 0x010000DB System.IDisposable
+IL_00C8: stloc.s local(0x0005)
+IL_00CA: ldloc.s local(0x0005)
+IL_00CC: brfalse.s 225
+IL_00CE: ldloc.s local(0x0005)
+IL_00D0: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00D5: endfinally 
+IL_00D6: ldloc.2 
+IL_00D7: callvirt 0x0A0000A4 Autodesk.AutoCAD.DatabaseServices.Transaction::Commit
+IL_00DC: leave.s 254
+IL_00DE: ldloc.2 
+IL_00DF: brfalse.s 243
+IL_00E1: ldloc.2 
+IL_00E2: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00E7: endfinally 
+IL_00E8: ldloc.1 
+IL_00E9: brfalse.s 253
+IL_00EB: ldloc.1 
+IL_00EC: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00F1: endfinally 
+IL_00F2: ret 
+IL_00F3: ret 
+

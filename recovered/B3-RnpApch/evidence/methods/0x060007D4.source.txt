@@ -1,0 +1,12 @@
+83668: 		public static double _008B_0087_009D(string P_0, string P_1 = "输入数据有误，请检查。")
+83669: 		{
+83670: 			try
+83671: 			{
+83672: 				return Convert.ToDouble(P_0);
+83673: 			}
+83674: 			catch
+83675: 			{
+83676: 				MessageBox.Show(P_0 + " " /* string-offset:584 */ + P_1, "数据错误" /* string-offset:4984 */, MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+83677: 				return 0.0;
+83678: 			}
+83679: 		}

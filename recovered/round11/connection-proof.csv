@@ -1,0 +1,7 @@
+﻿Mode,Connection/relationship,Code evidence,Classification,Automatic/manual,Limit
+All,DER/THR to local frame,P0AC+P0AD,line carrier,automatic after manual picks,DER origin; absolute Z restored
+Altitude,S-K and K-L,P1FD Sym,shared vertex,automatic,no boolean union/trim/offset
+Point,S-TP/E-TP/TP-L/L-D,P204 Sym,shared vertex; overlapping polygons,automatic,no intersection resolver
+Omni,D-K-K-F and circle,P422 Sym + P089,line carrier; outer circle,automatic,no tangent/clip/union
+All,A2/A3 to A7,P287/P28A/P28B; no semantic reader,manual repick,manual,cannot infer intended point
+All,boundary merge,no IntersectWith/Offset/trim/hull/delete,independent overlapping polygons,not code-driven,manual drawing unobserved

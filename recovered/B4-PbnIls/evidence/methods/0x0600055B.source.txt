@@ -1,0 +1,46 @@
+61010: 		private void _0089_0095_0099(object P_0, EventArgs P_1)
+61011: 		{
+61012: 			if (!true /* original-file-bool-offset:1052 */)
+61013: 			{
+61014: 				return;
+61015: 			}
+61016: 			_ = 0;
+61017: 			if (!_0088_009D() || _0089_0097_008B == null || _0089_0097_008B.Count == 0)
+61018: 			{
+61019: 				return;
+61020: 			}
+61021: 			_008F_008E obj = new _008F_008E();
+61022: 			_008F_008E obj2 = new _008F_008E();
+61023: 			obj.X = _008F_008A._008B_0087_009D(_0089_0097_009A.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+61024: 			obj.Y = _008F_008A._008B_0087_009D(_0089_0097_0099.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+61025: 			obj2.X = _008F_008A._008B_0087_009D(_0089_0098_008B.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+61026: 			obj2.Y = _008F_008A._008B_0087_009D(_0089_0098_0089.Text, "输入数据有误，请检查。" /* string-offset:1984 */);
+61027: 			_008E_0097 obj3 = _008D._0089_008F(obj, obj2);
+61028: 			List<_008A_008D> list = new List<_008A_008D>();
+61029: 			int num = 1;
+61030: 			using (List<DBPoint>.Enumerator enumerator = _0089_0097_008B.GetEnumerator())
+61031: 			{
+61032: 				_008A_008D item = default(_008A_008D);
+61033: 				for (; enumerator.MoveNext(); list.Add(item))
+61034: 				{
+61035: 					_008F_008E obj4 = enumerator.Current._008C_008D(num.ToString());
+61036: 					_ = 1;
+61037: 					if (!_0088_009E())
+61038: 					{
+61039: 						num++;
+61040: 					}
+61041: 					else if (!_0088_009D())
+61042: 					{
+61043: 						continue;
+61044: 					}
+61045: 					_008F_008E obj5 = _008D._0089_0090(obj3, obj4);
+61046: 					item = new _008A_008D(obj4)
+61047: 					{
+61048: 						X = obj5.X,
+61049: 						Y = obj5.Y
+61050: 					};
+61051: 				}
+61052: 			}
+61053: 			_0089_0097_0090.Text = "已转换" /* string-offset:3032 */ + list.Count + "个障碍物。" /* string-offset:2816 */;
+61054: 			_0089_0095_0096(list);
+61055: 		}

@@ -1,0 +1,49 @@
+METHOD 06000711 \x8e\x8e.\x8e\x8d::\x8a\x99\x91 RVA=8B304 file=89504
+IL_0000: ldc.i4.0 
+IL_0001: call 0x06000722 \x8e\x8e.\x8e\x8d::\x893
+IL_0006: brfalse.s 126
+IL_0008: pop 
+IL_0009: ldarg.0 
+IL_000A: call 0x0A000134 System.String::IsNullOrEmpty
+IL_000F: brtrue.s 127
+IL_0011: nop 
+IL_0012: nop 
+IL_0013: ldtoken 0x0200007F \x8e\x8e.\x8e\x8d
+IL_0018: call 0x0A000031 System.Type::GetTypeFromHandle
+IL_001D: newobj 0x0A0003A0 System.Runtime.Serialization.Json.DataContractJsonSerializer::.ctor
+IL_0022: stloc.0 
+IL_0023: call 0x0A000306 System.Text.Encoding::get_UTF8
+IL_0028: ldarg.0 
+IL_0029: callvirt 0x0A00036B System.Text.Encoding::GetBytes
+IL_002E: newobj 0x0A0003A5 System.IO.MemoryStream::.ctor
+IL_0033: stloc.1 
+IL_0034: ldloc.0 
+IL_0035: ldloc.1 
+IL_0036: callvirt 0x0A0003A6 System.Runtime.Serialization.XmlObjectSerializer::ReadObject
+IL_003B: castclass 0x0200007F \x8e\x8e.\x8e\x8d
+IL_0040: stloc.2 
+IL_0041: leave.s 124
+IL_0043: ldloc.1 
+IL_0044: brfalse.s 88
+IL_0046: ldloc.1 
+IL_0047: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_004C: endfinally 
+IL_004D: stloc.3 
+IL_004E: ldc.i4 6776
+IL_0053: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0058: ldloc.3 
+IL_0059: callvirt 0x0A000055 System.Exception::get_Message
+IL_005E: call 0x0A00008B System.String::Concat
+IL_0063: call 0x06000633 \x8d\x89.\x8d\x88::\x8a\x90\x8d
+IL_0068: newobj 0x06000720 \x8e\x8e.\x8e\x8d::.ctor
+IL_006D: stloc.2 
+IL_006E: leave.s 124
+IL_0070: ldloc.2 
+IL_0071: ret 
+IL_0072: pop 
+IL_0073: ldc.i4 6908
+IL_0078: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_007D: call 0x06000633 \x8d\x89.\x8d\x88::\x8a\x90\x8d
+IL_0082: newobj 0x06000720 \x8e\x8e.\x8e\x8d::.ctor
+IL_0087: ret 
+

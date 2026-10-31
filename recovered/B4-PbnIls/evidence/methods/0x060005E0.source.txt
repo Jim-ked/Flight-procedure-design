@@ -1,0 +1,371 @@
+71916: 		public _008F_008E _008A_008A_008A(ref _008A_008D P_0)
+71917: 		{
+71918: 			double num = default(double);
+71919: 			string[] array = default(string[]);
+71920: 			int num3 = default(int);
+71921: 			double[] array2 = default(double[]);
+71922: 			string[] array3 = default(string[]);
+71923: 			int num5 = default(int);
+71924: 			double[] array4 = default(double[]);
+71925: 			int num6 = default(int);
+71926: 			string[] array5 = default(string[]);
+71927: 			int num7 = default(int);
+71928: 			double[] array6 = default(double[]);
+71929: 			string[] array7 = default(string[]);
+71930: 			int num8 = default(int);
+71931: 			double[] array8 = default(double[]);
+71932: 			double[] array9 = default(double[]);
+71933: 			string[] array10 = default(string[]);
+71934: 			while (true)
+71935: 			{
+71936: 				int num2;
+71937: 				if (!false /* original-file-bool-offset:1248 */)
+71938: 				{
+71939: 					num = ((P_0.Y > 0.0) ? P_0.Y : (0.0 - P_0.Y));
+71940: 					P_0._0088_0090_008A = "out" /* string-offset:1556 */;
+71941: 					_ = 0;
+71942: 					if (_0088n())
+71943: 					{
+71944: 						num2 = 13;
+71945: 						goto IL_03df;
+71946: 					}
+71947: 					goto IL_04b2;
+71948: 				}
+71949: 				num2 = 9;
+71950: 				goto IL_06f0;
+71951: 				IL_019e:
+71952: 				string text = array[num3];
+71953: 				double num4 = array2[num3];
+71954: 				num2 = 18;
+71955: 				if (!_0088n())
+71956: 				{
+71957: 					goto IL_01bd;
+71958: 				}
+71959: 				goto IL_02bc;
+71960: 				IL_0676:
+71961: 				text = array3[num5];
+71962: 				num4 = array4[num5];
+71963: 				num2 = 31;
+71964: 				goto IL_068b;
+71965: 				IL_017f:
+71966: 				if (num3 < array2.Length)
+71967: 				{
+71968: 					if (num4 < array2[num3])
+71969: 					{
+71970: 						num2 = 7;
+71971: 						goto IL_019e;
+71972: 					}
+71973: 					goto IL_02bc;
+71974: 				}
+71975: 				P_0._0088_0090_008A = ((num > 3704.0) ? "out" /* string-offset:1556 */ : text);
+71976: 				P_0._0088_0090_008D = Math.Max(0.0, (num - 1852.0) / 1852.0);
+71977: 				num2 = 0;
+71978: 				goto IL_074e;
+71979: 				IL_01e6:
+71980: 				num6++;
+71981: 				num2 = 22;
+71982: 				goto IL_01f5;
+71983: 				IL_015a:
+71984: 				array = new string[2]
+71985: 				{
+71986: 					"Z面" /* string-offset:5488 */,
+71987: 					"Z面副区" /* string-offset:6576 */
+71988: 				};
+71989: 				num3 = 0;
+71990: 				goto IL_017f;
+71991: 				IL_068b:
+71992: 				num5++;
+71993: 				num2 = 29;
+71994: 				goto IL_069a;
+71995: 				IL_04b2:
+71996: 				text = array5[num7];
+71997: 				num4 = array6[num7];
+71998: 				goto IL_0494;
+71999: 				IL_0494:
+72000: 				num7++;
+72001: 				num2 = 27;
+72002: 				if (_0088n())
+72003: 				{
+72004: 					goto IL_031e;
+72005: 				}
+72006: 				goto IL_03df;
+72007: 				IL_03df:
+72008: 				text = "入口平面" /* string-offset:5472 */;
+72009: 				num4 = 0.0;
+72010: 				num2 = 8;
+72011: 				goto IL_03c6;
+72012: 				IL_03c6:
+72013: 				if (!(P_0.X > _008A_008A_0093.X))
+72014: 				{
+72015: 					if (P_0.X > _008A_008A_0094.X)
+72016: 					{
+72017: 						array4 = new double[4]
+72018: 						{
+72019: 							_008A_008B_0090._008B_008B_008A(P_0.X, num),
+72020: 							_008A_008B_0091._008B_008B_008A(P_0.X, num),
+72021: 							_008A_008B_0092._008B_008B_008A(P_0.X, num),
+72022: 							_008A_008B_0093._008B_008B_008A(P_0.X, num)
+72023: 						};
+72024: 						num2 = 20;
+72025: 						goto IL_02c7;
+72026: 					}
+72027: 					if (P_0.X > _008A_008A_0095.X)
+72028: 					{
+72029: 						num2 = 14;
+72030: 						if (!_0088o())
+72031: 						{
+72032: 							goto IL_031e;
+72033: 						}
+72034: 						goto IL_0483;
+72035: 					}
+72036: 					if (P_0.X <= _008A_008A_0097.X)
+72037: 					{
+72038: 						array2 = new double[2]
+72039: 						{
+72040: 							_008A_008B_0093._008B_008B_008A(P_0.X, num),
+72041: 							_008A_008A_009B._008B_008B_008A(P_0.X, num)
+72042: 						};
+72043: 						num2 = 32;
+72044: 						goto IL_015a;
+72045: 					}
+72046: 					goto IL_0215;
+72047: 				}
+72048: 				num2 = 21;
+72049: 				goto IL_0408;
+72050: 				IL_02c7:
+72051: 				array3 = new string[4]
+72052: 				{
+72053: 					"W面" /* string-offset:5476 */,
+72054: 					"X面" /* string-offset:5480 */,
+72055: 					"Y面" /* string-offset:5484 */,
+72056: 					"Z面" /* string-offset:5488 */
+72057: 				};
+72058: 				goto IL_0303;
+72059: 				IL_0303:
+72060: 				num5 = 0;
+72061: 				num2 = 19;
+72062: 				if (_0088o())
+72063: 				{
+72064: 					goto IL_015a;
+72065: 				}
+72066: 				goto IL_069a;
+72067: 				IL_069a:
+72068: 				if (num5 < array4.Length)
+72069: 				{
+72070: 					if (num4 < array4[num5])
+72071: 					{
+72072: 						num2 = 15;
+72073: 						goto IL_0676;
+72074: 					}
+72075: 					goto IL_068b;
+72076: 				}
+72077: 				num2 = 30;
+72078: 				goto IL_06ab;
+72079: 				IL_06f0:
+72080: 				text = array7[num8];
+72081: 				num4 = array8[num8];
+72082: 				num2 = 28;
+72083: 				goto IL_0705;
+72084: 				IL_06ab:
+72085: 				P_0._0088_0090_008A = ((!(text == "Y面" /* string-offset:5484 */) || num <= _008A_008A_0099._008B_0088_008D(P_0.X)) ? text : "out" /* string-offset:1556 */);
+72086: 				goto IL_074e;
+72087: 				IL_0705:
+72088: 				num8++;
+72089: 				num2 = 23;
+72090: 				goto IL_0714;
+72091: 				IL_074e:
+72092: 				P_0._0088_0090_008B = num4;
+72093: 				num2 = 4;
+72094: 				goto IL_075f;
+72095: 				IL_0215:
+72096: 				array9 = new double[3]
+72097: 				{
+72098: 					_008A_008B_0092._008B_008B_008A(P_0.X, num),
+72099: 					_008A_008B_0093._008B_008B_008A(P_0.X, num),
+72100: 					_008A_008A_009B._008B_008B_008A(P_0.X, num)
+72101: 				};
+72102: 				array10 = new string[3]
+72103: 				{
+72104: 					"Y面" /* string-offset:5484 */,
+72105: 					"Z面" /* string-offset:5488 */,
+72106: 					"Z面副区" /* string-offset:6576 */
+72107: 				};
+72108: 				num6 = 0;
+72109: 				num2 = 25;
+72110: 				goto IL_01f5;
+72111: 				IL_01f5:
+72112: 				if (num6 < array9.Length)
+72113: 				{
+72114: 					if (num4 >= array9[num6])
+72115: 					{
+72116: 						goto IL_01e6;
+72117: 					}
+72118: 					num2 = 10;
+72119: 					goto IL_02a8;
+72120: 				}
+72121: 				num2 = 11;
+72122: 				if (_0088n())
+72123: 				{
+72124: 					goto IL_031e;
+72125: 				}
+72126: 				goto IL_05ec;
+72127: 				IL_0714:
+72128: 				if (num8 < array8.Length)
+72129: 				{
+72130: 					if (num4 < array8[num8])
+72131: 					{
+72132: 						goto IL_06f0;
+72133: 					}
+72134: 					goto IL_0705;
+72135: 				}
+72136: 				P_0._0088_0090_008A = ((!(text == "Y面" /* string-offset:5484 */) || num <= 3704.0) ? text : "out" /* string-offset:1556 */);
+72137: 				goto IL_074e;
+72138: 				IL_02bc:
+72139: 				num3++;
+72140: 				goto IL_017f;
+72141: 				IL_075f:
+72142: 				P_0._0088_0090_008C = P_0.Z - P_0._0088_0090_008B;
+72143: 				break;
+72144: 				IL_02a8:
+72145: 				text = array10[num6];
+72146: 				num2 = 16;
+72147: 				goto IL_01bd;
+72148: 				IL_01bd:
+72149: 				num4 = array9[num6];
+72150: 				num2 = 3;
+72151: 				if (!_0088o())
+72152: 				{
+72153: 					goto IL_031e;
+72154: 				}
+72155: 				goto IL_0714;
+72156: 				IL_031e:
+72157: 				switch (num2)
+72158: 				{
+72159: 				case 32:
+72160: 					break;
+72161: 				case 7:
+72162: 					goto IL_019e;
+72163: 				case 16:
+72164: 					goto IL_01bd;
+72165: 				case 3:
+72166: 					goto IL_01e6;
+72167: 				case 22:
+72168: 				case 25:
+72169: 					goto IL_01f5;
+72170: 				case 1:
+72171: 					goto IL_0215;
+72172: 				case 10:
+72173: 					goto IL_02a8;
+72174: 				case 18:
+72175: 					goto IL_02bc;
+72176: 				case 20:
+72177: 					goto IL_02c7;
+72178: 				case 33:
+72179: 					goto IL_0303;
+72180: 				default:
+72181: 					num2 = 12;
+72182: 					if (_0088o())
+72183: 					{
+72184: 						goto IL_03c6;
+72185: 					}
+72186: 					goto IL_0714;
+72187: 				case 8:
+72188: 					goto IL_03c6;
+72189: 				case 2:
+72190: 				case 13:
+72191: 					goto IL_03df;
+72192: 				case 21:
+72193: 					goto IL_0408;
+72194: 				case 27:
+72195: 					goto IL_0483;
+72196: 				case 5:
+72197: 				case 17:
+72198: 					goto IL_04b2;
+72199: 				case 26:
+72200: 					continue;
+72201: 				case 11:
+72202: 					P_0._0088_0090_008A = ((num > 3704.0) ? "out" /* string-offset:1556 */ : text);
+72203: 					P_0._0088_0090_008D = Math.Max(0.0, (num - 1852.0) / 1852.0);
+72204: 					goto IL_074e;
+72205: 				case 14:
+72206: 					array8 = new double[4]
+72207: 					{
+72208: 						_008A_008B_0090._008B_008B_008A(P_0.X, num),
+72209: 						_008A_008B_0091._008B_008B_008A(P_0.X, num),
+72210: 						_008A_008B_0092._008B_008B_008A(P_0.X, num),
+72211: 						_008A_008B_0093._008B_008B_008A(P_0.X, num)
+72212: 					};
+72213: 					num2 = 6;
+72214: 					goto IL_05ec;
+72215: 				case 6:
+72216: 					goto IL_05ec;
+72217: 				case 24:
+72218: 					goto IL_0628;
+72219: 				case 15:
+72220: 					goto IL_0676;
+72221: 				case 31:
+72222: 					goto IL_068b;
+72223: 				case 19:
+72224: 				case 29:
+72225: 					goto IL_069a;
+72226: 				case 30:
+72227: 					goto IL_06ab;
+72228: 				case 9:
+72229: 					goto IL_06f0;
+72230: 				case 28:
+72231: 					goto IL_0705;
+72232: 				case 12:
+72233: 				case 23:
+72234: 					goto IL_0714;
+72235: 				case 0:
+72236: 					goto IL_074e;
+72237: 				case 4:
+72238: 					goto IL_075f;
+72239: 				case 34:
+72240: 					goto end_IL_04bf;
+72241: 				}
+72242: 				goto IL_015a;
+72243: 				IL_05ec:
+72244: 				array7 = new string[4]
+72245: 				{
+72246: 					"W面" /* string-offset:5476 */,
+72247: 					"X面" /* string-offset:5480 */,
+72248: 					"Y面" /* string-offset:5484 */,
+72249: 					"Z面" /* string-offset:5488 */
+72250: 				};
+72251: 				goto IL_0628;
+72252: 				IL_0628:
+72253: 				num8 = 0;
+72254: 				goto IL_0714;
+72255: 				IL_0408:
+72256: 				array6 = new double[3]
+72257: 				{
+72258: 					_008A_008B_0090._008B_008B_008A(P_0.X, num),
+72259: 					_008A_008B_0091._008B_008B_008A(P_0.X, num),
+72260: 					_008A_008B_0092._008B_008B_008A(P_0.X, num)
+72261: 				};
+72262: 				array5 = new string[3]
+72263: 				{
+72264: 					"W面" /* string-offset:5476 */,
+72265: 					"X面" /* string-offset:5480 */,
+72266: 					"Y面" /* string-offset:5484 */
+72267: 				};
+72268: 				num7 = 0;
+72269: 				goto IL_0483;
+72270: 				IL_0483:
+72271: 				if (num7 < array6.Length)
+72272: 				{
+72273: 					if (num4 >= array6[num7])
+72274: 					{
+72275: 						goto IL_0494;
+72276: 					}
+72277: 					goto IL_04b2;
+72278: 				}
+72279: 				P_0._0088_0090_008A = ((!(text == "Y面" /* string-offset:5484 */) || num4 <= (double)_008A_008B_0094) ? text : "out" /* string-offset:1556 */);
+72280: 				goto IL_074e;
+72281: 				continue;
+72282: 				end_IL_04bf:
+72283: 				break;
+72284: 			}
+72285: 			return P_0;
+72286: 		}

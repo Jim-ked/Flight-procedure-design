@@ -1,0 +1,96 @@
+METHOD 0600032C \x89\x8f.\x89\x8e::\x87\x96\x93 RVA=3D9A8 file=3BBA8
+IL_0000: ldc.i4 5
+IL_0005: stloc local(0x0003)
+IL_0009: call 0x06000341 \x89\x8f.\x89\x8e::\x872
+IL_000E: brtrue 397
+IL_0013: br 307
+IL_0018: ldloc.0 
+IL_0019: callvirt 0x0A000188 System.Windows.Forms.CommonDialog::ShowDialog
+IL_001E: ldc.i4.1 
+IL_001F: bne.un 381
+IL_0024: br.s 150
+IL_0026: ldarg.0 
+IL_0027: ldloc.1 
+IL_0028: call 0x0600032B \x89\x8f.\x89\x8e::\x87\x96\x92
+IL_002D: ldarg.0 
+IL_002E: ldfld 0x04000259 \x89\x8f.\x89\x8e::\x87\x97\x9a
+IL_0033: ldc.i4 4456
+IL_0038: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_003D: ldloc.1 
+IL_003E: callvirt 0x0A0002F2 0x1B00002D::get_Count
+IL_0043: stloc.2 
+IL_0044: ldloca.s local(0x0002)
+IL_0046: call 0x0A0001C4 System.Int32::ToString
+IL_004B: ldc.i4 2816
+IL_0050: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0055: call 0x0A00003C System.String::Concat
+IL_005A: callvirt 0x0A0002BD System.Windows.Forms.ToolStripItem::set_Text
+IL_005F: ldarg.0 
+IL_0060: ldfld 0x0400025B \x89\x8f.\x89\x8e::\x87\x97\x9c
+IL_0065: ldc.i4.1 
+IL_0066: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_006B: ldarg.0 
+IL_006C: ldfld 0x04000256 \x89\x8f.\x89\x8e::\x87\x97\x97
+IL_0071: ldc.i4.1 
+IL_0072: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_0077: ldc.i4 11
+IL_007C: stloc local(0x0003)
+IL_0080: call 0x06000340 \x89\x8f.\x89\x8e::\x871
+IL_0085: brtrue 307
+IL_008A: ldarg.0 
+IL_008B: ldloc.0 
+IL_008C: callvirt 0x0A000189 System.Windows.Forms.FileDialog::get_FileName
+IL_0091: call 0x0600032D \x89\x8f.\x89\x8e::\x87\x96\x94
+IL_0096: stloc.1 
+IL_0097: ldloc.1 
+IL_0098: brtrue.s 50
+IL_009A: br 370
+IL_009F: ldloc.0 
+IL_00A0: ldc.i4.0 
+IL_00A1: callvirt 0x0A0002E7 System.Windows.Forms.FileDialog::set_RestoreDirectory
+IL_00A6: ldc.i4 10
+IL_00AB: stloc local(0x0003)
+IL_00AF: br 36
+IL_00B4: ldc.i4 516
+IL_00B9: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_00BE: brtrue 396
+IL_00C3: newobj 0x0A00018C System.Windows.Forms.OpenFileDialog::.ctor
+IL_00C8: stloc.0 
+IL_00C9: call 0x06000340 \x89\x8f.\x89\x8e::\x871
+IL_00CE: call 0x06000341 \x89\x8f.\x89\x8e::\x872
+IL_00D3: brtrue.s 269
+IL_00D5: pop 
+IL_00D6: ldc.i4 0
+IL_00DB: stloc local(0x0003)
+IL_00DF: ldloc.0 
+IL_00E0: ldc.i4 4448
+IL_00E5: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00EA: callvirt 0x0A000186 System.Windows.Forms.FileDialog::set_Title
+IL_00EF: ldc.i4 4
+IL_00F4: stloc local(0x0003)
+IL_00F8: call 0x06000341 \x89\x8f.\x89\x8e::\x872
+IL_00FD: brtrue.s 171
+IL_00FF: br.s 307
+IL_0101: pop 
+IL_0102: br 57
+IL_0107: ldloc.0 
+IL_0108: ldc.i4 4452
+IL_010D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0112: callvirt 0x0A000185 System.Windows.Forms.FileDialog::set_Filter
+IL_0117: br.s 171
+IL_0119: ldc.i4 3
+IL_011E: stloc local(0x0003)
+IL_0122: br 150
+IL_0127: ldloc local(0x0003)
+IL_012B: switch [235, 396, 235, 150, 275, 192, 57, 171, 57, 397, 36, 381, 396]
+IL_0164: br.s 293
+IL_0166: ldc.i4 9
+IL_016B: stloc local(0x0003)
+IL_016F: br.s 397
+IL_0171: ldloc.0 
+IL_0172: callvirt 0x0A00030E System.ComponentModel.Component::Dispose
+IL_0177: ldc.i4 12
+IL_017C: stloc local(0x0003)
+IL_0180: ret 
+IL_0181: ret 
+

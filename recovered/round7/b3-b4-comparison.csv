@@ -1,0 +1,10 @@
+﻿topic,classification,B4,other,evidence
+runway frame,Same MethodDef,"P0AC/P0AD THR,end; absolute Z retained",same helpers; same axis and original Z convention,P55B vs B3 P478
+HL,Different implementation,independent P55F/P567,B3 P5F2 GP correction,b3-b4-hl-comparison.csv
+Xz/SOC,Different implementation,P55E uses inputDH-HL and fixed -900,B3 APV factory no DH-driven SOC,P55E; frozen B3 missed-approach.md
+FAF/FAP,Only same UI terminology,scalar FAF-THR-150 requested draw cap,B3 separate APV numeric FafFix semantics,P55D vs frozen B3 faf-fap-mapping.md
+surface,Different implementation,W/WS/X/Y/Z planes; extended four-plane model,B3 APV longitudinal/lateral interpolation,P411/P5DE vs B3 apv-surfaces.md
+obstacle carrier,Same MethodDef,P404/P405 _008A_008D,same carrier in B3 APV; LNAV different _008A_008B,method-index and B3 code
+CAD writer,Same MethodDef,P087/P089 Polyline plus WsObject,same writer,P55C vs B3 P47C
+XData contents,Different implementation,custom OAS TXT,FormApvEvl header+dotted control state,P565 vs B3 persistence
+ScreenData parser and Mark,Same MethodDef,P10D/P12F/P09C/P09E,same methods; B3 no Take5,calls and frozen ScreenData evidence

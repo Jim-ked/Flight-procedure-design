@@ -1,0 +1,23 @@
+METHOD 0600079B \x8e\x9e.\x8e\x9d::.ctor RVA=5E2E file=402E
+IL_0000: ldarg.0 
+IL_0001: call 0x0A00002C System.Object::.ctor
+IL_0006: ldarg.0 
+IL_0007: ldarg.1 
+IL_0008: stfld 0x04000758 \x8e\x9e.\x8e\x9d::\x8a\x9e\x8c
+IL_000D: ldarg.0 
+IL_000E: ldarg.2 
+IL_000F: stfld 0x04000759 \x8e\x9e.\x8e\x9d::\x8a\x9e\x8d
+IL_0014: ldc.i4.1 
+IL_0015: call 0x0600079F \x8e\x9e.\x8e\x9d::\x89k
+IL_001A: brtrue.s 39
+IL_001C: pop 
+IL_001D: ldarg.0 
+IL_001E: ldarg.3 
+IL_001F: stfld 0x0400075A \x8e\x9e.\x8e\x9d::\x8a\x9e\x8e
+IL_0024: br.s 40
+IL_0026: pop 
+IL_0027: ldarg.0 
+IL_0028: ldarg.s argument(0x0004)
+IL_002A: call 0x0600079A \x8e\x9e.\x8e\x9d::\x8a\x9e\x8a
+IL_002F: ret 
+

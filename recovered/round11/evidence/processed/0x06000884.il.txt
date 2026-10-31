@@ -1,0 +1,17 @@
+METHOD 06000884 \x90\x9c.\x90\x9b::\x8b\x8f\x98 RVA=94C58 file=92E58
+IL_0000: ldnull 
+IL_0001: stloc.0 
+IL_0002: call 0x06000882 \x90\x9c.\x90\x9b::\x8b\x8f\x96
+IL_0007: brfalse.s 38
+IL_0009: newobj 0x0A00041D System.Security.Cryptography.AesCryptoServiceProvider::.ctor
+IL_000E: stloc.0 
+IL_000F: leave.s 44
+IL_0011: pop 
+IL_0012: newobj 0x0A00041E System.Security.Cryptography.RijndaelManaged::.ctor
+IL_0017: stloc.0 
+IL_0018: leave.s 44
+IL_001A: newobj 0x0A00041E System.Security.Cryptography.RijndaelManaged::.ctor
+IL_001F: stloc.0 
+IL_0020: ldloc.0 
+IL_0021: ret 
+

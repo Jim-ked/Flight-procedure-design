@@ -1,0 +1,16 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildThisFileDirectory)..\..\Directory.Build.props" Condition="Exists('$(MSBuildThisFileDirectory)..\..\Directory.Build.props')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup><ProjectGuid>{27F8D14E-3FC3-4E74-8B31-6B3D6D7A9909}</ProjectGuid><OutputType>Exe</OutputType><RootNamespace>Fpd.Application.Tests</RootNamespace><AssemblyName>Fpd.Application.Tests</AssemblyName><TargetFrameworkVersion>v4.0</TargetFrameworkVersion><OutputPath>bin\$(Configuration)\</OutputPath><IntermediateOutputPath>obj\$(Configuration)\</IntermediateOutputPath></PropertyGroup>
+  <ItemGroup><Reference Include="System" /><Reference Include="System.Core" /></ItemGroup>
+  <ItemGroup><Reference Include="Fpd.Domain"><HintPath>..\..\src\Fpd.Domain\bin\$(Configuration)\Fpd.Domain.dll</HintPath></Reference><Reference Include="Fpd.Engine"><HintPath>..\..\src\Fpd.Engine\bin\$(Configuration)\Fpd.Engine.dll</HintPath></Reference><Reference Include="Fpd.Application"><HintPath>..\..\src\Fpd.Application\bin\$(Configuration)\Fpd.Application.dll</HintPath></Reference><Reference Include="Fpd.Infrastructure"><HintPath>..\..\src\Fpd.Infrastructure\bin\$(Configuration)\Fpd.Infrastructure.dll</HintPath></Reference></ItemGroup>
+  <ItemGroup><Compile Include="**\*.cs" Exclude="bin\**;obj\**" /></ItemGroup>
+</Project>
+
+
+
+
+
+
+
+

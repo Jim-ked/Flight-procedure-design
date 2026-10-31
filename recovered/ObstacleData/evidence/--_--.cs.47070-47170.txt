@@ -1,0 +1,101 @@
+47070: 				_0097._008A_0091(this, "config.xml" /* string-offset:676 */, "FormApvEvl" /* string-offset:408 */);
+47071: 				if (_0088_009D_0087 == null)
+47072: 				{
+47073: 					return;
+47074: 				}
+47075: 			}
+47076: 			do
+47077: 			{
+47078: 				_008D._0089_0093(_0088_009D_0087);
+47079: 			}
+47080: 			while (!_0088_0093());
+47081: 		}
+47082: 
+47083: 		private void _0088_009A_0095(object P_0, EventArgs P_1)
+47084: 		{
+47085: 			Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+47086: 			_ = mdiActiveDocument.Editor;
+47087: 			Database database = mdiActiveDocument.Database;
+47088: 			_ = 0;
+47089: 			Transaction val = default(Transaction);
+47090: 			if (_0088_0093())
+47091: 			{
+47092: 				if (_0088_0093())
+47093: 				{
+47094: 				}
+47095: 				val = database.TransactionManager.StartTransaction();
+47096: 			}
+47097: 			try
+47098: 			{
+47099: 				_0088_009D_0087 = database._008B_008A<DBPoint>((OpenMode)0, _0020: false);
+47100: 			}
+47101: 			finally
+47102: 			{
+47103: 				((IDisposable)val)?.Dispose();
+47104: 			}
+47105: 			_0088_009D_008D.Text = "已检测到 " /* string-offset:2720 */ + _0088_009D_0087.Count + " 个障碍物。" /* string-offset:936 */;
+47106: 			_0088_009A_0096(_0088_009D_0087);
+47107: 		}
+47108: 
+47109: 		private void _0088_009A_0096(List<DBPoint> P_0)
+47110: 		{
+47111: 			if (false /* original-file-bool-offset:912 */)
+47112: 			{
+47113: 				return;
+47114: 			}
+47115: 			_0088_009D_0088 = new Dictionary<string, DBPoint>();
+47116: 			DataTable dataTable = new DataTable();
+47117: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+47118: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+47119: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+47120: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+47121: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+47122: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+47123: 			dataTable.Columns.Add("MOC(m)" /* string-offset:2756 */, typeof(double));
+47124: 			dataTable.Columns.Add("OCA(m)" /* string-offset:2760 */, typeof(double));
+47125: 			dataTable.Columns.Add("OCH(m)" /* string-offset:5660 */, typeof(double));
+47126: 			dataTable.Columns.Add("MDA(m)" /* string-offset:5672 */, typeof(double));
+47127: 			dataTable.Columns.Add("MDH(m)" /* string-offset:5676 */, typeof(double));
+47128: 			dataTable.Columns.Add("VIS(m)" /* string-offset:5680 */, typeof(double));
+47129: 			int num = 1;
+47130: 			foreach (DBPoint item in P_0)
+47131: 			{
+47132: 				_008F_008E obj = item._008C_008D(num.ToString());
+47133: 				num++;
+47134: 				dataTable.Rows.Add(obj.ID, obj.Name, Math.Round(obj.X, 2), Math.Round(obj.Y, 2), Math.Round(obj.Z, 2));
+47135: 				_0088_009D_0088.Add(obj.ID, item);
+47136: 			}
+47137: 			_0088_009D_0090.DataSource = dataTable;
+47138: 			_0088_009D_0090.Columns[1].Frozen = true;
+47139: 		}
+47140: 
+47141: 		private void _0088_009A_0097(object P_0, EventArgs P_1)
+47142: 		{
+47143: 			_0088_0094();
+47144: 			if (!_0088_0093() || false /* original-file-bool-offset:916 */ || _0088_009D_0087 == null || _0088_009D_0087.Count == 0)
+47145: 			{
+47146: 				return;
+47147: 			}
+47148: 			_008E_0097 obj = _0088_009A_009A();
+47149: 			List<_008A_008B> list = new List<_008A_008B>();
+47150: 			int num = 1;
+47151: 			_008A_008B obj4 = default(_008A_008B);
+47152: 			foreach (DBPoint item in _0088_009D_0087)
+47153: 			{
+47154: 				_008F_008E obj2 = item._008C_008D(num.ToString());
+47155: 				num++;
+47156: 				_008F_008E obj3 = _008D._0089_0090(obj, obj2);
+47157: 				_ = 0;
+47158: 				if (_0088_0093())
+47159: 				{
+47160: 					obj4 = new _008A_008B(obj2);
+47161: 					obj4.X = obj3.X;
+47162: 					obj4.Y = obj3.Y;
+47163: 				}
+47164: 				list.Add(obj4);
+47165: 			}
+47166: 			_0088_009D_008D.Text = "已转换" /* string-offset:3032 */ + list.Count + "个障碍物。" /* string-offset:2816 */;
+47167: 			_0088_009C_009E(list);
+47168: 		}
+47169: 
+47170: 		private void _0088_009A_0098(object P_0, EventArgs P_1)

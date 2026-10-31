@@ -1,0 +1,16 @@
+86129: 		internal static SymmetricAlgorithm _008B_008F_0098()
+86130: 		{
+86131: 			SymmetricAlgorithm symmetricAlgorithm = null;
+86132: 			if (_008B_008F_0096())
+86133: 			{
+86134: 				try
+86135: 				{
+86136: 					return new AesCryptoServiceProvider();
+86137: 				}
+86138: 				catch
+86139: 				{
+86140: 					return new RijndaelManaged();
+86141: 				}
+86142: 			}
+86143: 			return new RijndaelManaged();
+86144: 		}

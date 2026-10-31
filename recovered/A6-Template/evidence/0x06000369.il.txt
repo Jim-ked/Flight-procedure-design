@@ -1,0 +1,44 @@
+METHOD 06000369 \x89\x93.\x89\x92::\x87\x9a\x97 RVA=44200 file=42400
+IL_0000: ldarga.s argument(0x0001)
+IL_0002: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0007: ldarga.s argument(0x0000)
+IL_0009: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_000E: sub 
+IL_000F: ldarga.s argument(0x0002)
+IL_0011: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0016: ldarga.s argument(0x0001)
+IL_0018: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_001D: sub 
+IL_001E: mul 
+IL_001F: ldarga.s argument(0x0001)
+IL_0021: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0026: ldarga.s argument(0x0000)
+IL_0028: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_002D: sub 
+IL_002E: ldarga.s argument(0x0002)
+IL_0030: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0035: ldarga.s argument(0x0001)
+IL_0037: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_003C: sub 
+IL_003D: mul 
+IL_003E: sub 
+IL_003F: stloc.0 
+IL_0040: call 0x0600037E \x89\x93.\x89\x92::\x876
+IL_0045: call 0x0600037D \x89\x93.\x89\x92::\x875
+IL_004A: brfalse.s 119
+IL_004C: pop 
+IL_004D: ldloc.0 
+IL_004E: ldc.r8 0.0
+IL_0057: bne.un.s 103
+IL_0059: br.s 120
+IL_005B: ldloc.0 
+IL_005C: ldc.r8 0.0
+IL_0065: bgt.s 117
+IL_0067: ldc.i4.2 
+IL_0068: ret 
+IL_0069: ldc.i4.1 
+IL_006A: ret 
+IL_006B: pop 
+IL_006C: ldc.i4.0 
+IL_006D: ret 
+

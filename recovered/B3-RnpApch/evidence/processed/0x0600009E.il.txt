@@ -1,0 +1,105 @@
+METHOD 0600009E \x8c.\x8b::\x89\x89 RVA=A0A0 file=82A0
+IL_0000: ldc.i4 68
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brtrue 300
+IL_000F: ldarga.s argument(0x0000)
+IL_0011: call 0x0A000106 Autodesk.AutoCAD.DatabaseServices.ObjectId::get_IsNull
+IL_0016: brtrue 301
+IL_001B: ldarga.s argument(0x0000)
+IL_001D: call 0x0A000107 Autodesk.AutoCAD.DatabaseServices.ObjectId::get_IsValid
+IL_0022: brtrue.s 63
+IL_0024: call 0x060000A5 \x8c.\x8b::\x8f
+IL_0029: brfalse 301
+IL_002E: br 301
+IL_0033: ldarg.1 
+IL_0034: brtrue.s 83
+IL_0036: call 0x060000A6 \x8c.\x8b::\x90
+IL_003B: call 0x060000A5 \x8c.\x8b::\x8f
+IL_0040: brfalse.s 80
+IL_0042: pop 
+IL_0043: ret 
+IL_0044: pop 
+IL_0045: br.s 86
+IL_0047: ldarg.2 
+IL_0048: brtrue.s 87
+IL_004A: ret 
+IL_004B: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0050: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_0055: dup 
+IL_0056: callvirt 0x0A000079 Autodesk.AutoCAD.ApplicationServices.Document::get_Database
+IL_005B: stloc.0 
+IL_005C: callvirt 0x0A00009A Autodesk.AutoCAD.ApplicationServices.Document::LockDocument
+IL_0061: stloc.1 
+IL_0062: ldloc.0 
+IL_0063: callvirt 0x0A00007D Autodesk.AutoCAD.DatabaseServices.Database::get_TransactionManager
+IL_0068: callvirt 0x0A00007E Autodesk.AutoCAD.DatabaseServices.TransactionManager::StartTransaction
+IL_006D: stloc.2 
+IL_006E: ldloc.2 
+IL_006F: ldarg.0 
+IL_0070: ldc.i4.0 
+IL_0071: callvirt 0x0A000080 Autodesk.AutoCAD.DatabaseServices.Transaction::GetObject
+IL_0076: isinst 0x01000019 Autodesk.AutoCAD.DatabaseServices.BlockReference
+IL_007B: callvirt 0x0A0000DF Autodesk.AutoCAD.DatabaseServices.BlockReference::get_AttributeCollection
+IL_0080: callvirt 0x0A0000E3 Autodesk.AutoCAD.DatabaseServices.AttributeCollection::GetEnumerator
+IL_0085: stloc.3 
+IL_0086: nop 
+IL_0087: br.s 237
+IL_0089: ldloc.3 
+IL_008A: callvirt 0x0A0000E4 System.Collections.IEnumerator::get_Current
+IL_008F: unbox.any 0x01000011 Autodesk.AutoCAD.DatabaseServices.ObjectId
+IL_0094: stloc.s local(0x0004)
+IL_0096: ldloc.2 
+IL_0097: ldloc.s local(0x0004)
+IL_0099: ldc.i4.1 
+IL_009A: callvirt 0x0A000080 Autodesk.AutoCAD.DatabaseServices.Transaction::GetObject
+IL_009F: isinst 0x010000ED Autodesk.AutoCAD.DatabaseServices.AttributeReference
+IL_00A4: stloc.s local(0x0005)
+IL_00A6: ldloc.s local(0x0005)
+IL_00A8: ldnull 
+IL_00A9: call 0x0A000054 Autodesk.AutoCAD.Runtime.DisposableWrapper::op_Inequality
+IL_00AE: brfalse.s 237
+IL_00B0: call 0x060000A5 \x8c.\x8b::\x8f
+IL_00B5: call 0x060000A6 \x8c.\x8b::\x90
+IL_00BA: brtrue.s 228
+IL_00BC: pop 
+IL_00BD: ldloc.s local(0x0005)
+IL_00BF: callvirt 0x0A0000E5 Autodesk.AutoCAD.DatabaseServices.AttributeReference::get_Tag
+IL_00C4: callvirt 0x0A0000DC System.String::ToUpper
+IL_00C9: ldarg.1 
+IL_00CA: callvirt 0x0A0000DC System.String::ToUpper
+IL_00CF: call 0x0A000108 System.String::op_Equality
+IL_00D4: brfalse.s 237
+IL_00D6: br.s 229
+IL_00D8: pop 
+IL_00D9: ldloc.s local(0x0005)
+IL_00DB: ldarg.2 
+IL_00DC: callvirt 0x0A000074 Autodesk.AutoCAD.DatabaseServices.DBText::set_TextString
+IL_00E1: ldloc.3 
+IL_00E2: callvirt 0x0A0000E6 System.Collections.IEnumerator::MoveNext
+IL_00E7: brtrue.s 149
+IL_00E9: leave.s 267
+IL_00EB: ldloc.3 
+IL_00EC: isinst 0x010000DB System.IDisposable
+IL_00F1: stloc.s local(0x0006)
+IL_00F3: ldloc.s local(0x0006)
+IL_00F5: brfalse.s 266
+IL_00F7: ldloc.s local(0x0006)
+IL_00F9: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_00FE: endfinally 
+IL_00FF: ldloc.2 
+IL_0100: callvirt 0x0A0000A4 Autodesk.AutoCAD.DatabaseServices.Transaction::Commit
+IL_0105: call 0x0A0000A5 Autodesk.AutoCAD.ApplicationServices.Core.Application::UpdateScreen
+IL_010A: leave.s 300
+IL_010C: ldloc.2 
+IL_010D: brfalse.s 289
+IL_010F: ldloc.2 
+IL_0110: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_0115: endfinally 
+IL_0116: ldloc.1 
+IL_0117: brfalse.s 299
+IL_0119: ldloc.1 
+IL_011A: callvirt 0x0A000087 System.IDisposable::Dispose
+IL_011F: endfinally 
+IL_0120: ret 
+IL_0121: ret 
+

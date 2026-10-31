@@ -1,0 +1,16 @@
+METHOD 060007EE \x8f\x8d.\x8f\x8c::\x8b\x88\x94 RVA=6061 file=4261
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x04000774 \x8f\x8d.\x8f\x8c::\x8b\x88\x9c
+IL_0006: ldc.r8 0.0
+IL_000F: bne.un.s 28
+IL_0011: ldc.r8 1.5707963267948966
+IL_001A: ret 
+IL_001B: ldarg.0 
+IL_001C: ldfld 0x04000773 \x8f\x8d.\x8f\x8c::\x8b\x88\x9b
+IL_0021: neg 
+IL_0022: ldarg.0 
+IL_0023: ldfld 0x04000774 \x8f\x8d.\x8f\x8c::\x8b\x88\x9c
+IL_0028: div 
+IL_0029: call 0x0A0001C1 System.Math::Atan
+IL_002E: ret 
+

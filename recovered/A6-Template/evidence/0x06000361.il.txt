@@ -1,0 +1,9 @@
+METHOD 06000361 \x89\x93.\x89\x92::\x87\x9a\x8f RVA=45CD file=27CD
+IL_0000: ldarg.0 
+IL_0001: ldfld 0x040002A5 \x89\x93.\x89\x92::\x87\x9c\x95
+IL_0006: ldarg.0 
+IL_0007: ldfld 0x040002B9 \x89\x93.\x89\x92::\x87\x9d\x90
+IL_000C: callvirt 0x0A0001F5 System.Windows.Forms.CheckBox::get_Checked
+IL_0011: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_0016: ret 
+

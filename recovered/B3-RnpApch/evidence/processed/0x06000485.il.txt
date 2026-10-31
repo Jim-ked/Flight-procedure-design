@@ -1,0 +1,9 @@
+METHOD 06000485 \x8b\x8d.\x8b\x8c::\x88\x9b\x8b RVA=4A62 file=2C62
+IL_0000: call 0x0A00036D System.Windows.Forms.Clipboard::ContainsText
+IL_0005: brfalse.s 24
+IL_0007: ldarg.0 
+IL_0008: ldfld 0x0400048C \x8b\x8d.\x8b\x8c::\x89\x86\x99
+IL_000D: call 0x0A00036E System.Windows.Forms.Clipboard::GetText
+IL_0012: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0017: ret 
+

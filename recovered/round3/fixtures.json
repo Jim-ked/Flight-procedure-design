@@ -1,0 +1,19 @@
+{
+  "evidence_level": "recovery-code-only",
+  "A1": [
+    {"name":"no-wind-left-0-90","wind":0,"sign":1,"start_deg":0,"end_deg":90},
+    {"name":"cross-wind-right-0-180","wind":60,"sign":-1,"start_deg":0,"end_deg":180},
+    {"name":"tail-wind-0-270","wind":-60,"sign":1,"start_deg":0,"end_deg":270}
+  ],
+  "B1": [
+    {"turn_deg":30,"SW1":4630,"SW2":4630},
+    {"turn_deg":60,"SW1":4630,"SW2":3000},
+    {"turn_deg":90,"SW1":3000,"SW2":4630},
+    {"turn_deg":120,"SW1":4630,"SW2":4630}
+  ],
+  "B2": [
+    {"ATT":1482,"turn_deg":60,"next_heading_deg":0},
+    {"ATT":0,"turn_deg":60,"next_heading_deg":90},
+    {"ATT":1482,"turn_deg":120,"next_heading_deg":180}
+  ]
+}

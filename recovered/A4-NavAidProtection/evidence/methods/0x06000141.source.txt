@@ -1,0 +1,29 @@
+542: 		public static bool _008C_0099(string P_0, string P_1, string P_2, string P_3, string P_4, string P_5)
+543: 		{
+544: 			try
+545: 			{
+546: 				XDocument xDocument = XDocument.Load(P_0);
+547: 				_7();
+548: 				XElement xElement = default(XElement);
+549: 				if (!_8() && _7())
+550: 				{
+551: 					xElement = xDocument.XPathSelectElement(P_1);
+552: 				}
+553: 				if (xElement != null)
+554: 				{
+555: 					XElement xElement2 = new XElement(P_2, P_3);
+556: 					if (!string.IsNullOrEmpty(P_4) && !string.IsNullOrEmpty(P_5))
+557: 					{
+558: 						xElement2.SetAttributeValue(P_4, P_5);
+559: 					}
+560: 					xElement.Add(xElement2);
+561: 					xDocument.Save(P_0);
+562: 					return true;
+563: 				}
+564: 				return false;
+565: 			}
+566: 			catch (Exception innerException)
+567: 			{
+568: 				throw new Exception("创建XML节点失败: " /* string-offset:1004 */ + P_1 + "/" /* string-offset:1008 */ + P_2, innerException);
+569: 			}
+570: 		}

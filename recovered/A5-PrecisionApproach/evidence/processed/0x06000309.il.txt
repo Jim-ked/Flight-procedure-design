@@ -1,0 +1,132 @@
+METHOD 06000309 \x89\x8d.\x89\x8c::\x87\x91\x91 RVA=3584C file=33A4C
+IL_0000: ldc.i4 15
+IL_0005: stloc local(0x0000)
+IL_0009: br 249
+IL_000E: ldarg.0 
+IL_000F: ldfld 0x04000206 \x89\x8d.\x89\x8c::\x87\x93\x91
+IL_0014: callvirt 0x0A0001F7 System.Windows.Forms.ListControl::get_SelectedIndex
+IL_0019: brtrue 355
+IL_001E: ldarg.0 
+IL_001F: ldfld 0x04000211 \x89\x8d.\x89\x8c::\x87\x93\x9c
+IL_0024: ldc.i4.0 
+IL_0025: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_002A: ldc.i4 6
+IL_002F: stloc local(0x0000)
+IL_0033: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_0038: brtrue.s 121
+IL_003A: ldarg.0 
+IL_003B: ldfld 0x04000215 \x89\x8d.\x89\x8c::\x87\x94\x87
+IL_0040: ldc.i4.0 
+IL_0041: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0046: ldarg.0 
+IL_0047: ldfld 0x0400021A \x89\x8d.\x89\x8c::\x87\x94\x8c
+IL_004C: ldc.i4.0 
+IL_004D: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0052: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_0057: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_005C: brtrue 340
+IL_0061: pop 
+IL_0062: ldc.i4 16
+IL_0067: stloc local(0x0000)
+IL_006B: br.s 207
+IL_006D: ldloc local(0x0000)
+IL_0071: switch [499, 323, 520, 207, 520, 466, 70, 520, 379, 445, 278, 290, 478, 400, 528, 249, 207, 528]
+IL_00BE: br 379
+IL_00C3: ldarg.0 
+IL_00C4: ldfld 0x040001F3 \x89\x8d.\x89\x8c::\x87\x92\x97
+IL_00C9: ldc.i4.1 
+IL_00CA: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_00CF: ldarg.0 
+IL_00D0: ldfld 0x040001F2 \x89\x8d.\x89\x8c::\x87\x92\x96
+IL_00D5: ldc.i4.1 
+IL_00D6: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_00DB: ldc.i4 10
+IL_00E0: stloc local(0x0000)
+IL_00E4: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_00E9: brtrue.s 207
+IL_00EB: br.s 121
+IL_00ED: ldc.i4 472
+IL_00F2: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_00F7: brfalse 26
+IL_00FC: ldc.i4 14
+IL_0101: stloc local(0x0000)
+IL_0105: br 528
+IL_010A: ldarg.0 
+IL_010B: ldfld 0x040001F6 \x89\x8d.\x89\x8c::\x87\x92\x9a
+IL_0110: ldc.i4.1 
+IL_0111: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_0116: ldarg.0 
+IL_0117: ldfld 0x040001F0 \x89\x8d.\x89\x8c::\x87\x92\x94
+IL_011C: ldc.i4.1 
+IL_011D: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_0122: ldarg.0 
+IL_0123: ldfld 0x040001F7 \x89\x8d.\x89\x8c::\x87\x92\x9b
+IL_0128: ldc.i4.1 
+IL_0129: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_012E: ldc.i4 1
+IL_0133: stloc local(0x0000)
+IL_0137: ldarg.0 
+IL_0138: ldfld 0x0400024A \x89\x8d.\x89\x8c::\x87\x96\x8a
+IL_013D: ldc.i4.0 
+IL_013E: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0143: br 520
+IL_0148: pop 
+IL_0149: ldc.i4 2
+IL_014E: stloc local(0x0000)
+IL_0152: br 520
+IL_0157: ldarg.0 
+IL_0158: ldfld 0x04000211 \x89\x8d.\x89\x8c::\x87\x93\x9c
+IL_015D: ldc.i4.1 
+IL_015E: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0163: ldarg.0 
+IL_0164: ldfld 0x04000215 \x89\x8d.\x89\x8c::\x87\x94\x87
+IL_0169: ldc.i4.1 
+IL_016A: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_016F: ldarg.0 
+IL_0170: ldfld 0x0400021A \x89\x8d.\x89\x8c::\x87\x94\x8c
+IL_0175: ldc.i4.1 
+IL_0176: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_017B: ldc.i4 13
+IL_0180: stloc local(0x0000)
+IL_0184: ldarg.0 
+IL_0185: ldfld 0x040001F3 \x89\x8d.\x89\x8c::\x87\x92\x97
+IL_018A: ldc.i4.0 
+IL_018B: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_0190: ldarg.0 
+IL_0191: ldfld 0x040001F2 \x89\x8d.\x89\x8c::\x87\x92\x96
+IL_0196: ldc.i4.0 
+IL_0197: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_019C: ldarg.0 
+IL_019D: ldfld 0x040001F6 \x89\x8d.\x89\x8c::\x87\x92\x9a
+IL_01A2: ldc.i4.0 
+IL_01A3: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_01A8: ldc.i4 9
+IL_01AD: stloc local(0x0000)
+IL_01B1: ldarg.0 
+IL_01B2: ldfld 0x040001F0 \x89\x8d.\x89\x8c::\x87\x92\x94
+IL_01B7: ldc.i4.0 
+IL_01B8: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_01BD: ldc.i4 5
+IL_01C2: stloc local(0x0000)
+IL_01C6: ldarg.0 
+IL_01C7: ldfld 0x040001F7 \x89\x8d.\x89\x8c::\x87\x92\x9b
+IL_01CC: ldc.i4.0 
+IL_01CD: callvirt 0x0A00027C System.Windows.Forms.Control::set_Enabled
+IL_01D2: ldarg.0 
+IL_01D3: ldfld 0x040001F1 \x89\x8d.\x89\x8c::\x87\x92\x95
+IL_01D8: ldc.i4.1 
+IL_01D9: callvirt 0x0A000202 System.Windows.Forms.RadioButton::set_Checked
+IL_01DE: ldc.i4 0
+IL_01E3: stloc local(0x0000)
+IL_01E7: ldarg.0 
+IL_01E8: ldfld 0x0400024A \x89\x8d.\x89\x8c::\x87\x96\x8a
+IL_01ED: ldc.i4.1 
+IL_01EE: callvirt 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_01F3: ldc.i4 4
+IL_01F8: stloc local(0x0000)
+IL_01FC: ldarg.0 
+IL_01FD: ldnull 
+IL_01FE: ldnull 
+IL_01FF: call 0x0600030A \x89\x8d.\x89\x8c::\x87\x91\x92
+IL_0204: ret 
+

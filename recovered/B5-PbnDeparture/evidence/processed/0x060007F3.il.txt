@@ -1,0 +1,17 @@
+METHOD 060007F3 \x8f\x8d.\x8f\x8c::\x8b\x88\x99 RVA=92544 file=90744
+IL_0000: ldarg.0 
+IL_0001: ldarg.1 
+IL_0002: ldarg.2 
+IL_0003: call 0x060007F0 \x8f\x8d.\x8f\x8c::\x8b\x88\x96
+IL_0008: stloc.0 
+IL_0009: ldarg.1 
+IL_000A: ldarg.0 
+IL_000B: call 0x06000814 \x8f\x8f.\x8f\x8e::op_Subtraction
+IL_0010: stloc.1 
+IL_0011: ldarg.0 
+IL_0012: ldloc.1 
+IL_0013: ldloc.0 
+IL_0014: call 0x0600084E \x8f\x97.\x8f\x96::op_Multiply
+IL_0019: call 0x06000815 \x8f\x8f.\x8f\x8e::op_Addition
+IL_001E: ret 
+

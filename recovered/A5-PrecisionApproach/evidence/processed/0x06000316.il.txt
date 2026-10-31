@@ -1,0 +1,47 @@
+METHOD 06000316 \x89\x8d.\x89\x8c::\x87\x91\x9e RVA=362EC file=344EC
+IL_0000: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0005: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_000A: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_000F: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_0014: call 0x06000305 \x89\x8d.\x89\x8c::\x87\x91\x8d
+IL_0019: pop 
+IL_001A: ldarg.0 
+IL_001B: ldc.i4.0 
+IL_001C: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0021: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_0026: brtrue.s 52
+IL_0028: ldc.i4 3860
+IL_002D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0032: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0037: stloc.1 
+IL_0038: ldc.i4.0 
+IL_0039: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_003E: brtrue.s 121
+IL_0040: pop 
+IL_0041: call 0x06000322 \x89\x8d.\x89\x8c::\x870
+IL_0046: brtrue.s 156
+IL_0048: ldarg.0 
+IL_0049: ldfld 0x04000242 \x89\x8d.\x89\x8c::\x87\x95\x9b
+IL_004E: ldloca.s local(0x0000)
+IL_0050: ldc.i4 3236
+IL_0055: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_005A: call 0x0A000073 System.Double::ToString
+IL_005F: callvirt 0x0A0001F0 System.Windows.Forms.Control::set_Text
+IL_0064: call 0x06000321 \x89\x8d.\x89\x8c::\x87\x9f
+IL_0069: brtrue.s 156
+IL_006B: br.s 52
+IL_006D: pop 
+IL_006E: ldc.i4 3864
+IL_0073: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0078: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_007D: stloc.2 
+IL_007E: ldarg.0 
+IL_007F: ldc.i4.1 
+IL_0080: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_0085: ldloca.s local(0x0001)
+IL_0087: ldloc.2 
+IL_0088: call 0x0A0001B9 Autodesk.AutoCAD.Geometry.Point3d::DistanceTo
+IL_008D: stloc.0 
+IL_008E: br.s 84
+IL_0090: ret 
+

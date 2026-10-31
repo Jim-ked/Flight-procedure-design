@@ -1,0 +1,13 @@
+{
+  "machine": "0x14c",
+  "machine_meaning": "I386 PE container; use CLR flags for AnyCPU vs x86",
+  "pe_magic": "0x10b",
+  "clr_version": "v4.0.30319",
+  "corflags": "CLR_32BITREQUIRED                          False\nCLR_ILONLY                                  True\nCLR_IL_LIBRARY                             False\nCLR_NATIVE_ENTRYPOINT                      False\nCLR_PREFER_32BIT                           False\nCLR_STRONGNAMESIGNED                       False\nCLR_TRACKDEBUGDATA                         False",
+  "framework_attribute_blobs": [
+    {
+      "blob_hex": "01001a2e4e45544672616d65776f726b2c56657273696f6e3d76342e380100540e144672616d65776f726b446973706c61794e616d65122e4e4554204672616d65776f726b20342e38",
+      "text": "\u0001\u0000\u001a.NETFramework,Version=v4.8\u0001\u0000T\u000e\u0014FrameworkDisplayName\u0012.NET Framework 4.8"
+    }
+  ]
+}

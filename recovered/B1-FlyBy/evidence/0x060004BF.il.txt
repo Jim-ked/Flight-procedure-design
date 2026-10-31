@@ -1,0 +1,148 @@
+METHOD 060004BF \x8b\x8f.\x8b\x8e::\x89\x89\x93 RVA=62F9C file=6119C
+IL_0000: ldc.i4 944
+IL_0005: call 0x06000886 \x90\x9c.\x90\x9b::\x8b\x8f\x9a
+IL_000A: brfalse.s 39
+IL_000C: call 0x060004CC \x8b\x8f.\x8b\x8e::\x88\x96
+IL_0011: brfalse 525
+IL_0016: br 208
+IL_001B: ldarg.0 
+IL_001C: ldarg.0 
+IL_001D: ldfld 0x040004ED \x8b\x8f.\x8b\x8e::\x89\x8a\x9e
+IL_0022: callvirt 0x06000854 \x8f\x99.\x8f\x98::\x8b\x8c\x8a
+IL_0027: stfld 0x040004D3 \x8b\x8f.\x8b\x8e::\x89\x89\x9d
+IL_002C: ldarg.0 
+IL_002D: ldfld 0x040004DB \x8b\x8f.\x8b\x8e::\x89\x8a\x8c
+IL_0032: ldc.i4 1984
+IL_0037: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_003C: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_0041: stloc.1 
+IL_0042: ldarg.0 
+IL_0043: ldfld 0x040004D7 \x8b\x8f.\x8b\x8e::\x89\x8a\x88
+IL_0048: ldc.i4 1984
+IL_004D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0052: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_0057: stloc.s local(0x000C)
+IL_0059: ldarg.0 
+IL_005A: ldfld 0x040004E6 \x8b\x8f.\x8b\x8e::\x89\x8a\x97
+IL_005F: ldc.i4 1984
+IL_0064: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0069: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_006E: stloc.s local(0x000D)
+IL_0070: ldc.i4.0 
+IL_0071: call 0x060004CB \x8b\x8f.\x8b\x8e::\x88\x95
+IL_0076: brfalse.s 207
+IL_0078: pop 
+IL_0079: ldarg.0 
+IL_007A: ldfld 0x040004D9 \x8b\x8f.\x8b\x8e::\x89\x8a\x8a
+IL_007F: ldc.i4 1984
+IL_0084: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0089: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_008E: stloc.s local(0x0005)
+IL_0090: ldarg.0 
+IL_0091: ldfld 0x040004EB \x8b\x8f.\x8b\x8e::\x89\x8a\x9c
+IL_0096: ldc.i4 1984
+IL_009B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00A0: call 0x060007D5 \x8f\x8b.\x8f\x8a::\x8b\x87\x9e
+IL_00A5: stloc.s local(0x0006)
+IL_00A7: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_00AC: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_00B1: callvirt 0x0A000278 Autodesk.AutoCAD.ApplicationServices.Document::get_Window
+IL_00B6: callvirt 0x0A000279 Autodesk.AutoCAD.Windows.Window::get_Handle
+IL_00BB: call 0x060004BE \x8b\x8f.\x8b\x8e::\x89\x89\x92
+IL_00C0: pop 
+IL_00C1: br.s 208
+IL_00C3: pop 
+IL_00C4: ldarg.0 
+IL_00C5: ldc.i4.0 
+IL_00C6: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_00CB: ldc.i4 6012
+IL_00D0: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_00D5: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_00DA: stloc.s local(0x0007)
+IL_00DC: ldloca.s local(0x0007)
+IL_00DE: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_00E3: ldloca.s local(0x0007)
+IL_00E5: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_00EA: ldc.r8 0.0
+IL_00F3: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_00F8: stloc.s local(0x0008)
+IL_00FA: ldc.i4 6016
+IL_00FF: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0104: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0109: stloc.s local(0x0009)
+IL_010B: ldloca.s local(0x0009)
+IL_010D: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0112: ldloca.s local(0x0009)
+IL_0114: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0119: ldc.r8 0.0
+IL_0122: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_0127: stloc.s local(0x000A)
+IL_0129: ldc.i4 6020
+IL_012E: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0133: call 0x06000113 \x9e.\x9d::\x8b\x8d
+IL_0138: stloc.s local(0x000B)
+IL_013A: ldloca.s local(0x000B)
+IL_013C: call 0x0A000062 Autodesk.AutoCAD.Geometry.Point3d::get_X
+IL_0141: ldloca.s local(0x000B)
+IL_0143: call 0x0A000061 Autodesk.AutoCAD.Geometry.Point3d::get_Y
+IL_0148: ldc.r8 0.0
+IL_0151: newobj 0x06000805 \x8f\x8f.\x8f\x8e::.ctor
+IL_0156: ldarg.0 
+IL_0157: ldc.i4.1 
+IL_0158: call 0x0A00027A System.Windows.Forms.Control::set_Visible
+IL_015D: ldloc.s local(0x0008)
+IL_015F: ldloc.s local(0x000C)
+IL_0161: ldc.i4 6024
+IL_0166: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_016B: newobj 0x060005F8 \x8c\x9a.\x8c\x99::.ctor
+IL_0170: stloc.2 
+IL_0171: ldloc.s local(0x000A)
+IL_0173: ldloc.s local(0x000C)
+IL_0175: ldc.i4 6024
+IL_017A: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_017F: newobj 0x060005F8 \x8c\x9a.\x8c\x99::.ctor
+IL_0184: stloc.0 
+IL_0185: ldloc.s local(0x000D)
+IL_0187: ldc.i4 6024
+IL_018C: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0191: newobj 0x060005F8 \x8c\x9a.\x8c\x99::.ctor
+IL_0196: stloc.3 
+IL_0197: ldloc.0 
+IL_0198: ldloc.s local(0x0005)
+IL_019A: stfld 0x040006D4 \x8c\x9a.\x8c\x99::\x8a\x8d\x86
+IL_019F: ldloc.0 
+IL_01A0: ldloc.s local(0x0006)
+IL_01A2: stfld 0x040006D5 \x8c\x9a.\x8c\x99::\x8a\x8d\x87
+IL_01A7: call 0x060004CC \x8b\x8f.\x8b\x8e::\x88\x96
+IL_01AC: brtrue.s 326
+IL_01AE: ldloc.0 
+IL_01AF: ldloc.1 
+IL_01B0: stfld 0x040006D3 \x8c\x9a.\x8c\x99::\x8a\x8c\x9e
+IL_01B5: ldarg.0 
+IL_01B6: ldfld 0x040004D3 \x8b\x8f.\x8b\x8e::\x89\x89\x9d
+IL_01BB: ldloc.2 
+IL_01BC: ldloc.0 
+IL_01BD: ldloc.3 
+IL_01BE: newobj 0x060005A0 \x8c\x88.\x8c\x87::.ctor
+IL_01C3: call 0x0A000066 Autodesk.AutoCAD.DatabaseServices.HostApplicationServices::get_WorkingDatabase
+IL_01C8: stloc.s local(0x0004)
+IL_01CA: ldloc.s local(0x0004)
+IL_01CC: ldarg.0 
+IL_01CD: ldfld 0x040004E1 \x8b\x8f.\x8b\x8e::\x89\x8a\x92
+IL_01D2: ldarg.0 
+IL_01D3: ldfld 0x040004E0 \x8b\x8f.\x8b\x8e::\x89\x8a\x91
+IL_01D8: ldarg.0 
+IL_01D9: ldfld 0x040004DE \x8b\x8f.\x8b\x8e::\x89\x8a\x8f
+IL_01DE: ldarg.0 
+IL_01DF: ldfld 0x040004DD \x8b\x8f.\x8b\x8e::\x89\x8a\x8e
+IL_01E4: ldarg.0 
+IL_01E5: ldfld 0x040004DF \x8b\x8f.\x8b\x8e::\x89\x8a\x90
+IL_01EA: ldarg.0 
+IL_01EB: ldfld 0x040004E2 \x8b\x8f.\x8b\x8e::\x89\x8a\x93
+IL_01F0: ldloc.0 
+IL_01F1: ldarg.0 
+IL_01F2: ldfld 0x040004D3 \x8b\x8f.\x8b\x8e::\x89\x89\x9d
+IL_01F7: callvirt 0x0A000086 System.Object::ToString
+IL_01FC: call 0x060004C6 \x8b\x8f.\x8b\x8e::\x89\x89\x9a
+IL_0201: ret 
+

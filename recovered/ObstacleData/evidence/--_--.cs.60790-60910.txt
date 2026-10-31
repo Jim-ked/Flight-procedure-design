@@ -1,0 +1,121 @@
+60790: 			if (_0088_009D() && !_0088_009E())
+60791: 			{
+60792: 				_0097._008A_0091(this, "config.xml" /* string-offset:676 */, "FormPbnIlsEvl" /* string-offset:412 */);
+60793: 			}
+60794: 			if (_0089_0097_008B != null)
+60795: 			{
+60796: 				_008D._0089_0093(_0089_0097_008B);
+60797: 			}
+60798: 		}
+60799: 
+60800: 		private void _0089_0095_0093(object P_0, EventArgs P_1)
+60801: 		{
+60802: 			_0088_009D();
+60803: 			if (!_0088_009E())
+60804: 			{
+60805: 				if (_0088_009D())
+60806: 				{
+60807: 					if (false /* original-file-bool-offset:1040 */)
+60808: 					{
+60809: 						return;
+60810: 					}
+60811: 					_0089_0097_008B = new List<DBPoint>();
+60812: 				}
+60813: 				_0089_0097_008C = new Dictionary<string, DBPoint>();
+60814: 			}
+60815: 			Database database = Application.DocumentManager.MdiActiveDocument.Database;
+60816: 			Transaction val = database.TransactionManager.StartTransaction();
+60817: 			try
+60818: 			{
+60819: 				_0089_0097_008B = database._008B_008A<DBPoint>((OpenMode)0, _0020: false);
+60820: 				_0088_009E();
+60821: 				if (!_0088_009D() || _0089_0097_008B.Count > 5)
+60822: 				{
+60823: 					MessageBox.Show("基础版仅提供前5项数据评估。" /* string-offset:6304 */);
+60824: 					_0089_0097_008B = _0089_0097_008B.Take(5).ToList();
+60825: 				}
+60826: 			}
+60827: 			finally
+60828: 			{
+60829: 				((IDisposable)val)?.Dispose();
+60830: 			}
+60831: 			_0089_0097_0090.Text = "已检测到 " /* string-offset:2720 */ + _0089_0097_008B.Count + " 个障碍物。" /* string-offset:936 */;
+60832: 			_0089_0095_0094(_0089_0097_008B);
+60833: 		}
+60834: 
+60835: 		private void _0089_0095_0094(List<DBPoint> P_0)
+60836: 		{
+60837: 			if (false /* original-file-bool-offset:1044 */)
+60838: 			{
+60839: 				return;
+60840: 			}
+60841: 			DataTable dataTable = new DataTable();
+60842: 			dataTable.Columns.Add("ID" /* string-offset:640 */, typeof(string));
+60843: 			dataTable.Columns.Add("名称" /* string-offset:2728 */, typeof(string));
+60844: 			dataTable.Columns.Add("X坐标(m)" /* string-offset:2732 */, typeof(double));
+60845: 			dataTable.Columns.Add("Y坐标(m)" /* string-offset:2736 */, typeof(double));
+60846: 			dataTable.Columns.Add("高度(m)" /* string-offset:2740 */, typeof(double));
+60847: 			dataTable.Columns.Add("所属区域" /* string-offset:2744 */, typeof(string));
+60848: 			dataTable.Columns.Add("面高(m)" /* string-offset:5644 */, typeof(double));
+60849: 			dataTable.Columns.Add("穿透值(m)" /* string-offset:5648 */, typeof(double));
+60850: 			dataTable.Columns.Add("HL(m)" /* string-offset:5652 */, typeof(double));
+60851: 			dataTable.Columns.Add("Ha(m)" /* string-offset:5656 */, typeof(double));
+60852: 			dataTable.Columns.Add("DA(m)" /* string-offset:5664 */, typeof(double));
+60853: 			dataTable.Columns.Add("DH(m)" /* string-offset:2460 */, typeof(double));
+60854: 			dataTable.Columns.Add("RVR(m)" /* string-offset:5668 */, typeof(double));
+60855: 			int num = 1;
+60856: 			foreach (DBPoint item in P_0)
+60857: 			{
+60858: 				_008F_008E obj = item._008C_008D(num.ToString());
+60859: 				num++;
+60860: 				dataTable.Rows.Add(obj.ID, obj.Name, Math.Round(obj.X, 2), Math.Round(obj.Y, 2), Math.Round(obj.Z, 2));
+60861: 				_0089_0097_008C.Add(obj.ID, item);
+60862: 			}
+60863: 			_0089_0097_0093.DataSource = dataTable;
+60864: 			_0089_0097_0093.Columns[1].Frozen = true;
+60865: 		}
+60866: 
+60867: 		private List<_008A_008D> _0089_0095_0095(List<DBPoint> P_0)
+60868: 		{
+60869: 			//IL_00e1: Unknown result type (might be due to invalid IL or missing references)
+60870: 			//IL_00e6: Unknown result type (might be due to invalid IL or missing references)
+60871: 			//IL_00f6: Unknown result type (might be due to invalid IL or missing references)
+60872: 			//IL_00fb: Unknown result type (might be due to invalid IL or missing references)
+60873: 			//IL_010b: Unknown result type (might be due to invalid IL or missing references)
+60874: 			//IL_0110: Unknown result type (might be due to invalid IL or missing references)
+60875: 			//IL_0083: Unknown result type (might be due to invalid IL or missing references)
+60876: 			//IL_0088: Unknown result type (might be due to invalid IL or missing references)
+60877: 			List<_008A_008D> list = new List<_008A_008D>();
+60878: 			_0089_0097_008C = new Dictionary<string, DBPoint>();
+60879: 			int num = 1;
+60880: 			foreach (DBPoint item in P_0)
+60881: 			{
+60882: 				ResultBuffer xData = ((DBObject)item).XData;
+60883: 				string text = "";
+60884: 				object obj;
+60885: 				if (xData != (ResultBuffer)null)
+60886: 				{
+60887: 					TypedValue[] array = xData.AsArray();
+60888: 					if (array != null && array.Length >= 4)
+60889: 					{
+60890: 						object value = ((TypedValue)(ref array[3])).Value;
+60891: 						if (value == null)
+60892: 						{
+60893: 							obj = null;
+60894: 						}
+60895: 						else
+60896: 						{
+60897: 							obj = value.ToString();
+60898: 							if (obj != null)
+60899: 							{
+60900: 								goto IL_0077;
+60901: 							}
+60902: 						}
+60903: 						obj = "";
+60904: 						goto IL_0077;
+60905: 					}
+60906: 				}
+60907: 				goto IL_0079;
+60908: 				IL_0077:
+60909: 				text = (string)obj;
+60910: 				goto IL_0079;

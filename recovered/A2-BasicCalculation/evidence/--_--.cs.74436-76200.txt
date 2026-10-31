@@ -1,0 +1,1765 @@
+74436: 	public static class _008D_0088
+74437: 	{
+74438: 		public static void _008A_0090_008C(Transaction P_0, Database P_1, string P_2)
+74439: 		{
+74440: 			//IL_0003: Unknown result type (might be due to invalid IL or missing references)
+74441: 			//IL_000e: Unknown result type (might be due to invalid IL or missing references)
+74442: 			//IL_0014: Expected O, but got Unknown
+74443: 			//IL_002c: Unknown result type (might be due to invalid IL or missing references)
+74444: 			//IL_0032: Expected O, but got Unknown
+74445: 			//IL_004b: Unknown result type (might be due to invalid IL or missing references)
+74446: 			try
+74447: 			{
+74448: 				RegAppTable val = (RegAppTable)P_0.GetObject(P_1.RegAppTableId, (OpenMode)0);
+74449: 				if (((SymbolTable)val).Has(P_2))
+74450: 				{
+74451: 					return;
+74452: 				}
+74453: 				try
+74454: 				{
+74455: 					((DBObject)val).UpgradeOpen();
+74456: 					if (!((SymbolTable)val).Has(P_2))
+74457: 					{
+74458: 						RegAppTableRecord val2 = new RegAppTableRecord();
+74459: 						_0089_0086();
+74460: 						if (_0088z())
+74461: 						{
+74462: 							((SymbolTableRecord)val2).Name = P_2;
+74463: 						}
+74464: 						((SymbolTable)val).Add((SymbolTableRecord)(object)val2);
+74465: 						P_0.AddNewlyCreatedDBObject((DBObject)(object)val2, true);
+74466: 					}
+74467: 				}
+74468: 				catch (Exception)
+74469: 				{
+74470: 				}
+74471: 			}
+74472: 			catch (Exception)
+74473: 			{
+74474: 			}
+74475: 		}
+74476: 
+74477: 		public static void _008A_0090_008D(string P_0)
+74478: 		{
+74479: 			try
+74480: 			{
+74481: 				DocumentCollection documentManager = Application.DocumentManager;
+74482: 				int num;
+74483: 				if (documentManager == null)
+74484: 				{
+74485: 					_0089_0086();
+74486: 					if (_0088z())
+74487: 					{
+74488: 						num = 2;
+74489: 						if (!_0089_0086())
+74490: 						{
+74491: 							goto IL_003a;
+74492: 						}
+74493: 					}
+74494: 					else
+74495: 					{
+74496: 						num = 3;
+74497: 						if (_0088z())
+74498: 						{
+74499: 							goto IL_003a;
+74500: 						}
+74501: 					}
+74502: 					goto IL_0067;
+74503: 				}
+74504: 				object obj = documentManager.MdiActiveDocument;
+74505: 				goto IL_005d;
+74506: 				IL_003a:
+74507: 				switch (num)
+74508: 				{
+74509: 				case 0:
+74510: 				case 2:
+74511: 					break;
+74512: 				default:
+74513: 					goto IL_0067;
+74514: 				}
+74515: 				obj = null;
+74516: 				goto IL_005d;
+74517: 				IL_0067:
+74518: 				Document val = default(Document);
+74519: 				val.Editor.WriteMessage("\n" /* string-offset:328 */ + P_0);
+74520: 				return;
+74521: 				IL_005d:
+74522: 				val = (Document)obj;
+74523: 				if (!((DisposableWrapper)(object)val != (DisposableWrapper)null))
+74524: 				{
+74525: 					return;
+74526: 				}
+74527: 				goto IL_0067;
+74528: 			}
+74529: 			catch
+74530: 			{
+74531: 			}
+74532: 		}
+74533: 
+74534: 		static _008D_0088()
+74535: 		{
+74536: 			LicenseManager.Validate(typeof(_008D_0088));
+74537: 		}
+74538: 
+74539: 		internal static bool _0088z()
+74540: 		{
+74541: 			return true;
+74542: 		}
+74543: 
+74544: 		internal static bool _0089_0086()
+74545: 		{
+74546: 			return false;
+74547: 		}
+74548: 	}
+74549: }
+74550: namespace _008D_008B
+74551: {
+74552: 	[LicenseProvider(typeof(_0091_008B))]
+74553: 	public enum _008D_008A
+74554: 	{
+74555: 
+74556: 	}
+74557: }
+74558: namespace _008D_008D
+74559: {
+74560: 	[LicenseProvider(typeof(_0091_008B))]
+74561: 	[DataContract]
+74562: 	public class _008D_008C : INotifyPropertyChanged
+74563: 	{
+74564: 		[CompilerGenerated]
+74565: 		private PropertyChangedEventHandler _008A_0091_009D;
+74566: 
+74567: 		[CompilerGenerated]
+74568: 		private _008D_008A _008A_0091_009E = (_008D_008A)1;
+74569: 
+74570: 		[CompilerGenerated]
+74571: 		private double _008A_0092_0086;
+74572: 
+74573: 		[CompilerGenerated]
+74574: 		private double _008A_0092_0087;
+74575: 
+74576: 		[CompilerGenerated]
+74577: 		private double _008A_0092_0088;
+74578: 
+74579: 		[CompilerGenerated]
+74580: 		private double _008A_0092_0089;
+74581: 
+74582: 		[CompilerGenerated]
+74583: 		private double _008A_0092_008A;
+74584: 
+74585: 		[CompilerGenerated]
+74586: 		private string _008A_0092_008B;
+74587: 
+74588: 		[CompilerGenerated]
+74589: 		private _008D_008E _008A_0092_008C;
+74590: 
+74591: 		[CompilerGenerated]
+74592: 		private DateTime _008A_0092_008D;
+74593: 
+74594: 		[CompilerGenerated]
+74595: 		private string _008A_0092_008E;
+74596: 
+74597: 		[DataMember]
+74598: 		[Category("基础信息")]
+74599: 		[DisplayName("线条类型")]
+74600: 		public _008D_008A _008A_0090_0098
+74601: 		{
+74602: 			[CompilerGenerated]
+74603: 			get
+74604: 			{
+74605: 				return _008A_0091_009E;
+74606: 			}
+74607: 			[CompilerGenerated]
+74608: 			set
+74609: 			{
+74610: 				_008A_0091_009E = obj;
+74611: 			}
+74612: 		}
+74613: 
+74614: 		[DisplayName("类型名称")]
+74615: 		public string _008A_0090_009A => _008A_0090_0098.ToString();
+74616: 
+74617: 		[Category("位置信息")]
+74618: 		[DataMember]
+74619: 		[DisplayName("中心点X")]
+74620: 		public double _008A_0090_009D
+74621: 		{
+74622: 			[CompilerGenerated]
+74623: 			get
+74624: 			{
+74625: 				return _008A_0092_0086;
+74626: 			}
+74627: 			[CompilerGenerated]
+74628: 			set
+74629: 			{
+74630: 				_008A_0092_0086 = num;
+74631: 			}
+74632: 		}
+74633: 
+74634: 		[DataMember]
+74635: 		[Category("位置信息")]
+74636: 		[DisplayName("中心点Y")]
+74637: 		public double _008A_0091_0087
+74638: 		{
+74639: 			[CompilerGenerated]
+74640: 			get
+74641: 			{
+74642: 				return _008A_0092_0087;
+74643: 			}
+74644: 			[CompilerGenerated]
+74645: 			set
+74646: 			{
+74647: 				_008A_0092_0087 = num;
+74648: 			}
+74649: 		}
+74650: 
+74651: 		[Category("位置信息")]
+74652: 		[DataMember]
+74653: 		[DisplayName("中心点Z")]
+74654: 		public double _008A_0091_008A
+74655: 		{
+74656: 			[CompilerGenerated]
+74657: 			get
+74658: 			{
+74659: 				return _008A_0092_0088;
+74660: 			}
+74661: 			[CompilerGenerated]
+74662: 			set
+74663: 			{
+74664: 				_008A_0092_0088 = num;
+74665: 			}
+74666: 		}
+74667: 
+74668: 		[Category("位置信息")]
+74669: 		[DataMember]
+74670: 		[DisplayName("方向角度")]
+74671: 		public double _008A_0091_008D
+74672: 		{
+74673: 			[CompilerGenerated]
+74674: 			get
+74675: 			{
+74676: 				return _008A_0092_0089;
+74677: 			}
+74678: 			[CompilerGenerated]
+74679: 			set
+74680: 			{
+74681: 				_008A_0092_0089 = num;
+74682: 			}
+74683: 		}
+74684: 
+74685: 		[DisplayName("线条长度")]
+74686: 		[DataMember]
+74687: 		public double _008A_0091_0090
+74688: 		{
+74689: 			[CompilerGenerated]
+74690: 			get
+74691: 			{
+74692: 				return _008A_0092_008A;
+74693: 			}
+74694: 			[CompilerGenerated]
+74695: 			set
+74696: 			{
+74697: 				_008A_0092_008A = num;
+74698: 			}
+74699: 		}
+74700: 
+74701: 		[DataMember]
+74702: 		[DisplayName("描述")]
+74703: 		public string _008A_0091_0093
+74704: 		{
+74705: 			[CompilerGenerated]
+74706: 			get
+74707: 			{
+74708: 				return _008A_0092_008B;
+74709: 			}
+74710: 			[CompilerGenerated]
+74711: 			set
+74712: 			{
+74713: 				_008A_0092_008B = text;
+74714: 			}
+74715: 		}
+74716: 
+74717: 		[Category("计算参数")]
+74718: 		[DisplayName("计算参数")]
+74719: 		[DataMember]
+74720: 		public _008D_008E _008A_0091_0096
+74721: 		{
+74722: 			[CompilerGenerated]
+74723: 			get
+74724: 			{
+74725: 				return _008A_0092_008C;
+74726: 			}
+74727: 			[CompilerGenerated]
+74728: 			set
+74729: 			{
+74730: 				_008A_0092_008C = obj;
+74731: 			}
+74732: 		}
+74733: 
+74734: 		[DisplayName("创建时间")]
+74735: 		[DataMember]
+74736: 		public DateTime _008A_0091_0099
+74737: 		{
+74738: 			[CompilerGenerated]
+74739: 			get
+74740: 			{
+74741: 				return _008A_0092_008D;
+74742: 			}
+74743: 			[CompilerGenerated]
+74744: 			set
+74745: 			{
+74746: 				_008A_0092_008D = dateTime;
+74747: 			}
+74748: 		}
+74749: 
+74750: 		[DataMember]
+74751: 		[DisplayName("创建者")]
+74752: 		public string _008A_0091_009C
+74753: 		{
+74754: 			[CompilerGenerated]
+74755: 			get
+74756: 			{
+74757: 				return _008A_0092_008E;
+74758: 			}
+74759: 			[CompilerGenerated]
+74760: 			set
+74761: 			{
+74762: 				_008A_0092_008E = text;
+74763: 			}
+74764: 		}
+74765: 
+74766: 		public event PropertyChangedEventHandler PropertyChanged
+74767: 		{
+74768: 			[CompilerGenerated]
+74769: 			add
+74770: 			{
+74771: 				_ = 0;
+74772: 				int num;
+74773: 				if (_0089_0089())
+74774: 				{
+74775: 					num = 6;
+74776: 					goto IL_0062;
+74777: 				}
+74778: 				num = 5;
+74779: 				if (_0089_0089())
+74780: 				{
+74781: 					goto IL_0037;
+74782: 				}
+74783: 				goto IL_0090;
+74784: 				IL_007d:
+74785: 				PropertyChangedEventHandler propertyChangedEventHandler = default(PropertyChangedEventHandler);
+74786: 				PropertyChangedEventHandler propertyChangedEventHandler2 = default(PropertyChangedEventHandler);
+74787: 				if ((object)propertyChangedEventHandler == propertyChangedEventHandler2)
+74788: 				{
+74789: 					num = 7;
+74790: 					return;
+74791: 				}
+74792: 				goto IL_0069;
+74793: 				IL_0090:
+74794: 				PropertyChangedEventHandler value2 = default(PropertyChangedEventHandler);
+74795: 				propertyChangedEventHandler = Interlocked.CompareExchange(ref _008A_0091_009D, value2, propertyChangedEventHandler2);
+74796: 				num = 2;
+74797: 				goto IL_007d;
+74798: 				IL_0062:
+74799: 				propertyChangedEventHandler = _008A_0091_009D;
+74800: 				goto IL_0069;
+74801: 				IL_0069:
+74802: 				do
+74803: 				{
+74804: 					propertyChangedEventHandler2 = propertyChangedEventHandler;
+74805: 					num = 3;
+74806: 				}
+74807: 				while (!_0089_0089());
+74808: 				goto IL_0037;
+74809: 				IL_0037:
+74810: 				while (true)
+74811: 				{
+74812: 					switch (num)
+74813: 					{
+74814: 					default:
+74815: 						num = 4;
+74816: 						if (_0089_0089())
+74817: 						{
+74818: 							continue;
+74819: 						}
+74820: 						goto case 3;
+74821: 					case 0:
+74822: 					case 6:
+74823: 						break;
+74824: 					case 1:
+74825: 					case 5:
+74826: 						goto IL_0069;
+74827: 					case 2:
+74828: 						goto IL_007d;
+74829: 					case 3:
+74830: 						value2 = (PropertyChangedEventHandler)Delegate.Combine(propertyChangedEventHandler2, b);
+74831: 						goto IL_0090;
+74832: 					case 4:
+74833: 						goto IL_0090;
+74834: 					case 7:
+74835: 						return;
+74836: 					}
+74837: 					break;
+74838: 				}
+74839: 				goto IL_0062;
+74840: 			}
+74841: 			[CompilerGenerated]
+74842: 			remove
+74843: 			{
+74844: 				PropertyChangedEventHandler propertyChangedEventHandler = _008A_0091_009D;
+74845: 				PropertyChangedEventHandler propertyChangedEventHandler2;
+74846: 				do
+74847: 				{
+74848: 					propertyChangedEventHandler2 = propertyChangedEventHandler;
+74849: 					_0089_008A();
+74850: 					if (_0089_0089())
+74851: 					{
+74852: 						PropertyChangedEventHandler value2 = (PropertyChangedEventHandler)Delegate.Remove(propertyChangedEventHandler2, value3);
+74853: 						propertyChangedEventHandler = Interlocked.CompareExchange(ref _008A_0091_009D, value2, propertyChangedEventHandler2);
+74854: 					}
+74855: 				}
+74856: 				while ((object)propertyChangedEventHandler != propertyChangedEventHandler2);
+74857: 			}
+74858: 		}
+74859: 
+74860: 		public void _008A_0090_008E(string P_0)
+74861: 		{
+74862: 			_008A_0091_009D?.Invoke(this, new PropertyChangedEventArgs(P_0));
+74863: 		}
+74864: 
+74865: 		public string _008A_0090_008F()
+74866: 		{
+74867: 			try
+74868: 			{
+74869: 				DataContractJsonSerializer dataContractJsonSerializer = new DataContractJsonSerializer(typeof(_008D_008C));
+74870: 				using MemoryStream memoryStream = new MemoryStream();
+74871: 				dataContractJsonSerializer.WriteObject(memoryStream, this);
+74872: 				byte[] array = memoryStream.ToArray();
+74873: 				_0089_0089();
+74874: 				if (_0089_008A() || array.Length > 16384)
+74875: 				{
+74876: 					Application.ShowAlertDialog(string.Format("警告：XData 数据大小超过 16KB ({0} bytes)，可能导致保存失败" /* string-offset:6768 */, array.Length));
+74877: 				}
+74878: 				return Encoding.UTF8.GetString(array, 0, array.Length);
+74879: 			}
+74880: 			catch (Exception ex)
+74881: 			{
+74882: 				Application.ShowAlertDialog("序列化失败: " /* string-offset:6772 */ + ex.Message);
+74883: 				return "";
+74884: 			}
+74885: 		}
+74886: 
+74887: 		public static _008D_008C _008A_0090_0090(string P_0)
+74888: 		{
+74889: 			if (string.IsNullOrEmpty(P_0))
+74890: 			{
+74891: 				return new _008D_008C();
+74892: 			}
+74893: 			try
+74894: 			{
+74895: 				DataContractJsonSerializer dataContractJsonSerializer = new DataContractJsonSerializer(typeof(_008D_008C));
+74896: 				using MemoryStream stream = new MemoryStream(Encoding.UTF8.GetBytes(P_0));
+74897: 				return (_008D_008C)dataContractJsonSerializer.ReadObject(stream);
+74898: 			}
+74899: 			catch (Exception ex)
+74900: 			{
+74901: 				Application.ShowAlertDialog("反序列化失败: " /* string-offset:6776 */ + ex.Message);
+74902: 				return new _008D_008C();
+74903: 			}
+74904: 		}
+74905: 
+74906: 		public ResultBuffer _008A_0090_0091()
+74907: 		{
+74908: 			//IL_0000: Unknown result type (might be due to invalid IL or missing references)
+74909: 			//IL_0005: Unknown result type (might be due to invalid IL or missing references)
+74910: 			//IL_0015: Unknown result type (might be due to invalid IL or missing references)
+74911: 			//IL_001f: Unknown result type (might be due to invalid IL or missing references)
+74912: 			//IL_0033: Unknown result type (might be due to invalid IL or missing references)
+74913: 			//IL_003d: Unknown result type (might be due to invalid IL or missing references)
+74914: 			//IL_0049: Unknown result type (might be due to invalid IL or missing references)
+74915: 			//IL_0054: Expected O, but got Unknown
+74916: 			ResultBuffer val = new ResultBuffer();
+74917: 			val.Add(new TypedValue(1001, (object)"WsCalcuLine" /* string-offset:6780 */));
+74918: 			val.Add(new TypedValue(1000, (object)((int)_008A_0090_0098).ToString()));
+74919: 			val.Add(new TypedValue(1000, (object)_008A_0090_008F()));
+74920: 			return val;
+74921: 		}
+74922: 
+74923: 		public static _008D_008C _008A_0090_0092(ResultBuffer P_0)
+74924: 		{
+74925: 			if (P_0 == (ResultBuffer)null)
+74926: 			{
+74927: 				return null;
+74928: 			}
+74929: 			try
+74930: 			{
+74931: 				TypedValue[] array = P_0.AsArray();
+74932: 				int result = default(int);
+74933: 				object obj;
+74934: 				if (array.Length >= 3)
+74935: 				{
+74936: 					object value = ((TypedValue)(ref array[1])).Value;
+74937: 					object s;
+74938: 					if (value == null)
+74939: 					{
+74940: 						_0089_008A();
+74941: 						if (!_0089_0089())
+74942: 						{
+74943: 							goto IL_0066;
+74944: 						}
+74945: 						s = null;
+74946: 					}
+74947: 					else
+74948: 					{
+74949: 						s = value.ToString();
+74950: 					}
+74951: 					if (int.TryParse((string)s, out result))
+74952: 					{
+74953: 						object value2 = ((TypedValue)(ref array[2])).Value;
+74954: 						if (value2 == null)
+74955: 						{
+74956: 							obj = null;
+74957: 						}
+74958: 						else
+74959: 						{
+74960: 							obj = value2.ToString();
+74961: 							if (obj != null)
+74962: 							{
+74963: 								goto IL_006b;
+74964: 							}
+74965: 						}
+74966: 						goto IL_0066;
+74967: 					}
+74968: 				}
+74969: 				goto end_IL_000c;
+74970: 				IL_006b:
+74971: 				_008D_008C obj2 = _008A_0090_0090((string)obj);
+74972: 				obj2._008A_0090_0098 = (_008D_008A)result;
+74973: 				return obj2;
+74974: 				IL_0066:
+74975: 				obj = "";
+74976: 				goto IL_006b;
+74977: 				end_IL_000c:;
+74978: 			}
+74979: 			catch (Exception ex)
+74980: 			{
+74981: 				Application.ShowAlertDialog("解析XData失败: " /* string-offset:6784 */ + ex.Message);
+74982: 			}
+74983: 			return new _008D_008C();
+74984: 		}
+74985: 
+74986: 		public bool _008A_0090_0093(Entity P_0)
+74987: 		{
+74988: 			//IL_0031: Unknown result type (might be due to invalid IL or missing references)
+74989: 			if ((DisposableWrapper)(object)P_0 == (DisposableWrapper)null)
+74990: 			{
+74991: 				return false;
+74992: 			}
+74993: 			bool result = default(bool);
+74994: 			try
+74995: 			{
+74996: 				Database database = ((DBObject)P_0).Database;
+74997: 				DocumentLock val = Application.DocumentManager.MdiActiveDocument.LockDocument();
+74998: 				try
+74999: 				{
+75000: 					Transaction val2 = database.TransactionManager.StartTransaction();
+75001: 					try
+75002: 					{
+75003: 						DBObject obj = val2.GetObject(((DBObject)P_0).ObjectId, (OpenMode)1);
+75004: 						Entity val3 = (Entity)(object)((obj is Entity) ? obj : null);
+75005: 						if (!((DisposableWrapper)(object)val3 != (DisposableWrapper)null))
+75006: 						{
+75007: 							val2.Abort();
+75008: 							goto IL_0097;
+75009: 						}
+75010: 						_008D_0088._008A_0090_008C(val2, database, "WsCalcuLine" /* string-offset:6780 */);
+75011: 						_0089_008A();
+75012: 						if (_0089_0089())
+75013: 						{
+75014: 							if (!_0089_008A())
+75015: 							{
+75016: 								((DBObject)val3).XData = _008A_0090_0091();
+75017: 								if (!_0089_0089())
+75018: 								{
+75019: 									goto IL_0097;
+75020: 								}
+75021: 								val2.Commit();
+75022: 							}
+75023: 							result = true;
+75024: 							return result;
+75025: 						}
+75026: 						goto end_IL_002f;
+75027: 						IL_0097:
+75028: 						result = false;
+75029: 						return result;
+75030: 						end_IL_002f:;
+75031: 					}
+75032: 					finally
+75033: 					{
+75034: 						((IDisposable)val2)?.Dispose();
+75035: 					}
+75036: 				}
+75037: 				finally
+75038: 				{
+75039: 					((IDisposable)val)?.Dispose();
+75040: 				}
+75041: 			}
+75042: 			catch (Exception ex)
+75043: 			{
+75044: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\nSaveToEntity 失败: " /* string-offset:6788 */ + ex.Message);
+75045: 				return false;
+75046: 			}
+75047: 			return result;
+75048: 		}
+75049: 
+75050: 		public bool _008A_0090_0094(ObjectId P_0, Database P_1)
+75051: 		{
+75052: 			//IL_003e: Unknown result type (might be due to invalid IL or missing references)
+75053: 			_ = 0;
+75054: 			if ((_0089_0089() && ((ObjectId)(ref P_0)).IsNull) || (DisposableWrapper)(object)P_1 == (DisposableWrapper)null)
+75055: 			{
+75056: 				return false;
+75057: 			}
+75058: 			bool result = default(bool);
+75059: 			try
+75060: 			{
+75061: 				DocumentLock val = Application.DocumentManager.MdiActiveDocument.LockDocument();
+75062: 				try
+75063: 				{
+75064: 					Transaction val2 = P_1.TransactionManager.StartTransaction();
+75065: 					try
+75066: 					{
+75067: 						DBObject obj = val2.GetObject(P_0, (OpenMode)1);
+75068: 						Entity val3 = (Entity)(object)((obj is Entity) ? obj : null);
+75069: 						if (!((DisposableWrapper)(object)val3 != (DisposableWrapper)null))
+75070: 						{
+75071: 							val2.Abort();
+75072: 							result = false;
+75073: 							return result;
+75074: 						}
+75075: 						_008D_0088._008A_0090_008C(val2, P_1, "WsCalcuLine" /* string-offset:6780 */);
+75076: 						((DBObject)val3).XData = _008A_0090_0091();
+75077: 						val2.Commit();
+75078: 						_ = 0;
+75079: 						if (_0089_0089())
+75080: 						{
+75081: 							result = true;
+75082: 							return result;
+75083: 						}
+75084: 					}
+75085: 					finally
+75086: 					{
+75087: 						((IDisposable)val2)?.Dispose();
+75088: 					}
+75089: 				}
+75090: 				finally
+75091: 				{
+75092: 					((IDisposable)val)?.Dispose();
+75093: 				}
+75094: 			}
+75095: 			catch (Exception ex)
+75096: 			{
+75097: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\nSaveToEntityById 失败: " /* string-offset:6792 */ + ex.Message);
+75098: 				return false;
+75099: 			}
+75100: 			return result;
+75101: 		}
+75102: 
+75103: 		public static _008D_008C _008A_0090_0095(Entity P_0)
+75104: 		{
+75105: 			//IL_0032: Unknown result type (might be due to invalid IL or missing references)
+75106: 			_008D_008C result = default(_008D_008C);
+75107: 			try
+75108: 			{
+75109: 				if ((DisposableWrapper)(object)P_0 == (DisposableWrapper)null)
+75110: 				{
+75111: 					return null;
+75112: 				}
+75113: 				Document mdiActiveDocument = Application.DocumentManager.MdiActiveDocument;
+75114: 				Database database = ((DBObject)P_0).Database;
+75115: 				DocumentLock val = mdiActiveDocument.LockDocument();
+75116: 				try
+75117: 				{
+75118: 					Transaction val2 = database.TransactionManager.StartTransaction();
+75119: 					try
+75120: 					{
+75121: 						DBObject obj = val2.GetObject(((DBObject)P_0).ObjectId, (OpenMode)0);
+75122: 						Entity val3 = (Entity)(object)((obj is Entity) ? obj : null);
+75123: 						_0089_0089();
+75124: 						if (!_0089_008A() || !_0089_0089())
+75125: 						{
+75126: 							if ((DisposableWrapper)(object)val3 != (DisposableWrapper)null)
+75127: 							{
+75128: 								ResultBuffer xDataForApplication = ((DBObject)val3).GetXDataForApplication("WsCalcuLine" /* string-offset:6780 */);
+75129: 								if (xDataForApplication != (ResultBuffer)null)
+75130: 								{
+75131: 									_008D_008C obj2 = _008A_0090_0092(xDataForApplication);
+75132: 									val2.Commit();
+75133: 									result = obj2;
+75134: 									return result;
+75135: 								}
+75136: 							}
+75137: 							val2.Abort();
+75138: 							result = null;
+75139: 							return result;
+75140: 						}
+75141: 					}
+75142: 					finally
+75143: 					{
+75144: 						((IDisposable)val2)?.Dispose();
+75145: 					}
+75146: 				}
+75147: 				finally
+75148: 				{
+75149: 					((IDisposable)val)?.Dispose();
+75150: 				}
+75151: 			}
+75152: 			catch (Exception ex)
+75153: 			{
+75154: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\n从实体加载数据失败: " /* string-offset:6796 */ + ex.Message);
+75155: 				return null;
+75156: 			}
+75157: 			return result;
+75158: 		}
+75159: 
+75160: 		public _008D_008C()
+75161: 		{
+75162: 			_0089_008A();
+75163: 			if (_0089_0089())
+75164: 			{
+75165: 				_008A_0092_008A = 20000.0;
+75166: 				_008A_0092_008B = "";
+75167: 				if (_0089_0089())
+75168: 				{
+75169: 					goto IL_003a;
+75170: 				}
+75171: 			}
+75172: 			goto IL_005b;
+75173: 			IL_003a:
+75174: 			_008A_0092_008C = new _008D_008E();
+75175: 			_008A_0092_008D = DateTime.Now;
+75176: 			_008A_0092_008E = "";
+75177: 			goto IL_005b;
+75178: 			IL_005b:
+75179: 			base._002Ector();
+75180: 			if (_0089_0089())
+75181: 			{
+75182: 				return;
+75183: 			}
+75184: 			goto IL_003a;
+75185: 		}
+75186: 
+75187: 		static _008D_008C()
+75188: 		{
+75189: 			LicenseManager.Validate(typeof(_008D_008C));
+75190: 		}
+75191: 
+75192: 		internal static bool _0089_0089()
+75193: 		{
+75194: 			return true;
+75195: 		}
+75196: 
+75197: 		internal static bool _0089_008A()
+75198: 		{
+75199: 			return false;
+75200: 		}
+75201: 	}
+75202: }
+75203: namespace _008D_008F
+75204: {
+75205: 	[DataContract]
+75206: 	[LicenseProvider(typeof(_0091_008B))]
+75207: 	public class _008D_008E : INotifyPropertyChanged
+75208: 	{
+75209: 		[CompilerGenerated]
+75210: 		private PropertyChangedEventHandler _008A_0095_0095;
+75211: 
+75212: 		[CompilerGenerated]
+75213: 		private double _008A_0095_0096;
+75214: 
+75215: 		[CompilerGenerated]
+75216: 		private double _008A_0095_0097;
+75217: 
+75218: 		[CompilerGenerated]
+75219: 		private double _008A_0095_0098;
+75220: 
+75221: 		[CompilerGenerated]
+75222: 		private double _008A_0095_0099;
+75223: 
+75224: 		[CompilerGenerated]
+75225: 		private double _008A_0095_009A;
+75226: 
+75227: 		[CompilerGenerated]
+75228: 		private double _008A_0095_009B;
+75229: 
+75230: 		[CompilerGenerated]
+75231: 		private double _008A_0095_009C;
+75232: 
+75233: 		[CompilerGenerated]
+75234: 		private double _008A_0095_009D;
+75235: 
+75236: 		[CompilerGenerated]
+75237: 		private double _008A_0095_009E;
+75238: 
+75239: 		[CompilerGenerated]
+75240: 		private double _008A_0096_0086;
+75241: 
+75242: 		[CompilerGenerated]
+75243: 		private double _008A_0096_0087;
+75244: 
+75245: 		[CompilerGenerated]
+75246: 		private double _008A_0096_0088;
+75247: 
+75248: 		[CompilerGenerated]
+75249: 		private double _008A_0096_0089;
+75250: 
+75251: 		[CompilerGenerated]
+75252: 		private double _008A_0096_008A;
+75253: 
+75254: 		[CompilerGenerated]
+75255: 		private double _008A_0096_008B;
+75256: 
+75257: 		[CompilerGenerated]
+75258: 		private double _008A_0096_008C;
+75259: 
+75260: 		[CompilerGenerated]
+75261: 		private double _008A_0096_008D;
+75262: 
+75263: 		[CompilerGenerated]
+75264: 		private string _008A_0096_008E = "";
+75265: 
+75266: 		[CompilerGenerated]
+75267: 		private double _008A_0096_008F;
+75268: 
+75269: 		[CompilerGenerated]
+75270: 		private double _008A_0096_0090;
+75271: 
+75272: 		[CompilerGenerated]
+75273: 		private double _008A_0096_0091;
+75274: 
+75275: 		[CompilerGenerated]
+75276: 		private double _008A_0096_0092;
+75277: 
+75278: 		[CompilerGenerated]
+75279: 		private double _008A_0096_0093;
+75280: 
+75281: 		[CompilerGenerated]
+75282: 		private double _008A_0096_0094;
+75283: 
+75284: 		[CompilerGenerated]
+75285: 		private double _008A_0096_0095;
+75286: 
+75287: 		[CompilerGenerated]
+75288: 		private double _008A_0096_0096;
+75289: 
+75290: 		[CompilerGenerated]
+75291: 		private double _008A_0096_0097;
+75292: 
+75293: 		[CompilerGenerated]
+75294: 		private double _008A_0096_0098;
+75295: 
+75296: 		[DataMember]
+75297: 		[DisplayName("中间段长度")]
+75298: 		public double _008A_0092_0092
+75299: 		{
+75300: 			[CompilerGenerated]
+75301: 			get
+75302: 			{
+75303: 				return _008A_0095_0096;
+75304: 			}
+75305: 			[CompilerGenerated]
+75306: 			set
+75307: 			{
+75308: 				_008A_0095_0096 = num;
+75309: 			}
+75310: 		}
+75311: 
+75312: 		[DataMember]
+75313: 		[DisplayName("FAF高度")]
+75314: 		public double _008A_0092_0095
+75315: 		{
+75316: 			[CompilerGenerated]
+75317: 			get
+75318: 			{
+75319: 				return _008A_0095_0097;
+75320: 			}
+75321: 			[CompilerGenerated]
+75322: 			set
+75323: 			{
+75324: 				_008A_0095_0097 = num;
+75325: 			}
+75326: 		}
+75327: 
+75328: 		[DisplayName("THR标高")]
+75329: 		[DataMember]
+75330: 		public double _008A_0092_0098
+75331: 		{
+75332: 			[CompilerGenerated]
+75333: 			get
+75334: 			{
+75335: 				return _008A_0095_0098;
+75336: 			}
+75337: 			[CompilerGenerated]
+75338: 			set
+75339: 			{
+75340: 				_008A_0095_0098 = num;
+75341: 			}
+75342: 		}
+75343: 
+75344: 		[DataMember]
+75345: 		[DisplayName("GP角度")]
+75346: 		public double _008A_0092_009B
+75347: 		{
+75348: 			[CompilerGenerated]
+75349: 			get
+75350: 			{
+75351: 				return _008A_0095_0099;
+75352: 			}
+75353: 			[CompilerGenerated]
+75354: 			set
+75355: 			{
+75356: 				_008A_0095_0099 = num;
+75357: 			}
+75358: 		}
+75359: 
+75360: 		[DisplayName("RDH")]
+75361: 		[DataMember]
+75362: 		public double _008A_0092_009E
+75363: 		{
+75364: 			[CompilerGenerated]
+75365: 			get
+75366: 			{
+75367: 				return _008A_0095_009A;
+75368: 			}
+75369: 			[CompilerGenerated]
+75370: 			set
+75371: 			{
+75372: 				_008A_0095_009A = num;
+75373: 			}
+75374: 		}
+75375: 
+75376: 		[DisplayName("FAF-THR距离")]
+75377: 		[DataMember]
+75378: 		public double _008A_0093_0088
+75379: 		{
+75380: 			[CompilerGenerated]
+75381: 			get
+75382: 			{
+75383: 				return _008A_0095_009B;
+75384: 			}
+75385: 			[CompilerGenerated]
+75386: 			set
+75387: 			{
+75388: 				_008A_0095_009B = num;
+75389: 			}
+75390: 		}
+75391: 
+75392: 		[DisplayName("TAS")]
+75393: 		[DataMember]
+75394: 		public double _008A_0093_008B
+75395: 		{
+75396: 			[CompilerGenerated]
+75397: 			get
+75398: 			{
+75399: 				return _008A_0095_009C;
+75400: 			}
+75401: 			[CompilerGenerated]
+75402: 			set
+75403: 			{
+75404: 				_008A_0095_009C = num;
+75405: 			}
+75406: 		}
+75407: 
+75408: 		[DataMember]
+75409: 		[DisplayName("IAS")]
+75410: 		public double IAS
+75411: 		{
+75412: 			[CompilerGenerated]
+75413: 			get
+75414: 			{
+75415: 				return _008A_0095_009D;
+75416: 			}
+75417: 			[CompilerGenerated]
+75418: 			set
+75419: 			{
+75420: 				_008A_0095_009D = num;
+75421: 			}
+75422: 		}
+75423: 
+75424: 		[DataMember]
+75425: 		[DisplayName("风速")]
+75426: 		public double WindSpeed
+75427: 		{
+75428: 			[CompilerGenerated]
+75429: 			get
+75430: 			{
+75431: 				return _008A_0095_009E;
+75432: 			}
+75433: 			[CompilerGenerated]
+75434: 			set
+75435: 			{
+75436: 				_008A_0095_009E = num;
+75437: 			}
+75438: 		}
+75439: 
+75440: 		[DisplayName("高度")]
+75441: 		[DataMember]
+75442: 		public double Altitude
+75443: 		{
+75444: 			[CompilerGenerated]
+75445: 			get
+75446: 			{
+75447: 				return _008A_0096_0086;
+75448: 			}
+75449: 			[CompilerGenerated]
+75450: 			set
+75451: 			{
+75452: 				_008A_0096_0086 = num;
+75453: 			}
+75454: 		}
+75455: 
+75456: 		[DataMember]
+75457: 		[DisplayName("温度")]
+75458: 		public double Temperature
+75459: 		{
+75460: 			[CompilerGenerated]
+75461: 			get
+75462: 			{
+75463: 				return _008A_0096_0087;
+75464: 			}
+75465: 			[CompilerGenerated]
+75466: 			set
+75467: 			{
+75468: 				_008A_0096_0087 = num;
+75469: 			}
+75470: 		}
+75471: 
+75472: 		[DisplayName("计时")]
+75473: 		[DataMember]
+75474: 		public double _008A_0093_0096
+75475: 		{
+75476: 			[CompilerGenerated]
+75477: 			get
+75478: 			{
+75479: 				return _008A_0096_0088;
+75480: 			}
+75481: 			[CompilerGenerated]
+75482: 			set
+75483: 			{
+75484: 				_008A_0096_0088 = num;
+75485: 			}
+75486: 		}
+75487: 
+75488: 		[DisplayName("计算距离")]
+75489: 		[DataMember]
+75490: 		public double _008A_0093_0099
+75491: 		{
+75492: 			[CompilerGenerated]
+75493: 			get
+75494: 			{
+75495: 				return _008A_0096_0089;
+75496: 			}
+75497: 			[CompilerGenerated]
+75498: 			set
+75499: 			{
+75500: 				_008A_0096_0089 = num;
+75501: 			}
+75502: 		}
+75503: 
+75504: 		[DataMember]
+75505: 		[DisplayName("GP角度")]
+75506: 		public double _008A_0093_009C
+75507: 		{
+75508: 			[CompilerGenerated]
+75509: 			get
+75510: 			{
+75511: 				return _008A_0096_008A;
+75512: 			}
+75513: 			[CompilerGenerated]
+75514: 			set
+75515: 			{
+75516: 				_008A_0096_008A = num;
+75517: 			}
+75518: 		}
+75519: 
+75520: 		[DataMember]
+75521: 		[DisplayName("Xz偏移")]
+75522: 		public double _008A_0094_0086
+75523: 		{
+75524: 			[CompilerGenerated]
+75525: 			get
+75526: 			{
+75527: 				return _008A_0096_008B;
+75528: 			}
+75529: 			[CompilerGenerated]
+75530: 			set
+75531: 			{
+75532: 				_008A_0096_008B = num;
+75533: 			}
+75534: 		}
+75535: 
+75536: 		[DataMember]
+75537: 		[DisplayName("DH")]
+75538: 		public double _008A_0094_0089
+75539: 		{
+75540: 			[CompilerGenerated]
+75541: 			get
+75542: 			{
+75543: 				return _008A_0096_008C;
+75544: 			}
+75545: 			[CompilerGenerated]
+75546: 			set
+75547: 			{
+75548: 				_008A_0096_008C = num;
+75549: 			}
+75550: 		}
+75551: 
+75552: 		[DisplayName("标高")]
+75553: 		[DataMember]
+75554: 		public double _008A_0094_008C
+75555: 		{
+75556: 			[CompilerGenerated]
+75557: 			get
+75558: 			{
+75559: 				return _008A_0096_008D;
+75560: 			}
+75561: 			[CompilerGenerated]
+75562: 			set
+75563: 			{
+75564: 				_008A_0096_008D = num;
+75565: 			}
+75566: 		}
+75567: 
+75568: 		[DisplayName("机型类别")]
+75569: 		[DataMember]
+75570: 		public string _008A_0094_008F
+75571: 		{
+75572: 			[CompilerGenerated]
+75573: 			get
+75574: 			{
+75575: 				return _008A_0096_008E;
+75576: 			}
+75577: 			[CompilerGenerated]
+75578: 			set
+75579: 			{
+75580: 				_008A_0096_008E = text;
+75581: 			}
+75582: 		}
+75583: 
+75584: 		[DisplayName("HLm")]
+75585: 		[DataMember]
+75586: 		public double _008A_0094_0092
+75587: 		{
+75588: 			[CompilerGenerated]
+75589: 			get
+75590: 			{
+75591: 				return _008A_0096_008F;
+75592: 			}
+75593: 			[CompilerGenerated]
+75594: 			set
+75595: 			{
+75596: 				_008A_0096_008F = num;
+75597: 			}
+75598: 		}
+75599: 
+75600: 		[DataMember]
+75601: 		[DisplayName("HLr")]
+75602: 		public double _008A_0094_0095
+75603: 		{
+75604: 			[CompilerGenerated]
+75605: 			get
+75606: 			{
+75607: 				return _008A_0096_0090;
+75608: 			}
+75609: 			[CompilerGenerated]
+75610: 			set
+75611: 			{
+75612: 				_008A_0096_0090 = num;
+75613: 			}
+75614: 		}
+75615: 
+75616: 		[DataMember]
+75617: 		[DisplayName("HL修正")]
+75618: 		public double _008A_0094_0098
+75619: 		{
+75620: 			[CompilerGenerated]
+75621: 			get
+75622: 			{
+75623: 				return _008A_0096_0091;
+75624: 			}
+75625: 			[CompilerGenerated]
+75626: 			set
+75627: 			{
+75628: 				_008A_0096_0091 = num;
+75629: 			}
+75630: 		}
+75631: 
+75632: 		[DisplayName("THR-SOC")]
+75633: 		[DataMember]
+75634: 		public double _008A_0094_009B
+75635: 		{
+75636: 			[CompilerGenerated]
+75637: 			get
+75638: 			{
+75639: 				return _008A_0096_0092;
+75640: 			}
+75641: 			[CompilerGenerated]
+75642: 			set
+75643: 			{
+75644: 				_008A_0096_0092 = num;
+75645: 			}
+75646: 		}
+75647: 
+75648: 		[DataMember]
+75649: 		[DisplayName("起始高度")]
+75650: 		public double _008A_0094_009E
+75651: 		{
+75652: 			[CompilerGenerated]
+75653: 			get
+75654: 			{
+75655: 				return _008A_0096_0093;
+75656: 			}
+75657: 			[CompilerGenerated]
+75658: 			set
+75659: 			{
+75660: 				_008A_0096_0093 = num;
+75661: 			}
+75662: 		}
+75663: 
+75664: 		[DataMember]
+75665: 		[DisplayName("结束高度")]
+75666: 		public double _008A_0095_0088
+75667: 		{
+75668: 			[CompilerGenerated]
+75669: 			get
+75670: 			{
+75671: 				return _008A_0096_0094;
+75672: 			}
+75673: 			[CompilerGenerated]
+75674: 			set
+75675: 			{
+75676: 				_008A_0096_0094 = num;
+75677: 			}
+75678: 		}
+75679: 
+75680: 		[DataMember]
+75681: 		[DisplayName("下降梯度")]
+75682: 		public double _008A_0095_008B
+75683: 		{
+75684: 			[CompilerGenerated]
+75685: 			get
+75686: 			{
+75687: 				return _008A_0096_0095;
+75688: 			}
+75689: 			[CompilerGenerated]
+75690: 			set
+75691: 			{
+75692: 				_008A_0096_0095 = num;
+75693: 			}
+75694: 		}
+75695: 
+75696: 		[DisplayName("距离")]
+75697: 		[DataMember]
+75698: 		public double _008A_0095_008E
+75699: 		{
+75700: 			[CompilerGenerated]
+75701: 			get
+75702: 			{
+75703: 				return _008A_0096_0096;
+75704: 			}
+75705: 			[CompilerGenerated]
+75706: 			set
+75707: 			{
+75708: 				_008A_0096_0096 = num;
+75709: 			}
+75710: 		}
+75711: 
+75712: 		[DataMember]
+75713: 		[DisplayName("计时时间")]
+75714: 		public double _008A_0095_0091
+75715: 		{
+75716: 			[CompilerGenerated]
+75717: 			get
+75718: 			{
+75719: 				return _008A_0096_0097;
+75720: 			}
+75721: 			[CompilerGenerated]
+75722: 			set
+75723: 			{
+75724: 				_008A_0096_0097 = num;
+75725: 			}
+75726: 		}
+75727: 
+75728: 		[DataMember]
+75729: 		[DisplayName("计时距离")]
+75730: 		public double _008A_0095_0094
+75731: 		{
+75732: 			[CompilerGenerated]
+75733: 			get
+75734: 			{
+75735: 				return _008A_0096_0098;
+75736: 			}
+75737: 			[CompilerGenerated]
+75738: 			set
+75739: 			{
+75740: 				_008A_0096_0098 = num;
+75741: 			}
+75742: 		}
+75743: 
+75744: 		public event PropertyChangedEventHandler PropertyChanged
+75745: 		{
+75746: 			[CompilerGenerated]
+75747: 			add
+75748: 			{
+75749: 				_ = 1;
+75750: 				if (!_0089_008C())
+75751: 				{
+75752: 					goto IL_0015;
+75753: 				}
+75754: 				goto IL_001c;
+75755: 				IL_0015:
+75756: 				PropertyChangedEventHandler propertyChangedEventHandler = _008A_0095_0095;
+75757: 				goto IL_001c;
+75758: 				IL_001c:
+75759: 				PropertyChangedEventHandler propertyChangedEventHandler2;
+75760: 				do
+75761: 				{
+75762: 					propertyChangedEventHandler2 = propertyChangedEventHandler;
+75763: 					PropertyChangedEventHandler value2 = (PropertyChangedEventHandler)Delegate.Combine(propertyChangedEventHandler2, b);
+75764: 					propertyChangedEventHandler = Interlocked.CompareExchange(ref _008A_0095_0095, value2, propertyChangedEventHandler2);
+75765: 				}
+75766: 				while ((object)propertyChangedEventHandler != propertyChangedEventHandler2);
+75767: 				if (_0089_008B())
+75768: 				{
+75769: 					return;
+75770: 				}
+75771: 				goto IL_0015;
+75772: 			}
+75773: 			[CompilerGenerated]
+75774: 			remove
+75775: 			{
+75776: 				_ = 1;
+75777: 				int num;
+75778: 				if (!_0089_008C())
+75779: 				{
+75780: 					num = 5;
+75781: 					if (!_0089_008C())
+75782: 					{
+75783: 						goto IL_0027;
+75784: 					}
+75785: 					goto IL_007a;
+75786: 				}
+75787: 				num = 1;
+75788: 				goto IL_0088;
+75789: 				IL_007a:
+75790: 				PropertyChangedEventHandler value2 = default(PropertyChangedEventHandler);
+75791: 				PropertyChangedEventHandler propertyChangedEventHandler2 = default(PropertyChangedEventHandler);
+75792: 				PropertyChangedEventHandler propertyChangedEventHandler = Interlocked.CompareExchange(ref _008A_0095_0095, value2, propertyChangedEventHandler2);
+75793: 				goto IL_0088;
+75794: 				IL_0059:
+75795: 				propertyChangedEventHandler2 = propertyChangedEventHandler;
+75796: 				num = 3;
+75797: 				if (_0089_008B())
+75798: 				{
+75799: 					goto IL_0027;
+75800: 				}
+75801: 				goto IL_0088;
+75802: 				IL_0027:
+75803: 				switch (num)
+75804: 				{
+75805: 				case 0:
+75806: 				case 5:
+75807: 					propertyChangedEventHandler = _008A_0095_0095;
+75808: 					break;
+75809: 				case 6:
+75810: 					break;
+75811: 				case 3:
+75812: 					value2 = (PropertyChangedEventHandler)Delegate.Remove(propertyChangedEventHandler2, value3);
+75813: 					goto IL_007a;
+75814: 				default:
+75815: 					goto IL_007a;
+75816: 				case 1:
+75817: 				case 4:
+75818: 					goto IL_0088;
+75819: 				case 7:
+75820: 					return;
+75821: 				}
+75822: 				goto IL_0059;
+75823: 				IL_0088:
+75824: 				if ((object)propertyChangedEventHandler == propertyChangedEventHandler2)
+75825: 				{
+75826: 					num = 7;
+75827: 					return;
+75828: 				}
+75829: 				goto IL_0059;
+75830: 			}
+75831: 		}
+75832: 
+75833: 		public void _008A_0092_008F(string P_0)
+75834: 		{
+75835: 			_008A_0095_0095?.Invoke(this, new PropertyChangedEventArgs(P_0));
+75836: 		}
+75837: 
+75838: 		static _008D_008E()
+75839: 		{
+75840: 			LicenseManager.Validate(typeof(_008D_008E));
+75841: 		}
+75842: 
+75843: 		internal static bool _0089_008B()
+75844: 		{
+75845: 			return true;
+75846: 		}
+75847: 
+75848: 		internal static bool _0089_008C()
+75849: 		{
+75850: 			return false;
+75851: 		}
+75852: 	}
+75853: }
+75854: namespace _008D_0091
+75855: {
+75856: 	[LicenseProvider(typeof(_0091_008B))]
+75857: 	public static class _008D_0090
+75858: 	{
+75859: 		public static _008D_008C _008A_0096_0099(double P_0, double P_1, double P_2, double P_3, double P_4, double P_5, double P_6, double P_7, double P_8)
+75860: 		{
+75861: 			return new _008D_008C
+75862: 			{
+75863: 				_008A_0090_0098 = (_008D_008A)1,
+75864: 				_008A_0090_009D = P_0,
+75865: 				_008A_0091_0087 = P_1,
+75866: 				_008A_0091_008A = 0.0,
+75867: 				_008A_0091_008D = P_2,
+75868: 				_008A_0091_0090 = 20000.0,
+75869: 				_008A_0091_0093 = string.Format("FAF-THR: {0:F1}km" /* string-offset:6800 */, P_8 / 1000.0),
+75870: 				_008A_0091_0096 = new _008D_008E
+75871: 				{
+75872: 					_008A_0092_0092 = P_3,
+75873: 					_008A_0092_0095 = P_4,
+75874: 					_008A_0092_0098 = P_5,
+75875: 					_008A_0092_009B = P_6,
+75876: 					_008A_0092_009E = P_7,
+75877: 					_008A_0093_0088 = P_8
+75878: 				}
+75879: 			};
+75880: 		}
+75881: 
+75882: 		public static _008D_008C _008A_0096_009A(double P_0, double P_1, double P_2, double P_3, double P_4, double P_5, double P_6, double P_7, double P_8, double P_9)
+75883: 		{
+75884: 			return new _008D_008C
+75885: 			{
+75886: 				_008A_0090_0098 = (_008D_008A)3,
+75887: 				_008A_0090_009D = P_0,
+75888: 				_008A_0091_0087 = P_1,
+75889: 				_008A_0091_008A = 0.0,
+75890: 				_008A_0091_008D = P_2,
+75891: 				_008A_0091_0090 = 12000.0,
+75892: 				_008A_0091_0093 = "NPA SOC" /* string-offset:6804 */,
+75893: 				_008A_0091_0096 = new _008D_008E
+75894: 				{
+75895: 					_008A_0093_008B = P_3,
+75896: 					IAS = P_4,
+75897: 					WindSpeed = P_5,
+75898: 					Altitude = P_6,
+75899: 					Temperature = P_7,
+75900: 					_008A_0093_0096 = P_8,
+75901: 					_008A_0093_0099 = P_9
+75902: 				}
+75903: 			};
+75904: 		}
+75905: 
+75906: 		public static _008D_008C _008A_0096_009B(double P_0, double P_1, double P_2, string P_3, double P_4, double P_5, double P_6, double P_7, double P_8, double P_9, double P_10, double P_11)
+75907: 		{
+75908: 			return new _008D_008C
+75909: 			{
+75910: 				_008A_0090_0098 = (_008D_008A)4,
+75911: 				_008A_0090_009D = P_0,
+75912: 				_008A_0091_0087 = P_1,
+75913: 				_008A_0091_008A = 0.0,
+75914: 				_008A_0091_008D = P_2,
+75915: 				_008A_0091_0090 = 12000.0,
+75916: 				_008A_0091_0093 = "CAT " /* string-offset:2028 */ + P_3 + " SOC" /* string-offset:2032 */,
+75917: 				_008A_0091_0096 = new _008D_008E
+75918: 				{
+75919: 					_008A_0094_008F = P_3,
+75920: 					_008A_0093_009C = P_4,
+75921: 					_008A_0094_0086 = P_5,
+75922: 					_008A_0094_0089 = P_6,
+75923: 					_008A_0094_008C = P_7,
+75924: 					_008A_0094_0092 = P_8,
+75925: 					_008A_0094_0095 = P_9,
+75926: 					_008A_0094_0098 = P_10,
+75927: 					_008A_0094_009B = P_11
+75928: 				}
+75929: 			};
+75930: 		}
+75931: 
+75932: 		public static _008D_008C _008A_0096_009C(double P_0, double P_1, double P_2, double P_3, double P_4, double P_5, double P_6)
+75933: 		{
+75934: 			return new _008D_008C
+75935: 			{
+75936: 				_008A_0090_0098 = (_008D_008A)5,
+75937: 				_008A_0090_009D = P_0,
+75938: 				_008A_0091_0087 = P_1,
+75939: 				_008A_0091_008A = 0.0,
+75940: 				_008A_0091_008D = P_2,
+75941: 				_008A_0091_0090 = 20000.0,
+75942: 				_008A_0091_0093 = string.Format("SOC-TP: {0:F1}km" /* string-offset:6808 */, P_6 / 1000.0),
+75943: 				_008A_0091_0096 = new _008D_008E
+75944: 				{
+75945: 					_008A_0094_009E = P_3,
+75946: 					_008A_0095_0088 = P_4,
+75947: 					_008A_0095_008B = P_5,
+75948: 					_008A_0095_008E = P_6
+75949: 				}
+75950: 			};
+75951: 		}
+75952: 
+75953: 		public static _008D_008C _008A_0096_009D(double P_0, double P_1, double P_2, double P_3, double P_4, double P_5, double P_6)
+75954: 		{
+75955: 			return new _008D_008C
+75956: 			{
+75957: 				_008A_0090_0098 = (_008D_008A)6,
+75958: 				_008A_0090_009D = P_0,
+75959: 				_008A_0091_0087 = P_1,
+75960: 				_008A_0091_008A = 0.0,
+75961: 				_008A_0091_008D = P_2,
+75962: 				_008A_0091_0090 = 20000.0,
+75963: 				_008A_0091_0093 = string.Format("DER-TP: {0:F1}km" /* string-offset:6812 */, P_6 / 1000.0),
+75964: 				_008A_0091_0096 = new _008D_008E
+75965: 				{
+75966: 					_008A_0094_009E = P_3,
+75967: 					_008A_0095_0088 = P_4,
+75968: 					_008A_0095_008B = P_5,
+75969: 					_008A_0095_008E = P_6
+75970: 				}
+75971: 			};
+75972: 		}
+75973: 
+75974: 		public static _008D_008C _008A_0096_009E(double P_0, double P_1, double P_2, double P_3, double P_4)
+75975: 		{
+75976: 			return new _008D_008C
+75977: 			{
+75978: 				_008A_0090_0098 = (_008D_008A)7,
+75979: 				_008A_0090_009D = P_0,
+75980: 				_008A_0091_0087 = P_1,
+75981: 				_008A_0091_008A = 0.0,
+75982: 				_008A_0091_008D = P_2,
+75983: 				_008A_0091_0090 = 10000.0,
+75984: 				_008A_0091_0093 = string.Format("C类计时: {0}s" /* string-offset:6816 */, P_3),
+75985: 				_008A_0091_0096 = new _008D_008E
+75986: 				{
+75987: 					_008A_0095_0091 = P_3,
+75988: 					_008A_0095_0094 = P_4
+75989: 				}
+75990: 			};
+75991: 		}
+75992: 
+75993: 		static _008D_0090()
+75994: 		{
+75995: 			LicenseManager.Validate(typeof(_008D_0090));
+75996: 		}
+75997: 
+75998: 		internal static bool _0089_008D()
+75999: 		{
+76000: 			return true;
+76001: 		}
+76002: 
+76003: 		internal static bool _0089_008E()
+76004: 		{
+76005: 			return false;
+76006: 		}
+76007: 	}
+76008: }
+76009: namespace _008D_0093
+76010: {
+76011: 	[LicenseProvider(typeof(_0091_008B))]
+76012: 	public static class _008D_0092
+76013: 	{
+76014: 		public static bool _008A_0097_0086(this _008D_008C P_0, Line P_1)
+76015: 		{
+76016: 			//IL_0041: Unknown result type (might be due to invalid IL or missing references)
+76017: 			//IL_0047: Unknown result type (might be due to invalid IL or missing references)
+76018: 			//IL_004d: Unknown result type (might be due to invalid IL or missing references)
+76019: 			//IL_0052: Unknown result type (might be due to invalid IL or missing references)
+76020: 			//IL_0060: Unknown result type (might be due to invalid IL or missing references)
+76021: 			//IL_0065: Unknown result type (might be due to invalid IL or missing references)
+76022: 			//IL_006a: Unknown result type (might be due to invalid IL or missing references)
+76023: 			//IL_00a0: Unknown result type (might be due to invalid IL or missing references)
+76024: 			//IL_00a5: Unknown result type (might be due to invalid IL or missing references)
+76025: 			//IL_00a9: Unknown result type (might be due to invalid IL or missing references)
+76026: 			_ = 0;
+76027: 			if ((_0089_008F() && (DisposableWrapper)(object)P_1 == (DisposableWrapper)null) || P_0 == null)
+76028: 			{
+76029: 				return false;
+76030: 			}
+76031: 			try
+76032: 			{
+76033: 				if (P_0._008A_0090_009D == 0.0 && P_0._008A_0091_0087 == 0.0)
+76034: 				{
+76035: 					Point3d val = ((Curve)P_1).StartPoint + (((Curve)P_1).EndPoint - ((Curve)P_1).StartPoint) * 0.5;
+76036: 					P_0._008A_0090_009D = ((Point3d)(ref val)).X;
+76037: 					P_0._008A_0091_0087 = ((Point3d)(ref val)).Y;
+76038: 					_ = 1;
+76039: 					if (!_0089_0090())
+76040: 					{
+76041: 						P_0._008A_0091_008A = ((Point3d)(ref val)).Z;
+76042: 					}
+76043: 					Point3d startPoint = ((Curve)P_1).StartPoint;
+76044: 					P_0._008A_0091_0090 = ((Point3d)(ref startPoint)).DistanceTo(((Curve)P_1).EndPoint);
+76045: 				}
+76046: 				return P_0._008A_0090_0093((Entity)(object)P_1);
+76047: 			}
+76048: 			catch (Exception ex)
+76049: 			{
+76050: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\n保存线条数据失败: " /* string-offset:6820 */ + ex.Message);
+76051: 				return false;
+76052: 			}
+76053: 		}
+76054: 
+76055: 		public static ObjectId _008A_0097_0087(this _008D_008C P_0, Database P_1, Point3d P_2, Point3d P_3)
+76056: 		{
+76057: 			//IL_01aa: Unknown result type (might be due to invalid IL or missing references)
+76058: 			//IL_01af: Unknown result type (might be due to invalid IL or missing references)
+76059: 			//IL_01b2: Unknown result type (might be due to invalid IL or missing references)
+76060: 			//IL_0127: Unknown result type (might be due to invalid IL or missing references)
+76061: 			//IL_0128: Unknown result type (might be due to invalid IL or missing references)
+76062: 			//IL_0129: Unknown result type (might be due to invalid IL or missing references)
+76063: 			//IL_0139: Expected O, but got Unknown
+76064: 			//IL_0134: Unknown result type (might be due to invalid IL or missing references)
+76065: 			//IL_0139: Unknown result type (might be due to invalid IL or missing references)
+76066: 			//IL_017c: Unknown result type (might be due to invalid IL or missing references)
+76067: 			//IL_017d: Unknown result type (might be due to invalid IL or missing references)
+76068: 			//IL_00dd: Unknown result type (might be due to invalid IL or missing references)
+76069: 			//IL_0140: Unknown result type (might be due to invalid IL or missing references)
+76070: 			try
+76071: 			{
+76072: 				P_0._008A_0090_009D = (((Point3d)(ref P_2)).X + ((Point3d)(ref P_3)).X) / 2.0;
+76073: 				int num = 8;
+76074: 				if (!_0089_0090())
+76075: 				{
+76076: 					goto IL_0048;
+76077: 				}
+76078: 				goto IL_0127;
+76079: 				IL_0048:
+76080: 				ObjectId val = default(ObjectId);
+76081: 				switch (num)
+76082: 				{
+76083: 				case 8:
+76084: 					P_0._008A_0091_0087 = (((Point3d)(ref P_2)).Y + ((Point3d)(ref P_3)).Y) / 2.0;
+76085: 					num = 2;
+76086: 					if (_0089_0090())
+76087: 					{
+76088: 						break;
+76089: 					}
+76090: 					goto case 2;
+76091: 				case 2:
+76092: 					P_0._008A_0091_008A = (((Point3d)(ref P_2)).Z + ((Point3d)(ref P_3)).Z) / 2.0;
+76093: 					P_0._008A_0091_0090 = ((Point3d)(ref P_2)).DistanceTo(P_3);
+76094: 					num = 4;
+76095: 					goto case 4;
+76096: 				case 4:
+76097: 					P_0._008A_0091_008D = Math.Atan2(((Point3d)(ref P_3)).Y - ((Point3d)(ref P_2)).Y, ((Point3d)(ref P_3)).X - ((Point3d)(ref P_2)).X);
+76098: 					_0089_0090();
+76099: 					if (_0089_008F())
+76100: 					{
+76101: 						goto IL_0127;
+76102: 					}
+76103: 					num = 1;
+76104: 					goto case 1;
+76105: 				case 3:
+76106: 				case 5:
+76107: 					goto IL_0127;
+76108: 				case 7:
+76109: 					if (!P_0._008A_0090_0094(val, P_1))
+76110: 					{
+76111: 						goto case 1;
+76112: 					}
+76113: 					goto IL_017c;
+76114: 				case 1:
+76115: 				case 6:
+76116: 					Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\n警告：线条创建成功，但XData写入失败" /* string-offset:6824 */);
+76117: 					num = 9;
+76118: 					goto IL_017c;
+76119: 				case 9:
+76120: 					goto IL_017c;
+76121: 				}
+76122: 				goto IL_00aa;
+76123: 				IL_0127:
+76124: 				val = _008B._0088_008D((Entity)new Line(P_2, P_3), P_1);
+76125: 				goto IL_00aa;
+76126: 				IL_00aa:
+76127: 				if (!((ObjectId)(ref val)).IsNull)
+76128: 				{
+76129: 					num = 7;
+76130: 					if (!_0089_0090())
+76131: 					{
+76132: 						goto IL_0048;
+76133: 					}
+76134: 					goto IL_0127;
+76135: 				}
+76136: 				goto IL_017c;
+76137: 				IL_017c:
+76138: 				return val;
+76139: 			}
+76140: 			catch (Exception ex)
+76141: 			{
+76142: 				Application.DocumentManager.MdiActiveDocument.Editor.WriteMessage("\n创建线条失败: " /* string-offset:6828 */ + ex.Message);
+76143: 				return ObjectId.Null;
+76144: 			}
+76145: 		}
+76146: 
+76147: 		public static string _008A_0097_0088(this _008D_008C P_0)
+76148: 		{
+76149: 			return P_0._008A_0090_0098 switch
+76150: 			{
+76151: 				(_008D_008A)1 => string.Format("FAF-THR: {0:F1}km" /* string-offset:6800 */, P_0._008A_0091_0096._008A_0093_0088 / 1000.0), 
+76152: 				(_008D_008A)2 => "IF" /* string-offset:1988 */, 
+76153: 				(_008D_008A)3 => "NPA SOC" /* string-offset:6804 */, 
+76154: 				(_008D_008A)4 => "CAT " /* string-offset:2028 */ + P_0._008A_0091_0096._008A_0094_008F + " SOC" /* string-offset:2032 */, 
+76155: 				(_008D_008A)5 => string.Format("SOC-TP: {0:F1}km" /* string-offset:6808 */, P_0._008A_0091_0096._008A_0095_008E / 1000.0), 
+76156: 				(_008D_008A)6 => string.Format("DER-TP: {0:F1}km" /* string-offset:6812 */, P_0._008A_0091_0096._008A_0095_008E / 1000.0), 
+76157: 				(_008D_008A)7 => string.Format("C类计时: {0}s" /* string-offset:6816 */, P_0._008A_0091_0096._008A_0095_0091), 
+76158: 				_ => P_0._008A_0091_0093, 
+76159: 			};
+76160: 		}
+76161: 
+76162: 		static _008D_0092()
+76163: 		{
+76164: 			LicenseManager.Validate(typeof(_008D_0092));
+76165: 		}
+76166: 
+76167: 		internal static bool _0089_008F()
+76168: 		{
+76169: 			return true;
+76170: 		}
+76171: 
+76172: 		internal static bool _0089_0090()
+76173: 		{
+76174: 			return false;
+76175: 		}
+76176: 	}
+76177: }
+76178: namespace _008D_0095
+76179: {
+76180: 	[LicenseProvider(typeof(_0091_008B))]
+76181: 	public class _008D_0094
+76182: 	{
+76183: 		private List<ObjectId> _008A_0097_008D = new List<ObjectId>();
+76184: 
+76185: 		public void _008A_0097_0089(ObjectId P_0)
+76186: 		{
+76187: 			//IL_0034: Unknown result type (might be due to invalid IL or missing references)
+76188: 			//IL_0023: Unknown result type (might be due to invalid IL or missing references)
+76189: 			if (_0089_0091())
+76190: 			{
+76191: 				if (((ObjectId)(ref P_0)).IsNull)
+76192: 				{
+76193: 					return;
+76194: 				}
+76195: 				_0089_0091();
+76196: 				if (!_0089_0092() && _008A_0097_008D.Contains(P_0))
+76197: 				{
+76198: 					return;
+76199: 				}
+76200: 			}

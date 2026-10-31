@@ -1,0 +1,91 @@
+29630: 					break;
+29631: 				}
+29632: 			}
+29633: 			while (_00872());
+29634: 			P_1.Text = text;
+29635: 		}
+29636: 
+29637: 		private void _0087_0097_0089(object P_0, EventArgs P_1)
+29638: 		{
+29639: 			//IL_0090: Unknown result type (might be due to invalid IL or missing references)
+29640: 			//IL_009e: Unknown result type (might be due to invalid IL or missing references)
+29641: 			//IL_00ae: Unknown result type (might be due to invalid IL or missing references)
+29642: 			//IL_00b3: Unknown result type (might be due to invalid IL or missing references)
+29643: 			_ = 1;
+29644: 			if (_00872() || false /* original-file-bool-offset:540 */)
+29645: 			{
+29646: 				return;
+29647: 			}
+29648: 			DBPoint val = default(DBPoint);
+29649: 			foreach (DataGridViewRow selectedRow in _0087_0097_0091.SelectedRows)
+29650: 			{
+29651: 				_00871();
+29652: 				if (!_00872())
+29653: 				{
+29654: 					val = _0087_0097_008D[_0087_0097_0091.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+29655: 				}
+29656: 				ObjectId val2 = _008B._0089_0087("obst" /* string-offset:2780 */, val.Position);
+29657: 				string obj = "Altitude" /* string-offset:536 */;
+29658: 				Point3d position = val.Position;
+29659: 				_008B._0089_0089(val2, obj, ((Point3d)(ref position)).Z.ToString());
+29660: 			}
+29661: 		}
+29662: 
+29663: 		private void _0087_0097_008A(object P_0, EventArgs P_1)
+29664: 		{
+29665: 			_00872();
+29666: 			if (_00871())
+29667: 			{
+29668: 				if (!_0087_0098_0095.Checked)
+29669: 				{
+29670: 					_0087_0097_009D.Text = "起点坐标" /* string-offset:4476 */;
+29671: 					_0087_0098_0089.Text = "终点坐标" /* string-offset:4480 */;
+29672: 					return;
+29673: 				}
+29674: 				if (_00871())
+29675: 				{
+29676: 				}
+29677: 				_0087_0097_009D.Text = "IF点坐标" /* string-offset:4468 */;
+29678: 			}
+29679: 			_0087_0098_0089.Text = "FAF点坐标" /* string-offset:4472 */;
+29680: 		}
+29681: 
+29682: 		protected override void Dispose(bool P_0)
+29683: 		{
+29684: 			_00871();
+29685: 			if (_00872() || (P_0 && _0087_0097_008E != null))
+29686: 			{
+29687: 				_0087_0097_008E.Dispose();
+29688: 			}
+29689: 			base.Dispose(P_0);
+29690: 		}
+29691: 
+29692: 		private void _0087_0097_008B()
+29693: 		{
+29694: 			while (true /* original-file-bool-offset:544 */)
+29695: 			{
+29696: 				int num = 143;
+29697: 				while (true)
+29698: 				{
+29699: 					ComponentResourceManager componentResourceManager = new ComponentResourceManager(typeof(_0089_008E));
+29700: 					_0087_0097_0091 = new DataGridView();
+29701: 					while (true)
+29702: 					{
+29703: 						_0087_0097_0092 = new GroupBox();
+29704: 						_0087_0098_0092 = new Button();
+29705: 						_0087_0098_0093 = new Button();
+29706: 						while (true)
+29707: 						{
+29708: 							_0087_0098_008E = new TextBox();
+29709: 							while (true)
+29710: 							{
+29711: 								_0087_0097_0093 = new TextBox();
+29712: 								num = 14;
+29713: 								while (true)
+29714: 								{
+29715: 									_0087_0098_008F = new TextBox();
+29716: 									num = 65;
+29717: 									while (true)
+29718: 									{
+29719: 										_0087_0097_0094 = new TextBox();
+29720: 										num = 169;

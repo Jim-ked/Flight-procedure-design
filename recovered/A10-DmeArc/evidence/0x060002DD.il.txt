@@ -1,0 +1,69 @@
+METHOD 060002DD \x89\x89.\x89\x88::\x87\x8e\x8c RVA=30468 file=2E668
+IL_0000: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0005: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_000A: brfalse 265
+IL_000F: pop 
+IL_0010: br.s 156
+IL_0012: ldarg.0 
+IL_0013: ldfld 0x040001B5 \x89\x89.\x89\x88::\x87\x8e\x9b
+IL_0018: brfalse 275
+IL_001D: ldarg.0 
+IL_001E: ldfld 0x040001B5 \x89\x89.\x89\x88::\x87\x8e\x9b
+IL_0023: callvirt 0x0A0001C3 0x1B00000A::get_Count
+IL_0028: brfalse 264
+IL_002D: ldarg.2 
+IL_002E: callvirt 0x0A0002C5 System.Windows.Forms.DataGridViewCellEventArgs::get_ColumnIndex
+IL_0033: ldc.i4.0 
+IL_0034: blt 262
+IL_0039: br.s 87
+IL_003B: ldc.i4 7
+IL_0040: stloc local(0x0000)
+IL_0044: call 0x060002EF \x89\x89.\x89\x88::\x87\x9c
+IL_0049: brfalse.s 109
+IL_004B: ldarg.2 
+IL_004C: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_0051: ldc.i4.0 
+IL_0052: bge.s 190
+IL_0054: br.s 71
+IL_0056: ldc.i4 5
+IL_005B: stloc local(0x0000)
+IL_005F: br.s 87
+IL_0061: ldloc local(0x0000)
+IL_0065: switch [156, 156, 275, 264, 275, 87, 30, 262, 263]
+IL_008E: br.s 98
+IL_0090: call 0x0A00003E Autodesk.AutoCAD.ApplicationServices.Core.Application::get_DocumentManager
+IL_0095: callvirt 0x0A00003F Autodesk.AutoCAD.ApplicationServices.DocumentCollection::get_MdiActiveDocument
+IL_009A: callvirt 0x0A000040 Autodesk.AutoCAD.ApplicationServices.Document::get_Editor
+IL_009F: pop 
+IL_00A0: ldc.i4 6
+IL_00A5: stloc local(0x0000)
+IL_00A9: call 0x060002EE \x89\x89.\x89\x88::\x87\x9b
+IL_00AE: brfalse.s 264
+IL_00B0: br.s 109
+IL_00B2: ldarg.0 
+IL_00B3: ldfld 0x040001B6 \x89\x89.\x89\x88::\x87\x8e\x9c
+IL_00B8: ldarg.0 
+IL_00B9: ldfld 0x040001D4 \x89\x89.\x89\x88::\x87\x90\x88
+IL_00BE: callvirt 0x0A00016F System.Windows.Forms.DataGridView::get_Rows
+IL_00C3: ldarg.2 
+IL_00C4: callvirt 0x0A0002C6 System.Windows.Forms.DataGridViewCellEventArgs::get_RowIndex
+IL_00C9: callvirt 0x0A0002C7 System.Windows.Forms.DataGridViewRowCollection::get_Item
+IL_00CE: callvirt 0x0A000173 System.Windows.Forms.DataGridViewRow::get_Cells
+IL_00D3: ldc.i4.0 
+IL_00D4: callvirt 0x0A0002C8 System.Windows.Forms.DataGridViewCellCollection::get_Item
+IL_00D9: callvirt 0x0A000175 System.Windows.Forms.DataGridViewCell::get_Value
+IL_00DE: callvirt 0x0A000086 System.Object::ToString
+IL_00E3: callvirt 0x0A0002C9 0x1B00000C::get_Item
+IL_00E8: ldarg.0 
+IL_00E9: ldfld 0x040001B5 \x89\x89.\x89\x88::\x87\x8e\x9b
+IL_00EE: call 0x060000B0 \x8e.\x8d::\x89\x93
+IL_00F3: call 0x060000AF \x8e.\x8d::\x89\x92
+IL_00F8: br.s 263
+IL_00FA: ret 
+IL_00FB: ret 
+IL_00FC: ret 
+IL_00FD: pop 
+IL_00FE: ldc.i4 4
+IL_0103: stloc local(0x0000)
+IL_0107: ret 
+

@@ -1,0 +1,102 @@
+57259: 		private void _0089_008F_009B(object P_0, EventArgs P_1)
+57260: 		{
+57261: 			//IL_00c6: Unknown result type (might be due to invalid IL or missing references)
+57262: 			//IL_00d4: Unknown result type (might be due to invalid IL or missing references)
+57263: 			//IL_00e4: Unknown result type (might be due to invalid IL or missing references)
+57264: 			//IL_00e9: Unknown result type (might be due to invalid IL or missing references)
+57265: 			_0088_009C();
+57266: 			if (_0088_009B())
+57267: 			{
+57268: 				if (false /* original-file-bool-offset:1032 */)
+57269: 				{
+57270: 					return;
+57271: 				}
+57272: 				{
+57273: 					DBPoint val2 = default(DBPoint);
+57274: 					foreach (DataGridViewRow selectedRow in _0089_0092_008F.SelectedRows)
+57275: 					{
+57276: 						_ = 1;
+57277: 						int num;
+57278: 						if (!_0088_009C())
+57279: 						{
+57280: 							num = 2;
+57281: 							if (_0088_009B())
+57282: 							{
+57283: 								goto IL_0068;
+57284: 							}
+57285: 						}
+57286: 						else
+57287: 						{
+57288: 							num = 3;
+57289: 							if (_0088_009B())
+57290: 							{
+57291: 								goto IL_0068;
+57292: 							}
+57293: 						}
+57294: 						goto IL_00bb;
+57295: 						IL_00bb:
+57296: 						ObjectId val = _008B._0089_0087("obst" /* string-offset:2780 */, val2.Position);
+57297: 						string obj = "Altitude" /* string-offset:536 */;
+57298: 						Point3d position = val2.Position;
+57299: 						_008B._0089_0089(val, obj, ((Point3d)(ref position)).Z.ToString());
+57300: 						num = 4;
+57301: 						continue;
+57302: 						IL_0068:
+57303: 						switch (num)
+57304: 						{
+57305: 						case 0:
+57306: 						case 2:
+57307: 							val2 = _0089_0091_009E[_0089_0092_008F.Rows[selectedRow.Index].Cells[0].Value.ToString()];
+57308: 							break;
+57309: 						case 4:
+57310: 							continue;
+57311: 						}
+57312: 						goto IL_00bb;
+57313: 					}
+57314: 					return;
+57315: 				}
+57316: 			}
+57317: 			if (_0088_009B())
+57318: 			{
+57319: 			}
+57320: 		}
+57321: 
+57322: 		private void ShowMessage(string s)
+57323: 		{
+57324: 			_0089_0092_0095.Text = s;
+57325: 		}
+57326: 
+57327: 		private void _0089_008F_009C(object P_0, EventArgs P_1)
+57328: 		{
+57329: 			_0089_0092_0095.Text = "";
+57330: 		}
+57331: 
+57332: 		private void _0089_008F_009D(object P_0, EventArgs P_1)
+57333: 		{
+57334: 			ShowMessage("交换跑道方向" /* string-offset:3080 */);
+57335: 		}
+57336: 
+57337: 		private void _0089_008F_009E(object P_0, EventArgs P_1)
+57338: 		{
+57339: 			ShowMessage("交换跑道方向" /* string-offset:3080 */);
+57340: 		}
+57341: 
+57342: 		private void _0089_0090_0086(object P_0, EventArgs P_1)
+57343: 		{
+57344: 			ShowMessage("交换跑道方向" /* string-offset:3080 */);
+57345: 		}
+57346: 
+57347: 		private void _0089_0090_0087(object P_0, EventArgs P_1)
+57348: 		{
+57349: 			ShowMessage("交换跑道方向" /* string-offset:3080 */);
+57350: 		}
+57351: 
+57352: 		private void _0089_0090_0088(object P_0, EventArgs P_1)
+57353: 		{
+57354: 			ShowMessage("交换跑道方向" /* string-offset:3080 */);
+57355: 		}
+57356: 
+57357: 		private void _0089_0090_0089(object P_0, EventArgs P_1)
+57358: 		{
+57359: 			ShowMessage("跑道末端的X坐标" /* string-offset:3096 */);
+57360: 		}

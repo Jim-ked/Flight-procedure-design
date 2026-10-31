@@ -1,0 +1,46 @@
+METHOD 060005F1 \x8c\x98.\x8c\x97::\x8a\x8b\x99 RVA=86A54 file=84C54
+IL_0000: ldc.i4.1 
+IL_0001: call 0x060005F7 \x8c\x98.\x8c\x97::\x88q
+IL_0006: brtrue.s 128
+IL_0008: pop 
+IL_0009: ldc.r8 -1400.0
+IL_0012: stloc.0 
+IL_0013: ldarg.0 
+IL_0014: ldc.i4 2324
+IL_0019: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_001E: call 0x0A000108 System.String::op_Equality
+IL_0023: brtrue.s 116
+IL_0025: ldarg.0 
+IL_0026: ldc.i4 2328
+IL_002B: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0030: call 0x0A000108 System.String::op_Equality
+IL_0035: brtrue.s 104
+IL_0037: ldarg.0 
+IL_0038: ldc.i4 2084
+IL_003D: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0042: call 0x0A000108 System.String::op_Equality
+IL_0047: brfalse.s 136
+IL_0049: ldc.r8 -1100.0
+IL_0052: stloc.0 
+IL_0053: call 0x060005F6 \x8c\x98.\x8c\x97::\x88p
+IL_0058: brtrue.s 164
+IL_005A: br.s 164
+IL_005C: ldc.r8 -900.0
+IL_0065: stloc.0 
+IL_0066: br.s 164
+IL_0068: ldc.r8 -900.0
+IL_0071: stloc.0 
+IL_0072: br.s 164
+IL_0074: pop 
+IL_0075: call 0x060005F7 \x8c\x98.\x8c\x97::\x88q
+IL_007A: brtrue.s 164
+IL_007C: ldarg.0 
+IL_007D: ldc.i4 1644
+IL_0082: call 0x06000888 \x90\x9c.\x90\x9b::\x8b\x8f\x9d
+IL_0087: call 0x0A000108 System.String::op_Equality
+IL_008C: brfalse.s 164
+IL_008E: ldc.r8 -1400.0
+IL_0097: stloc.0 
+IL_0098: ldloc.0 
+IL_0099: ret 
+

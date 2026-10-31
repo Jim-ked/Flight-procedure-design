@@ -1,0 +1,61 @@
+{
+  "inputs": [
+    {
+      "path": "WsTools-master\\WindSpiral2026\\WindSpiralBasic.dll",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\WsTools-master\\WindSpiral2026\\WindSpiralBasic.dll",
+      "size": 3280896,
+      "sha256": "62fdb1b78959343c20cc3d84930b272db57ba36eaf9528c9df13c9c5f3193bd5"
+    },
+    {
+      "path": "reverse-analysis\\01_original\\WsTools-master\\WindSpiral2026\\WindSpiralBasic.dll",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\reverse-analysis\\01_original\\WsTools-master\\WindSpiral2026\\WindSpiralBasic.dll",
+      "size": 3280896,
+      "sha256": "62fdb1b78959343c20cc3d84930b272db57ba36eaf9528c9df13c9c5f3193bd5"
+    },
+    {
+      "path": "reverse-analysis\\02_deobfuscated\\WindSpiralBasic.methods-only.dll",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\reverse-analysis\\02_deobfuscated\\WindSpiralBasic.methods-only.dll",
+      "size": 2916864,
+      "sha256": "75627021d4d8f4fa4dfc96cc5d4ea6464f7461f1bdd7b68ba78cf0edb36471df"
+    },
+    {
+      "path": "doc\\航空器运行目视和仪表飞行程序设计规范.pdf",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\doc\\航空器运行目视和仪表飞行程序设计规范.pdf",
+      "size": 48091098,
+      "sha256": "6b6b6f04380f3e0a138ca57bb95fcddb0a390a5b4aa7a9c7a391ff35bb92c8ed"
+    },
+    {
+      "path": "WsTools-master\\WindSpiral2026\\config.xml",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\WsTools-master\\WindSpiral2026\\config.xml",
+      "size": 26556,
+      "sha256": "a1db767cd820976d12542151ac1445cfb2f9bac6edd3f5a317d25b9262d165c6"
+    },
+    {
+      "path": "WsTools-master\\WindSpiral2026\\帮助文件\\FormNavAids.html",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\WsTools-master\\WindSpiral2026\\帮助文件\\FormNavAids.html",
+      "size": 4882,
+      "sha256": "8d815ab42d52b73d14f77f306c58805f76778ac68101b63a0cad5df7948185c9"
+    },
+    {
+      "path": "reverse-analysis\\03_recovered-src\\annotated-strings\\--\\--.cs",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\reverse-analysis\\03_recovered-src\\annotated-strings\\--\\--.cs",
+      "size": 3116830,
+      "sha256": "2126a8f408952bbd4ee4d35eb587a7827b104e0500a0f08832a44d3caa46ee5b"
+    },
+    {
+      "path": "recovered\\round5\\standard-pages.json",
+      "absolute_path": "C:\\Users\\ZJ\\Desktop\\固定翼航空器飞行程序-工程大\\飞行程序设计系统开发\\recovered\\round5\\standard-pages.json",
+      "size": 1030245,
+      "sha256": "6fe0dcd777a9cc58b40aad3f5752fdefaab420ae35d22f271b8b81c7e39965ac"
+    }
+  ],
+  "evidence_levels": {
+    "E0": "original identity and metadata (protection stubs retained)",
+    "E1": "processed decompilation",
+    "E2": "IL/call/field based reconstruction",
+    "E3": "independent recovered-source tests",
+    "E4": "not performed",
+    "N": "post-recovery standard mapping"
+  },
+  "originals_read_only": true
+}

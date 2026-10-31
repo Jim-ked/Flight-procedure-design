@@ -1,0 +1,122 @@
+{
+  "round1": "PARTIALLY ACCEPTED",
+  "native_compiled": true,
+  "compile_kind": "AutoCAD2026 compatibility compile; API25.1 / CLR8.0.12; original API23.1 not rebuilt",
+  "native_compiled_files": [
+    {
+      "path": "CadInteraction.Recovered.cs",
+      "sha256": "4799c47d3dad0d14eeffcbcb492bc03652f19384ab95936d80d9bbc7fb3fc38b",
+      "status": "Compiled"
+    },
+    {
+      "path": "A2-BasicCalculation/BasicCalculation.Recovered.cs",
+      "sha256": "bd384901b5b9fc8d4936c8f4b3c03623618b3fca59c745b670ef2309fecc0ce2",
+      "status": "Compiled"
+    },
+    {
+      "path": "A2-BasicCalculation/BasicCalculationForm.Events.Recovered.cs",
+      "sha256": "f357810545254b518bbdc32c62941125cef5d0a8689ff130f021e3537d6a7f7b",
+      "status": "Compiled"
+    },
+    {
+      "path": "A2-BasicCalculation/CalcuCad.Recovered.cs",
+      "sha256": "d9243d95ee976d6654e0a5c604881787eab1470cb6357f343d519c002b00b4c0",
+      "status": "Compiled"
+    },
+    {
+      "path": "A2-BasicCalculation/CalcuContracts.Recovered.cs",
+      "sha256": "4d24e431bdd3201b72144c83b279eac6916befa9e37f1ffc03db2d8c112370bd",
+      "status": "Compiled"
+    },
+    {
+      "path": "A2-BasicCalculation/CalcuFactories.Recovered.cs",
+      "sha256": "cc21d73436ecb0c711b30d8ccf5295e6f949a7bf4b0cd61a6960293d42bccc55",
+      "status": "Compiled"
+    },
+    {
+      "path": "A2-BasicCalculation/TurnParameterInput.Recovered.cs",
+      "sha256": "ff141b028ad62259c90c4bd9e817c11735996fd3cc5d79ad722f5207bcda8e4b",
+      "status": "Compiled"
+    },
+    {
+      "path": "ObstacleData/EntityFrame.Recovered.cs",
+      "sha256": "648ac0622297371637b941b9aefb9b8551621b9f63a2f742755d98d412ac093d",
+      "status": "Compiled"
+    },
+    {
+      "path": "ObstacleData/EntityFrameCad.Recovered.cs",
+      "sha256": "7ac0af1ac23933612b6b83a1ff84c56399ccfc24698eb55d8607f3de04e2d9ec",
+      "status": "Compiled"
+    },
+    {
+      "path": "ObstacleData/Obstacle.Recovered.cs",
+      "sha256": "63ab122df81b9a81aea86fc27cf8762f8fcab32406f033e8e62410a5f4d38fb5",
+      "status": "Compiled"
+    },
+    {
+      "path": "ObstacleData/ObstacleCad.Recovered.cs",
+      "sha256": "84e0741c71ed2d188637b8b23858966348f13e8c918e72874b25de2bf9aa678c",
+      "status": "Compiled"
+    },
+    {
+      "path": "ObstacleData/PriSec.Recovered.cs",
+      "sha256": "f326f6e7cb9876e95cd4cbd419e50900f5ce651e7f8b81c9ebe3918230aea6d0",
+      "status": "Compiled"
+    },
+    {
+      "path": "ObstacleData/PriSecForm.Events.Recovered.cs",
+      "sha256": "ef3b0b13c772c1de04effc1ae903a35cfe1b7fed3dbf1ac51fd5c46b8637a7a6",
+      "status": "Compiled with compatibility adapter"
+    },
+    {
+      "path": "ObstacleData/RandomPointForm.Events.Recovered.cs",
+      "sha256": "68b20482cc23b263cde63a5fc055c792748c586caac70bfdb0c1c0d8b6bce1eb",
+      "status": "Compiled"
+    },
+    {
+      "path": "ObstacleData/ScreenData.OtherForms.Recovered.cs",
+      "sha256": "dacad31aeb9b60cc68652a41099f5022205c2fa4393a4ad4eb0548d8f004b79a",
+      "status": "Compiled with compatibility adapter"
+    },
+    {
+      "path": "ObstacleData/TurnAreaForm.Events.Recovered.cs",
+      "sha256": "f4cd3f32f14d8ad5ed28a65f89c66549ddb0d7694d9f7638cb35cb9ef4ff3dce",
+      "status": "Compiled with compatibility adapter"
+    },
+    {
+      "path": "ObstacleData/XInfo.Recovered.cs",
+      "sha256": "63019cd675ab529b340b5cb50a8a0dbf2c0b839093d510e55f7fd8de1c659559",
+      "status": "Compiled"
+    },
+    {
+      "path": "A3-FixTolerance/FixTolerance.Recovered.cs",
+      "sha256": "34ab98ba8fae77ef6aba97c4da8c2c8569f90646a53bafc65aee2e9fa7ce5194",
+      "status": "Compiled"
+    },
+    {
+      "path": "A3-FixTolerance/FixToleranceForm.Events.Recovered.cs",
+      "sha256": "498758c2035f4e59aa392b6d4330de81f951f8b92327106c977f8de6237d7674",
+      "status": "Compiled"
+    }
+  ],
+  "target_executed": false,
+  "target_executed_definition": "Target business methods verified, not image load",
+  "target_image_loaded": true,
+  "target_command_available": false,
+  "observer_runtime": true,
+  "L3": false,
+  "L3_definition": "A2 / obstacle / A3 original business behavior",
+  "runtime_status": "Runtime validation blocked by host compatibility",
+  "runtime_cause_confirmed": false,
+  "input_queue_contaminated": true,
+  "diagnostics_loaded": false,
+  "diagnostics_executed": false,
+  "observer_source_matches_loaded_binary": false,
+  "evidence": [
+    "round1-closure.md",
+    "dynamic-test/compile-validation.md",
+    "dynamic-test/experiment-index.md",
+    "dynamic-test/logs/closure-integrity.json",
+    "dynamic-test/logs/NETLOAD-observed.txt"
+  ]
+}

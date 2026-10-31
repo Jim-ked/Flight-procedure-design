@@ -1,0 +1,28 @@
+47141: 		private void _0088_009A_0097(object P_0, EventArgs P_1)
+47142: 		{
+47143: 			_0088_0094();
+47144: 			if (!_0088_0093() || false /* original-file-bool-offset:916 */ || _0088_009D_0087 == null || _0088_009D_0087.Count == 0)
+47145: 			{
+47146: 				return;
+47147: 			}
+47148: 			_008E_0097 obj = _0088_009A_009A();
+47149: 			List<_008A_008B> list = new List<_008A_008B>();
+47150: 			int num = 1;
+47151: 			_008A_008B obj4 = default(_008A_008B);
+47152: 			foreach (DBPoint item in _0088_009D_0087)
+47153: 			{
+47154: 				_008F_008E obj2 = item._008C_008D(num.ToString());
+47155: 				num++;
+47156: 				_008F_008E obj3 = _008D._0089_0090(obj, obj2);
+47157: 				_ = 0;
+47158: 				if (_0088_0093())
+47159: 				{
+47160: 					obj4 = new _008A_008B(obj2);
+47161: 					obj4.X = obj3.X;
+47162: 					obj4.Y = obj3.Y;
+47163: 				}
+47164: 				list.Add(obj4);
+47165: 			}
+47166: 			_0088_009D_008D.Text = "已转换" /* string-offset:3032 */ + list.Count + "个障碍物。" /* string-offset:2816 */;
+47167: 			_0088_009C_009E(list);
+47168: 		}
