@@ -33,3 +33,10 @@ tmp/
 # Keep recovered evidence, historical logs, fixtures, sample DWG/CSV, and
 # project-local research DLLs under version control unless a file matches one
 # of the explicit machine-only patterns above.
+
+# Tool/runtime caches
+__pycache__/
+*.pyc
+*.pyo
+*.ffs_db
+
