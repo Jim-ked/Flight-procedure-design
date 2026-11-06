@@ -1,0 +1,40 @@
+namespace Fpd.Core;
+
+public sealed class ProjectData
+{
+    public string ProjectId { get; set; } = Guid.NewGuid().ToString("N");
+    public string Name { get; set; } = "未命名项目";
+    public AirportData Airport { get; set; } = new();
+    public string? DwgPath { get; set; }
+    public List<FixData> Fixes { get; set; } = [];
+    public List<ProcedureData> Procedures { get; set; } = [];
+}
+
+public sealed class AirportData
+{
+    public string Name { get; set; } = "";
+    public string Icao { get; set; } = "";
+    public double? ArpLatitude { get; set; }
+    public double? ArpLongitude { get; set; }
+    public double? ArpElevation { get; set; }
+}
+
+public sealed class FixData
+{
+    public string Ident { get; set; } = "";
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+    public double? Elevation { get; set; }
+}
+
+public enum ProcedureKind { Departure, Arrival, Approach }
+
+public sealed class ProcedureData
+{
+    public string Name { get; set; } = "";
+    public ProcedureKind Kind { get; set; }
+    public string? Runway { get; set; }
+    public List<string> FixIdents { get; set; } = [];
+}
+
+public sealed record ProjectSummary(string ProjectId, string Name, int FixCount, int ProcedureCount);

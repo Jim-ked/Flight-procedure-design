@@ -40,3 +40,8 @@ __pycache__/
 *.pyo
 *.ffs_db
 
+# Optional local build overrides and CLI state
+*.local.props
+.dotnet/
+.nuget/
+

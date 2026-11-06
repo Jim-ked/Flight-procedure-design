@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <AssemblyName>Fpd.AutoCAD</AssemblyName>
+    <RootNamespace>Fpd.AutoCAD</RootNamespace>
+    <Platforms>AnyCPU</Platforms>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(AutoCAD2026Dir)' == '' and '$(OS)' == 'Windows_NT'">
+    <AutoCAD2026Dir>$([MSBuild]::GetRegistryValue('HKEY_LOCAL_MACHINE\SOFTWARE\Autodesk\AutoCAD\R25.1\ACAD-9101:804', 'AcadLocation', ''))</AutoCAD2026Dir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(AutoCAD2026Dir)' == ''">
+    <AutoCAD2026Dir>$(ProgramFiles)\Autodesk\AutoCAD 2026</AutoCAD2026Dir>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Fpd.Core\Fpd.Core.csproj" />
+    <Reference Include="AcMgd"><HintPath>$(AutoCAD2026Dir)\AcMgd.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="AcDbMgd"><HintPath>$(AutoCAD2026Dir)\AcDbMgd.dll</HintPath><Private>false</Private></Reference>
+    <Reference Include="AcCoreMgd"><HintPath>$(AutoCAD2026Dir)\AcCoreMgd.dll</HintPath><Private>false</Private></Reference>
+  </ItemGroup>
+  <Target Name="CheckAutoCAD2026Api" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(AutoCAD2026Dir)\AcMgd.dll') or !Exists('$(AutoCAD2026Dir)\AcDbMgd.dll') or !Exists('$(AutoCAD2026Dir)\AcCoreMgd.dll')"
+           Text="AutoCAD 2026 API not found. Set AutoCAD2026Dir to the installed AutoCAD 2026 directory, or run build-f0.ps1 -AutoCAD2026Dir &quot;path&quot;." />
+  </Target>
+</Project>

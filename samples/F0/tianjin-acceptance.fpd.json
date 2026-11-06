@@ -1,0 +1,45 @@
+{
+  "ProjectId": "01e00c5d1a4445fa99377e564c2a9aa1",
+  "Name": "\u5929\u6D25F0\u9A8C\u6536\u9879\u76EE",
+  "Airport": {
+    "Name": "\u5929\u6D25\u6EE8\u6D77",
+    "Icao": "ZBTJ",
+    "ArpLatitude": 39.124353,
+    "ArpLongitude": 117.346183,
+    "ArpElevation": null
+  },
+  "DwgPath": "C:\\Users\\ZJ\\Desktop\\\u56FA\u5B9A\u7FFC\u822A\u7A7A\u5668\u98DE\u884C\u7A0B\u5E8F-\u5DE5\u7A0B\u5927\\\u98DE\u884C\u7A0B\u5E8F\u8BBE\u8BA1\u7CFB\u7EDF\u5F00\u53D1\\samples\\F0\\tianjin-acceptance.dwg",
+  "Fixes": [
+    {
+      "Ident": "TJMAN",
+      "Latitude": 39.2,
+      "Longitude": 117.3,
+      "Elevation": 12.5
+    },
+    {
+      "Ident": "TJ002",
+      "Latitude": 39.21,
+      "Longitude": 117.31,
+      "Elevation": 12.5
+    },
+    {
+      "Ident": "TJ003",
+      "Latitude": 39.2,
+      "Longitude": 118.6,
+      "Elevation": null
+    }
+  ],
+  "Procedures": [
+    {
+      "Name": "TJ F0 SID",
+      "Kind": 0,
+      "Runway": "16",
+      "FixIdents": [
+        "TJMAN",
+        "TJ002",
+        "TJ003",
+        "TJ002"
+      ]
+    }
+  ]
+}
