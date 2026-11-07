@@ -7,6 +7,7 @@ public sealed class ProjectData
     public AirportData Airport { get; set; } = new();
     public string? DwgPath { get; set; }
     public List<FixData> Fixes { get; set; } = [];
+    public List<ObstacleData> Obstacles { get; set; } = [];
     public List<ProcedureData> Procedures { get; set; } = [];
 }
 
@@ -28,6 +29,17 @@ public sealed class FixData
 }
 
 public enum ProcedureKind { Departure, Arrival, Approach }
+
+public sealed class ObstacleData
+{
+    public string Ident { get; set; } = "";
+    public double Latitude { get; set; }
+    public double Longitude { get; set; }
+    // Absolute top elevation in metres; never inferred from the obstacle's own height.
+    public double TopElevation { get; set; } = double.NaN;
+    public double? Height { get; set; }
+    public double? GroundElevation { get; set; }
+}
 
 public sealed class ProcedureData
 {

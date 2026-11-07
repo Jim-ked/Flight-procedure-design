@@ -27,6 +27,53 @@ ProjectData Sample() => new()
 var store = new ProjectStore();
 try
 {
+    Test("F0 JSON without Obstacles remains readable", () =>
+    {
+        var path = Path.Combine(work, "old.json"); File.WriteAllText(path, "{\"Name\":\"old\"}");
+        Check(store.Open(path).Obstacles.Count == 0);
+    });
+    Test("Obstacle top elevation is distinct from height and ground", () =>
+    {
+        var rows = ObstacleCsv.ParseText("Ident,Latitude,Longitude,TopElevation,Height,GroundElevation\nO1,39.2,117.3,80,30,50\n");
+        var p = Sample(); p.Obstacles.AddRange(rows); var path = Path.Combine(work, "obstacles.json"); store.Save(p, path);
+        var opened = store.Open(path); Check(opened.Obstacles[0].Height == 30 && opened.Obstacles[0].GroundElevation == 50);
+        var plotted = PointProjection.Obstacles(opened, opened.Obstacles); Check(plotted[0].Point.Z == 80);
+        Reject(() => ObstacleCsv.ParseText("Ident,Latitude,Longitude,Height\nO1,39,117,30"));
+    });
+    Test("batch errors report source row and do not change existing project", () =>
+    {
+        var p = Sample();
+        try { p.Fixes.AddRange(FixCsv.ParseText("Ident,Latitude,Longitude,Elevation\nTJ907,39,117,\nTJ001,39,117,", p.Fixes.Select(f => f.Ident))); throw new Exception("Accepted duplicate"); }
+        catch (InvalidDataException ex) { Check(ex.Message.Contains("3") && ex.Message.Contains("TJ001")); }
+        Check(p.Fixes.Count == 2);
+        try { ObstacleCsv.ParseText("Ident,Latitude,Longitude,TopElevation\nO1,39,117,80\nO2,91,117,90"); throw new Exception("Accepted invalid latitude"); }
+        catch (InvalidDataException ex) { Check(ex.Message.Contains("3")); }
+    });
+    Test("TSV paste and reordered CSV headers round trip", () =>
+    {
+        var fixes = FixCsv.ParseText("Longitude\tIdent\tLatitude\tElevation\n117.3\tTJ907\t39.2\t\n");
+        Check(FixCsv.ParseText(FixCsv.Export(fixes))[0].Ident == "TJ907");
+        var obstacles = ObstacleCsv.ParseText("O1,39.2,117.3,80,30,50");
+        Check(ObstacleCsv.ParseText(ObstacleCsv.Export(obstacles))[0].TopElevation == 80);
+    });
+    Test("batch uses airport CM and refuses empty selection", () =>
+    {
+        var p = Sample(); var points = PointProjection.Fixes(p, p.Fixes);
+        Near(points[1].Point.Easting, 638214.8574548216); Check(points.All(x => x.Point.Epsg == 4548));
+        Reject(() => PointProjection.Fixes(p, []));
+    });
+    Test("CSV export quotes every accepted separator in an identifier", () =>
+    {
+        var fixes = new[] { new FixData { Ident = "A;B,C", Latitude = 39, Longitude = 117 } };
+        Check(FixCsv.ParseText(FixCsv.Export(fixes))[0].Ident == "A;B,C");
+    });
+    Test("Fix rename deletion and repeated Procedure order stay consistent", () =>
+    {
+        var p = Sample(); ProjectEdits.ReplaceFix(p, p.Fixes[1], new() { Ident = "TJ906", Latitude = 39.2, Longitude = 118.6 });
+        Check(p.Procedures[0].FixIdents.SequenceEqual(new[] { "TJ906", "TJ001", "TJ906" }));
+        ProjectEdits.MoveReference(p.Procedures[0], 1, -1); Check(p.Procedures[0].FixIdents[0] == "TJ001");
+        ProjectEdits.DeleteFixes(p, ["TJ906"]); Check(p.Procedures[0].FixIdents.SequenceEqual(new[] { "TJ001" }));
+    });
     Test("Tianjin ARP selects CM117 / EPSG:4548", () => Check(Cgcs2000Projection.ZoneForLongitude(117.346183) is (4548, 117)));
     Test("three-degree boundary selects east zone", () => Check(Cgcs2000Projection.ZoneForLongitude(118.5) is (4549, 120)));
     Test("non-finite latitude rejected", () => Reject(() => Cgcs2000Projection.Forward(double.NaN, 117)));

@@ -19,7 +19,7 @@ public static class ProjectValidation
     public static void Project(ProjectData project)
     {
         if (project is null || string.IsNullOrWhiteSpace(project.ProjectId) || string.IsNullOrWhiteSpace(project.Name) ||
-            project.Airport is null || project.Fixes is null || project.Procedures is null)
+            project.Airport is null || project.Fixes is null || project.Procedures is null || project.Obstacles is null)
             throw new InvalidDataException("项目标识、名称、机场或数据列表无效。");
         var airport = project.Airport;
         if (airport.ArpLatitude.HasValue != airport.ArpLongitude.HasValue)
@@ -44,5 +44,20 @@ public static class ProjectValidation
             foreach (var ident in procedure.FixIdents)
                 if (ident is null || !identifiers.Contains(ident)) throw new InvalidDataException($"程序引用未知定位点：{ident}");
         }
+        identifiers.Clear();
+        foreach (var obstacle in project.Obstacles)
+        {
+            Obstacle(obstacle);
+            if (!identifiers.Add(obstacle.Ident)) throw new InvalidDataException($"障碍物标识重复：{obstacle.Ident}");
+        }
+    }
+
+    public static void Obstacle(ObstacleData obstacle)
+    {
+        if (obstacle is null || string.IsNullOrWhiteSpace(obstacle.Ident)) throw new InvalidDataException("障碍物标识不能为空。");
+        Coordinates(obstacle.Latitude, obstacle.Longitude, obstacle.TopElevation);
+        if (obstacle.Height.HasValue && (!double.IsFinite(obstacle.Height.Value) || obstacle.Height < 0) ||
+            obstacle.GroundElevation.HasValue && !double.IsFinite(obstacle.GroundElevation.Value))
+            throw new InvalidDataException("障碍物自身高度须为非负有限米值，地面高程须为有限米值。");
     }
 }

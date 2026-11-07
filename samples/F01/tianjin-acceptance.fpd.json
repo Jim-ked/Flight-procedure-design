@@ -1,0 +1,70 @@
+{
+  "ProjectId": "a288d7131095444390b23cdda9969b2a",
+  "Name": "\u5929\u6D25F01\u9A8C\u6536",
+  "Airport": {
+    "Name": "\u5929\u6D25\u6EE8\u6D77",
+    "Icao": "ZBTJ",
+    "ArpLatitude": 39.124353,
+    "ArpLongitude": 117.346183,
+    "ArpElevation": null
+  },
+  "DwgPath": "C:\\Users\\ZJ\\Desktop\\\u56FA\u5B9A\u7FFC\u822A\u7A7A\u5668\u98DE\u884C\u7A0B\u5E8F-\u5DE5\u7A0B\u5927\\\u98DE\u884C\u7A0B\u5E8F\u8BBE\u8BA1\u7CFB\u7EDF\u5F00\u53D1\\samples\\F01\\tianjin-acceptance.dwg",
+  "Fixes": [
+    {
+      "Ident": "TJ907",
+      "Latitude": 39.124353,
+      "Longitude": 117.346183,
+      "Elevation": null
+    },
+    {
+      "Ident": "TJ906",
+      "Latitude": 39.13,
+      "Longitude": 117.36,
+      "Elevation": 15
+    },
+    {
+      "Ident": "TJ908",
+      "Latitude": 39.14,
+      "Longitude": 117.335,
+      "Elevation": 20
+    }
+  ],
+  "Obstacles": [
+    {
+      "Ident": "OBS01",
+      "Latitude": 39.127,
+      "Longitude": 117.35,
+      "TopElevation": 80,
+      "Height": 30,
+      "GroundElevation": 50
+    },
+    {
+      "Ident": "OBS02",
+      "Latitude": 39.135,
+      "Longitude": 117.345,
+      "TopElevation": 120,
+      "Height": 65,
+      "GroundElevation": 55
+    },
+    {
+      "Ident": "OBS03",
+      "Latitude": 39.138,
+      "Longitude": 117.355,
+      "TopElevation": 95,
+      "Height": null,
+      "GroundElevation": null
+    }
+  ],
+  "Procedures": [
+    {
+      "Name": "TJ-F01-DEP",
+      "Kind": 0,
+      "Runway": null,
+      "FixIdents": [
+        "TJ906",
+        "TJ907",
+        "TJ906"
+      ]
+    }
+  ]
+}

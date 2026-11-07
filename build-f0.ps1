@@ -1,6 +1,7 @@
 param(
     [string]$AutoCAD2026Dir,
-    [ValidateSet('Debug','Release')][string]$Configuration = 'Debug'
+    [ValidateSet('Debug','Release')][string]$Configuration = 'Debug',
+    [string]$OutputDirectory
 )
 $ErrorActionPreference = 'Stop'
 $taskRoot = $PSScriptRoot
@@ -23,7 +24,9 @@ New-Item -ItemType Directory -Force (Split-Path $taskConfig) | Out-Null
 Set-Content -LiteralPath $taskConfig -Encoding utf8 -Value '<configuration><packageSources><clear /></packageSources></configuration>'
 Push-Location $taskRoot
 try {
-    & dotnet build src/Fpd.AutoCAD/Fpd.AutoCAD.csproj -c $Configuration "-p:AutoCAD2026Dir=$AutoCAD2026Dir" --configfile $taskConfig -v:minimal
+    $taskBuildOptions = @()
+    if ($OutputDirectory) { $taskBuildOptions += "-p:OutputPath=$([IO.Path]::GetFullPath($OutputDirectory))" }
+    & dotnet build src/Fpd.AutoCAD/Fpd.AutoCAD.csproj -c $Configuration "-p:AutoCAD2026Dir=$AutoCAD2026Dir" @taskBuildOptions --configfile $taskConfig -v:minimal
     if ($LASTEXITCODE -ne 0) { throw 'AutoCAD plugin build failed.' }
     & dotnet restore tests/Fpd.Core.Tests/Fpd.Core.Tests.csproj --configfile $taskConfig -v:minimal
     if ($LASTEXITCODE -ne 0) { throw 'Core test restore failed.' }
