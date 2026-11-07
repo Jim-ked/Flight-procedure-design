@@ -69,6 +69,16 @@ try
         Check(BaseMapPolicy.Decide(1,true,true)==BaseMapChange.Update);
         Check(BaseMapPolicy.Decide(1,false,true)==BaseMapChange.Conflict && BaseMapPolicy.Decide(2,true,false)==BaseMapChange.Conflict);
     });
+    Test("legacy stable IDs survive repeated opening before saving and keep original backup", () =>
+    {
+        var p=Sample(); var file=Path.Combine(work,"legacy-ids.json");
+        File.WriteAllText(file,System.Text.Json.JsonSerializer.Serialize(p).Replace("\"ProcedureId\":\""+p.Procedures[0].ProcedureId+"\",",""));
+        var before=File.ReadAllText(file); var a=store.Open(file); var b=store.Open(file);
+        Check(a.Procedures[0].ProcedureId==b.Procedures[0].ProcedureId && a.Procedures[0].Paths[0].PathId==b.Procedures[0].Paths[0].PathId);
+        Check(a.Fixes[0].DataId==b.Fixes[0].DataId); var dataId=a.Fixes[0].DataId;
+        ProjectEdits.ReplaceFix(a,a.Fixes[0],new() { Ident="RENAMED",Latitude=39.2,Longitude=117.3 }); Check(a.Fixes[0].DataId==dataId);
+        store.Save(a,file); Check(File.ReadAllText(file+".pre-paths.bak")==before);
+    });
     Test("inverse uses fixed airport CM with independent PROJ coordinates", () =>
     {
         var a = Cgcs2000Projection.InverseInZone(529936.0628666884, 4332366.307251088, 117, 23);

@@ -36,6 +36,7 @@ public static class ProjectEdits
         if (previous is null) project.Fixes.Add(value);
         else
         {
+            ProjectDataIds.Ensure(project); value.DataId=previous.DataId;
             var index = project.Fixes.IndexOf(previous);
             if (index < 0) throw new InvalidDataException("定位点已不存在。");
             foreach (var procedure in project.Procedures)

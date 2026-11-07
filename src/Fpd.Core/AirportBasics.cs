@@ -17,6 +17,7 @@ public sealed class RunwayEndData
 
 public sealed class RunwayData
 {
+    public string DataId { get; set; } = "";
     public string Ident { get; set; } = "";
     public double Width { get; set; } = double.NaN;
     public RunwayEndData EndA { get; set; } = new();
@@ -26,6 +27,7 @@ public sealed class RunwayData
 public enum NavaidKind { VOR, DME, NDB, ILS }
 public sealed class NavaidData
 {
+    public string DataId { get; set; } = "";
     public string Ident { get; set; } = "";
     public string Name { get; set; } = "";
     public NavaidKind Kind { get; set; }

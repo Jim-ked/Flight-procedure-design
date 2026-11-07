@@ -1,0 +1,51 @@
+  正在确定要还原的项目…
+  所有项目均是最新的，无法还原。
+  Fpd.Core -> C:\Users\ZJ\Desktop\固定翼航空器飞行程序-工程大\飞行程序设计系统开发\tmp\F01-unified-final\Fpd.Core.dll
+  Fpd.AutoCAD -> C:\Users\ZJ\Desktop\固定翼航空器飞行程序-工程大\飞行程序设计系统开发\tmp\F01-unified-final\Fpd.AutoCAD.dll
+
+已成功生成。
+    0 个警告
+    0 个错误
+
+已用时间 00:00:02.60
+  正在确定要还原的项目…
+  所有项目均是最新的，无法还原。
+PASS legacy paths migrate separately once with stable IDs and coordinates
+PASS named paths preserve independent reference symbols and repeated edits
+PASS ordered pick cancellation is atomic and keeps repeats
+PASS base drawing boundary and repeat reconciliation are conservative
+PASS legacy stable IDs survive repeated opening before saving and keep original backup
+PASS inverse uses fixed airport CM with independent PROJ coordinates
+PASS old project defaults F1 collections to empty
+PASS runway CSV preserves separate physical THR and DER positions
+PASS navaid type units and partial GP are validated before importing
+PASS sections preserve repeated Fix references and enforce Approach Missed
+PASS F0 JSON without Obstacles remains readable
+PASS Obstacle top elevation is distinct from height and ground
+PASS batch errors report source row and do not change existing project
+PASS TSV paste and reordered CSV headers round trip
+PASS batch uses airport CM and refuses empty selection
+PASS CSV export quotes every accepted separator in an identifier
+PASS Fix rename deletion and repeated Procedure order stay consistent
+PASS Tianjin ARP selects CM117 / EPSG:4548
+PASS three-degree boundary selects east zone
+PASS non-finite latitude rejected
+PASS invalid longitude rejected
+PASS unsupported CGCS2000 zone rejected
+PASS Tianjin independent PROJ values
+PASS point across zone boundary keeps airport CM
+PASS central meridian keeps full northing
+PASS zone west edge independent PROJ values
+PASS non-finite height rejected
+PASS JSON preserves project ARP Fix and ordered repeated references
+PASS all three Procedure kinds preserved
+PASS duplicate Fix identifiers rejected
+PASS unknown Procedure Fix rejected
+PASS Holding is not a fourth Procedure kind
+PASS incomplete ARP rejected
+PASS null airport JSON rejected
+PASS CSV imports header quoted ident optional height
+PASS CSV rejects invalid latitude before returning batch
+PASS CSV duplicate batch identifiers rejected
+PASS decimal coordinates independent of current locale
+Fpd.Core tests: 38 passed, 0 failed

@@ -1,74 +1,52 @@
 using System.Drawing;
+using System.Globalization;
 using System.Windows.Forms;
 using Fpd.Core;
-
 namespace Fpd.AutoCAD;
 
 public sealed partial class WorkspacePanel
 {
-    private readonly ComboBox _toolRunway=new() { Width=125,DropDownStyle=ComboBoxStyle.DropDownList };
-    private readonly ComboBox _toolNavaid=new() { Width=125,DropDownStyle=ComboBoxStyle.DropDownList };
-    private readonly ComboBox _pointSource=new() { Dock=DockStyle.Fill,DropDownStyle=ComboBoxStyle.DropDownList };
-    private readonly ComboBox _toolFix=new() { Dock=DockStyle.Fill,DropDownStyle=ComboBoxStyle.DropDownList };
-    private readonly TextBox _coordinateOutput=new() { Dock=DockStyle.Fill,Multiline=true,ReadOnly=true,ScrollBars=ScrollBars.Both,WordWrap=false,BackColor=Color.FromArgb(42,42,42),ForeColor=Color.Gainsboro };
+    private readonly TextBox _latitude=Input(),_longitude=Input(),_east=Input(),_north=Input(),_cm=Input();
+    private readonly TextBox _coordinateOutput=new() { Dock=DockStyle.Fill,Multiline=true,ReadOnly=true,ScrollBars=ScrollBars.Vertical,BackColor=Color.FromArgb(42,42,42),ForeColor=Color.Gainsboro };
     private TabPage ToolsPage()
     {
         var page=Page("工具"); page.Padding=Padding.Empty;
         var layout=new TableLayoutPanel { Dock=DockStyle.Fill,ColumnCount=2,RowCount=1,Margin=Padding.Empty };
-        layout.ColumnStyles.Add(new ColumnStyle(SizeType.Absolute,52)); layout.ColumnStyles.Add(new ColumnStyle(SizeType.Percent,100)); layout.RowStyles.Add(new RowStyle(SizeType.Percent,100));
+        layout.ColumnStyles.Add(new(SizeType.Absolute,52)); layout.ColumnStyles.Add(new(SizeType.Percent,100)); layout.RowStyles.Add(new(SizeType.Percent,100));
         var side=new FlowLayoutPanel { Dock=DockStyle.Fill,FlowDirection=FlowDirection.TopDown,WrapContents=false,BackColor=Color.FromArgb(44,44,44),Margin=Padding.Empty };
         var panels=new Panel { Dock=DockStyle.Fill }; var basic=Stack(); basic.Padding=new Padding(6);
-        _pointSource.Items.AddRange(new[] { "所选 Fix（项目表多选）","ARP","单个 Fix","全部 Fix","所选障碍物（项目表多选）","全部障碍物" }); _pointSource.SelectedIndex=0;
-        Row(basic,_pointSource,32); Row(basic,_toolFix,32);
-        Row(basic,Bar(Button("坐标转换",ShowCoordinates),Button("绘制当前选择",()=>Draw(ToolPoints()))),34);
-        Row(basic,Bar(Button("绘制 ARP",()=>Draw(PointProjection.Arp(_project))),Button("绘制所选障碍物",()=>Draw(PointProjection.Obstacles(_project,SelectedObstacles())))),34);
-        Row(basic,Bar(_toolRunway,Button("绘制跑道",()=> { var r=_toolRunway.SelectedItem as RunwayChoice??throw new InvalidOperationException("请选择跑道。"); var height=TextHeight; CadOperation(()=>DrawRunwaysCad([r.Value],height)); })),34);
-        Row(basic,Bar(_toolNavaid,Button("绘制设施",()=> { var n=_toolNavaid.SelectedItem as NavaidChoice??throw new InvalidOperationException("请选择设施。"); var height=TextHeight; CadOperation(()=>DrawNavaidsCad([n.Value],height)); })),34);
-        Row(basic,Bar(Button("CAD选择Fix",()=>SelectCadTool(0)),Button("CAD选择障碍物",()=>SelectCadTool(1))),34);
-        Row(basic,Bar(Button("CAD拾取坐标",()=>CadOperation(()=> { var p=CadDrawing.PickPosition(_project); if(p is not null) { var xy=AirportGeometry.Project(p,AirportGeometry.Meridian(_project)); _coordinateOutput.Text=$"拾取WCS: E {xy.Easting:F3} / N {xy.Northing:F3} / Z {p.Elevation:F3} m\r\n纬度 {p.Latitude:F9}° / 经度 {p.Longitude:F9}°"; } }))),34);
+        var fields=FormGrid(); _cm.Text="117"; Field(fields,"中央经线°",_cm); Field(fields,"纬度°",_latitude); Field(fields,"经度°",_longitude); Field(fields,"东坐标 m",_east); Field(fields,"北坐标 m",_north); Row(basic,fields,152);
+        Row(basic,Bar(Button("正算",ForwardCoordinate),Button("反算",InverseCoordinate),Button("CAD拾点",PickToolCoordinate)),32);
         Row(basic,_coordinateOutput,100,true);
-        var reserved=Caption(""); reserved.Dock=DockStyle.Top; reserved.Height=32;
-        panels.Controls.Add(basic); panels.Controls.Add(reserved);
-        var buttons=new List<Button>(); var titles=new[] { "基础\n计算","航迹\n机动","保护区","垂直\n设计","障碍\n评价" };
+        var reserved=new ListBox { Dock=DockStyle.Fill,BackColor=BackColor,ForeColor=Color.Gray,Enabled=false,IntegralHeight=false };
+        var catalog=new[] { Array.Empty<string>(),new[]{"风螺旋（未开发）","转弯与等待（未开发）","标称航迹（未开发）"},new[]{"导航定位容差（未开发）","航迹保护区（未开发）"},new[]{"垂直剖面（未开发）","梯度与高度（未开发）"},new[]{"障碍物评价（未开发）","控制障碍物（未开发）"} };
+        panels.Controls.Add(basic); panels.Controls.Add(reserved); reserved.Visible=false;
+        var buttons=new List<Button>(); var titles=new[]{"基础\n计算","航迹\n机动","保护区","垂直\n设计","障碍\n评价"};
         for(var i=0;i<titles.Length;i++)
         {
             var index=i; var button=Button(titles[i],()=>{}); button.AutoSize=false; button.Width=46; button.Height=52; button.Margin=new Padding(2,4,2,0);
-            button.Click+=(_,_)=> { basic.Visible=index==0; reserved.Visible=index!=0; reserved.Text=index==0?"":titles[index].Replace("\n","")+" · 尚未开发"; foreach(var b in buttons) b.BackColor=b==button?Color.FromArgb(55,90,115):Color.FromArgb(44,44,44); };
+            button.Click+=(_,_)=> { basic.Visible=index==0; reserved.Visible=index!=0; reserved.Items.Clear(); reserved.Items.AddRange(catalog[index]); foreach(var b in buttons) b.BackColor=b==button?Color.FromArgb(55,90,115):Color.FromArgb(44,44,44); };
             buttons.Add(button); side.Controls.Add(button);
         }
-        buttons[0].BackColor=Color.FromArgb(55,90,115); reserved.Visible=false;
-        _pointSource.SelectedIndexChanged+=(_,_)=> { _toolFix.Enabled=_pointSource.SelectedIndex==2; _coordinateOutput.Clear(); };
-        _toolFix.Enabled=false; layout.Controls.Add(side,0,0); layout.Controls.Add(panels,1,0); page.Controls.Add(layout); return page;
+        buttons[0].BackColor=Color.FromArgb(55,90,115); layout.Controls.Add(side,0,0); layout.Controls.Add(panels,1,0); page.Controls.Add(layout); return page;
     }
-    private void RefreshToolChoices()
+    private void RefreshToolChoices() { if(string.IsNullOrWhiteSpace(_latitude.Text) && _project.Airport.ArpLongitude is { } lon) _cm.Text=Cgcs2000Projection.ZoneForLongitude(lon).CentralMeridian.ToString(CultureInfo.InvariantCulture); }
+    private static double ToolNumber(TextBox text) { if(!double.TryParse(text.Text,NumberStyles.Float,CultureInfo.InvariantCulture,out var v) || !double.IsFinite(v)) throw new InvalidOperationException("请输入有限十进制数值。"); return v; }
+    private void ForwardCoordinate()
     {
-        var runway=(_toolRunway.SelectedItem as RunwayChoice)?.Value; _toolRunway.Items.Clear(); foreach(var r in _project.Runways) { var i=_toolRunway.Items.Add(new RunwayChoice(r)); if(r==runway) _toolRunway.SelectedIndex=i; } if(_toolRunway.SelectedIndex<0 && _toolRunway.Items.Count>0) _toolRunway.SelectedIndex=0;
-        var navaid=(_toolNavaid.SelectedItem as NavaidChoice)?.Value; _toolNavaid.Items.Clear(); foreach(var n in _project.Navaids) { var i=_toolNavaid.Items.Add(new NavaidChoice(n)); if(n==navaid) _toolNavaid.SelectedIndex=i; } if(_toolNavaid.SelectedIndex<0 && _toolNavaid.Items.Count>0) _toolNavaid.SelectedIndex=0;
-        var selected=_toolFix.SelectedItem as string; _toolFix.Items.Clear(); _toolFix.Items.AddRange(_project.Fixes.Select(f=>f.Ident).ToArray());
-        if(selected is not null && _toolFix.Items.Contains(selected)) _toolFix.SelectedItem=selected; else if(_toolFix.Items.Count>0) _toolFix.SelectedIndex=0;
+        var p=Cgcs2000Projection.ForwardInZone(ToolNumber(_latitude),ToolNumber(_longitude),ToolNumber(_cm));
+        _east.Text=p.Easting.ToString("F3",CultureInfo.InvariantCulture); _north.Text=p.Northing.ToString("F3",CultureInfo.InvariantCulture);
+        _coordinateOutput.Text=$"CGCS2000 / CM{p.CentralMeridian}E\r\nE {p.Easting:F3} m\r\nN {p.Northing:F3} m";
     }
-    private sealed record RunwayChoice(RunwayData Value) { public override string ToString()=>Value.Ident; }
-    private sealed record NavaidChoice(NavaidData Value) { public override string ToString()=>$"{Value.Ident} · {Value.Kind}"; }
-    private void SelectCadTool(int kind)
+    private void InverseCoordinate()
     {
-        var grid=kind==1?_obstacleGrid:_fixGrid;
-        CadOperation(()=> { var selected=CadDrawing.SelectProjectPoints(_project,kind); if(selected.Count==0) return;
-            grid.ClearSelection(); foreach(DataGridViewRow row in grid.Rows) row.Selected=selected.Contains(row.Cells[0].Value?.ToString(),StringComparer.OrdinalIgnoreCase);
-            _pointSource.SelectedIndex=kind==1?4:0; ShowCoordinates(); });
+        var p=Cgcs2000Projection.InverseInZone(ToolNumber(_east),ToolNumber(_north),ToolNumber(_cm));
+        _latitude.Text=p.Latitude.ToString("F9",CultureInfo.InvariantCulture); _longitude.Text=p.Longitude.ToString("F9",CultureInfo.InvariantCulture);
+        _coordinateOutput.Text=$"纬度 {p.Latitude:F9}°\r\n经度 {p.Longitude:F9}°";
     }
-    private IReadOnlyList<PlotPoint> ToolPoints()=>_pointSource.SelectedIndex switch
+    private void PickToolCoordinate()=>CadOperation(()=>
     {
-        1=>PointProjection.Arp(_project),
-        2=>PointProjection.Fixes(_project,_project.Fixes.Where(f=>f.Ident==_toolFix.SelectedItem as string)),
-        3=>PointProjection.Fixes(_project,_project.Fixes),
-        4=>PointProjection.Obstacles(_project,SelectedObstacles()),
-        5=>PointProjection.Obstacles(_project,_project.Obstacles),
-        _=>PointProjection.Fixes(_project,SelectedFixes())
-    };
-    private void ShowCoordinates()
-    {
-        var rows=ToolPoints();
-        _coordinateOutput.Text=string.Join(Environment.NewLine+Environment.NewLine,rows.Select(p=>$"{p.Ident} · CM{p.Point.CentralMeridian}E / EPSG:{p.Point.Epsg}\r\nE {p.Point.Easting:F3} m\r\nN {p.Point.Northing:F3} m\r\nZ {p.Point.Z:F3} m"));
-        SetStatus($"已转换 {rows.Count} 个点（当前工具内显示）");
-    }
+        var p=CadDrawing.PickWcsPoint(); if(p is null) { SetStatus("已取消拾点"); return; }
+        _east.Text=p.Value.X.ToString("R",CultureInfo.InvariantCulture); _north.Text=p.Value.Y.ToString("R",CultureInfo.InvariantCulture); InverseCoordinate();
+    });
 }

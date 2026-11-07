@@ -21,6 +21,7 @@ public static class ProcedurePaths
 {
     public static void Migrate(ProjectData project)
     {
+        ProjectDataIds.Ensure(project);
         foreach (var p in project.Procedures)
         {
             if (p.PathsMigrated) continue;
@@ -28,12 +29,15 @@ public static class ProcedurePaths
             if (p.FixIdents.Count > 0)
             {
                 var path = Add(p, UniqueName(p,"旧主顺序"));
+                path.PathId=LegacyId(p.ProcedureId+"/main");
                 path.Runway=p.Runway; path.MigrationNote="旧FixIdents主顺序；未认定为完整运行路线。";
                 Insert(path,0,p.FixIdents);
             }
+            var sectionIndex=0;
             foreach (var section in p.Sections)
             {
                 var path=Add(p,UniqueName(p,section.Name));
+                path.PathId=LegacyId(p.ProcedureId+"/section/"+sectionIndex++);
                 path.Runway=section.Runway; path.IsMissed=section.Stage==ProcedureStage.Missed;
                 path.MigrationNote=$"旧段独立保留：Stage={section.Stage}, Branch={section.Branch}；未认定为完整运行路线。";
                 Insert(path,0,section.FixIdents);
@@ -41,6 +45,7 @@ public static class ProcedurePaths
             p.PathsMigrated=true;
         }
     }
+    private static string LegacyId(string value)=>Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(value)))[..32];
     private static string UniqueName(ProcedureData p,string name)
     {
         var result=name; var i=2;
@@ -94,4 +99,17 @@ public static class BaseMapPolicy
         1 when untouched=>dataChanged?BaseMapChange.Update:BaseMapChange.None,
         _=>BaseMapChange.Conflict
     };
+}
+
+// Deterministic defaults keep old JSON stable even before its first migrated save.
+public static class ProjectDataIds
+{
+    public static void Ensure(ProjectData p)
+    {
+        string Id(string kind,string ident)=>Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(System.Text.Encoding.UTF8.GetBytes(p.ProjectId+"/"+kind+"/"+ident.ToUpperInvariant())))[..32];
+        foreach(var f in p.Fixes) if(string.IsNullOrWhiteSpace(f.DataId)) f.DataId=Id("Fix",f.Ident);
+        foreach(var o in p.Obstacles) if(string.IsNullOrWhiteSpace(o.DataId)) o.DataId=Id("Obstacle",o.Ident);
+        foreach(var r in p.Runways) if(string.IsNullOrWhiteSpace(r.DataId)) r.DataId=Id("Runway",r.Ident);
+        foreach(var n in p.Navaids) if(string.IsNullOrWhiteSpace(n.DataId)) n.DataId=Id("Navaid",n.Ident);
+    }
 }

@@ -24,6 +24,7 @@ public sealed class AirportData
 
 public sealed class FixData
 {
+    public string DataId { get; set; } = "";
     public string Ident { get; set; } = "";
     public double Latitude { get; set; }
     public double Longitude { get; set; }
@@ -34,6 +35,7 @@ public enum ProcedureKind { Departure, Arrival, Approach }
 
 public sealed class ObstacleData
 {
+    public string DataId { get; set; } = "";
     public string Ident { get; set; } = "";
     public double Latitude { get; set; }
     public double Longitude { get; set; }

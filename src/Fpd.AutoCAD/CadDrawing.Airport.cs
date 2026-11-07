@@ -17,6 +17,11 @@ internal static partial class CadDrawing
         if(layer.IsLocked || layer.IsOff || layer.IsFrozen) throw new InvalidOperationException("请先显示、解冻并解锁 "+name);
         return layer.ObjectId;
     }
+    public static Point3d? PickWcsPoint()
+    {
+        var editor=AcadApp.DocumentManager.MdiActiveDocument!.Editor; var result=editor.GetPoint("\n拾取WCS坐标（Esc取消）：");
+        return result.Status==PromptStatus.OK?result.Value.TransformBy(editor.CurrentUserCoordinateSystem):null;
+    }
     public static GeoPosition? PickPosition(ProjectData project)
     {
         var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
@@ -55,11 +60,11 @@ internal static partial class CadDrawing
         }
         doc.Editor.WriteMessage($"\n已匹配 {selected.Count} 个项目对象；取消或未匹配不更改资料。"); return selected.ToArray();
     }
-    public static void DrawRunways(ProjectData project,IReadOnlyList<RunwayData> runways,double textHeight)
+    public static void DrawRunways(ProjectData project,IReadOnlyList<RunwayData> runways,double textHeight,Transaction? external=null)
     {
         if(runways.Count==0) throw new InvalidOperationException("请选择跑道。");
         ProjectValidation.Project(project); var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
-        using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction();
+        using var locked=doc.LockDocument(); using var ownedTr=external is null?doc.Database.TransactionManager.StartTransaction():null; var tr=external??ownedTr!;
         EnsureLayer(tr,doc.Database,"FPD_RUNWAY",7); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
         void Add(Entity e) { e.Layer="FPD_RUNWAY"; model.AppendEntity(e); tr.AddNewlyCreatedDBObject(e,true); }
         Point3d Point(GeoPosition p) { var c=AirportGeometry.Project(p,cm); return new(c.Easting,c.Northing,c.Z); }
@@ -93,12 +98,13 @@ internal static partial class CadDrawing
                 }
             }
         }
+        if(external is not null) return;
         tr.Commit(); doc.Editor.Regen(); doc.Editor.WriteMessage($"\n已绘制 {runways.Count} 条跑道（END/THR/DER），U撤销本次绘图。");
     }
-    public static void DrawNavaids(ProjectData project,IReadOnlyList<NavaidData> navaids,double height)
+    public static void DrawNavaids(ProjectData project,IReadOnlyList<NavaidData> navaids,double height,Transaction? external=null)
     {
         if(navaids.Count==0) throw new InvalidOperationException("请选择导航设施。"); ProjectValidation.Project(project); var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
-        using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction(); EnsureLayer(tr,doc.Database,"FPD_NAVAID",4);
+        using var locked=doc.LockDocument(); using var ownedTr=external is null?doc.Database.TransactionManager.StartTransaction():null; var tr=external??ownedTr!; EnsureLayer(tr,doc.Database,"FPD_NAVAID",4);
         var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite); var blocks=(BlockTable)tr.GetObject(doc.Database.BlockTableId,OpenMode.ForRead);
         foreach(var n in navaids)
         {
@@ -125,6 +131,7 @@ internal static partial class CadDrawing
             var block=(BlockTableRecord)tr.GetObject(blocks[name],OpenMode.ForRead);
             foreach(ObjectId id in block) if(tr.GetObject(id,OpenMode.ForRead) is AttributeDefinition def) { var attribute=new AttributeReference(); attribute.SetAttributeFromBlock(def,reference.BlockTransform); attribute.TextString=def.Tag=="NAME"?n.Ident:n.Kind.ToString(); reference.AttributeCollection.AppendAttribute(attribute); tr.AddNewlyCreatedDBObject(attribute,true); }
         }
+        if(external is not null) return;
         tr.Commit(); doc.Editor.Regen(); doc.Editor.WriteMessage($"\n已绘制 {navaids.Count} 个设施符号及名称，U撤销本次绘图。");
     }
 }
