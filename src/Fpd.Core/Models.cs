@@ -9,6 +9,8 @@ public sealed class ProjectData
     public List<FixData> Fixes { get; set; } = [];
     public List<ObstacleData> Obstacles { get; set; } = [];
     public List<ProcedureData> Procedures { get; set; } = [];
+    public List<RunwayData> Runways { get; set; } = [];
+    public List<NavaidData> Navaids { get; set; } = [];
 }
 
 public sealed class AirportData
@@ -22,6 +24,7 @@ public sealed class AirportData
 
 public sealed class FixData
 {
+    public string DataId { get; set; } = "";
     public string Ident { get; set; } = "";
     public double Latitude { get; set; }
     public double Longitude { get; set; }
@@ -32,6 +35,7 @@ public enum ProcedureKind { Departure, Arrival, Approach }
 
 public sealed class ObstacleData
 {
+    public string DataId { get; set; } = "";
     public string Ident { get; set; } = "";
     public double Latitude { get; set; }
     public double Longitude { get; set; }
@@ -43,10 +47,14 @@ public sealed class ObstacleData
 
 public sealed class ProcedureData
 {
+    public string ProcedureId { get; set; } = Guid.NewGuid().ToString("N");
+    public List<ProcedurePath> Paths { get; set; } = [];
+    public bool PathsMigrated { get; set; }
     public string Name { get; set; } = "";
     public ProcedureKind Kind { get; set; }
     public string? Runway { get; set; }
     public List<string> FixIdents { get; set; } = [];
+    public List<ProcedureSection> Sections { get; set; } = [];
 }
 
 public sealed record ProjectSummary(string ProjectId, string Name, int FixCount, int ProcedureCount);

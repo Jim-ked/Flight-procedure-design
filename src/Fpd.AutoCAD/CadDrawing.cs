@@ -9,15 +9,16 @@ namespace Fpd.AutoCAD;
 internal sealed record DrawRequest(IReadOnlyList<PlotPoint> Points, double TextHeight, bool ShowTop);
 internal sealed record CadLayer(string Name, bool Visible, int EntityCount);
 
-internal static class CadDrawing
+internal static partial class CadDrawing
 {
-    public static readonly string[] LayerNames = ["FPD_FIX", "FPD_OBSTACLE"];
-    public static void Draw(DrawRequest request, bool legacyPoint = false)
+    public static readonly string[] LayerNames = ["FPD_FIX", "FPD_OBSTACLE", "FPD_RUNWAY", "FPD_NAVAID"];
+    public static void Draw(DrawRequest request, bool legacyPoint = false, Transaction? external = null)
     {
         var doc = AcadApp.DocumentManager.MdiActiveDocument ?? throw new InvalidOperationException("请先打开 DWG。");
         if (request.Points.Count == 0 || !double.IsFinite(request.TextHeight) || request.TextHeight <= 0) throw new ArgumentException("请选择点并设置正文字高度。");
         using var locked = doc.LockDocument();
-        using var tr = doc.Database.TransactionManager.StartTransaction();
+        using var ownedTr = external is null ? doc.Database.TransactionManager.StartTransaction() : null;
+        var tr=external??ownedTr!;
         var layers = (LayerTable)tr.GetObject(doc.Database.LayerTableId, OpenMode.ForRead);
         foreach (var name in request.Points.Select(p => p.IsObstacle ? "FPD_OBSTACLE" : "FPD_FIX").Distinct())
         {
@@ -27,7 +28,7 @@ internal static class CadDrawing
                 layers.Add(layer); tr.AddNewlyCreatedDBObject(layer, true);
             }
             var record = (LayerTableRecord)tr.GetObject(layers[name], OpenMode.ForRead);
-            if (record.IsLocked || record.IsFrozen || record.IsOff) throw new InvalidOperationException($"请在成果页或图层管理器打开、解冻并解锁 {name}。");
+            if (record.IsLocked || record.IsFrozen || record.IsOff) throw new InvalidOperationException($"请在AutoCAD图层管理器打开、解冻并解锁 {name}。");
         }
         var model = (BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database), OpenMode.ForWrite);
         void Add(Entity e) { model.AppendEntity(e); tr.AddNewlyCreatedDBObject(e, true); }
@@ -54,6 +55,7 @@ internal static class CadDrawing
                     reference.AttributeCollection.AppendAttribute(value); tr.AddNewlyCreatedDBObject(value, true);
                 }
         }
+        if(external is not null) return;
         tr.Commit();
         if (legacyPoint) { doc.Database.Pdmode = 35; doc.Database.Pdsize = -3; }
         doc.Editor.Regen();

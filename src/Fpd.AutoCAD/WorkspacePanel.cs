@@ -18,7 +18,6 @@ public sealed partial class WorkspacePanel : UserControl
     private readonly Label _status = new() { Height = 27, Dock = DockStyle.Bottom, AutoEllipsis = true, TextAlign = ContentAlignment.MiddleLeft, BackColor = Color.FromArgb(37,37,37), ForeColor = Color.Gainsboro };
     private readonly ToolTip _tips = new();
     internal event Action<DrawRequest>? DrawRequested;
-    internal event Action<string, bool>? LayerRequested;
     internal event Action? ViewRequested;
     public ProjectData Project => _project;
 
@@ -70,15 +69,15 @@ public sealed partial class WorkspacePanel : UserControl
     {
         using var dialog=new AirportDialog(_project);
         if(dialog.ShowDialog(this)!=DialogResult.OK) return;
-        _project.Name=dialog.ProjectName; _project.Airport=dialog.Airport; Changed();
-        _coordinateOutput.Text="机场资料已更新，请重新转换或绘制。";
+        _project.Name=dialog.ProjectName; _project.Airport=dialog.Airport; BaseDataChanged();
+        _coordinateOutput.Text="机场资料已更新，请重新转换或绘制。"; RefreshData();
     }
     private void OpenProject()
     {
         if(!ConfirmReplacement()) return;
         using var dialog=new OpenFileDialog { Filter="FPD 项目|*.fpd.json|JSON|*.json", Title="打开 FPD 项目" };
         if(dialog.ShowDialog(this)!=DialogResult.OK) return;
-        var opened=_store.Open(dialog.FileName); _project=opened; _currentPath=dialog.FileName; _dirty=false; RefreshProject();
+        var opened=_store.Open(dialog.FileName); _project=opened; _currentPath=dialog.FileName; _dirty=false; RefreshProject(); QueueBaseMap();
     }
     private bool SaveProject()
     {
@@ -95,7 +94,9 @@ public sealed partial class WorkspacePanel : UserControl
     public void SetDwgPath(string? path)
     {
         if(string.IsNullOrWhiteSpace(path)) throw new InvalidOperationException("请先打开 DWG。");
+        if(!Path.IsPathFullyQualified(path) || !File.Exists(path)) throw new InvalidOperationException("请先将当前DWG保存到文件，再明确关联。");
         if(_project.DwgPath!=path) { _project.DwgPath=path; Changed(); }
+        QueueBaseMap();
     }
     public (FixData Fix,ProjectedPoint Point) GetSelectedPoint()
     {
@@ -103,7 +104,24 @@ public sealed partial class WorkspacePanel : UserControl
         if(selected.Count!=1) throw new InvalidOperationException("FPDPOINT 需要明确选中一个 Fix；ARP 请使用“绘制 ARP”。");
         return (selected[0],PointProjection.Fixes(_project,selected)[0].Point);
     }
+    internal void DrawingActivated() { if(BaseMapPolicy.CanWrite(_project.DwgPath,_drawingPath())) Run(()=>QueueBaseMap()); }
+    private void BaseDataChanged() { Changed(); QueueBaseMap(); }
+    private void QueueBaseMap(bool repair=false)
+    {
+        if(!BaseMapPolicy.CanWrite(_project.DwgPath,_drawingPath())) { SetStatus("数据已更新；未打开关联DWG，未绘制底图"); return; }
+        if(!_project.Airport.ArpLongitude.HasValue) { SetStatus("请填写ARP后补建底图"); return; }
+        var project=_project; var height=TextHeight; var top=_showTop.Checked;
+        CadOperation(()=>SetStatus(CadDrawing.SyncBaseMap(project,height,top,repair)));
+    }
+    private void RepairBaseMap()
+    {
+        if(MessageBox.Show(this,"保留冲突原图，补建项目底图？冲突原图不会覆盖或删除，可能出现重复，请在CAD中检查。","显式修复",MessageBoxButtons.OKCancel,MessageBoxIcon.Warning)==DialogResult.OK) QueueBaseMap(true);
+    }
     private double TextHeight => (double)_textHeight.Value;
-    private void Draw(IReadOnlyList<PlotPoint> points) => DrawRequested?.Invoke(new(points,TextHeight,_showTop.Checked));
+    private void Draw(IReadOnlyList<PlotPoint> points)
+    {
+        if(!BaseMapPolicy.CanWrite(_project.DwgPath,_drawingPath())) throw new InvalidOperationException("请先打开明确关联的项目DWG。");
+        DrawRequested?.Invoke(new(points,TextHeight,_showTop.Checked));
+    }
     protected override void Dispose(bool disposing) { if(disposing) _tips.Dispose(); base.Dispose(disposing); }
 }
