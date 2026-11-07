@@ -34,7 +34,7 @@ internal static class PointCsv
     public static double? Optional(string value) => string.IsNullOrWhiteSpace(value) ? null : Number(value);
     public static string Format(double? value) => value?.ToString("G17", CultureInfo.InvariantCulture) ?? "";
 
-    public static IReadOnlyList<T> Read<T>(string text, string[] columns, int required, IEnumerable<string>? existing, Func<string[], T> create)
+    public static IReadOnlyList<T> Read<T>(string text, string[] columns, int required, IEnumerable<string>? existing, Func<string[], T> create, int[]? optionalColumns = null)
     {
         var result = new List<T>();
         var identifiers = new HashSet<string>(existing ?? [], StringComparer.OrdinalIgnoreCase);
@@ -54,7 +54,7 @@ internal static class PointCsv
                 {
                     if (values.Distinct(StringComparer.OrdinalIgnoreCase).Count() != values.Length) throw new FormatException("列标题重复。");
                     mapping = columns.Select(c => Array.FindIndex(values, v => v.Equals(c, StringComparison.OrdinalIgnoreCase))).ToArray();
-                    for (var i = 0; i < required; i++) if (mapping[i] < 0) throw new FormatException("缺少列 " + columns[i]);
+                    for (var i = 0; i < required; i++) if (mapping[i] < 0 && !(optionalColumns?.Contains(i)??false)) throw new FormatException("缺少列 " + columns[i]);
                     if (values.Any(v => !columns.Contains(v, StringComparer.OrdinalIgnoreCase))) throw new FormatException("包含未知列；请使用规定列标题。");
                     width = values.Length; first = false; continue;
                 }
@@ -62,7 +62,7 @@ internal static class PointCsv
                 if (mapping is null && (values.Length < required || values.Length > columns.Length) || mapping is not null && values.Length != width)
                     throw new FormatException("列数错误，请检查表头和字段。");
                 var ordered = columns.Select((_, i) => { var index = mapping is null ? i : mapping[i]; return index >= 0 && index < values.Length ? values[index].Trim() : ""; }).ToArray();
-                for (var i = 0; i < required; i++) if (string.IsNullOrWhiteSpace(ordered[i])) throw new FormatException("缺少 " + columns[i]);
+                for (var i = 0; i < required; i++) if (string.IsNullOrWhiteSpace(ordered[i]) && !(optionalColumns?.Contains(i)??false)) throw new FormatException("缺少 " + columns[i]);
                 var item = create(ordered);
                 if (!identifiers.Add(ordered[0])) throw new FormatException("标识已存在或批内重复：" + ordered[0]);
                 result.Add(item);

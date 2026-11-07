@@ -52,6 +52,12 @@ CSV 可带表头并调整列顺序；无表头时按以下顺序。纬经度为�
 
 本机宿主与验收记录见 [F0 交付报告](docs/F0_DELIVERY_REPORT.md)，投影独立参照见 [PROJ_REFERENCE.md](tests/Fpd.Core.Tests/PROJ_REFERENCE.md)。
 
+### F1 待人工核验版本
+
+新增跑道、VOR/DME/NDB/ILS设施、CAD拾取/符号绘图及Procedure分段。当前构建0警告/0错误，Core已有33/33通过记录；修正版的标注、编辑窗、拾取焦点及新增输出/回读仍待人工实机核验，本提交不是F1验收通过声明。
+
+核验入口：[F1交付状态与剩余清单](docs/F1_DELIVERY_REPORT.md)、[实施设计](docs/F1_IMPLEMENTATION_DESIGN.md)、[真实截图](docs/screenshots/F1/)、[合成CSV/JSON样例](samples/F1/)。[F2首工具准备](docs/F2_FIRST_TOOL_PREPARATION.md)仅为后续范围，没有提前开发专业算法。
+
 ### 历史验证工程
 
 保留的历史工程使用旧式 .NET Framework 4.0；反编译的 WindSpiral 工程目标为 `net48`。这些历史工程在 Windows 上使用与项目匹配的 .NET Framework MSBuild。已有兼容构建入口为 [`build-compat.ps1`](build-compat.ps1)：

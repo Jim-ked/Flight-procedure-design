@@ -6,6 +6,8 @@ namespace Fpd.AutoCAD;
 
 public sealed partial class WorkspacePanel
 {
+    private readonly ComboBox _toolRunway=new() { Width=125,DropDownStyle=ComboBoxStyle.DropDownList };
+    private readonly ComboBox _toolNavaid=new() { Width=125,DropDownStyle=ComboBoxStyle.DropDownList };
     private readonly ComboBox _pointSource=new() { Dock=DockStyle.Fill,DropDownStyle=ComboBoxStyle.DropDownList };
     private readonly ComboBox _toolFix=new() { Dock=DockStyle.Fill,DropDownStyle=ComboBoxStyle.DropDownList };
     private readonly TextBox _coordinateOutput=new() { Dock=DockStyle.Fill,Multiline=true,ReadOnly=true,ScrollBars=ScrollBars.Both,WordWrap=false,BackColor=Color.FromArgb(42,42,42),ForeColor=Color.Gainsboro };
@@ -20,6 +22,10 @@ public sealed partial class WorkspacePanel
         Row(basic,_pointSource,32); Row(basic,_toolFix,32);
         Row(basic,Bar(Button("坐标转换",ShowCoordinates),Button("绘制当前选择",()=>Draw(ToolPoints()))),34);
         Row(basic,Bar(Button("绘制 ARP",()=>Draw(PointProjection.Arp(_project))),Button("绘制所选障碍物",()=>Draw(PointProjection.Obstacles(_project,SelectedObstacles())))),34);
+        Row(basic,Bar(_toolRunway,Button("绘制跑道",()=> { var r=_toolRunway.SelectedItem as RunwayChoice??throw new InvalidOperationException("请选择跑道。"); var height=TextHeight; CadOperation(()=>DrawRunwaysCad([r.Value],height)); })),34);
+        Row(basic,Bar(_toolNavaid,Button("绘制设施",()=> { var n=_toolNavaid.SelectedItem as NavaidChoice??throw new InvalidOperationException("请选择设施。"); var height=TextHeight; CadOperation(()=>DrawNavaidsCad([n.Value],height)); })),34);
+        Row(basic,Bar(Button("CAD选择Fix",()=>SelectCadTool(0)),Button("CAD选择障碍物",()=>SelectCadTool(1))),34);
+        Row(basic,Bar(Button("CAD拾取坐标",()=>CadOperation(()=> { var p=CadDrawing.PickPosition(_project); if(p is not null) { var xy=AirportGeometry.Project(p,AirportGeometry.Meridian(_project)); _coordinateOutput.Text=$"拾取WCS: E {xy.Easting:F3} / N {xy.Northing:F3} / Z {p.Elevation:F3} m\r\n纬度 {p.Latitude:F9}° / 经度 {p.Longitude:F9}°"; } }))),34);
         Row(basic,_coordinateOutput,100,true);
         var reserved=Caption(""); reserved.Dock=DockStyle.Top; reserved.Height=32;
         panels.Controls.Add(basic); panels.Controls.Add(reserved);
@@ -36,8 +42,19 @@ public sealed partial class WorkspacePanel
     }
     private void RefreshToolChoices()
     {
+        var runway=(_toolRunway.SelectedItem as RunwayChoice)?.Value; _toolRunway.Items.Clear(); foreach(var r in _project.Runways) { var i=_toolRunway.Items.Add(new RunwayChoice(r)); if(r==runway) _toolRunway.SelectedIndex=i; } if(_toolRunway.SelectedIndex<0 && _toolRunway.Items.Count>0) _toolRunway.SelectedIndex=0;
+        var navaid=(_toolNavaid.SelectedItem as NavaidChoice)?.Value; _toolNavaid.Items.Clear(); foreach(var n in _project.Navaids) { var i=_toolNavaid.Items.Add(new NavaidChoice(n)); if(n==navaid) _toolNavaid.SelectedIndex=i; } if(_toolNavaid.SelectedIndex<0 && _toolNavaid.Items.Count>0) _toolNavaid.SelectedIndex=0;
         var selected=_toolFix.SelectedItem as string; _toolFix.Items.Clear(); _toolFix.Items.AddRange(_project.Fixes.Select(f=>f.Ident).ToArray());
         if(selected is not null && _toolFix.Items.Contains(selected)) _toolFix.SelectedItem=selected; else if(_toolFix.Items.Count>0) _toolFix.SelectedIndex=0;
+    }
+    private sealed record RunwayChoice(RunwayData Value) { public override string ToString()=>Value.Ident; }
+    private sealed record NavaidChoice(NavaidData Value) { public override string ToString()=>$"{Value.Ident} · {Value.Kind}"; }
+    private void SelectCadTool(int kind)
+    {
+        var grid=kind==1?_obstacleGrid:_fixGrid;
+        CadOperation(()=> { var selected=CadDrawing.SelectProjectPoints(_project,kind); if(selected.Count==0) return;
+            grid.ClearSelection(); foreach(DataGridViewRow row in grid.Rows) row.Selected=selected.Contains(row.Cells[0].Value?.ToString(),StringComparer.OrdinalIgnoreCase);
+            _pointSource.SelectedIndex=kind==1?4:0; ShowCoordinates(); });
     }
     private IReadOnlyList<PlotPoint> ToolPoints()=>_pointSource.SelectedIndex switch
     {

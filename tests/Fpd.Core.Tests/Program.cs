@@ -27,6 +27,51 @@ ProjectData Sample() => new()
 var store = new ProjectStore();
 try
 {
+    Test("inverse uses fixed airport CM with independent PROJ coordinates", () =>
+    {
+        var a = Cgcs2000Projection.InverseInZone(529936.0628666884, 4332366.307251088, 117, 23);
+        Check(Math.Abs(a.Latitude - 39.124353) < 1e-8 && Math.Abs(a.Longitude - 117.346183) < 1e-8 && a.Elevation == 23);
+        var b = Cgcs2000Projection.InverseInZone(638214.8574548216, 4341927.356207282, 117);
+        Check(Math.Abs(b.Latitude - 39.2) < 1e-8 && Math.Abs(b.Longitude - 118.6) < 1e-8);
+        Reject(() => Cgcs2000Projection.InverseInZone(double.NaN, 0, 117));
+    });
+    Test("old project defaults F1 collections to empty", () =>
+    {
+        var path = Path.Combine(work, "f0.json"); File.WriteAllText(path, "{\"Name\":\"old\"}");
+        var p = store.Open(path); Check(p.Runways.Count == 0 && p.Navaids.Count == 0);
+    });
+    Test("runway CSV preserves separate physical THR and DER positions", () =>
+    {
+        var runway = new RunwayData { Ident="16/34", Width=45,
+            EndA=new() { Designator="16",PhysicalEnd=new() { Latitude=39.14,Longitude=117.34,Elevation=3 },Threshold=new() { Latitude=39.139,Longitude=117.34,Elevation=4 },DepartureEnd=new() { Latitude=39.14,Longitude=117.34,Elevation=5 } },
+            EndB=new() { Designator="34",PhysicalEnd=new() { Latitude=39.11,Longitude=117.34,Elevation=6 },Threshold=new() { Latitude=39.111,Longitude=117.34,Elevation=7 },DepartureEnd=new() { Latitude=39.11,Longitude=117.34,Elevation=8 } } };
+        var parsed=RunwayCsv.ParseText(RunwayCsv.Export([runway]))[0];
+        Check(parsed.EndA.PhysicalEnd.Latitude!=parsed.EndA.Threshold.Latitude && parsed.EndA.DepartureEnd.Elevation==5);
+        var p=Sample(); p.Runways.Add(parsed); var path=Path.Combine(work,"runway.json"); store.Save(p,path);
+        Check(store.Open(path).Runways[0].EndB.Threshold.Elevation==7);
+        var axis=AirportGeometry.RunwayAxis(parsed,117); Check(axis.Length>3300 && axis.Length<3400 && axis.GridBearing>179 && axis.GridBearing<181);
+        parsed.Width=0; Reject(()=>ProjectValidation.Project(p));
+    });
+    Test("navaid type units and partial GP are validated before importing", () =>
+    {
+        var n=new NavaidData { Ident="TJ",Kind=NavaidKind.NDB,Position=new() { Latitude=39.1,Longitude=117.3,Elevation=10 },FrequencyKHz=345 };
+        var row=NavaidCsv.ParseText(NavaidCsv.Export([n]))[0]; Check(row.FrequencyKHz==345 && row.FrequencyMHz is null);
+        var p=Sample(); p.Navaids.Add(row); row.FrequencyMHz=110; Reject(()=>ProjectValidation.Project(p)); row.FrequencyMHz=null;
+        row.Kind=NavaidKind.ILS; row.FrequencyKHz=null; row.FrequencyMHz=110.3; row.GlidePathPosition=new() { Latitude=39,Longitude=117 };
+        Reject(()=>ProjectValidation.Project(p));
+        Reject(()=>NavaidCsv.ParseText("Ident,Name,Kind,Latitude,Longitude,Elevation\nA,A,VOR,39,117,1\nB,B,VOR,91,117,1"));
+    });
+    Test("sections preserve repeated Fix references and enforce Approach Missed", () =>
+    {
+        var p=Sample(); p.Procedures[0].Sections.Add(new() { Name="复飞",Stage=ProcedureStage.Missed,Branch=ProcedureBranch.Common,FixIdents=["TJ002","TJ001","TJ002"] });
+        var path=Path.Combine(work,"sections.json"); store.Save(p,path); var opened=store.Open(path);
+        Check(opened.Procedures[0].Sections[0].FixIdents.Count==3);
+        ProjectEdits.ReplaceFix(p,p.Fixes[1],new() { Ident="NEW",Latitude=39.2,Longitude=118.6 });
+        Check(p.Procedures[0].Sections[0].FixIdents.SequenceEqual(new[] { "NEW","TJ001","NEW" }));
+        p.Procedures[0].Kind=ProcedureKind.Departure; Reject(()=>ProjectValidation.Project(p));
+        p.Procedures[0].Kind=ProcedureKind.Approach; ProjectEdits.DeleteFixes(p,["NEW"]);
+        Check(p.Procedures[0].Sections[0].FixIdents.SequenceEqual(new[] { "TJ001" }));
+    });
     Test("F0 JSON without Obstacles remains readable", () =>
     {
         var path = Path.Combine(work, "old.json"); File.WriteAllText(path, "{\"Name\":\"old\"}");

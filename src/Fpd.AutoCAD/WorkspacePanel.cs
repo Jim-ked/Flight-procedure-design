@@ -71,7 +71,7 @@ public sealed partial class WorkspacePanel : UserControl
         using var dialog=new AirportDialog(_project);
         if(dialog.ShowDialog(this)!=DialogResult.OK) return;
         _project.Name=dialog.ProjectName; _project.Airport=dialog.Airport; Changed();
-        _coordinateOutput.Text="机场资料已更新，请重新转换或绘制。";
+        _coordinateOutput.Text="机场资料已更新，请重新转换或绘制。"; RefreshData();
     }
     private void OpenProject()
     {

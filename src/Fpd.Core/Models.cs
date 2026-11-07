@@ -9,6 +9,8 @@ public sealed class ProjectData
     public List<FixData> Fixes { get; set; } = [];
     public List<ObstacleData> Obstacles { get; set; } = [];
     public List<ProcedureData> Procedures { get; set; } = [];
+    public List<RunwayData> Runways { get; set; } = [];
+    public List<NavaidData> Navaids { get; set; } = [];
 }
 
 public sealed class AirportData
@@ -47,6 +49,7 @@ public sealed class ProcedureData
     public ProcedureKind Kind { get; set; }
     public string? Runway { get; set; }
     public List<string> FixIdents { get; set; } = [];
+    public List<ProcedureSection> Sections { get; set; } = [];
 }
 
 public sealed record ProjectSummary(string ProjectId, string Name, int FixCount, int ProcedureCount);

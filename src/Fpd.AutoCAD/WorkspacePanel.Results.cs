@@ -20,10 +20,11 @@ public sealed partial class WorkspacePanel
         Row(stack,Bar(Button("查看图面",()=>ViewRequested?.Invoke()),Button("刷新图层",RefreshResults)),34);
         Row(stack,_layers,25,true); Row(stack,Bar(Button("显示所选层",()=>ToggleLayer(true)),Button("隐藏所选层",()=>ToggleLayer(false))),34);
         Row(stack,_dataSummary,24); Row(stack,Bar(Button("导出 Fix CSV",()=>Export(false)),Button("导出障碍物 CSV",()=>Export(true))),34);
+        Row(stack,Bar(Button("导出跑道 CSV",()=>ExportAirport(true)),Button("导出设施 CSV",()=>ExportAirport(false))),34);
         Row(stack,Caption("程序成果 · 定位点使用顺序"),24); Row(stack,_resultProcedures,30,true); Row(stack,_resultSequence,45,true);
         Row(stack,Bar(Button("导出程序 JSON",ExportProcedures)),34);
         Row(stack,Caption("后续：标称航迹 · 保护区 · 障碍物评价（尚未开发）"),26);
-        _resultProcedures.SelectedIndexChanged+=(_,_)=> { _resultSequence.Text=_resultProcedures.SelectedItem is ProcedureRow row ? $"{row.Value.Name} · {row.Value.Kind} · 跑道 {row.Value.Runway}\r\n{string.Join(" → ",row.Value.FixIdents)}" : ""; };
+        _resultProcedures.SelectedIndexChanged+=(_,_)=> { _resultSequence.Text=_resultProcedures.SelectedItem is ProcedureRow row ? $"{row.Value.Name} · {row.Value.Kind} · 跑道 {row.Value.Runway}\r\n{string.Join(" → ",row.Value.FixIdents)}\r\n{string.Join("\r\n",row.Value.Sections.Select(s=>$"{s.Name} · {s.Stage}/{s.Branch} · {s.Runway}: {string.Join(" → ",s.FixIdents)}"))}" : ""; };
         page.Controls.Add(stack); return page;
     }
     internal void RefreshResults()
@@ -48,6 +49,12 @@ public sealed partial class WorkspacePanel
         using var dialog=new SaveFileDialog { Filter="CSV|*.csv",FileName=obstacle?"obstacles.csv":"fixes.csv" };
         if(dialog.ShowDialog(this)!=DialogResult.OK) return;
         File.WriteAllText(dialog.FileName,obstacle?ObstacleCsv.Export(_project.Obstacles):FixCsv.Export(_project.Fixes),new UTF8Encoding(true)); SetStatus("已导出："+Path.GetFileName(dialog.FileName));
+    }
+    private void ExportAirport(bool runway)
+    {
+        using var dialog=new SaveFileDialog { Filter="CSV|*.csv",FileName=runway?"runways.csv":"navaids.csv" };
+        if(dialog.ShowDialog(this)!=DialogResult.OK) return;
+        File.WriteAllText(dialog.FileName,runway?RunwayCsv.Export(_project.Runways):NavaidCsv.Export(_project.Navaids),new UTF8Encoding(true)); SetStatus("已导出："+Path.GetFileName(dialog.FileName));
     }
     private void ExportProcedures()
     {

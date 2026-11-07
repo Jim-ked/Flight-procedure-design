@@ -39,8 +39,9 @@ public static class ProjectEdits
             var index = project.Fixes.IndexOf(previous);
             if (index < 0) throw new InvalidDataException("定位点已不存在。");
             foreach (var procedure in project.Procedures)
-                for (var i = 0; i < procedure.FixIdents.Count; i++)
-                    if (procedure.FixIdents[i].Equals(previous.Ident, StringComparison.OrdinalIgnoreCase)) procedure.FixIdents[i] = value.Ident;
+            foreach (var sequence in new[] { procedure.FixIdents }.Concat(procedure.Sections.Select(s=>s.FixIdents)))
+                for (var i = 0; i < sequence.Count; i++)
+                    if (sequence[i].Equals(previous.Ident, StringComparison.OrdinalIgnoreCase)) sequence[i] = value.Ident;
             project.Fixes[index] = value;
         }
     }
@@ -48,7 +49,11 @@ public static class ProjectEdits
     {
         var ids = selected.ToHashSet(StringComparer.OrdinalIgnoreCase);
         project.Fixes.RemoveAll(f => ids.Contains(f.Ident));
-        foreach (var procedure in project.Procedures) procedure.FixIdents.RemoveAll(ids.Contains);
+        foreach (var procedure in project.Procedures)
+        {
+            procedure.FixIdents.RemoveAll(ids.Contains);
+            foreach(var section in procedure.Sections) section.FixIdents.RemoveAll(ids.Contains);
+        }
     }
     public static int MoveReference(ProcedureData procedure, int index, int direction)
     {

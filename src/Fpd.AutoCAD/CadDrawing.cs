@@ -9,9 +9,9 @@ namespace Fpd.AutoCAD;
 internal sealed record DrawRequest(IReadOnlyList<PlotPoint> Points, double TextHeight, bool ShowTop);
 internal sealed record CadLayer(string Name, bool Visible, int EntityCount);
 
-internal static class CadDrawing
+internal static partial class CadDrawing
 {
-    public static readonly string[] LayerNames = ["FPD_FIX", "FPD_OBSTACLE"];
+    public static readonly string[] LayerNames = ["FPD_FIX", "FPD_OBSTACLE", "FPD_RUNWAY", "FPD_NAVAID"];
     public static void Draw(DrawRequest request, bool legacyPoint = false)
     {
         var doc = AcadApp.DocumentManager.MdiActiveDocument ?? throw new InvalidOperationException("请先打开 DWG。");
