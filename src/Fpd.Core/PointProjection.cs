@@ -42,6 +42,8 @@ public static class ProjectEdits
             foreach (var sequence in new[] { procedure.FixIdents }.Concat(procedure.Sections.Select(s=>s.FixIdents)))
                 for (var i = 0; i < sequence.Count; i++)
                     if (sequence[i].Equals(previous.Ident, StringComparison.OrdinalIgnoreCase)) sequence[i] = value.Ident;
+            foreach(var use in project.Procedures.SelectMany(p=>p.Paths).SelectMany(p=>p.Fixes))
+                if(use.FixIdent.Equals(previous.Ident,StringComparison.OrdinalIgnoreCase)) use.FixIdent=value.Ident;
             project.Fixes[index] = value;
         }
     }
@@ -51,6 +53,7 @@ public static class ProjectEdits
         project.Fixes.RemoveAll(f => ids.Contains(f.Ident));
         foreach (var procedure in project.Procedures)
         {
+            foreach(var path in procedure.Paths) path.Fixes.RemoveAll(f=>ids.Contains(f.FixIdent));
             procedure.FixIdents.RemoveAll(ids.Contains);
             foreach(var section in procedure.Sections) section.FixIdents.RemoveAll(ids.Contains);
         }

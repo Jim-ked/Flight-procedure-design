@@ -37,10 +37,19 @@ public static class ProjectValidation
             Fix(fix);
             if (!identifiers.Add(fix.Ident)) throw new InvalidDataException($"定位点标识重复：{fix.Ident}");
         }
+        var procedureIds=new HashSet<string>();
         foreach (var procedure in project.Procedures)
         {
             if (procedure is null || string.IsNullOrWhiteSpace(procedure.Name) || !Enum.IsDefined(procedure.Kind) || procedure.FixIdents is null || procedure.Sections is null)
                 throw new InvalidDataException("程序名称、类型或定位点顺序无效。");
+            if(string.IsNullOrWhiteSpace(procedure.ProcedureId) || !procedureIds.Add(procedure.ProcedureId) || procedure.Paths is null) throw new InvalidDataException("程序ID或路径列表无效/重复。");
+            var pathIds=new HashSet<string>(); var pathNames=new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            foreach(var path in procedure.Paths)
+            {
+                if(path is null || string.IsNullOrWhiteSpace(path.PathId) || !pathIds.Add(path.PathId) || string.IsNullOrWhiteSpace(path.Name) || !pathNames.Add(path.Name) || path.Fixes is null) throw new InvalidDataException("路径名称/ID无效或重复。");
+                if(path.IsMissed && procedure.Kind!=ProcedureKind.Approach) throw new InvalidDataException("复飞路径仅属于进近程序。");
+                foreach(var use in path.Fixes) if(use is null || !identifiers.Contains(use.FixIdent) || string.IsNullOrWhiteSpace(use.SymbolKey)) throw new InvalidDataException("路径引用或图符无效。");
+            }
             foreach (var ident in procedure.FixIdents)
                 if (ident is null || !identifiers.Contains(ident)) throw new InvalidDataException($"程序引用未知定位点：{ident}");
             var names=new HashSet<string>(StringComparer.OrdinalIgnoreCase);

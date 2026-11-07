@@ -9,7 +9,14 @@ public sealed class ProjectStore
     public void Save(ProjectData project, string path)
     {
         ArgumentNullException.ThrowIfNull(project);
+        ProcedurePaths.Migrate(project);
         ProjectValidation.Project(project);
+        if (File.Exists(path) && !File.Exists(path + ".pre-paths.bak"))
+        {
+            using var old = JsonDocument.Parse(File.ReadAllText(path));
+            if (old.RootElement.TryGetProperty("Procedures", out var procedures) && procedures.EnumerateArray().Any(p => !p.TryGetProperty("PathsMigrated", out var migrated) || !migrated.GetBoolean()))
+                File.Copy(path, path + ".pre-paths.bak");
+        }
         Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(path))!);
         var temporary = path + "." + Guid.NewGuid().ToString("N") + ".tmp";
         try
@@ -25,6 +32,7 @@ public sealed class ProjectStore
         using var stream = File.OpenRead(path);
         var project = JsonSerializer.Deserialize<ProjectData>(stream, JsonOptions)
             ?? throw new InvalidDataException("项目文件为空或格式无效。");
+        ProcedurePaths.Migrate(project);
         ProjectValidation.Project(project);
         return project;
     }

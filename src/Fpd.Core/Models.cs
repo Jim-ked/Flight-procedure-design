@@ -45,6 +45,9 @@ public sealed class ObstacleData
 
 public sealed class ProcedureData
 {
+    public string ProcedureId { get; set; } = Guid.NewGuid().ToString("N");
+    public List<ProcedurePath> Paths { get; set; } = [];
+    public bool PathsMigrated { get; set; }
     public string Name { get; set; } = "";
     public ProcedureKind Kind { get; set; }
     public string? Runway { get; set; }

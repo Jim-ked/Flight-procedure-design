@@ -27,6 +27,48 @@ ProjectData Sample() => new()
 var store = new ProjectStore();
 try
 {
+    Test("legacy paths migrate separately once with stable IDs and coordinates", () =>
+    {
+        var p=Sample(); var proc=p.Procedures[0];
+        proc.Sections.Add(new() { Name="复飞段",Stage=ProcedureStage.Missed,Branch=ProcedureBranch.Transition,Runway="34",FixIdents=["TJ001","TJ001"] });
+        var file=Path.Combine(work,"migration.json"); File.WriteAllText(file,System.Text.Json.JsonSerializer.Serialize(p));
+        var opened=store.Open(file); var q=opened.Procedures[0];
+        Check(q.Paths.Count==2 && q.Paths[0].Fixes.Select(f=>f.FixIdent).SequenceEqual(proc.FixIdents));
+        Check(q.Paths[1].IsMissed && q.Paths[1].Runway=="34" && q.Paths[1].Fixes.Count==2 && q.Paths[1].MigrationNote!.Contains("Transition"));
+        var id=q.Paths[0].PathId; store.Save(opened,file); var again=store.Open(file);
+        Check(again.Procedures[0].Paths.Count==2 && again.Procedures[0].Paths[0].PathId==id);
+        Near(again.Fixes[0].Longitude,p.Fixes[0].Longitude); Check(again.ProjectId==p.ProjectId);
+    });
+    Test("named paths preserve independent reference symbols and repeated edits", () =>
+    {
+        var p=Sample(); var q=p.Procedures[0];
+        var a=ProcedurePaths.Add(q,"设计员路径"); var b=ProcedurePaths.Add(q,"另一条");
+        Reject(()=>ProcedurePaths.Add(q," ")); Reject(()=>ProcedurePaths.Add(q,"设计员路径"));
+        ProcedurePaths.Insert(a,0,["TJ001","TJ002","TJ001"]); ProcedurePaths.Insert(b,0,["TJ001"]);
+        a.Fixes[0].SymbolKey="FlyOver"; Check(b.Fixes[0].SymbolKey=="FlyBy" && a.Fixes[2].SymbolKey=="FlyBy");
+        var id=a.PathId; ProcedurePaths.Rename(q,a,"改名"); Check(a.PathId==id);
+        ProcedurePaths.Move(a,2,-1); a.Fixes.Reverse(); Check(a.Fixes.Select(x=>x.FixIdent).SequenceEqual(new[]{"TJ002","TJ001","TJ001"}));
+        ProjectEdits.ReplaceFix(p,p.Fixes[0],new() { Ident="NEW",Latitude=39.2,Longitude=117.3 });
+        Check(a.Fixes.Count(x=>x.FixIdent=="NEW")==2 && b.Fixes[0].FixIdent=="NEW");
+        ProjectEdits.DeleteFixes(p,["NEW"]); Check(a.Fixes.Count==1 && b.Fixes.Count==0);
+    });
+    Test("ordered pick cancellation is atomic and keeps repeats", () =>
+    {
+        var q=new ProcedureData(); var a=ProcedurePaths.Add(q,"选点"); ProcedurePaths.Insert(a,0,["OLD"]);
+        var pick=new OrderedFixPick(); pick.Add("B"); pick.Add("A"); pick.Add("B");
+        Check(pick.Complete(false) is null && a.Fixes.Count==1);
+        var next=new OrderedFixPick(); next.Add("B"); next.Add("A"); next.Add("B");
+        ProcedurePaths.Insert(a,1,next.Complete(true)!); Check(a.Fixes.Select(f=>f.FixIdent).SequenceEqual(new[]{"OLD","B","A","B"}));
+    });
+    Test("base drawing boundary and repeat reconciliation are conservative", () =>
+    {
+        Check(!BaseMapPolicy.CanWrite(null,@"C:\a.dwg") && !BaseMapPolicy.CanWrite(@"C:\a.dwg",@"C:\b.dwg"));
+        Check(BaseMapPolicy.CanWrite(@"C:\a.dwg",@"c:\A.dwg"));
+        Check(BaseMapPolicy.Decide(0,false,false)==BaseMapChange.Create);
+        Check(BaseMapPolicy.Decide(1,true,false)==BaseMapChange.None);
+        Check(BaseMapPolicy.Decide(1,true,true)==BaseMapChange.Update);
+        Check(BaseMapPolicy.Decide(1,false,true)==BaseMapChange.Conflict && BaseMapPolicy.Decide(2,true,false)==BaseMapChange.Conflict);
+    });
     Test("inverse uses fixed airport CM with independent PROJ coordinates", () =>
     {
         var a = Cgcs2000Projection.InverseInZone(529936.0628666884, 4332366.307251088, 117, 23);
