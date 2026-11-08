@@ -116,7 +116,10 @@ public static class ProjectValidation
             if(number.HasValue && !double.IsFinite(number.Value)) throw new InvalidDataException("设施参数须为有限数值。");
         if(navaid.FrequencyMHz<=0 || navaid.FrequencyKHz<=0 || navaid.GlidePathAngle<=0 || navaid.GlidePathAngle>=90 || Math.Abs(navaid.MagneticVariation??0)>180) throw new InvalidDataException("频率、GP角度或磁差范围无效。");
         if(navaid.Kind==NavaidKind.NDB && navaid.FrequencyMHz.HasValue || navaid.Kind!=NavaidKind.NDB && navaid.FrequencyKHz.HasValue) throw new InvalidDataException("NDB使用kHz，VOR/DME/ILS使用MHz，不能混用。");
-        if(navaid.Kind!=NavaidKind.DME && !string.IsNullOrWhiteSpace(navaid.Channel) || navaid.Kind!=NavaidKind.VOR && navaid.MagneticVariation.HasValue || navaid.Kind!=NavaidKind.ILS && (navaid.GlidePathPosition is not null || navaid.GlidePathAngle.HasValue)) throw new InvalidDataException("存在与设施类型不符的参数。");
+        var channelKind=navaid.Kind is NavaidKind.DME or NavaidKind.VOR_DME;
+        var variationKind=navaid.Kind is NavaidKind.VOR or NavaidKind.VOR_DME;
+        var glideKind=navaid.Kind is NavaidKind.ILS or NavaidKind.GP;
+        if(!channelKind && !string.IsNullOrWhiteSpace(navaid.Channel) || !variationKind && navaid.MagneticVariation.HasValue || !glideKind && (navaid.GlidePathPosition is not null || navaid.GlidePathAngle.HasValue)) throw new InvalidDataException("存在与设施类型不符的参数。");
         if(navaid.GlidePathPosition is not null) Position(navaid.GlidePathPosition);
     }
 

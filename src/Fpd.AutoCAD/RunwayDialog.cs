@@ -1,59 +1,79 @@
-using System.Globalization;
+using System.Text.RegularExpressions;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Media;
 using TextBox=System.Windows.Controls.TextBox;
 using CheckBox=System.Windows.Controls.CheckBox;
-using TabControl=System.Windows.Controls.TabControl;
-using TabItem=System.Windows.Controls.TabItem;
+using FrameworkElement=System.Windows.FrameworkElement;
 using MediaColor=System.Windows.Media.Color;
 using MediaBrushes=System.Windows.Media.Brushes;
-using System.Windows.Media;
 using Fpd.Core;
 namespace Fpd.AutoCAD;
 internal sealed class RunwayDialog : ProjectWpfDialog
 {
-    private readonly TextBox _ident,_width,_aDesignator,_bDesignator;
-    private readonly TextBox[] _lat=new TextBox[6],_lon=new TextBox[6],_elev=new TextBox[6];
-    private readonly CheckBox[] _custom=new CheckBox[6]; private int _pickIndex;
-    public RunwayData Value { get; private set; }=new(); public int PickIndex=>_pickIndex;
-    private static readonly string[] Names={"A 实际端","A THR入口","A DER离场端","B 实际端","B THR入口","B DER离场端"};
-    public RunwayDialog(RunwayData? value=null) : base("跑道资料",560)
+    private sealed class Endpoint
     {
-        Value=value is null?new RunwayData():value; _ident=Field("跑道方向",value?.Ident??""); _width=Field("宽度 m",Format(value?.Width)); _aDesignator=Field("方向 A",value?.EndA.Designator??""); _bDesignator=Field("方向 B",value?.EndB.Designator??"");
-        var directions=new TabControl { Margin=new Thickness(0,8,0,0),Height=225 };
-        directions.Items.Add(DirectionTab(0,"方向 A",value?.EndA,value?.EndB.PhysicalEnd)); directions.Items.Add(DirectionTab(3,"方向 B",value?.EndB,value?.EndA.PhysicalEnd));
-        var row=Fields.RowDefinitions.Count; Fields.RowDefinitions.Add(new RowDefinition { Height=new GridLength(238) }); Grid.SetRow(directions,row); Grid.SetColumnSpan(directions,2); Fields.Children.Add(directions);
-    }
-    private TabItem DirectionTab(int offset,string title,RunwayEndData? end,GeoPosition? opposite)
-    {
-        var panel=new StackPanel { Margin=new Thickness(0,6,0,0) };
-        for(var j=0;j<3;j++)
+        public readonly TextBox Latitude,Longitude,Elevation;
+        public readonly CheckBox CustomThr,CustomDer;
+        public readonly TextBox ThrLatitude,ThrLongitude,ThrElevation,DerLatitude,DerLongitude,DerElevation;
+        public Endpoint(RunwayEndData? end,GeoPosition? opposite)
         {
-            var i=offset+j; var grid=new Grid { Margin=new Thickness(0,2,0,2) }; grid.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(105) }); grid.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(1,GridUnitType.Star) }); grid.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(1,GridUnitType.Star) }); grid.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(1,GridUnitType.Star) });
-            var label=new TextBlock { Text=Names[i],VerticalAlignment=VerticalAlignment.Center }; Grid.SetColumn(label,0); grid.Children.Add(label);
-            var position=j==0?end?.PhysicalEnd:j==1?end?.Threshold:end?.DepartureEnd; _lat[i]=Small(Format(position?.Latitude),i); _lon[i]=Small(Format(position?.Longitude),i); _elev[i]=Small(Format(position?.Elevation),i);
-            foreach(var box in new[]{_lat[i],_lon[i],_elev[i]}) { Grid.SetColumn(box,1+Array.IndexOf(new[]{_lat[i],_lon[i],_elev[i]},box)); grid.Children.Add(box); }
-            _custom[i]=new CheckBox { Content="自定义",IsChecked=j==0 || position is not null && !RunwayDefaults.Same(position,j==1?end?.PhysicalEnd:opposite),VerticalAlignment=VerticalAlignment.Center,Margin=new Thickness(5,0,0,0) }; Grid.SetColumn(_custom[i],3); grid.Children.Add(_custom[i]); panel.Children.Add(grid);
-            var enabled=j==0 || _custom[i].IsChecked==true; _lat[i].IsEnabled=_lon[i].IsEnabled=_elev[i].IsEnabled=enabled; _custom[i].Checked+=(_,_)=>SetEnabled(i,true); _custom[i].Unchecked+=(_,_)=>SetEnabled(i,false);
+            var physical=end?.PhysicalEnd; Latitude=Create(Format(physical?.Latitude)); Longitude=Create(Format(physical?.Longitude)); Elevation=Create(Format(physical?.Elevation));
+            var thr=end?.Threshold; var der=end?.DepartureEnd;
+            CustomThr=new CheckBox { Content="内移THR",IsChecked=thr is not null && !RunwayDefaults.Same(thr,physical) };
+            CustomDer=new CheckBox { Content="特殊DER",IsChecked=der is not null && !RunwayDefaults.Same(der,opposite) };
+            ThrLatitude=Create(Format(thr?.Latitude)); ThrLongitude=Create(Format(thr?.Longitude)); ThrElevation=Create(Format(thr?.Elevation)); DerLatitude=Create(Format(der?.Latitude)); DerLongitude=Create(Format(der?.Longitude)); DerElevation=Create(Format(der?.Elevation));
+            SetCustomEnabled(); CustomThr.Checked+=(_,_)=>SetCustomEnabled(); CustomThr.Unchecked+=(_,_)=>SetCustomEnabled(); CustomDer.Checked+=(_,_)=>SetCustomEnabled(); CustomDer.Unchecked+=(_,_)=>SetCustomEnabled();
         }
-        return new TabItem { Header=title+" · THR / DER",Content=panel };
+        private static TextBox Create(string text)=>new() { Text=text,Height=27,Margin=new Thickness(3,0,3,0),Padding=new Thickness(5,2,5,2),Background=new SolidColorBrush(MediaColor.FromRgb(55,55,55)),Foreground=MediaBrushes.White };
+        private void SetCustomEnabled(){ foreach(var b in new[]{ThrLatitude,ThrLongitude,ThrElevation}) b.IsEnabled=CustomThr.IsChecked==true; foreach(var b in new[]{DerLatitude,DerLongitude,DerElevation}) b.IsEnabled=CustomDer.IsChecked==true; }
+        public bool HasCustom=>CustomThr.IsChecked==true||CustomDer.IsChecked==true;
     }
-    private TextBox Small(string text,int index) { var b=new TextBox { Text=text,Height=27,Margin=new Thickness(3,0,3,0),Padding=new Thickness(5,2,5,2),Background=new SolidColorBrush(MediaColor.FromRgb(55,55,55)),Foreground=MediaBrushes.White }; b.GotFocus+=(_,_)=>_pickIndex=index; return b; }
-    private void SetEnabled(int i,bool enabled) { _lat[i].IsEnabled=_lon[i].IsEnabled=_elev[i].IsEnabled=enabled; }
-    private GeoPosition? Position(int i,bool draft)
+    private readonly TextBox _number,_width; private readonly Endpoint _a,_b; private readonly Expander _advanced; private readonly TextBlock _aLabel,_bLabel; private int _pickIndex;
+    public RunwayData Value { get; private set; }=new(); public int PickIndex=>_pickIndex;
+    public RunwayDialog(RunwayData? existing=null) : base("跑道资料",520,false)
     {
-        if(i%3!=0 && _custom[i].IsChecked!=true) return null;
-        return new GeoPosition { Latitude=Angle(_lat[i],true,draft),Longitude=Angle(_lon[i],false,draft),Elevation=double.IsNaN(Number(_elev[i],draft))?null:Number(_elev[i],draft) };
+        Value=existing is null?new RunwayData():existing; var ident=existing is null?"":existing.EndA.Designator+"/"+existing.EndB.Designator;
+        _number=Field("跑道编号",ident); _width=Field("跑道宽度 m",Format(existing?.Width));
+        _a=new Endpoint(existing?.EndA,existing?.EndB?.PhysicalEnd); _b=new Endpoint(existing?.EndB,existing?.EndA?.PhysicalEnd);
+        _aLabel=AddEndpoint("方向A物理端",_a,0); _bLabel=AddEndpoint("方向B物理端",_b,1); _number.TextChanged+=(_,_)=>UpdateDirectionLabels(); UpdateDirectionLabels();
+        _advanced=new Expander { Header="附加位置（内移THR / 特殊DER）",IsExpanded=_a.HasCustom||_b.HasCustom,Margin=new Thickness(0,8,0,0),Padding=new Thickness(4) }; var advancedPanel=new StackPanel(); AddCustom(advancedPanel,"方向A",_a); AddCustom(advancedPanel,"方向B",_b); _advanced.Content=advancedPanel; AddFull(_advanced,170);
     }
+    private TextBlock AddEndpoint(string title,Endpoint endpoint,int index)
+    {
+        var panel=new Grid { Margin=new Thickness(0,7,0,0) }; panel.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(126) }); panel.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(1,GridUnitType.Star) }); panel.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(78) });
+        var label=new TextBlock { Text=title,VerticalAlignment=VerticalAlignment.Center }; Grid.SetColumn(label,0); panel.Children.Add(label); var values=new Grid(); for(var i=0;i<3;i++) values.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(1,GridUnitType.Star) }); values.Children.Add(endpoint.Latitude);values.Children.Add(endpoint.Longitude);values.Children.Add(endpoint.Elevation); Grid.SetColumn(values,1); panel.Children.Add(values);
+        var pick=Button(index==0?"拾取A端":"拾取B端",()=> { Value=Read(true); _pickIndex=index; Picked(); }); Grid.SetColumn(pick,2); panel.Children.Add(pick); AddFull(panel,39); return label;
+    }
+    private void UpdateDirectionLabels()
+    {
+        var parts=Regex.Split(_number.Text.Trim(),@"\s*/\s*"); _aLabel.Text=parts.Length>0&&!string.IsNullOrWhiteSpace(parts[0])?parts[0]+" 物理端":"方向A物理端"; _bLabel.Text=parts.Length>1&&!string.IsNullOrWhiteSpace(parts[1])?parts[1]+" 物理端":"方向B物理端";
+    }
+    private static void AddCustom(StackPanel panel,string title,Endpoint endpoint)
+    {
+        panel.Children.Add(new TextBlock { Text=title,Margin=new Thickness(0,4,0,2),FontWeight=FontWeights.SemiBold });
+        panel.Children.Add(endpoint.CustomThr); var thrPanel=new StackPanel { Orientation=System.Windows.Controls.Orientation.Horizontal,Children={endpoint.ThrLatitude,endpoint.ThrLongitude,endpoint.ThrElevation} }; panel.Children.Add(thrPanel);
+        panel.Children.Add(endpoint.CustomDer); var derPanel=new StackPanel { Orientation=System.Windows.Controls.Orientation.Horizontal,Children={endpoint.DerLatitude,endpoint.DerLongitude,endpoint.DerElevation} }; panel.Children.Add(derPanel);
+        void Update(){thrPanel.Visibility=endpoint.CustomThr.IsChecked==true?Visibility.Visible:Visibility.Collapsed;derPanel.Visibility=endpoint.CustomDer.IsChecked==true?Visibility.Visible:Visibility.Collapsed;}
+        endpoint.CustomThr.Checked+=(_,_)=>Update();endpoint.CustomThr.Unchecked+=(_,_)=>Update();endpoint.CustomDer.Checked+=(_,_)=>Update();endpoint.CustomDer.Unchecked+=(_,_)=>Update();Update();
+    }
+    private void AddFull(FrameworkElement control,double height){var row=Fields.RowDefinitions.Count;Fields.RowDefinitions.Add(new RowDefinition{Height=new GridLength(height)});Grid.SetRow(control,row);Grid.SetColumnSpan(control,2);Fields.Children.Add(control);}
+    private static GeoPosition Position(Endpoint endpoint,bool draft)=>new() { Latitude=Angle(endpoint.Latitude,true,draft),Longitude=Angle(endpoint.Longitude,false,draft),Elevation=double.IsNaN(Number(endpoint.Elevation,draft))?null:Number(endpoint.Elevation,draft) };
+    private GeoPosition ReadPosition(TextBox lat,TextBox lon,TextBox elev,bool draft)=>new() { Latitude=Angle(lat,true,draft),Longitude=Angle(lon,false,draft),Elevation=double.IsNaN(Number(elev,draft))?null:Number(elev,draft) };
     private RunwayData Read(bool draft)
     {
-        var value=new RunwayData { DataId=Value.DataId,Ident=_ident.Text.Trim(),Width=Number(_width,draft),EndA=new() { Designator=_aDesignator.Text.Trim(),PhysicalEnd=Position(0,draft)??new(),Threshold=Position(1,draft)!,DepartureEnd=Position(2,draft)! },EndB=new() { Designator=_bDesignator.Text.Trim(),PhysicalEnd=Position(3,draft)??new(),Threshold=Position(4,draft)!,DepartureEnd=Position(5,draft)! } };
-        if(string.IsNullOrWhiteSpace(value.Ident)) value.Ident=value.EndA.Designator+"/"+value.EndB.Designator; RunwayDefaults.Resolve(value); return value;
+        var parts=Regex.Split(_number.Text.Trim(),@"\s*/\s*"); if(parts.Length!=2||string.IsNullOrWhiteSpace(parts[0])||string.IsNullOrWhiteSpace(parts[1])) throw new InvalidDataException("跑道编号须填写两个相反方向，例如16R/34L。");
+        var value=new RunwayData { DataId=Value.DataId,Ident=parts[0]+"/"+parts[1],Width=Number(_width,draft),EndA=new() { Designator=parts[0],PhysicalEnd=Position(_a,draft),Threshold=_a.CustomThr.IsChecked==true?ReadPosition(_a.ThrLatitude,_a.ThrLongitude,_a.ThrElevation,draft):null!,DepartureEnd=_a.CustomDer.IsChecked==true?ReadPosition(_a.DerLatitude,_a.DerLongitude,_a.DerElevation,draft):null! },EndB=new() { Designator=parts[1],PhysicalEnd=Position(_b,draft),Threshold=_b.CustomThr.IsChecked==true?ReadPosition(_b.ThrLatitude,_b.ThrLongitude,_b.ThrElevation,draft):null!,DepartureEnd=_b.CustomDer.IsChecked==true?ReadPosition(_b.DerLatitude,_b.DerLongitude,_b.DerElevation,draft):null! } };
+        RunwayDefaults.Resolve(value); return value;
     }
-    protected override void Accept() { var value=Read(false); ProjectValidation.Runway(value); Value=value; Accepted(); }
-    protected override void Pick() { Value=Read(true); Picked(); }
+    protected override void Accept(){var value=Read(false);ProjectValidation.Runway(value);Value=value;Accepted();}
+    protected override void Pick(){Value=Read(true);Picked();}
     public static void SetPosition(RunwayData value,int index,GeoPosition position)
     {
-        var end=index<3?value.EndA:value.EndB; switch(index%3) { case 0: var other=index<3?value.EndB:value.EndA; if(RunwayDefaults.Same(end.Threshold,end.PhysicalEnd)) end.Threshold=RunwayDefaults.Copy(position); if(RunwayDefaults.Same(other.DepartureEnd,end.PhysicalEnd)) other.DepartureEnd=RunwayDefaults.Copy(position); end.PhysicalEnd=position; break; case 1:end.Threshold=position;break; case 2:end.DepartureEnd=position;break; }
+        var end=index==0?value.EndA:value.EndB; var other=index==0?value.EndB:value.EndA;
+        if(RunwayDefaults.Same(end.Threshold,end.PhysicalEnd)) end.Threshold=RunwayDefaults.Copy(position);
+        if(RunwayDefaults.Same(other.DepartureEnd,end.PhysicalEnd)) other.DepartureEnd=RunwayDefaults.Copy(position);
+        end.PhysicalEnd=position;
     }
 }

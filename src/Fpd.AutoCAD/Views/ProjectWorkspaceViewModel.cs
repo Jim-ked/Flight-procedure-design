@@ -21,7 +21,7 @@ internal sealed record ProjectRow(string DataId,string Name,double? Latitude=nul
         FixData f=>new(f.DataId,f.Ident,f.Latitude,f.Longitude),
         ObstacleData o=>new(o.DataId,o.Ident,o.Latitude,o.Longitude,o.TopElevation,o.GroundElevation),
         RunwayData r=>new(r.DataId,r.EndA.Designator+" / "+r.EndB.Designator,Width:r.Width),
-        NavaidData n=>new(n.DataId,n.Ident,n.Position.Latitude,n.Position.Longitude,Kind:n.Kind.ToString()),
+        NavaidData n=>new(n.DataId,n.Ident,n.Position.Latitude,n.Position.Longitude,Kind:NavaidKindCatalog.Display(n.Kind)),
         _=>throw new ArgumentException("未知资料类别。")
     };
 }

@@ -22,9 +22,9 @@ public static class NavaidCsv
     private static readonly string[] Columns = ["Ident","Kind","Latitude","Longitude"];
     public static IReadOnlyList<NavaidData> ParseText(string text,IEnumerable<string>? existing=null) => PointCsv.Read(text,Columns,4,existing,v=>
     {
-        if(!Enum.TryParse<NavaidKind>(v[1],true,out var kind) || !Enum.IsDefined(kind)) throw new FormatException("类型须为VOR/DME/NDB/ILS。");
+        if(!NavaidKindCatalog.TryParseCode(v[1],out var kind)) throw new FormatException("类型代码无效。");
         var n=new NavaidData { Ident=v[0],Kind=kind,Position=new() { Latitude=PointCsv.Number(v[2]),Longitude=PointCsv.Number(v[3]) } };
         ProjectValidation.Navaid(n); return n;
     });
-    public static string Export(IEnumerable<NavaidData> rows) => PointCsv.Write(Columns,rows.Select(n=>new[] { n.Ident,n.Kind.ToString(),PointCsv.Format(n.Position.Latitude),PointCsv.Format(n.Position.Longitude) }),",");
+    public static string Export(IEnumerable<NavaidData> rows) => PointCsv.Write(Columns,rows.Select(n=>new[] { n.Ident,NavaidKindCatalog.Code(n.Kind),PointCsv.Format(n.Position.Latitude),PointCsv.Format(n.Position.Longitude) }),",");
 }

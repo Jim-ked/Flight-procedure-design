@@ -24,7 +24,33 @@ public sealed class RunwayData
     public RunwayEndData EndB { get; set; } = new();
 }
 
-public enum NavaidKind { VOR, DME, NDB, ILS }
+// Numeric values 0-3 are frozen for existing JSON files. New values append only.
+public enum NavaidKind { VOR=0, DME=1, NDB=2, ILS=3, VOR_DME=4, LOC=5, GP=6, MB=7, GBAS=8 }
+public static class NavaidKindCatalog
+{
+    public static readonly NavaidKind[] Choices=[NavaidKind.VOR,NavaidKind.DME,NavaidKind.VOR_DME,NavaidKind.NDB,NavaidKind.LOC,NavaidKind.GP,NavaidKind.MB,NavaidKind.GBAS,NavaidKind.ILS];
+    public static string Code(NavaidKind kind)=>kind.ToString();
+    public static string Display(NavaidKind kind)=>kind switch
+    {
+        NavaidKind.VOR=>"VOR",
+        NavaidKind.DME=>"DME",
+        NavaidKind.VOR_DME=>"VOR/DME",
+        NavaidKind.NDB=>"NDB",
+        NavaidKind.LOC=>"LOC 航向台",
+        NavaidKind.GP=>"GP 下滑台",
+        NavaidKind.MB=>"MB 指点标",
+        NavaidKind.GBAS=>"GBAS",
+        NavaidKind.ILS=>"ILS 系统（兼容）",
+        _=>kind.ToString()
+    };
+    public static bool TryParseCode(string value,out NavaidKind kind)
+    {
+        if(string.Equals(value,"VOR/DME",StringComparison.OrdinalIgnoreCase)) value="VOR_DME";
+        if(Enum.TryParse(value,true,out kind) && Enum.IsDefined(kind)) return true;
+        return false;
+    }
+    public static NavaidKind FromDisplay(string value)=>Choices.First(kind=>Display(kind).Equals(value,StringComparison.OrdinalIgnoreCase));
+}
 public sealed class NavaidData
 {
     public string DataId { get; set; } = "";
