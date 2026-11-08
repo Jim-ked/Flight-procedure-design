@@ -16,30 +16,24 @@ internal static partial class CadDrawing
     }
     private sealed record ProgramMark(string Project,string Procedure,string? Path,string Key,string Data,string Geometry);
     private const string ProgramTag="FPD_PROGRAM_V1";
+    private static ProgramMark? ReadProgramMark(Entity entity,Transaction tr)
+    {
+        if(entity.ExtensionDictionary.IsNull) return null;
+        var dictionary=(DBDictionary)tr.GetObject(entity.ExtensionDictionary,OpenMode.ForRead);
+        if(!dictionary.Contains(ProgramTag)) return null;
+        using var data=((Xrecord)tr.GetObject(dictionary.GetAt(ProgramTag),OpenMode.ForRead)).Data;
+        try { return JsonSerializer.Deserialize<ProgramMark>((string)data.AsArray()[0].Value); }
+        catch(JsonException) { return null; }
+    }
     public static void HighlightPoint(ProjectData project,ProcedureData? procedure,ProcedurePath? path,FixData fix,bool zoom)
     {
+        if(procedure is null) { HighlightBasePoint(project,"Fix",fix.DataId,zoom); return; }
         var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请先打开 DWG。");
         if(!DwgProjects.IsCurrent(project)) throw new InvalidOperationException("当前DWG与项目会话不一致。");
-        using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction();
-        var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForRead);
-        var ids=new List<ObjectId>();
-        foreach(ObjectId id in model)
-        {
-            var e=(Entity)tr.GetObject(id,OpenMode.ForRead); if(e.ExtensionDictionary.IsNull) continue;
-            var d=(DBDictionary)tr.GetObject(e.ExtensionDictionary,OpenMode.ForRead);
-            if(!d.Contains(ProgramTag)) continue;
-            using var data=((Xrecord)tr.GetObject(d.GetAt(ProgramTag),OpenMode.ForRead)).Data;
-            ProgramMark? mark; try { mark=JsonSerializer.Deserialize<ProgramMark>((string)data.AsArray()[0].Value); } catch { continue; }
-            if(mark is not null && mark.Project==project.ProjectId && mark.Procedure==procedure?.ProcedureId && mark.Path==path?.PathId && mark.Key.StartsWith(fix.DataId+"/",StringComparison.OrdinalIgnoreCase)) ids.Add(id);
-        }
-        if(ids.Count==0)
-        {
-            foreach(ObjectId id in model)
-            {
-                var e=(Entity)tr.GetObject(id,OpenMode.ForRead); var mark=ReadBaseMark(e,tr);
-                if(mark is { Archived:false } && mark.Project==project.ProjectId && mark.Kind=="Fix" && mark.Key==fix.DataId) ids.Add(id);
-            }
-        }
+        using var tr=doc.Database.TransactionManager.StartTransaction();
+        TrackProjectEntities(doc);
+        var ids=BaseEntityIndices[doc].Find(project.ProjectId,"Program",procedure.ProcedureId+"\0"+path?.PathId+"\0"+fix.DataId,tr).ToList();
+        if(ids.Count==0) ids.AddRange(BaseEntityIds(doc,project.ProjectId,"Fix",fix.DataId,tr));
         tr.Commit();
         doc.Editor.SetImpliedSelection(ids.ToArray());
         if(ids.Count==0) { doc.Editor.WriteMessage("\n当前定位点尚未生成可联动的CAD图形。"); return; }
@@ -57,9 +51,23 @@ internal static partial class CadDrawing
     {
         var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请先打开 DWG。");
         if(!DwgProjects.IsCurrent(project)) throw new InvalidOperationException("当前DWG与项目会话不一致。");
-        using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction(); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForRead); var ids=new List<ObjectId>();
-        foreach(ObjectId id in model) { var e=(Entity)tr.GetObject(id,OpenMode.ForRead); var mark=ReadBaseMark(e,tr); if(mark is { Archived:false } && mark.Project==project.ProjectId && mark.Kind==kind && mark.Key==key) ids.Add(id); }
-        tr.Commit(); doc.Editor.SetImpliedSelection(ids.ToArray()); if(ids.Count==0) { doc.Editor.WriteMessage("\n当前对象尚未生成可联动的CAD图形。"); return; } if(zoom) ZoomEntities(doc,ids); doc.Editor.UpdateScreen();
+        var watch=System.Diagnostics.Stopwatch.StartNew();
+        ObjectId[] ids;
+        using(var tr=doc.Database.TransactionManager.StartTransaction())
+        {
+            ids=BaseEntityIds(doc,project.ProjectId,kind,key,tr);
+            tr.Commit();
+        }
+        // Read-only selection must not create an undo marker or acquire a write lock.
+        doc.Editor.SetImpliedSelection(ids);
+        doc.Editor.UpdateScreen();
+        System.Diagnostics.Trace.WriteLine($"FPD selection lookup+highlight {watch.Elapsed.TotalMilliseconds:F3} ms");
+        if(ids.Length==0) { if(zoom) doc.Editor.WriteMessage("\n当前对象尚未生成可联动的CAD图形。"); return; }
+        if(zoom)
+        {
+            watch.Restart(); ZoomEntities(doc,ids);
+            System.Diagnostics.Trace.WriteLine($"FPD selection zoom {watch.Elapsed.TotalMilliseconds:F3} ms");
+        }
     }
     public static void RemoveProcedurePath(ProjectData project,string procedureId,string pathId)
     {

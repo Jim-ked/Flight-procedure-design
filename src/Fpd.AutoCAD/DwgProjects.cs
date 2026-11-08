@@ -38,6 +38,7 @@ internal static class DwgProjects
     private static void Attach(Document doc)
     {
         if(States.ContainsKey(doc)) return;
+        CadDrawing.TrackProjectEntities(doc);
         var state=new State { DatabasePointer=doc.Database.UnmanagedObject }; States.Add(doc,state);
         try
         {
@@ -61,12 +62,13 @@ internal static class DwgProjects
         doc.CommandEnded+=CommandEnded;
     }
     private static string? SavedPath(Document doc) => Path.IsPathFullyQualified(doc.Name) && File.Exists(doc.Name) ? ProjectStore.AuxiliaryPath(doc.Name) : null;
-    public static void Activate()
+    public static void Activate()=>BindCurrentProject(true);
+    private static void BindCurrentProject(bool applyPageLayers)
     {
         var doc=AcadApp.DocumentManager.MdiActiveDocument;
         if(doc is null) { Panel?.BindProject(ProjectStore.Create("无当前DWG",new AirportData()),false,false); return; }
         Attach(doc); var state=States[doc];
-        Panel?.BindProject(state.Project,state.Initialized,state.Error?.StartsWith("读取项目失败")!=true,state.Dirty);
+        Panel?.BindProject(state.Project,state.Initialized,state.Error?.StartsWith("读取项目失败")!=true,state.Dirty,applyPageLayers);
         if(state.Error is not null) Panel?.SetStatus(state.Error);
         else if(!state.Initialized) Panel?.SetStatus("就绪");
     }
@@ -87,6 +89,49 @@ internal static class DwgProjects
         var json=ProjectStore.Serialize(project);
         WriteSnapshot(doc,json); state.Snapshot=json; state.Error=null; state.Dirty=true;
     }
+    public static void DeleteBaseData(ProjectData project,string kind,IReadOnlySet<string> keys)
+    {
+        if(!IsCurrent(project)) throw new InvalidOperationException("DWG已切换，请重新操作。");
+        if(keys.Count==0) throw new InvalidOperationException("未选择数据。");
+        var doc=AcadApp.DocumentManager.MdiActiveDocument!; var state=States[doc];
+        if(!state.Initialized) throw new InvalidOperationException("请先创建项目。");
+        // Stage the business edit without changing the live project. Publish it only
+        // after geometry, per-record history and the DWG snapshot commit together.
+        var draft=ProjectStore.Deserialize(ProjectStore.Serialize(project));
+        var available=kind switch
+        {
+            "Fix"=>draft.Fixes.Select(x=>x.DataId),"Obstacle"=>draft.Obstacles.Select(x=>x.DataId),
+            "Runway"=>draft.Runways.Select(x=>x.DataId),"Navaid"=>draft.Navaids.Select(x=>x.DataId),
+            _=>throw new ArgumentException("未知资料类别。",nameof(kind))
+        };
+        if(!keys.IsSubsetOf(available.ToHashSet(StringComparer.OrdinalIgnoreCase))) throw new InvalidOperationException("资料已变化，请重新选择。");
+        switch(kind)
+        {
+            case "Fix": ProjectEdits.DeleteFixes(draft,draft.Fixes.Where(x=>keys.Contains(x.DataId)).Select(x=>x.Ident).ToArray()); break;
+            case "Obstacle": draft.Obstacles.RemoveAll(x=>keys.Contains(x.DataId)); break;
+            case "Runway": draft.Runways.RemoveAll(x=>keys.Contains(x.DataId)); break;
+            case "Navaid": draft.Navaids.RemoveAll(x=>keys.Contains(x.DataId)); break;
+        }
+        var json=ProjectStore.Serialize(draft);
+        using(var locked=doc.LockDocument())
+        using(var tr=doc.Database.TransactionManager.StartTransaction())
+        {
+            CadDrawing.DeleteBaseRecords(project,kind,keys,tr,doc.Database);
+            WriteSnapshot(doc.Database,tr,json);
+            tr.Commit();
+        }
+        switch(kind)
+        {
+            case "Fix": project.Fixes=draft.Fixes; project.Procedures=draft.Procedures; break;
+            case "Obstacle": project.Obstacles=draft.Obstacles; break;
+            case "Runway": project.Runways=draft.Runways; break;
+            case "Navaid": project.Navaids=draft.Navaids; break;
+        }
+        state.Snapshot=json; state.Error=null; state.Dirty=true;
+        // Rebind the panel without touching layers; a layer write here would add
+        // a second native undo item after the deletion transaction.
+        BindCurrentProject(false); doc.Editor.Regen();
+    }
     private static string? ReadSnapshot(Database db)
     {
         using var tr=db.TransactionManager.StartTransaction();
@@ -99,13 +144,17 @@ internal static class DwgProjects
     private static void WriteSnapshot(Document doc,string json)
     {
         using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction();
-        var dictionary=(DBDictionary)tr.GetObject(doc.Database.NamedObjectsDictionaryId,OpenMode.ForWrite);
+        WriteSnapshot(doc.Database,tr,json); tr.Commit();
+    }
+    private static void WriteSnapshot(Database db,Transaction tr,string json)
+    {
+        var dictionary=(DBDictionary)tr.GetObject(db.NamedObjectsDictionaryId,OpenMode.ForWrite);
         Xrecord record;
         if(dictionary.Contains(SnapshotKey)) record=(Xrecord)tr.GetObject(dictionary.GetAt(SnapshotKey),OpenMode.ForWrite);
         else { record=new Xrecord(); dictionary.SetAt(SnapshotKey,record); tr.AddNewlyCreatedDBObject(record,true); }
         var bytes=Encoding.UTF8.GetBytes(json);
         using var buffer=new ResultBuffer(bytes.Chunk(127).Select(chunk=>new TypedValue((int)DxfCode.BinaryChunk,chunk)).ToArray());
-        record.Data=buffer; tr.Commit();
+        record.Data=buffer;
     }
     // Native event senders can be fresh managed wrappers around the same database.
     private static KeyValuePair<Document,State> Find(object? sender) => sender is Database db
@@ -141,11 +190,15 @@ internal static class DwgProjects
     {
         if(sender is not Document doc || !States.TryGetValue(doc,out var state)) return;
         if(e.GlobalCommandName.ToUpperInvariant() is not ("U" or "UNDO" or "REDO" or "MREDO")) return;
+        CadDrawing.InvalidateProjectEntities(doc);
         var json=ReadSnapshot(doc.Database);
         if(json==state.Snapshot) return;
         state.Snapshot=json; state.Initialized=json is not null; state.Dirty=true;
         state.Project=json is null?ProjectStore.Create("未创建项目",new AirportData()):ProjectStore.Deserialize(json);
-        if(doc==AcadApp.DocumentManager.MdiActiveDocument) Activate();
+        // Undo/Redo already restored the CAD state. Reapplying page layers here
+        // obtains a write lock and destroys the native redo chain, even if no
+        // layer value ultimately changes.
+        if(doc==AcadApp.DocumentManager.MdiActiveDocument) BindCurrentProject(false);
     }
     private static void Closed(object sender,DocumentDestroyedEventArgs e) => Activate();
     private static void Closing(object sender,DocumentCollectionEventArgs e)
@@ -154,6 +207,8 @@ internal static class DwgProjects
     }
     private static void Detach(Document doc)
     {
+        CadDrawing.ForgetProjectEntities(doc);
+        FpdPalette.CancelProjectHighlights(doc);
         doc.Database.BeginSave-=BeginSave; doc.Database.SaveComplete-=Saved; doc.Database.AbortSave-=SaveAborted; doc.CommandEnded-=CommandEnded;
     }
     public static void Stop()

@@ -24,6 +24,7 @@ public partial class ProjectWorkspaceView : System.Windows.Controls.UserControl
     private string? _activeSearchText;
     private ICollectionView? _activeRowsView;
     internal event Action? DataActivated;
+    internal event Action? DataSelectionChanged;
 
     internal ProjectWorkspaceView(ProjectWorkspaceViewModel model)
     {
@@ -138,7 +139,10 @@ public partial class ProjectWorkspaceView : System.Windows.Controls.UserControl
     }
     private void ProjectDataGrid_SelectionChanged(object sender,System.Windows.Controls.SelectionChangedEventArgs e)
     {
-        if(!_restoring) UpdateSelection();
+        if(_restoring) return;
+        var watch=System.Diagnostics.Stopwatch.StartNew();
+        UpdateSelection(); DataSelectionChanged?.Invoke();
+        System.Diagnostics.Trace.WriteLine($"FPD WPF selection {watch.Elapsed.TotalMilliseconds:F3} ms");
     }
     private void UpdateSelection()=>_model.SetSelection(ProjectDataGrid.SelectedItems.Cast<ProjectRow>().Select(row=>row.DataId));
     private void ProjectDataGrid_MouseDoubleClick(object sender,MouseButtonEventArgs e)

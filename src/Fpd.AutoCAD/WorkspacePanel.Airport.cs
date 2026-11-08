@@ -46,13 +46,6 @@ public sealed partial class WorkspacePanel
         if(previous is null) _project.Navaids.Add(dialog.Value); else _project.Navaids[_project.Navaids.IndexOf(previous)]=dialog.Value;
         BaseDataChanged("Navaid",[dialog.Value]); RefreshData();
     }
-    private void DeleteAirportData()
-    {
-        if(SelectedDataIds.Count==0) throw new InvalidOperationException("请选择数据行。");
-        if(MessageBox.Show(this,"删除所选基础资料？CAD图形保留；程序原跑道文本保留。","删除资料",MessageBoxButtons.OKCancel)!=DialogResult.OK) return;
-        if(IsRunway) { var selected=SelectedBasics<RunwayData>(); _project.Runways.RemoveAll(selected.Contains); } else { var selected=SelectedBasics<NavaidData>(); _project.Navaids.RemoveAll(selected.Contains); }
-        Changed(); RefreshData(); RefreshProcedures();
-    }
     private void AddAirportText(string text)
     {
         IReadOnlyList<object> changed;

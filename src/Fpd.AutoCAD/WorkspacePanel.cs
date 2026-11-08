@@ -51,14 +51,15 @@ public sealed partial class WorkspacePanel : UserControl
         RefreshSummary(); RefreshData(); RefreshProcedures(); RefreshToolChoices();
         SetStatus("就绪");
     }
-    internal void BindProject(ProjectData project,bool initialized,bool editable,bool dirty=false)
+    internal void BindProject(ProjectData project,bool initialized,bool editable,bool dirty=false,bool applyPageLayers=true)
     {
+        ++_projectSelectionVersion;
         var changedProject=!ReferenceEquals(_project,project);
         _project=project; _initialized=initialized; _editable=editable; _dirty=dirty;
         _refreshing=true;
         try { _projectView.BindProject(project,initialized,editable,changedProject); RefreshProcedures(); RefreshToolChoices(); ResetCoordinates(); SetStatus("就绪"); }
         finally { _refreshing=false; }
-        ApplyPageLayers();
+        if(applyPageLayers) ApplyPageLayers();
     }
     internal void SavedProject(string path) { _dirty=false; RefreshSummary(); SetStatus("DWG及项目资料已保存："+Path.GetFileName(path)); }
     private void RequireProject()

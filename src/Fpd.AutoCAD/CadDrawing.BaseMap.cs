@@ -29,6 +29,102 @@ internal static partial class CadDrawing
         if(dictionary.Contains(name)) return;
         var record=new Xrecord(); dictionary.SetAt(name,record); tr.AddNewlyCreatedDBObject(record,true);
     }
+    private sealed class BaseEntityIndex : IDisposable
+    {
+        private readonly Database _db;
+        private readonly Dictionary<string,List<ObjectId>> _identities=new(StringComparer.OrdinalIgnoreCase);
+        public bool Dirty=true;
+        public BaseEntityIndex(Database db)
+        {
+            _db=db;
+            db.ObjectAppended+=Changed; db.ObjectModified+=Changed; db.ObjectErased+=Erased;
+            db.ObjectUnappended+=Changed; db.ObjectReappended+=Changed;
+        }
+        private void Erased(object sender,ObjectErasedEventArgs e) => Dirty=true;
+        private void Changed(object sender,ObjectEventArgs e)
+        {
+            // Defer DB reads until the next host-command lookup, after commit/abort.
+            if(e.DBObject is Entity or Xrecord or DBDictionary) Dirty=true;
+        }
+        private static string Identity(string project,string kind,string key)=>project+"\0"+kind+"\0"+key;
+        public ObjectId[] Find(string project,string kind,string key,Transaction tr)
+        {
+            if(Dirty)
+            {
+                _identities.Clear();
+                var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(_db),OpenMode.ForRead);
+                foreach(ObjectId id in model)
+                {
+                    var entity=(Entity)tr.GetObject(id,OpenMode.ForRead);
+                    var mark=ReadBaseMark(entity,tr);
+                    string? identity=null;
+                    if(mark is { Archived:false }) identity=Identity(mark.Project,mark.Kind,mark.Key);
+                    else if(ReadProgramMark(entity,tr) is { } program && program.Key.IndexOf('/') is var separator && separator>0)
+                        identity=Identity(program.Project,"Program",program.Procedure+"\0"+program.Path+"\0"+program.Key[..separator]);
+                    if(identity is null) continue;
+                    if(!_identities.TryGetValue(identity,out var list)) _identities[identity]=list=[];
+                    list.Add(id);
+                }
+                Dirty=false;
+            }
+            if(!_identities.TryGetValue(Identity(project,kind,key),out var found)) return [];
+            var valid=found.Where(id=>id.IsValid && !id.IsErased).ToArray();
+            if(valid.Length!=found.Count) Dirty=true;
+            return valid;
+        }
+        public void Dispose()
+        {
+            _db.ObjectAppended-=Changed; _db.ObjectModified-=Changed; _db.ObjectErased-=Erased;
+            _db.ObjectUnappended-=Changed; _db.ObjectReappended-=Changed;
+        }
+    }
+    private static readonly Dictionary<Autodesk.AutoCAD.ApplicationServices.Document,BaseEntityIndex> BaseEntityIndices=[];
+    internal static void TrackProjectEntities(Autodesk.AutoCAD.ApplicationServices.Document doc)
+    {
+        if(!BaseEntityIndices.ContainsKey(doc)) BaseEntityIndices[doc]=new(doc.Database);
+    }
+    internal static void InvalidateProjectEntities(Autodesk.AutoCAD.ApplicationServices.Document doc)
+    {
+        if(BaseEntityIndices.TryGetValue(doc,out var index)) index.Dirty=true;
+    }
+    internal static void ForgetProjectEntities(Autodesk.AutoCAD.ApplicationServices.Document doc)
+    {
+        if(BaseEntityIndices.Remove(doc,out var index)) index.Dispose();
+    }
+    private static ObjectId[] BaseEntityIds(Autodesk.AutoCAD.ApplicationServices.Document doc,string project,string kind,string key,Transaction tr)
+    {
+        TrackProjectEntities(doc);
+        return BaseEntityIndices[doc].Find(project,kind,key,tr);
+    }
+    // Called only by the formal project-delete command, in the snapshot transaction.
+    // Missing members may have been erased in CAD; surviving members still need
+    // independent geometry checks. A moved label blocks the entire delete batch.
+    internal static void DeleteBaseRecords(ProjectData project,string kind,IReadOnlySet<string> keys,Transaction tr,Database db)
+    {
+        var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(db),OpenMode.ForRead);
+        var matches=new List<(Entity Entity,BaseMark Mark)>();
+        foreach(ObjectId id in model)
+        {
+            var entity=(Entity)tr.GetObject(id,OpenMode.ForRead);
+            var mark=ReadBaseMark(entity,tr);
+            if(mark is not null && mark.Project==project.ProjectId && mark.Kind==kind && keys.Contains(mark.Key)) matches.Add((entity,mark));
+        }
+        var geometryCache=new Dictionary<ObjectId,string>();
+        var conflicts=matches.GroupBy(x=>x.Mark.Key).Where(group=>
+            group.Select(x=>x.Mark.Group).Distinct().Count()!=1 ||
+            group.Any(x=>x.Mark.Archived || x.Mark.Count<group.Count() ||
+                !GeometryUnchanged(x.Entity,x.Mark.Geometry,tr,geometryCache))).Select(g=>g.First().Mark.Ident).ToArray();
+        if(conflicts.Length>0) throw new InvalidOperationException("图形已由人工修改，未删除资料："+string.Join("、",conflicts));
+        foreach(var match in matches) { match.Entity.UpgradeOpen(); match.Entity.Erase(); }
+        var dictionary=(DBDictionary)tr.GetObject(db.NamedObjectsDictionaryId,OpenMode.ForWrite);
+        foreach(var key in keys)
+        {
+            var name=HistoryKey(project,kind,key);
+            if(!dictionary.Contains(name)) continue;
+            var record=tr.GetObject(dictionary.GetAt(name),OpenMode.ForWrite);
+            dictionary.Remove(name); record.Erase();
+        }
+    }
     private static string GeometryStamp(Entity entity,Transaction tr,IDictionary<ObjectId,string>? definitionCache=null)
     {
         // Only our small set of native base-map entities is eligible for automatic updates.

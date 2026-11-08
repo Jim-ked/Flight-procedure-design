@@ -12,6 +12,8 @@ public sealed partial class WorkspacePanel
 {
     private ProjectWorkspaceViewModel _projectViewModel=null!;
     private ProjectWorkspaceView _projectView=null!;
+    private long _projectSelectionVersion;
+    internal event Action<Action>? ProjectHighlightRequested;
     private ProjectDataCategory SelectedCategory=>_projectViewModel.SelectedCategory.Kind;
     private IReadOnlySet<string> SelectedDataIds=>_projectViewModel.SelectedDataIds;
     private bool IsObstacle=>SelectedCategory==ProjectDataCategory.Obstacle;
@@ -22,6 +24,7 @@ public sealed partial class WorkspacePanel
         var page=Page("项目"); page.Padding=Padding.Empty;
         _projectViewModel=new ProjectWorkspaceViewModel(action=>Run(()=>ProjectAction(action)));
         _projectView=new ProjectWorkspaceView(_projectViewModel);
+        _projectView.DataSelectionChanged+=()=>Run(()=>HighlightSelectedProjectData(false));
         _projectView.DataActivated+=()=>Run(()=> { if(IsAirportData) EditPoint(true); else HighlightSelectedProjectData(true); });
         page.Controls.Add(new ElementHost { Dock=DockStyle.Fill,Child=_projectView });
         _projectView.BindProject(_project,_initialized,_editable,true);
@@ -56,12 +59,18 @@ public sealed partial class WorkspacePanel
     private List<ObstacleData> SelectedObstacles()=>_project.Obstacles.Where(value=>SelectedDataIds.Contains(value.DataId)).ToList();
     private void HighlightSelectedProjectData(bool zoom)
     {
-        if(SelectedDataIds.Count!=1 || !DwgProjects.IsCurrent(_project)) return;
-        var project=_project;
-        if(SelectedCategory==ProjectDataCategory.Fix && SelectedFixes().SingleOrDefault() is { } fix)
-            CadOperation(()=>CadDrawing.HighlightPoint(project,null,null,fix,zoom));
-        else if(IsObstacle && SelectedObstacles().SingleOrDefault() is { } obstacle)
-            CadOperation(()=>CadDrawing.HighlightBasePoint(project,"Obstacle",obstacle.DataId,zoom));
+        var version=++_projectSelectionVersion;
+        if(!_initialized || !DwgProjects.IsCurrent(_project) || _tabs.SelectedIndex!=0) return;
+        var project=_project; var category=SelectedCategory;
+        var key=SelectedDataIds.Count==1?SelectedDataIds.Single():null;
+        ProjectHighlightRequested?.Invoke(()=>
+        {
+            if(version!=_projectSelectionVersion || !ReferenceEquals(project,_project) ||
+                !DwgProjects.IsCurrent(project) || SelectedCategory!=category || _tabs.SelectedIndex!=0 ||
+                (key is not null && (SelectedDataIds.Count!=1 || !SelectedDataIds.Contains(key)))) return;
+            if(key is null) Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument?.Editor.SetImpliedSelection([]);
+            else CadDrawing.HighlightBasePoint(project,category.ToString(),key,zoom);
+        });
     }
     private void ExportCurrentData() { if(IsAirportData) ExportAirport(IsRunway); else Export(IsObstacle); }
     private void EditPoint(bool edit)
@@ -117,14 +126,20 @@ public sealed partial class WorkspacePanel
     private void DeletePoints()
     {
         RequireProject();
-        if(IsAirportData) { DeleteAirportData(); return; }
         var count=SelectedDataIds.Count; if(count==0) throw new InvalidOperationException("未选择数据。");
         var ids=SelectedFixes().Select(f=>f.Ident).ToHashSet(StringComparer.OrdinalIgnoreCase);
         var referenced=!IsObstacle && _project.Procedures.Any(p=>p.Paths.Any(path=>path.Fixes.Any(f=>ids.Contains(f.FixIdent))) || p.FixIdents.Any(ids.Contains) || p.Sections.Any(s=>s.FixIdents.Any(ids.Contains)));
         var prompt=referenced?"删除所选数据并移除程序引用？":"删除所选数据？";
         if(MessageBox.Show(this,prompt,"删除",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)!=DialogResult.OK) return;
-        if(IsObstacle) { var selected=SelectedObstacles(); _project.Obstacles.RemoveAll(selected.Contains); } else ProjectEdits.DeleteFixes(_project,ids);
-        Changed(); RefreshData(); RefreshProcedures(); RefreshToolChoices();
+        DeleteSelectedProjectData();
+    }
+
+    private void DeleteSelectedProjectData()
+    {
+        var project=_project;
+        var kind=SelectedCategory.ToString();
+        var keys=SelectedDataIds.ToHashSet(StringComparer.OrdinalIgnoreCase);
+        CadOperation(()=> { DwgProjects.DeleteBaseData(project,kind,keys); SetStatus("已删除所选数据"); });
     }
 
     private void ImportPoints()
