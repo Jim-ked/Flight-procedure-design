@@ -36,7 +36,6 @@ public sealed partial class WorkspacePanel
         {
             case ProjectUiAction.Create: CreateProjectFromSetup(); break;
             case ProjectUiAction.EditProject: EditAirport(); break;
-            case ProjectUiAction.ConvertCoordinates: OpenCoordinateTool(); break;
             case ProjectUiAction.Add: EditPoint(false); break;
             case ProjectUiAction.Edit: EditPoint(true); break;
             case ProjectUiAction.Delete: DeletePoints(); break;
@@ -79,23 +78,6 @@ public sealed partial class WorkspacePanel
         if(IsAirportData) { EditAirportData(edit); return; }
         if(edit && SelectedDataIds.Count!=1) throw new InvalidOperationException("请选择一行数据。");
         if(IsObstacle) EditObstacle(edit?SelectedObstacles().Single():null); else EditFix(edit?SelectedFixes().Single():null);
-    }
-    private void OpenCoordinateTool()=>ShowCoordinateTool(null);
-    private void ShowCoordinateTool(string[]? inputs)
-    {
-        RequireProject(); using var dialog=new CoordinateDialog(_project,inputs);
-        if(dialog.ShowDialog(this)!=DialogResult.Retry) return;
-        var values=dialog.Inputs;
-        CadOperation(()=>
-        {
-            var point=CadDrawing.PickWcsPoint();
-            if(point is { } p)
-            {
-                var geo=Cgcs2000Projection.InverseInZone(p.X,p.Y,AirportGeometry.Meridian(_project),p.Z);
-                values=[DataEditor.Format(geo.Latitude),DataEditor.Format(geo.Longitude),DataEditor.Format(p.X),DataEditor.Format(p.Y),DataEditor.Format(p.Z)];
-            }
-            ShowCoordinateTool(values);
-        });
     }
     private void EditFix(FixData? previous,FixData? draft=null)
     {

@@ -9,7 +9,7 @@ using Fpd.Core;
 namespace Fpd.AutoCAD.Views;
 
 internal enum ProjectDataCategory { Fix, Obstacle, Runway, Navaid }
-internal enum ProjectUiAction { Create, EditProject, ConvertCoordinates, Add, Edit, Delete, Import, Export }
+internal enum ProjectUiAction { Create, EditProject, Add, Edit, Delete, Import, Export }
 internal sealed record ProjectCategory(ProjectDataCategory Kind,string Label);
 
 // Presentation values only; all edits resolve current business objects by DataId in WorkspacePanel.
@@ -50,7 +50,6 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
         VisibleRows=CreateRowsView(_rows);
         CreateProjectCommand=Command(ProjectUiAction.Create,()=>_editable && !_initialized);
         EditProjectCommand=Command(ProjectUiAction.EditProject,Ready);
-        OpenCoordinateConverterCommand=Command(ProjectUiAction.ConvertCoordinates,Ready);
         AddCommand=Command(ProjectUiAction.Add,Ready);
         EditCommand=Command(ProjectUiAction.Edit,()=>Ready() && _selectedDataIds.Count==1);
         DeleteCommand=Command(ProjectUiAction.Delete,()=>Ready() && _selectedDataIds.Count>0);
@@ -100,7 +99,6 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
     }
     public ICommand CreateProjectCommand { get; }
     public ICommand EditProjectCommand { get; }
-    public ICommand OpenCoordinateConverterCommand { get; }
     public ICommand AddCommand { get; }
     public ICommand EditCommand { get; }
     public ICommand DeleteCommand { get; }

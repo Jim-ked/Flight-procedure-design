@@ -1,16 +1,16 @@
-using System.Windows.Forms;
 using Fpd.Core;
+using TextBox=System.Windows.Controls.TextBox;
+using System.Windows;
 namespace Fpd.AutoCAD;
-internal sealed class FixDialog : Form
+internal sealed class FixDialog : ProjectWpfDialog
 {
-    public FixData Value { get; private set; }=new();
-    public FixDialog(FixData? existing=null)
+    private readonly TextBox _ident,_lat,_lon; public FixData Value { get; private set; }=new();
+    public FixDialog(FixData? existing=null) : base("定位点资料",230)
     {
-        var ui=new DataEditor(this,"定位点资料",210);
-        var ident=ui.Field("标识",existing?.Ident??"");
-        var lat=ui.Field("纬度",DataEditor.Format(existing?.Latitude)); var lon=ui.Field("经度",DataEditor.Format(existing?.Longitude));
-        FixData Read(bool draft)=>new() { Ident=ident.Text.Trim(),Latitude=DataEditor.Angle(lat,true,draft),Longitude=DataEditor.Angle(lon,false,draft),Elevation=existing?.Elevation };
-        ui.Buttons(()=> { var value=Read(false); ProjectValidation.Fix(value); Value=value; DialogResult=DialogResult.OK; },
-            ()=> { Value=Read(true); DialogResult=DialogResult.Retry; });
+        _ident=Field("标识",existing?.Ident??""); _lat=Field("纬度",Format(existing?.Latitude)); _lon=Field("经度",Format(existing?.Longitude));
+        Value=existing is null?new FixData():new FixData { DataId=existing.DataId,Ident=existing.Ident,Latitude=existing.Latitude,Longitude=existing.Longitude,Elevation=existing.Elevation };
     }
+    private FixData Read(bool draft)=>new() { DataId=Value.DataId,Ident=_ident.Text.Trim(),Latitude=Angle(_lat,true,draft),Longitude=Angle(_lon,false,draft),Elevation=Value.Elevation };
+    protected override void Accept() { var value=Read(false); ProjectValidation.Fix(value); Value=value; Accepted(); }
+    protected override void Pick() { Value=Read(true); Picked(); }
 }

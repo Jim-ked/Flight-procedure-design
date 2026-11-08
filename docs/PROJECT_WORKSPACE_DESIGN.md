@@ -21,11 +21,11 @@
 
 ## 交互与 CSV
 
-新增、修改、删除、导入、导出复用现有业务方法。资料确认后继续调用同一 CAD 实体同步服务；不提供手动绘制按钮。导出针对当前类别，模板仅放在导入窗口内。删除资料保留 CAD 图形，不静默清理实体。
+新增、修改、删除、导入、导出复用现有业务方法。资料确认后继续调用同一 CAD 实体同步服务；不提供手动绘制按钮。导出针对当前类别，模板仅放在导入窗口内。正式删除同步清理该记录的 CAD 实体和历史，人工修改冲突时保留资料并提示。
 
-CSV 定义由 Core 中四个 Csv 类统一提供：模板调用同一个 Export 空集合；导入严格核对字段顺序和列数。跑道 CSV 物理端必填，THR/DER 三字段整组留空表示默认。导航台没有相对输入。编辑窗口延续手输和 CAD 拾取能力，取消不改坐标。
+CSV 定义由 Core 中四个 Csv 类统一提供：模板调用同一个 Export 空集合；导入严格核对字段顺序和列数。跑道 CSV 物理端必填，THR/DER 三字段整组留空表示默认。导航台没有相对输入。编辑窗口统一使用 WPF 对话框；定位点只有标识、纬度、经度，障碍物增加顶标高和地面基准高程，导航台增加类型，跑道按两个方向填写物理端，THR/DER 默认值按需展开覆盖。所有窗口支持十进制度和度分秒输入；CAD拾点取消保留此前输入。
 
-项目页的坐标转换入口打开现有独立窗口，复用 Cgcs2000Projection 正反算、经纬度和 XYZ、复制及 CAD 拾点。程序、工具、成果页不迁移、不调整其业务布局。
+正算、反算和 CAD拾点统一放在现有“工具”页，复用 ForwardCoordinate、InverseCoordinate 和 PickToolCoordinate。项目页不提供坐标转换按钮或独立坐标窗口；后台项目投影继续使用同一 Core 投影代码。程序、工具、成果页不迁移、不调整其业务布局。
 
 ## 界面布局（WPF，2026-11-08）
 
@@ -43,7 +43,7 @@ CSV 定义由 Core 中四个 Csv 类统一提供：模板调用同一个 Export 
 
 已建项目从上到下只显示：
 
-1. 项目名称 + **编辑**；机场名称 + **坐标转换**；单独完整行显示 ARP。长项目名允许省略但悬停显示全名；项目名与机场名可自然换行并以悬停显示全名；ARP 始终换行，不截断。
+1. 项目名称 + **编辑**；机场名称单独显示；单独完整行显示 ARP。长项目名允许省略但悬停显示全名；项目名与机场名可自然换行并以悬停显示全名；ARP 始终换行，不截断。
 2. **定位点、障碍物、跑道、导航台** 等宽分类标签。
 3. **查找**文本框。
 4. 两行操作：**新增、修改、删除**；**导入、导出**。两行均采用等分列宽，不根据屏幕宽度跳动为“一行五按钮”。
@@ -84,7 +84,7 @@ CSV 定义由 Core 中四个 Csv 类统一提供：模板调用同一个 Export 
 
 已审核布局附件为 `FPD_Project_WPF_UI_Design_Package/FPD_ProjectWorkspaceView_WPF_layout.xaml`，正式控件为 `src/Fpd.AutoCAD/Views/ProjectWorkspaceView.xaml`，该文件是**可解析的控件树结构与绑定命名约束**，不是声称已经可以 `NETLOAD` 的成品源码。其 `DataGrid` 故意不声明固定列，列定义按上述四份字段清单，在分类切换时生成。事件 `ProjectDataGrid_SelectionChanged` / `ProjectDataGrid_MouseDoubleClick` 需要由 Codex 接到现有逻辑。可将文件作为正式 View XAML 的基础，不得机械地再套一层 WinForms `Panel` + WPF `ScrollViewer`。
 
-`IsInitialized`、`ProjectName`、`AirportName`、`ArpDisplay`、`DraftProjectName`、`DraftAirportName`、`DraftArpLatitude`、`DraftArpLongitude`、`Categories`、`SelectedCategory`、`SearchText`、`VisibleRows`、`CountDisplay`、`CreateProjectCommand`、`EditProjectCommand`、`OpenCoordinateConverterCommand`、`AddCommand`、`EditCommand`、`DeleteCommand`、`ImportCommand`、`ExportCommand` 是约定的属性名；若名称已有工程兼容要求，先统一修改 XAML 与接口命名，**不增加第二份同功能 ViewModel**。
+`IsInitialized`、`ProjectName`、`AirportName`、`ArpDisplay`、`DraftProjectName`、`DraftAirportName`、`DraftArpLatitude`、`DraftArpLongitude`、`Categories`、`SelectedCategory`、`SearchText`、`VisibleRows`、`CountDisplay`、`CreateProjectCommand`、`EditProjectCommand`、`AddCommand`、`EditCommand`、`DeleteCommand`、`ImportCommand`、`ExportCommand` 是约定的属性名；若名称已有工程兼容要求，先统一修改 XAML 与接口命名，**不增加第二份同功能 ViewModel**。
 
 #### 特别避免的问题
 
@@ -95,6 +95,12 @@ CSV 定义由 Core 中四个 Csv 类统一提供：模板调用同一个 Export 
 - 使用自绘滚动条或引入商业控件解决87条数据；
 - 为了迁移项目页而修改其他页签、程序路径、图符块、坐标算法、跑道和图层业务规则。
 
+
+## 项目标注与编辑窗口
+
+项目定位点、障碍物、导航台和跑道名称文字的新建默认字高为 500 CAD 模型空间单位。该值不再乘注释比例换算；用户可在 AutoCAD 中人工调整文字高度，人工编辑保护继续按实体几何指纹工作。字体高度不改变 DBPoint、块、跑道轮廓或其他图形实体的尺寸。
+
+四类编辑窗口统一采用简洁 WPF 对话框，共用标题、字段排列、输入框和底部操作区样式。窗口只显示该类别确定的业务字段，不重复显示经纬度格式说明；CAD拾点作为同一位置操作，取消时保留先前输入。
 
 ## 图层与实体更新
 

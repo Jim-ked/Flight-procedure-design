@@ -98,10 +98,10 @@ internal static partial class CadDrawing
         var denominator=scale.DrawingUnits/scale.PaperUnits;
         if(!double.IsFinite(denominator) || denominator<=0)
             throw new InvalidOperationException("请先设置可用注释比例。");
-        // Paper height is millimetres; project model coordinates are metres.
-        // 1:1 means 0.0025 m, 1:2000 means 5 m. Never reinterpret or change
-        // an existing drawing's annotation scale to make text appear larger.
-        return new DrawingStyle(.0035*denominator,.0025*denominator,.0015*denominator);
+        // Project labels use the fixed CAD model-space default requested by the
+        // project module. Symbol size remains controlled by annotation scale;
+        // changing a DBText height never rescales a point or block symbol.
+        return new DrawingStyle(.0035*denominator,500,500);
     }
     private sealed record FixLabel(FixData Fix,ProjectedPoint Projected,Point3d Text,IReadOnlySet<string> Neighbours)
     {
