@@ -8,20 +8,19 @@ public sealed class ProjectStore
     private static readonly JsonSerializerOptions JsonOptions = new() { WriteIndented = true };
     public void Save(ProjectData project, string path)
     {
-        ArgumentNullException.ThrowIfNull(project);
-        ProcedurePaths.Migrate(project);
-        ProjectValidation.Project(project);
-        if (File.Exists(path) && !File.Exists(path + ".pre-paths.bak"))
+        var json = Serialize(project);
+        if (File.Exists(path))
         {
             using var old = JsonDocument.Parse(File.ReadAllText(path));
-            if (old.RootElement.TryGetProperty("Procedures", out var procedures) && procedures.EnumerateArray().Any(p => !p.TryGetProperty("PathsMigrated", out var migrated) || !migrated.GetBoolean()))
+            if (!old.RootElement.TryGetProperty("WorkspaceVersion", out _) && !File.Exists(path + ".pre-workspace.bak")) File.Copy(path, path + ".pre-workspace.bak");
+            if (!File.Exists(path + ".pre-paths.bak") && old.RootElement.TryGetProperty("Procedures", out var procedures) && procedures.EnumerateArray().Any(p => !p.TryGetProperty("PathsMigrated", out var migrated) || !migrated.GetBoolean()))
                 File.Copy(path, path + ".pre-paths.bak");
         }
         Directory.CreateDirectory(Path.GetDirectoryName(Path.GetFullPath(path))!);
         var temporary = path + "." + Guid.NewGuid().ToString("N") + ".tmp";
         try
         {
-            File.WriteAllText(temporary, JsonSerializer.Serialize(project, JsonOptions), new UTF8Encoding(false));
+            File.WriteAllText(temporary, json, new UTF8Encoding(false));
             File.Move(temporary, path, true);
         }
         finally { if (File.Exists(temporary)) File.Delete(temporary); }
@@ -29,8 +28,27 @@ public sealed class ProjectStore
 
     public ProjectData Open(string path)
     {
-        using var stream = File.OpenRead(path);
-        using var document = JsonDocument.Parse(stream);
+        return Deserialize(File.ReadAllText(path));
+    }
+
+    public static string Serialize(ProjectData project)
+    {
+        ArgumentNullException.ThrowIfNull(project);
+        ProcedurePaths.Migrate(project);
+        ProjectValidation.Project(project);
+        return JsonSerializer.Serialize(project, JsonOptions);
+    }
+
+    public static string AuxiliaryPath(string dwgPath)
+    {
+        if (!Path.IsPathFullyQualified(dwgPath) || !Path.GetExtension(dwgPath).Equals(".dwg", StringComparison.OrdinalIgnoreCase))
+            throw new ArgumentException("请先使用 AutoCAD 原生保存 DWG。");
+        return Path.ChangeExtension(dwgPath, ".fpd.json");
+    }
+
+    public static ProjectData Deserialize(string json)
+    {
+        using var document = JsonDocument.Parse(json);
         var project = document.RootElement.Deserialize<ProjectData>(JsonOptions)
             ?? throw new InvalidDataException("项目文件为空或格式无效。");
         if(document.RootElement.TryGetProperty("Procedures",out var oldProcedures) && oldProcedures.ValueKind==JsonValueKind.Array)

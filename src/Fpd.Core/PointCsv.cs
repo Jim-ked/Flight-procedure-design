@@ -6,26 +6,26 @@ namespace Fpd.Core;
 
 public static class FixCsv
 {
-    internal static readonly string[] Columns = ["Ident", "Latitude", "Longitude", "Elevation"];
+    internal static readonly string[] Columns = ["Ident", "Latitude", "Longitude"];
     public static IReadOnlyList<FixData> Parse(string path) => ParseText(File.ReadAllText(path));
     public static IReadOnlyList<FixData> ParseText(string text, IEnumerable<string>? existing = null) => PointCsv.Read(text, Columns, 3, existing, v =>
     {
-        var fix = new FixData { Ident = v[0], Latitude = PointCsv.Number(v[1]), Longitude = PointCsv.Number(v[2]), Elevation = PointCsv.Optional(v[3]) };
+        var fix = new FixData { Ident = v[0], Latitude = PointCsv.Number(v[1]), Longitude = PointCsv.Number(v[2]) };
         ProjectValidation.Fix(fix); return fix;
     });
-    public static string Export(IEnumerable<FixData> rows, string separator = ",") => PointCsv.Write(Columns, rows.Select(f => new[] { f.Ident, PointCsv.Format(f.Latitude), PointCsv.Format(f.Longitude), PointCsv.Format(f.Elevation) }), separator);
+    public static string Export(IEnumerable<FixData> rows, string separator = ",") => PointCsv.Write(Columns, rows.Select(f => new[] { f.Ident, PointCsv.Format(f.Latitude), PointCsv.Format(f.Longitude) }), separator);
 }
 
 public static class ObstacleCsv
 {
-    internal static readonly string[] Columns = ["Ident", "Latitude", "Longitude", "TopElevation", "Height", "GroundElevation"];
+    internal static readonly string[] Columns = ["Ident", "Latitude", "Longitude", "TopElevation", "GroundElevation"];
     public static IReadOnlyList<ObstacleData> Parse(string path) => ParseText(File.ReadAllText(path));
-    public static IReadOnlyList<ObstacleData> ParseText(string text, IEnumerable<string>? existing = null) => PointCsv.Read(text, Columns, 4, existing, v =>
+    public static IReadOnlyList<ObstacleData> ParseText(string text, IEnumerable<string>? existing = null) => PointCsv.Read(text, Columns, 5, existing, v =>
     {
-        var obstacle = new ObstacleData { Ident = v[0], Latitude = PointCsv.Number(v[1]), Longitude = PointCsv.Number(v[2]), TopElevation = PointCsv.Number(v[3]), Height = PointCsv.Optional(v[4]), GroundElevation = PointCsv.Optional(v[5]) };
+        var obstacle = new ObstacleData { Ident = v[0], Latitude = PointCsv.Number(v[1]), Longitude = PointCsv.Number(v[2]), TopElevation = PointCsv.Number(v[3]), GroundElevation = PointCsv.Number(v[4]) };
         ProjectValidation.Obstacle(obstacle); return obstacle;
     });
-    public static string Export(IEnumerable<ObstacleData> rows, string separator = ",") => PointCsv.Write(Columns, rows.Select(o => new[] { o.Ident, PointCsv.Format(o.Latitude), PointCsv.Format(o.Longitude), PointCsv.Format(o.TopElevation), PointCsv.Format(o.Height), PointCsv.Format(o.GroundElevation) }), separator);
+    public static string Export(IEnumerable<ObstacleData> rows, string separator = ",") => PointCsv.Write(Columns, rows.Select(o => new[] { o.Ident, PointCsv.Format(o.Latitude), PointCsv.Format(o.Longitude), PointCsv.Format(o.TopElevation), PointCsv.Format(o.GroundElevation) }), separator);
 }
 
 internal static class PointCsv
@@ -41,27 +41,20 @@ internal static class PointCsv
         using var reader = new StringReader(text.TrimStart('\uFEFF'));
         using var parser = new TextFieldParser(reader) { HasFieldsEnclosedInQuotes = true, TrimWhiteSpace = true, CommentTokens = ["#"] };
         parser.SetDelimiters(",", ";", "\t");
-        int[]? mapping = null;
         var first = true;
-        var width = 0;
         while (!parser.EndOfData)
         {
             var line = parser.LineNumber;
             try
             {
                 var values = parser.ReadFields()!;
-                if (first && values.Any(v => v.Equals("Ident", StringComparison.OrdinalIgnoreCase)))
+                if (first)
                 {
-                    if (values.Distinct(StringComparer.OrdinalIgnoreCase).Count() != values.Length) throw new FormatException("列标题重复。");
-                    mapping = columns.Select(c => Array.FindIndex(values, v => v.Equals(c, StringComparison.OrdinalIgnoreCase))).ToArray();
-                    for (var i = 0; i < required; i++) if (mapping[i] < 0 && !(optionalColumns?.Contains(i)??false)) throw new FormatException("缺少列 " + columns[i]);
-                    if (values.Any(v => !columns.Contains(v, StringComparer.OrdinalIgnoreCase))) throw new FormatException("包含未知列；请使用规定列标题。");
-                    width = values.Length; first = false; continue;
+                    if (!values.SequenceEqual(columns, StringComparer.Ordinal)) throw new FormatException("请使用规定列名和顺序：" + string.Join(",", columns));
+                    first = false; continue;
                 }
-                first = false;
-                if (mapping is null && (values.Length < required || values.Length > columns.Length) || mapping is not null && values.Length != width)
-                    throw new FormatException("列数错误，请检查表头和字段。");
-                var ordered = columns.Select((_, i) => { var index = mapping is null ? i : mapping[i]; return index >= 0 && index < values.Length ? values[index].Trim() : ""; }).ToArray();
+                if (values.Length != columns.Length) throw new FormatException("列数与模板不一致。");
+                var ordered = values.Select(v => v.Trim()).ToArray();
                 for (var i = 0; i < required; i++) if (string.IsNullOrWhiteSpace(ordered[i]) && !(optionalColumns?.Contains(i)??false)) throw new FormatException("缺少 " + columns[i]);
                 var item = create(ordered);
                 if (!identifiers.Add(ordered[0])) throw new FormatException("标识已存在或批内重复：" + ordered[0]);

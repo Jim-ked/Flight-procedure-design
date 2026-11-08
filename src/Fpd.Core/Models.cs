@@ -2,9 +2,11 @@ namespace Fpd.Core;
 
 public sealed class ProjectData
 {
+    public int WorkspaceVersion { get; set; } = 1;
     public string ProjectId { get; set; } = Guid.NewGuid().ToString("N");
     public string Name { get; set; } = "未命名项目";
     public AirportData Airport { get; set; } = new();
+    [System.Text.Json.Serialization.JsonIgnore]
     public string? DwgPath { get; set; }
     public List<FixData> Fixes { get; set; } = [];
     public List<ObstacleData> Obstacles { get; set; } = [];
@@ -28,6 +30,7 @@ public sealed class FixData
     public string Ident { get; set; } = "";
     public double Latitude { get; set; }
     public double Longitude { get; set; }
+    // Legacy/known CAD Z only; project editing and CSV never request a program altitude.
     public double? Elevation { get; set; }
 }
 
@@ -42,7 +45,9 @@ public sealed class ObstacleData
     public double Longitude { get; set; }
     // Absolute top elevation in metres; never inferred from the obstacle's own height.
     public double TopElevation { get; set; } = double.NaN;
-    public double? Height { get; set; }
+    // Compatibility setter accepts old JSON; the current value is always derived.
+    public double? Height { get => GroundElevation.HasValue ? TopElevation - GroundElevation.Value : _legacyHeight; set => _legacyHeight = value; }
+    private double? _legacyHeight;
     public double? GroundElevation { get; set; }
 }
 

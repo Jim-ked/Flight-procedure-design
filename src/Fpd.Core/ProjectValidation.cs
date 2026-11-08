@@ -102,18 +102,11 @@ public static class ProjectValidation
         {
             if(string.IsNullOrWhiteSpace(end.Designator)) throw new InvalidDataException("跑道端标识不能为空。");
             Position(end.PhysicalEnd); Position(end.Threshold); Position(end.DepartureEnd);
+            if (new[] { end.PhysicalEnd, end.Threshold, end.DepartureEnd }.Any(p => !p.Elevation.HasValue)) throw new InvalidDataException("跑道位置须提供标高。");
         }
-        if(runway.EndA.Designator.Equals(runway.EndB.Designator,StringComparison.OrdinalIgnoreCase)) throw new InvalidDataException("两端标识不能相同。");
-        var cm=Cgcs2000Projection.ZoneForLongitude(runway.EndA.PhysicalEnd.Longitude).CentralMeridian;
-        var a=AirportGeometry.Project(runway.EndA.PhysicalEnd,cm); var b=AirportGeometry.Project(runway.EndB.PhysicalEnd,cm);
-        var dx=b.Easting-a.Easting; var dy=b.Northing-a.Northing; var length=Math.Sqrt(dx*dx+dy*dy);
-        if(length<1) throw new InvalidDataException("实际跑道两端不能重合。");
-        foreach(var end in new[] { runway.EndA,runway.EndB }) foreach(var position in new[] { end.Threshold,end.DepartureEnd })
-        {
-            var p=AirportGeometry.Project(position,cm);
-            var across=Math.Abs((p.Easting-a.Easting)*dy-(p.Northing-a.Northing)*dx)/length;
-            if(across>runway.Width/2) throw new InvalidDataException("THR/DER横向位置超出跑道宽度，请核对资料。");
-        }
+        if (!RunwayDefaults.Opposite(runway.EndA.Designator, runway.EndB.Designator)) throw new InvalidDataException("跑道方向须相反，例如16R/34L。");
+        if (runway.EndA.PhysicalEnd.Latitude == runway.EndB.PhysicalEnd.Latitude && runway.EndA.PhysicalEnd.Longitude == runway.EndB.PhysicalEnd.Longitude)
+            throw new InvalidDataException("物理跑道两端不能重合。");
     }
     public static void Navaid(NavaidData navaid)
     {
@@ -131,6 +124,7 @@ public static class ProjectValidation
     {
         if (obstacle is null || string.IsNullOrWhiteSpace(obstacle.Ident)) throw new InvalidDataException("障碍物标识不能为空。");
         Coordinates(obstacle.Latitude, obstacle.Longitude, obstacle.TopElevation);
+        if (obstacle.GroundElevation.HasValue && obstacle.TopElevation < obstacle.GroundElevation.Value) throw new InvalidDataException("障碍物顶标高不能低于地面高程。");
         if (obstacle.Height.HasValue && (!double.IsFinite(obstacle.Height.Value) || obstacle.Height < 0) ||
             obstacle.GroundElevation.HasValue && !double.IsFinite(obstacle.GroundElevation.Value))
             throw new InvalidDataException("障碍物自身高度须为非负有限米值，地面高程须为有限米值。");

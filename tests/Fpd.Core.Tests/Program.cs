@@ -27,6 +27,34 @@ ProjectData Sample() => new()
 var store = new ProjectStore();
 try
 {
+    Test("manual DMS input validates hemisphere and minute range", () =>
+    {
+        Near(CoordinateInput.Parse("39°07′27.67″N",true),39+7.0/60+27.67/3600);
+        Near(CoordinateInput.Parse("117 20 46.26 E",false),117+20.0/60+46.26/3600);
+        Near(CoordinateInput.Parse("-0°30'",true),-.5);
+        Reject(()=>CoordinateInput.Parse("39°60'",true)); Reject(()=>CoordinateInput.Parse("117N",false));
+    });
+    Test("runway defaults use opposite physical end regardless of displaced threshold", () =>
+    {
+        var r=new RunwayData { Ident="16R/34L",Width=45,
+            EndA=new() { Designator="16R",PhysicalEnd=new() { Latitude=39.14,Longitude=117.34,Elevation=3 },Threshold=null!,DepartureEnd=null! },
+            EndB=new() { Designator="34L",PhysicalEnd=new() { Latitude=39.11,Longitude=117.34,Elevation=6 },Threshold=new() { Latitude=39.111,Longitude=117.34,Elevation=7 },DepartureEnd=null! } };
+        RunwayDefaults.Resolve(r); ProjectValidation.Runway(r);
+        Check(RunwayDefaults.Same(r.EndA.DepartureEnd,r.EndB.PhysicalEnd)); Check(!RunwayDefaults.Same(r.EndA.DepartureEnd,r.EndB.Threshold));
+        Check(RunwayDefaults.Opposite("16R","34L") && !RunwayDefaults.Opposite("16R","34R"));
+        var csv=RunwayCsv.Export([r]); Check(RunwayCsv.ParseText(csv)[0].EndB.Threshold.Elevation==7);
+    });
+    Test("DWG auxiliary path follows Save As and ignores legacy association", () =>
+    {
+        Check(ProjectStore.AuxiliaryPath(Path.Combine(work,"A.dwg"))==Path.Combine(work,"A.fpd.json"));
+        Reject(()=>ProjectStore.AuxiliaryPath("Drawing1.dwg"));
+        var p=ProjectStore.Deserialize("{\"Name\":\"legacy\",\"DwgPath\":\"C:/other.dwg\"}"); Check(p.DwgPath is null);
+    });
+    Test("WsGis CM105 sample agrees with existing CGCS2000 projection", () =>
+    {
+        var p=Cgcs2000Projection.ForwardInZone(37+31.0/60+25.25/3600,105+20.0/60+32.92/3600,105,300);
+        Near(p.Easting,530274.230418334); Near(p.Northing,4154685.49330783);
+    });
     Test("legacy paths migrate separately once with stable IDs and coordinates", () =>
     {
         var p=Sample(); var proc=p.Procedures[0];
@@ -107,10 +135,11 @@ try
     Test("navaid type units and partial GP are validated before importing", () =>
     {
         var n=new NavaidData { Ident="TJ",Kind=NavaidKind.NDB,Position=new() { Latitude=39.1,Longitude=117.3,Elevation=10 },FrequencyKHz=345 };
-        var row=NavaidCsv.ParseText(NavaidCsv.Export([n]))[0]; Check(row.FrequencyKHz==345 && row.FrequencyMHz is null);
+        var imported=NavaidCsv.ParseText(NavaidCsv.Export([n]))[0]; Check(imported.Ident=="TJ" && imported.Kind==NavaidKind.NDB && imported.Position.Elevation is null);
+        var row=n;
         var p=Sample(); p.Navaids.Add(row); row.FrequencyMHz=110; Reject(()=>ProjectValidation.Project(p)); row.FrequencyMHz=null;
         row.Kind=NavaidKind.ILS; row.FrequencyKHz=null; row.FrequencyMHz=110.3; row.GlidePathPosition=new() { Latitude=39,Longitude=117 };
-        Reject(()=>ProjectValidation.Project(p));
+        ProjectValidation.Project(p); // Legacy optional elevation is not a manufactured zero.
         Reject(()=>NavaidCsv.ParseText("Ident,Name,Kind,Latitude,Longitude,Elevation\nA,A,VOR,39,117,1\nB,B,VOR,91,117,1"));
     });
     Test("sections preserve repeated Fix references and enforce Approach Missed", () =>
@@ -131,7 +160,7 @@ try
     });
     Test("Obstacle top elevation is distinct from height and ground", () =>
     {
-        var rows = ObstacleCsv.ParseText("Ident,Latitude,Longitude,TopElevation,Height,GroundElevation\nO1,39.2,117.3,80,30,50\n");
+        var rows = ObstacleCsv.ParseText("Ident,Latitude,Longitude,TopElevation,GroundElevation\nO1,39.2,117.3,80,50\n");
         var p = Sample(); p.Obstacles.AddRange(rows); var path = Path.Combine(work, "obstacles.json"); store.Save(p, path);
         var opened = store.Open(path); Check(opened.Obstacles[0].Height == 30 && opened.Obstacles[0].GroundElevation == 50);
         var plotted = PointProjection.Obstacles(opened, opened.Obstacles); Check(plotted[0].Point.Z == 80);
@@ -140,17 +169,18 @@ try
     Test("batch errors report source row and do not change existing project", () =>
     {
         var p = Sample();
-        try { p.Fixes.AddRange(FixCsv.ParseText("Ident,Latitude,Longitude,Elevation\nTJ907,39,117,\nTJ001,39,117,", p.Fixes.Select(f => f.Ident))); throw new Exception("Accepted duplicate"); }
+        try { p.Fixes.AddRange(FixCsv.ParseText("Ident,Latitude,Longitude\nTJ907,39,117\nTJ001,39,117", p.Fixes.Select(f => f.Ident))); throw new Exception("Accepted duplicate"); }
         catch (InvalidDataException ex) { Check(ex.Message.Contains("3") && ex.Message.Contains("TJ001")); }
         Check(p.Fixes.Count == 2);
-        try { ObstacleCsv.ParseText("Ident,Latitude,Longitude,TopElevation\nO1,39,117,80\nO2,91,117,90"); throw new Exception("Accepted invalid latitude"); }
+        try { ObstacleCsv.ParseText("Ident,Latitude,Longitude,TopElevation,GroundElevation\nO1,39,117,80,50\nO2,91,117,90,50"); throw new Exception("Accepted invalid latitude"); }
         catch (InvalidDataException ex) { Check(ex.Message.Contains("3")); }
     });
-    Test("TSV paste and reordered CSV headers round trip", () =>
+    Test("fixed CSV rejects reordered headers and round trips", () =>
     {
-        var fixes = FixCsv.ParseText("Longitude\tIdent\tLatitude\tElevation\n117.3\tTJ907\t39.2\t\n");
+        Reject(()=>FixCsv.ParseText("Longitude,Ident,Latitude\n117.3,TJ907,39.2\n"));
+        var fixes=FixCsv.ParseText("Ident,Latitude,Longitude\nTJ907,39.2,117.3\n");
         Check(FixCsv.ParseText(FixCsv.Export(fixes))[0].Ident == "TJ907");
-        var obstacles = ObstacleCsv.ParseText("O1,39.2,117.3,80,30,50");
+        var obstacles = ObstacleCsv.ParseText("Ident,Latitude,Longitude,TopElevation,GroundElevation\nO1,39.2,117.3,80,50");
         Check(ObstacleCsv.ParseText(ObstacleCsv.Export(obstacles))[0].TopElevation == 80);
     });
     Test("batch uses airport CM and refuses empty selection", () =>
@@ -201,7 +231,7 @@ try
     {
         var project = Sample(); var path = Path.Combine(work, "project.fpd.json"); store.Save(project, path);
         var opened = store.Open(path);
-        Check(opened.ProjectId == project.ProjectId && opened.Name == project.Name && opened.DwgPath == "Tianjin.dwg");
+        Check(opened.ProjectId == project.ProjectId && opened.Name == project.Name && opened.DwgPath is null && !File.ReadAllText(path).Contains("DwgPath"));
         Check(opened.Airport.ArpLatitude == 39.124353 && opened.Fixes[0].Elevation == 12.5);
         Check(opened.Procedures[0].Kind == ProcedureKind.Approach && opened.Procedures[0].Runway == "16" && opened.Procedures[0].FixIdents.SequenceEqual(new[] { "TJ002", "TJ001", "TJ002" }));
         project.Name = "updated"; store.Save(project, path); Check(store.Open(path).Name == "updated");
@@ -223,23 +253,23 @@ try
     Test("Missed requires an Approach parent", () => { var p = Sample(); p.Procedures[0].Kind = ProcedureKind.Missed; p.Procedures[0].ParentProcedureId = "missing"; Reject(() => store.Save(p, Path.Combine(work, "missed.json"))); });
     Test("incomplete ARP rejected", () => { var p = Sample(); p.Airport.ArpLongitude = null; Reject(() => store.Save(p, Path.Combine(work, "arp.json"))); });
     Test("null airport JSON rejected", () => { var path = Path.Combine(work, "invalid.json"); File.WriteAllText(path, "{\"Airport\":null}"); Reject(() => store.Open(path)); });
-    Test("CSV imports header quoted ident optional height", () =>
+    Test("CSV imports fixed header and quoted identifier", () =>
     {
-        var path = Path.Combine(work, "fix.csv"); File.WriteAllText(path, "Ident,Latitude,Longitude,Elevation\n\"TJ003\",39.21,117.31,12.5\nTJ004,39.22,117.32,\n");
-        var fixes = FixCsv.Parse(path); Check(fixes.Count == 2 && fixes[0].Ident == "TJ003" && fixes[0].Elevation == 12.5 && fixes[1].Elevation is null);
+        var path = Path.Combine(work, "fix.csv"); File.WriteAllText(path, "Ident,Latitude,Longitude\n\"TJ003\",39.21,117.31\nTJ004,39.22,117.32\n");
+        var fixes = FixCsv.Parse(path); Check(fixes.Count == 2 && fixes[0].Ident == "TJ003" && fixes[0].Elevation is null && fixes[1].Elevation is null);
     });
     Test("CSV rejects invalid latitude before returning batch", () =>
     {
-        var path = Path.Combine(work, "bad.csv"); File.WriteAllText(path, "Ident,Latitude,Longitude,Elevation\nA,39,117,\nB,91,117,\n"); Reject(() => FixCsv.Parse(path));
+        var path = Path.Combine(work, "bad.csv"); File.WriteAllText(path, "Ident,Latitude,Longitude\nA,39,117\nB,91,117\n"); Reject(() => FixCsv.Parse(path));
     });
     Test("CSV duplicate batch identifiers rejected", () =>
     {
-        var path = Path.Combine(work, "dupe.csv"); File.WriteAllText(path, "A,39,117,\na,39.1,117.1,\n"); Reject(() => FixCsv.Parse(path));
+        var path = Path.Combine(work, "dupe.csv"); File.WriteAllText(path, "Ident,Latitude,Longitude\nA,39,117\na,39.1,117.1\n"); Reject(() => FixCsv.Parse(path));
     });
     Test("decimal coordinates independent of current locale", () =>
     {
         var previous = CultureInfo.CurrentCulture;
-        try { CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("fr-FR"); var path = Path.Combine(work, "locale.csv"); File.WriteAllText(path, "A,39.2,117.3,12.5\n"); Check(FixCsv.Parse(path)[0].Elevation == 12.5); }
+        try { CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo("fr-FR"); var path = Path.Combine(work, "locale.csv"); File.WriteAllText(path, "Ident,Latitude,Longitude\nA,39.2,117.3\n"); Near(FixCsv.Parse(path)[0].Latitude,39.2); }
         finally { CultureInfo.CurrentCulture = previous; }
     });
 }

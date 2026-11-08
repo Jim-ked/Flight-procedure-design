@@ -1,3 +1,5 @@
+> 历史资料：项目模块已由 [PROJECT_WORKSPACE_DESIGN.md](PROJECT_WORKSPACE_DESIGN.md) 替代。本文仅保留历史背景；程序模块内容不在本轮调整。
+
 # 独立路径及公共底图迁移说明
 
 旧JSON通过ProjectStore.Open读取时，旧FixIdents主顺序与每个Sections项分别迁移为独立路径，不合并、不去重、不排序。旧主顺序命名为“旧主顺序”，旧段保留名称；名称冲突仅增加后缀。Runway、Missed、旧Stage/Branch说明保留，迁移说明明确旧段未认定为完整运行路线。旧字段保留作为历史资料，不再作为当前程序页的编辑目标。

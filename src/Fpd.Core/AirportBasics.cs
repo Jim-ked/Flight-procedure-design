@@ -4,7 +4,7 @@ public sealed class GeoPosition
 {
     public double Latitude { get; set; } = double.NaN;
     public double Longitude { get; set; } = double.NaN;
-    public double Elevation { get; set; } = double.NaN;
+    public double? Elevation { get; set; }
 }
 
 public sealed class RunwayEndData
