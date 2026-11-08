@@ -1,9 +1,9 @@
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Globalization;
 using System.Runtime.CompilerServices;
 using System.Windows.Data;
 using System.Windows.Input;
+using System.Windows.Threading;
 using Fpd.Core;
 
 namespace Fpd.AutoCAD.Views;
@@ -30,7 +30,8 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
 {
     private ProjectData? _project;
     private bool _initialized,_editable;
-    private readonly ObservableCollection<ProjectRow> _rows=[];
+    private readonly Dispatcher _dispatcher=Dispatcher.CurrentDispatcher;
+    private ProjectRow[] _rows=[];
     private readonly HashSet<string> _selectedDataIds=new(StringComparer.OrdinalIgnoreCase);
     private readonly List<ProjectCommand> _commands=[];
     private ProjectCategory _selectedCategory;
@@ -46,8 +47,7 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
     public ProjectWorkspaceViewModel(Action<ProjectUiAction> execute)
     {
         _selectedCategory=Categories[0];
-        VisibleRows=CollectionViewSource.GetDefaultView(_rows);
-        VisibleRows.Filter=value=>value is ProjectRow row && row.Name.Contains(_searchText.Trim(),StringComparison.OrdinalIgnoreCase);
+        VisibleRows=CreateRowsView(_rows);
         CreateProjectCommand=Command(ProjectUiAction.Create,()=>_editable && !_initialized);
         EditProjectCommand=Command(ProjectUiAction.EditProject,Ready);
         OpenCoordinateConverterCommand=Command(ProjectUiAction.ConvertCoordinates,Ready);
@@ -70,9 +70,9 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
     public string DraftAirportName { get; set; }="";
     public string DraftArpLatitude { get; set; }="";
     public string DraftArpLongitude { get; set; }="";
-    public ICollectionView VisibleRows { get; }
+    public ICollectionView VisibleRows { get; private set; }
     public IReadOnlySet<string> SelectedDataIds=>_selectedDataIds;
-    public string CountDisplay=>$"共 {_rows.Count} 项 / 已选 {_selectedDataIds.Count} 项";
+    public string CountDisplay=>$"共 {_rows.Length} 项 / 已选 {_selectedDataIds.Count} 项";
     public ProjectCategory SelectedCategory
     {
         get=>_selectedCategory;
@@ -89,7 +89,7 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
         {
             value??="";
             if(value==_searchText) return;
-            ChangeRows(()=> { _searchText=value; Notify(nameof(SearchText)); VisibleRows.Refresh(); });
+            ChangeRows(()=> { _searchText=value; Notify(nameof(SearchText)); ReplaceRows(_rows); });
         }
     }
     public ICommand CreateProjectCommand { get; }
@@ -118,6 +118,7 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
     }
     public void UpdateSummary()
     {
+        _dispatcher.VerifyAccess();
         foreach(var name in new[]{nameof(IsInitialized),nameof(ProjectName),nameof(AirportName),nameof(ArpDisplay)}) Notify(name);
         RefreshCommands();
     }
@@ -129,16 +130,37 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
             ProjectDataCategory.Fix=>_project.Fixes,ProjectDataCategory.Obstacle=>_project.Obstacles,
             ProjectDataCategory.Runway=>_project.Runways,ProjectDataCategory.Navaid=>_project.Navaids,_=>[]
         };
-        using(VisibleRows.DeferRefresh()) { _rows.Clear(); foreach(var value in values) _rows.Add(ProjectRow.From(value)); }
+        ReplaceRows(values.Select(ProjectRow.From).ToArray());
+    }
+    private ICollectionView CreateRowsView(ProjectRow[] rows)
+    {
+        var search=_searchText.Trim();
+        return new ListCollectionView(rows)
+        {
+            Filter=value=>value is ProjectRow row && row.Name.Contains(search,StringComparison.OrdinalIgnoreCase)
+        };
+    }
+    private void ReplaceRows(ProjectRow[] snapshot)
+    {
+        // Prepare the filtered view before binding it. Never mutate a bound
+        // collection inside DeferRefresh: ListCollectionView reads CurrentPosition.
+        var view=CreateRowsView(snapshot);
+        _rows=snapshot; VisibleRows=view;
+        Notify(nameof(VisibleRows));
     }
     private void ChangeRows(Action action)
     {
-        RowsRefreshing?.Invoke();
-        try { action(); }
-        finally { SetSelection([]); Notify(nameof(CountDisplay)); RowsRefreshed?.Invoke(); }
+        _dispatcher.VerifyAccess();
+        try { RowsRefreshing?.Invoke(); action(); }
+        finally
+        {
+            try { SetSelection([]); }
+            finally { RowsRefreshed?.Invoke(); }
+        }
     }
     public void SetSelection(IEnumerable<string> ids)
     {
+        _dispatcher.VerifyAccess();
         _selectedDataIds.Clear(); _selectedDataIds.UnionWith(ids);
         Notify(nameof(CountDisplay)); RefreshCommands();
     }

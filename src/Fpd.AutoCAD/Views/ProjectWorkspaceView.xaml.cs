@@ -18,6 +18,8 @@ public partial class ProjectWorkspaceView : System.Windows.Controls.UserControl
     private ProjectDataCategory? _activeCategory;
     private bool _restoring;
     private int _refreshVersion;
+    private DispatcherOperation? _restoreOperation;
+    private ProjectData? _boundProject;
     internal event Action? DataActivated;
 
     internal ProjectWorkspaceView(ProjectWorkspaceViewModel model)
@@ -27,41 +29,74 @@ public partial class ProjectWorkspaceView : System.Windows.Controls.UserControl
     }
     internal void BindProject(ProjectData project,bool initialized,bool editable,bool reset)
     {
+        Dispatcher.VerifyAccess();
+        _boundProject=project;
         if(reset) { _states.Clear(); _activeCategory=null; }
         _model.BindProject(project,initialized,editable,reset);
     }
     private void SaveGridState()
     {
-        if(!_restoring && _activeCategory is { } category)
+        Dispatcher.VerifyAccess();
+        // Invalidate at the start, before the model publishes another view.
+        ++_refreshVersion;
+        _restoreOperation?.Abort(); _restoreOperation=null;
+        var wasRestoring=_restoring; _restoring=true;
+        if(!wasRestoring && _activeCategory is { } category)
         {
             var scroll=FindScrollViewer(ProjectDataGrid);
             _states[category]=new(ProjectDataGrid.SelectedItems.Cast<ProjectRow>().Select(row=>row.DataId).ToArray(),
                 scroll?.VerticalOffset??0,scroll?.HorizontalOffset??0);
         }
-        _restoring=true;
     }
     private void RestoreGridState()
     {
+        Dispatcher.VerifyAccess();
         var category=_model.SelectedCategory.Kind;
-        if(_activeCategory!=category) ConfigureColumns(category);
-        _activeCategory=category;
-        var version=++_refreshVersion;
+        var version=_refreshVersion;
+        var view=_model.VisibleRows; var project=_boundProject;
         var state=_states.GetValueOrDefault(category)??new GridState([],0,0);
-        Dispatcher.BeginInvoke(DispatcherPriority.Loaded,new Action(()=>
+        bool IsCurrent()=>version==_refreshVersion && ReferenceEquals(project,_boundProject) &&
+            category==_model.SelectedCategory.Kind && ReferenceEquals(view,_model.VisibleRows);
+        try
         {
-            if(version!=_refreshVersion) return;
-            try
+            var operation=Dispatcher.BeginInvoke(DispatcherPriority.Loaded,new Action(()=>
             {
-                ProjectDataGrid.SelectedItems.Clear();
-                var ids=state.SelectedIds.ToHashSet(StringComparer.OrdinalIgnoreCase);
-                foreach(var row in ProjectDataGrid.Items.OfType<ProjectRow>())
-                    if(ids.Contains(row.DataId)) ProjectDataGrid.SelectedItems.Add(row);
-                ProjectDataGrid.UpdateLayout();
-                var scroll=FindScrollViewer(ProjectDataGrid);
-                scroll?.ScrollToVerticalOffset(state.VerticalOffset); scroll?.ScrollToHorizontalOffset(state.HorizontalOffset);
-            }
-            finally { _restoring=false; UpdateSelection(); }
-        }));
+                if(!IsCurrent()) return;
+                try
+                {
+                    if(!ReferenceEquals(ProjectDataGrid.ItemsSource,view)) return;
+                    if(_activeCategory!=category) ConfigureColumns(category);
+                    _activeCategory=category;
+                    ProjectDataGrid.UpdateLayout();
+                    if(!IsCurrent()) return;
+                    var ids=state.SelectedIds.ToHashSet(StringComparer.OrdinalIgnoreCase);
+                    var selected=ProjectDataGrid.Items.OfType<ProjectRow>().Where(row=>ids.Contains(row.DataId)).ToArray();
+                    ProjectDataGrid.SelectedItems.Clear();
+                    foreach(var row in selected) ProjectDataGrid.SelectedItems.Add(row);
+                    var scroll=FindScrollViewer(ProjectDataGrid);
+                    scroll?.ScrollToVerticalOffset(state.VerticalOffset); scroll?.ScrollToHorizontalOffset(state.HorizontalOffset);
+                }
+                finally
+                {
+                    if(version==_refreshVersion)
+                    {
+                        _restoreOperation=null; _restoring=false;
+                        if(IsCurrent() && ReferenceEquals(ProjectDataGrid.ItemsSource,view)) UpdateSelection();
+                    }
+                }
+            }));
+            _restoreOperation=operation;
+            operation.Aborted+=(_,_)=>
+            {
+                if(version==_refreshVersion) { _restoreOperation=null; _restoring=false; }
+            };
+            if(operation.Status==DispatcherOperationStatus.Aborted && version==_refreshVersion) { _restoreOperation=null; _restoring=false; }
+        }
+        catch
+        {
+            if(version==_refreshVersion) { _restoreOperation=null; _restoring=false; }
+            throw;
+        }
     }
     private void ConfigureColumns(ProjectDataCategory category)
     {
@@ -105,7 +140,7 @@ public partial class ProjectWorkspaceView : System.Windows.Controls.UserControl
     }
     private void ProjectDataGrid_PreviewKeyDown(object sender,System.Windows.Input.KeyEventArgs e)
     {
-        if(e.Key!=Key.End || Keyboard.Modifiers!=ModifierKeys.None || ProjectDataGrid.Items.Count==0) return;
+        if(_restoring || e.Key!=Key.End || Keyboard.Modifiers!=ModifierKeys.None || ProjectDataGrid.Items.Count==0) return;
         var last=ProjectDataGrid.Items[ProjectDataGrid.Items.Count-1];
         if(ProjectDataGrid.Columns.Count>0) ProjectDataGrid.CurrentCell=new DataGridCellInfo(last,ProjectDataGrid.CurrentCell.Column??ProjectDataGrid.Columns[0]);
         ProjectDataGrid.SelectedItem=last; ProjectDataGrid.ScrollIntoView(last); e.Handled=true;
