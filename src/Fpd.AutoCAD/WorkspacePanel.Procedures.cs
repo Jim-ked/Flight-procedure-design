@@ -122,7 +122,7 @@ public sealed partial class WorkspacePanel
     private void DeletePath()
     {
         var p=RequireProcedure(); var path=RequirePath(); if(MessageBox.Show(this,$"删除路径 {path.Name}？其未被人工修改的专业图符会同步移除。","删除路径",MessageBoxButtons.OKCancel)!=DialogResult.OK) return;
-        var project=_project; if(BaseMapPolicy.CanWrite(project.DwgPath,_drawingPath())) CadOperation(()=>CadDrawing.RemoveProcedurePath(project,p.ProcedureId,path.PathId));
+        var project=_project; if(DwgProjects.IsCurrent(project)) CadOperation(()=>CadDrawing.RemoveProcedurePath(project,p.ProcedureId,path.PathId));
         p.Paths.Remove(path); Changed(); ShowProcedure();
     }
     private void SelectPath(ProcedurePath path) { for(var i=0;i<_paths.Items.Count;i++) if(((PathRow)_paths.Items[i]!).Value==path) _paths.SelectedIndex=i; }
@@ -141,19 +141,19 @@ public sealed partial class WorkspacePanel
             if(ids.Any(id=>!project.Fixes.Any(f=>f.Ident==id))) throw new InvalidOperationException("项目点已变化，请重新选点。");
             ProcedurePaths.Insert(path,index,ids); Changed(); ShowSequence(); if(ids.Count>0) _sequence.SelectedIndex=index+ids.Count-1; SetStatus($"按顺序加入 {ids.Count} 个引用");
         }
-        if(cad) { if(!BaseMapPolicy.CanWrite(project.DwgPath,dwg)) throw new InvalidOperationException("请先关联并打开项目DWG。"); CadOperation(()=>Apply(CadDrawing.PickFixOrder(project))); }
+        if(cad) { if(!DwgProjects.IsCurrent(project)) throw new InvalidOperationException("请切回项目所属DWG。"); CadOperation(()=>Apply(CadDrawing.PickFixOrder(project))); }
         else { using var dialog=new FixOrderDialog(project.Fixes); if(dialog.ShowDialog(this)==DialogResult.OK) Apply(dialog.Identifiers); }
     }
     private void SyncProcedureSymbols()
     {
         var procedure=CurrentProcedure; var path=CurrentPath; if(procedure is null || path is null) return;
-        if(!BaseMapPolicy.CanWrite(_project.DwgPath,_drawingPath())) { SetStatus("图符属性已保存；请关联当前DWG后补建图符"); return; }
+        if(!DwgProjects.IsCurrent(_project)) { SetStatus("图符属性已保存；请切回所属DWG后补建图符"); return; }
         var project=_project; CadOperation(()=> { CadDrawing.DrawProcedure(project,procedure,path,DefaultProcedureSymbolWidth,TextHeight); SetStatus("程序图符已自动更新"); });
     }
     private void HighlightCurrentReference(bool zoom)
     {
         var procedure=CurrentProcedure; var path=CurrentPath; var use=SelectedUse(); if(procedure is null || path is null || use is null) return;
-        var fix=_project.Fixes.FirstOrDefault(f=>f.Ident.Equals(use.FixIdent,StringComparison.OrdinalIgnoreCase)); if(fix is null || !BaseMapPolicy.CanWrite(_project.DwgPath,_drawingPath())) return;
+        var fix=_project.Fixes.FirstOrDefault(f=>f.Ident.Equals(use.FixIdent,StringComparison.OrdinalIgnoreCase)); if(fix is null || !DwgProjects.IsCurrent(_project)) return;
         var project=_project; CadOperation(()=>CadDrawing.HighlightPoint(project,procedure,path,fix,zoom));
     }
     private void DrawProcedureSymbols() => SyncProcedureSymbols();

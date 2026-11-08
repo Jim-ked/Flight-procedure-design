@@ -12,7 +12,7 @@ public sealed partial class WorkspacePanel
     private int DataCount=>_dataTabs.SelectedIndex switch { 1=>_project.Obstacles.Count,2=>_project.Runways.Count,3=>_project.Navaids.Count,_=>_project.Fixes.Count };
     private void AddAirportTabs()
     {
-        foreach(var (title,grid,columns) in new[] { ("跑道",_runwayGrid,new[] { "标识","宽 m","长m / 格网°" }),("设施",_navaidGrid,new[] { "标识","类型","频率 / 频道" }) })
+        foreach(var (title,grid,columns) in new[] { ("跑道",_runwayGrid,new[] { "标识","宽 m","长m / 格网°" }),("导航台",_navaidGrid,new[] { "代号","类型","绝对经纬度" }) })
         {
             foreach(var c in columns) grid.Columns.Add(c,c);
             grid.Columns[0].FillWeight=65; grid.Columns[1].FillWeight=55; grid.Columns[2].FillWeight=150;
@@ -21,7 +21,7 @@ public sealed partial class WorkspacePanel
             grid.KeyDown+=(_,e)=> { if(e.Control && e.KeyCode==Keys.C) { Run(CopyPoints); e.SuppressKeyPress=true; } if(e.Control && e.KeyCode==Keys.V) { Run(PastePoints); e.SuppressKeyPress=true; } if(e.Control && e.KeyCode==Keys.A) { grid.SelectAll(); e.SuppressKeyPress=true; } if(e.KeyCode==Keys.Delete) { Run(DeleteAirportData); e.SuppressKeyPress=true; } };
             grid.ColumnHeadersDefaultCellStyle.WrapMode=DataGridViewTriState.False;
             grid.SelectionChanged+=(_,_)=>UpdateSelection(); grid.CellDoubleClick+=(_,e)=> { if(e.RowIndex>=0) Run(()=>EditAirportData(true)); };
-            var page=Page(title); page.Padding=Padding.Empty; page.Controls.Add(grid); _dataTabs.TabPages.Add(page);
+            var page=Page(title); page.Padding=Padding.Empty; _dataTabs.TabPages.Add(page);
         }
     }
     private void RefreshAirportData()
@@ -37,18 +37,19 @@ public sealed partial class WorkspacePanel
         selected=_navaidGrid.SelectedRows.Cast<DataGridViewRow>().Select(r=>r.Tag).ToHashSet(); _navaidGrid.Rows.Clear();
         foreach(var n in _project.Navaids.Where(n=>n.Ident.Contains(_search.Text.Trim(),StringComparison.OrdinalIgnoreCase)))
         {
-            var row=_navaidGrid.Rows[_navaidGrid.Rows.Add(n.Ident,n.Kind,n.Kind==NavaidKind.NDB?$"{n.FrequencyKHz} kHz":$"{n.FrequencyMHz} MHz {n.Channel}")]; row.Tag=n; row.Selected=selected.Contains(n);
+            var row=_navaidGrid.Rows[_navaidGrid.Rows.Add(n.Ident,n.Kind,$"{n.Position.Latitude:F6} / {n.Position.Longitude:F6}")]; row.Tag=n; row.Selected=selected.Contains(n);
         }
         if(selected.Count==0) _navaidGrid.ClearSelection();
     }
     private List<T> SelectedBasics<T>()=>CurrentGrid.SelectedRows.Cast<DataGridViewRow>().OrderBy(r=>r.Index).Select(r=>(T)r.Tag!).ToList();
     private void CadOperation(Action action)
     {
-        var project=_project;
+        RequireProject(); var project=_project;
         AirportCommandRequested?.Invoke(()=> { if(project!=_project) throw new InvalidOperationException("项目已切换，请重新操作。"); action(); });
     }
     private void EditAirportData(bool edit)
     {
+        RequireProject();
         if(edit && CurrentGrid.SelectedRows.Count!=1) throw new InvalidOperationException("请只选择一行修改。");
         if(IsRunway) EditRunway(edit?SelectedBasics<RunwayData>()[0]:null); else EditNavaid(edit?SelectedBasics<NavaidData>()[0]:null);
     }
@@ -72,8 +73,8 @@ public sealed partial class WorkspacePanel
         using var dialog=new NavaidDialog(draft??previous); var result=dialog.ShowDialog(this);
         if(result==DialogResult.Retry)
         {
-            var value=dialog.Value; var gp=dialog.PickGlidePath;
-            CadOperation(()=> { var position=CadDrawing.PickPosition(_project); if(position is not null) { if(gp) value.GlidePathPosition=position; else value.Position=position; } EditNavaid(previous,value); }); return;
+            var value=dialog.Value;
+            CadOperation(()=> { var position=CadDrawing.PickPosition(_project); if(position is not null) { value.Position.Latitude=position.Latitude; value.Position.Longitude=position.Longitude; } EditNavaid(previous,value); }); return;
         }
         if(result!=DialogResult.OK) return;
         ProjectDataIds.Ensure(_project); if(previous is not null) dialog.Value.DataId=previous.DataId;
@@ -100,20 +101,6 @@ public sealed partial class WorkspacePanel
         BaseDataChanged(); RefreshData(); RefreshProcedures();
     }
     private string ExportAirportSelection()=>IsRunway?RunwayCsv.Export(SelectedBasics<RunwayData>()):NavaidCsv.Export(SelectedBasics<NavaidData>());
-    private void DrawAirportData(bool all)
-    {
-        var height=TextHeight;
-        if(IsRunway) { var rows=all?_project.Runways.ToArray():SelectedBasics<RunwayData>().ToArray(); CadOperation(()=> { DrawRunwaysCad(rows,height); }); }
-        else { var rows=all?_project.Navaids.ToArray():SelectedBasics<NavaidData>().ToArray(); CadOperation(()=> { DrawNavaidsCad(rows,height); }); }
-    }
-    private void DrawRunwaysCad(IReadOnlyList<RunwayData> rows,double height)
-    {
-        CadDrawing.DrawRunways(_project,rows,height); SetStatus($"已绘制 {rows.Count} 条跑道；U撤销");
-    }
-    private void DrawNavaidsCad(IReadOnlyList<NavaidData> rows,double height)
-    {
-        CadDrawing.DrawNavaids(_project,rows,height); SetStatus($"已绘制 {rows.Count} 个设施；U撤销");
-    }
     private void SelectCadData()
     {
         if(IsRunway) throw new InvalidOperationException("跑道位置请在修改窗口选择END/THR/DER后拾取。");
@@ -122,11 +109,12 @@ public sealed partial class WorkspacePanel
     }
     private void PickNewPoint()
     {
+        RequireProject();
         if(IsAirportData) { EditAirportData(false); return; }
         var obstacle=IsObstacle;
         CadOperation(()=> { var p=CadDrawing.PickPosition(_project); if(p is null) return;
-            if(obstacle) { using var dialog=new ObstacleDialog(new() { Latitude=p.Latitude,Longitude=p.Longitude,TopElevation=p.Elevation }); if(dialog.ShowDialog(this)!=DialogResult.OK) return; if(_project.Obstacles.Any(o=>o.Ident.Equals(dialog.Value.Ident,StringComparison.OrdinalIgnoreCase))) throw new InvalidOperationException("标识重复。"); _project.Obstacles.Add(dialog.Value); }
-            else { using var dialog=new FixDialog(new() { Latitude=p.Latitude,Longitude=p.Longitude,Elevation=p.Elevation }); if(dialog.ShowDialog(this)!=DialogResult.OK) return; ProjectEdits.ReplaceFix(_project,null,dialog.Value); }
-            BaseDataChanged(); RefreshData(); RefreshProcedures(); RefreshToolChoices(); });
+            if(obstacle) EditObstacle(null,new() { Latitude=p.Latitude,Longitude=p.Longitude,TopElevation=p.Elevation??double.NaN });
+            else EditFix(null,new() { Latitude=p.Latitude,Longitude=p.Longitude,Elevation=p.Elevation });
+        });
     }
 }

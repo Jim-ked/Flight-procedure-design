@@ -19,7 +19,7 @@ internal static partial class CadDrawing
     public static void HighlightPoint(ProjectData project,ProcedureData? procedure,ProcedurePath? path,FixData fix,bool zoom)
     {
         var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请先打开 DWG。");
-        if(!BaseMapPolicy.CanWrite(project.DwgPath,doc.Name)) throw new InvalidOperationException("当前DWG不匹配项目关联。");
+        if(!DwgProjects.IsCurrent(project)) throw new InvalidOperationException("当前DWG与项目会话不一致。");
         using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction();
         var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForRead);
         var ids=new List<ObjectId>();
@@ -56,7 +56,7 @@ internal static partial class CadDrawing
     public static void HighlightBasePoint(ProjectData project,string kind,string key,bool zoom)
     {
         var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请先打开 DWG。");
-        if(!BaseMapPolicy.CanWrite(project.DwgPath,doc.Name)) throw new InvalidOperationException("当前DWG不匹配项目关联。");
+        if(!DwgProjects.IsCurrent(project)) throw new InvalidOperationException("当前DWG与项目会话不一致。");
         using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction(); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForRead); var ids=new List<ObjectId>();
         foreach(ObjectId id in model) { var e=(Entity)tr.GetObject(id,OpenMode.ForRead); var mark=ReadBaseMark(e,tr); if(mark is { Archived:false } && mark.Project==project.ProjectId && mark.Kind==kind && mark.Key==key) ids.Add(id); }
         tr.Commit(); doc.Editor.SetImpliedSelection(ids.ToArray()); if(ids.Count==0) { doc.Editor.WriteMessage("\n当前对象尚未生成可联动的CAD图形。"); return; } if(zoom) ZoomEntities(doc,ids); doc.Editor.UpdateScreen();
@@ -64,7 +64,7 @@ internal static partial class CadDrawing
     public static void RemoveProcedurePath(ProjectData project,string procedureId,string pathId)
     {
         var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请先打开 DWG。");
-        if(!BaseMapPolicy.CanWrite(project.DwgPath,doc.Name)) throw new InvalidOperationException("当前DWG不匹配项目关联。");
+        if(!DwgProjects.IsCurrent(project)) throw new InvalidOperationException("当前DWG与项目会话不一致。");
         using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction(); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite); var conflicts=0; var removed=0;
         foreach(ObjectId id in model)
         {
@@ -86,7 +86,7 @@ internal static partial class CadDrawing
     public static void DrawProcedure(ProjectData project,ProcedureData procedure,ProcedurePath selected,double scale,double textHeight)
     {
         var doc=AcadApp.DocumentManager.MdiActiveDocument!;
-        if(!BaseMapPolicy.CanWrite(project.DwgPath,doc.Name)) throw new InvalidOperationException("请打开明确关联的项目DWG。");
+        if(!DwgProjects.IsCurrent(project)) throw new InvalidOperationException("请切回项目所属DWG。");
         if(!project.Procedures.Contains(procedure) || !procedure.Paths.Contains(selected)) throw new InvalidOperationException("程序/路径目标已变化。");
         ProjectValidation.Project(project); ProjectDataIds.Ensure(project); var mapping=LoadSymbols();
         // A drawing operation is scoped to the selected path. Path identity is persisted on every entity.

@@ -20,8 +20,8 @@ public sealed partial class WorkspacePanel
     }
     internal void RefreshResults()
     {
-        var current=_drawingPath(); _resultDwg.Text=$"关联：{(_project.DwgPath is null?"未关联":Path.GetFileName(_project.DwgPath))}\r\n当前：{(current is null?"未打开DWG":Path.GetFileName(current))}";
-        _tips.SetToolTip(_resultDwg,$"关联：{_project.DwgPath}\r\n当前：{current}"); _artifacts.Items.Clear();
+        var current=_drawingPath(); _resultDwg.Text="当前DWG："+(current is null?"未打开":Path.GetFileName(current));
+        _tips.SetToolTip(_resultDwg,current??"无DWG"); _artifacts.Items.Clear();
         foreach(var layer in CadDrawing.ReadLayers().Where(l=>l.EntityCount>0))
             _artifacts.Items.Add($"图面 · {layer.Name} · {layer.EntityCount} 个原生实体");
         foreach(var p in _project.Procedures.Where(p=>p.Paths.Any(path=>path.Fixes.Count>0)))

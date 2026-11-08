@@ -15,12 +15,23 @@ internal static partial class CadDrawing
     private sealed record BaseMark(string Project,string Kind,string Key,string Ident,string Data,string Geometry,string Group,int Count,bool Archived=false);
     private sealed record BaseItem(string Kind,string Key,string Ident,string Layer,string Data,Action<Transaction> Draw);
     private static string Hash(string value)=>Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(value)));
+    private static string BaseFingerprint(ProjectData project,object data,double height)=>Hash(JsonSerializer.Serialize(new { CM=AirportGeometry.Meridian(project),Height=height,Data=data }));
+    private static string HistoryKey(ProjectData project,string kind,string key)=>"FPD_B_"+Hash(project.ProjectId+"/"+kind+"/"+key);
+    private static bool WasDrawn(ProjectData project,string kind,string key,Transaction tr,Database db)=>
+        ((DBDictionary)tr.GetObject(db.NamedObjectsDictionaryId,OpenMode.ForRead)).Contains(HistoryKey(project,kind,key));
+    private static void RememberBase(ProjectData project,string kind,string key,Transaction tr,Database db)
+    {
+        var dictionary=(DBDictionary)tr.GetObject(db.NamedObjectsDictionaryId,OpenMode.ForWrite); var name=HistoryKey(project,kind,key);
+        if(dictionary.Contains(name)) return;
+        var record=new Xrecord(); dictionary.SetAt(name,record); tr.AddNewlyCreatedDBObject(record,true);
+    }
     private static string GeometryStamp(Entity entity,Transaction tr)
     {
         // Only our small set of native base-map entities is eligible for automatic updates.
         var s=new StringBuilder(); void Add(object? value)=>s.Append(value is double d?d.ToString("R",CultureInfo.InvariantCulture):value).Append('|');
         void Point(Point3d p) { Add(p.X); Add(p.Y); Add(p.Z); }
-        Add(entity.GetType().Name); Add(entity.Layer); Add(entity.ColorIndex); Add(entity.Linetype); Add(entity.Visible);
+        Add(entity.GetType().Name); Add(entity.Layer); Add(entity.ColorIndex); Add(entity.Linetype); Add(entity.Visible); Add(entity.LinetypeScale); Add(entity.LineWeight); var opacity=entity.Transparency; Add(opacity.IsByAlpha?(object)opacity.Alpha:opacity.IsByLayer?"ByLayer":"ByBlock");
+        Add(entity.Color.ColorMethod); if(entity.Color.ColorMethod==Autodesk.AutoCAD.Colors.ColorMethod.ByColor) Add(entity.Color.ColorValue.ToArgb());
         switch(entity)
         {
             case BlockReference b:
@@ -53,7 +64,7 @@ internal static partial class CadDrawing
             case Circle c: Point(c.Center); Add(c.Radius); Add(c.Normal); break;
             case Polyline3d p: Add(p.Closed); foreach(ObjectId id in p) Point(((PolylineVertex3d)tr.GetObject(id,OpenMode.ForRead)).Position); break;
             case Polyline p: Add(p.Closed); for(var i=0;i<p.NumberOfVertices;i++) { Point(p.GetPoint3dAt(i)); Add(p.GetBulgeAt(i)); Add(p.GetStartWidthAt(i)); Add(p.GetEndWidthAt(i)); } break;
-            case DBPoint p: Point(p.Position); break;
+            case DBPoint p: Point(p.Position); Add(p.Normal); Add(p.Thickness); Add(p.EcsRotation); break;
             default: throw new InvalidOperationException("无法安全检查底图实体："+entity.GetType().Name);
         }
         return Hash(s.ToString());
@@ -79,18 +90,21 @@ internal static partial class CadDrawing
         else { record=new Xrecord(); d.SetAt(BaseTag,record); tr.AddNewlyCreatedDBObject(record,true); }
         using var data=new ResultBuffer(new TypedValue((int)DxfCode.Text,JsonSerializer.Serialize(mark))); record.Data=data;
     }
-    public static string SyncBaseMap(ProjectData project,double height,bool top,bool repair=false)
+    public static string SyncBaseMap(ProjectData project,double height,string? kind=null,IReadOnlySet<string>? keys=null)
     {
-        var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请打开关联DWG。");
-        if(!BaseMapPolicy.CanWrite(project.DwgPath,doc.Name)) throw new InvalidOperationException("当前DWG不匹配项目关联；未写入图形。");
+        var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请打开DWG。");
+        if(!DwgProjects.IsCurrent(project)) throw new InvalidOperationException("当前DWG与项目会话不一致；未写入图形。");
         ProjectValidation.Project(project); ProjectDataIds.Ensure(project); var cm=AirportGeometry.Meridian(project);
-        string Fingerprint(object data)=>Hash(JsonSerializer.Serialize(new { CM=cm,Height=height,Top=top,Data=data }));
+        string Fingerprint(object data)=>BaseFingerprint(project,data,height);
         var items=new List<BaseItem>();
-        foreach(var f in project.Fixes) items.Add(new("Fix",f.DataId,f.Ident,"FPD_FIX",Fingerprint(f),tr=>Draw(new(PointProjection.Fixes(project,[f]),height,top),external:tr)));
-        foreach(var o in project.Obstacles) items.Add(new("Obstacle",o.DataId,o.Ident,"FPD_OBSTACLE",Fingerprint(o),tr=>Draw(new(PointProjection.Obstacles(project,[o]),height,top),external:tr)));
+        foreach(var f in project.Fixes) items.Add(new("Fix",f.DataId,f.Ident,"FPD_FIX",Fingerprint(f),tr=>DrawBasePoints(project,PointProjection.Fixes(project,[f]),height,tr)));
+        foreach(var o in project.Obstacles) items.Add(new("Obstacle",o.DataId,o.Ident,"FPD_OBSTACLE",Fingerprint(o),tr=>DrawBasePoints(project,PointProjection.Obstacles(project,[o]),height,tr)));
         foreach(var r in project.Runways) items.Add(new("Runway",r.DataId,r.Ident,"FPD_RUNWAY",Fingerprint(r),tr=>DrawRunways(project,[r],height,tr)));
         foreach(var n in project.Navaids) items.Add(new("Navaid",n.DataId,n.Ident,"FPD_NAVAID",Fingerprint(n),tr=>DrawNavaids(project,[n],height,tr)));
-        var changes=new List<(BaseItem Item,ObjectId[] Old,bool Conflict)>(); var conflicts=new List<string>();
+        items=items.Where(item=>(kind is null || item.Kind==kind) && (keys is null || keys.Contains(item.Key))).ToList();
+        var changes=new List<(BaseItem Item,ObjectId[] Old)>(); var conflicts=new List<string>();
+        var unsupported=items.Where(i=>i.Kind=="Navaid" && project.Navaids.Single(n=>n.DataId==i.Key).Kind==NavaidKind.ILS).ToArray();
+        foreach(var item in unsupported) { items.Remove(item); conflicts.Add(item.Ident+"（ILS原始块待确认）"); }
         using(var read=doc.Database.TransactionManager.StartTransaction())
         {
             var model=(BlockTableRecord)read.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForRead);
@@ -102,12 +116,14 @@ internal static partial class CadDrawing
                 var intact=found.Length>0 && found.All(x=>x.Mark!.Count==found.Length && x.Mark.Group==found[0].Mark!.Group && GeometryUnchanged(x.Entity,x.Mark.Geometry,read));
                 var decision=BaseMapPolicy.Decide(found.Length==0?0:found.Select(x=>x.Mark!.Group).Distinct().Count(),intact,found.Any(x=>x.Mark!.Data!=item.Data));
                 if(found.Length==0 && marked.Any(x=>(x.Mark is null || x.Mark.Project!=project.ProjectId) && x.Entity.Layer==item.Layer && (item.Kind=="Runway" || HasName(x.Entity,item.Ident,read) || LegacyPointAt(x.Entity,item,project)))) decision=BaseMapChange.Conflict;
+                if(found.Length==0 && WasDrawn(project,item.Kind,item.Key,read,doc.Database)) decision=BaseMapChange.Conflict;
                 if(decision==BaseMapChange.None) continue;
-                if(decision==BaseMapChange.Conflict) { conflicts.Add(item.Ident); if(!repair) continue; }
-                changes.Add((item,found.Select(x=>x.Entity.ObjectId).ToArray(),decision==BaseMapChange.Conflict));
+                if(decision==BaseMapChange.Conflict) { conflicts.Add(item.Ident); continue; }
+                changes.Add((item,found.Select(x=>x.Entity.ObjectId).ToArray()));
             }
         }
-        if(changes.Count==0) return conflicts.Count>0?"底图冲突，原图保留："+string.Join("、",conflicts)+"；更多→保留原图并补建":"底图已一致，未重复绘制";
+        if(changes.Count==0) return conflicts.Count>0?"底图冲突，原图保留："+string.Join("、",conflicts)+"；请人工核对图形和资料":"底图已一致，未重复绘制";
+        PrepareProjectBlocks(changes.Where(c=>c.Item.Kind is "Obstacle" or "Navaid").Select(c=>c.Item.Kind=="Obstacle"?"Obstacle":project.Navaids.Single(n=>n.DataId==c.Item.Key).Kind.ToString()));
         using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction();
         var target=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
         foreach(var change in changes)
@@ -115,14 +131,14 @@ internal static partial class CadDrawing
             foreach(var id in change.Old)
             {
                 var e=(Entity)tr.GetObject(id,OpenMode.ForWrite);
-                if(change.Conflict) { var mark=ReadBaseMark(e,tr)!; WriteBaseMark(e,mark with { Archived=true },tr); }
-                else e.Erase();
+                e.Erase();
             }
             var before=target.Cast<ObjectId>().ToHashSet(); change.Item.Draw(tr);
             var added=target.Cast<ObjectId>().Where(id=>!before.Contains(id)).ToArray(); var group=Guid.NewGuid().ToString("N");
+            RememberBase(project,change.Item.Kind,change.Item.Key,tr,doc.Database);
             foreach(var id in added) { var e=(Entity)tr.GetObject(id,OpenMode.ForWrite); WriteBaseMark(e,new(project.ProjectId,change.Item.Kind,change.Item.Key,change.Item.Ident,change.Item.Data,GeometryStamp(e,tr),group,added.Length),tr); }
         }
-        tr.Commit(); doc.Editor.Regen(); var message=$"底图新增/更新 {changes.Count} 项；U撤销本次图形，JSON需另行保存";
+        tr.Commit(); doc.Editor.Regen(); var message=$"底图新增/更新 {changes.Count} 项；U撤销本次图形，请保存DWG及辅助资料";
         if(conflicts.Count>0) message+="；冲突原图保留："+string.Join("、",conflicts); doc.Editor.WriteMessage("\n"+message); return message;
     }
     private static bool LegacyPointAt(Entity entity,BaseItem item,ProjectData project)
@@ -131,10 +147,11 @@ internal static partial class CadDrawing
         var p=item.Kind=="Fix"?PointProjection.Fixes(project,project.Fixes.Where(f=>f.DataId==item.Key))[0].Point:PointProjection.Obstacles(project,project.Obstacles.Where(o=>o.DataId==item.Key))[0].Point;
         return point.Position.DistanceTo(new Point3d(p.Easting,p.Northing,p.Z))<.01;
     }
-    private static bool HasName(Entity e,string ident,Transaction tr)=>e is BlockReference b && b.AttributeCollection.Cast<ObjectId>().Any(id=>tr.GetObject(id,OpenMode.ForRead) is AttributeReference a && a.Tag=="NAME" && a.TextString.Equals(ident,StringComparison.OrdinalIgnoreCase));
+    private static bool HasName(Entity e,string ident,Transaction tr)=>e is DBText text && text.TextString.Equals(ident,StringComparison.OrdinalIgnoreCase) || e is BlockReference b && b.AttributeCollection.Cast<ObjectId>().Any(id=>tr.GetObject(id,OpenMode.ForRead) is AttributeReference a && a.Tag=="NAME" && a.TextString.Equals(ident,StringComparison.OrdinalIgnoreCase));
 
     public static IReadOnlyList<string>? PickFixOrder(ProjectData project)
     {
+        using var reference=ProjectReferenceLayers();
         var doc=AcadApp.DocumentManager.MdiActiveDocument!; var pick=new OrderedFixPick();
         while(true)
         {

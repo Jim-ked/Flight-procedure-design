@@ -1,6 +1,6 @@
 # 固定翼飞行程序设计 / Flight Procedure Design
 
-基于 AutoCAD 的固定翼飞行程序辅助设计软件。当前 F0.1 宿主为 **AutoCAD 2026（.NET 8）**。
+基于 AutoCAD 的固定翼飞行程序辅助设计软件。当前宿主为 **AutoCAD 2026（.NET 8）**。
 
 当前业务顶层为 `Departure`、`Arrival`、`Approach` 三类 `Procedure`。`Missed Approach` 属于 `Approach` 内部；`Holding` 是可嵌入 Procedure 的完整机动/设计能力，不是第四类 Procedure。
 
@@ -35,26 +35,21 @@ dotnet build src/Fpd.AutoCAD/Fpd.AutoCAD.csproj -c Debug
 dotnet run --project tests/Fpd.Core.Tests/Fpd.Core.Tests.csproj
 ```
 
-在 AutoCAD 2026 中 `NETLOAD` 加载 `src/Fpd.AutoCAD/bin/Debug/net8.0-windows/Fpd.AutoCAD.dll`，保持同目录的 `Fpd.Core.dll`。执行 `FPD` 打开工作区、`FPDCLOSE` 隐藏、`FPDPOINT` 绘制明确选中的单个 Fix。ARP 使用工具页的“绘制 ARP”。已加载的 DLL 会被宿主锁定，需要独立构建目录时使用 `./build-f0.ps1 -OutputDirectory tmp/F01-build`，并加载该目录中的 DLL。
+在 AutoCAD 2026 中 `NETLOAD` 加载 `Fpd.AutoCAD.dll`，保持同目录的 `Fpd.Core.dll` 和完整 `Symbols/`。执行 `FPD` 打开工作区，`FPDCLOSE` 隐藏。已加载的 DLL 会被宿主锁定；可用 `./build-f0.ps1 -Configuration Release -OutputDirectory tmp/project-workspace-release` 构建独立目录，在新宿主进程加载。
 
-项目页显示紧凑摘要，通过“编辑项目 / 机场”修改唯一 ARP，确认后自动确定投影带。定位点与障碍物表支持新增、修改、删除、标识查找、多选、复制和粘贴新增（Ctrl+C/V/A）、CSV 整批导入，以及绘制所选或全部点。重复标识、错误坐标和缺少必填字段会报告源行号，整批拒绝写入。
+项目模块唯一现行设计为 [PROJECT_WORKSPACE_DESIGN.md](docs/PROJECT_WORKSPACE_DESIGN.md)。一张 DWG 对应一个项目，通过当前 DWG 创建/修改机场与 ARP；没有 JSON 独立打开、路径匹配和人工关联。原生 DWG 保存成功后写入同名 `.fpd.json`；打开/切换不重绘图形。
 
-CSV 可带表头并调整列顺序；无表头时按以下顺序。纬经度为十进制度，高程/标高/高度为米，数值小数点使用 `.`，可选字段留空。支持逗号、分号和 Tab 分隔，含分隔符的内容用双引号包裹。
+项目页管理定位点、障碍物、物理跑道和导航台，支持编辑窗口、CAD拾取、搜索、整类CSV导入/导出及模板。CSV必须使用当前界面导出的固定表头和字段顺序，坐标为十进制度；`samples/F01/`、`samples/F1/` 为历史格式资料，不作当前模板。手动坐标接受十进制度和度分秒。
 
-- Fix：`Ident,Latitude,Longitude,Elevation`，前三列必填。
-- Obstacle：`Ident,Latitude,Longitude,TopElevation,Height,GroundElevation`，前四列必填。`TopElevation` 是顶标高，`Height` 是自身高度，`GroundElevation` 是地面高程，三者分别保存，不自动推算。
+定位点使用DBPoint与独立名称；障碍物及已确认的VOR/DME/NDB使用WindSpiral原始块，图面只标编号或名称；跑道按两物理端及可选THR/DER位置绘制。编辑后更新、绘制所选/全部和FPDPOINT采用同一身份同步规则，无变化不重复插入，人工修改冲突保留。项目/程序页面仅切换四个项目公共图层的常规显示。
 
-样例见 `samples/F01/`。批量绘图使用 `FPD_FIX`（绿色圆十字）和 `FPD_OBSTACLE`（红色三角）图层，原生块及属性包含名称与可选障碍物顶标高；字高在项目页设置，默认 50 m。绘制明确新增图形，不自动覆盖已有点；一次批量操作可用 AutoCAD 原生撤销。`FPDPOINT` 继续生成 DBPoint 与名称文字。
-
-程序页通过选择已有 Fix、追加、删除引用、上移/下移编辑顺序，允许重复引用。工具页转换结果就地显示。成果页操作当前 DWG 的实际 FPD 图层、定位图面，并导出 Fix/障碍物 CSV 和程序顺序 JSON；尚无专业算法结果。
-
-项目保存为 `.fpd.json`，DWG 使用 AutoCAD 原生保存。所有点均使用 ARP 决定的同一 CGCS2000 三度带 CM；WCS X=东坐标，Y=北坐标，高程未提供时 Z=0，不减去 ARP。不支持 DMS 输入或垂直基准换算。当前最小投影适用 CM75E–CM135E，点距中央经线不得超过 6°。
+所有基本坐标使用ARP确定的CGCS2000三度带CM；WCS X=东、Y=北，长度和高程为米。缺少高程只在平面绘图中使用Z=0占位。坐标转换入口在项目页，复用既有正反算，提供XYZ、复制及拾点。投影适用CM75E–CM135E，点距中央经线不得超过6°；不实施垂直基准换算。
 
 本机宿主与验收记录见 [F0 交付报告](docs/F0_DELIVERY_REPORT.md)，投影独立参照见 [PROJ_REFERENCE.md](tests/Fpd.Core.Tests/PROJ_REFERENCE.md)。
 
-### F1 待人工核验版本
+### F1 历史版本与验收资料
 
-新增跑道、VOR/DME/NDB/ILS设施、CAD拾取/符号绘图及Procedure分段。当前构建0警告/0错误，Core已有33/33通过记录；修正版的标注、编辑窗、拾取焦点及新增输出/回读仍待人工实机核验，本提交不是F1验收通过声明。
+以下保留F1历史交付背景，项目模块已由现行设计替代；程序相关历史记录不在本轮调整。
 
 核验入口：[F1交付状态与剩余清单](docs/F1_DELIVERY_REPORT.md)、[实施设计](docs/F1_IMPLEMENTATION_DESIGN.md)、[真实截图](docs/screenshots/F1/)、[合成CSV/JSON样例](samples/F1/)。[F2首工具准备](docs/F2_FIRST_TOOL_PREPARATION.md)仅为后续范围，没有提前开发专业算法。
 

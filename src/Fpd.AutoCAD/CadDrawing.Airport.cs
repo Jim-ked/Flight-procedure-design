@@ -19,19 +19,24 @@ internal static partial class CadDrawing
     }
     public static Point3d? PickWcsPoint()
     {
+        using var reference=ProjectReferenceLayers();
         var editor=AcadApp.DocumentManager.MdiActiveDocument!.Editor; var result=editor.GetPoint("\n拾取WCS坐标（Esc取消）：");
         return result.Status==PromptStatus.OK?result.Value.TransformBy(editor.CurrentUserCoordinateSystem):null;
     }
     public static GeoPosition? PickPosition(ProjectData project)
     {
+        using var reference=ProjectReferenceLayers();
         var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
         var result=doc.Editor.GetPoint("\n拾取位置（当前项目投影米坐标；Esc取消）：");
         if(result.Status!=PromptStatus.OK) return null;
         var p=result.Value.TransformBy(doc.Editor.CurrentUserCoordinateSystem);
-        return Cgcs2000Projection.InverseInZone(p.X,p.Y,cm,p.Z);
+        var position=Cgcs2000Projection.InverseInZone(p.X,p.Y,cm,p.Z);
+        if(p.Z==0) position.Elevation=null; // A planar pick does not establish a real zero elevation.
+        return position;
     }
     public static IReadOnlyList<string> SelectProjectPoints(ProjectData project,int kind)
     {
+        using var reference=ProjectReferenceLayers();
         var doc=AcadApp.DocumentManager.MdiActiveDocument!; var cm=AirportGeometry.Meridian(project);
         var result=doc.Editor.GetSelection(new PromptSelectionOptions { MessageForAdding="\n选择项目中已有的点/符号：" },new SelectionFilter([new TypedValue((int)DxfCode.Start,"INSERT,POINT")]));
         if(result.Status!=PromptStatus.OK) return [];
@@ -60,11 +65,11 @@ internal static partial class CadDrawing
         }
         doc.Editor.WriteMessage($"\n已匹配 {selected.Count} 个项目对象；取消或未匹配不更改资料。"); return selected.ToArray();
     }
-    public static void DrawRunways(ProjectData project,IReadOnlyList<RunwayData> runways,double textHeight,Transaction? external=null)
+    private static void DrawRunways(ProjectData project,IReadOnlyList<RunwayData> runways,double textHeight,Transaction tr)
     {
         if(runways.Count==0) throw new InvalidOperationException("请选择跑道。");
         ProjectValidation.Project(project); var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
-        using var locked=doc.LockDocument(); using var ownedTr=external is null?doc.Database.TransactionManager.StartTransaction():null; var tr=external??ownedTr!;
+
         EnsureLayer(tr,doc.Database,"FPD_RUNWAY",7); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
         void Add(Entity e) { e.Layer="FPD_RUNWAY"; model.AppendEntity(e); tr.AddNewlyCreatedDBObject(e,true); }
         Point3d Point(GeoPosition p) { var c=AirportGeometry.Project(p,cm); return new(c.Easting,c.Northing,c.Z); }
@@ -75,63 +80,36 @@ internal static partial class CadDrawing
             // Polyline3d retains the different physical endpoint elevations.
             Add(new Polyline3d(Poly3dType.SimplePoly,new Point3dCollection(corners),true));
             Add(new Line(a,b) { LinetypeScale=1 });
-            var labels=new List<(Point3d At,string Text)>();
             foreach(var end in new[] { runway.EndA,runway.EndB })
             {
                 var physical=Point(end.PhysicalEnd); var thr=Point(end.Threshold); var der=Point(end.DepartureEnd);
                 Add(new Line(thr-side*runway.Width/2,thr+side*runway.Width/2));
-                Add(new Circle(der,Vector3d.ZAxis,Math.Max(runway.Width/6,2)));
-                labels.Add((physical,end.Designator+" END "+end.PhysicalEnd.Elevation.ToString("0.##")+"m"));
-                labels.Add((thr,end.Designator+" THR "+end.Threshold.Elevation.ToString("0.##")+"m"));
-                labels.Add((der,end.Designator+" DER "+end.DepartureEnd.Elevation.ToString("0.##")+"m"));
-            }
-            // Stack labels beside the nearest physical end. Offsetting every label along
-            // the runway normal alone overlaps horizontal text on north/south runways.
-            foreach(var anchor in new[] { a,b })
-            {
-                var rows=labels.Where(l=>(l.At.DistanceTo(a)<=l.At.DistanceTo(b))==(anchor==a)).ToArray();
-                for(var i=0;i<rows.Length;i++)
+                Add(new DBText { Position=physical+side*(runway.Width/2+textHeight),Height=textHeight,TextString=end.Designator });
+                if(!RunwayDefaults.Same(end.Threshold,end.PhysicalEnd))
+                    Add(new DBText { Position=thr+side*(runway.Width/2+textHeight),Height=textHeight*.7,TextString=end.Designator+" THR" });
+                var opposite=ReferenceEquals(end,runway.EndA)?runway.EndB:runway.EndA;
+                if(!RunwayDefaults.Same(end.DepartureEnd,opposite.PhysicalEnd))
                 {
-                    var at=anchor+side*(runway.Width/2+textHeight*2)+new Vector3d(0,(rows.Length-1-i)*textHeight*1.6,0);
-                    Add(new DBText { Position=at,Height=textHeight,TextString=rows[i].Text });
-                    Add(new Line(rows[i].At,at-new Vector3d(textHeight*.3,0,0)));
+                    Add(new Circle(der,Vector3d.ZAxis,Math.Max(runway.Width/6,2)));
+                    Add(new DBText { Position=der-side*(runway.Width/2+textHeight*3),Height=textHeight*.7,TextString=end.Designator+" DER" });
                 }
             }
         }
-        if(external is not null) return;
-        tr.Commit(); doc.Editor.Regen(); doc.Editor.WriteMessage($"\n已绘制 {runways.Count} 条跑道（END/THR/DER），U撤销本次绘图。");
+
     }
-    public static void DrawNavaids(ProjectData project,IReadOnlyList<NavaidData> navaids,double height,Transaction? external=null)
+    private static void DrawNavaids(ProjectData project,IReadOnlyList<NavaidData> navaids,double height,Transaction tr)
     {
         if(navaids.Count==0) throw new InvalidOperationException("请选择导航设施。"); ProjectValidation.Project(project); var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
-        using var locked=doc.LockDocument(); using var ownedTr=external is null?doc.Database.TransactionManager.StartTransaction():null; var tr=external??ownedTr!; EnsureLayer(tr,doc.Database,"FPD_NAVAID",4);
-        var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite); var blocks=(BlockTable)tr.GetObject(doc.Database.BlockTableId,OpenMode.ForRead);
+        EnsureLayer(tr,doc.Database,"FPD_NAVAID",4);
+        var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
         foreach(var n in navaids)
         {
-            var name="FPD_NAVAID_F1_"+n.Kind;
-            if(!blocks.Has(name))
-            {
-                blocks.UpgradeOpen(); var definition=new BlockTableRecord { Name=name }; blocks.Add(definition); tr.AddNewlyCreatedDBObject(definition,true);
-                void Add(Entity entity) { entity.Layer="0"; definition.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true); }
-                Add(new Circle(Point3d.Origin,Vector3d.ZAxis,.5));
-                if(n.Kind==NavaidKind.VOR) { var hex=new Polyline(); for(var i=0;i<6;i++) hex.AddVertexAt(i,new Point2d(Math.Cos(i*Math.PI/3)*.7,Math.Sin(i*Math.PI/3)*.7),0,0,0); hex.Closed=true; Add(hex); }
-                if(n.Kind==NavaidKind.DME) { var square=new Polyline(); foreach(var (x,y) in new[] { (-.7,-.7),(.7,-.7),(.7,.7),(-.7,.7) }) square.AddVertexAt(square.NumberOfVertices,new(x,y),0,0,0); square.Closed=true; Add(square); }
-                if(n.Kind==NavaidKind.NDB) Add(new Circle(Point3d.Origin,Vector3d.ZAxis,.8));
-                if(n.Kind==NavaidKind.ILS) { Add(new Line(new(-.8,-.8,0),new(.8,.8,0))); Add(new Line(new(-.8,.8,0),new(.8,-.8,0))); }
-                Add(new AttributeDefinition(new(.9,.4,0),"","NAME","设施标识",doc.Database.Textstyle) { Height=1 });
-                Add(new AttributeDefinition(new(.9,-.8,0),"","TYPE","设施类型",doc.Database.Textstyle) { Height=.7 });
-            }
-            var p=AirportGeometry.Project(n.Position,cm); var reference=new BlockReference(new(p.Easting,p.Northing,p.Z),blocks[name]) { Layer="FPD_NAVAID",ScaleFactors=new(height) }; model.AppendEntity(reference); tr.AddNewlyCreatedDBObject(reference,true);
-            if(n.Kind==NavaidKind.ILS && n.GlidePathPosition is { } gp)
-            {
-                var g=AirportGeometry.Project(gp,cm); var at=new Point3d(g.Easting,g.Northing,g.Z);
-                var symbol=new Circle(at,Vector3d.ZAxis,height*.25) { Layer="FPD_NAVAID" }; model.AppendEntity(symbol); tr.AddNewlyCreatedDBObject(symbol,true);
-                var label=new DBText { Layer="FPD_NAVAID",Position=at+new Vector3d(height*.5,-height*2,0),Height=height*.7,TextString=n.Ident+" GP "+n.GlidePathAngle?.ToString("0.##")+" deg" }; model.AppendEntity(label); tr.AddNewlyCreatedDBObject(label,true);
-            }
-            var block=(BlockTableRecord)tr.GetObject(blocks[name],OpenMode.ForRead);
-            foreach(ObjectId id in block) if(tr.GetObject(id,OpenMode.ForRead) is AttributeDefinition def) { var attribute=new AttributeReference(); attribute.SetAttributeFromBlock(def,reference.BlockTransform); attribute.TextString=def.Tag=="NAME"?n.Ident:n.Kind.ToString(); reference.AttributeCollection.AppendAttribute(attribute); tr.AddNewlyCreatedDBObject(attribute,true); }
+            var p=AirportGeometry.Project(n.Position,cm); var at=new Point3d(p.Easting,p.Northing,p.Z);
+            var entity=ProjectSymbol(tr,doc.Database,n.Kind.ToString(),at,height); entity.Layer="FPD_NAVAID";
+            model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true);
+            var label=new DBText { Layer="FPD_NAVAID",Position=at+new Vector3d(height*1.4,height*.4,0),Height=height,TextString=n.Ident };
+            model.AppendEntity(label); tr.AddNewlyCreatedDBObject(label,true);
         }
-        if(external is not null) return;
-        tr.Commit(); doc.Editor.Regen(); doc.Editor.WriteMessage($"\n已绘制 {navaids.Count} 个设施符号及名称，U撤销本次绘图。");
+
     }
 }

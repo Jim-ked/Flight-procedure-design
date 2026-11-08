@@ -6,83 +6,24 @@ using AcadApp = Autodesk.AutoCAD.ApplicationServices.Core.Application;
 
 namespace Fpd.AutoCAD;
 
-internal sealed record DrawRequest(IReadOnlyList<PlotPoint> Points, double TextHeight, bool ShowTop);
 internal sealed record CadLayer(string Name, bool Visible, int EntityCount);
 
 internal static partial class CadDrawing
 {
     public static readonly string[] LayerNames = ["FPD_FIX", "FPD_OBSTACLE", "FPD_RUNWAY", "FPD_NAVAID"];
-    public static void Draw(DrawRequest request, bool legacyPoint = false, Transaction? external = null)
+    private static void DrawBasePoints(ProjectData project,IReadOnlyList<PlotPoint> points,double height,Transaction tr)
     {
-        var doc = AcadApp.DocumentManager.MdiActiveDocument ?? throw new InvalidOperationException("请先打开 DWG。");
-        if (request.Points.Count == 0 || !double.IsFinite(request.TextHeight) || request.TextHeight <= 0) throw new ArgumentException("请选择点并设置正文字高度。");
-        using var locked = doc.LockDocument();
-        using var ownedTr = external is null ? doc.Database.TransactionManager.StartTransaction() : null;
-        var tr=external??ownedTr!;
-        var layers = (LayerTable)tr.GetObject(doc.Database.LayerTableId, OpenMode.ForRead);
-        foreach (var name in request.Points.Select(p => p.IsObstacle ? "FPD_OBSTACLE" : "FPD_FIX").Distinct())
+        var db=AcadApp.DocumentManager.MdiActiveDocument!.Database;
+        var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(db),OpenMode.ForWrite);
+        foreach(var row in points)
         {
-            if (!layers.Has(name))
-            {
-                layers.UpgradeOpen(); var layer = new LayerTableRecord { Name = name, Color = Autodesk.AutoCAD.Colors.Color.FromColorIndex(ColorMethod.ByAci, (short)(name == "FPD_FIX" ? 3 : 1)) };
-                layers.Add(layer); tr.AddNewlyCreatedDBObject(layer, true);
-            }
-            var record = (LayerTableRecord)tr.GetObject(layers[name], OpenMode.ForRead);
-            if (record.IsLocked || record.IsFrozen || record.IsOff) throw new InvalidOperationException($"请在AutoCAD图层管理器打开、解冻并解锁 {name}。");
+            var layer=row.IsObstacle?"FPD_OBSTACLE":"FPD_FIX"; EnsureLayer(tr,db,layer,row.IsObstacle?(short)1:(short)3);
+            var at=new Point3d(row.Point.Easting,row.Point.Northing,row.Point.Z);
+            Entity entity=row.IsObstacle?ProjectSymbol(tr,db,"Obstacle",at,height):new DBPoint(at);
+            entity.Layer=layer; model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true);
+            var text=new DBText { Layer=layer,Position=at+new Vector3d(height*1.4,height*.4,0),Height=height,TextString=row.Ident };
+            model.AppendEntity(text); tr.AddNewlyCreatedDBObject(text,true);
         }
-        var model = (BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database), OpenMode.ForWrite);
-        void Add(Entity e) { model.AppendEntity(e); tr.AddNewlyCreatedDBObject(e, true); }
-        foreach (var row in request.Points)
-        {
-            var p = row.Point; var at = new Point3d(p.Easting, p.Northing, p.Z);
-            var layer = row.IsObstacle ? "FPD_OBSTACLE" : "FPD_FIX";
-            if (legacyPoint)
-            {
-                Add(new DBPoint(at) { Layer = layer });
-                Add(new DBText { Layer = layer, Position = at + new Vector3d(request.TextHeight * .8, request.TextHeight * .4, 0), Height = request.TextHeight, TextString = row.Ident });
-                continue;
-            }
-            var blockId = Symbol(tr, doc.Database, row.IsObstacle);
-            var reference = new BlockReference(at, blockId) { Layer = layer, ScaleFactors = new Scale3d(request.TextHeight) };
-            Add(reference);
-            var definition = (BlockTableRecord)tr.GetObject(blockId, OpenMode.ForRead);
-            foreach (ObjectId id in definition)
-                if (tr.GetObject(id, OpenMode.ForRead) is AttributeDefinition attribute)
-                {
-                    var value = new AttributeReference(); value.SetAttributeFromBlock(attribute, reference.BlockTransform);
-                    value.TextString = attribute.Tag == "NAME" ? row.Ident : p.Z.ToString("0.###", System.Globalization.CultureInfo.InvariantCulture) + " m";
-                    value.Invisible = attribute.Tag == "TOP" && !request.ShowTop;
-                    reference.AttributeCollection.AppendAttribute(value); tr.AddNewlyCreatedDBObject(value, true);
-                }
-        }
-        if(external is not null) return;
-        tr.Commit();
-        if (legacyPoint) { doc.Database.Pdmode = 35; doc.Database.Pdsize = -3; }
-        doc.Editor.Regen();
-        doc.Editor.WriteMessage($"\nFPD 已绘制 {request.Points.Count} 个点及名称；CM{request.Points[0].Point.CentralMeridian} / EPSG:{request.Points[0].Point.Epsg}；原生编辑，U 可撤销本次绘图。");
-    }
-
-    private static ObjectId Symbol(Transaction tr, Database db, bool obstacle)
-    {
-        var blocks = (BlockTable)tr.GetObject(db.BlockTableId, OpenMode.ForRead);
-        var name = obstacle ? "FPD_OBSTACLE_F01" : "FPD_FIX_F01";
-        if (blocks.Has(name)) return blocks[name];
-        blocks.UpgradeOpen(); var block = new BlockTableRecord { Name = name };
-        var id = blocks.Add(block); tr.AddNewlyCreatedDBObject(block, true);
-        void Add(Entity e) { e.Layer = "0"; block.AppendEntity(e); tr.AddNewlyCreatedDBObject(e, true); }
-        if (obstacle)
-        {
-            var triangle = new Polyline();
-            triangle.AddVertexAt(0, new Point2d(0, .6), 0, 0, 0); triangle.AddVertexAt(1, new Point2d(-.52, -.3), 0, 0, 0); triangle.AddVertexAt(2, new Point2d(.52, -.3), 0, 0, 0); triangle.Closed = true; Add(triangle);
-        }
-        else
-        {
-            Add(new Circle(Point3d.Origin, Vector3d.ZAxis, .35));
-            Add(new Line(new Point3d(-.5, 0, 0), new Point3d(.5, 0, 0))); Add(new Line(new Point3d(0, -.5, 0), new Point3d(0, .5, 0)));
-        }
-        Add(new AttributeDefinition(new Point3d(.8, .4, 0), "", "NAME", "名称", db.Textstyle) { Height = 1 });
-        if (obstacle) Add(new AttributeDefinition(new Point3d(.8, -.9, 0), "", "TOP", "顶标高 m", db.Textstyle) { Height = .8 });
-        return id;
     }
 
     public static IReadOnlyList<CadLayer> ReadLayers()
