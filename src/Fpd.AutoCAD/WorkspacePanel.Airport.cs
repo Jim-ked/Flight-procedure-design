@@ -5,38 +5,7 @@ namespace Fpd.AutoCAD;
 
 public sealed partial class WorkspacePanel
 {
-    private readonly DataGridView _runwayGrid=DataTable(),_navaidGrid=DataTable();
     internal event Action<Action>? AirportCommandRequested;
-    private bool IsAirportData=>_dataTabs.SelectedIndex>=2;
-    private bool IsRunway=>_dataTabs.SelectedIndex==2;
-    private int DataCount=>_dataTabs.SelectedIndex switch { 1=>_project.Obstacles.Count,2=>_project.Runways.Count,3=>_project.Navaids.Count,_=>_project.Fixes.Count };
-    private void AddAirportTabs()
-    {
-        foreach(var (title,grid,columns) in new[] { ("跑道",_runwayGrid,new[] { "跑道方向","宽度（m）" }),("导航台",_navaidGrid,new[] { "名称","类型","纬度","经度" }) })
-        {
-            foreach(var c in columns) grid.Columns.Add(c,c);
-            for(var i=0;i<grid.Columns.Count;i++) grid.Columns[i].FillWeight=100;
-            grid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
-            grid.SelectionChanged+=(_,_)=>UpdateSelection(); grid.CellDoubleClick+=(_,e)=> { if(e.RowIndex>=0) Run(()=>EditAirportData(true)); };
-            var page=Page(title); page.Padding=Padding.Empty; _dataTabs.TabPages.Add(page);
-        }
-    }
-    private void RefreshAirportData()
-    {
-        var selected=_runwayGrid.SelectedRows.Cast<DataGridViewRow>().Select(r=>r.Tag).ToHashSet(); _runwayGrid.Rows.Clear();
-        foreach(var r in _project.Runways.Where(r=>r.Ident.Contains(_search.Text.Trim(),StringComparison.OrdinalIgnoreCase)))
-        {
-            var row=_runwayGrid.Rows[_runwayGrid.Rows.Add(r.Ident,r.Width)]; row.Tag=r; row.Selected=selected.Contains(r);
-        }
-        if(selected.Count==0) _runwayGrid.ClearSelection();
-        selected=_navaidGrid.SelectedRows.Cast<DataGridViewRow>().Select(r=>r.Tag).ToHashSet(); _navaidGrid.Rows.Clear();
-        foreach(var n in _project.Navaids.Where(n=>n.Ident.Contains(_search.Text.Trim(),StringComparison.OrdinalIgnoreCase)))
-        {
-            var row=_navaidGrid.Rows[_navaidGrid.Rows.Add(n.Ident,n.Kind,n.Position.Latitude,n.Position.Longitude)]; row.Tag=n; row.Selected=selected.Contains(n);
-        }
-        if(selected.Count==0) _navaidGrid.ClearSelection();
-    }
-    private List<T> SelectedBasics<T>()=>CurrentGrid.SelectedRows.Cast<DataGridViewRow>().OrderBy(r=>r.Index).Select(r=>(T)r.Tag!).ToList();
     private void CadOperation(Action action)
     {
         RequireProject(); var project=_project;
@@ -45,7 +14,7 @@ public sealed partial class WorkspacePanel
     private void EditAirportData(bool edit)
     {
         RequireProject();
-        if(edit && CurrentGrid.SelectedRows.Count!=1) throw new InvalidOperationException("请只选择一行修改。");
+        if(edit && SelectedDataIds.Count!=1) throw new InvalidOperationException("请只选择一行修改。");
         if(IsRunway) EditRunway(edit?SelectedBasics<RunwayData>()[0]:null); else EditNavaid(edit?SelectedBasics<NavaidData>()[0]:null);
     }
     private void EditRunway(RunwayData? previous,RunwayData? draft=null)
@@ -79,7 +48,7 @@ public sealed partial class WorkspacePanel
     }
     private void DeleteAirportData()
     {
-        if(CurrentGrid.SelectedRows.Count==0) throw new InvalidOperationException("请选择数据行。");
+        if(SelectedDataIds.Count==0) throw new InvalidOperationException("请选择数据行。");
         if(MessageBox.Show(this,"删除所选基础资料？CAD图形保留；程序原跑道文本保留。","删除资料",MessageBoxButtons.OKCancel)!=DialogResult.OK) return;
         if(IsRunway) { var selected=SelectedBasics<RunwayData>(); _project.Runways.RemoveAll(selected.Contains); } else { var selected=SelectedBasics<NavaidData>(); _project.Navaids.RemoveAll(selected.Contains); }
         Changed(); RefreshData(); RefreshProcedures();
@@ -96,5 +65,4 @@ public sealed partial class WorkspacePanel
         else { var batch=NavaidCsv.ParseText(text,_project.Navaids.Select(n=>n.Ident)); _project.Navaids.AddRange(batch); changed=batch; }
         BaseDataChanged(IsRunway?"Runway":"Navaid",changed); RefreshData(); RefreshProcedures();
     }
-    private string ExportAirportSelection()=>IsRunway?RunwayCsv.Export(SelectedBasics<RunwayData>()):NavaidCsv.Export(SelectedBasics<NavaidData>());
 }

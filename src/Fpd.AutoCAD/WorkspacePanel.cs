@@ -49,16 +49,14 @@ public sealed partial class WorkspacePanel : UserControl
     private void RefreshProject()
     {
         RefreshSummary(); RefreshData(); RefreshProcedures(); RefreshToolChoices();
-        UpdateProjectVisibility();
         SetStatus("就绪");
     }
     internal void BindProject(ProjectData project,bool initialized,bool editable,bool dirty=false)
     {
         var changedProject=!ReferenceEquals(_project,project);
         _project=project; _initialized=initialized; _editable=editable; _dirty=dirty;
-        if(changedProject) { _setupProjectName.Clear(); _setupAirportName.Clear(); _setupLatitude.Clear(); _setupLongitude.Clear(); }
         _refreshing=true;
-        try { _search.Clear(); RefreshProject(); ResetCoordinates(); }
+        try { _projectView.BindProject(project,initialized,editable,changedProject); RefreshProcedures(); RefreshToolChoices(); ResetCoordinates(); SetStatus("就绪"); }
         finally { _refreshing=false; }
         ApplyPageLayers();
     }
@@ -113,23 +111,6 @@ public sealed partial class WorkspacePanel : UserControl
         if(Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument is null) return;
         CadDrawing.ShowProjectLayers(_tabs.SelectedIndex!=1);
     }
-    private double TextHeight => (double)_textHeight.Value;
-    private void UpdateProjectVisibility()
-    {
-        if(_projectDataArea is null || _setupPrompt is null || _projectContent is null) return;
-        _projectDataArea.Visible=_initialized;
-        _setupPrompt.Visible=!_initialized;
-        if(_editProjectButton is not null) _editProjectButton.Visible=_initialized;
-        if(_coordinateButton is not null) _coordinateButton.Visible=_initialized;
-        if(_projectHeader is not null) _projectHeader.Visible=_initialized;
-        if(_setupConfirm is not null) _setupConfirm.Enabled=_editable && !_initialized;
-        if(_projectLayout is not null) _projectLayout.RowStyles[0].SizeType=_initialized?SizeType.AutoSize:SizeType.Absolute;
-        if(_projectLayout is not null && !_initialized) _projectLayout.RowStyles[0].Height=0;
-        var content=_initialized?_projectDataArea:_setupPrompt;
-        if(_projectContent.Controls.Count!=1 || _projectContent.Controls[0]!=content)
-        {
-            _projectContent.Controls.Clear(); _projectContent.Controls.Add(content);
-        }
-    }
+    private double TextHeight => 50;
     protected override void Dispose(bool disposing) { if(disposing) _tips.Dispose(); base.Dispose(disposing); }
 }
