@@ -1,4 +1,5 @@
 using System.Globalization;
+using System.ComponentModel;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -20,6 +21,8 @@ public partial class ProjectWorkspaceView : System.Windows.Controls.UserControl
     private int _refreshVersion;
     private DispatcherOperation? _restoreOperation;
     private ProjectData? _boundProject;
+    private string? _activeSearchText;
+    private ICollectionView? _activeRowsView;
     internal event Action? DataActivated;
 
     internal ProjectWorkspaceView(ProjectWorkspaceViewModel model)
@@ -31,7 +34,7 @@ public partial class ProjectWorkspaceView : System.Windows.Controls.UserControl
     {
         Dispatcher.VerifyAccess();
         _boundProject=project;
-        if(reset) { _states.Clear(); _activeCategory=null; }
+        if(reset) { _states.Clear(); _activeCategory=null; _activeSearchText=null; _activeRowsView=null; }
         _model.BindProject(project,initialized,editable,reset);
     }
     private void SaveGridState()
@@ -54,6 +57,8 @@ public partial class ProjectWorkspaceView : System.Windows.Controls.UserControl
         var category=_model.SelectedCategory.Kind;
         var version=_refreshVersion;
         var view=_model.VisibleRows; var project=_boundProject;
+        var searchText=_model.SearchText;
+        var searchOnly=_activeCategory==category && ReferenceEquals(view,_activeRowsView) && _activeSearchText!=searchText;
         var state=_states.GetValueOrDefault(category)??new GridState([],0,0);
         bool IsCurrent()=>version==_refreshVersion && ReferenceEquals(project,_boundProject) &&
             category==_model.SelectedCategory.Kind && ReferenceEquals(view,_model.VisibleRows);
@@ -67,14 +72,20 @@ public partial class ProjectWorkspaceView : System.Windows.Controls.UserControl
                     if(!ReferenceEquals(ProjectDataGrid.ItemsSource,view)) return;
                     if(_activeCategory!=category) ConfigureColumns(category);
                     _activeCategory=category;
-                    ProjectDataGrid.UpdateLayout();
+                    _activeSearchText=searchText; _activeRowsView=view;
                     if(!IsCurrent()) return;
                     var ids=state.SelectedIds.ToHashSet(StringComparer.OrdinalIgnoreCase);
-                    var selected=ProjectDataGrid.Items.OfType<ProjectRow>().Where(row=>ids.Contains(row.DataId)).ToArray();
+                    var selected=ids.Count==0?[]:view.Cast<ProjectRow>().Where(row=>ids.Contains(row.DataId)).ToArray();
                     ProjectDataGrid.SelectedItems.Clear();
                     foreach(var row in selected) ProjectDataGrid.SelectedItems.Add(row);
-                    var scroll=FindScrollViewer(ProjectDataGrid);
-                    scroll?.ScrollToVerticalOffset(state.VerticalOffset); scroll?.ScrollToHorizontalOffset(state.HorizontalOffset);
+                    // A search keeps the same columns and row snapshot. Let the
+                    // grid clamp its own viewport instead of forcing another layout
+                    // and rebuilding scroll position on every character.
+                    if(!searchOnly)
+                    {
+                        var scroll=FindScrollViewer(ProjectDataGrid);
+                        scroll?.ScrollToVerticalOffset(state.VerticalOffset); scroll?.ScrollToHorizontalOffset(state.HorizontalOffset);
+                    }
                 }
                 finally
                 {

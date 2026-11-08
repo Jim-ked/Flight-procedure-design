@@ -89,7 +89,13 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
         {
             value??="";
             if(value==_searchText) return;
-            ChangeRows(()=> { _searchText=value; Notify(nameof(SearchText)); ReplaceRows(_rows); });
+            ChangeRows(()=>
+            {
+                _searchText=value; Notify(nameof(SearchText));
+                // Filtering does not rebuild the immutable row snapshot or replace
+                // DataGrid.ItemsSource. Refresh is synchronous, never deferred.
+                VisibleRows.Refresh();
+            });
         }
     }
     public ICommand CreateProjectCommand { get; }
@@ -134,12 +140,10 @@ internal sealed class ProjectWorkspaceViewModel : INotifyPropertyChanged
     }
     private ICollectionView CreateRowsView(ProjectRow[] rows)
     {
-        var search=_searchText.Trim();
-        return new ListCollectionView(rows)
-        {
-            Filter=value=>value is ProjectRow row && row.Name.Contains(search,StringComparison.OrdinalIgnoreCase)
-        };
+        return new ListCollectionView(rows) { Filter=RowMatchesSearch };
     }
+    private bool RowMatchesSearch(object value)=>value is ProjectRow row &&
+        row.Name.Contains(_searchText.Trim(),StringComparison.OrdinalIgnoreCase);
     private void ReplaceRows(ProjectRow[] snapshot)
     {
         // Prepare the filtered view before binding it. Never mutate a bound
