@@ -9,9 +9,17 @@ namespace Fpd.AutoCAD;
 
 public sealed class Plugin : IExtensionApplication
 {
-    public void Initialize()=>AcadApp.DocumentManager.MdiActiveDocument?.Editor.WriteMessage("\nFPD F1 已加载；FPD 打开工作区。");
-    public void Terminate()=>FpdPalette.Dispose();
-    [CommandMethod("FPD",CommandFlags.Session)] public void OpenWorkspace()=>FpdPalette.Show();
+    public void Initialize()
+    {
+        AcadApp.DocumentManager.MdiActiveDocument?.Editor.WriteMessage("\nFPD F1 已加载；FPD 打开工作区。");
+    }
+    public void Terminate() { FpdPalette.Dispose(); SymbolLibrary.Dispose(); }
+    [CommandMethod("FPD",CommandFlags.Session)] public void OpenWorkspace()
+    {
+        try { SymbolLibrary.Preload(); }
+        catch(System.Exception ex) { AcadApp.DocumentManager.MdiActiveDocument?.Editor.WriteMessage($"\nFPD 符号库预加载失败：{ex.Message}"); }
+        FpdPalette.Show();
+    }
     [CommandMethod("FPDCLOSE",CommandFlags.Session)] public void CloseWorkspace()=>FpdPalette.Close();
     [CommandMethod("FPDPOINT",CommandFlags.Modal)] public void DrawFix()=>Execute(()=>
     {

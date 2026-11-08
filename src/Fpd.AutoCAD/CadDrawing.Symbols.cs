@@ -11,10 +11,71 @@ internal static partial class CadDrawing
     {
         public string LibrarySha256 { get; set; }="";
         public Dictionary<string,string> Symbols { get; set; }=[];
+        public Dictionary<string,string> Roles { get; set; }=[];
         public Dictionary<string,double> NativeWidths { get; set; }=[];
     }
-    private sealed record ProgramMark(string Project,string Procedure,string Key,string Data,string Geometry);
+    private sealed record ProgramMark(string Project,string Procedure,string? Path,string Key,string Data,string Geometry);
     private const string ProgramTag="FPD_PROGRAM_V1";
+    public static void HighlightPoint(ProjectData project,ProcedureData? procedure,ProcedurePath? path,FixData fix,bool zoom)
+    {
+        var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请先打开 DWG。");
+        if(!BaseMapPolicy.CanWrite(project.DwgPath,doc.Name)) throw new InvalidOperationException("当前DWG不匹配项目关联。");
+        using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction();
+        var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForRead);
+        var ids=new List<ObjectId>();
+        foreach(ObjectId id in model)
+        {
+            var e=(Entity)tr.GetObject(id,OpenMode.ForRead); if(e.ExtensionDictionary.IsNull) continue;
+            var d=(DBDictionary)tr.GetObject(e.ExtensionDictionary,OpenMode.ForRead);
+            if(!d.Contains(ProgramTag)) continue;
+            using var data=((Xrecord)tr.GetObject(d.GetAt(ProgramTag),OpenMode.ForRead)).Data;
+            ProgramMark? mark; try { mark=JsonSerializer.Deserialize<ProgramMark>((string)data.AsArray()[0].Value); } catch { continue; }
+            if(mark is not null && mark.Project==project.ProjectId && mark.Procedure==procedure?.ProcedureId && mark.Path==path?.PathId && mark.Key.StartsWith(fix.DataId+"/",StringComparison.OrdinalIgnoreCase)) ids.Add(id);
+        }
+        if(ids.Count==0)
+        {
+            foreach(ObjectId id in model)
+            {
+                var e=(Entity)tr.GetObject(id,OpenMode.ForRead); var mark=ReadBaseMark(e,tr);
+                if(mark is { Archived:false } && mark.Project==project.ProjectId && mark.Kind=="Fix" && mark.Key==fix.DataId) ids.Add(id);
+            }
+        }
+        tr.Commit();
+        doc.Editor.SetImpliedSelection(ids.ToArray());
+        if(ids.Count==0) { doc.Editor.WriteMessage("\n当前定位点尚未生成可联动的CAD图形。"); return; }
+        if(zoom) ZoomEntities(doc,ids);
+        doc.Editor.UpdateScreen();
+    }
+    private static void ZoomEntities(Autodesk.AutoCAD.ApplicationServices.Document doc,IReadOnlyList<ObjectId> ids)
+    {
+        using var tr=doc.Database.TransactionManager.StartTransaction(); Extents3d? extent=null;
+        foreach(var id in ids) { var e=(Entity)tr.GetObject(id,OpenMode.ForRead); try { var box=e.GeometricExtents; if(extent is null) extent=box; else { var merged=extent.Value; merged.AddExtents(box); extent=merged; } } catch(Autodesk.AutoCAD.Runtime.Exception) { } }
+        tr.Commit(); if(extent is null) return;
+        using var view=doc.Editor.GetCurrentView(); var transform=Matrix3d.PlaneToWorld(view.ViewDirection); transform=Matrix3d.Displacement(view.Target-Point3d.Origin)*transform; transform=Matrix3d.Rotation(-view.ViewTwist,view.ViewDirection,view.Target)*transform; var bounds=extent.Value; bounds.TransformBy(transform.Inverse()); var width=Math.Max(bounds.MaxPoint.X-bounds.MinPoint.X,100); var height=Math.Max(bounds.MaxPoint.Y-bounds.MinPoint.Y,100); var ratio=view.Width/view.Height; view.CenterPoint=new Autodesk.AutoCAD.Geometry.Point2d((bounds.MinPoint.X+bounds.MaxPoint.X)/2,(bounds.MinPoint.Y+bounds.MaxPoint.Y)/2); view.Height=Math.Max(height,width/ratio)*1.25; view.Width=view.Height*ratio; doc.Editor.SetCurrentView(view);
+    }
+    public static void HighlightBasePoint(ProjectData project,string kind,string key,bool zoom)
+    {
+        var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请先打开 DWG。");
+        if(!BaseMapPolicy.CanWrite(project.DwgPath,doc.Name)) throw new InvalidOperationException("当前DWG不匹配项目关联。");
+        using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction(); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForRead); var ids=new List<ObjectId>();
+        foreach(ObjectId id in model) { var e=(Entity)tr.GetObject(id,OpenMode.ForRead); var mark=ReadBaseMark(e,tr); if(mark is { Archived:false } && mark.Project==project.ProjectId && mark.Kind==kind && mark.Key==key) ids.Add(id); }
+        tr.Commit(); doc.Editor.SetImpliedSelection(ids.ToArray()); if(ids.Count==0) { doc.Editor.WriteMessage("\n当前对象尚未生成可联动的CAD图形。"); return; } if(zoom) ZoomEntities(doc,ids); doc.Editor.UpdateScreen();
+    }
+    public static void RemoveProcedurePath(ProjectData project,string procedureId,string pathId)
+    {
+        var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请先打开 DWG。");
+        if(!BaseMapPolicy.CanWrite(project.DwgPath,doc.Name)) throw new InvalidOperationException("当前DWG不匹配项目关联。");
+        using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction(); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite); var conflicts=0; var removed=0;
+        foreach(ObjectId id in model)
+        {
+            var e=(Entity)tr.GetObject(id,OpenMode.ForRead); if(e.ExtensionDictionary.IsNull) continue; var d=(DBDictionary)tr.GetObject(e.ExtensionDictionary,OpenMode.ForRead); if(!d.Contains(ProgramTag)) continue;
+            using var data=((Xrecord)tr.GetObject(d.GetAt(ProgramTag),OpenMode.ForRead)).Data; ProgramMark? mark; try { mark=JsonSerializer.Deserialize<ProgramMark>((string)data.AsArray()[0].Value); } catch { continue; }
+            if(mark is null || mark.Project!=project.ProjectId || mark.Procedure!=procedureId || mark.Path!=pathId) continue;
+            if(!GeometryUnchanged(e,mark.Geometry,tr)) { conflicts++; continue; }
+            e.UpgradeOpen(); e.Erase(); removed++;
+        }
+        tr.Commit(); doc.Editor.Regen(); doc.Editor.WriteMessage($"\n已移除路径图符 {removed} 个；冲突保留 {conflicts} 个。");
+    }
     private static SymbolMap LoadSymbols()
     {
         var map=JsonSerializer.Deserialize<SymbolMap>(File.ReadAllText(Path.Combine(SymbolLibrary.DirectoryPath,"symbol-map.json")))??throw new InvalidDataException("符号映射无效。");
@@ -28,33 +89,55 @@ internal static partial class CadDrawing
         if(!BaseMapPolicy.CanWrite(project.DwgPath,doc.Name)) throw new InvalidOperationException("请打开明确关联的项目DWG。");
         if(!project.Procedures.Contains(procedure) || !procedure.Paths.Contains(selected)) throw new InvalidOperationException("程序/路径目标已变化。");
         ProjectValidation.Project(project); ProjectDataIds.Ensure(project); var mapping=LoadSymbols();
-        // One native symbol per program/Fix/symbol; path names never enter layer ownership.
-        var uses=procedure.Paths.SelectMany(path=>path.Fixes).GroupBy(use=>(Ident:use.FixIdent.ToUpperInvariant(),use.SymbolKey)).ToArray();
+        // A drawing operation is scoped to the selected path. Path identity is persisted on every entity.
+        var uses=selected.Fixes.GroupBy(use=>(Ident:use.FixIdent.ToUpperInvariant(),use.SymbolKey)).ToArray();
         var missing=uses.Select(g=>g.Key.SymbolKey).Distinct().Where(key=>!mapping.Symbols.ContainsKey(key)).ToArray();
         if(missing.Length>0) throw new InvalidOperationException("旧库未确认可用图符："+string.Join("、",missing));
         var blockIds=new Dictionary<string,ObjectId>();
         var phase="打开已审计块库";
         try
         {
-        using var locked=doc.LockDocument();
-        using(var source=new Database(false,true))
+        var source=SymbolLibrary.Open();
         {
-            source.ReadDwgFile(SymbolLibrary.LibraryPath,FileShare.Read,true,null); source.CloseInput(true);
-            using var sourceTr=source.TransactionManager.StartTransaction(); var blocks=(BlockTable)sourceTr.GetObject(source.BlockTableId,OpenMode.ForRead);
             foreach(var key in uses.Select(g=>g.Key.SymbolKey).Distinct())
             {
                 phase="查找块定义 "+key;
-                var name=mapping.Symbols[key]; if(!blocks.Has(name)) throw new InvalidOperationException("审计映射块缺失："+name);
+                var name=mapping.Symbols[key];
                 var qualified="FPD_WS_"+Hash(mapping.LibrarySha256+"/"+name)[..16];
-                using(var read=doc.Database.TransactionManager.StartTransaction()) { var target=(BlockTable)read.GetObject(doc.Database.BlockTableId,OpenMode.ForRead); if(target.Has(qualified)) { blockIds[key]=target[qualified]; continue; } }
-                phase="导入块定义 "+name;
-                var ids=new IdMapping(); source.WblockCloneObjects(new ObjectIdCollection([blocks[name]]),doc.Database.BlockTableId,ids,DuplicateRecordCloning.MangleName,false);
-                phase="命名导入块 "+name;
-                using var rename=doc.Database.TransactionManager.StartTransaction(); var id=ids[blocks[name]].Value; var definition=(BlockTableRecord)rename.GetObject(id,OpenMode.ForWrite); definition.Name=qualified; blockIds[key]=id; rename.Commit();
+                ObjectId sourceId;
+                using(var sourceTr=source.TransactionManager.StartTransaction())
+                {
+                    var blocks=(BlockTable)sourceTr.GetObject(source.BlockTableId,OpenMode.ForRead);
+                    if(!blocks.Has(name)) throw new InvalidOperationException("审计映射块缺失："+name);
+                    sourceId=blocks[name];
+                    sourceTr.Commit();
+                }
+                using(var locked=doc.LockDocument())
+                {
+                    using(var read=doc.Database.TransactionManager.StartTransaction())
+                    {
+                        var target=(BlockTable)read.GetObject(doc.Database.BlockTableId,OpenMode.ForRead);
+                        if(target.Has(qualified)) { blockIds[key]=target[qualified]; continue; }
+                    }
+                    phase="导入块定义 "+name;
+                    var ids=new IdMapping(); source.WblockCloneObjects(new ObjectIdCollection([sourceId]),doc.Database.BlockTableId,ids,DuplicateRecordCloning.MangleName,false);
+                    if(!ids.Contains(sourceId)) throw new InvalidOperationException("AutoCAD 未返回审计块的 IdMapping："+name);
+                    var mapped=ids[sourceId].Value;
+                    if(mapped.IsNull || !mapped.IsValid) throw new InvalidOperationException("AutoCAD 返回了无效的克隆块 ObjectId："+name);
+                    phase="命名导入块 "+name;
+                    using(var rename=doc.Database.TransactionManager.StartTransaction())
+                    {
+                        var definition=(BlockTableRecord)rename.GetObject(mapped,OpenMode.ForWrite);
+                        definition.Name=qualified;
+                        rename.Commit();
+                    }
+                    blockIds[key]=mapped;
+                }
             }
         }
         phase="建立程序图层";
-        using var tr=doc.Database.TransactionManager.StartTransaction(); var layer="FPD_P_"+Hash(procedure.ProcedureId)[..12]+"_SYMBOL"; EnsureLayer(tr,doc.Database,layer,7);
+        using var lockedTarget=doc.LockDocument();
+        using var tr=doc.Database.TransactionManager.StartTransaction(); var layer="FPD_P_"+Hash(procedure.ProcedureId)[..8]+"_"+Hash(selected.PathId)[..8]+"_SYMBOL"; EnsureLayer(tr,doc.Database,layer,7);
         var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
         var existing=new List<(Entity Entity,ProgramMark Mark)>();
         foreach(ObjectId id in model)
@@ -63,7 +146,7 @@ internal static partial class CadDrawing
             var d=(DBDictionary)tr.GetObject(e.ExtensionDictionary,OpenMode.ForRead); if(!d.Contains(ProgramTag)) continue;
             using var data=((Xrecord)tr.GetObject(d.GetAt(ProgramTag),OpenMode.ForRead)).Data;
             var mark=JsonSerializer.Deserialize<ProgramMark>((string)data.AsArray()[0].Value);
-            if(mark is not null && mark.Project==project.ProjectId && mark.Procedure==procedure.ProcedureId) existing.Add((e,mark));
+            if(mark is not null && mark.Project==project.ProjectId && mark.Procedure==procedure.ProcedureId && mark.Path==selected.PathId) existing.Add((e,mark));
         }
         var desired=new HashSet<string>(); var added=0; var conflicts=0;
         void Add(Entity e,string key,string data)
@@ -73,7 +156,7 @@ internal static partial class CadDrawing
             phase="检查图符几何 "+key+" / "+e.GetType().Name;
             var geometry=GeometryStamp(e,tr);
             phase="保存图符标记 "+key;
-            using var buffer=new ResultBuffer(new TypedValue((int)DxfCode.Text,JsonSerializer.Serialize(new ProgramMark(project.ProjectId,procedure.ProcedureId,key,data,geometry)))); record.Data=buffer;
+            using var buffer=new ResultBuffer(new TypedValue((int)DxfCode.Text,JsonSerializer.Serialize(new ProgramMark(project.ProjectId,procedure.ProcedureId,selected.PathId,key,data,geometry)))); record.Data=buffer;
         }
         foreach(var group in uses)
         {

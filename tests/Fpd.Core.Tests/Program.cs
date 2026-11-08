@@ -206,14 +206,21 @@ try
         Check(opened.Procedures[0].Kind == ProcedureKind.Approach && opened.Procedures[0].Runway == "16" && opened.Procedures[0].FixIdents.SequenceEqual(new[] { "TJ002", "TJ001", "TJ002" }));
         project.Name = "updated"; store.Save(project, path); Check(store.Open(path).Name == "updated");
     });
-    Test("all three Procedure kinds preserved", () =>
+    Test("all five Procedure kinds preserved", () =>
     {
-        var p = Sample(); p.Procedures = Enum.GetValues<ProcedureKind>().Select(k => new ProcedureData { Name = k.ToString(), Kind = k }).ToList();
-        var path = Path.Combine(work, "kinds.json"); store.Save(p, path); Check(store.Open(path).Procedures.Count == 3);
+        var p = Sample(); var approach = new ProcedureData { Name = "APP", Kind = ProcedureKind.Approach };
+        p.Procedures = [
+            new() { Name = "DEP", Kind = ProcedureKind.Departure },
+            new() { Name = "ARR", Kind = ProcedureKind.Arrival },
+            approach,
+            new() { Name = "MIS", Kind = ProcedureKind.Missed, ParentProcedureId = approach.ProcedureId },
+            new() { Name = "HLD", Kind = ProcedureKind.Holding, ParentProcedureId = approach.ProcedureId }
+        ];
+        var path = Path.Combine(work, "kinds.json"); store.Save(p, path); Check(store.Open(path).Procedures.Count == 5);
     });
     Test("duplicate Fix identifiers rejected", () => { var p = Sample(); p.Fixes.Add(new() { Ident = "tj001", Latitude = 39, Longitude = 117 }); Reject(() => store.Save(p, Path.Combine(work, "duplicate.json"))); });
     Test("unknown Procedure Fix rejected", () => { var p = Sample(); p.Procedures[0].FixIdents.Add("MISSING"); Reject(() => store.Save(p, Path.Combine(work, "missing.json"))); });
-    Test("Holding is not a fourth Procedure kind", () => { var p = Sample(); p.Procedures[0].Kind = (ProcedureKind)3; Reject(() => store.Save(p, Path.Combine(work, "holding.json"))); });
+    Test("Missed requires an Approach parent", () => { var p = Sample(); p.Procedures[0].Kind = ProcedureKind.Missed; p.Procedures[0].ParentProcedureId = "missing"; Reject(() => store.Save(p, Path.Combine(work, "missed.json"))); });
     Test("incomplete ARP rejected", () => { var p = Sample(); p.Airport.ArpLongitude = null; Reject(() => store.Save(p, Path.Combine(work, "arp.json"))); });
     Test("null airport JSON rejected", () => { var path = Path.Combine(work, "invalid.json"); File.WriteAllText(path, "{\"Airport\":null}"); Reject(() => store.Open(path)); });
     Test("CSV imports header quoted ident optional height", () =>

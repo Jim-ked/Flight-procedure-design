@@ -43,6 +43,18 @@ public static class ProjectValidation
             if (procedure is null || string.IsNullOrWhiteSpace(procedure.Name) || !Enum.IsDefined(procedure.Kind) || procedure.FixIdents is null || procedure.Sections is null)
                 throw new InvalidDataException("程序名称、类型或定位点顺序无效。");
             if(string.IsNullOrWhiteSpace(procedure.ProcedureId) || !procedureIds.Add(procedure.ProcedureId) || procedure.Paths is null) throw new InvalidDataException("程序ID或路径列表无效/重复。");
+            if(procedure.Kind==ProcedureKind.Missed)
+            {
+                var parent=project.Procedures.FirstOrDefault(x=>x.ProcedureId==procedure.ParentProcedureId);
+                if(parent is null || parent.Kind!=ProcedureKind.Approach) throw new InvalidDataException("复飞程序必须关联一个进近程序。");
+            }
+            else if(procedure.Kind==ProcedureKind.Holding && procedure.ParentProcedureId is not null)
+            {
+                var parent=project.Procedures.FirstOrDefault(x=>x.ProcedureId==procedure.ParentProcedureId);
+                if(parent is null || parent.Kind is not (ProcedureKind.Departure or ProcedureKind.Arrival or ProcedureKind.Approach)) throw new InvalidDataException("等待程序的关联对象必须是离场、进场或进近程序。");
+            }
+            else if(procedure.Kind is not (ProcedureKind.Holding or ProcedureKind.Missed) && procedure.ParentProcedureId is not null)
+                throw new InvalidDataException("仅复飞或等待程序允许关联父程序。");
             var pathIds=new HashSet<string>(); var pathNames=new HashSet<string>(StringComparer.OrdinalIgnoreCase);
             foreach(var path in procedure.Paths)
             {
@@ -57,7 +69,7 @@ public static class ProjectValidation
             {
                 if(section is null || string.IsNullOrWhiteSpace(section.Name) || !names.Add(section.Name) || !Enum.IsDefined(section.Stage) || !Enum.IsDefined(section.Branch) || section.FixIdents is null)
                     throw new InvalidDataException("程序段名称、阶段或分支无效/重复。");
-                if(section.Stage==ProcedureStage.Missed && procedure.Kind!=ProcedureKind.Approach) throw new InvalidDataException("Missed仅属于Approach程序。");
+                if(section.Stage==ProcedureStage.Missed && procedure.Kind is not (ProcedureKind.Approach or ProcedureKind.Missed)) throw new InvalidDataException("Missed仅属于Approach或复飞程序。");
                 foreach(var ident in section.FixIdents) if(ident is null || !identifiers.Contains(ident)) throw new InvalidDataException($"程序段引用未知Fix：{ident}");
             }
         }

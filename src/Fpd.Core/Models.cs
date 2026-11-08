@@ -31,7 +31,8 @@ public sealed class FixData
     public double? Elevation { get; set; }
 }
 
-public enum ProcedureKind { Departure, Arrival, Approach }
+// Values 0-2 are kept stable for existing numeric JSON files.
+public enum ProcedureKind { Departure, Arrival, Approach, Missed, Holding }
 
 public sealed class ObstacleData
 {
@@ -52,6 +53,8 @@ public sealed class ProcedureData
     public bool PathsMigrated { get; set; }
     public string Name { get; set; } = "";
     public ProcedureKind Kind { get; set; }
+    // Missed procedures must reference their parent Approach; Holding may optionally reference a parent procedure.
+    public string? ParentProcedureId { get; set; }
     public string? Runway { get; set; }
     public List<string> FixIdents { get; set; } = [];
     public List<ProcedureSection> Sections { get; set; } = [];

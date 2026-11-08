@@ -40,7 +40,7 @@ public sealed partial class WorkspacePanel
         {
             foreach(var (name,width) in obstacle?new[] { ("标识",130),("顶标高 m",110) }:new[] { ("标识",160) }) grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText=name,Width=width,SortMode=DataGridViewColumnSortMode.NotSortable });
             grid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
-            grid.SelectionChanged+=(_,_)=>UpdateSelection(); grid.CellDoubleClick+=(_,e)=> { if(e.RowIndex>=0) Run(()=>EditPoint(true)); };
+            grid.SelectionChanged+=(_,_)=> { UpdateSelection(); if(!_refreshing && grid.Focused && !IsAirportData) HighlightSelectedProjectData(false); }; grid.CellDoubleClick+=(_,e)=> { if(e.RowIndex>=0 && !IsAirportData) Run(()=>HighlightSelectedProjectData(true)); else if(e.RowIndex>=0) Run(()=>EditPoint(true)); };
             grid.KeyDown+=(_,e)=>
             {
                 if(e.Control && e.KeyCode==Keys.C) { Run(CopyPoints); e.SuppressKeyPress=true; }
@@ -54,8 +54,8 @@ public sealed partial class WorkspacePanel
         Columns(_fixGrid,false); Columns(_obstacleGrid,true);
         var fixes=Page("定位点"); fixes.Padding=Padding.Empty; fixes.Controls.Add(_fixGrid); var obstacles=Page("障碍物"); obstacles.Padding=Padding.Empty; obstacles.Controls.Add(_obstacleGrid);
         _dataTabs.TabPages.Add(fixes); _dataTabs.TabPages.Add(obstacles); AddAirportTabs(); _dataTabs.SelectedIndexChanged+=(_,_)=>UpdateSelection();
-        _search.TextChanged+=(_,_)=>RefreshData(); Row(stack,_dataTabs,100,true); Row(stack,_selectionSummary,23);
-        Row(stack,Bar(Button("新增",()=>EditPoint(false)),Button("修改",()=>EditPoint(true)),Button("删除",DeletePoints),Button("CSV 导入",ImportPoints)),34);
+        _search.TextChanged+=(_,_)=>RefreshCurrentData(); Row(stack,_dataTabs,100,true); Row(stack,_selectionSummary,23);
+        Row(stack,Bar(Button("新增",()=>EditPoint(false)),Button("修改",()=>EditPoint(true)),Button("删除",DeletePoints),Button("CSV 导入",ImportPoints),Button("绘制所选",()=>DrawSelected(false)),Button("绘制全部",()=>DrawSelected(true))),34);
         Row(stack,_dataDetails,52);
         page.Controls.Add(stack); return page;
     }
@@ -66,22 +66,37 @@ public sealed partial class WorkspacePanel
         _projectionSummary.Text=_project.Airport.ArpLongitude is double lon ? $"CGCS2000 / CM{Cgcs2000Projection.ZoneForLongitude(lon).CentralMeridian}E · EPSG:{Cgcs2000Projection.ZoneForLongitude(lon).Epsg}" : "投影未确定 · 请编辑机场资料";
         _dwgSummary.Text="DWG · "+(_project.DwgPath is null?"未关联":Path.GetFileName(_project.DwgPath)); _tips.SetToolTip(_dwgSummary,_project.DwgPath??"未关联");
     }
+    private void FillGrid<T>(DataGridView grid,IEnumerable<T> values,Func<T,string> ident,Func<T,object?[]> cells)
+    {
+        var selected=grid.SelectedRows.Cast<DataGridViewRow>().Select(r=>r.Tag).ToHashSet(); grid.Rows.Clear();
+        foreach(var value in values.Where(v=>ident(v).Contains(_search.Text.Trim(),StringComparison.OrdinalIgnoreCase)))
+        { var row=grid.Rows[grid.Rows.Add(cells(value))]; row.Tag=value; row.Selected=selected.Contains(value); }
+        if(selected.Count==0) grid.ClearSelection();
+    }
     private void RefreshData()
     {
-        void Fill(DataGridView grid,IEnumerable<object> values,Func<object,string> ident,Func<object,object?[]> cells)
-        {
-            var selected=grid.SelectedRows.Cast<DataGridViewRow>().Select(r=>r.Tag).ToHashSet(); grid.Rows.Clear();
-            foreach(var value in values.Where(v=>ident(v).Contains(_search.Text.Trim(),StringComparison.OrdinalIgnoreCase)))
-            { var row=grid.Rows[grid.Rows.Add(cells(value))]; row.Tag=value; row.Selected=selected.Contains(value); }
-            // DataGridView auto-selects its first row; an empty selection must stay empty.
-            if(selected.Count==0) grid.ClearSelection();
-        }
-        Fill(_fixGrid,_project.Fixes,f=>((FixData)f).Ident,f=> { var p=(FixData)f; return [p.Ident]; });
-        Fill(_obstacleGrid,_project.Obstacles,o=>((ObstacleData)o).Ident,o=> { var p=(ObstacleData)o; return [p.Ident,p.TopElevation]; });
+        FillGrid(_fixGrid,_project.Fixes,f=>f.Ident,f=>[f.Ident]);
+        FillGrid(_obstacleGrid,_project.Obstacles,o=>o.Ident,o=>[o.Ident,o.TopElevation]);
         RefreshAirportData(); UpdateSelection();
+    }
+    private void RefreshCurrentData()
+    {
+        switch(_dataTabs.SelectedIndex)
+        {
+            case 0: FillGrid(_fixGrid,_project.Fixes,f=>f.Ident,f=>[f.Ident]); break;
+            case 1: FillGrid(_obstacleGrid,_project.Obstacles,o=>o.Ident,o=>[o.Ident,o.TopElevation]); break;
+            default: RefreshAirportData(); break;
+        }
+        UpdateSelection();
     }
     private List<FixData> SelectedFixes()=>_fixGrid.SelectedRows.Cast<DataGridViewRow>().OrderBy(r=>r.Index).Select(r=>(FixData)r.Tag!).ToList();
     private List<ObstacleData> SelectedObstacles()=>_obstacleGrid.SelectedRows.Cast<DataGridViewRow>().OrderBy(r=>r.Index).Select(r=>(ObstacleData)r.Tag!).ToList();
+    private void HighlightSelectedProjectData(bool zoom)
+    {
+        if(CurrentGrid.SelectedRows.Count!=1 || !BaseMapPolicy.CanWrite(_project.DwgPath,_drawingPath())) return;
+        var fix=CurrentGrid.SelectedRows[0].Tag as FixData; if(fix is not null) { var project=_project; CadOperation(()=>CadDrawing.HighlightPoint(project,null,null,fix,zoom)); return; }
+        var obstacle=CurrentGrid.SelectedRows[0].Tag as ObstacleData; if(obstacle is not null) { var project=_project; CadOperation(()=>CadDrawing.HighlightBasePoint(project,"Obstacle",obstacle.DataId,zoom)); }
+    }
     private void UpdateSelection()
     {
         _selectionSummary.Text=$"{_dataTabs.SelectedTab?.Text} · 已选 {CurrentGrid.SelectedRows.Count} / {DataCount}";

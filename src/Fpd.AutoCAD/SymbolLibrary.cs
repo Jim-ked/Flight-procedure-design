@@ -6,12 +6,35 @@ using System.Text.Json;
 namespace Fpd.AutoCAD;
 internal static class SymbolLibrary
 {
+    private static readonly object Gate=new();
+    private static Database? _database;
     internal static string DirectoryPath=>Path.Combine(Path.GetDirectoryName(typeof(SymbolLibrary).Assembly.Location)!,"Symbols");
     internal static string LibraryPath=>Path.Combine(DirectoryPath,"WsSymbol2.1.dwg");
+    internal static Database Open()
+    {
+        lock(Gate)
+        {
+            if(_database is not null) return _database;
+            var database=new Database(false,true);
+            try
+            {
+                database.ReadDwgFile(LibraryPath,FileOpenMode.OpenForReadAndAllShare,true,null);
+                database.CloseInput(true);
+                _database=database;
+                return database;
+            }
+            catch { database.Dispose(); throw; }
+        }
+    }
+    internal static void Preload()=>Open();
+    internal static void Dispose()
+    {
+        lock(Gate) { _database?.Dispose(); _database=null; }
+    }
     public static void Audit()
     {
         var output=Path.Combine(Path.GetDirectoryName(typeof(SymbolLibrary).Assembly.Location)!,"symbol-audit"); Directory.CreateDirectory(output);
-        using var db=new Database(false,true); db.ReadDwgFile(LibraryPath,FileShare.Read,true,null); db.CloseInput(true);
+        var db=Open();
         using var tr=db.TransactionManager.StartTransaction(); var table=(BlockTable)tr.GetObject(db.BlockTableId,OpenMode.ForRead);
         var rows=new List<object>();
         foreach(ObjectId id in table)
