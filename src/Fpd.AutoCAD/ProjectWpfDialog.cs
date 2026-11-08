@@ -27,7 +27,7 @@ internal abstract class ProjectWpfDialog : Window, IDisposable
         Background=new SolidColorBrush(MediaColor.FromRgb(37,37,37)); Foreground=MediaBrushes.Gainsboro;
         FontFamily=new WpfFontFamily("Microsoft YaHei UI"); FontSize=13;
         var root=new Grid { Margin=new Thickness(12) }; root.RowDefinitions.Add(new RowDefinition { Height=new GridLength(1,GridUnitType.Star) }); root.RowDefinitions.Add(new RowDefinition { Height=GridLength.Auto });
-        Fields.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(126) }); Fields.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(1,GridUnitType.Star) }); root.Children.Add(Fields);
+        Fields.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(126) }); Fields.ColumnDefinitions.Add(new ColumnDefinition { Width=new GridLength(1,GridUnitType.Star) }); var fieldScroll=new ScrollViewer { Content=Fields,VerticalScrollBarVisibility=ScrollBarVisibility.Auto,HorizontalScrollBarVisibility=ScrollBarVisibility.Disabled }; root.Children.Add(fieldScroll);
         var buttons=new StackPanel { Orientation=System.Windows.Controls.Orientation.Horizontal,HorizontalAlignment=System.Windows.HorizontalAlignment.Right,Margin=new Thickness(0,12,0,0) };
         if(showPick) buttons.Children.Add(Button("CAD拾点",()=> { try { Pick(); } catch(Exception ex) { System.Windows.MessageBox.Show(this,ex.Message,Title,MessageBoxButton.OK,MessageBoxImage.Warning); } }));
         buttons.Children.Add(Button("确定",Accept)); buttons.Children.Add(Button("取消",Cancel)); Grid.SetRow(buttons,1); root.Children.Add(buttons); Content=root;

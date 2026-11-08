@@ -28,7 +28,7 @@ public sealed class RunwayData
 public enum NavaidKind { VOR=0, DME=1, NDB=2, ILS=3, VOR_DME=4, LOC=5, GP=6, MB=7, GBAS=8 }
 public static class NavaidKindCatalog
 {
-    public static readonly NavaidKind[] Choices=[NavaidKind.VOR,NavaidKind.DME,NavaidKind.VOR_DME,NavaidKind.NDB,NavaidKind.LOC,NavaidKind.GP,NavaidKind.MB,NavaidKind.GBAS,NavaidKind.ILS];
+    public static readonly NavaidKind[] Choices=[NavaidKind.VOR,NavaidKind.DME,NavaidKind.VOR_DME,NavaidKind.NDB,NavaidKind.LOC,NavaidKind.GP,NavaidKind.MB,NavaidKind.GBAS];
     public static string Code(NavaidKind kind)=>kind.ToString();
     public static string Display(NavaidKind kind)=>kind switch
     {
@@ -49,7 +49,7 @@ public static class NavaidKindCatalog
         if(Enum.TryParse(value,true,out kind) && Enum.IsDefined(kind)) return true;
         return false;
     }
-    public static NavaidKind FromDisplay(string value)=>Choices.First(kind=>Display(kind).Equals(value,StringComparison.OrdinalIgnoreCase));
+    public static NavaidKind FromDisplay(string value)=>Choices.Concat(new[]{NavaidKind.ILS}).First(kind=>Display(kind).Equals(value,StringComparison.OrdinalIgnoreCase));
 }
 public sealed class NavaidData
 {
