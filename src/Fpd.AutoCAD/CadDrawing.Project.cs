@@ -98,12 +98,65 @@ internal static partial class CadDrawing
         var denominator=scale.DrawingUnits/scale.PaperUnits;
         if(!double.IsFinite(denominator) || denominator<=0)
             throw new InvalidOperationException("请先设置可用注释比例。");
-        // Metre drawings commonly retain 1:1. Use an initial 1:20000 airport
-        // label style (50 m text) in that case. Symbol dimensions remain tied
-        // to the actual annotation scale, independently of text height.
-        var labelScale=Math.Abs(denominator-1)<1e-9?20000:denominator;
-        return new DrawingStyle(.0035*denominator,.0025*labelScale,.0015*labelScale);
+        // Paper height is millimetres; project model coordinates are metres.
+        // 1:1 means 0.0025 m, 1:2000 means 5 m. Never reinterpret or change
+        // an existing drawing's annotation scale to make text appear larger.
+        return new DrawingStyle(.0035*denominator,.0025*denominator,.0015*denominator);
     }
+    private sealed record FixLabel(FixData Fix,ProjectedPoint Projected,Point3d Text,IReadOnlySet<string> Neighbours)
+    {
+        public Point3d Point=>new(Projected.Easting,Projected.Northing,Projected.Z);
+    }
+    private static IReadOnlyList<FixLabel> LayoutFixLabels(ProjectData project,DrawingStyle style)
+    {
+        var cm=AirportGeometry.Meridian(project);
+        var points=project.Fixes.OrderBy(f=>f.Ident,StringComparer.OrdinalIgnoreCase).ThenBy(f=>f.DataId,StringComparer.Ordinal).Select(f=>
+        {
+            var p=Cgcs2000Projection.ForwardInZone(f.Latitude,f.Longitude,cm,f.Elevation);
+            return (Fix:f,Projected:p,Point:new Point3d(p.Easting,p.Northing,p.Z));
+        }).ToArray();
+        if(points.Length==0) return [];
+        // Conservative local text boxes, not a global chart-label optimizer.
+        // A spatial index groups overlapping default labels once per operation.
+        var height=style.TextHeight*1.6;
+        double Width(int i)=>style.TextHeight*Math.Max(1,points[i].Fix.Ident.Length);
+        var cellWidth=points.Max(p=>style.TextHeight*Math.Max(1,p.Fix.Ident.Length));
+        var cells=new Dictionary<(long X,long Y),List<int>>();
+        var parents=Enumerable.Range(0,points.Length).ToArray();
+        int Root(int i) { while(parents[i]!=i) { parents[i]=parents[parents[i]]; i=parents[i]; } return i; }
+        for(var i=0;i<points.Length;i++)
+        {
+            var at=points[i].Point;
+            var cell=((long)Math.Floor(at.X/cellWidth),(long)Math.Floor(at.Y/height));
+            for(var x=-1;x<=1;x++) for(var y=-1;y<=1;y++)
+                if(cells.TryGetValue((cell.Item1+x,cell.Item2+y),out var near))
+                    foreach(var j in near)
+                    {
+                        var other=points[j].Point;
+                        if(Math.Abs(at.Y-other.Y)<height && at.X<other.X+Width(j) && other.X<at.X+Width(i)) parents[Root(i)]=Root(j);
+                    }
+            if(!cells.TryGetValue(cell,out var list)) cells[cell]=list=[];
+            list.Add(i);
+        }
+        var labels=new List<FixLabel>();
+        foreach(var group in Enumerable.Range(0,points.Length).GroupBy(Root))
+        {
+            var members=group.ToArray();
+            var ids=members.Select(i=>points[i].Fix.DataId).ToHashSet(StringComparer.OrdinalIgnoreCase);
+            var x=members.Max(i=>points[i].Point.X)+style.LabelGap;
+            var y=members.Min(i=>points[i].Point.Y)+style.LabelGap;
+            for(var rank=0;rank<members.Length;rank++)
+            {
+                var item=points[members[rank]];
+                labels.Add(new(item.Fix,item.Projected,new Point3d(x,y+rank*height,item.Point.Z),ids));
+            }
+        }
+        return labels;
+    }
+    private static string FixLabelFingerprint(ProjectData project,FixLabel label,DrawingStyle style)=>
+        Hash(BaseFingerprint(project,label.Fix)+"/local-label-v3/"+
+            string.Join("/",new[]{label.Text.X,label.Text.Y,label.Text.Z,style.TextHeight}.Select(v=>v.ToString("R",System.Globalization.CultureInfo.InvariantCulture))));
+
     private static Extents3d BlockExtents(BlockTableRecord block,Transaction tr)
     {
         Extents3d? result=null;
@@ -190,10 +243,11 @@ internal static partial class CadDrawing
         if(Math.Abs(point.Position.X-p.Easting)>.01 || Math.Abs(point.Position.Y-p.Northing)>.01) throw new InvalidOperationException("登记坐标已改变，请保留所选CAD点的经纬度。");
         if(ReadBaseMark(point,tr) is not null) throw new InvalidOperationException("原生点已有身份。");
         var style=ProjectDrawingStyle(doc.Database);
-        EnsureLayer(tr,doc.Database,"基础_定位点",3); point.UpgradeOpen(); point.Layer="基础_定位点"; point.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0);
+        var label=LayoutFixLabels(project,style).Single(l=>l.Fix.DataId==fix.DataId);
+        EnsureLayer(tr,doc.Database,"基础_定位点",3); point.UpgradeOpen(); point.Layer="基础_定位点"; point.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,256);
         var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
-        var text=new DBText { Layer="基础_定位点",Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0),Position=point.Position+new Vector3d(style.LabelGap,style.LabelGap,0),Height=style.TextHeight,TextString=fix.Ident }; model.AppendEntity(text); tr.AddNewlyCreatedDBObject(text,true);
-        var group=Guid.NewGuid().ToString("N"); var fingerprint=BaseFingerprint(project,fix);
+        var text=new DBText { Layer="基础_定位点",Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,256),Position=label.Text,Height=style.TextHeight,TextString=fix.Ident }; model.AppendEntity(text); tr.AddNewlyCreatedDBObject(text,true);
+        var group=Guid.NewGuid().ToString("N"); var fingerprint=FixLabelFingerprint(project,label,style);
         foreach(var entity in new Entity[] { point,text }) WriteBaseMark(entity,new(project.ProjectId,"Fix",fix.DataId,fix.Ident,fingerprint,GeometryStamp(entity,tr),group,2),tr);
         RememberBase(project,"Fix",fix.DataId,tr,doc.Database); tr.Commit();
     }

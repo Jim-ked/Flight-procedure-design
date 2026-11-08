@@ -111,10 +111,15 @@ internal static partial class CadDrawing
         bool Selected(string itemKind,string key)=>(kind is null || kind==itemKind) && (keys is null || keys.Contains(key));
         string Fingerprint(object data)=>BaseFingerprint(project,data);
         var items=new List<BaseItem>();
-        foreach(var f in project.Fixes.Where(f=>Selected("Fix",f.DataId)))
+        if(kind is null or "Fix")
         {
-            var p=Cgcs2000Projection.ForwardInZone(f.Latitude,f.Longitude,cm,f.Elevation);
-            items.Add(new("Fix",f.DataId,f.Ident,"基础_定位点",Fingerprint(f),tr=>DrawBasePoints([new(f.Ident,p,false)],style!,tr),new(p.Easting,p.Northing,p.Z)));
+            style??=ProjectDrawingStyle(doc.Database);
+            foreach(var label in LayoutFixLabels(project,style).Where(l=>keys is null || l.Neighbours.Overlaps(keys)))
+            {
+                var f=label.Fix; var at=label.Point;
+                items.Add(new("Fix",f.DataId,f.Ident,"基础_定位点",FixLabelFingerprint(project,label,style),
+                    tr=>DrawBasePoints([new(f.Ident,label.Projected,false)],style!,tr,label.Text),at));
+            }
         }
         foreach(var o in project.Obstacles.Where(o=>Selected("Obstacle",o.DataId)))
         {
@@ -184,7 +189,7 @@ internal static partial class CadDrawing
             }
         }
         if(changes.Count==0) return conflicts.Count>0?"图形已由人工修改，请检查："+string.Join("、",conflicts):"图形已一致";
-        style=ProjectDrawingStyle(doc.Database);
+        style??=ProjectDrawingStyle(doc.Database);
         PrepareProjectBlocks(changes.Where(c=>c.Item.SymbolKind is not null).Select(c=>c.Item.SymbolKind!));
         using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction();
         foreach(var change in changes)
