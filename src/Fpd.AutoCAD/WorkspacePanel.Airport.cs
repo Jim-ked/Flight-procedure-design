@@ -61,7 +61,7 @@ public sealed partial class WorkspacePanel
         var original=_project.Runways.ToList();
         if(previous is null) _project.Runways.Add(dialog.Value); else _project.Runways[_project.Runways.IndexOf(previous)]=dialog.Value;
         try { ProjectValidation.Project(_project); } catch { _project.Runways=original; throw; }
-        BaseDataChanged(); RefreshData(); RefreshProcedures();
+        BaseDataChanged("Runway",[dialog.Value]); RefreshData(); RefreshProcedures();
     }
     private void EditNavaid(NavaidData? previous,NavaidData? draft=null)
     {
@@ -75,25 +75,26 @@ public sealed partial class WorkspacePanel
         ProjectDataIds.Ensure(_project); if(previous is not null) dialog.Value.DataId=previous.DataId;
         if(_project.Navaids.Any(n=>n!=previous && n.Ident.Equals(dialog.Value.Ident,StringComparison.OrdinalIgnoreCase))) throw new InvalidOperationException("设施标识重复。");
         if(previous is null) _project.Navaids.Add(dialog.Value); else _project.Navaids[_project.Navaids.IndexOf(previous)]=dialog.Value;
-        BaseDataChanged(); RefreshData();
+        BaseDataChanged("Navaid",[dialog.Value]); RefreshData();
     }
     private void DeleteAirportData()
     {
         if(CurrentGrid.SelectedRows.Count==0) throw new InvalidOperationException("请选择数据行。");
         if(MessageBox.Show(this,"删除所选基础资料？CAD图形保留；程序原跑道文本保留。","删除资料",MessageBoxButtons.OKCancel)!=DialogResult.OK) return;
         if(IsRunway) { var selected=SelectedBasics<RunwayData>(); _project.Runways.RemoveAll(selected.Contains); } else { var selected=SelectedBasics<NavaidData>(); _project.Navaids.RemoveAll(selected.Contains); }
-        BaseDataChanged(); RefreshData(); RefreshProcedures();
+        Changed(); RefreshData(); RefreshProcedures();
     }
     private void AddAirportText(string text)
     {
+        IReadOnlyList<object> changed;
         if(IsRunway)
         {
             var batch=RunwayCsv.ParseText(text,_project.Runways.Select(r=>r.Ident)); var original=_project.Runways; _project.Runways=original.Concat(batch).ToList();
             try { ProjectValidation.Project(_project); } catch { _project.Runways=original; throw; }
-            SetStatus($"已导入 {batch.Count} 条跑道");
+            changed=batch;
         }
-        else { var batch=NavaidCsv.ParseText(text,_project.Navaids.Select(n=>n.Ident)); _project.Navaids.AddRange(batch); SetStatus($"已导入 {batch.Count} 个设施"); }
-        BaseDataChanged(); RefreshData(); RefreshProcedures();
+        else { var batch=NavaidCsv.ParseText(text,_project.Navaids.Select(n=>n.Ident)); _project.Navaids.AddRange(batch); changed=batch; }
+        BaseDataChanged(IsRunway?"Runway":"Navaid",changed); RefreshData(); RefreshProcedures();
     }
     private string ExportAirportSelection()=>IsRunway?RunwayCsv.Export(SelectedBasics<RunwayData>()):NavaidCsv.Export(SelectedBasics<NavaidData>());
 }

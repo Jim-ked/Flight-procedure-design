@@ -68,7 +68,7 @@ internal static class DwgProjects
         Attach(doc); var state=States[doc];
         Panel?.BindProject(state.Project,state.Initialized,state.Error?.StartsWith("读取项目失败")!=true,state.Dirty);
         if(state.Error is not null) Panel?.SetStatus(state.Error);
-        else if(!state.Initialized) Panel?.SetStatus("当前DWG尚未创建项目；已有CAD图形保留。");
+        else if(!state.Initialized) Panel?.SetStatus("就绪");
     }
     public static bool IsCurrent(ProjectData project) => AcadApp.DocumentManager.MdiActiveDocument is { } doc && States.TryGetValue(doc,out var state) && ReferenceEquals(state.Project,project);
     public static void Initialize(ProjectData project)

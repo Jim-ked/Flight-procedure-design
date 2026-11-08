@@ -11,21 +11,22 @@ internal sealed record CadLayer(string Name, bool Visible, int EntityCount);
 internal static partial class CadDrawing
 {
     public static readonly string[] LayerNames = ["基础_定位点", "基础_障碍物", "基础_跑道", "基础_导航台"];
-    private static void DrawBasePoints(ProjectData project,IReadOnlyList<PlotPoint> points,double height,Transaction tr)
+    private static IReadOnlyList<ObjectId> DrawBasePoints(IReadOnlyList<PlotPoint> points,DrawingStyle textStyle,Transaction tr)
     {
         var db=AcadApp.DocumentManager.MdiActiveDocument!.Database;
         var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(db),OpenMode.ForWrite);
+        var created=new List<ObjectId>();
         foreach(var row in points)
         {
             var layer=row.IsObstacle?"基础_障碍物":"基础_定位点"; EnsureLayer(tr,db,layer,row.IsObstacle?(short)1:(short)3);
             var at=new Point3d(row.Point.Easting,row.Point.Northing,row.Point.Z);
-            Entity entity=row.IsObstacle?ProjectSymbol(tr,db,"Obstacle",at,height):new DBPoint(at);
+            Entity entity=row.IsObstacle?ProjectSymbol(tr,db,"Obstacle",at,textStyle):new DBPoint(at);
             entity.Color=Autodesk.AutoCAD.Colors.Color.FromColorIndex(ColorMethod.ByLayer,0);
-            entity.Layer=layer; model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true);
-            var textStyle=ProjectDrawingStyle(db);
+            entity.Layer=layer; model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true); created.Add(entity.ObjectId);
             var text=new DBText { Layer=layer,Color=Autodesk.AutoCAD.Colors.Color.FromColorIndex(ColorMethod.ByLayer,0),Position=at+new Vector3d(textStyle.LabelGap,textStyle.LabelGap,0),Height=textStyle.TextHeight,TextString=row.Ident };
-            model.AppendEntity(text); tr.AddNewlyCreatedDBObject(text,true);
+            model.AppendEntity(text); tr.AddNewlyCreatedDBObject(text,true); created.Add(text.ObjectId);
         }
+        return created;
     }
 
     public static IReadOnlyList<CadLayer> ReadLayers()

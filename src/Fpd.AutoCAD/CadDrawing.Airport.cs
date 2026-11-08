@@ -66,14 +66,14 @@ internal static partial class CadDrawing
         }
         doc.Editor.WriteMessage($"\n已匹配 {selected.Count} 个项目对象；取消或未匹配不更改资料。"); return selected.ToArray();
     }
-    private static void DrawRunways(ProjectData project,IReadOnlyList<RunwayData> runways,double textHeight,Transaction tr)
+    private static IReadOnlyList<ObjectId> DrawRunways(ProjectData project,IReadOnlyList<RunwayData> runways,DrawingStyle style,Transaction tr)
     {
         if(runways.Count==0) throw new InvalidOperationException("请选择跑道。");
-        ProjectValidation.Project(project); var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
+        var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
 
-        var style=ProjectDrawingStyle(doc.Database);
         EnsureLayer(tr,doc.Database,"基础_跑道",7); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
-        void Add(Entity e) { e.Layer="基础_跑道"; e.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0); model.AppendEntity(e); tr.AddNewlyCreatedDBObject(e,true); }
+        var created=new List<ObjectId>();
+        void Add(Entity e) { e.Layer="基础_跑道"; e.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0); model.AppendEntity(e); tr.AddNewlyCreatedDBObject(e,true); created.Add(e.ObjectId); }
         Point3d Point(GeoPosition p) { var c=AirportGeometry.Project(p,cm); return new(c.Easting,c.Northing,c.Z); }
         foreach(var runway in runways)
         {
@@ -98,21 +98,21 @@ internal static partial class CadDrawing
             }
         }
 
+        return created;
     }
-    private static void DrawNavaids(ProjectData project,IReadOnlyList<NavaidData> navaids,double height,Transaction tr)
+    private static IReadOnlyList<ObjectId> DrawNavaids(ProjectData project,IReadOnlyList<NavaidData> navaids,DrawingStyle style,Transaction tr)
     {
-        if(navaids.Count==0) throw new InvalidOperationException("请选择导航设施。"); ProjectValidation.Project(project); var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
+        if(navaids.Count==0) throw new InvalidOperationException("请选择导航设施。"); var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
         EnsureLayer(tr,doc.Database,"基础_导航台",4);
-        var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
+        var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite); var created=new List<ObjectId>();
         foreach(var n in navaids)
         {
             var p=AirportGeometry.Project(n.Position,cm); var at=new Point3d(p.Easting,p.Northing,p.Z);
-            var entity=ProjectSymbol(tr,doc.Database,n.Kind.ToString(),at,height); entity.Layer="基础_导航台"; entity.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0);
-            model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true);
-            var style=ProjectDrawingStyle(doc.Database);
+            var entity=ProjectSymbol(tr,doc.Database,n.Kind.ToString(),at,style); entity.Layer="基础_导航台"; entity.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0);
+            model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true); created.Add(entity.ObjectId);
             var label=new DBText { Layer="基础_导航台",Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0),Position=at+new Vector3d(style.LabelGap,style.LabelGap,0),Height=style.TextHeight,TextString=n.Ident };
-            model.AppendEntity(label); tr.AddNewlyCreatedDBObject(label,true);
+            model.AppendEntity(label); tr.AddNewlyCreatedDBObject(label,true); created.Add(label.ObjectId);
         }
-
+        return created;
     }
 }

@@ -1,5 +1,4 @@
 using System.IO;
-using System.Globalization;
 using System.Text.Json;
 using Autodesk.AutoCAD.Colors;
 using Autodesk.AutoCAD.DatabaseServices;
@@ -13,8 +12,10 @@ using AcadColor=Autodesk.AutoCAD.Colors.Color;
 internal static partial class CadDrawing
 {
     private static Database? _projectLibrary;
+    private static readonly object ProjectMapGate=new();
+    private static ProjectBlockMap? _projectBlockMap;
     private static string ProjectLibraryPath=>Path.Combine(SymbolLibrary.DirectoryPath,"ProjectBaseSymbols.dwg");
-    internal static void DisposeProjectLibrary() { _projectLibrary?.Dispose(); _projectLibrary=null; }
+    internal static void DisposeProjectLibrary() { _projectLibrary?.Dispose(); _projectLibrary=null; _projectBlockMap=null; }
     private static Database OpenProjectLibrary()
     {
         if(_projectLibrary is not null) return _projectLibrary;
@@ -31,7 +32,10 @@ internal static partial class CadDrawing
         public double LabelHeightMm { get; set; }=2.5;
         public double LabelGapMm { get; set; }=1.5;
     }
-    private sealed record DrawingStyle(double SymbolSize,double TextHeight,double LabelGap);
+    private sealed record DrawingStyle(double SymbolSize,double TextHeight,double LabelGap)
+    {
+        public Dictionary<ObjectId,double> BlockSizes { get; }=[];
+    }
     private sealed class ProjectBlockMap
     {
         public string LibrarySha256 { get; set; }="";
@@ -39,9 +43,14 @@ internal static partial class CadDrawing
     }
     private static ProjectBlockMap ProjectBlocks()
     {
-        var map=JsonSerializer.Deserialize<ProjectBlockMap>(File.ReadAllText(Path.Combine(SymbolLibrary.DirectoryPath,"project-symbol-map.json")))!;
-        if(HashBytes(File.ReadAllBytes(ProjectLibraryPath))!=map.LibrarySha256) throw new InvalidOperationException("原始块库校验失败，未绘图。");
-        return map;
+        lock(ProjectMapGate)
+        {
+            if(_projectBlockMap is not null) return _projectBlockMap;
+            var map=JsonSerializer.Deserialize<ProjectBlockMap>(File.ReadAllText(Path.Combine(SymbolLibrary.DirectoryPath,"project-symbol-map.json")))!;
+            var libraryHash=HashBytes(File.ReadAllBytes(ProjectLibraryPath));
+            if(!libraryHash.Equals(map.LibrarySha256,StringComparison.OrdinalIgnoreCase)) throw new InvalidOperationException("原始块库校验失败，未绘图。");
+            _projectBlockMap=map; return map;
+        }
     }
     private static string HashBytes(byte[] bytes)=>Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(bytes));
     private static string ProjectBlockName(ProjectBlockMap map,ProjectBlock block)=>"FPD_BASE_WS_"+Hash(map.LibrarySha256+"/"+block.Name)[..16];
@@ -85,12 +94,15 @@ internal static partial class CadDrawing
     }
     private static DrawingStyle ProjectDrawingStyle(Database db)
     {
-        var property=db.GetType().GetProperty("Cannoscale"); var scale=property?.GetValue(db);
-        var name=scale?.GetType().GetProperty("Name")?.GetValue(scale)?.ToString();
-        var match=name is null?null:System.Text.RegularExpressions.Regex.Match(name,@"^\s*1\s*:\s*(?<den>\d+(?:\.\d+)?)\s*$");
-        if(match is null || !match.Success || !double.TryParse(match.Groups["den"].Value,NumberStyles.Float,CultureInfo.InvariantCulture,out var denominator) || denominator<=0)
+        using var scale=db.Cannoscale;
+        var denominator=scale.DrawingUnits/scale.PaperUnits;
+        if(!double.IsFinite(denominator) || denominator<=0)
             throw new InvalidOperationException("请先设置可用注释比例。");
-        return new DrawingStyle(.0035*denominator,.0025*denominator,.0015*denominator);
+        // Metre drawings commonly retain 1:1. Use an initial 1:20000 airport
+        // label style (50 m text) in that case. Symbol dimensions remain tied
+        // to the actual annotation scale, independently of text height.
+        var labelScale=Math.Abs(denominator-1)<1e-9?20000:denominator;
+        return new DrawingStyle(.0035*denominator,.0025*labelScale,.0015*labelScale);
     }
     private static Extents3d BlockExtents(BlockTableRecord block,Transaction tr)
     {
@@ -103,15 +115,18 @@ internal static partial class CadDrawing
         }
         return result??throw new InvalidOperationException("原始图符没有有效几何外包框。");
     }
-    private static BlockReference ProjectSymbol(Transaction tr,Database db,string kind,Point3d at,double height)
+    private static BlockReference ProjectSymbol(Transaction tr,Database db,string kind,Point3d at,DrawingStyle style)
     {
         var map=ProjectBlocks(); var block=map.Blocks[kind];
         var table=(BlockTable)tr.GetObject(db.BlockTableId,OpenMode.ForRead);
         // Native geometry and insertion origin are preserved. Do not instantiate sample attributes.
         var definition=(BlockTableRecord)tr.GetObject(table[ProjectBlockName(map,block)],OpenMode.ForRead);
-        var bounds=BlockExtents(definition,tr); var width=Math.Max(bounds.MaxPoint.X-bounds.MinPoint.X,bounds.MaxPoint.Y-bounds.MinPoint.Y);
-        if(!double.IsFinite(width) || width<=0) throw new InvalidOperationException("原始图符没有有效几何外包框。");
-        var style=ProjectDrawingStyle(db);
+        if(!style.BlockSizes.TryGetValue(definition.ObjectId,out var width))
+        {
+            var bounds=BlockExtents(definition,tr); width=Math.Max(bounds.MaxPoint.X-bounds.MinPoint.X,bounds.MaxPoint.Y-bounds.MinPoint.Y);
+            if(!double.IsFinite(width) || width<=0) throw new InvalidOperationException("原始图符没有有效几何外包框。");
+            style.BlockSizes[definition.ObjectId]=width;
+        }
         return new BlockReference(at,definition.ObjectId) { ScaleFactors=new Scale3d(style.SymbolSize/width),Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0) };
     }
     public static void ShowProjectLayers(bool visible)
