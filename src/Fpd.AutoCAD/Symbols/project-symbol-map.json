@@ -3,19 +3,35 @@
   "Blocks": {
     "Obstacle": {
       "Name": "Obst",
-      "Width": 705.791903734208
+      "Bounds": [-357.630848884583, -119.751282629278, 348.161054849626, 947.544323205948],
+      "BasePoint": [0, 0, 0],
+      "DisplaySizeMm": 3.5,
+      "LabelHeightMm": 2.5,
+      "LabelGapMm": 1.5
     },
     "VOR": {
       "Name": "VOR",
-      "Width": 0.13411812116742183
+      "Bounds": [-0.0674121032444219, -0.0511406660858551, 0.0667060179229999, 0.0514737791038051],
+      "BasePoint": [0, 0, 0],
+      "DisplaySizeMm": 3.5,
+      "LabelHeightMm": 2.5,
+      "LabelGapMm": 1.5
     },
     "DME": {
       "Name": "DME",
-      "Width": 1.0
+      "Bounds": [-0.5, -0.5, 0.5, 0.5],
+      "BasePoint": [0, 0, 0],
+      "DisplaySizeMm": 3.5,
+      "LabelHeightMm": 2.5,
+      "LabelGapMm": 1.5
     },
     "NDB": {
       "Name": "NDB",
-      "Width": 0.20342362853602475
+      "Bounds": [-0.102363036941114, -0.101613036942475, 0.101060591594911, 0.101810591596698],
+      "BasePoint": [0, 0, 0],
+      "DisplaySizeMm": 3.5,
+      "LabelHeightMm": 2.5,
+      "LabelGapMm": 1.5
     }
   }
 }

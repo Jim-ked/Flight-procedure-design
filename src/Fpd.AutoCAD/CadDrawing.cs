@@ -10,18 +10,20 @@ internal sealed record CadLayer(string Name, bool Visible, int EntityCount);
 
 internal static partial class CadDrawing
 {
-    public static readonly string[] LayerNames = ["FPD_FIX", "FPD_OBSTACLE", "FPD_RUNWAY", "FPD_NAVAID"];
+    public static readonly string[] LayerNames = ["基础_定位点", "基础_障碍物", "基础_跑道", "基础_导航台"];
     private static void DrawBasePoints(ProjectData project,IReadOnlyList<PlotPoint> points,double height,Transaction tr)
     {
         var db=AcadApp.DocumentManager.MdiActiveDocument!.Database;
         var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(db),OpenMode.ForWrite);
         foreach(var row in points)
         {
-            var layer=row.IsObstacle?"FPD_OBSTACLE":"FPD_FIX"; EnsureLayer(tr,db,layer,row.IsObstacle?(short)1:(short)3);
+            var layer=row.IsObstacle?"基础_障碍物":"基础_定位点"; EnsureLayer(tr,db,layer,row.IsObstacle?(short)1:(short)3);
             var at=new Point3d(row.Point.Easting,row.Point.Northing,row.Point.Z);
             Entity entity=row.IsObstacle?ProjectSymbol(tr,db,"Obstacle",at,height):new DBPoint(at);
+            entity.Color=Autodesk.AutoCAD.Colors.Color.FromColorIndex(ColorMethod.ByLayer,0);
             entity.Layer=layer; model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true);
-            var text=new DBText { Layer=layer,Position=at+new Vector3d(height*1.4,height*.4,0),Height=height,TextString=row.Ident };
+            var textStyle=ProjectDrawingStyle(db);
+            var text=new DBText { Layer=layer,Color=Autodesk.AutoCAD.Colors.Color.FromColorIndex(ColorMethod.ByLayer,0),Position=at+new Vector3d(textStyle.LabelGap,textStyle.LabelGap,0),Height=textStyle.TextHeight,TextString=row.Ident };
             model.AppendEntity(text); tr.AddNewlyCreatedDBObject(text,true);
         }
     }
@@ -36,14 +38,14 @@ internal static partial class CadDrawing
         using var tr = doc.Database.TransactionManager.StartTransaction();
         var counts = new Dictionary<string, int>();
         var model = (BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database), OpenMode.ForRead);
-        foreach (ObjectId id in model) if (tr.GetObject(id, OpenMode.ForRead) is Entity entity && entity.Layer.StartsWith("FPD_", StringComparison.OrdinalIgnoreCase)) counts[entity.Layer] = counts.GetValueOrDefault(entity.Layer) + 1;
+        foreach (ObjectId id in model) if (tr.GetObject(id, OpenMode.ForRead) is Entity entity && LayerNames.Contains(entity.Layer,StringComparer.OrdinalIgnoreCase)) counts[entity.Layer] = counts.GetValueOrDefault(entity.Layer) + 1;
         var table = (LayerTable)tr.GetObject(doc.Database.LayerTableId, OpenMode.ForRead);
-        return table.Cast<ObjectId>().Select(id => (LayerTableRecord)tr.GetObject(id, OpenMode.ForRead)).Where(l => l.Name.StartsWith("FPD_", StringComparison.OrdinalIgnoreCase)).Select(l => new CadLayer(l.Name, !l.IsOff && !l.IsFrozen, counts.GetValueOrDefault(l.Name))).ToArray();
+        return table.Cast<ObjectId>().Select(id => (LayerTableRecord)tr.GetObject(id, OpenMode.ForRead)).Where(l => LayerNames.Contains(l.Name,StringComparer.OrdinalIgnoreCase)).Select(l => new CadLayer(l.Name, !l.IsOff && !l.IsFrozen, counts.GetValueOrDefault(l.Name))).ToArray();
     }
 
     public static void SetLayer(string name, bool visible)
     {
-        if (!name.StartsWith("FPD_", StringComparison.OrdinalIgnoreCase)) throw new ArgumentException("仅操作 FPD 设计图层。");
+        if (!LayerNames.Contains(name,StringComparer.OrdinalIgnoreCase)) throw new ArgumentException("仅操作项目基础图层。");
         var doc = AcadApp.DocumentManager.MdiActiveDocument ?? throw new InvalidOperationException("请先打开 DWG。");
         using var locked = doc.LockDocument(); using var tr = doc.Database.TransactionManager.StartTransaction();
         var table = (LayerTable)tr.GetObject(doc.Database.LayerTableId, OpenMode.ForRead);
@@ -60,12 +62,12 @@ internal static partial class CadDrawing
         var model = (BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database), OpenMode.ForRead);
         Extents3d? extent = null;
         foreach (ObjectId id in model)
-            if (tr.GetObject(id, OpenMode.ForRead) is Entity e && e.Layer.StartsWith("FPD_", StringComparison.OrdinalIgnoreCase))
+            if (tr.GetObject(id, OpenMode.ForRead) is Entity e && (e.Layer.StartsWith("FPD_", StringComparison.OrdinalIgnoreCase) || LayerNames.Contains(e.Layer,StringComparer.OrdinalIgnoreCase)))
             {
                 try { var box = e.GeometricExtents; if (extent is null) extent = box; else { var merged = extent.Value; merged.AddExtents(box); extent = merged; } }
                 catch (Autodesk.AutoCAD.Runtime.Exception) { }
             }
-        if (extent is null) throw new InvalidOperationException("当前 DWG 尚无 FPD 图形。");
+        if (extent is null) throw new InvalidOperationException("当前 DWG 尚无项目图形。");
         tr.Commit();
         // The editor's current view is in DCS; transform WCS extents before framing it.
         using var view = doc.Editor.GetCurrentView();

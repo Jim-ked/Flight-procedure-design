@@ -1,5 +1,7 @@
 using System.IO;
+using System.Globalization;
 using System.Text.Json;
+using Autodesk.AutoCAD.Colors;
 using Autodesk.AutoCAD.DatabaseServices;
 using Autodesk.AutoCAD.EditorInput;
 using Autodesk.AutoCAD.Geometry;
@@ -7,6 +9,7 @@ using Fpd.Core;
 using AcadApp=Autodesk.AutoCAD.ApplicationServices.Core.Application;
 
 namespace Fpd.AutoCAD;
+using AcadColor=Autodesk.AutoCAD.Colors.Color;
 internal static partial class CadDrawing
 {
     private static Database? _projectLibrary;
@@ -19,7 +22,16 @@ internal static partial class CadDrawing
         try { db.ReadDwgFile(ProjectLibraryPath,FileOpenMode.OpenForReadAndAllShare,true,null); db.CloseInput(true); _projectLibrary=db; return db; }
         catch { db.Dispose(); throw; }
     }
-    private sealed record ProjectBlock(string Name,double Width);
+    private sealed class ProjectBlock
+    {
+        public string Name { get; set; }="";
+        public double[] Bounds { get; set; }=[];
+        public double[] BasePoint { get; set; }=[];
+        public double DisplaySizeMm { get; set; }=3.5;
+        public double LabelHeightMm { get; set; }=2.5;
+        public double LabelGapMm { get; set; }=1.5;
+    }
+    private sealed record DrawingStyle(double SymbolSize,double TextHeight,double LabelGap);
     private sealed class ProjectBlockMap
     {
         public string LibrarySha256 { get; set; }="";
@@ -53,15 +65,54 @@ internal static partial class CadDrawing
             using var locked=doc.LockDocument(); var mapping=new IdMapping();
             source.WblockCloneObjects(new ObjectIdCollection([sourceId]),doc.Database.BlockTableId,mapping,DuplicateRecordCloning.MangleName,false);
             using var rename=doc.Database.TransactionManager.StartTransaction();
-            ((BlockTableRecord)rename.GetObject(mapping[sourceId].Value,OpenMode.ForWrite)).Name=name; rename.Commit();
+            var target=(BlockTableRecord)rename.GetObject(mapping[sourceId].Value,OpenMode.ForWrite); target.Name=name;
+            var cloned=mapping.Cast<IdPair>().Select(pair=>pair.Value).ToHashSet(); NormalizeProjectBlock(target,rename,cloned,[]); rename.Commit();
         }
+    }
+    private static void NormalizeProjectBlock(BlockTableRecord block,Transaction tr,HashSet<ObjectId> cloned,HashSet<ObjectId> visited)
+    {
+        if(!visited.Add(block.ObjectId)) return;
+        foreach(ObjectId id in block)
+        {
+            if(tr.GetObject(id,OpenMode.ForWrite) is not Entity entity) continue;
+            entity.Layer="0"; entity.Color=AcadColor.FromColorIndex(ColorMethod.ByBlock,0);
+            if(entity is BlockReference nested)
+            {
+                var definition=(BlockTableRecord)tr.GetObject(nested.BlockTableRecord,OpenMode.ForWrite);
+                if(cloned.Contains(definition.ObjectId)) NormalizeProjectBlock(definition,tr,cloned,visited);
+            }
+        }
+    }
+    private static DrawingStyle ProjectDrawingStyle(Database db)
+    {
+        var property=db.GetType().GetProperty("Cannoscale"); var scale=property?.GetValue(db);
+        var name=scale?.GetType().GetProperty("Name")?.GetValue(scale)?.ToString();
+        var match=name is null?null:System.Text.RegularExpressions.Regex.Match(name,@"^\s*1\s*:\s*(?<den>\d+(?:\.\d+)?)\s*$");
+        if(match is null || !match.Success || !double.TryParse(match.Groups["den"].Value,NumberStyles.Float,CultureInfo.InvariantCulture,out var denominator) || denominator<=0)
+            throw new InvalidOperationException("请先设置可用注释比例。");
+        return new DrawingStyle(.0035*denominator,.0025*denominator,.0015*denominator);
+    }
+    private static Extents3d BlockExtents(BlockTableRecord block,Transaction tr)
+    {
+        Extents3d? result=null;
+        foreach(ObjectId id in block)
+        {
+            if(tr.GetObject(id,OpenMode.ForRead) is not Entity entity) continue;
+            try { var box=entity.GeometricExtents; if(result is null) result=box; else { var merged=result.Value; merged.AddExtents(box); result=merged; } }
+            catch(Autodesk.AutoCAD.Runtime.Exception) { }
+        }
+        return result??throw new InvalidOperationException("原始图符没有有效几何外包框。");
     }
     private static BlockReference ProjectSymbol(Transaction tr,Database db,string kind,Point3d at,double height)
     {
         var map=ProjectBlocks(); var block=map.Blocks[kind];
         var table=(BlockTable)tr.GetObject(db.BlockTableId,OpenMode.ForRead);
         // Native geometry and insertion origin are preserved. Do not instantiate sample attributes.
-        return new BlockReference(at,table[ProjectBlockName(map,block)]) { ScaleFactors=new Scale3d(height*1.4/block.Width) };
+        var definition=(BlockTableRecord)tr.GetObject(table[ProjectBlockName(map,block)],OpenMode.ForRead);
+        var bounds=BlockExtents(definition,tr); var width=Math.Max(bounds.MaxPoint.X-bounds.MinPoint.X,bounds.MaxPoint.Y-bounds.MinPoint.Y);
+        if(!double.IsFinite(width) || width<=0) throw new InvalidOperationException("原始图符没有有效几何外包框。");
+        var style=ProjectDrawingStyle(db);
+        return new BlockReference(at,definition.ObjectId) { ScaleFactors=new Scale3d(style.SymbolSize/width),Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0) };
     }
     public static void ShowProjectLayers(bool visible)
     {
@@ -123,10 +174,11 @@ internal static partial class CadDrawing
         var point=(DBPoint)tr.GetObject(id,OpenMode.ForRead);
         if(Math.Abs(point.Position.X-p.Easting)>.01 || Math.Abs(point.Position.Y-p.Northing)>.01) throw new InvalidOperationException("登记坐标已改变，请保留所选CAD点的经纬度。");
         if(ReadBaseMark(point,tr) is not null) throw new InvalidOperationException("原生点已有身份。");
-        EnsureLayer(tr,doc.Database,"FPD_FIX",3); point.UpgradeOpen(); point.Layer="FPD_FIX";
+        var style=ProjectDrawingStyle(doc.Database);
+        EnsureLayer(tr,doc.Database,"基础_定位点",3); point.UpgradeOpen(); point.Layer="基础_定位点"; point.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0);
         var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
-        var text=new DBText { Layer="FPD_FIX",Position=point.Position+new Vector3d(height*1.4,height*.4,0),Height=height,TextString=fix.Ident }; model.AppendEntity(text); tr.AddNewlyCreatedDBObject(text,true);
-        var group=Guid.NewGuid().ToString("N"); var fingerprint=BaseFingerprint(project,fix,height);
+        var text=new DBText { Layer="基础_定位点",Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0),Position=point.Position+new Vector3d(style.LabelGap,style.LabelGap,0),Height=style.TextHeight,TextString=fix.Ident }; model.AppendEntity(text); tr.AddNewlyCreatedDBObject(text,true);
+        var group=Guid.NewGuid().ToString("N"); var fingerprint=BaseFingerprint(project,fix);
         foreach(var entity in new Entity[] { point,text }) WriteBaseMark(entity,new(project.ProjectId,"Fix",fix.DataId,fix.Ident,fingerprint,GeometryStamp(entity,tr),group,2),tr);
         RememberBase(project,"Fix",fix.DataId,tr,doc.Database); tr.Commit();
     }

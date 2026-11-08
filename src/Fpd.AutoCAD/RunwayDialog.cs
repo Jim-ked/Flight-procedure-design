@@ -45,7 +45,7 @@ internal sealed class RunwayDialog : Form
         directions.SelectedIndexChanged+=(_,_)=>Direction(); Direction();
         var actions=new FlowLayoutPanel { Dock=DockStyle.Fill,WrapContents=false };
         Button Add(string title,Action action) { var b=new Button { Text=title,AutoSize=true,MinimumSize=new Size(70,28),BackColor=Color.FromArgb(57,57,57),ForeColor=Color.White,FlatStyle=FlatStyle.Flat }; b.Click+=(_,_)=> { try { _positions.EndEdit(); action(); } catch(Exception ex) { MessageBox.Show(this,ex.Message,Text); } }; actions.Controls.Add(b); return b; }
-        Add("CAD拾取所选位置",()=> { var index=_positions.CurrentRow?.Index??(directions.SelectedIndex==0?0:3); _positions[4,index].Value=true; Value=Read(); PickIndex=index; DialogResult=DialogResult.Retry; });
+        Add("在图中选取",()=> { var index=_positions.CurrentRow?.Index??(directions.SelectedIndex==0?0:3); _positions[4,index].Value=true; Value=Read(); PickIndex=index; DialogResult=DialogResult.Retry; });
         var buttons=new FlowLayoutPanel { Dock=DockStyle.Fill,FlowDirection=FlowDirection.RightToLeft };
         var ok=new Button { Text="确定",AutoSize=true,MinimumSize=new Size(70,28),BackColor=Color.FromArgb(57,57,57),ForeColor=Color.White,FlatStyle=FlatStyle.Flat }; ok.Click+=(_,_)=> { try { _positions.EndEdit(); var result=Read(); ProjectValidation.Runway(result); Value=result; DialogResult=DialogResult.OK; } catch(Exception ex) { MessageBox.Show(this,ex.Message,Text); } };
         var cancel=new Button { Text="取消",AutoSize=true,MinimumSize=new Size(70,28),BackColor=Color.FromArgb(57,57,57),ForeColor=Color.White,FlatStyle=FlatStyle.Flat,DialogResult=DialogResult.Cancel }; buttons.Controls.Add(ok); buttons.Controls.Add(cancel);

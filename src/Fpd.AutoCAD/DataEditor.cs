@@ -31,7 +31,7 @@ internal sealed class DataEditor
         var note=new Label { Text="经纬度支持十进制度 / 度分秒",Dock=DockStyle.Fill }; var r=_grid.RowCount++; _grid.RowStyles.Add(new(SizeType.Absolute,28)); _grid.Controls.Add(note,0,r); _grid.SetColumnSpan(note,2);
         var bar=new FlowLayoutPanel { Dock=DockStyle.Fill,WrapContents=false };
         Button Add(string title,Action action) { var b=new Button { Text=title,AutoSize=true }; b.Click+=(_,_)=> { try { action(); } catch(Exception ex) { MessageBox.Show(_form,ex.Message,_form.Text,MessageBoxButtons.OK,MessageBoxIcon.Warning); } }; bar.Controls.Add(b); return b; }
-        Add("CAD拾取",pick); _form.AcceptButton=Add("确定",accept);
+        Add("在图中选取",pick); _form.AcceptButton=Add("确定",accept);
         var cancel=new Button { Text="取消",AutoSize=true,DialogResult=DialogResult.Cancel }; bar.Controls.Add(cancel); _form.CancelButton=cancel;
         r=_grid.RowCount++; _grid.RowStyles.Add(new(SizeType.Absolute,38)); _grid.Controls.Add(bar,0,r); _grid.SetColumnSpan(bar,2);
     }

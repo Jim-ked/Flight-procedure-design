@@ -49,7 +49,8 @@ public sealed partial class WorkspacePanel : UserControl
     private void RefreshProject()
     {
         RefreshSummary(); RefreshData(); RefreshProcedures(); RefreshToolChoices();
-        SetStatus($"Fix {_project.Fixes.Count} · 障碍物 {_project.Obstacles.Count} · 程序 {_project.Procedures.Count}");
+        UpdateProjectVisibility();
+        SetStatus(_initialized ? "就绪" : "当前图纸尚未设置机场资料");
     }
     internal void BindProject(ProjectData project,bool initialized,bool editable,bool dirty=false)
     {
@@ -89,28 +90,15 @@ public sealed partial class WorkspacePanel : UserControl
         if(create) DwgProjects.Initialize(ProjectStore.Create(dialog.ProjectName,dialog.Airport));
         else { _project.Name=dialog.ProjectName; _project.Airport=dialog.Airport; Changed(); }
         _dirty=true; RefreshSummary(); ResetCoordinates(); RefreshData();
-        SetStatus("项目资料已修改；坐标基准变化后请核对原图，再明确执行绘制更新。");
-    }
-    private void OpenProject()
-    {
-        var documents=Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager;
-        if(documents.MdiActiveDocument is { } doc) { doc.SendStringToExecute("_.OPEN ",true,false,false); return; }
-        using var dialog=new OpenFileDialog { Filter="AutoCAD DWG|*.dwg",Title="打开DWG" };
-        if(dialog.ShowDialog(this)==DialogResult.OK) documents.Open(dialog.FileName,false);
-    }
-    private bool SaveProject()
-    {
-        RequireProject();
-        Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument!.SendStringToExecute("_.QSAVE ",true,false,false);
-        SetStatus("等待AutoCAD原生保存完成…"); return true;
+        SetStatus("项目资料已更新");
     }
     private void BaseDataChanged() { Changed(); QueueBaseMap(); }
     private void QueueBaseMap(string? kind=null,IReadOnlySet<string>? keys=null)
     {
         RequireProject();
         if(!_project.Airport.ArpLongitude.HasValue) return;
-        var project=_project; var height=TextHeight;
-        CadOperation(()=>SetStatus(CadDrawing.SyncBaseMap(project,height,kind,keys)));
+        var project=_project;
+        CadOperation(()=>SetStatus(CadDrawing.SyncBaseMap(project,TextHeight,kind,keys)));
     }
     private void ApplyPageLayers()
     {
@@ -118,5 +106,11 @@ public sealed partial class WorkspacePanel : UserControl
         CadDrawing.ShowProjectLayers(_tabs.SelectedIndex!=1);
     }
     private double TextHeight => (double)_textHeight.Value;
+    private void UpdateProjectVisibility()
+    {
+        if(_projectDataArea is null || _setupPrompt is null) return;
+        _projectDataArea.Visible=_initialized;
+        _setupPrompt.Visible=!_initialized;
+    }
     protected override void Dispose(bool disposing) { if(disposing) _tips.Dispose(); base.Dispose(disposing); }
 }

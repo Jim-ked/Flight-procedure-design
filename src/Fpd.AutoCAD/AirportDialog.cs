@@ -29,7 +29,7 @@ internal sealed class AirportDialog : Form
         var note=new Label { Text="经纬度支持十进制度 / 度分秒；ICAO可选",Dock=DockStyle.Fill }; grid.Controls.Add(note,0,grid.RowCount++); grid.SetColumnSpan(note,2);
         var buttons=new FlowLayoutPanel { Dock=DockStyle.Fill,AutoSize=true,FlowDirection=FlowDirection.RightToLeft };
         var ok=new Button { Text="确定",AutoSize=true }; var cancel=new Button { Text="取消",AutoSize=true,DialogResult=DialogResult.Cancel };
-        var pick=new Button { Text="CAD拾取ARP",AutoSize=true };
+        var pick=new Button { Text="在图中选取ARP",AutoSize=true };
         pick.Click+=(_,_)=> { try { Airport=new() { Name=airport.Text.Trim(),Icao=icao.Text.Trim(),ArpLongitude=CoordinateInput.Parse(lon.Text,false),ArpLatitude=string.IsNullOrWhiteSpace(lat.Text)?null:CoordinateInput.Parse(lat.Text,true),ArpElevation=project.Airport.ArpElevation }; ProjectName=name.Text.Trim(); DialogResult=DialogResult.Retry; } catch(Exception ex) { MessageBox.Show(this,"请先填写ARP大致经度以确定中央经线。"+ex.Message,Text); } };
         ok.Click+=(_,_)=>
         {

@@ -42,19 +42,17 @@ internal static class DwgProjects
         try
         {
             state.Snapshot=ReadSnapshot(doc.Database);
-            var path=SavedPath(doc);
             if(state.Snapshot is { } json)
             {
                 state.Project=ProjectStore.Deserialize(json); state.Initialized=true;
                 try
                 {
+                    var path=SavedPath(doc);
                     if(path is not null && File.Exists(path) && ProjectStore.Serialize(new ProjectStore().Open(path))!=ProjectStore.Serialize(state.Project))
                         state.Error="辅助JSON与DWG快照不一致，已使用当前DWG资料；原图保持。";
                 }
                 catch(Exception ex) { state.Error="辅助JSON不可读，已使用DWG快照："+ex.Message; }
             }
-            else if(path is not null && File.Exists(path))
-            { state.Project=new ProjectStore().Open(path); state.Initialized=true; }
         }
         catch(Exception ex) { state.Error="读取项目失败，禁止覆盖原资料："+ex.Message; }
         doc.Database.BeginSave+=BeginSave;

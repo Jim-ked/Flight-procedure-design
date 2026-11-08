@@ -6,6 +6,7 @@ using Fpd.Core;
 using AcadApp=Autodesk.AutoCAD.ApplicationServices.Core.Application;
 
 namespace Fpd.AutoCAD;
+using AcadColor=Autodesk.AutoCAD.Colors.Color;
 
 internal static partial class CadDrawing
 {
@@ -47,7 +48,7 @@ internal static partial class CadDrawing
             _=>project.Fixes.Select(f=>(f.Ident,new GeoPosition { Latitude=f.Latitude,Longitude=f.Longitude,Elevation=f.Elevation??0 }))
         };
         var values=positions.Select(v=>(v.Ident,Point:AirportGeometry.Project(v.Item2,cm))).ToArray(); var selected=new HashSet<string>(StringComparer.OrdinalIgnoreCase);
-        var expectedLayer=kind==1?"FPD_OBSTACLE":kind==3?"FPD_NAVAID":"FPD_FIX";
+        var expectedLayer=kind==1?"基础_障碍物":kind==3?"基础_导航台":"基础_定位点";
         using var tr=doc.Database.TransactionManager.StartTransaction();
         foreach(var id in result.Value.GetObjectIds())
         {
@@ -70,8 +71,9 @@ internal static partial class CadDrawing
         if(runways.Count==0) throw new InvalidOperationException("请选择跑道。");
         ProjectValidation.Project(project); var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
 
-        EnsureLayer(tr,doc.Database,"FPD_RUNWAY",7); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
-        void Add(Entity e) { e.Layer="FPD_RUNWAY"; model.AppendEntity(e); tr.AddNewlyCreatedDBObject(e,true); }
+        var style=ProjectDrawingStyle(doc.Database);
+        EnsureLayer(tr,doc.Database,"基础_跑道",7); var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
+        void Add(Entity e) { e.Layer="基础_跑道"; e.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0); model.AppendEntity(e); tr.AddNewlyCreatedDBObject(e,true); }
         Point3d Point(GeoPosition p) { var c=AirportGeometry.Project(p,cm); return new(c.Easting,c.Northing,c.Z); }
         foreach(var runway in runways)
         {
@@ -84,14 +86,14 @@ internal static partial class CadDrawing
             {
                 var physical=Point(end.PhysicalEnd); var thr=Point(end.Threshold); var der=Point(end.DepartureEnd);
                 Add(new Line(thr-side*runway.Width/2,thr+side*runway.Width/2));
-                Add(new DBText { Position=physical+side*(runway.Width/2+textHeight),Height=textHeight,TextString=end.Designator });
+                Add(new DBText { Position=physical+side*(runway.Width/2+style.LabelGap),Height=style.TextHeight,TextString=end.Designator });
                 if(!RunwayDefaults.Same(end.Threshold,end.PhysicalEnd))
-                    Add(new DBText { Position=thr+side*(runway.Width/2+textHeight),Height=textHeight*.7,TextString=end.Designator+" THR" });
+                    Add(new DBText { Position=thr+side*(runway.Width/2+style.LabelGap),Height=style.TextHeight,TextString=end.Designator+" THR" });
                 var opposite=ReferenceEquals(end,runway.EndA)?runway.EndB:runway.EndA;
                 if(!RunwayDefaults.Same(end.DepartureEnd,opposite.PhysicalEnd))
                 {
                     Add(new Circle(der,Vector3d.ZAxis,Math.Max(runway.Width/6,2)));
-                    Add(new DBText { Position=der-side*(runway.Width/2+textHeight*3),Height=textHeight*.7,TextString=end.Designator+" DER" });
+                    Add(new DBText { Position=der-side*(runway.Width/2+style.LabelGap),Height=style.TextHeight,TextString=end.Designator+" DER" });
                 }
             }
         }
@@ -100,14 +102,15 @@ internal static partial class CadDrawing
     private static void DrawNavaids(ProjectData project,IReadOnlyList<NavaidData> navaids,double height,Transaction tr)
     {
         if(navaids.Count==0) throw new InvalidOperationException("请选择导航设施。"); ProjectValidation.Project(project); var cm=AirportGeometry.Meridian(project); var doc=AcadApp.DocumentManager.MdiActiveDocument!;
-        EnsureLayer(tr,doc.Database,"FPD_NAVAID",4);
+        EnsureLayer(tr,doc.Database,"基础_导航台",4);
         var model=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
         foreach(var n in navaids)
         {
             var p=AirportGeometry.Project(n.Position,cm); var at=new Point3d(p.Easting,p.Northing,p.Z);
-            var entity=ProjectSymbol(tr,doc.Database,n.Kind.ToString(),at,height); entity.Layer="FPD_NAVAID";
+            var entity=ProjectSymbol(tr,doc.Database,n.Kind.ToString(),at,height); entity.Layer="基础_导航台"; entity.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0);
             model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true);
-            var label=new DBText { Layer="FPD_NAVAID",Position=at+new Vector3d(height*1.4,height*.4,0),Height=height,TextString=n.Ident };
+            var style=ProjectDrawingStyle(doc.Database);
+            var label=new DBText { Layer="基础_导航台",Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0),Position=at+new Vector3d(style.LabelGap,style.LabelGap,0),Height=style.TextHeight,TextString=n.Ident };
             model.AppendEntity(label); tr.AddNewlyCreatedDBObject(label,true);
         }
 

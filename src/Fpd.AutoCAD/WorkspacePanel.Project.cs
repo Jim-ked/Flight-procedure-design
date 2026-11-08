@@ -1,5 +1,7 @@
 using System.Drawing;
+using System.Globalization;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
 using Fpd.Core;
 
@@ -8,69 +10,88 @@ namespace Fpd.AutoCAD;
 public sealed partial class WorkspacePanel
 {
     private readonly Label _projectSummary=Caption("");
-    private readonly Label _projectionSummary=Caption("");
-    private readonly Label _dwgSummary=Caption("");
+    private readonly Label _airportSummary=Caption("");
+    private readonly Label _arpSummary=Caption("");
+    private readonly Panel _projectDataArea=new() { Dock=DockStyle.Fill };
+    private readonly Panel _setupPrompt=new() { Dock=DockStyle.Fill };
     private readonly TabControl _dataTabs=new() { Dock=DockStyle.Fill };
     private readonly Panel _dataList=new() { Dock=DockStyle.Fill };
     private readonly DataGridView _fixGrid=DataTable();
     private readonly DataGridView _obstacleGrid=DataTable();
     private readonly TextBox _search=Input();
     private readonly Label _selectionSummary=Caption("");
-    private readonly Label _dataDetails=Caption("");
     private readonly NumericUpDown _textHeight=new() { Minimum=.1m,Maximum=10000,DecimalPlaces=1,Value=50,Increment=10,Width=70,BackColor=Color.FromArgb(55,55,55),ForeColor=Color.White };
+    private Button? _editButton;
+    private Button? _deleteButton;
     private bool IsObstacle => _dataTabs.SelectedIndex==1;
     private DataGridView CurrentGrid => _dataTabs.SelectedIndex switch { 1=>_obstacleGrid,2=>_runwayGrid,3=>_navaidGrid,_=>_fixGrid };
+
     private static DataGridView DataTable() => new()
     {
         Dock=DockStyle.Fill,ReadOnly=true,AllowUserToAddRows=false,AllowUserToDeleteRows=false,MultiSelect=true,SelectionMode=DataGridViewSelectionMode.FullRowSelect,
-        RowHeadersVisible=false,AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.AllCells,BackgroundColor=Color.FromArgb(42,42,42),BorderStyle=BorderStyle.FixedSingle,
+        RowHeadersVisible=false,AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill,BackgroundColor=Color.FromArgb(42,42,42),BorderStyle=BorderStyle.FixedSingle,
         EnableHeadersVisualStyles=false,ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize,AutoSizeRowsMode=DataGridViewAutoSizeRowsMode.None,RowTemplate=new DataGridViewRow { Height=27 },
-        ColumnHeadersDefaultCellStyle=new DataGridViewCellStyle { BackColor=Color.FromArgb(55,55,55),ForeColor=Color.Gainsboro,WrapMode=DataGridViewTriState.True },
+        ColumnHeadersDefaultCellStyle=new DataGridViewCellStyle { BackColor=Color.FromArgb(55,55,55),ForeColor=Color.Gainsboro,WrapMode=DataGridViewTriState.False },
         DefaultCellStyle=new DataGridViewCellStyle { BackColor=Color.FromArgb(42,42,42),ForeColor=Color.Gainsboro,SelectionBackColor=Color.FromArgb(55,90,115),SelectionForeColor=Color.White },
         ClipboardCopyMode=DataGridViewClipboardCopyMode.Disable
     };
+
     private TabPage ProjectPage()
     {
-        var page=Page("项目"); var stack=Stack();
-        Row(stack,_projectSummary,25); Row(stack,_dwgSummary,25); Row(stack,_projectionSummary,25);
-        Row(stack,Bar(Button("创建项目",NewProject),Button("修改项目",EditAirport),Button("打开DWG",OpenProject)),34);
-        Row(stack,Bar(Button("保存DWG",()=>SaveProject()),Button("坐标转换",()=> { RequireProject(); ResetCoordinates(); _tabs.SelectedIndex=2; }),MenuButton("更多",("CAD点登记",RegisterCadPoint),("字高",BaseLabelSettings))),34);
+        var page=Page("项目"); var outer=Stack();
+        var header=new TableLayoutPanel { Dock=DockStyle.Fill,ColumnCount=2,RowCount=2,Margin=Padding.Empty };
+        header.ColumnStyles.Add(new ColumnStyle(SizeType.Percent,100)); header.ColumnStyles.Add(new ColumnStyle(SizeType.AutoSize));
+        header.RowStyles.Add(new RowStyle(SizeType.Absolute,28)); header.RowStyles.Add(new RowStyle(SizeType.Absolute,28));
+        header.Controls.Add(_projectSummary,0,0); header.Controls.Add(Button("编辑",EditAirportOrCreate),1,0);
+        var airportLine=new TableLayoutPanel { Dock=DockStyle.Fill,ColumnCount=2,Margin=Padding.Empty };
+        airportLine.ColumnStyles.Add(new ColumnStyle(SizeType.Percent,45)); airportLine.ColumnStyles.Add(new ColumnStyle(SizeType.Percent,55));
+        airportLine.Controls.Add(_airportSummary,0,0); airportLine.Controls.Add(_arpSummary,1,0);
+        header.Controls.Add(airportLine,0,1); header.Controls.Add(Button("坐标转换",OpenCoordinateTool),1,1);
+        Row(outer,header,58);
 
-        void Columns(DataGridView grid,bool obstacle)
+        var setup=new FlowLayoutPanel { Dock=DockStyle.Fill,WrapContents=false,Padding=new Padding(4,18,4,4),BackColor=Color.FromArgb(42,42,42) };
+        setup.Controls.Add(new Label { Text="当前图纸尚未设置机场资料",AutoSize=true,Margin=new Padding(2,8,14,0),ForeColor=Color.Gainsboro });
+        setup.Controls.Add(Button("设置机场资料",NewProject)); _setupPrompt.Controls.Add(setup);
+
+        var data=Stack();
+        void Configure(DataGridView grid,params (string Name,int Width)[] columns)
         {
-            foreach(var (name,width) in obstacle?new[] { ("标识",130),("顶标高 m",110) }:new[] { ("标识",160) }) grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText=name,Width=width,SortMode=DataGridViewColumnSortMode.NotSortable });
-            grid.AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.Fill;
-            grid.SelectionChanged+=(_,_)=> { UpdateSelection(); if(!_refreshing && grid.Focused && !IsAirportData) HighlightSelectedProjectData(false); }; grid.CellDoubleClick+=(_,e)=> { if(e.RowIndex>=0 && !IsAirportData) Run(()=>HighlightSelectedProjectData(true)); else if(e.RowIndex>=0) Run(()=>EditPoint(true)); };
-            grid.KeyDown+=(_,e)=>
-            {
-                if(e.Control && e.KeyCode==Keys.C) { Run(CopyPoints); e.SuppressKeyPress=true; }
-                if(e.Control && e.KeyCode==Keys.V) { Run(PastePoints); e.SuppressKeyPress=true; }
-                if(e.Control && e.KeyCode==Keys.A) { grid.SelectAll(); e.SuppressKeyPress=true; }
-                if(e.KeyCode==Keys.Delete) { Run(DeletePoints); e.SuppressKeyPress=true; }
-            };
-            var menu=new ContextMenuStrip(); menu.Items.Add("复制所选",null,(_,_)=>Run(CopyPoints)); menu.Items.Add("粘贴新增",null,(_,_)=>Run(PastePoints)); menu.Items.Add("全选",null,(_,_)=>grid.SelectAll()); menu.Items.Add("CAD选择",null,(_,_)=>Run(SelectCadData)); menu.Items.Add("CAD拾取新增",null,(_,_)=>Run(PickNewPoint)); grid.ContextMenuStrip=menu;
-            grid.Disposed+=(_,_)=>menu.Dispose();
+            foreach(var column in columns) grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText=column.Name,Width=column.Width,SortMode=DataGridViewColumnSortMode.NotSortable });
+            grid.SelectionChanged+=(_,_)=>UpdateSelection();
+            grid.CellDoubleClick+=(_,e)=> { if(e.RowIndex<0) return; Run(()=> { if(grid==_fixGrid || grid==_obstacleGrid) HighlightSelectedProjectData(true); else EditPoint(true); }); };
         }
-        Columns(_fixGrid,false); Columns(_obstacleGrid,true);
-        var fixes=Page("定位点"); fixes.Padding=Padding.Empty;  var obstacles=Page("障碍物"); obstacles.Padding=Padding.Empty;
-        _dataTabs.TabPages.Add(fixes); _dataTabs.TabPages.Add(obstacles); AddAirportTabs(); _dataTabs.SelectedIndexChanged+=(_,_)=> { _dataList.Controls.Clear(); _dataList.Controls.Add(CurrentGrid); UpdateSelection(); };
-        _dataList.Controls.Add(_fixGrid); Row(stack,_dataTabs,28);
-        var search=FormGrid(); Field(search,"查找标识",_search); Row(stack,search,32); _search.TextChanged+=(_,_)=>RefreshCurrentData();
-        Row(stack,Bar(Button("新增",()=>EditPoint(false)),Button("修改",()=>EditPoint(true)),Button("删除",DeletePoints),Button("CAD拾取",PickNewPoint)),34);
-        Row(stack,Bar(Button("导入CSV",ImportPoints),Button("导出CSV",ExportCurrentData),Button("模板",ExportTemplate)),34);
-        Row(stack,Bar(Button("绘制所选",()=>DrawSelected(false)),Button("绘制全部",()=>DrawSelected(true))),34);
-        Row(stack,_dataList,100,true); Row(stack,_selectionSummary,23); Row(stack,_dataDetails,52);
-        page.Controls.Add(stack); return page;
+        Configure(_fixGrid,("名称",130),("纬度",110),("经度",110));
+        Configure(_obstacleGrid,("编号",120),("顶标高（m）",110),("纬度",110),("经度",110));
+        var fixes=Page("定位点"); fixes.Padding=Padding.Empty; var obstacles=Page("障碍物"); obstacles.Padding=Padding.Empty;
+        _dataTabs.TabPages.Add(fixes); _dataTabs.TabPages.Add(obstacles); AddAirportTabs();
+        _dataTabs.SelectedIndexChanged+=(_,_)=> { _dataList.Controls.Clear(); _dataList.Controls.Add(CurrentGrid); UpdateSelection(); };
+        _dataList.Controls.Add(_fixGrid); Row(data,_dataTabs,28);
+        _search.PlaceholderText="查找名称或编号"; Row(data,_search,32); _search.TextChanged+=(_,_)=>RefreshCurrentData();
+        _editButton=Button("修改",()=>EditPoint(true)); _deleteButton=Button("删除",DeletePoints);
+        Row(data,Bar(Button("新增",()=>EditPoint(false)),_editButton,_deleteButton,Button("导入",ImportPoints),Button("导出",ExportCurrentData)),34);
+        Row(data,_dataList,100,true); Row(data,_selectionSummary,23);
+        _projectDataArea.Controls.Add(data);
+        Row(outer,_projectDataArea,100,true); Row(outer,_setupPrompt,100,true);
+        page.Controls.Add(outer); return page;
     }
+
+    private void EditAirportOrCreate() { if(_initialized) EditAirport(); else NewProject(); }
+    private void OpenCoordinateTool() { RequireProject(); ResetCoordinates(); _tabs.SelectedIndex=2; }
+
     private void RefreshSummary()
     {
-        _projectSummary.Text=$"{_project.Name} · {_project.Airport.Name}  {_project.Airport.Icao}";
-        _tips.SetToolTip(_projectSummary,_projectSummary.Text);
-        _projectionSummary.Text=_project.Airport.ArpLongitude is double lon ? $"CGCS2000 / CM{Cgcs2000Projection.ZoneForLongitude(lon).CentralMeridian}E · EPSG:{Cgcs2000Projection.ZoneForLongitude(lon).Epsg}" : "投影未确定 · 请编辑机场资料";
-        _dwgSummary.Text=$"ARP · {_project.Airport.ArpLatitude?.ToString("F8")??"未设置"} / {_project.Airport.ArpLongitude?.ToString("F8")??"未设置"}";
-        _tips.SetToolTip(_dwgSummary,_drawingPath()??"无DWG");
-        if(_dirty) _projectSummary.Text+=" · 待保存DWG";
+        if(!_initialized)
+        {
+            _projectSummary.Text="当前图纸尚未设置机场资料"; _airportSummary.Text=""; _arpSummary.Text=""; return;
+        }
+        _projectSummary.Text=_project.Name;
+        _airportSummary.Text=string.IsNullOrWhiteSpace(_project.Airport.Name)?"未设置机场名称":_project.Airport.Name;
+        _arpSummary.Text=_project.Airport.ArpLatitude is double lat && _project.Airport.ArpLongitude is double lon
+            ? $"ARP {lat.ToString("F8",CultureInfo.InvariantCulture)} / {lon.ToString("F8",CultureInfo.InvariantCulture)}"
+            : "ARP 未设置";
+        _tips.SetToolTip(_projectSummary,_projectSummary.Text); _tips.SetToolTip(_airportSummary,_airportSummary.Text); _tips.SetToolTip(_arpSummary,_arpSummary.Text);
     }
+
     private void FillGrid<T>(DataGridView grid,IEnumerable<T> values,Func<T,string> ident,Func<T,object?[]> cells)
     {
         var selected=grid.SelectedRows.Cast<DataGridViewRow>().Select(r=>r.Tag).ToHashSet(); grid.Rows.Clear();
@@ -80,16 +101,16 @@ public sealed partial class WorkspacePanel
     }
     private void RefreshData()
     {
-        FillGrid(_fixGrid,_project.Fixes,f=>f.Ident,f=>[f.Ident]);
-        FillGrid(_obstacleGrid,_project.Obstacles,o=>o.Ident,o=>[o.Ident,o.TopElevation]);
+        FillGrid(_fixGrid,_project.Fixes,f=>f.Ident,f=>[f.Ident,f.Latitude,f.Longitude]);
+        FillGrid(_obstacleGrid,_project.Obstacles,o=>o.Ident,o=>[o.Ident,o.TopElevation,o.Latitude,o.Longitude]);
         RefreshAirportData(); UpdateSelection();
     }
     private void RefreshCurrentData()
     {
         switch(_dataTabs.SelectedIndex)
         {
-            case 0: FillGrid(_fixGrid,_project.Fixes,f=>f.Ident,f=>[f.Ident]); break;
-            case 1: FillGrid(_obstacleGrid,_project.Obstacles,o=>o.Ident,o=>[o.Ident,o.TopElevation]); break;
+            case 0: FillGrid(_fixGrid,_project.Fixes,f=>f.Ident,f=>[f.Ident,f.Latitude,f.Longitude]); break;
+            case 1: FillGrid(_obstacleGrid,_project.Obstacles,o=>o.Ident,o=>[o.Ident,o.TopElevation,o.Latitude,o.Longitude]); break;
             default: RefreshAirportData(); break;
         }
         UpdateSelection();
@@ -104,45 +125,29 @@ public sealed partial class WorkspacePanel
     }
     private void UpdateSelection()
     {
-        _selectionSummary.Text=$"{_dataTabs.SelectedTab?.Text} · 已选 {CurrentGrid.SelectedRows.Count} / {DataCount}";
-        var value=CurrentGrid.SelectedRows.Count==1?CurrentGrid.SelectedRows[0].Tag:null;
-        _dataDetails.Text=value switch
-        {
-            FixData f=>$"{f.Ident}  纬 {f.Latitude:F8}°  经 {f.Longitude:F8}°",
-            ObstacleData o=>$"纬 {o.Latitude:F8}°  经 {o.Longitude:F8}°\r\n顶标高 {o.TopElevation:0.###} m · 自身高 {o.Height} m · 地面 {o.GroundElevation} m",
-            RunwayData r=>$"{r.EndA.Designator} / {r.EndB.Designator}  宽 {r.Width} m\r\n双击查看两物理端及各方向THR / DER资料",
-            NavaidData n=>$"纬 {n.Position.Latitude:F8}°  经 {n.Position.Longitude:F8}°\r\n{n.Kind} · {n.Ident}",
-            _=>""
-        };
-        _tips.SetToolTip(_dataDetails,_dataDetails.Text);
+        if(_editButton is null || _deleteButton is null) return;
+        var count=CurrentGrid.SelectedRows.Count; _editButton.Enabled=count==1; _deleteButton.Enabled=count>0;
+        _selectionSummary.Text=DataCount==0?"暂无数据":$"已选 {count} 项 · 共 {DataCount} 项";
     }
     private void ExportCurrentData() { if(IsAirportData) ExportAirport(IsRunway); else Export(IsObstacle); }
-    private void BaseLabelSettings()
-    {
-        var text=PromptText("公共底图标注","字高(m)",TextHeight.ToString(System.Globalization.CultureInfo.InvariantCulture)); if(text is null) return;
-        if(!decimal.TryParse(text,System.Globalization.NumberStyles.Float,System.Globalization.CultureInfo.InvariantCulture,out var height) || height<_textHeight.Minimum || height>_textHeight.Maximum) throw new InvalidOperationException("字高超出范围。");
-        _textHeight.Value=height; QueueBaseMap();
-    }
+
     private void EditPoint(bool edit)
     {
         RequireProject();
         if(IsAirportData) { EditAirportData(edit); return; }
-        if(edit && CurrentGrid.SelectedRows.Count!=1) throw new InvalidOperationException("请只选择一行进行修改。");
-        if(IsObstacle) EditObstacle(edit?SelectedObstacles()[0]:null);
-        else EditFix(edit?SelectedFixes()[0]:null);
+        if(edit && CurrentGrid.SelectedRows.Count!=1) throw new InvalidOperationException("请选择一行数据。");
+        if(IsObstacle) EditObstacle(edit?SelectedObstacles()[0]:null); else EditFix(edit?SelectedFixes()[0]:null);
     }
-    private void EditFix(FixData? previous,FixData? draft=null,Autodesk.AutoCAD.DatabaseServices.ObjectId? nativePoint=null)
+    private void EditFix(FixData? previous,FixData? draft=null)
     {
         using var dialog=new FixDialog(draft??previous); var result=dialog.ShowDialog(this);
         if(result==DialogResult.Retry)
         {
             var value=dialog.Value;
-            CadOperation(()=> { var p=CadDrawing.PickPosition(_project); if(p is not null) { value.Latitude=p.Latitude; value.Longitude=p.Longitude; if(p.Elevation.HasValue) value.Elevation=p.Elevation; } EditFix(previous,value,nativePoint); }); return;
+            CadOperation(()=> { var p=CadDrawing.PickPosition(_project); if(p is not null) { value.Latitude=p.Latitude; value.Longitude=p.Longitude; } EditFix(previous,value); }); return;
         }
         if(result!=DialogResult.OK) return;
         ProjectEdits.ReplaceFix(_project,previous,dialog.Value); ProjectDataIds.Ensure(_project);
-        try { if(nativePoint.HasValue) CadDrawing.RegisterFixPoint(_project,dialog.Value,nativePoint.Value,TextHeight); }
-        catch { if(previous is null) _project.Fixes.Remove(dialog.Value); throw; }
         BaseDataChanged(); RefreshData(); RefreshProcedures(); RefreshToolChoices();
     }
     private void EditObstacle(ObstacleData? previous,ObstacleData? draft=null)
@@ -163,44 +168,46 @@ public sealed partial class WorkspacePanel
     {
         RequireProject();
         if(IsAirportData) { DeleteAirportData(); return; }
-        var count=CurrentGrid.SelectedRows.Count; if(count==0) throw new InvalidOperationException("请先选择数据行。");
+        var count=CurrentGrid.SelectedRows.Count; if(count==0) throw new InvalidOperationException("未选择数据。");
         var ids=SelectedFixes().Select(f=>f.Ident).ToHashSet(StringComparer.OrdinalIgnoreCase);
         var referenced=!IsObstacle && _project.Procedures.Any(p=>p.Paths.Any(path=>path.Fixes.Any(f=>ids.Contains(f.FixIdent))) || p.FixIdents.Any(ids.Contains) || p.Sections.Any(s=>s.FixIdents.Any(ids.Contains)));
-        if(MessageBox.Show(this,$"删除所选 {count} 行？"+(referenced?"同时移除程序中的这些 Fix 引用。":"")+"已绘制的 CAD 图形保持原样。","删除数据",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)!=DialogResult.OK) return;
-        if(IsObstacle) { var selected=SelectedObstacles(); _project.Obstacles.RemoveAll(selected.Contains); }
-        else ProjectEdits.DeleteFixes(_project,ids);
+        var prompt=referenced?"删除所选数据并移除程序引用？":"删除所选数据？";
+        if(MessageBox.Show(this,prompt,"删除",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)!=DialogResult.OK) return;
+        if(IsObstacle) { var selected=SelectedObstacles(); _project.Obstacles.RemoveAll(selected.Contains); } else ProjectEdits.DeleteFixes(_project,ids);
         BaseDataChanged(); RefreshData(); RefreshProcedures(); RefreshToolChoices();
     }
+
     private void ImportPoints()
     {
-        using var dialog=new OpenFileDialog { Filter="CSV|*.csv",Title=IsAirportData?"导入"+_dataTabs.SelectedTab!.Text+" CSV":IsObstacle?"导入障碍物（TopElevation 为必填顶标高，单位米）":"导入定位点（固定模板，十进制度）" };
-        if(dialog.ShowDialog(this)==DialogResult.OK) AddPointText(File.ReadAllText(dialog.FileName));
+        RequireProject();
+        using var form=new Form { Text="导入"+_dataTabs.SelectedTab!.Text,ClientSize=new Size(470,145),StartPosition=FormStartPosition.CenterParent,FormBorderStyle=FormBorderStyle.FixedDialog,MinimizeBox=false,MaximizeBox=false,Font=Font,BackColor=Color.FromArgb(37,37,37),ForeColor=Color.Gainsboro };
+        var file=Input();
+        var browse=Button("选择文件",()=> { using var open=new OpenFileDialog { Filter="CSV|*.csv" }; if(open.ShowDialog(form)==DialogResult.OK) file.Text=open.FileName; });
+        var choose=new FlowLayoutPanel { Dock=DockStyle.Top,Height=38,WrapContents=false }; choose.Controls.Add(file); choose.Controls.Add(browse);
+        var download=Button("下载模板",()=> { using var save=new SaveFileDialog { Filter="CSV|*.csv",FileName=_dataTabs.SelectedTab!.Text+"_模板.csv" }; if(save.ShowDialog(form)==DialogResult.OK) { File.WriteAllText(save.FileName,TemplateText(),new UTF8Encoding(true)); SetStatus("模板已保存"); } });
+        var cancel=new Button { Text="取消",AutoSize=true,DialogResult=DialogResult.Cancel };
+        var import=Button("导入",()=> { if(string.IsNullOrWhiteSpace(file.Text)) throw new InvalidOperationException("请选择文件。"); AddPointText(File.ReadAllText(file.Text)); form.DialogResult=DialogResult.OK; });
+        var buttons=Bar(download,import,cancel); buttons.Dock=DockStyle.Bottom; buttons.Height=38;
+        form.Controls.Add(buttons); form.Controls.Add(choose); form.AcceptButton=import; form.CancelButton=cancel; form.ShowDialog(this);
     }
+    private string TemplateText() => _dataTabs.SelectedIndex switch { 1=>ObstacleCsv.Export([]),2=>RunwayCsv.Export([]),3=>NavaidCsv.Export([]),_=>FixCsv.Export([]) };
     private void AddPointText(string text)
     {
-        RequireProject();
-        int count;
+        RequireProject(); int count;
         if(IsAirportData) { AddAirportText(text); return; }
         if(IsObstacle) { var batch=ObstacleCsv.ParseText(text,_project.Obstacles.Select(o=>o.Ident)); count=batch.Count; _project.Obstacles.AddRange(batch); }
         else { var batch=FixCsv.ParseText(text,_project.Fixes.Select(f=>f.Ident)); count=batch.Count; _project.Fixes.AddRange(batch); }
-        BaseDataChanged(); RefreshData(); RefreshProcedures(); RefreshToolChoices(); SetStatus($"已整批导入 {count} 行");
+        BaseDataChanged(); RefreshData(); RefreshProcedures(); RefreshToolChoices(); SetStatus($"已导入{count}条数据");
     }
-    private void CopyPoints()
-    {
-        if(CurrentGrid.SelectedRows.Count==0) throw new InvalidOperationException("请先选择要复制的数据行。");
-        Clipboard.SetText(IsAirportData?ExportAirportSelection():IsObstacle?ObstacleCsv.Export(SelectedObstacles(),"\t"):FixCsv.Export(SelectedFixes(),"\t")); SetStatus("已复制所选行（含字段标题）");
-    }
-    private void PastePoints() { if(!Clipboard.ContainsText()) throw new InvalidOperationException("剪贴板没有表格文本。"); AddPointText(Clipboard.GetText()); }
     private void DrawSelected(bool all)
     {
         RequireProject(); ProjectDataIds.Ensure(_project);
         var kind=_dataTabs.SelectedIndex switch { 1=>"Obstacle",2=>"Runway",3=>"Navaid",_=>"Fix" };
         var keys=(all?CurrentValues():CurrentGrid.SelectedRows.Cast<DataGridViewRow>().Select(r=>r.Tag!)).Select(DataKey).ToHashSet();
-        if(keys.Count==0) throw new InvalidOperationException("请选择数据，或新增资料。");
+        if(keys.Count==0) throw new InvalidOperationException("未选择数据。");
         QueueBaseMap(kind,keys);
     }
-    private IEnumerable<object> CurrentValues()=>_dataTabs.SelectedIndex switch
-    { 1=>_project.Obstacles,2=>_project.Runways,3=>_project.Navaids,_=>_project.Fixes };
+    private IEnumerable<object> CurrentValues()=>_dataTabs.SelectedIndex switch { 1=>_project.Obstacles,2=>_project.Runways,3=>_project.Navaids,_=>_project.Fixes };
     private static string DataKey(object value)=>value switch { FixData f=>f.DataId,ObstacleData o=>o.DataId,RunwayData r=>r.DataId,NavaidData n=>n.DataId,_=>throw new ArgumentException() };
     internal void DrawSelectedFixCommand()
     {
@@ -209,16 +216,4 @@ public sealed partial class WorkspacePanel
         SetStatus(CadDrawing.SyncBaseMap(_project,TextHeight,"Fix",selected.Select(f=>f.DataId).ToHashSet()));
     }
     internal void DrawCurrentAllCommand() { RequireProject(); SetStatus(CadDrawing.SyncBaseMap(_project,TextHeight)); }
-    private void ExportTemplate()
-    {
-        using var dialog=new SaveFileDialog { Filter="CSV|*.csv",FileName="template-"+_dataTabs.SelectedIndex+".csv" };
-        if(dialog.ShowDialog(this)!=DialogResult.OK) return;
-        var text=_dataTabs.SelectedIndex switch { 1=>ObstacleCsv.Export([]),2=>RunwayCsv.Export([]),3=>NavaidCsv.Export([]),_=>FixCsv.Export([]) };
-        File.WriteAllText(dialog.FileName,text,new System.Text.UTF8Encoding(true)); SetStatus("已导出本类固定字段模板");
-    }
-    private void RegisterCadPoint()
-    {
-        RequireProject();
-        CadOperation(()=> { var picked=CadDrawing.PickNativePoint(_project); if(picked is null) return; var p=picked.Value.Position; EditFix(null,new() { Latitude=p.Latitude,Longitude=p.Longitude,Elevation=p.Elevation==0?null:p.Elevation },picked.Value.Id); });
-    }
 }

@@ -15,7 +15,7 @@ internal static partial class CadDrawing
     private sealed record BaseMark(string Project,string Kind,string Key,string Ident,string Data,string Geometry,string Group,int Count,bool Archived=false);
     private sealed record BaseItem(string Kind,string Key,string Ident,string Layer,string Data,Action<Transaction> Draw);
     private static string Hash(string value)=>Convert.ToHexString(SHA256.HashData(Encoding.UTF8.GetBytes(value)));
-    private static string BaseFingerprint(ProjectData project,object data,double height)=>Hash(JsonSerializer.Serialize(new { CM=AirportGeometry.Meridian(project),Height=height,Data=data }));
+    private static string BaseFingerprint(ProjectData project,object data)=>Hash(JsonSerializer.Serialize(new { CM=AirportGeometry.Meridian(project),Data=data }));
     private static string HistoryKey(ProjectData project,string kind,string key)=>"FPD_B_"+Hash(project.ProjectId+"/"+kind+"/"+key);
     private static bool WasDrawn(ProjectData project,string kind,string key,Transaction tr,Database db)=>
         ((DBDictionary)tr.GetObject(db.NamedObjectsDictionaryId,OpenMode.ForRead)).Contains(HistoryKey(project,kind,key));
@@ -94,13 +94,13 @@ internal static partial class CadDrawing
     {
         var doc=AcadApp.DocumentManager.MdiActiveDocument??throw new InvalidOperationException("请打开DWG。");
         if(!DwgProjects.IsCurrent(project)) throw new InvalidOperationException("当前DWG与项目会话不一致；未写入图形。");
-        ProjectValidation.Project(project); ProjectDataIds.Ensure(project); var cm=AirportGeometry.Meridian(project);
-        string Fingerprint(object data)=>BaseFingerprint(project,data,height);
+        ProjectValidation.Project(project); ProjectDataIds.Ensure(project);
+        string Fingerprint(object data)=>BaseFingerprint(project,data);
         var items=new List<BaseItem>();
-        foreach(var f in project.Fixes) items.Add(new("Fix",f.DataId,f.Ident,"FPD_FIX",Fingerprint(f),tr=>DrawBasePoints(project,PointProjection.Fixes(project,[f]),height,tr)));
-        foreach(var o in project.Obstacles) items.Add(new("Obstacle",o.DataId,o.Ident,"FPD_OBSTACLE",Fingerprint(o),tr=>DrawBasePoints(project,PointProjection.Obstacles(project,[o]),height,tr)));
-        foreach(var r in project.Runways) items.Add(new("Runway",r.DataId,r.Ident,"FPD_RUNWAY",Fingerprint(r),tr=>DrawRunways(project,[r],height,tr)));
-        foreach(var n in project.Navaids) items.Add(new("Navaid",n.DataId,n.Ident,"FPD_NAVAID",Fingerprint(n),tr=>DrawNavaids(project,[n],height,tr)));
+        foreach(var f in project.Fixes) items.Add(new("Fix",f.DataId,f.Ident,"基础_定位点",Fingerprint(f),tr=>DrawBasePoints(project,PointProjection.Fixes(project,[f]),height,tr)));
+        foreach(var o in project.Obstacles) items.Add(new("Obstacle",o.DataId,o.Ident,"基础_障碍物",Fingerprint(o),tr=>DrawBasePoints(project,PointProjection.Obstacles(project,[o]),height,tr)));
+        foreach(var r in project.Runways) items.Add(new("Runway",r.DataId,r.Ident,"基础_跑道",Fingerprint(r),tr=>DrawRunways(project,[r],height,tr)));
+        foreach(var n in project.Navaids) items.Add(new("Navaid",n.DataId,n.Ident,"基础_导航台",Fingerprint(n),tr=>DrawNavaids(project,[n],height,tr)));
         items=items.Where(item=>(kind is null || item.Kind==kind) && (keys is null || keys.Contains(item.Key))).ToList();
         var changes=new List<(BaseItem Item,ObjectId[] Old)>(); var conflicts=new List<string>();
         var unsupported=items.Where(i=>i.Kind=="Navaid" && project.Navaids.Single(n=>n.DataId==i.Key).Kind==NavaidKind.ILS).ToArray();
@@ -115,6 +115,7 @@ internal static partial class CadDrawing
                 var found=marked.Where(x=>x.Mark is { Archived:false } m && m.Project==project.ProjectId && m.Kind==item.Kind && m.Key==item.Key).ToArray();
                 var intact=found.Length>0 && found.All(x=>x.Mark!.Count==found.Length && x.Mark.Group==found[0].Mark!.Group && GeometryUnchanged(x.Entity,x.Mark.Geometry,read));
                 var decision=BaseMapPolicy.Decide(found.Length==0?0:found.Select(x=>x.Mark!.Group).Distinct().Count(),intact,found.Any(x=>x.Mark!.Data!=item.Data));
+                if(found.Any(x=>x.Entity.Layer.StartsWith("FPD_",StringComparison.OrdinalIgnoreCase))) decision=BaseMapChange.Conflict;
                 if(found.Length==0 && marked.Any(x=>(x.Mark is null || x.Mark.Project!=project.ProjectId) && x.Entity.Layer==item.Layer && (item.Kind=="Runway" || HasName(x.Entity,item.Ident,read) || LegacyPointAt(x.Entity,item,project)))) decision=BaseMapChange.Conflict;
                 if(found.Length==0 && WasDrawn(project,item.Kind,item.Key,read,doc.Database)) decision=BaseMapChange.Conflict;
                 if(decision==BaseMapChange.None) continue;
@@ -122,7 +123,7 @@ internal static partial class CadDrawing
                 changes.Add((item,found.Select(x=>x.Entity.ObjectId).ToArray()));
             }
         }
-        if(changes.Count==0) return conflicts.Count>0?"底图冲突，原图保留："+string.Join("、",conflicts)+"；请人工核对图形和资料":"底图已一致，未重复绘制";
+        if(changes.Count==0) return conflicts.Count>0?"图形已由人工修改，请检查："+string.Join("、",conflicts):"图形已一致";
         PrepareProjectBlocks(changes.Where(c=>c.Item.Kind is "Obstacle" or "Navaid").Select(c=>c.Item.Kind=="Obstacle"?"Obstacle":project.Navaids.Single(n=>n.DataId==c.Item.Key).Kind.ToString()));
         using var locked=doc.LockDocument(); using var tr=doc.Database.TransactionManager.StartTransaction();
         var target=(BlockTableRecord)tr.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForWrite);
@@ -138,8 +139,8 @@ internal static partial class CadDrawing
             RememberBase(project,change.Item.Kind,change.Item.Key,tr,doc.Database);
             foreach(var id in added) { var e=(Entity)tr.GetObject(id,OpenMode.ForWrite); WriteBaseMark(e,new(project.ProjectId,change.Item.Kind,change.Item.Key,change.Item.Ident,change.Item.Data,GeometryStamp(e,tr),group,added.Length),tr); }
         }
-        tr.Commit(); doc.Editor.Regen(); var message=$"底图新增/更新 {changes.Count} 项；U撤销本次图形，请保存DWG及辅助资料";
-        if(conflicts.Count>0) message+="；冲突原图保留："+string.Join("、",conflicts); doc.Editor.WriteMessage("\n"+message); return message;
+        tr.Commit(); doc.Editor.Regen(); var message=$"图形已更新 {changes.Count} 项";
+        if(conflicts.Count>0) message+="；图形已由人工修改，请检查："+string.Join("、",conflicts); doc.Editor.WriteMessage("\n"+message); return message;
     }
     private static bool LegacyPointAt(Entity entity,BaseItem item,ProjectData project)
     {
