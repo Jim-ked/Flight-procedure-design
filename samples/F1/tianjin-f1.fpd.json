@@ -1,0 +1,189 @@
+{
+  "ProjectId": "a288d7131095444390b23cdda9969b2a",
+  "Name": "天津F1基础资料验收",
+  "Airport": {
+    "Name": "天津滨海",
+    "Icao": "ZBTJ",
+    "ArpLatitude": 39.124353,
+    "ArpLongitude": 117.346183,
+    "ArpElevation": null
+  },
+  "DwgPath": null,
+  "Fixes": [
+    {
+      "Ident": "TJ907",
+      "Latitude": 39.124353,
+      "Longitude": 117.346183,
+      "Elevation": null
+    },
+    {
+      "Ident": "TJ906",
+      "Latitude": 39.13,
+      "Longitude": 117.36,
+      "Elevation": 15
+    },
+    {
+      "Ident": "TJ908",
+      "Latitude": 39.14,
+      "Longitude": 117.335,
+      "Elevation": 20
+    }
+  ],
+  "Obstacles": [
+    {
+      "Ident": "OBS01",
+      "Latitude": 39.127,
+      "Longitude": 117.35,
+      "TopElevation": 80,
+      "Height": 30,
+      "GroundElevation": 50
+    },
+    {
+      "Ident": "OBS02",
+      "Latitude": 39.135,
+      "Longitude": 117.345,
+      "TopElevation": 120,
+      "Height": 65,
+      "GroundElevation": 55
+    },
+    {
+      "Ident": "OBS03",
+      "Latitude": 39.138,
+      "Longitude": 117.355,
+      "TopElevation": 95,
+      "Height": null,
+      "GroundElevation": null
+    }
+  ],
+  "Procedures": [
+    {
+      "Name": "TJ-F01-DEP",
+      "Kind": 2,
+      "Runway": null,
+      "FixIdents": [
+        "TJ906",
+        "TJ907",
+        "TJ906"
+      ],
+      "Sections": [
+        {
+          "Name": "16过渡",
+          "Stage": 0,
+          "Branch": 1,
+          "Runway": "16",
+          "FixIdents": [
+            "TJ907",
+            "TJ906"
+          ]
+        },
+        {
+          "Name": "复飞",
+          "Stage": 1,
+          "Branch": 0,
+          "Runway": "16",
+          "FixIdents": [
+            "TJ906",
+            "TJ907",
+            "TJ906"
+          ]
+        }
+      ]
+    }
+  ],
+  "Runways": [
+    {
+      "Ident": "16/34",
+      "Width": 45,
+      "EndA": {
+        "Designator": "16",
+        "PhysicalEnd": {
+          "Latitude": 39.14,
+          "Longitude": 117.34,
+          "Elevation": 3
+        },
+        "Threshold": {
+          "Latitude": 39.139,
+          "Longitude": 117.340333333333,
+          "Elevation": 4
+        },
+        "DepartureEnd": {
+          "Latitude": 39.11,
+          "Longitude": 117.35,
+          "Elevation": 7
+        }
+      },
+      "EndB": {
+        "Designator": "34",
+        "PhysicalEnd": {
+          "Latitude": 39.11,
+          "Longitude": 117.35,
+          "Elevation": 6
+        },
+        "Threshold": {
+          "Latitude": 39.111,
+          "Longitude": 117.349666666667,
+          "Elevation": 5
+        },
+        "DepartureEnd": {
+          "Latitude": 39.14,
+          "Longitude": 117.34,
+          "Elevation": 8
+        }
+      }
+    }
+  ],
+  "Navaids": [
+    {
+      "Ident": "TVOR",
+      "Name": "测试VOR",
+      "Kind": 0,
+      "Position": {
+        "Latitude": 39.145,
+        "Longitude": 117.345,
+        "Elevation": 10
+      },
+      "FrequencyMHz": 113.5,
+      "MagneticVariation": -6
+    },
+    {
+      "Ident": "TDME",
+      "Name": "测试DME",
+      "Kind": 1,
+      "Position": {
+        "Latitude": 39.14,
+        "Longitude": 117.36,
+        "Elevation": 12
+      },
+      "FrequencyMHz": 113.5,
+      "Channel": "82X"
+    },
+    {
+      "Ident": "TNDB",
+      "Name": "测试NDB",
+      "Kind": 2,
+      "Position": {
+        "Latitude": 39.12,
+        "Longitude": 117.325,
+        "Elevation": 9
+      },
+      "FrequencyKHz": 345
+    },
+    {
+      "Ident": "TILS",
+      "Name": "测试ILS",
+      "Kind": 3,
+      "Position": {
+        "Latitude": 39.108,
+        "Longitude": 117.350666666667,
+        "Elevation": 6
+      },
+      "FrequencyMHz": 110.3,
+      "GlidePathPosition": {
+        "Latitude": 39.138,
+        "Longitude": 117.340666666667,
+        "Elevation": 4
+      },
+      "GlidePathAngle": 3
+    }
+  ]
+}

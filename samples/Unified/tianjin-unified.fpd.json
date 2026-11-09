@@ -1,0 +1,223 @@
+{
+  "ProjectId": "unified-tianjin-human-check",
+  "Name": "天津统一修订验收",
+  "Airport": {
+    "Name": "天津滨海",
+    "Icao": "ZBTJ",
+    "ArpLatitude": 39.124353,
+    "ArpLongitude": 117.346183,
+    "ArpElevation": null
+  },
+  "DwgPath": null,
+  "Fixes": [
+    {
+      "DataId": "46623200CCCA6EA632ABB5C1C648CF4B",
+      "Ident": "TJ907",
+      "Latitude": 39.124353,
+      "Longitude": 117.346183,
+      "Elevation": null
+    },
+    {
+      "DataId": "FB9AA1BC39398B4F8B23AD3037352A3A",
+      "Ident": "TJ906",
+      "Latitude": 39.13,
+      "Longitude": 117.36,
+      "Elevation": 15
+    },
+    {
+      "DataId": "F4D9CB99F0783754D32A355E9644E9F5",
+      "Ident": "TJ908",
+      "Latitude": 39.14,
+      "Longitude": 117.335,
+      "Elevation": 20
+    }
+  ],
+  "Obstacles": [
+    {
+      "DataId": "F7B833473D3D324E4BA84A0244BECEDF",
+      "Ident": "OBS01",
+      "Latitude": 39.127,
+      "Longitude": 117.35,
+      "TopElevation": 80,
+      "Height": 30,
+      "GroundElevation": 50
+    },
+    {
+      "DataId": "43715AF610CFF6D08028BE7BE6375DC6",
+      "Ident": "OBS02",
+      "Latitude": 39.135,
+      "Longitude": 117.345,
+      "TopElevation": 120,
+      "Height": 65,
+      "GroundElevation": 55
+    },
+    {
+      "DataId": "EB0C9B412FB6E67621785BF7958796F3",
+      "Ident": "OBS03",
+      "Latitude": 39.138,
+      "Longitude": 117.355,
+      "TopElevation": 95,
+      "Height": null,
+      "GroundElevation": null
+    }
+  ],
+  "Procedures": [
+    {
+      "ProcedureId": "cc2313e14b4e47d2bb7503c5b4293ec2",
+      "Paths": [
+        {
+          "PathId": "a780aa59c44a43a6a000fde57f0e31db",
+          "Name": "Route-A",
+          "IsMissed": false,
+          "Runway": null,
+          "MigrationNote": null,
+          "Fixes": [
+            {
+              "FixIdent": "TJ906",
+              "SymbolKey": "FlyBy",
+              "Annotation": null
+            },
+            {
+              "FixIdent": "TJ907",
+              "SymbolKey": "FlyOver",
+              "Annotation": "IAF 1500"
+            },
+            {
+              "FixIdent": "TJ908",
+              "SymbolKey": "Reporting",
+              "Annotation": null
+            },
+            {
+              "FixIdent": "TJ906",
+              "SymbolKey": "FlyBy",
+              "Annotation": null
+            }
+          ]
+        }
+      ],
+      "PathsMigrated": true,
+      "Name": "ZBTJ-SID",
+      "Kind": 0,
+      "Runway": null,
+      "FixIdents": [],
+      "Sections": []
+    }
+  ],
+  "Runways": [
+    {
+      "DataId": "D126DA484DCB46F3D840F3CD2D9B6A05",
+      "Ident": "16/34",
+      "Width": 45,
+      "EndA": {
+        "Designator": "16",
+        "PhysicalEnd": {
+          "Latitude": 39.14,
+          "Longitude": 117.34,
+          "Elevation": 3
+        },
+        "Threshold": {
+          "Latitude": 39.139,
+          "Longitude": 117.340333333333,
+          "Elevation": 4
+        },
+        "DepartureEnd": {
+          "Latitude": 39.11,
+          "Longitude": 117.35,
+          "Elevation": 7
+        }
+      },
+      "EndB": {
+        "Designator": "34",
+        "PhysicalEnd": {
+          "Latitude": 39.11,
+          "Longitude": 117.35,
+          "Elevation": 6
+        },
+        "Threshold": {
+          "Latitude": 39.111,
+          "Longitude": 117.349666666667,
+          "Elevation": 5
+        },
+        "DepartureEnd": {
+          "Latitude": 39.14,
+          "Longitude": 117.34,
+          "Elevation": 8
+        }
+      }
+    }
+  ],
+  "Navaids": [
+    {
+      "DataId": "C7818262563F981877E3FE9734B3537A",
+      "Ident": "TVOR",
+      "Name": "测试VOR",
+      "Kind": 0,
+      "Position": {
+        "Latitude": 39.145,
+        "Longitude": 117.345,
+        "Elevation": 10
+      },
+      "FrequencyMHz": 113.5,
+      "FrequencyKHz": null,
+      "Channel": null,
+      "MagneticVariation": -6,
+      "GlidePathPosition": null,
+      "GlidePathAngle": null
+    },
+    {
+      "DataId": "A1406CD9F5E7EACE6060F096E0DBFE5B",
+      "Ident": "TDME",
+      "Name": "测试DME",
+      "Kind": 1,
+      "Position": {
+        "Latitude": 39.14,
+        "Longitude": 117.36,
+        "Elevation": 12
+      },
+      "FrequencyMHz": 113.5,
+      "FrequencyKHz": null,
+      "Channel": "82X",
+      "MagneticVariation": null,
+      "GlidePathPosition": null,
+      "GlidePathAngle": null
+    },
+    {
+      "DataId": "F0E474FF3EF2E2E46290FAD185875967",
+      "Ident": "TNDB",
+      "Name": "测试NDB",
+      "Kind": 2,
+      "Position": {
+        "Latitude": 39.12,
+        "Longitude": 117.325,
+        "Elevation": 9
+      },
+      "FrequencyMHz": null,
+      "FrequencyKHz": 345,
+      "Channel": null,
+      "MagneticVariation": null,
+      "GlidePathPosition": null,
+      "GlidePathAngle": null
+    },
+    {
+      "DataId": "2989016C84FB867B6007CB97474721CB",
+      "Ident": "TILS",
+      "Name": "测试ILS",
+      "Kind": 3,
+      "Position": {
+        "Latitude": 39.108,
+        "Longitude": 117.350666666667,
+        "Elevation": 6
+      },
+      "FrequencyMHz": 110.3,
+      "FrequencyKHz": null,
+      "Channel": null,
+      "MagneticVariation": null,
+      "GlidePathPosition": {
+        "Latitude": 39.138,
+        "Longitude": 117.340666666667,
+        "Elevation": 4
+      },
+      "GlidePathAngle": 3
+    }
+  ]
+}

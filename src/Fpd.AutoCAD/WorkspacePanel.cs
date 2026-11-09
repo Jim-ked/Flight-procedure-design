@@ -4,21 +4,19 @@ using System.IO;
 using System.Text;
 using System.Windows.Forms;
 using Fpd.Core;
+using Autodesk.AutoCAD.ApplicationServices;
 
 namespace Fpd.AutoCAD;
 
 public sealed partial class WorkspacePanel : UserControl
 {
-    private readonly ProjectStore _store = new();
     private readonly Func<string?> _drawingPath;
     private ProjectData _project = ProjectStore.Create("未命名项目", new AirportData());
-    private string _currentPath = "";
+    private bool _initialized, _editable;
     private bool _dirty, _refreshing;
     private readonly TabControl _tabs = new() { Dock = DockStyle.Fill, Appearance = TabAppearance.FlatButtons, ItemSize = new Size(78, 31), SizeMode = TabSizeMode.Fixed };
     private readonly Label _status = new() { Height = 27, Dock = DockStyle.Bottom, AutoEllipsis = true, TextAlign = ContentAlignment.MiddleLeft, BackColor = Color.FromArgb(37,37,37), ForeColor = Color.Gainsboro };
     private readonly ToolTip _tips = new();
-    internal event Action<DrawRequest>? DrawRequested;
-    internal event Action<string, bool>? LayerRequested;
     internal event Action? ViewRequested;
     public ProjectData Project => _project;
 
@@ -28,7 +26,7 @@ public sealed partial class WorkspacePanel : UserControl
         Dock = DockStyle.Fill; AutoScaleMode = AutoScaleMode.Dpi; AutoScaleDimensions = new SizeF(96,96);
         Font = new Font("Microsoft YaHei UI",9); BackColor = Color.FromArgb(37,37,37); ForeColor = Color.Gainsboro;
         _tabs.TabPages.Add(ProjectPage()); _tabs.TabPages.Add(ProcedurePage()); _tabs.TabPages.Add(ToolsPage()); _tabs.TabPages.Add(ResultsPage());
-        _tabs.SelectedIndexChanged += (_,_) => Run(() => { if (_tabs.SelectedIndex == 3) RefreshResults(); if (_tabs.SelectedIndex == 2) RefreshToolChoices(); });
+        _tabs.SelectedIndexChanged += (_,_) => Run(() => { if (_tabs.SelectedIndex == 3) RefreshResults(); if (_tabs.SelectedIndex == 2) RefreshToolChoices(); ApplyPageLayers(); });
         Controls.Add(_tabs); Controls.Add(_status); RefreshProject(); ResumeLayout(true);
     }
     private TabPage Page(string title) => new(title) { BackColor = BackColor, ForeColor = ForeColor, Padding = new Padding(6), UseVisualStyleBackColor = false };
@@ -47,63 +45,73 @@ public sealed partial class WorkspacePanel : UserControl
     private static void Field(TableLayoutPanel g,string title,Control c) { var r=g.RowCount++; g.RowStyles.Add(new RowStyle(SizeType.Absolute,30)); g.Controls.Add(Caption(title),0,r); g.Controls.Add(c,1,r); }
     private void Run(Action action) { try { action(); } catch(Exception ex) { SetStatus(ex.Message); MessageBox.Show(this,ex.Message,"FPD",MessageBoxButtons.OK,MessageBoxIcon.Warning); } }
     public void SetStatus(string message) { _status.Text="  "+message; _tips.SetToolTip(_status,message); }
-    private void Changed() { _dirty=true; RefreshSummary(); }
+    private void Changed() { RequireProject(); DwgProjects.Changed(_project); _dirty=true; RefreshSummary(); }
     private void RefreshProject()
     {
         RefreshSummary(); RefreshData(); RefreshProcedures(); RefreshToolChoices();
-        SetStatus($"Fix {_project.Fixes.Count} · 障碍物 {_project.Obstacles.Count} · 程序 {_project.Procedures.Count}");
+        SetStatus("就绪");
     }
-    private bool ConfirmReplacement()
+    internal void BindProject(ProjectData project,bool initialized,bool editable,bool dirty=false,bool applyPageLayers=true)
     {
-        if (!_dirty) return true;
-        var choice=MessageBox.Show(this,"当前项目有未保存修改，是否先保存？","FPD",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
-        return choice==DialogResult.No || choice==DialogResult.Yes && SaveProject();
+        ++_projectSelectionVersion;
+        var changedProject=!ReferenceEquals(_project,project);
+        _project=project; _initialized=initialized; _editable=editable; _dirty=dirty;
+        _refreshing=true;
+        try { _projectView.BindProject(project,initialized,editable,changedProject); RefreshProcedures(); RefreshToolChoices(); ResetCoordinates(); SetStatus("就绪"); }
+        finally { _refreshing=false; }
+        if(applyPageLayers) ApplyPageLayers();
+    }
+    internal void SavedProject(string path) { _dirty=false; RefreshSummary(); SetStatus("DWG及项目资料已保存："+Path.GetFileName(path)); }
+    private void RequireProject()
+    {
+        if(!_initialized || !_editable || !DwgProjects.IsCurrent(_project)) throw new InvalidOperationException("请先在当前DWG创建项目；读取失败时不能覆盖原资料。");
     }
     private void NewProject()
     {
-        if(!ConfirmReplacement()) return;
-        using var dialog=new AirportDialog(ProjectStore.Create("新建项目",new AirportData()));
-        if(dialog.ShowDialog(this)!=DialogResult.OK) return;
-        _project=ProjectStore.Create(dialog.ProjectName,dialog.Airport); _currentPath=""; _dirty=true; RefreshProject();
+        if(!_editable) throw new InvalidOperationException("请先打开DWG；资料读取失败时不能覆盖原文件。");
+        if(_initialized) throw new InvalidOperationException("当前DWG已有项目。请修改项目，或使用AutoCAD新建另一张DWG。");
+        EditProject(ProjectStore.Create("新建项目",new AirportData()),true);
     }
-    private void EditAirport()
+    private void EditAirport() { RequireProject(); EditProject(_project,false); }
+    private void EditProject(ProjectData draft,bool create)
     {
-        using var dialog=new AirportDialog(_project);
-        if(dialog.ShowDialog(this)!=DialogResult.OK) return;
-        _project.Name=dialog.ProjectName; _project.Airport=dialog.Airport; Changed();
-        _coordinateOutput.Text="机场资料已更新，请重新转换或绘制。";
-    }
-    private void OpenProject()
-    {
-        if(!ConfirmReplacement()) return;
-        using var dialog=new OpenFileDialog { Filter="FPD 项目|*.fpd.json|JSON|*.json", Title="打开 FPD 项目" };
-        if(dialog.ShowDialog(this)!=DialogResult.OK) return;
-        var opened=_store.Open(dialog.FileName); _project=opened; _currentPath=dialog.FileName; _dirty=false; RefreshProject();
-    }
-    private bool SaveProject()
-    {
-        ProjectValidation.Project(_project);
-        var path=_currentPath;
-        if(string.IsNullOrWhiteSpace(path))
+        using var dialog=new AirportDialog(draft); var result=dialog.ShowDialog(this);
+        if(result==DialogResult.Retry)
         {
-            using var dialog=new SaveFileDialog { Filter="FPD 项目|*.fpd.json", FileName=_project.Name+".fpd.json", Title="保存 FPD 项目" };
-            if(dialog.ShowDialog(this)!=DialogResult.OK) return false;
-            path=dialog.FileName;
+            var value=ProjectStore.Create(dialog.ProjectName,dialog.Airport);
+            // ARP picking can initialize the projection before the project exists.
+            AirportCommandRequested?.Invoke(()=>
+            {
+                var p=CadDrawing.PickPosition(value);
+                if(p is not null) { value.Airport.ArpLatitude=p.Latitude; value.Airport.ArpLongitude=p.Longitude; }
+                EditProject(value,create);
+            }); return;
         }
-        _store.Save(_project,path); _currentPath=path; _dirty=false; SetStatus("已保存："+Path.GetFileName(path)); return true;
+        if(result!=DialogResult.OK) return;
+        if(create) DwgProjects.Initialize(ProjectStore.Create(dialog.ProjectName,dialog.Airport));
+        else { _project.Name=dialog.ProjectName; _project.Airport=dialog.Airport; Changed(); }
+        _dirty=true; RefreshSummary(); ResetCoordinates(); RefreshData();
+        SetStatus("项目资料已更新");
     }
-    public void SetDwgPath(string? path)
+    private void BaseDataChanged(string kind,IEnumerable<object> values)
     {
-        if(string.IsNullOrWhiteSpace(path)) throw new InvalidOperationException("请先打开 DWG。");
-        if(_project.DwgPath!=path) { _project.DwgPath=path; Changed(); }
+        ProjectDataIds.Ensure(_project);
+        var keys=values.Select(DataKey).ToHashSet(StringComparer.OrdinalIgnoreCase);
+        Changed();
+        if(keys.Count>0) QueueBaseMap(kind,keys);
     }
-    public (FixData Fix,ProjectedPoint Point) GetSelectedPoint()
+    private void QueueBaseMap(string? kind=null,IReadOnlySet<string>? keys=null)
     {
-        var selected=SelectedFixes();
-        if(selected.Count!=1) throw new InvalidOperationException("FPDPOINT 需要明确选中一个 Fix；ARP 请使用“绘制 ARP”。");
-        return (selected[0],PointProjection.Fixes(_project,selected)[0].Point);
+        RequireProject();
+        if(!_project.Airport.ArpLongitude.HasValue) return;
+        var project=_project;
+        CadOperation(()=>SetStatus(CadDrawing.SyncBaseMap(project,kind,keys)));
     }
-    private double TextHeight => (double)_textHeight.Value;
-    private void Draw(IReadOnlyList<PlotPoint> points) => DrawRequested?.Invoke(new(points,TextHeight,_showTop.Checked));
+    private void ApplyPageLayers()
+    {
+        if(Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument is null) return;
+        CadDrawing.ShowProjectLayers(_tabs.SelectedIndex!=1);
+    }
+    private double TextHeight => 50;
     protected override void Dispose(bool disposing) { if(disposing) _tips.Dispose(); base.Dispose(disposing); }
 }

@@ -1,135 +1,179 @@
 using System.Drawing;
 using System.IO;
+using System.Text;
 using System.Windows.Forms;
+using System.Windows.Forms.Integration;
 using Fpd.Core;
+using Fpd.AutoCAD.Views;
 
 namespace Fpd.AutoCAD;
 
 public sealed partial class WorkspacePanel
 {
-    private readonly Label _projectSummary=Caption("");
-    private readonly Label _projectionSummary=Caption("");
-    private readonly Label _dwgSummary=Caption("");
-    private readonly TabControl _dataTabs=new() { Dock=DockStyle.Fill };
-    private readonly DataGridView _fixGrid=DataTable();
-    private readonly DataGridView _obstacleGrid=DataTable();
-    private readonly TextBox _search=Input();
-    private readonly Label _selectionSummary=Caption("");
-    private readonly NumericUpDown _textHeight=new() { Minimum=.1m,Maximum=10000,DecimalPlaces=1,Value=50,Increment=10,Width=70,BackColor=Color.FromArgb(55,55,55),ForeColor=Color.White };
-    private readonly CheckBox _showTop=new() { Text="障碍物顶标高",Checked=true,AutoSize=true,Margin=new Padding(6,5,0,0) };
-    private bool IsObstacle => _dataTabs.SelectedIndex==1;
-    private DataGridView CurrentGrid => IsObstacle?_obstacleGrid:_fixGrid;
-    private static DataGridView DataTable() => new()
-    {
-        Dock=DockStyle.Fill,ReadOnly=true,AllowUserToAddRows=false,AllowUserToDeleteRows=false,MultiSelect=true,SelectionMode=DataGridViewSelectionMode.FullRowSelect,
-        RowHeadersVisible=false,AutoSizeColumnsMode=DataGridViewAutoSizeColumnsMode.AllCells,BackgroundColor=Color.FromArgb(42,42,42),BorderStyle=BorderStyle.FixedSingle,
-        EnableHeadersVisualStyles=false,ColumnHeadersHeightSizeMode=DataGridViewColumnHeadersHeightSizeMode.AutoSize,AutoSizeRowsMode=DataGridViewAutoSizeRowsMode.AllCells,
-        ColumnHeadersDefaultCellStyle=new DataGridViewCellStyle { BackColor=Color.FromArgb(55,55,55),ForeColor=Color.Gainsboro,WrapMode=DataGridViewTriState.True },
-        DefaultCellStyle=new DataGridViewCellStyle { BackColor=Color.FromArgb(42,42,42),ForeColor=Color.Gainsboro,SelectionBackColor=Color.FromArgb(55,90,115),SelectionForeColor=Color.White },
-        ClipboardCopyMode=DataGridViewClipboardCopyMode.Disable
-    };
+    private ProjectWorkspaceViewModel _projectViewModel=null!;
+    private ProjectWorkspaceView _projectView=null!;
+    private long _projectSelectionVersion;
+    internal event Action<Action>? ProjectHighlightRequested;
+    private ProjectDataCategory SelectedCategory=>_projectViewModel.SelectedCategory.Kind;
+    private IReadOnlySet<string> SelectedDataIds=>_projectViewModel.SelectedDataIds;
+    private bool IsObstacle=>SelectedCategory==ProjectDataCategory.Obstacle;
+    private bool IsAirportData=>SelectedCategory is ProjectDataCategory.Runway or ProjectDataCategory.Navaid;
+    private bool IsRunway=>SelectedCategory==ProjectDataCategory.Runway;
     private TabPage ProjectPage()
     {
-        var page=Page("项目"); var stack=Stack();
-        Row(stack,Bar(Button("新建",NewProject),Button("打开",OpenProject),Button("保存",()=>SaveProject())),34);
-        Row(stack,_projectSummary,23); Row(stack,_projectionSummary,23); Row(stack,_dwgSummary,23);
-        Row(stack,Bar(Button("编辑项目 / 机场",EditAirport),Button("关联当前 DWG",()=>SetDwgPath(_drawingPath()))),34);
-        var search=FormGrid(); Field(search,"查找标识",_search); Row(stack,search,32);
-        void Columns(DataGridView grid,bool obstacle)
-        {
-            foreach(var (name,width) in new[] { ("标识",82),("纬度 °",100),("经度 °",100),(obstacle?"顶标高 m":"高程 m",85) }) grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText=name,Width=width,SortMode=DataGridViewColumnSortMode.NotSortable });
-            if(obstacle) { grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText="自身高度 m",Width=90 }); grid.Columns.Add(new DataGridViewTextBoxColumn { HeaderText="地面高程 m",Width=90 }); }
-            grid.SelectionChanged+=(_,_)=>UpdateSelection(); grid.CellDoubleClick+=(_,e)=> { if(e.RowIndex>=0) Run(()=>EditPoint(true)); };
-            grid.KeyDown+=(_,e)=>
-            {
-                if(e.Control && e.KeyCode==Keys.C) { Run(CopyPoints); e.SuppressKeyPress=true; }
-                if(e.Control && e.KeyCode==Keys.V) { Run(PastePoints); e.SuppressKeyPress=true; }
-                if(e.Control && e.KeyCode==Keys.A) { grid.SelectAll(); e.SuppressKeyPress=true; }
-                if(e.KeyCode==Keys.Delete) { Run(DeletePoints); e.SuppressKeyPress=true; }
-            };
-            var menu=new ContextMenuStrip(); menu.Items.Add("复制所选",null,(_,_)=>Run(CopyPoints)); menu.Items.Add("粘贴新增",null,(_,_)=>Run(PastePoints)); menu.Items.Add("全选",null,(_,_)=>grid.SelectAll()); grid.ContextMenuStrip=menu;
-            grid.Disposed+=(_,_)=>menu.Dispose();
-        }
-        Columns(_fixGrid,false); Columns(_obstacleGrid,true);
-        var fixes=Page("定位点"); fixes.Padding=Padding.Empty; fixes.Controls.Add(_fixGrid); var obstacles=Page("障碍物"); obstacles.Padding=Padding.Empty; obstacles.Controls.Add(_obstacleGrid);
-        _dataTabs.TabPages.Add(fixes); _dataTabs.TabPages.Add(obstacles); _dataTabs.SelectedIndexChanged+=(_,_)=>UpdateSelection();
-        _search.TextChanged+=(_,_)=>RefreshData(); Row(stack,_dataTabs,100,true); Row(stack,_selectionSummary,23);
-        Row(stack,Bar(Button("新增",()=>EditPoint(false)),Button("修改",()=>EditPoint(true)),Button("删除",DeletePoints),Button("CSV 导入",ImportPoints)),34);
-        Row(stack,Bar(Button("复制",CopyPoints),Button("粘贴",PastePoints),Button("全选",()=>CurrentGrid.SelectAll())),34);
-        Row(stack,Bar(Button("绘制所选",()=>DrawSelected(false)),Button("绘制全部",()=>DrawSelected(true))),34);
-        Row(stack,Bar(new Label { Text="字高 m",AutoSize=true,Margin=new Padding(2,5,0,0) },_textHeight,_showTop),30);
-        page.Controls.Add(stack); return page;
+        var page=Page("项目"); page.Padding=Padding.Empty;
+        _projectViewModel=new ProjectWorkspaceViewModel(action=>Run(()=>ProjectAction(action)));
+        _projectView=new ProjectWorkspaceView(_projectViewModel);
+        _projectView.DataSelectionChanged+=()=>Run(()=>HighlightSelectedProjectData(false));
+        _projectView.DataActivated+=()=>Run(()=> { if(IsAirportData) EditPoint(true); else HighlightSelectedProjectData(true); });
+        page.Controls.Add(new ElementHost { Dock=DockStyle.Fill,Child=_projectView });
+        _projectView.BindProject(_project,_initialized,_editable,true);
+        return page;
     }
-    private void RefreshSummary()
+    private void ProjectAction(ProjectUiAction action)
     {
-        _projectSummary.Text=$"{_project.Name} · {_project.Airport.Name}  {_project.Airport.Icao}";
-        _tips.SetToolTip(_projectSummary,_projectSummary.Text);
-        _projectionSummary.Text=_project.Airport.ArpLongitude is double lon ? $"CGCS2000 / CM{Cgcs2000Projection.ZoneForLongitude(lon).CentralMeridian}E · EPSG:{Cgcs2000Projection.ZoneForLongitude(lon).Epsg}" : "投影未确定 · 请编辑机场资料";
-        _dwgSummary.Text="DWG · "+(_project.DwgPath is null?"未关联":Path.GetFileName(_project.DwgPath)); _tips.SetToolTip(_dwgSummary,_project.DwgPath??"未关联");
-    }
-    private void RefreshData()
-    {
-        void Fill(DataGridView grid,IEnumerable<object> values,Func<object,string> ident,Func<object,object?[]> cells)
+        switch(action)
         {
-            var selected=grid.SelectedRows.Cast<DataGridViewRow>().Select(r=>r.Tag).ToHashSet(); grid.Rows.Clear();
-            foreach(var value in values.Where(v=>ident(v).Contains(_search.Text.Trim(),StringComparison.OrdinalIgnoreCase)))
-            { var row=grid.Rows[grid.Rows.Add(cells(value))]; row.Tag=value; row.Selected=selected.Contains(value); }
-            // DataGridView auto-selects its first row; an empty selection must stay empty.
-            if(selected.Count==0) grid.ClearSelection();
+            case ProjectUiAction.Create: CreateProjectFromSetup(); break;
+            case ProjectUiAction.EditProject: EditAirport(); break;
+            case ProjectUiAction.Add: EditPoint(false); break;
+            case ProjectUiAction.Edit: EditPoint(true); break;
+            case ProjectUiAction.Delete: DeletePoints(); break;
+            case ProjectUiAction.Import: ImportPoints(); break;
+            case ProjectUiAction.Export: RequireProject(); ExportCurrentData(); break;
         }
-        Fill(_fixGrid,_project.Fixes,f=>((FixData)f).Ident,f=> { var p=(FixData)f; return [p.Ident,p.Latitude.ToString("F6"),p.Longitude.ToString("F6"),p.Elevation]; });
-        Fill(_obstacleGrid,_project.Obstacles,o=>((ObstacleData)o).Ident,o=> { var p=(ObstacleData)o; return [p.Ident,p.Latitude.ToString("F6"),p.Longitude.ToString("F6"),p.TopElevation,p.Height,p.GroundElevation]; });
-        UpdateSelection();
     }
-    private List<FixData> SelectedFixes()=>_fixGrid.SelectedRows.Cast<DataGridViewRow>().OrderBy(r=>r.Index).Select(r=>(FixData)r.Tag!).ToList();
-    private List<ObstacleData> SelectedObstacles()=>_obstacleGrid.SelectedRows.Cast<DataGridViewRow>().OrderBy(r=>r.Index).Select(r=>(ObstacleData)r.Tag!).ToList();
-    private void UpdateSelection() => _selectionSummary.Text=$"{(IsObstacle?"障碍物":"定位点")} · 已选 {CurrentGrid.SelectedRows.Count} / 显示 {CurrentGrid.Rows.Count} / 共 {(IsObstacle?_project.Obstacles.Count:_project.Fixes.Count)}";
+    private void RefreshSummary()=>_projectViewModel.UpdateSummary();
+    private void RefreshData()=>_projectViewModel.RefreshRows();
+    private void CreateProjectFromSetup()
+    {
+        if(!_editable || _initialized || !DwgProjects.IsCurrent(_project)) throw new InvalidOperationException("当前图纸无法设置项目。");
+        var airport=new AirportData { Name=_projectViewModel.DraftAirportName.Trim(),ArpLatitude=CoordinateInput.Parse(_projectViewModel.DraftArpLatitude,true),ArpLongitude=CoordinateInput.Parse(_projectViewModel.DraftArpLongitude,false) };
+        if(string.IsNullOrWhiteSpace(airport.Name)) throw new InvalidDataException("机场名称不能为空。");
+        var project=ProjectStore.Create(_projectViewModel.DraftProjectName.Trim(),airport); ProjectValidation.Project(project);
+        DwgProjects.Initialize(project); SetStatus("项目资料已设置");
+    }
+    private List<T> SelectedBasics<T>()=>CurrentValues().OfType<T>().Where(value=>SelectedDataIds.Contains(DataKey(value!))).ToList();
+    private List<FixData> SelectedFixes()=>_project.Fixes.Where(value=>SelectedDataIds.Contains(value.DataId)).ToList();
+    private List<ObstacleData> SelectedObstacles()=>_project.Obstacles.Where(value=>SelectedDataIds.Contains(value.DataId)).ToList();
+    private void HighlightSelectedProjectData(bool zoom)
+    {
+        var version=++_projectSelectionVersion;
+        if(!_initialized || !DwgProjects.IsCurrent(_project) || _tabs.SelectedIndex!=0) return;
+        var project=_project; var category=SelectedCategory;
+        var key=SelectedDataIds.Count==1?SelectedDataIds.Single():null;
+        ProjectHighlightRequested?.Invoke(()=>
+        {
+            if(version!=_projectSelectionVersion || !ReferenceEquals(project,_project) ||
+                !DwgProjects.IsCurrent(project) || SelectedCategory!=category || _tabs.SelectedIndex!=0 ||
+                (key is not null && (SelectedDataIds.Count!=1 || !SelectedDataIds.Contains(key)))) return;
+            if(key is null) Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument?.Editor.SetImpliedSelection([]);
+            else CadDrawing.HighlightBasePoint(project,category.ToString(),key,zoom);
+        });
+    }
+    private void ExportCurrentData() { if(IsAirportData) ExportAirport(IsRunway); else Export(IsObstacle); }
     private void EditPoint(bool edit)
     {
-        if(edit && CurrentGrid.SelectedRows.Count!=1) throw new InvalidOperationException("请只选择一行进行修改。");
-        if(IsObstacle)
+        RequireProject();
+        if(IsAirportData) { EditAirportData(edit); return; }
+        if(edit && SelectedDataIds.Count!=1) throw new InvalidOperationException("请选择一行数据。");
+        if(IsObstacle) EditObstacle(edit?SelectedObstacles().Single():null); else EditFix(edit?SelectedFixes().Single():null);
+    }
+    private void EditFix(FixData? previous,FixData? draft=null)
+    {
+        using var dialog=new FixDialog(draft??previous); var result=dialog.ShowDialog(this);
+        if(result==DialogResult.Retry)
         {
-            var previous=edit?SelectedObstacles()[0]:null; using var dialog=new ObstacleDialog(previous);
-            if(dialog.ShowDialog(this)!=DialogResult.OK) return;
             var value=dialog.Value;
-            if(_project.Obstacles.Any(o=>o!=previous && o.Ident.Equals(value.Ident,StringComparison.OrdinalIgnoreCase))) throw new InvalidDataException("障碍物标识已存在。");
-            if(previous is null) _project.Obstacles.Add(value); else _project.Obstacles[_project.Obstacles.IndexOf(previous)]=value;
+            CadOperation(()=> { var p=CadDrawing.PickPosition(_project); if(p is not null) { value.Latitude=p.Latitude; value.Longitude=p.Longitude; } EditFix(previous,value); }); return;
         }
-        else
+        if(result!=DialogResult.OK) return;
+        ProjectEdits.ReplaceFix(_project,previous,dialog.Value); ProjectDataIds.Ensure(_project);
+        BaseDataChanged("Fix",[dialog.Value]); RefreshData(); RefreshProcedures(); RefreshToolChoices();
+    }
+    private void EditObstacle(ObstacleData? previous,ObstacleData? draft=null)
+    {
+        using var dialog=new ObstacleDialog(draft??previous); var result=dialog.ShowDialog(this);
+        if(result==DialogResult.Retry)
         {
-            var previous=edit?SelectedFixes()[0]:null; using var dialog=new FixDialog(previous);
-            if(dialog.ShowDialog(this)!=DialogResult.OK) return;
-            ProjectEdits.ReplaceFix(_project,previous,dialog.Value);
+            var value=dialog.Value;
+            CadOperation(()=> { var p=CadDrawing.PickPosition(_project); if(p is not null) { value.Latitude=p.Latitude; value.Longitude=p.Longitude; value.TopElevation=p.Elevation??value.TopElevation; } EditObstacle(previous,value); }); return;
         }
-        Changed(); RefreshData(); RefreshProcedures(); RefreshToolChoices();
+        if(result!=DialogResult.OK) return;
+        var value2=dialog.Value; ProjectDataIds.Ensure(_project); if(previous is not null) value2.DataId=previous.DataId;
+        if(_project.Obstacles.Any(o=>o!=previous && o.Ident.Equals(value2.Ident,StringComparison.OrdinalIgnoreCase))) throw new InvalidDataException("障碍物编号重复。");
+        if(previous is null) _project.Obstacles.Add(value2); else _project.Obstacles[_project.Obstacles.IndexOf(previous)]=value2;
+        BaseDataChanged("Obstacle",[value2]); RefreshData();
     }
     private void DeletePoints()
     {
-        var count=CurrentGrid.SelectedRows.Count; if(count==0) throw new InvalidOperationException("请先选择数据行。");
+        RequireProject();
+        var count=SelectedDataIds.Count; if(count==0) throw new InvalidOperationException("未选择数据。");
         var ids=SelectedFixes().Select(f=>f.Ident).ToHashSet(StringComparer.OrdinalIgnoreCase);
-        var referenced=!IsObstacle && _project.Procedures.Any(p=>p.FixIdents.Any(ids.Contains));
-        if(MessageBox.Show(this,$"删除所选 {count} 行？"+(referenced?"同时移除程序中的这些 Fix 引用。":"")+"已绘制的 CAD 图形保持原样。","删除数据",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)!=DialogResult.OK) return;
-        if(IsObstacle) { var selected=SelectedObstacles(); _project.Obstacles.RemoveAll(selected.Contains); }
-        else ProjectEdits.DeleteFixes(_project,ids);
-        Changed(); RefreshData(); RefreshProcedures(); RefreshToolChoices();
+        var referenced=!IsObstacle && _project.Procedures.Any(p=>p.Paths.Any(path=>path.Fixes.Any(f=>ids.Contains(f.FixIdent))) || p.FixIdents.Any(ids.Contains) || p.Sections.Any(s=>s.FixIdents.Any(ids.Contains)));
+        var prompt=referenced?"删除所选数据并移除程序引用？":"删除所选数据？";
+        if(MessageBox.Show(this,prompt,"删除",MessageBoxButtons.OKCancel,MessageBoxIcon.Question)!=DialogResult.OK) return;
+        DeleteSelectedProjectData();
     }
+
+    private void DeleteSelectedProjectData()
+    {
+        var project=_project;
+        var kind=SelectedCategory.ToString();
+        var keys=SelectedDataIds.ToHashSet(StringComparer.OrdinalIgnoreCase);
+        CadOperation(()=> { DwgProjects.DeleteBaseData(project,kind,keys); SetStatus("已删除所选数据"); });
+    }
+
     private void ImportPoints()
     {
-        using var dialog=new OpenFileDialog { Filter="CSV / TSV|*.csv;*.tsv;*.txt|所有文件|*.*",Title=IsObstacle?"导入障碍物（TopElevation 为必填顶标高，单位米）":"导入定位点（十进制度，高程单位米）" };
-        if(dialog.ShowDialog(this)==DialogResult.OK) AddPointText(File.ReadAllText(dialog.FileName));
+        RequireProject();
+        using var form=new Form { Text="导入"+_projectViewModel.SelectedCategory.Label,ClientSize=new Size(470,145),StartPosition=FormStartPosition.CenterParent,FormBorderStyle=FormBorderStyle.FixedDialog,MinimizeBox=false,MaximizeBox=false,Font=Font,BackColor=Color.FromArgb(37,37,37),ForeColor=Color.Gainsboro };
+        var file=Input();
+        var browse=Button("选择文件",()=> { using var open=new OpenFileDialog { Filter="CSV|*.csv" }; if(open.ShowDialog(form)==DialogResult.OK) file.Text=open.FileName; });
+        var choose=new FlowLayoutPanel { Dock=DockStyle.Top,Height=38,WrapContents=false }; choose.Controls.Add(file); choose.Controls.Add(browse);
+        var download=Button("下载模板",()=> { using var save=new SaveFileDialog { Filter="CSV|*.csv",FileName=_projectViewModel.SelectedCategory.Label+"_模板.csv" }; if(save.ShowDialog(form)==DialogResult.OK) { File.WriteAllText(save.FileName,TemplateText(),new UTF8Encoding(true)); SetStatus("模板已保存"); } });
+        var cancel=new Button { Text="取消",AutoSize=true,DialogResult=DialogResult.Cancel };
+        var import=Button("导入",()=> { if(string.IsNullOrWhiteSpace(file.Text)) throw new InvalidOperationException("请选择文件。"); AddPointText(File.ReadAllText(file.Text)); form.DialogResult=DialogResult.OK; });
+        var buttons=Bar(download,import,cancel); buttons.Dock=DockStyle.Bottom; buttons.Height=38;
+        form.Controls.Add(buttons); form.Controls.Add(choose); form.AcceptButton=import; form.CancelButton=cancel; form.ShowDialog(this);
     }
+    private string TemplateText() => SelectedCategory switch { ProjectDataCategory.Obstacle=>ObstacleCsv.Export([]),ProjectDataCategory.Runway=>RunwayCsv.Export([]),ProjectDataCategory.Navaid=>NavaidCsv.Export([]),_=>FixCsv.Export([]) };
     private void AddPointText(string text)
     {
-        int count;
-        if(IsObstacle) { var batch=ObstacleCsv.ParseText(text,_project.Obstacles.Select(o=>o.Ident)); count=batch.Count; _project.Obstacles.AddRange(batch); }
-        else { var batch=FixCsv.ParseText(text,_project.Fixes.Select(f=>f.Ident)); count=batch.Count; _project.Fixes.AddRange(batch); }
-        Changed(); RefreshData(); RefreshProcedures(); RefreshToolChoices(); SetStatus($"已整批导入 {count} 行");
+        RequireProject();
+        if(IsAirportData) { AddAirportText(text); return; }
+        if(IsObstacle)
+        {
+            var result=ObstacleCsv.ImportText(text,_project.Obstacles);
+            _project.Obstacles.AddRange(result.Added);
+            if(result.Added.Count>0) BaseDataChanged("Obstacle",result.Added);
+            RefreshData(); ReportImport(result);
+        }
+        else
+        {
+            var result=FixCsv.ImportText(text,_project.Fixes);
+            _project.Fixes.AddRange(result.Added);
+            if(result.Added.Count>0) BaseDataChanged("Fix",result.Added);
+            RefreshData(); RefreshProcedures(); RefreshToolChoices(); ReportImport(result);
+        }
     }
-    private void CopyPoints()
+    private void ReportImport<T>(CsvImportResult<T> result)
     {
-        if(CurrentGrid.SelectedRows.Count==0) throw new InvalidOperationException("请先选择要复制的数据行。");
-        Clipboard.SetText(IsObstacle?ObstacleCsv.Export(SelectedObstacles(),"\t"):FixCsv.Export(SelectedFixes(),"\t")); SetStatus("已复制所选行（含字段标题）");
+        var summary=result.Added.Count==0 ? "无新增数据" : $"新增 {result.Added.Count} 条";
+        if(result.Skipped.Count>0) summary += $"，跳过 {result.Skipped.Count} 条";
+        if(result.Conflicts.Count>0) summary += "；冲突：" + string.Join("、",result.Conflicts);
+        SetStatus(summary);
+        // CAD synchronization runs later and updates the status bar. Keep the
+        // import counts and conflict list visible in a separate result message.
+        MessageBox.Show(this,summary,"CSV导入结果",MessageBoxButtons.OK,result.Conflicts.Count>0?MessageBoxIcon.Warning:MessageBoxIcon.Information);
     }
-    private void PastePoints() { if(!Clipboard.ContainsText()) throw new InvalidOperationException("剪贴板没有表格文本。"); AddPointText(Clipboard.GetText()); }
-    private void DrawSelected(bool all) => Draw(IsObstacle ? PointProjection.Obstacles(_project,all?_project.Obstacles:SelectedObstacles()) : PointProjection.Fixes(_project,all?_project.Fixes:SelectedFixes()));
+    private IEnumerable<object> CurrentValues()=>SelectedCategory switch { ProjectDataCategory.Obstacle=>_project.Obstacles,ProjectDataCategory.Runway=>_project.Runways,ProjectDataCategory.Navaid=>_project.Navaids,_=>_project.Fixes };
+    private static string DataKey(object value)=>value switch { FixData f=>f.DataId,ObstacleData o=>o.DataId,RunwayData r=>r.DataId,NavaidData n=>n.DataId,_=>throw new ArgumentException() };
+    internal void DrawSelectedFixCommand()
+    {
+        RequireProject(); ProjectDataIds.Ensure(_project); var selected=SelectedFixes();
+        if(selected.Count!=1) throw new InvalidOperationException("请在项目页选择一个定位点。");
+        SetStatus(CadDrawing.SyncBaseMap(_project,"Fix",selected.Select(f=>f.DataId).ToHashSet()));
+    }
+    internal void DrawCurrentAllCommand() { RequireProject(); SetStatus(CadDrawing.SyncBaseMap(_project)); }
 }

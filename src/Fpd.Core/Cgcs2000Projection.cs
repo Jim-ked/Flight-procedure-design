@@ -5,6 +5,31 @@ public readonly record struct ProjectedPoint(double Easting, double Northing, do
 /// CGCS2000 three-degree Gauss-Kruger CM, false easting 500000 m, false northing 0 m.
 public static class Cgcs2000Projection
 {
+    // Invert this project's forward series with Newton iteration in the fixed CM.
+    // The metre residual is checked before returning, rather than silently accepting nonconvergence.
+    public static GeoPosition InverseInZone(double easting, double northing, double centralMeridian, double elevation = 0)
+    {
+        if (!double.IsFinite(easting) || !double.IsFinite(northing) || !double.IsFinite(elevation) || Math.Abs(northing)>10000000)
+            throw new ArgumentException("CAD坐标须为有限投影米值。");
+        var latitude=Math.Clamp(northing/111132.0,-89,89); var longitude=centralMeridian;
+        const double step=0.00001;
+        for(var i=0;i<15;i++)
+        {
+            var p=ForwardInZone(latitude,longitude,centralMeridian);
+            var de=easting-p.Easting; var dn=northing-p.Northing;
+            if(Math.Max(Math.Abs(de),Math.Abs(dn))<0.000001)
+                return new() { Latitude=latitude,Longitude=longitude,Elevation=elevation };
+            var lat=ForwardInZone(latitude+step,longitude,centralMeridian);
+            var lon=ForwardInZone(latitude,longitude+step,centralMeridian);
+            var a=(lat.Easting-p.Easting)/step; var b=(lon.Easting-p.Easting)/step;
+            var c=(lat.Northing-p.Northing)/step; var d=(lon.Northing-p.Northing)/step;
+            var determinant=a*d-b*c;
+            if(Math.Abs(determinant)<1) break;
+            latitude+=(de*d-b*dn)/determinant; longitude+=(a*dn-de*c)/determinant;
+        }
+        throw new ArgumentException("坐标反算未收敛，请核对DWG与项目坐标系。");
+    }
+
     public static (int Epsg, double CentralMeridian) ZoneForLongitude(double longitude)
     {
         if (!double.IsFinite(longitude) || longitude < 73.5 || longitude >= 136.5)

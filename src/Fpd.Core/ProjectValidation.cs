@@ -19,7 +19,7 @@ public static class ProjectValidation
     public static void Project(ProjectData project)
     {
         if (project is null || string.IsNullOrWhiteSpace(project.ProjectId) || string.IsNullOrWhiteSpace(project.Name) ||
-            project.Airport is null || project.Fixes is null || project.Procedures is null || project.Obstacles is null)
+            project.Airport is null || project.Fixes is null || project.Procedures is null || project.Obstacles is null || project.Runways is null || project.Navaids is null)
             throw new InvalidDataException("项目标识、名称、机场或数据列表无效。");
         var airport = project.Airport;
         if (airport.ArpLatitude.HasValue != airport.ArpLongitude.HasValue)
@@ -37,12 +37,41 @@ public static class ProjectValidation
             Fix(fix);
             if (!identifiers.Add(fix.Ident)) throw new InvalidDataException($"定位点标识重复：{fix.Ident}");
         }
+        var procedureIds=new HashSet<string>();
         foreach (var procedure in project.Procedures)
         {
-            if (procedure is null || string.IsNullOrWhiteSpace(procedure.Name) || !Enum.IsDefined(procedure.Kind) || procedure.FixIdents is null)
+            if (procedure is null || string.IsNullOrWhiteSpace(procedure.Name) || !Enum.IsDefined(procedure.Kind) || procedure.FixIdents is null || procedure.Sections is null)
                 throw new InvalidDataException("程序名称、类型或定位点顺序无效。");
+            if(string.IsNullOrWhiteSpace(procedure.ProcedureId) || !procedureIds.Add(procedure.ProcedureId) || procedure.Paths is null) throw new InvalidDataException("程序ID或路径列表无效/重复。");
+            if(procedure.Kind==ProcedureKind.Missed)
+            {
+                var parent=project.Procedures.FirstOrDefault(x=>x.ProcedureId==procedure.ParentProcedureId);
+                if(parent is null || parent.Kind!=ProcedureKind.Approach) throw new InvalidDataException("复飞程序必须关联一个进近程序。");
+            }
+            else if(procedure.Kind==ProcedureKind.Holding && procedure.ParentProcedureId is not null)
+            {
+                var parent=project.Procedures.FirstOrDefault(x=>x.ProcedureId==procedure.ParentProcedureId);
+                if(parent is null || parent.Kind is not (ProcedureKind.Departure or ProcedureKind.Arrival or ProcedureKind.Approach)) throw new InvalidDataException("等待程序的关联对象必须是离场、进场或进近程序。");
+            }
+            else if(procedure.Kind is not (ProcedureKind.Holding or ProcedureKind.Missed) && procedure.ParentProcedureId is not null)
+                throw new InvalidDataException("仅复飞或等待程序允许关联父程序。");
+            var pathIds=new HashSet<string>(); var pathNames=new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            foreach(var path in procedure.Paths)
+            {
+                if(path is null || string.IsNullOrWhiteSpace(path.PathId) || !pathIds.Add(path.PathId) || string.IsNullOrWhiteSpace(path.Name) || !pathNames.Add(path.Name) || path.Fixes is null) throw new InvalidDataException("路径名称/ID无效或重复。");
+                if(path.IsMissed && procedure.Kind!=ProcedureKind.Approach) throw new InvalidDataException("复飞路径仅属于进近程序。");
+                foreach(var use in path.Fixes) if(use is null || !identifiers.Contains(use.FixIdent) || string.IsNullOrWhiteSpace(use.SymbolKey)) throw new InvalidDataException("路径引用或图符无效。");
+            }
             foreach (var ident in procedure.FixIdents)
                 if (ident is null || !identifiers.Contains(ident)) throw new InvalidDataException($"程序引用未知定位点：{ident}");
+            var names=new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+            foreach(var section in procedure.Sections)
+            {
+                if(section is null || string.IsNullOrWhiteSpace(section.Name) || !names.Add(section.Name) || !Enum.IsDefined(section.Stage) || !Enum.IsDefined(section.Branch) || section.FixIdents is null)
+                    throw new InvalidDataException("程序段名称、阶段或分支无效/重复。");
+                if(section.Stage==ProcedureStage.Missed && procedure.Kind is not (ProcedureKind.Approach or ProcedureKind.Missed)) throw new InvalidDataException("Missed仅属于Approach或复飞程序。");
+                foreach(var ident in section.FixIdents) if(ident is null || !identifiers.Contains(ident)) throw new InvalidDataException($"程序段引用未知Fix：{ident}");
+            }
         }
         identifiers.Clear();
         foreach (var obstacle in project.Obstacles)
@@ -50,12 +79,55 @@ public static class ProjectValidation
             Obstacle(obstacle);
             if (!identifiers.Add(obstacle.Ident)) throw new InvalidDataException($"障碍物标识重复：{obstacle.Ident}");
         }
+        identifiers.Clear(); var ends=new HashSet<string>(StringComparer.OrdinalIgnoreCase);
+        foreach(var runway in project.Runways)
+        {
+            Runway(runway);
+            if(!identifiers.Add(runway.Ident) || !ends.Add(runway.EndA.Designator) || !ends.Add(runway.EndB.Designator)) throw new InvalidDataException("跑道或端标识重复。");
+        }
+        identifiers.Clear();
+        foreach(var navaid in project.Navaids) { Navaid(navaid); if(!identifiers.Add(navaid.Ident)) throw new InvalidDataException("设施标识重复："+navaid.Ident); }
+    }
+
+    public static void Position(GeoPosition position)
+    {
+        if(position is null) throw new InvalidDataException("位置缺失。");
+        Coordinates(position.Latitude,position.Longitude,position.Elevation);
+    }
+    public static void Runway(RunwayData runway)
+    {
+        if(runway is null || string.IsNullOrWhiteSpace(runway.Ident) || !double.IsFinite(runway.Width) || runway.Width<=0 || runway.EndA is null || runway.EndB is null)
+            throw new InvalidDataException("跑道标识、宽度或端资料无效。");
+        foreach(var end in new[] { runway.EndA,runway.EndB })
+        {
+            if(string.IsNullOrWhiteSpace(end.Designator)) throw new InvalidDataException("跑道端标识不能为空。");
+            Position(end.PhysicalEnd); Position(end.Threshold); Position(end.DepartureEnd);
+            if (new[] { end.PhysicalEnd, end.Threshold, end.DepartureEnd }.Any(p => !p.Elevation.HasValue)) throw new InvalidDataException("跑道位置须提供标高。");
+        }
+        if (!RunwayDefaults.Opposite(runway.EndA.Designator, runway.EndB.Designator)) throw new InvalidDataException("跑道方向须相反，例如16R/34L。");
+        if (runway.EndA.PhysicalEnd.Latitude == runway.EndB.PhysicalEnd.Latitude && runway.EndA.PhysicalEnd.Longitude == runway.EndB.PhysicalEnd.Longitude)
+            throw new InvalidDataException("物理跑道两端不能重合。");
+    }
+    public static void Navaid(NavaidData navaid)
+    {
+        if(navaid is null || string.IsNullOrWhiteSpace(navaid.Ident) || !Enum.IsDefined(navaid.Kind)) throw new InvalidDataException("设施标识或类型无效。");
+        Position(navaid.Position);
+        foreach(var number in new[] { navaid.FrequencyMHz,navaid.FrequencyKHz,navaid.MagneticVariation,navaid.GlidePathAngle })
+            if(number.HasValue && !double.IsFinite(number.Value)) throw new InvalidDataException("设施参数须为有限数值。");
+        if(navaid.FrequencyMHz<=0 || navaid.FrequencyKHz<=0 || navaid.GlidePathAngle<=0 || navaid.GlidePathAngle>=90 || Math.Abs(navaid.MagneticVariation??0)>180) throw new InvalidDataException("频率、GP角度或磁差范围无效。");
+        if(navaid.Kind==NavaidKind.NDB && navaid.FrequencyMHz.HasValue || navaid.Kind!=NavaidKind.NDB && navaid.FrequencyKHz.HasValue) throw new InvalidDataException("NDB使用kHz，VOR/DME/ILS使用MHz，不能混用。");
+        var channelKind=navaid.Kind is NavaidKind.DME or NavaidKind.VOR_DME;
+        var variationKind=navaid.Kind is NavaidKind.VOR or NavaidKind.VOR_DME;
+        var glideKind=navaid.Kind is NavaidKind.ILS or NavaidKind.GP;
+        if(!channelKind && !string.IsNullOrWhiteSpace(navaid.Channel) || !variationKind && navaid.MagneticVariation.HasValue || !glideKind && (navaid.GlidePathPosition is not null || navaid.GlidePathAngle.HasValue)) throw new InvalidDataException("存在与设施类型不符的参数。");
+        if(navaid.GlidePathPosition is not null) Position(navaid.GlidePathPosition);
     }
 
     public static void Obstacle(ObstacleData obstacle)
     {
         if (obstacle is null || string.IsNullOrWhiteSpace(obstacle.Ident)) throw new InvalidDataException("障碍物标识不能为空。");
         Coordinates(obstacle.Latitude, obstacle.Longitude, obstacle.TopElevation);
+        if (obstacle.GroundElevation.HasValue && obstacle.TopElevation < obstacle.GroundElevation.Value) throw new InvalidDataException("障碍物顶标高不能低于地面高程。");
         if (obstacle.Height.HasValue && (!double.IsFinite(obstacle.Height.Value) || obstacle.Height < 0) ||
             obstacle.GroundElevation.HasValue && !double.IsFinite(obstacle.GroundElevation.Value))
             throw new InvalidDataException("障碍物自身高度须为非负有限米值，地面高程须为有限米值。");

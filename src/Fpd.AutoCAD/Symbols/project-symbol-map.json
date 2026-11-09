@@ -1,0 +1,120 @@
+{
+  "LibrarySha256": "8EEA0B9DA842981F4B396934E0A907162EA64E0506E31D828D0CBE7478A6F7C5",
+  "Blocks": {
+    "Obstacle": {
+      "Name": "Obst",
+      "Bounds": [
+        -357.630848884583,
+        -119.751282629278,
+        348.161054849626,
+        947.544323205948
+      ],
+      "BasePoint": [
+        0,
+        0,
+        0
+      ],
+      "DisplaySizeMm": 3.5,
+      "LabelHeightMm": 2.5,
+      "LabelGapMm": 1.5,
+      "Anchor": [
+        0,
+        0,
+        0
+      ],
+      "AnchorSource": "Circle.Center=(0,0,0)"
+    },
+    "VOR": {
+      "Name": "VOR",
+      "Bounds": [
+        -0.0674121032444219,
+        -0.0511406660858551,
+        0.0667060179229999,
+        0.0514737791038051
+      ],
+      "BasePoint": [
+        0,
+        0,
+        0
+      ],
+      "DisplaySizeMm": 3.5,
+      "LabelHeightMm": 2.5,
+      "LabelGapMm": 1.5,
+      "Anchor": [
+        0,
+        0,
+        0
+      ],
+      "AnchorSource": "原点(0,0,0)，可视中心基本重合；无独立Circle/DBPoint参考实体"
+    },
+    "DME": {
+      "Name": "DME",
+      "Bounds": [
+        -0.5,
+        -0.5,
+        0.5,
+        0.5
+      ],
+      "BasePoint": [
+        0,
+        0,
+        0
+      ],
+      "DisplaySizeMm": 3.5,
+      "LabelHeightMm": 2.5,
+      "LabelGapMm": 1.5,
+      "Anchor": [
+        0,
+        0,
+        0
+      ],
+      "AnchorSource": "DBPoint=(0,0,0)"
+    },
+    "NDB": {
+      "Name": "NDB",
+      "Bounds": [
+        -0.102363036941114,
+        -0.101613036942475,
+        0.101060591594911,
+        0.101810591596698
+      ],
+      "BasePoint": [
+        0,
+        0,
+        0
+      ],
+      "DisplaySizeMm": 3.5,
+      "LabelHeightMm": 2.5,
+      "LabelGapMm": 1.5,
+      "Anchor": [
+        0,
+        0,
+        0
+      ],
+      "AnchorSource": "Circle.Center=(0,0,0)"
+    },
+    "VOR_DME": {
+      "Name": "NVORDM",
+      "Bounds": [
+        -0.14000000000032742,
+        -0.120900000000006,
+        0.13990000000012515,
+        0.1208000000000311
+      ],
+      "BasePoint": [
+        0,
+        0,
+        0
+      ],
+      "DisplaySizeMm": 3.5,
+      "LabelHeightMm": 2.5,
+      "LabelGapMm": 1.5,
+      "Anchor": [
+        -4.48581913588e-05,
+        0,
+        0
+      ],
+      "AnchorSource": "Circle.Center=(-0.0000448581913588,0,0)，与(0,0,0)存在微小偏移"
+    }
+  }
+}

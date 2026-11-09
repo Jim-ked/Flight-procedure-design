@@ -22,6 +22,13 @@
     <Reference Include="AcDbMgd"><HintPath>$(AutoCAD2026Dir)\AcDbMgd.dll</HintPath><Private>false</Private></Reference>
     <Reference Include="AcCoreMgd"><HintPath>$(AutoCAD2026Dir)\AcCoreMgd.dll</HintPath><Private>false</Private></Reference>
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="../../WsTools-master/WindSpiral2026/WsSymbol2.1.dwg" Link="Symbols/WsSymbol2.1.dwg" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Symbols/symbol-map.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Symbols/ProjectBaseSymbols.dwg" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Symbols/project-symbol-map.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Symbols/project-block-provenance.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
   <Target Name="CheckAutoCAD2026Api" BeforeTargets="ResolveAssemblyReferences">
     <Error Condition="!Exists('$(AutoCAD2026Dir)\AcMgd.dll') or !Exists('$(AutoCAD2026Dir)\AcDbMgd.dll') or !Exists('$(AutoCAD2026Dir)\AcCoreMgd.dll')"
            Text="AutoCAD 2026 API not found. Set AutoCAD2026Dir to the installed AutoCAD 2026 directory, or run build-f0.ps1 -AutoCAD2026Dir &quot;path&quot;." />
