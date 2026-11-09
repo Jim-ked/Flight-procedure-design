@@ -140,11 +140,32 @@ public sealed partial class WorkspacePanel
     private string TemplateText() => SelectedCategory switch { ProjectDataCategory.Obstacle=>ObstacleCsv.Export([]),ProjectDataCategory.Runway=>RunwayCsv.Export([]),ProjectDataCategory.Navaid=>NavaidCsv.Export([]),_=>FixCsv.Export([]) };
     private void AddPointText(string text)
     {
-        RequireProject(); IReadOnlyList<object> batch;
+        RequireProject();
         if(IsAirportData) { AddAirportText(text); return; }
-        if(IsObstacle) { var rows=ObstacleCsv.ParseText(text,_project.Obstacles.Select(o=>o.Ident)); _project.Obstacles.AddRange(rows); batch=rows; }
-        else { var rows=FixCsv.ParseText(text,_project.Fixes.Select(f=>f.Ident)); _project.Fixes.AddRange(rows); batch=rows; }
-        BaseDataChanged(IsObstacle?"Obstacle":"Fix",batch); RefreshData(); RefreshProcedures(); RefreshToolChoices();
+        if(IsObstacle)
+        {
+            var result=ObstacleCsv.ImportText(text,_project.Obstacles);
+            _project.Obstacles.AddRange(result.Added);
+            if(result.Added.Count>0) BaseDataChanged("Obstacle",result.Added);
+            RefreshData(); ReportImport(result);
+        }
+        else
+        {
+            var result=FixCsv.ImportText(text,_project.Fixes);
+            _project.Fixes.AddRange(result.Added);
+            if(result.Added.Count>0) BaseDataChanged("Fix",result.Added);
+            RefreshData(); RefreshProcedures(); RefreshToolChoices(); ReportImport(result);
+        }
+    }
+    private void ReportImport<T>(CsvImportResult<T> result)
+    {
+        var summary=result.Added.Count==0 ? "无新增数据" : $"新增 {result.Added.Count} 条";
+        if(result.Skipped.Count>0) summary += $"，跳过 {result.Skipped.Count} 条";
+        if(result.Conflicts.Count>0) summary += "；冲突：" + string.Join("、",result.Conflicts);
+        SetStatus(summary);
+        // CAD synchronization runs later and updates the status bar. Keep the
+        // import counts and conflict list visible in a separate result message.
+        MessageBox.Show(this,summary,"CSV导入结果",MessageBoxButtons.OK,result.Conflicts.Count>0?MessageBoxIcon.Warning:MessageBoxIcon.Information);
     }
     private IEnumerable<object> CurrentValues()=>SelectedCategory switch { ProjectDataCategory.Obstacle=>_project.Obstacles,ProjectDataCategory.Runway=>_project.Runways,ProjectDataCategory.Navaid=>_project.Navaids,_=>_project.Fixes };
     private static string DataKey(object value)=>value switch { FixData f=>f.DataId,ObstacleData o=>o.DataId,RunwayData r=>r.DataId,NavaidData n=>n.DataId,_=>throw new ArgumentException() };

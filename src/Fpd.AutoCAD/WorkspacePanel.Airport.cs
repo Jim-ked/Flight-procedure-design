@@ -48,14 +48,23 @@ public sealed partial class WorkspacePanel
     }
     private void AddAirportText(string text)
     {
-        IReadOnlyList<object> changed;
         if(IsRunway)
         {
-            var batch=RunwayCsv.ParseText(text,_project.Runways.Select(r=>r.Ident)); var original=_project.Runways; _project.Runways=original.Concat(batch).ToList();
-            try { ProjectValidation.Project(_project); } catch { _project.Runways=original; throw; }
-            changed=batch;
+            var result=RunwayCsv.ImportText(text,_project.Runways);
+            if(result.Added.Count>0)
+            {
+                var original=_project.Runways; _project.Runways=original.Concat(result.Added).ToList();
+                try { ProjectValidation.Project(_project); } catch { _project.Runways=original; throw; }
+                BaseDataChanged("Runway",result.Added);
+            }
+            RefreshData(); RefreshProcedures(); ReportImport(result);
         }
-        else { var batch=NavaidCsv.ParseText(text,_project.Navaids.Select(n=>n.Ident)); _project.Navaids.AddRange(batch); changed=batch; }
-        BaseDataChanged(IsRunway?"Runway":"Navaid",changed); RefreshData(); RefreshProcedures();
+        else
+        {
+            var result=NavaidCsv.ImportText(text,_project.Navaids);
+            _project.Navaids.AddRange(result.Added);
+            if(result.Added.Count>0) BaseDataChanged("Navaid",result.Added);
+            RefreshData(); RefreshProcedures(); ReportImport(result);
+        }
     }
 }

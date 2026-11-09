@@ -183,6 +183,62 @@ try
         var obstacles = ObstacleCsv.ParseText("Ident,Latitude,Longitude,TopElevation,GroundElevation\nO1,39.2,117.3,80,50");
         Check(ObstacleCsv.ParseText(ObstacleCsv.Export(obstacles))[0].TopElevation == 80);
     });
+    Test("CSV imports classify overlap without changing existing fields or stable IDs", () =>
+    {
+        var existing=new NavaidData { DataId="stable",Ident="TJ",Kind=NavaidKind.VOR_DME,Name="kept",FrequencyMHz=113.3,Position=new() { Latitude=39,Longitude=117,Elevation=9 } };
+        var result=NavaidCsv.ImportText("Ident,Kind,Latitude,Longitude\nTJ,VOR/DME,39.000,117.0\nNEW,NDB,39.1,117.2",[existing]);
+        Check(result.Added.Count==1 && result.Skipped.Count==1 && result.Conflicts.Count==0);
+        Check(existing.DataId=="stable" && existing.Name=="kept" && existing.Position.Elevation==9 && result.Added[0].DataId=="");
+        var again=NavaidCsv.ImportText("Ident,Kind,Latitude,Longitude\nTJ,VOR_DME,39,117\nNEW,NDB,39.1,117.2",new[] { existing }.Concat(result.Added));
+        Check(again.Added.Count==0 && again.Skipped.Count==2 && again.Conflicts.Count==0);
+        var conflict=NavaidCsv.ImportText("Ident,Kind,Latitude,Longitude\nTJ,VOR_DME,40,117\nOTHER,DME,39.2,117.3",[existing]);
+        Check(conflict.Added.Single().Ident=="OTHER" && conflict.Conflicts.Single().Contains("TJ") && existing.Position.Latitude==39);
+    });
+    Test("CSV internal identical rows collapse and conflicting rows never choose a winner", () =>
+    {
+        var result=FixCsv.ImportText("Ident,Latitude,Longitude\nA,39,117\na,39.0,117.00\nB,39,117\nB,40,117\nC,39,117",[]);
+        Check(result.Added.Select(f=>f.Ident).SequenceEqual(new[] { "A","C" }) && result.Skipped.Count==1 && result.Conflicts.Single().Contains("B"));
+        var repeated=FixCsv.ImportText(FixCsv.Export(result.Added),result.Added);
+        Check(repeated.Added.Count==0 && repeated.Skipped.Count==2);
+        var fixConflict=FixCsv.ImportText("Ident,Latitude,Longitude\nA,40,117\nD,39,117",result.Added);
+        Check(fixConflict.Added.Single().Ident=="D" && fixConflict.Conflicts.Count==1 && result.Added[0].Latitude==39);
+        var obstacle=new ObstacleData { DataId="obstacle-id",Ident="O1",Latitude=39,Longitude=117,TopElevation=80,GroundElevation=50 };
+        var same=ObstacleCsv.ImportText("Ident,Latitude,Longitude,TopElevation,GroundElevation\nO1,39.0,117,80.00,50",[obstacle]);
+        Check(same.Added.Count==0 && same.Skipped.Count==1 && obstacle.DataId=="obstacle-id");
+        var changed=ObstacleCsv.ImportText("Ident,Latitude,Longitude,TopElevation,GroundElevation\nO1,39,117,81,50\nO2,39,117,90,50",[obstacle]);
+        Check(changed.Added.Single().Ident=="O2" && changed.Conflicts.Count==1 && obstacle.TopElevation==80);
+    });
+    Test("CSV validates all rows before classification and explains incompatible source headers", () =>
+    {
+        var existing=new FixData { Ident="A",Latitude=39,Longitude=117 };
+        try { FixCsv.ImportText("Ident,Latitude,Longitude\nA,39,117\nB,91,117",[existing]); throw new Exception("Accepted invalid row"); }
+        catch(InvalidDataException ex) { Check(ex.Message.Contains("第 3 行") && !ex.Message.Contains("重复")); }
+        try { NavaidCsv.ImportText("Ident,Name,Kind,Latitude,Longitude\nA,Source,VOR,39,117",[]); throw new Exception("Accepted source CSV"); }
+        catch(InvalidDataException ex) { Check(ex.Message.Contains("格式不匹配") && ex.Message.Contains("当前文件字段：Ident,Name,Kind,Latitude,Longitude") && ex.Message.Contains("要求字段：Ident,Kind,Latitude,Longitude")); }
+        Check(FixCsv.ImportText(FixCsv.Export([]),[]).Added.Count==0);
+    });
+    Test("runway CSV normalizes THR DER defaults and preserves existing direction conflicts", () =>
+    {
+        var runway=RunwayCsv.ParseText(RunwayCsv.Export([new RunwayData { Ident="R",Width=45,
+            EndA=new() { Designator="16R",PhysicalEnd=new() { Latitude=39.14,Longitude=117.34,Elevation=3 },Threshold=new() { Latitude=39.14,Longitude=117.34,Elevation=3 },DepartureEnd=new() { Latitude=39.11,Longitude=117.34,Elevation=6 } },
+            EndB=new() { Designator="34L",PhysicalEnd=new() { Latitude=39.11,Longitude=117.34,Elevation=6 },Threshold=new() { Latitude=39.11,Longitude=117.34,Elevation=6 },DepartureEnd=new() { Latitude=39.14,Longitude=117.34,Elevation=3 } } }]))[0];
+        runway.DataId="runway-id";
+        var lines=RunwayCsv.Export([runway]).Trim().Split('\n'); var fields=lines[1].Trim().Split(',');
+        foreach(var i in Enumerable.Range(6,6).Concat(Enumerable.Range(16,6))) fields[i]="";
+        var defaults=RunwayCsv.ImportText(lines[0]+"\n"+string.Join(",",fields),[runway]);
+        Check(defaults.Added.Count==0 && defaults.Skipped.Count==1 && runway.DataId=="runway-id");
+        fields[0]="OTHER";
+        var direction=RunwayCsv.ImportText(lines[0]+"\n"+string.Join(",",fields),[runway]);
+        Check(direction.Added.Count==0 && direction.Conflicts.Single().Contains("OTHER"));
+        var other=RunwayCsv.ParseText(RunwayCsv.Export([runway]))[0]; other.Ident="FREE"; other.EndA.Designator="16L"; other.EndB.Designator="34R";
+        var mixed=RunwayCsv.ImportText(RunwayCsv.Export([runway,other]),[runway]);
+        Check(mixed.Added.Single().Ident=="FREE" && mixed.Skipped.Count==1);
+        var duplicate=RunwayCsv.ParseText(RunwayCsv.Export([other]))[0]; duplicate.Ident="COLLISION";
+        var internalDirections=RunwayCsv.ImportText(RunwayCsv.Export([other,duplicate]),[]);
+        Check(internalDirections.Added.Count==0 && internalDirections.Conflicts.Count==2);
+        fields[0]="R"; fields[1]="46";
+        Check(RunwayCsv.ImportText(lines[0]+"\n"+string.Join(",",fields),[runway]).Conflicts.Count==1 && runway.Width==45);
+    });
     Test("batch uses airport CM and refuses empty selection", () =>
     {
         var p = Sample(); var points = PointProjection.Fixes(p, p.Fixes);
