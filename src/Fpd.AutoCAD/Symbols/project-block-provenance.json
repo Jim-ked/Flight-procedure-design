@@ -2,8 +2,8 @@
   "Source": "WindSpiral WsSymbol2.1.dwg original blocks cloned from the audited symbol-atlas.dwg; no geometry edits",
   "OriginalLibrarySha256": "AB3141FF3C9D173670C57600ECFA77B28E5625FC0EB1C8C06E37F08F4D8FF5F1",
   "AuditedAtlasSha256": "CB80899D9DAB1BB9E5EC331CA1150529A31AA255207137B594775F2127DAD812",
-  "ProjectLibrarySha256": "D75FEA998DFC0223B849A566317861046824D88C19D77B65C20F7903E60A9542",
-  "Verification": "Entity types, counts, attribute tags and all available XY bounds match docs/symbol-audit/block-table.json exactly (max delta 0).",
+  "ProjectLibrarySha256": "8EEA0B9DA842981F4B396934E0A907162EA64E0506E31D828D0CBE7478A6F7C5",
+  "Verification": "All five raw block definitions: origin, units, entity types/counts, layers, colors, attribute tags and available XY bounds match block-table.json exactly. No geometry, color or origin edits in the slim library; ByBlock applies only to target DWG clones.",
   "Blocks": [
     {
       "Name": "Obst",
@@ -24,6 +24,15 @@
       "Name": "NDB",
       "AtlasName": "$0$NDB",
       "EntityCount": 98
+    },
+    {
+      "Name": "NVORDM",
+      "AtlasName": "$0$NVORDM",
+      "EntityCount": 5
     }
-  ]
+  ],
+  "PreviousProjectLibrarySha256": "D75FEA998DFC0223B849A566317861046824D88C19D77B65C20F7903E60A9542",
+  "Review": "docs/symbol-audit/WindSpiral_symbol_audit_20261109.md",
+  "ReviewIndex": "docs/symbol-audit/WindSpiral_review-index.csv",
+  "ReviewIndexSha256": "AC2AF864A4B1DCED60F32EAB07F05666C5337E2D2221721E0121A2B5784DE45D"
 }

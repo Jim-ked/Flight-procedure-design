@@ -57,6 +57,14 @@ internal static partial class CadDrawing
             {
                 if(!block.Layer.Equals(expectedLayer,StringComparison.OrdinalIgnoreCase)) continue;
                 at=block.Position;
+                var mark=ReadBaseMark(block,tr);
+                if(mark is { Archived:false } && mark.Project==project.ProjectId)
+                {
+                    var symbolKind=mark.Kind=="Obstacle"?"Obstacle":project.Navaids.FirstOrDefault(n=>n.DataId==mark.Key)?.Kind.ToString();
+                    if(symbolKind is not null && ProjectBlocks().Blocks.TryGetValue(symbolKind,out var symbol) &&
+                        ((BlockTableRecord)tr.GetObject(block.BlockTableRecord,OpenMode.ForRead)).Name==ProjectBlockName(ProjectBlocks(),symbol))
+                        at=new Point3d(symbol.Anchor[0],symbol.Anchor[1],symbol.Anchor[2]).TransformBy(block.BlockTransform);
+                }
                 foreach(ObjectId a in block.AttributeCollection) if(tr.GetObject(a,OpenMode.ForRead) is AttributeReference attribute && attribute.Tag=="NAME") name=attribute.TextString;
             }
             else if(entity is DBPoint point) at=point.Position; else continue;
@@ -108,9 +116,9 @@ internal static partial class CadDrawing
         foreach(var n in navaids)
         {
             var p=AirportGeometry.Project(n.Position,cm); var at=new Point3d(p.Easting,p.Northing,p.Z);
-            var entity=ProjectSymbol(tr,doc.Database,n.Kind.ToString(),at,style); entity.Layer="基础_导航台"; entity.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0);
+            var entity=ProjectSymbol(tr,doc.Database,n.Kind.ToString(),at,style); entity.Layer="基础_导航台"; entity.Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,256);
             model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true); created.Add(entity.ObjectId);
-            var label=new DBText { Layer="基础_导航台",Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0),Position=at+new Vector3d(style.LabelGap,style.LabelGap,0),Height=style.TextHeight,TextString=n.Ident };
+            var label=new DBText { Layer="基础_导航台",Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,256),Position=at+new Vector3d(style.LabelGap,style.LabelGap,0),Height=style.TextHeight,TextString=n.Ident };
             model.AppendEntity(label); tr.AddNewlyCreatedDBObject(label,true); created.Add(label.ObjectId);
         }
         return created;

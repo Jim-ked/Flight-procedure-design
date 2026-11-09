@@ -126,9 +126,14 @@ internal static partial class CadDrawing
         }
     }
     private static string GeometryStamp(Entity entity,Transaction tr,IDictionary<ObjectId,string>? definitionCache=null)
+        =>GeometryStampCore(entity,tr,definitionCache,true);
+    private static string GeometryStampCore(Entity entity,Transaction tr,IDictionary<ObjectId,string>? definitionCache,bool canonicalizeNativeZero)
     {
         // Only our small set of native base-map entities is eligible for automatic updates.
-        var s=new StringBuilder(); void Add(object? value)=>s.Append(value is double d?d.ToString("R",CultureInfo.InvariantCulture):value).Append('|');
+        // DWG serialization snaps tiny hatch arc-center residuals to zero (the
+        // audited NVORDM contains -2.27e-13). Keep this sub-nanometre noise from
+        // masquerading as a designer edit after save/reopen.
+        var s=new StringBuilder(); void Add(object? value)=>s.Append(value is double d?(canonicalizeNativeZero && Math.Abs(d)<1e-10?0:d).ToString("R",CultureInfo.InvariantCulture):value).Append('|');
         void Point(Point3d p) { Add(p.X); Add(p.Y); Add(p.Z); }
         Add(entity.GetType().Name); Add(entity.Layer); Add(entity.ColorIndex); Add(entity.Linetype); Add(entity.Visible); Add(entity.LinetypeScale); Add(entity.LineWeight); var opacity=entity.Transparency; Add(opacity.IsByAlpha?(object)opacity.Alpha:opacity.IsByLayer?"ByLayer":"ByBlock");
         Add(entity.Color.ColorMethod); if(entity.Color.ColorMethod==Autodesk.AutoCAD.Colors.ColorMethod.ByColor) Add(entity.Color.ColorValue.ToArgb());
@@ -142,7 +147,7 @@ internal static partial class CadDrawing
                 else
                 {
                     var definitionStamp=new StringBuilder();
-                    foreach(ObjectId id in definition) definitionStamp.Append(GeometryStamp((Entity)tr.GetObject(id,OpenMode.ForRead),tr,definitionCache)).Append('|');
+                    foreach(ObjectId id in definition) definitionStamp.Append(GeometryStampCore((Entity)tr.GetObject(id,OpenMode.ForRead),tr,definitionCache,canonicalizeNativeZero)).Append('|');
                     if(definitionCache is not null) definitionCache[definition.ObjectId]=definitionStamp.ToString();
                     s.Append(definitionStamp);
                 }
@@ -179,7 +184,9 @@ internal static partial class CadDrawing
     }
     private static bool GeometryUnchanged(Entity entity,string expected,Transaction tr,IDictionary<ObjectId,string>? definitionCache=null)
     {
-        try { return expected==GeometryStamp(entity,tr,definitionCache); }
+        // Existing DWGs carry the previous exact-number hash. Accept that hash
+        // too, so intact legacy groups remain eligible for the normal migration.
+        try { return expected==GeometryStamp(entity,tr,definitionCache) || expected==GeometryStampCore(entity,tr,null,false); }
         catch(Autodesk.AutoCAD.Runtime.Exception) { return false; }
         catch(InvalidOperationException) { return false; }
     }
@@ -219,15 +226,27 @@ internal static partial class CadDrawing
         }
         foreach(var o in project.Obstacles.Where(o=>Selected("Obstacle",o.DataId)))
         {
+            style??=ProjectDrawingStyle(doc.Database);
             var p=Cgcs2000Projection.ForwardInZone(o.Latitude,o.Longitude,cm,o.TopElevation);
-            items.Add(new("Obstacle",o.DataId,o.Ident,"基础_障碍物",Fingerprint(o),tr=>DrawBasePoints([new(o.Ident,p,true)],style!,tr),new(p.Easting,p.Northing,p.Z),"Obstacle"));
+            items.Add(new("Obstacle",o.DataId,o.Ident,"基础_障碍物",ProjectSymbolFingerprint(project,o,"Obstacle",style),tr=>DrawBasePoints([new(o.Ident,p,true)],style!,tr),new(p.Easting,p.Northing,p.Z),"Obstacle"));
         }
         foreach(var r in project.Runways.Where(r=>Selected("Runway",r.DataId))) items.Add(new("Runway",r.DataId,r.Ident,"基础_跑道",Fingerprint(r),tr=>DrawRunways(project,[r],style!,tr)));
-        foreach(var n in project.Navaids.Where(n=>Selected("Navaid",n.DataId))) items.Add(new("Navaid",n.DataId,n.Ident,"基础_导航台",Fingerprint(n),tr=>DrawNavaids(project,[n],style!,tr),SymbolKind:n.Kind.ToString()));
+        foreach(var n in project.Navaids.Where(n=>Selected("Navaid",n.DataId)))
+        {
+            var symbolKind=n.Kind.ToString();
+            var p=AirportGeometry.Project(n.Position,cm);
+            var fingerprint=Fingerprint(n);
+            if(ProjectBlocks().Blocks.ContainsKey(symbolKind))
+            {
+                style??=ProjectDrawingStyle(doc.Database);
+                fingerprint=ProjectSymbolFingerprint(project,n,symbolKind,style);
+            }
+            items.Add(new("Navaid",n.DataId,n.Ident,"基础_导航台",fingerprint,tr=>DrawNavaids(project,[n],style!,tr),new(p.Easting,p.Northing,p.Z),symbolKind));
+        }
         var changes=new List<(BaseItem Item,ObjectId[] Old)>(); var conflicts=new List<string>();
         var geometryCache=new Dictionary<ObjectId,string>();
-        var unsupported=items.Where(i=>i.SymbolKind=="ILS").ToArray();
-        foreach(var item in unsupported) { items.Remove(item); conflicts.Add(item.Ident+"（ILS原始块待确认）"); }
+        var unsupported=items.Where(i=>i.SymbolKind is { } symbolKind && !ProjectBlocks().Blocks.ContainsKey(symbolKind)).ToArray();
+        foreach(var item in unsupported) { items.Remove(item); conflicts.Add(item.Ident+"（"+item.SymbolKind+"原始块待确认，资料保留未绘图）"); }
         using(var read=doc.Database.TransactionManager.StartTransaction())
         {
             var model=(BlockTableRecord)read.GetObject(SymbolUtilityServices.GetBlockModelSpaceId(doc.Database),OpenMode.ForRead);

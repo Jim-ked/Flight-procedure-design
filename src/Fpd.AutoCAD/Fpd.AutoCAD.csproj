@@ -27,6 +27,7 @@
     <Content Include="Symbols/symbol-map.json" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="Symbols/ProjectBaseSymbols.dwg" CopyToOutputDirectory="PreserveNewest" />
     <Content Include="Symbols/project-symbol-map.json" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="Symbols/project-block-provenance.json" CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
   <Target Name="CheckAutoCAD2026Api" BeforeTargets="ResolveAssemblyReferences">
     <Error Condition="!Exists('$(AutoCAD2026Dir)\AcMgd.dll') or !Exists('$(AutoCAD2026Dir)\AcDbMgd.dll') or !Exists('$(AutoCAD2026Dir)\AcCoreMgd.dll')"

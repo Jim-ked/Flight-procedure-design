@@ -28,6 +28,8 @@ internal static partial class CadDrawing
         public string Name { get; set; }="";
         public double[] Bounds { get; set; }=[];
         public double[] BasePoint { get; set; }=[];
+        public double[] Anchor { get; set; }=[];
+        public string AnchorSource { get; set; }="";
         public double DisplaySizeMm { get; set; }=3.5;
         public double LabelHeightMm { get; set; }=2.5;
         public double LabelGapMm { get; set; }=1.5;
@@ -49,11 +51,22 @@ internal static partial class CadDrawing
             var map=JsonSerializer.Deserialize<ProjectBlockMap>(File.ReadAllText(Path.Combine(SymbolLibrary.DirectoryPath,"project-symbol-map.json")))!;
             var libraryHash=HashBytes(File.ReadAllBytes(ProjectLibraryPath));
             if(!libraryHash.Equals(map.LibrarySha256,StringComparison.OrdinalIgnoreCase)) throw new InvalidOperationException("原始块库校验失败，未绘图。");
+            foreach(var block in map.Blocks.Values)
+                if(block.Anchor.Length!=3 || block.Anchor.Any(v=>!double.IsFinite(v)) || string.IsNullOrWhiteSpace(block.AnchorSource))
+                    throw new InvalidDataException("图符缺少经审核的专业锚点："+block.Name);
             _projectBlockMap=map; return map;
         }
     }
     private static string HashBytes(byte[] bytes)=>Convert.ToHexString(System.Security.Cryptography.SHA256.HashData(bytes));
     private static string ProjectBlockName(ProjectBlockMap map,ProjectBlock block)=>"FPD_BASE_WS_"+Hash(map.LibrarySha256+"/"+block.Name)[..16];
+    private static string ProjectSymbolFingerprint(ProjectData project,object data,string kind,DrawingStyle style)
+    {
+        var map=ProjectBlocks(); var block=map.Blocks[kind];
+        // Rendering changes must migrate intact legacy DBPoint groups even when
+        // their business coordinates did not change. Identity/history stay intact.
+        return Hash(BaseFingerprint(project,data)+"/reviewed-anchor-byblock-v1/"+
+            JsonSerializer.Serialize(new { map.LibrarySha256,block.Name,block.Anchor,style.SymbolSize,style.TextHeight,style.LabelGap }));
+    }
     private static void PrepareProjectBlocks(IEnumerable<string> kinds)
     {
         var requested=kinds.Distinct().ToArray(); if(requested.Length==0) return;
@@ -180,7 +193,12 @@ internal static partial class CadDrawing
             if(!double.IsFinite(width) || width<=0) throw new InvalidOperationException("原始图符没有有效几何外包框。");
             style.BlockSizes[definition.ObjectId]=width;
         }
-        return new BlockReference(at,definition.ObjectId) { ScaleFactors=new Scale3d(style.SymbolSize/width),Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,0) };
+        var reference=new BlockReference(at,definition.ObjectId) { ScaleFactors=new Scale3d(style.SymbolSize/width),Color=AcadColor.FromColorIndex(ColorMethod.ByLayer,256) };
+        // Align the audited professional anchor, including the block's base point
+        // and full insertion transform; never recenter the source geometry.
+        var anchor=new Point3d(block.Anchor[0],block.Anchor[1],block.Anchor[2]);
+        reference.Position+=at-anchor.TransformBy(reference.BlockTransform);
+        return reference;
     }
     public static void ShowProjectLayers(bool visible)
     {

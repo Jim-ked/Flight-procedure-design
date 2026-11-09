@@ -21,9 +21,9 @@ internal static partial class CadDrawing
             var layer=row.IsObstacle?"基础_障碍物":"基础_定位点"; EnsureLayer(tr,db,layer,row.IsObstacle?(short)1:(short)3);
             var at=new Point3d(row.Point.Easting,row.Point.Northing,row.Point.Z);
             Entity entity=row.IsObstacle?ProjectSymbol(tr,db,"Obstacle",at,textStyle):new DBPoint(at);
-            entity.Color=Autodesk.AutoCAD.Colors.Color.FromColorIndex(ColorMethod.ByLayer,row.IsObstacle?(short)0:(short)256);
+            entity.Color=Autodesk.AutoCAD.Colors.Color.FromColorIndex(ColorMethod.ByLayer,256);
             entity.Layer=layer; model.AppendEntity(entity); tr.AddNewlyCreatedDBObject(entity,true); created.Add(entity.ObjectId);
-            var text=new DBText { Layer=layer,Color=Autodesk.AutoCAD.Colors.Color.FromColorIndex(ColorMethod.ByLayer,row.IsObstacle?(short)0:(short)256),Position=!row.IsObstacle && fixLabelPosition is { } label?label:at+new Vector3d(textStyle.LabelGap,textStyle.LabelGap,0),Height=textStyle.TextHeight,TextString=row.Ident };
+            var text=new DBText { Layer=layer,Color=Autodesk.AutoCAD.Colors.Color.FromColorIndex(ColorMethod.ByLayer,256),Position=!row.IsObstacle && fixLabelPosition is { } label?label:at+new Vector3d(textStyle.LabelGap,textStyle.LabelGap,0),Height=textStyle.TextHeight,TextString=row.Ident };
             model.AppendEntity(text); tr.AddNewlyCreatedDBObject(text,true); created.Add(text.ObjectId);
         }
         return created;
